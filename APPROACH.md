@@ -132,6 +132,11 @@ The manifest distinguishes the bytes originally downloaded from the local workin
 optimization. Refreshing working metadata is an explicit local operation; it does not
 replace the original download hash.
 
+The archived PDFs were optimized one at a time with
+`ocrmypdf -O1 --skip-text --quiet --jobs 1`. An optimized temporary file replaces the
+downloaded file only when it is smaller, and the original access and modification times
+are restored. OCRmyPDF is an optional archive-maintenance tool, not part of extraction.
+
 When an approved working hash differs from an existing extraction checkpoint, the old
 working hash is retained in `source_sha256_history` and the checkpoint adopts the new
 manifest-approved hash. This allows cached JSON and Markdown to survive byte-level PDF

@@ -89,6 +89,21 @@ Use `--dry-run` to inspect the current catalog without downloading PDFs:
 python3 download_exams.py --dry-run
 ```
 
+## Optional PDF Optimization
+
+The PDFs committed to this archive were processed individually with OCRmyPDF's
+lossless optimization level 1:
+
+```sh
+ocrmypdf -O1 --skip-text --quiet --jobs 1 input.pdf output.pdf
+```
+
+The temporary output replaces the downloaded PDF only when it is smaller. The batch
+process preserves the source file's access and modification times. Because optimization
+changes the file bytes, run `python3 download_exams.py --refresh-local-metadata`
+afterward. The manifest keeps the original download size and hash while recording the
+optimized file's current size and hash separately.
+
 ## Extract
 
 Run the representative five-exam pilot with:
