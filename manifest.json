@@ -9477,8 +9477,8 @@
       "month": "january",
       "path": "exams/numerical-analysis-qualifying/numerical-analysis-qualifying-2026-jan-part-1.pdf",
       "resolved_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalAnalysis-1-2026_01.pdf",
-      "sha256": "309443cf0dcb735bc6461c139ec32e8f89f5f452c049598c96ed366c7f8958bf",
-      "size": 119672,
+      "sha256": "951b4fd4e63779f6a7d3e31d0e117cbe51281cbfe993af5516c473a578fcbd54",
+      "size": 30599,
       "source_label": "Part 1",
       "source_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalAnalysis-1-2026_01.pdf",
       "status": "downloaded",
@@ -9511,7 +9511,7 @@
     "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/",
     "https://gma.math.ufl.edu/past-exams/qualifying-exams/"
   ],
-  "local_metadata_refreshed_at": "2026-07-18T20:41:41.158230+00:00",
+  "local_metadata_refreshed_at": "2026-07-18T20:42:34.750932+00:00",
   "subjects": [
     {
       "pdf_count": 67,
