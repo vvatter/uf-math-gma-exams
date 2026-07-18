@@ -857,23 +857,27 @@ def main() -> int:
             exam_id = futures[future]
             try:
                 exam, flags, cached = future.result()
-                completed[exam_id] = (sources[exam_id], flags)
-                state = "cached" if cached else "extracted"
-                if cached:
-                    cached_count += 1
-                else:
-                    extracted_count += 1
-                review_flag_count += len(flags)
-                print(
-                    f"{state}: {exam.id} ({len(exam.problems)} problems, "
-                    f"{len(flags)} review flags)"
-                )
-            except Exception as error:  # Continue the pilot so failures can be compared.
+            except Exception as error:  # Continue the run so failures can be retried.
                 failures[exam_id] = str(error)
                 print(f"failed: {exam_id}: {error}")
+                continue
 
-    if completed:
-        update_review_files(args.review_dir, completed)
+            completed[exam_id] = (sources[exam_id], flags)
+            update_review_files(
+                args.review_dir,
+                {exam_id: completed[exam_id]},
+            )
+            state = "cached" if cached else "extracted"
+            if cached:
+                cached_count += 1
+            else:
+                extracted_count += 1
+            review_flag_count += len(flags)
+            print(
+                f"{state}: {exam.id} ({len(exam.problems)} problems, "
+                f"{len(flags)} review flags)"
+            )
+
     print(
         f"completed={len(completed)} extracted={extracted_count} cached={cached_count} "
         f"failed={len(failures)} review_flags={review_flag_count}"

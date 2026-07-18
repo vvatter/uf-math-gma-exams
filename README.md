@@ -119,7 +119,8 @@ beside their source PDFs under `exams/<subject-tag>/`, using the same filename s
 `exams/review-serious.json`. Corrections and completed transformations are recorded in
 `exams/review-corrections.json` and `exams/review-transformations.json`. Model responses,
 token usage, rendered source pages, and validation failures remain under ignored
-`build/extraction/` checkpoints.
+`build/extraction/` checkpoints. Review records are merged after each completed exam,
+so an interrupted bulk run retains both its canonical output and its review findings.
 
 The command resumes valid completed records by default. Use `--force` only when a
 record should be re-extracted after a prompt or policy change. Specific manifest IDs
