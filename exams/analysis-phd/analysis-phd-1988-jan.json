@@ -11,12 +11,12 @@
   "problems": [
     {
       "number": 1,
-      "text": "State and prove the Radon-Nikodym Theorem.",
+      "text": "State and prove the Radon–Nikodym Theorem.",
       "subparts": []
     },
     {
       "number": 2,
-      "text": "State and prove the Hahn-Banach Theorem.",
+      "text": "State and prove the Hahn–Banach Theorem.",
       "subparts": []
     },
     {

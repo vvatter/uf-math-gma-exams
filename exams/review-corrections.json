@@ -54,9 +54,9 @@
     {
       "category": "correction",
       "context": "Problem 3(a): “Using the modified Gramm-Schmidt process, write out expressions for q₁, q₂, q₃…”",
-      "corrected_text": "modified Gram-Schmidt process",
+      "corrected_text": "modified Gram–Schmidt process",
       "exam_id": "numerical-analysis-phd-2025-aug",
-      "message": "Corrected the misspelling of the named orthogonalization process.",
+      "message": "Corrected the misspelling of the named orthogonalization process and applied the project’s standard en dash between the two names.",
       "origin": "extraction",
       "original_text": "modified Gramm-Schmidt process",
       "problem_numbers": [

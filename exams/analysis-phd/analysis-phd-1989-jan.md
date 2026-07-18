@@ -1,6 +1,6 @@
 # Analysis, PhD exam, January 1989
 
-*Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion. Start each problem on a new sheet of paper.*
+*Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion.*
 
 **1.** Let \(f\) be a Borel-measurable function defined on \([0,1]\) with \(\infty>f(x)\ge 0\).
 * Part (a) Prove that there is a non-increasing function \(f^*\) defined on \([0,1]\) such that
@@ -25,13 +25,13 @@ for every positive \(\mathcal B(\mathbb R^2)\)-measurable function \(H\).
   \[
   T[(a_n)_{n=1}^\infty]=\lim_{n\to\infty}a_n.
   \]
-  (Use the Hahn-Banach theorem.)
+  (Use the Hahn–Banach theorem.)
 * Part (b) Modify your proof in (a) to show there is a linear functional \(S:\ell^\infty\to\mathbb R\) with the property: if \(\lim_{n\to\infty}n^{-1}\sum_{k\le n}a_k\) exists, then
   \[
   S[(a_n)_{n=1}^\infty]=\lim_{n\to\infty}n^{-1}\sum_{k\le n}a_k.
   \]
 
-**4.** State and prove the Radon-Nikodym theorem.
+**4.** State and prove the Radon–Nikodym theorem.
 
 **5.** State and prove Fubini’s theorem.
 

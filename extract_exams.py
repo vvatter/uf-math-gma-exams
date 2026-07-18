@@ -23,7 +23,7 @@ from pydantic import BaseModel, Field
 
 
 DEFAULT_MODEL = "gpt-5.6-sol"
-PROMPT_VERSION = "exam-extraction-v5"
+PROMPT_VERSION = "exam-extraction-v6"
 PILOT_IDS = [
     "algebra-first-year-2025-may-part-1",
     "topology-first-year-2025-may-part-2",
@@ -149,6 +149,16 @@ MATHEMATICS
 Use Unicode for prose and MathJax-compatible TeX for mathematics. Use \(...\) for inline math and
 \[...\] for display math. Do not use dollar-sign delimiters. Preserve notation and mathematical
 meaning exactly.
+
+NAMES AND EPONYMS
+Use the standard spelling and diacritics for every unambiguously identified mathematician, even
+when the source omits a diacritic or uses an ASCII transliteration (for example, Gödel rather than
+Goedel). In established names for theorems, methods, inequalities, and other mathematical objects,
+use an en dash between the names of different people (for example, Hahn–Banach, Radon–Nikodym,
+Gram–Schmidt, and Borsuk–Ulam). Preserve a hyphen that is actually part of one person's surname.
+These are controlled presentation normalizations, not source corrections, so do not add correction
+review flags for them. If a person's identity or the appropriate name form is genuinely ambiguous,
+preserve the source reading and add a transcription review flag rather than guessing.
 
 CORRECTIONS
 Preserve the source reading unless the intended correction is uniquely determined by the immediate

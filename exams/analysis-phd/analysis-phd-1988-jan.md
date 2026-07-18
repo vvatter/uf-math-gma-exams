@@ -2,9 +2,9 @@
 
 *Answer all six questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.*
 
-**1.** State and prove the Radon-Nikodym Theorem.
+**1.** State and prove the Radon–Nikodym Theorem.
 
-**2.** State and prove the Hahn-Banach Theorem.
+**2.** State and prove the Hahn–Banach Theorem.
 
 **3.** Let \(\Omega\) be a topological space, \(\mathcal B(\Omega)\) the Borel subsets of \(\Omega\). Suppose that for each \(n\), \(\mu_n\) is a countably additive positive finite regular measure defined on \(\mathcal B(\Omega)\). Let
 \[

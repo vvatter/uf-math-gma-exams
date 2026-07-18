@@ -256,6 +256,14 @@ layout. Meaningful paragraph boundaries are retained with blank lines; definitio
 standalone formulas, instructions, and concluding tasks are not merged into adjacent
 paragraphs.
 
+Mathematicians' names use their standard spelling and diacritics when the identity is
+unambiguous, such as `Gödel` rather than `Goedel`. Established eponymous names use an en
+dash between different people's names, as in `Hahn–Banach`, `Radon–Nikodym`,
+`Gram–Schmidt`, and `Borsuk–Ulam`. A hyphen that belongs within one person's surname is
+preserved. These are controlled presentation normalizations rather than source
+corrections, so they do not create correction-review records. An ambiguous identity or
+name form is preserved as printed and sent to serious review rather than guessed.
+
 The model may:
 
 - join lines and remove line-break hyphenation;

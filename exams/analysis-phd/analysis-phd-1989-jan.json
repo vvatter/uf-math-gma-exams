@@ -7,7 +7,7 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1989_01.pdf",
-  "instructions": "Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion. Start each problem on a new sheet of paper.",
+  "instructions": "Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion.",
   "problems": [
     {
       "number": 1,
@@ -36,7 +36,7 @@
       "subparts": [
         {
           "label": "Part (a)",
-          "text": "Show there is a linear functional \\(T:\\ell^\\infty\\to\\mathbb R\\) with the property: if \\(\\lim_{n\\to\\infty}a_n\\) exists, then\n\\[\nT[(a_n)_{n=1}^\\infty]=\\lim_{n\\to\\infty}a_n.\n\\]\n(Use the Hahn-Banach theorem.)",
+          "text": "Show there is a linear functional \\(T:\\ell^\\infty\\to\\mathbb R\\) with the property: if \\(\\lim_{n\\to\\infty}a_n\\) exists, then\n\\[\nT[(a_n)_{n=1}^\\infty]=\\lim_{n\\to\\infty}a_n.\n\\]\n(Use the Hahn–Banach theorem.)",
           "subparts": []
         },
         {
@@ -48,7 +48,7 @@
     },
     {
       "number": 4,
-      "text": "State and prove the Radon-Nikodym theorem.",
+      "text": "State and prove the Radon–Nikodym theorem.",
       "subparts": []
     },
     {

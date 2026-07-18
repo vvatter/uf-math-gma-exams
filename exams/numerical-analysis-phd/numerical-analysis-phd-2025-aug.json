@@ -52,7 +52,7 @@
       "subparts": [
         {
           "label": "(a)",
-          "text": "Using the modified Gram-Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
+          "text": "Using the modified Gram–Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
           "subparts": []
         },
         {

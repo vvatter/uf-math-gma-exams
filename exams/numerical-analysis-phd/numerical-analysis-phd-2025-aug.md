@@ -12,7 +12,7 @@
 * (b) If \(A\) has a collection of \(m\) linearly independent eigenvectors, show that \(A\) is diagonalizable.
 
 **3.** Let \(A\in\mathbb{C}^{m\times n}\), with \(m\ge n\) and \(\operatorname{rank}(A)=p=n\ge3\). Let \(a_1,a_2,\ldots\) denote the columns of \(A\).
-* (a) Using the modified Gram-Schmidt process, write out expressions for \(q_1,q_2,q_3\), the first three columns of \(Q\) in the QR decomposition of \(A\).
+* (a) Using the modified Gram–Schmidt process, write out expressions for \(q_1,q_2,q_3\), the first three columns of \(Q\) in the QR decomposition of \(A\).
 * (b) Show the vector \(q_3\) found in part (a) is orthogonal to both \(q_1\) and \(q_2\).
 
 **4.** Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column \(j\) of \(U\).

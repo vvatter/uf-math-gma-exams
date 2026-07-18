@@ -11,7 +11,7 @@
   "problems": [
     {
       "number": 1,
-      "text": "State the incompleteness theorem and explain the role of Goedel numbering in its proof.",
+      "text": "State the incompleteness theorem and explain the role of Gödel numbering in its proof.",
       "subparts": []
     },
     {

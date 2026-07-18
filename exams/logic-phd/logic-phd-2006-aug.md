@@ -2,7 +2,7 @@
 
 *Complete seven problems, including one from each section. Problems 1–3 concern General logic; Problems 4–6 concern Model theory; Problems 7–9 concern Set theory; Problems 10–12 concern Computability.*
 
-**1.** State the incompleteness theorem and explain the role of Goedel numbering in its proof.
+**1.** State the incompleteness theorem and explain the role of Gödel numbering in its proof.
 
 **2.** Sketch the proof of the compactness theorem for first order logic.
 

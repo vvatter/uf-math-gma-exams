@@ -4,7 +4,7 @@
 
 **1.** Prove that \(L^1(S,\mathcal A,\mu)\) is a complete space.
 
-**2.** State and prove the Hahn-Banach theorem.
+**2.** State and prove the Hahn–Banach theorem.
 
 **3.** State and prove Fubini’s theorem.
 

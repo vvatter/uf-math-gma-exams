@@ -30,7 +30,7 @@
 
 **12.** Let \(S^n\) be the \(n\)-sphere. Prove that \(\pi_1(S^n)\) is trivial for \(n\geq 2\).
 
-**13.** State the Borsuk-Ulam Theorem for \(S^2\).
+**13.** State the Borsuk–Ulam Theorem for \(S^2\).
 
 **14.** State the Brouwer Fixed Point Theorem for the disk.
 

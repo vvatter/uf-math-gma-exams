@@ -10,9 +10,11 @@ import pymupdf
 
 from extract_exams import (
     ExamRecord,
+    PROMPT_VERSION,
     Problem,
     ReviewCategory,
     ReviewFlag,
+    SYSTEM_PROMPT,
     SourceExam,
     Subpart,
     exam_json_path,
@@ -56,6 +58,15 @@ def exam_for(item: SourceExam, problems: list[Problem]) -> ExamRecord:
 
 
 class ExtractionSchemaTests(unittest.TestCase):
+    def test_prompt_normalizes_mathematician_names_and_eponyms(self) -> None:
+        normalized_prompt = " ".join(SYSTEM_PROMPT.split())
+
+        self.assertEqual(PROMPT_VERSION, "exam-extraction-v6")
+        self.assertIn("Gödel rather than Goedel", normalized_prompt)
+        self.assertIn("Hahn–Banach", SYSTEM_PROMPT)
+        self.assertIn("Preserve a hyphen that is actually part", SYSTEM_PROMPT)
+        self.assertIn("not source corrections", SYSTEM_PROMPT)
+
     def test_outputs_are_adjacent_to_source_pdf(self) -> None:
         item = source()
 
