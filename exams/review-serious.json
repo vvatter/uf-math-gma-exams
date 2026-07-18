@@ -68,6 +68,41 @@
       ],
       "source_pdf": "exams/pde-phd/pde-phd-2010-may.pdf",
       "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 6 and its three-part hint on source page 2.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1988-jan",
+      "message": "Problem 6 uses \\(q\\) without defining it. Also, the retained Hint 2, \\(g=|f|^{p-1}\\in L^q\\), does not account for the sign of a general \\(f\\), and the endpoint \\(p=1\\) requires separate treatment. The intended correction is not uniquely determined from the immediate context.",
+      "origin": "extraction",
+      "original_text": "Fix 1 ≤ p < ∞, and let f ∈ L^p(X, A, μ). Show that ‖f‖_p = sup{∫fg dμ : ‖g‖_q ≤ 1}. Hint: 2. Show that g = |f|^{p−1} ∈ L^q.",
+      "problem_numbers": [
+        6
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1988-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 8, Part (b): “Define two new measures μ and ν ... by setting μ(A) = ∫_A x dx whenever A ∈ C.”",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1988-may",
+      "message": "The source visibly defines \\(\\mu(A)=\\int_A x\\,dx\\) while calling \\(\\mu\\) a measure on the sigma-algebra of symmetric Borel sets. For sets such as \\(\\mathbb R\\), this signed Lebesgue integral is not defined, so the intended integrand may contain an unprinted or unclear modification. No correction is uniquely determined, and the source reading has been retained.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        8
+      ],
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1988-may.pdf",
+      "status": "open"
     }
   ],
   "purpose": "Unresolved cases that require human review before publication.",

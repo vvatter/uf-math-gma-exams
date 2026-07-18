@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-1989-jan",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 1989,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1989_01.pdf",
+  "instructions": "Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion. Start each problem on a new sheet of paper.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(f\\) be a Borel-measurable function defined on \\([0,1]\\) with \\(\\infty>f(x)\\ge 0\\).",
+      "subparts": [
+        {
+          "label": "Part (a)",
+          "text": "Prove that there is a non-increasing function \\(f^*\\) defined on \\([0,1]\\) such that\n\\[\nm\\{x:f^*(x)\\ge\\lambda\\}=m\\{x:f(x)\\ge\\lambda\\}\n\\]\nfor every \\(\\lambda\\ge 0\\), where \\(m\\) is Lebesgue measure on \\([0,1]\\). (\\(f^*\\) is called a monotone rearrangement of \\(f\\).)",
+          "subparts": []
+        },
+        {
+          "label": "Part (b)",
+          "text": "Show that \\(\\int f^*\\,dm=\\int f\\,dm\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\((X,\\mathcal F,\\mu)\\) be a finite measure space, and let \\(f\\) and \\(g\\) be two measurable functions such that\n\\[\n\\mu(f\\in A,\\ g\\in B)=\\mu(f\\in A)\\mu(g\\in B)\n\\]\nfor every \\(A,B\\in\\mathcal B(\\mathbb R)\\). Let \\(\\nu(A)=\\mu(g\\in A)\\). Show that\n\\[\n\\int H(f,g)\\,d\\mu=\\int\\!\\int H(f,t)\\,\\nu(dt)\\,d\\mu\n\\]\nfor every positive \\(\\mathcal B(\\mathbb R^2)\\)-measurable function \\(H\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Consider \\(\\ell^\\infty=\\{(a_n)_{n=1}^\\infty:\\sup_n|a_n|<\\infty\\}\\). This space becomes a Banach space when equipped with the norm \\(\\|(a_n)_{n=1}^\\infty\\|=\\sup\\{|a_n|:n\\ge 1\\}\\).",
+      "subparts": [
+        {
+          "label": "Part (a)",
+          "text": "Show there is a linear functional \\(T:\\ell^\\infty\\to\\mathbb R\\) with the property: if \\(\\lim_{n\\to\\infty}a_n\\) exists, then\n\\[\nT[(a_n)_{n=1}^\\infty]=\\lim_{n\\to\\infty}a_n.\n\\]\n(Use the Hahn-Banach theorem.)",
+          "subparts": []
+        },
+        {
+          "label": "Part (b)",
+          "text": "Modify your proof in (a) to show there is a linear functional \\(S:\\ell^\\infty\\to\\mathbb R\\) with the property: if \\(\\lim_{n\\to\\infty}n^{-1}\\sum_{k\\le n}a_k\\) exists, then\n\\[\nS[(a_n)_{n=1}^\\infty]=\\lim_{n\\to\\infty}n^{-1}\\sum_{k\\le n}a_k.\n\\]",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "State and prove the Radon-Nikodym theorem.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "State and prove Fubini’s theorem.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(\\mu\\) be a measure on \\(((0,\\infty),\\mathcal B(0,\\infty))\\) defined by\n\\[\n\\mu(A)=\\int_A |x|^{-1/2}\\,dx.\n\\]\nLet \\(T:(0,\\infty)\\to(0,\\infty)\\) be given by \\(T(x)=x^{-1}\\). Define a new measure \\(\\pi\\) on \\((0,\\infty)\\) by setting \\(\\pi(A)=\\mu(T^{-1}(A))\\). Compute \\(d\\pi/d\\mu\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(c(t)\\) be a function defined on \\([0,\\infty)\\) with the following properties: \\(c(t)\\) is strictly increasing and continuous, \\(c(0)=0\\), and \\(c(\\infty)=\\infty\\). Let \\(\\tau_t=\\inf\\{s:c(s)>t\\}\\). Prove that\n\\[\n\\int_0^\\infty f(t)\\,c(dt)=\\int_0^\\infty f(\\tau_t)\\,dt\n\\]\nfor every positive continuous function \\(f\\) on \\([0,\\infty)\\).",
+      "subparts": []
+    }
+  ]
+}

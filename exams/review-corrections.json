@@ -101,6 +101,21 @@
       ],
       "source_pdf": "exams/combinatorics-phd/combinatorics-phd-1991-may.pdf",
       "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The instruction sentence following “Justify all work.”",
+      "corrected_text": "To obtain any partial credit, all work must be presented in a neat and logical fashion.",
+      "exam_id": "analysis-phd-1988-may",
+      "message": "Capitalized the first word of a new sentence; the intended capitalization is uniquely determined by the immediate context.",
+      "origin": "project",
+      "original_text": "to obtain any partial credit, all work must be presented in a neat and logical fashion.",
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1988-may.pdf",
+      "status": "logged"
     }
   ],
   "purpose": "Every uniquely determined source correction made during extraction.",
