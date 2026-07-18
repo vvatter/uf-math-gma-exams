@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-1994-aug",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 1994,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_1994_08.pdf",
+  "instructions": "For Problems 1–5, state each of the following theorems and prove one of them. For Problems 6–10, give proofs as well as conclusions. Your proofs should be clear and detailed, you should show all your work, and your writing must be legible.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Tychonoff Product Theorem",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Baire Category Theorem",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Brouwer Fixed Point Theorem",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Tietze Extension Theorem",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Schoenflies Theorem for \\(R^2\\). Does the corresponding statement hold for \\(R^3\\)? Explain.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Compute the fundamental group of the projective plane, \\(P^2\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Compute the homology groups and the Euler characteristic of the Klein bottle.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(D^n=\\{x\\in R^n:|x|\\leq 1\\}\\) be the \\(n\\)-dimensional disk. Show that every continuous map \\(f:S^3\\to D^n\\) is homotopic to a constant map.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that the Cantor set \\(C\\) is totally disconnected.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "If \\(f:C\\to[0,1]\\) is a continuous map from the Cantor set to the closed unit interval, must \\(f\\) omit a value in \\([0,1]\\)? (I.e., must there exist a \\(y\\in[0,1]\\) such that \\(f(x)=y\\) has no solution \\(x\\in C\\)?)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "text": "For \\(i=1,2,3,\\ldots\\) let \\(X_i\\) be a great circle in the 2-sphere \\(S^2=\\{x\\in R^3:|x|=1\\}\\). Show that \\(S^2\\neq\\bigcup_1^\\infty X_i\\).",
+      "subparts": []
+    }
+  ]
+}

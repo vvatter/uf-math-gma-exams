@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uf-math-gma-exams"
+version = "0.1.0"
+description = "Archive and structured extraction of University of Florida mathematics exams"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=2.0",
+  "pydantic>=2.8",
+  "PyMuPDF>=1.26",
+]
+
+[project.scripts]
+extract-uf-math-gma-exams = "extract_exams:main"
+
+[tool.setuptools]
+py-modules = ["download_exams", "extract_exams"]

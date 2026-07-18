@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "category": "correction",
+      "context": "Define the map Φ from the fundamental group to the fiber, which gives the lifting correspondence.",
+      "corrected_text": "which gives the lifting correspondence",
+      "exam_id": "topology-first-year-2025-may-part-2",
+      "message": "Removed a duplicated word in the description of the lifting correspondence.",
+      "origin": "extraction",
+      "original_text": "which gives the the lifting correspondence",
+      "problem_numbers": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Compute the fundamental group of the connected sum, identified immediately afterward as T²#T².",
+      "corrected_text": "the connected sum of a torus and a second torus",
+      "exam_id": "topology-first-year-2025-may-part-2",
+      "message": "Inserted the uniquely implied indefinite article before “second torus.”",
+      "origin": "extraction",
+      "original_text": "the connected sum of a torus and second torus",
+      "problem_numbers": [
+        4
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "“when \\(K\\) is identified with the subgroup \\(\\{(1,K)\\mid k\\in K\\}\\) of \\(G\\)”",
+      "corrected_text": "\\(\\{(1,k)\\mid k\\in K\\}\\)",
+      "exam_id": "algebra-first-year-2025-may-part-1",
+      "message": "Corrected the second coordinate in the displayed copy of K from the group K itself to the element k; this is uniquely determined by the set-builder variable and the identification of K as a subgroup of the semidirect product.",
+      "origin": "extraction",
+      "original_text": "\\(\\{(1,K)\\mid k\\in K\\}\\)",
+      "problem_numbers": [
+        5
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-first-year/algebra-first-year-2025-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 3(a): “Using the modified Gramm-Schmidt process, write out expressions for q₁, q₂, q₃…”",
+      "corrected_text": "modified Gram-Schmidt process",
+      "exam_id": "numerical-analysis-phd-2025-aug",
+      "message": "Corrected the misspelling of the named orthogonalization process.",
+      "origin": "extraction",
+      "original_text": "modified Gramm-Schmidt process",
+      "problem_numbers": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "“the 2-sphere”",
+      "corrected_text": "\\(S^2=\\{x\\in R^3:|x|=1\\}\\)",
+      "exam_id": "topology-phd-1994-aug",
+      "message": "Corrected the ambient Euclidean space in the definition of the 2-sphere from \\(R^2\\) to \\(R^3\\), as uniquely determined by the immediate context.",
+      "origin": "extraction",
+      "original_text": "\\(S^2=\\{x\\in R^2:|x|=1\\}\\)",
+      "problem_numbers": [
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1994-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 1 asks for the number of nested \\(k\\)-tuples of subsets.",
+      "corrected_text": "How many \\(k\\)-tuples \\((A_1,A_2,\\ldots,A_k)\\) of nested subsets of an \\(n\\)-set are there",
+      "exam_id": "combinatorics-phd-1991-may",
+      "message": "Corrected the evident typographical error “may” to “many.”",
+      "origin": "extraction",
+      "original_text": "How may \\(k\\)-tuples \\((A_1,A_2,\\ldots,A_k)\\) of nested subsets of an \\(n\\)-set are there",
+      "problem_numbers": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-1991-may.pdf",
+      "status": "logged"
+    }
+  ],
+  "purpose": "Every uniquely determined source correction made during extraction.",
+  "review_type": "corrections",
+  "schema_version": 1
+}

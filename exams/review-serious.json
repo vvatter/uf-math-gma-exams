@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "category": "visual-content",
+      "context": "The problem asks for the simplicial homology of the Δ-complex drawn in the figure.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2025-may",
+      "message": "The Δ-complex diagram carries essential information, including edge orientations and simplex attachment data, that is not fully specified by the surrounding text.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "visual-content",
+      "context": "The problem defines A as the circle shown in the figure.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2025-may",
+      "message": "The figure carries essential information about the position of the circle A in the solid torus.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        12
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "Use (without proof) the assertion of problem #1 to prove that the 6-arcs of Π = PG(2,4) form a block design.",
+      "corrected_text": null,
+      "exam_id": "combinatorics-phd-1991-sep",
+      "message": "Problem 2 explicitly depends on the assertion of problem #1.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-1991-sep.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 7, definition of the variational form whose constrained minimum is to be attained.",
+      "corrected_text": null,
+      "exam_id": "pde-phd-2010-may",
+      "message": "The displayed variational form places the lower-order terms inside the scope of the outer sum over \\(i,j\\), while also using an inner sum over \\(i\\). This potentially unintended summation scope has been retained because the intended correction is not uniquely determined by the immediate context.",
+      "origin": "extraction",
+      "original_text": "\\(I(w)=\\int_{B_1}\\sum_{i,j=1}^n\\left(a_{ij}\\partial_iw\\partial_jw+\\sum_i b_i\\partial_iw\\,w+cw^2\\right)dx\\)",
+      "problem_numbers": [
+        7
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/pde-phd/pde-phd-2010-may.pdf",
+      "status": "open"
+    }
+  ],
+  "purpose": "Unresolved cases that require human review before publication.",
+  "review_type": "serious",
+  "schema_version": 1
+}

@@ -1,0 +1,150 @@
+{
+  "items": [
+    {
+      "category": "numbering-transformation",
+      "context": "The source numbers problems separately within four named topics.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2006-aug",
+      "message": "Topic-local problem labels were replaced by global Problems 1–12, and the topic ranges were recorded in the instructions.",
+      "origin": "project",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2006-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source gives separate directions for Problems 1–5 and Problems 6–15.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2025-may-part-2",
+      "message": "Two instruction blocks were consolidated into one instructions field using their final problem ranges.",
+      "origin": "project",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source gives separate directions for Problems 1–5 and Problems 6–15 across two pages.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2025-may",
+      "message": "Two instruction blocks were consolidated into one instructions field using their final problem ranges.",
+      "origin": "project",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source gives distinct Part I and Part II requirements with restarted numbering.",
+      "corrected_text": "For Problems 1–5, state each of the following theorems and prove one of them. For Problems 6–10, give proofs as well as conclusions. Your proofs should be clear and detailed, you should show all your work, and your writing must be legible.",
+      "exam_id": "topology-phd-1994-aug",
+      "message": "The part-specific directions were consolidated with only their problem references changed to the final global ranges.",
+      "origin": "project",
+      "original_text": "Part I: State each of the following theorems and prove one of them. Part II: For the following problems give proofs as well as conclusions. Your proofs should be clear and detailed, you should show all your work, and your writing must be legible.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1994-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Source Part I and Part II",
+      "corrected_text": null,
+      "exam_id": "topology-phd-1994-aug",
+      "message": "The source restarts top-level numbering in Part II. Part I items (1)–(5) remain Problems 1–5, and Part II items 1–5 have been renumbered as Problems 6–10.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1994-aug.pdf",
+      "status": "logged"
+    }
+  ],
+  "purpose": "Completed structural transformations such as renumbering and instruction consolidation.",
+  "review_type": "transformations",
+  "schema_version": 1
+}
