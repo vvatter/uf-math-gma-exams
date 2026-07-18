@@ -31,6 +31,26 @@ PILOT_IDS = [
     "numerical-analysis-phd-2025-aug",
     "topology-phd-2025-may",
 ]
+MONTH_ORDER = {
+    month: index
+    for index, month in enumerate(
+        (
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december",
+        ),
+        start=1,
+    )
+}
 
 
 class ReviewCategory(str, Enum):
@@ -102,6 +122,13 @@ class SourceExam:
     pdf_path: Path
     sha256: str
     download_sha256: str
+
+
+@dataclass(frozen=True)
+class ExamSelection:
+    ids: tuple[str, ...]
+    skipped_completed: int = 0
+    deferred_by_limit: int = 0
 
 
 SYSTEM_PROMPT = r"""You extract the useful mathematical content of an exam into structured data.
@@ -238,6 +265,88 @@ def load_sources(manifest_path: Path) -> dict[str, SourceExam]:
             raise RuntimeError(f"duplicate exam identifier in manifest: {exam_id}")
         sources[exam_id] = source
     return sources
+
+
+def source_sort_key(source: SourceExam) -> tuple[object, ...]:
+    return (
+        source.subject_tag,
+        source.year,
+        MONTH_ORDER.get(source.month, 13),
+        source.month,
+        source.part or 0,
+        source.id,
+    )
+
+
+def select_exam_ids(
+    sources: dict[str, SourceExam],
+    explicit_ids: list[str],
+    *,
+    pilot: bool,
+    all_exams: bool,
+    subject_tags: list[str] | None,
+    limit: int | None,
+    force: bool,
+) -> ExamSelection:
+    subject_tags = subject_tags or []
+    modes = sum(
+        (
+            bool(explicit_ids),
+            pilot,
+            all_exams,
+            bool(subject_tags),
+        )
+    )
+    if modes != 1:
+        raise ValueError(
+            "choose exactly one selection mode: exam IDs, --pilot, --all, or --subject"
+        )
+    bulk_selection = all_exams or bool(subject_tags)
+    if limit is not None and limit < 1:
+        raise ValueError("--limit must be at least 1")
+    if limit is not None and not bulk_selection:
+        raise ValueError("--limit requires --all or --subject")
+
+    if pilot:
+        requested = list(PILOT_IDS)
+    elif explicit_ids:
+        requested = list(dict.fromkeys(explicit_ids))
+    else:
+        requested_subjects = set(subject_tags)
+        known_subjects = {source.subject_tag for source in sources.values()}
+        unknown_subjects = sorted(requested_subjects - known_subjects)
+        if unknown_subjects:
+            raise ValueError("unknown subject tags: " + ", ".join(unknown_subjects))
+        requested = [
+            source.id
+            for source in sorted(sources.values(), key=source_sort_key)
+            if all_exams or source.subject_tag in requested_subjects
+        ]
+
+    missing = [exam_id for exam_id in requested if exam_id not in sources]
+    if missing:
+        raise ValueError("exam IDs not found in manifest: " + ", ".join(missing))
+
+    skipped_completed = 0
+    if bulk_selection and not force:
+        selected: list[str] = []
+        for exam_id in requested:
+            if exam_json_path(sources[exam_id]).exists():
+                skipped_completed += 1
+            else:
+                selected.append(exam_id)
+        requested = selected
+
+    deferred_by_limit = 0
+    if limit is not None and len(requested) > limit:
+        deferred_by_limit = len(requested) - limit
+        requested = requested[:limit]
+
+    return ExamSelection(
+        ids=tuple(requested),
+        skipped_completed=skipped_completed,
+        deferred_by_limit=deferred_by_limit,
+    )
 
 
 def render_pages(source: SourceExam, workdir: Path, dpi: int) -> list[dict[str, object]]:
@@ -665,7 +774,26 @@ def update_review_files(
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Extract structured exam JSON with Sol vision")
     parser.add_argument("exam_ids", nargs="*")
-    parser.add_argument("--pilot", action="store_true", help="extract the five pilot exams")
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument("--pilot", action="store_true", help="extract the five pilot exams")
+    selection.add_argument(
+        "--all",
+        action="store_true",
+        dest="all_exams",
+        help="extract every exam without a canonical JSON record",
+    )
+    selection.add_argument(
+        "--subject",
+        action="append",
+        dest="subject_tags",
+        metavar="TAG",
+        help="extract missing exams for a subject tag; repeat for multiple subjects",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        help="limit a --all or --subject selection after completed records are skipped",
+    )
     parser.add_argument("--manifest", type=Path, default=Path("manifest.json"))
     parser.add_argument("--review-dir", type=Path, default=Path("exams"))
     parser.add_argument("--build-root", type=Path, default=Path("build/extraction"))
@@ -679,22 +807,39 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main() -> int:
     args = build_parser().parse_args()
-    if args.pilot and args.exam_ids:
-        raise SystemExit("use either --pilot or explicit exam IDs, not both")
-    requested = PILOT_IDS if args.pilot else args.exam_ids
-    if not requested:
-        raise SystemExit("provide exam IDs or use --pilot")
     if args.workers < 1:
         raise SystemExit("--workers must be at least 1")
     if args.dpi < 100:
         raise SystemExit("--dpi must be at least 100")
     sources = load_sources(args.manifest)
-    missing = [exam_id for exam_id in requested if exam_id not in sources]
-    if missing:
-        raise SystemExit("exam IDs not found in manifest: " + ", ".join(missing))
+    try:
+        selection = select_exam_ids(
+            sources,
+            args.exam_ids,
+            pilot=args.pilot,
+            all_exams=args.all_exams,
+            subject_tags=args.subject_tags,
+            limit=args.limit,
+            force=args.force,
+        )
+    except ValueError as error:
+        raise SystemExit(str(error)) from error
+    requested = selection.ids
+    if args.all_exams or args.subject_tags:
+        print(
+            f"selected={len(requested)} "
+            f"skipped_completed={selection.skipped_completed} "
+            f"deferred_by_limit={selection.deferred_by_limit}"
+        )
+    if not requested:
+        print("No exams selected.")
+        return 0
 
     completed: dict[str, tuple[SourceExam, list[ReviewFlag]]] = {}
     failures: dict[str, str] = {}
+    extracted_count = 0
+    cached_count = 0
+    review_flag_count = 0
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = {
             executor.submit(
@@ -714,6 +859,11 @@ def main() -> int:
                 exam, flags, cached = future.result()
                 completed[exam_id] = (sources[exam_id], flags)
                 state = "cached" if cached else "extracted"
+                if cached:
+                    cached_count += 1
+                else:
+                    extracted_count += 1
+                review_flag_count += len(flags)
                 print(
                     f"{state}: {exam.id} ({len(exam.problems)} problems, "
                     f"{len(flags)} review flags)"
@@ -724,7 +874,10 @@ def main() -> int:
 
     if completed:
         update_review_files(args.review_dir, completed)
-    print(f"completed={len(completed)} failed={len(failures)}")
+    print(
+        f"completed={len(completed)} extracted={extracted_count} cached={cached_count} "
+        f"failed={len(failures)} review_flags={review_flag_count}"
+    )
     return 1 if failures else 0
 
 

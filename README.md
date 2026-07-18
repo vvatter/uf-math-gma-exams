@@ -129,6 +129,24 @@ can be supplied instead of `--pilot`:
 python3 extract_exams.py logic-phd-2006-aug topology-phd-2025-may
 ```
 
+Extract every exam that does not yet have a canonical JSON record:
+
+```sh
+python3 extract_exams.py --all
+```
+
+Subject selections are repeatable and can be limited to operational batches. Bulk
+selections run oldest first within each subject and skip completed JSON records before
+applying the limit:
+
+```sh
+python3 extract_exams.py --subject analysis-phd --limit 10
+python3 extract_exams.py --subject logic-phd --subject topology-phd
+```
+
+With bulk selection, `--force` includes completed records and re-extracts them. Without
+`--force`, rerunning the same command continues with the remaining exams.
+
 ## Naming
 
 A single-file sitting is named as follows:
@@ -175,6 +193,9 @@ uses its ordinary three-letter abbreviation rather than guessing a replacement.
 
 ```text
 --pilot             Extract the five representative pilot exams
+--all               Extract every exam without a canonical JSON record
+--subject TAG       Extract missing exams for a subject; repeatable
+--limit N           Limit a bulk selection after completed records are skipped
 --review-dir DIR    Review-log directory (default: exams)
 --build-root DIR    Checkpoint root directory (default: build/extraction)
 --model MODEL       Extraction model (default: gpt-5.6-sol)

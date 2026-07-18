@@ -22,6 +22,7 @@ from extract_exams import (
     extract_one,
     part_from_manifest,
     render_markdown,
+    select_exam_ids,
     sha256_file,
     update_review_files,
     validate_exam,
@@ -72,6 +73,84 @@ class ExtractionSchemaTests(unittest.TestCase):
 
         self.assertEqual(exam_json_path(item), Path("exams/example.json"))
         self.assertEqual(exam_markdown_path(item), Path("exams/example.md"))
+
+    def test_all_selection_skips_completed_before_applying_limit(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            items = [
+                replace(
+                    source("analysis-phd"),
+                    id=f"analysis-phd-{year}-jan",
+                    year=year,
+                    pdf_path=directory / f"analysis-phd-{year}-jan.pdf",
+                )
+                for year in (1988, 1989, 1990)
+            ]
+            exam_json_path(items[0]).write_text("{}", encoding="utf-8")
+            sources = {item.id: item for item in items}
+
+            selection = select_exam_ids(
+                sources,
+                [],
+                pilot=False,
+                all_exams=True,
+                subject_tags=None,
+                limit=1,
+                force=False,
+            )
+            forced_selection = select_exam_ids(
+                sources,
+                [],
+                pilot=False,
+                all_exams=True,
+                subject_tags=None,
+                limit=None,
+                force=True,
+            )
+
+        self.assertEqual(selection.ids, ("analysis-phd-1989-jan",))
+        self.assertEqual(selection.skipped_completed, 1)
+        self.assertEqual(selection.deferred_by_limit, 1)
+        self.assertEqual(forced_selection.ids, tuple(item.id for item in items))
+        self.assertEqual(forced_selection.skipped_completed, 0)
+
+    def test_subject_selection_is_repeatable_and_validated(self) -> None:
+        analysis = replace(
+            source("analysis-phd"),
+            id="analysis-phd-1988-jan",
+            pdf_path=Path("exams/analysis-phd-1988-jan.pdf"),
+        )
+        logic = replace(
+            source("logic-phd"),
+            id="logic-phd-2006-aug",
+            pdf_path=Path("exams/logic-phd-2006-aug.pdf"),
+        )
+        sources = {item.id: item for item in (analysis, logic)}
+
+        selection = select_exam_ids(
+            sources,
+            [],
+            pilot=False,
+            all_exams=False,
+            subject_tags=["logic-phd", "analysis-phd"],
+            limit=None,
+            force=True,
+        )
+
+        self.assertEqual(
+            selection.ids,
+            ("analysis-phd-1988-jan", "logic-phd-2006-aug"),
+        )
+        with self.assertRaisesRegex(ValueError, "unknown subject tags: imaginary-phd"):
+            select_exam_ids(
+                sources,
+                [],
+                pilot=False,
+                all_exams=False,
+                subject_tags=["imaginary-phd"],
+                limit=None,
+                force=False,
+            )
 
     def test_notice_only_record_validates_and_renders(self) -> None:
         item = source()
