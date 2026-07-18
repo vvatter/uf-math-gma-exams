@@ -9432,11 +9432,86 @@
       "subject_tag": "numerical-optimization-phd",
       "subject_url": "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/phd-variational-analysis-numerical-optimization",
       "year": 2018
+    },
+    {
+      "download_sha256": "a4d58b33f1494315b3e508a51ab93365c056dab86aa3641b1b7cdb98d200035a",
+      "download_size": 82938,
+      "download_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Algebra-1_2026_01.pdf",
+      "error": null,
+      "month": "january",
+      "path": "exams/algebra-qualifying/algebra-qualifying-2026-jan-part-1.pdf",
+      "resolved_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Algebra-1_2026_01.pdf",
+      "sha256": "1317f993fbd8e35fc51bae10e5c9bf4f1b4ad308e6dece4b3197de98cee859f7",
+      "size": 25800,
+      "source_label": "Part 1",
+      "source_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Algebra-1_2026_01.pdf",
+      "status": "downloaded",
+      "subject": "Algebra Qualifying Exam",
+      "subject_tag": "algebra-qualifying",
+      "subject_url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/algebra-qualifying-exam/",
+      "year": 2026
+    },
+    {
+      "download_sha256": "41988d713c231b657297dbdb2844c65849bd28be4204dd5ccb9bbe887d244d62",
+      "download_size": 118788,
+      "download_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Analysis-1-2026_01.pdf",
+      "error": null,
+      "month": "january",
+      "path": "exams/analysis-qualifying/analysis-qualifying-2026-jan-part-1.pdf",
+      "resolved_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Analysis-1-2026_01.pdf",
+      "sha256": "7ec2e92769d3141d70a2abdcd3ab6d32c530e18c83afd87b6cc4bfae3db6b879",
+      "size": 31455,
+      "source_label": "Part 1",
+      "source_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Analysis-1-2026_01.pdf",
+      "status": "downloaded",
+      "subject": "Analysis Qualifying Exam",
+      "subject_tag": "analysis-qualifying",
+      "subject_url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/analysis-qualifying-exam/",
+      "year": 2026
+    },
+    {
+      "download_sha256": "309443cf0dcb735bc6461c139ec32e8f89f5f452c049598c96ed366c7f8958bf",
+      "download_size": 119672,
+      "download_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalAnalysis-1-2026_01.pdf",
+      "error": null,
+      "month": "january",
+      "path": "exams/numerical-analysis-qualifying/numerical-analysis-qualifying-2026-jan-part-1.pdf",
+      "resolved_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalAnalysis-1-2026_01.pdf",
+      "sha256": "309443cf0dcb735bc6461c139ec32e8f89f5f452c049598c96ed366c7f8958bf",
+      "size": 119672,
+      "source_label": "Part 1",
+      "source_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalAnalysis-1-2026_01.pdf",
+      "status": "downloaded",
+      "subject": "Numerical Analysis Qualifying Exam",
+      "subject_tag": "numerical-analysis-qualifying",
+      "subject_url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/numerical-analysis-qualifying-exam/",
+      "year": 2026
+    },
+    {
+      "download_sha256": "cb7f9289fe2bd02ef43696642a3cf660a41b1b1947c7f77f4951f63e19779178",
+      "download_size": 107136,
+      "download_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Topology-1-2026_01.pdf",
+      "error": null,
+      "month": "january",
+      "path": "exams/topology-qualifying/topology-qualifying-2026-jan-part-1.pdf",
+      "resolved_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Topology-1-2026_01.pdf",
+      "sha256": "31c2745deb67aa1e9aa670fcb3b85849dae63adfd6de03bfae445c9c081ef6fa",
+      "size": 31932,
+      "source_label": "Part 1",
+      "source_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual-Topology-1-2026_01.pdf",
+      "status": "downloaded",
+      "subject": "Topology Qualifying Exam",
+      "subject_tag": "topology-qualifying",
+      "subject_url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/topology-qualifying-exam/",
+      "year": 2026
     }
   ],
-  "generated_at": "2026-07-18T17:12:22.478060+00:00",
-  "index_url": "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/",
-  "local_metadata_refreshed_at": "2026-07-18T20:15:58.804657+00:00",
+  "generated_at": "2026-07-18T20:36:52.441127+00:00",
+  "index_urls": [
+    "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/",
+    "https://gma.math.ufl.edu/past-exams/qualifying-exams/"
+  ],
+  "local_metadata_refreshed_at": "2026-07-18T20:41:41.158230+00:00",
   "subjects": [
     {
       "pdf_count": 67,
@@ -9545,14 +9620,38 @@
       "tag": "numerical-optimization-phd",
       "title": "PhD Variational Analysis/Numerical Optimization",
       "url": "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/phd-variational-analysis-numerical-optimization"
+    },
+    {
+      "pdf_count": 1,
+      "tag": "algebra-qualifying",
+      "title": "Algebra Qualifying Exam",
+      "url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/algebra-qualifying-exam/"
+    },
+    {
+      "pdf_count": 1,
+      "tag": "analysis-qualifying",
+      "title": "Analysis Qualifying Exam",
+      "url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/analysis-qualifying-exam/"
+    },
+    {
+      "pdf_count": 1,
+      "tag": "numerical-analysis-qualifying",
+      "title": "Numerical Analysis Qualifying Exam",
+      "url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/numerical-analysis-qualifying-exam/"
+    },
+    {
+      "pdf_count": 1,
+      "tag": "topology-qualifying",
+      "title": "Topology Qualifying Exam",
+      "url": "https://gma.math.ufl.edu/past-exams/qualifying-exams/topology-qualifying-exam/"
     }
   ],
   "summary": {
-    "pdfs": 524,
+    "pdfs": 528,
     "status_counts": {
-      "downloaded": 524
+      "downloaded": 528
     },
-    "subjects": 18,
+    "subjects": 22,
     "unexpected_months": [
       "april",
       "july",

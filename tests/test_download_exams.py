@@ -7,13 +7,16 @@ import tempfile
 import unittest
 
 from download_exams import (
+    QUALIFYING_INDEX_URL,
     Subject,
     download_candidates,
     discover_exams,
+    discover_subjects,
     exam_stem,
     label_suffix,
     normalize_pdf_url,
     parse_date,
+    previous_download_metadata,
     refresh_local_metadata,
     subject_tag,
 )
@@ -28,6 +31,38 @@ class NamingTests(unittest.TestCase):
             "numerical-optimization-phd",
         )
         self.assertEqual(subject_tag("PhD Partial Differential Equations"), "pde-phd")
+        self.assertEqual(subject_tag("Algebra Qualifying Exam"), "algebra-qualifying")
+        self.assertEqual(
+            subject_tag("Numerical Analysis Qualifying Exam"),
+            "numerical-analysis-qualifying",
+        )
+
+    def test_qualifying_index_subjects(self) -> None:
+        html = """
+        <a href="/past-exams/qualifying-exams/algebra-qualifying-exam/">
+          Algebra Qualifying Exam
+        </a>
+        <a href="/past-exams/qualifying-exams/topology-qualifying-exam/">
+          Topology Qualifying Exam
+        </a>
+        """
+
+        import download_exams
+
+        original = download_exams.fetch_html
+        download_exams.fetch_html = lambda _url: html
+        try:
+            subjects = discover_subjects(QUALIFYING_INDEX_URL)
+        finally:
+            download_exams.fetch_html = original
+
+        self.assertEqual(
+            [(item.title, item.tag) for item in subjects],
+            [
+                ("Algebra Qualifying Exam", "algebra-qualifying"),
+                ("Topology Qualifying Exam", "topology-qualifying"),
+            ],
+        )
 
     def test_date_parser_preserves_source_month(self) -> None:
         self.assertEqual(parse_date("2026 January"), (2026, "january"))
@@ -79,6 +114,38 @@ class NamingTests(unittest.TestCase):
         self.assertEqual(item["download_sha256"], "download-hash")
         self.assertEqual(item["size"], len(content))
         self.assertEqual(item["sha256"], hashlib.sha256(content).hexdigest())
+
+    def test_previous_acquisition_metadata_survives_rediscovery(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            manifest_path = Path(temp) / "manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "exams": [
+                            {
+                                "path": "exams/example.pdf",
+                                "download_size": 123,
+                                "download_sha256": "original-hash",
+                                "resolved_url": "https://example.edu/exam.pdf",
+                                "status": "downloaded",
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            metadata = previous_download_metadata(manifest_path)["exams/example.pdf"]
+
+        self.assertEqual(
+            metadata,
+            {
+                "download_size": 123,
+                "download_sha256": "original-hash",
+                "resolved_url": "https://example.edu/exam.pdf",
+                "status": "downloaded",
+            },
+        )
 
 
 class TableTests(unittest.TestCase):

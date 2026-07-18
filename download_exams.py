@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discover and download the GMA first-year and PhD exam archive."""
+"""Discover and download the GMA first-year, PhD, and qualifying exam archives."""
 
 from __future__ import annotations
 
@@ -20,7 +20,11 @@ from urllib.parse import urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 
-INDEX_URL = "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/"
+FIRST_YEAR_PHD_INDEX_URL = (
+    "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/"
+)
+QUALIFYING_INDEX_URL = "https://gma.math.ufl.edu/past-exams/qualifying-exams/"
+DEFAULT_INDEX_URLS = (FIRST_YEAR_PHD_INDEX_URL, QUALIFYING_INDEX_URL)
 ALLOWED_HOST = "gma.math.ufl.edu"
 USER_AGENT = "Mozilla/5.0 (compatible; GMAExamArchiveHelper/1.0)"
 EXPECTED_MONTHS = {"january", "may", "august", "september"}
@@ -209,6 +213,9 @@ def subject_tag(title: str) -> str:
     elif lowered.startswith("phd "):
         level = "phd"
         subject = normalized[len("PhD ") :]
+    elif lowered.endswith(" qualifying exam"):
+        level = "qualifying"
+        subject = normalized[: -len(" Qualifying Exam")]
     else:
         raise DiscoveryError(f"unrecognized subject title: {title!r}")
     override = SUBJECT_OVERRIDES.get(subject.lower())
@@ -269,7 +276,10 @@ def discover_subjects(index_url: str) -> list[Subject]:
     subjects: list[Subject] = []
     seen: set[str] = set()
     for link in parser.links:
-        if not re.match(r"^(?:First Year|PhD)\s+\S", link.text, re.IGNORECASE):
+        if not (
+            re.match(r"^(?:First Year|PhD)\s+\S", link.text, re.IGNORECASE)
+            or re.match(r"^\S.*\sQualifying Exam$", link.text, re.IGNORECASE)
+        ):
             continue
         url = normalize_page_url(link.url, index_url)
         parsed = urlparse(url)
@@ -382,6 +392,31 @@ def discover_exams(subject: Subject, output_root: Path) -> list[Exam]:
     return exams
 
 
+def discover_catalog(
+    index_urls: list[str], output_root: Path
+) -> tuple[list[Subject], list[Exam]]:
+    subjects = [
+        subject
+        for index_url in index_urls
+        for subject in discover_subjects(index_url)
+    ]
+    duplicate_tags = {
+        subject.tag
+        for subject in subjects
+        if sum(item.tag == subject.tag for item in subjects) > 1
+    }
+    if duplicate_tags:
+        raise DiscoveryError(
+            f"subject tags are not unique across indexes: {sorted(duplicate_tags)}"
+        )
+    exams = [
+        exam
+        for subject in subjects
+        for exam in discover_exams(subject, output_root)
+    ]
+    return subjects, exams
+
+
 def file_metadata(path: Path) -> tuple[int, str]:
     digest = hashlib.sha256()
     size = 0
@@ -407,7 +442,8 @@ def download_exam(exam: Exam, overwrite: bool, retries: int = 3) -> Exam:
                 exam.download_size = exam.size
             if exam.download_sha256 is None:
                 exam.download_sha256 = exam.sha256
-            exam.status = "existing"
+            if exam.status not in {"downloaded", "existing"}:
+                exam.status = "existing"
             return exam
         except DiscoveryError:
             pass
@@ -456,7 +492,7 @@ def download_exam(exam: Exam, overwrite: bool, retries: int = 3) -> Exam:
 
 
 def manifest_data(
-    index_url: str,
+    index_urls: list[str],
     subjects: list[Subject],
     exams: list[Exam],
     dry_run: bool,
@@ -467,7 +503,7 @@ def manifest_data(
     unexpected = sorted({exam.month for exam in exams if exam.month not in EXPECTED_MONTHS})
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "index_url": index_url,
+        "index_urls": index_urls,
         "dry_run": dry_run,
         "summary": {
             "subjects": len(subjects),
@@ -493,15 +529,19 @@ def write_manifest(path: Path, data: dict[str, object]) -> None:
     os.replace(temporary, path)
 
 
-def previous_download_metadata(path: Path) -> dict[str, tuple[int | None, str | None]]:
+def previous_download_metadata(
+    path: Path,
+) -> dict[str, dict[str, int | str | None]]:
     if not path.exists():
         return {}
     raw = json.loads(path.read_text(encoding="utf-8"))
     return {
-        item["path"]: (
-            item.get("download_size", item.get("size")),
-            item.get("download_sha256", item.get("sha256")),
-        )
+        item["path"]: {
+            "download_size": item.get("download_size", item.get("size")),
+            "download_sha256": item.get("download_sha256", item.get("sha256")),
+            "resolved_url": item.get("resolved_url"),
+            "status": item.get("status"),
+        }
         for item in raw.get("exams", [])
     }
 
@@ -529,9 +569,14 @@ def refresh_local_metadata(path: Path) -> tuple[int, int]:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Discover and download the GMA first-year and PhD exam PDF archive."
+        description="Discover and download the GMA first-year, PhD, and qualifying exam archive."
     )
-    parser.add_argument("--index-url", default=INDEX_URL)
+    parser.add_argument(
+        "--index-url",
+        action="append",
+        dest="index_urls",
+        help="source index URL; repeat to use multiple indexes (defaults to both GMA archives)",
+    )
     parser.add_argument("--output", type=Path, default=Path("exams"))
     parser.add_argument("--manifest", type=Path, default=Path("manifest.json"))
     parser.add_argument("--workers", type=int, default=4)
@@ -553,19 +598,28 @@ def main() -> int:
         checked, changed = refresh_local_metadata(args.manifest)
         print(f"Refreshed {checked} local PDFs; {changed} working files changed.")
         return 0
+    index_urls = args.index_urls or list(DEFAULT_INDEX_URLS)
     try:
-        subjects = discover_subjects(args.index_url)
-        exams = [
-            exam
-            for subject in subjects
-            for exam in discover_exams(subject, args.output)
-        ]
+        subjects, exams = discover_catalog(index_urls, args.output)
     except DiscoveryError as error:
         raise SystemExit(f"discovery failed: {error}") from error
 
     previous = previous_download_metadata(args.manifest)
     for exam in exams:
-        exam.download_size, exam.download_sha256 = previous.get(exam.path, (None, None))
+        prior = previous.get(exam.path)
+        if prior:
+            download_size = prior["download_size"]
+            download_sha256 = prior["download_sha256"]
+            resolved_url = prior["resolved_url"]
+            status = prior["status"]
+            if isinstance(download_size, int):
+                exam.download_size = download_size
+            if isinstance(download_sha256, str):
+                exam.download_sha256 = download_sha256
+            if isinstance(resolved_url, str):
+                exam.resolved_url = resolved_url
+            if status in {"downloaded", "existing"}:
+                exam.status = str(status)
 
     print(f"Discovered {len(exams)} PDFs across {len(subjects)} subjects.")
     unexpected = sorted({exam.month for exam in exams if exam.month not in EXPECTED_MONTHS})
@@ -586,7 +640,7 @@ def main() -> int:
                 if completed % 25 == 0 or completed == len(exams):
                     print(f"Processed {completed}/{len(exams)} PDFs.")
 
-    data = manifest_data(args.index_url, subjects, exams, args.dry_run)
+    data = manifest_data(index_urls, subjects, exams, args.dry_run)
     write_manifest(args.manifest, data)
     counts = data["summary"]["status_counts"]  # type: ignore[index]
     print(f"Manifest: {args.manifest}")

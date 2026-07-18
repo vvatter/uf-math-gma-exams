@@ -2,11 +2,13 @@
 
 ## Goal
 
-The Graduate Mathematics Association exam archive maintained by the University of
-Florida Department of Mathematics contains decades of First Year and PhD examination
-material. The project will extract the information contained in every exam into a
-clean, consistent dataset so it can be presented in more accessible forms. Those
-presentations may be WordPress posts, newly generated PDFs, or both.
+The Graduate Mathematics Association exam archives maintained by the University of
+Florida Department of Mathematics contain decades of First Year and PhD examination
+material for students who entered before Fall 2025, plus Qualifying Exams for students
+who entered in Fall 2025 or later. The project will extract the information contained
+in every exam into a clean, consistent dataset so it can be presented in more
+accessible forms. Those presentations may be WordPress posts, newly generated PDFs, or
+both.
 
 This is not archival transcription and not PDF remediation. We aim to preserve the
 questions, mathematical meaning, and instructions while discarding document furniture

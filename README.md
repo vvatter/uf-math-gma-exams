@@ -8,10 +8,16 @@
 ## Purpose
 
 The University of Florida Department of Mathematics maintains the Graduate Mathematics
-Association's [First Year and PhD Exam Archive](https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/).
-The purpose of this project is to extract the information contained in every exam in
-that archive so the questions, mathematical notation, and instructions can be presented
-in more accessible forms.
+Association's collections of [First Year and PhD Exams](https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/)
+and [Qualifying Exams](https://gma.math.ufl.edu/past-exams/qualifying-exams/). The
+purpose of this project is to extract the information contained in every exam in those
+archives so the questions, mathematical notation, and instructions can be presented in
+more accessible forms.
+
+The two collections apply to different cohorts:
+
+- First Year and PhD Exams are for students who entered before Fall 2025.
+- Qualifying Exams are for students who entered in Fall 2025 or later.
 
 This Git repository also serves as the project archive. It contains the acquisition and
 extraction code, the source PDFs after lossless optimization, one canonical JSON record
@@ -63,7 +69,8 @@ export OPENAI_API_KEY="your-key"
 python3 download_exams.py
 ```
 
-The script discovers the current subject pages and their exam tables on every run. It
+The script discovers the current subject pages and their exam tables from both GMA
+indexes on every run. It
 stores files under `exams/<subject-tag>/` and writes `manifest.json` with the source URL,
 subject, date, local path, original download size and SHA-256, current working size and
 SHA-256, and download status for every PDF. Valid files already on disk are checked and
@@ -128,6 +135,10 @@ explicit overrides:
 - `Variational Analysis/Numerical Optimization` becomes `numerical-optimization-phd`.
 - `Partial Differential Equations` becomes `pde-phd`.
 
+Qualifying subjects use tags such as `algebra-qualifying`,
+`analysis-qualifying`, `numerical-analysis-qualifying`, and
+`topology-qualifying`.
+
 January, May, August, and September are the expected exam months. If the source table
 contains another valid month, the script preserves it, reports it in the manifest, and
 uses its ordinary three-letter abbreviation rather than guessing a replacement.
@@ -137,6 +148,7 @@ uses its ordinary three-letter abbreviation rather than guessing a replacement.
 ```text
 --output DIR       PDF root directory (default: exams)
 --manifest FILE   JSON manifest path (default: manifest.json)
+--index-url URL    Source index URL; repeat to replace the two default indexes
 --workers N        Concurrent PDF downloads (default: 4)
 --overwrite        Download valid existing files again
 --dry-run          Discover and name files without downloading

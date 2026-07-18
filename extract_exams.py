@@ -452,6 +452,8 @@ def render_markdown(exam: ExamRecord) -> str:
         title = f"{exam.subject.removeprefix('First Year ')}, first year exam"
     elif exam.subject.startswith("PhD "):
         title = f"{exam.subject.removeprefix('PhD ')}, PhD exam"
+    elif exam.subject.endswith(" Qualifying Exam"):
+        title = f"{exam.subject.removesuffix(' Qualifying Exam')}, qualifying exam"
     else:
         title = f"{exam.subject} exam"
     title += f", {exam.month.title()} {exam.year}"

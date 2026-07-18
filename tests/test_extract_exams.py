@@ -194,6 +194,23 @@ class ExtractionSchemaTests(unittest.TestCase):
             "* (a) Prove it.\n",
         )
 
+    def test_qualifying_exam_markdown_title(self) -> None:
+        item = replace(
+            source(),
+            id="algebra-qualifying-2026-jan-part-1",
+            subject="Algebra Qualifying Exam",
+            subject_tag="algebra-qualifying",
+            year=2026,
+            month="january",
+        )
+        exam = exam_for(item, [Problem(number=1, text="Prove it.", subparts=[])])
+
+        self.assertTrue(
+            render_markdown(exam).startswith(
+                "# Algebra, qualifying exam, January 2026, Part 1\n"
+            )
+        )
+
     def test_markdown_supplies_stub_for_parts_without_a_stem(self) -> None:
         item = source()
         exam = exam_for(
