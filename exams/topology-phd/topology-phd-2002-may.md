@@ -1,6 +1,6 @@
 # Topology, PhD exam, May 2002
 
-*Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** State and prove the Contraction Mapping Theorem.
 
@@ -8,9 +8,11 @@
 
 **3.** Show that there is no retraction of the Möbius band onto its boundary.
 
-**4.** Show that no covering of the 2-torus has the homotopy type of a figure eight.
+**4.** Show that no covering of the \(2\)-torus has the homotopy type of a figure eight.
 
 **5.** Show that the space \(R^2 \setminus A\) is path connected for any countable set \(A\).
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Baire Category Theorem.
 

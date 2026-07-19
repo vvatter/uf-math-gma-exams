@@ -1,8 +1,10 @@
 # Algebra, PhD exam, January 2018
 
-*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module.*
+*Answer seven problems. If you turn in more, the first seven will be graded. Within reason, you may quote theorems as long as you state them clearly.*
 
-**1.** Let \(q > 1\) be a power of a prime \(p\). Prove that there exists some field \(F\) with \(|F|=q\).
+*Note. Below ring means associative ring with identity, and module means unital module.*
+
+**1.** Let \(q>1\) be a power of a prime \(p\). Prove that there exists some field \(F\) with \(|F|=q\).
 
 **2.** Determine the Galois group of \(x^4-5\) over \(\mathbb{Q}\), over \(\mathbb{Q}(\sqrt{5})\), and over \(\mathbb{Q}(\sqrt{5}i)\). Justify your answers.
 
@@ -21,7 +23,7 @@
 * (b) Prove that any free \(R\)-module is projective.
 * (c) Prove that there exists some ring \(R\) and some projective \(R\)-module \(P\) such that \(P\) is a projective module but not a free module.
 
-**9.** Let \(R\) be a commutative ring with identity. Let \(\phi\colon R\to R\) be a ring homomorphism. Assume \(R\) is Noetherian and that \(\phi\) is surjective. Prove that \(\phi\) is an automorphism.
+**9.** Let \(R\) be a commutative ring with identity. Let \(\phi:R\to R\) be a ring homomorphism. Assume \(R\) is Noetherian and that \(\phi\) is surjective. Prove that \(\phi\) is an automorphism.
 
 **10.** Let \(V\) be a finite dimensional non-zero vector space over a field \(F\). Let \(R=\operatorname{End}_F(V)\) be the ring of endomorphisms of \(V\).
 * (a) Prove that \(R\) is a simple ring.

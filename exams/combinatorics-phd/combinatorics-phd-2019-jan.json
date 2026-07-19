@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "combinatorics-phd-2019-jan",
   "subject": "PhD Combinatorics",
   "subject_tag": "combinatorics-phd",
@@ -7,47 +7,62 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics-2019_01.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(a_n\\) be the total number of leaves in all rooted non-plane trees with vertices bijectively labeled with elements of \\(\\{1,2,\\cdots n\\}\\), so \\(a_1=1\\), \\(a_2=2\\), and \\(a_3=12\\). Find an explicit formula for \\(a_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(a_n\\) be the total number of leaves in all rooted non-plane trees with vertices bijectively labeled with elements of \\(\\{1,2,\\cdots n\\}\\), so \\(a_1=1\\), \\(a_2=2\\), and \\(a_3=12\\). Find an explicit formula for \\(a_n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 2,
-      "text": "Let \\(G\\) be a simple graph with the property that if the vertices \\(u\\) and \\(v\\) have the same degree, then there is no vertex adjacent to both \\(u\\) and \\(v\\). Prove that \\(G\\) contains a vertex of degree one.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a simple graph with the property that if the vertices \\(u\\) and \\(v\\) have the same degree, then there is no vertex adjacent to both \\(u\\) and \\(v\\). Prove that \\(G\\) contains a vertex of degree one.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(h_n\\) be the number of ways to color each of \\(n\\) distinct objects red, blue, or green, so that the number of red objects is even and the number of blue objects is odd. Find the exponential generating function for the sequence \\(h_n\\), then deduce an explicit formula for the numbers \\(h_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(h_n\\) be the number of ways to color each of \\(n\\) distinct objects red, blue, or green, so that the number of red objects is even and the number of blue objects is odd. Find the exponential generating function for the sequence \\(h_n\\), then deduce an explicit formula for the numbers \\(h_n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(G\\) be a connected, regular, simple graph. If \\(G\\) has \\(22\\) edges, how many vertices can \\(G\\) have? Note: for full credit, give a complete list of all possibilities, and make sure that every possibility on the list is indeed possible.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a connected, regular, simple graph. If \\(G\\) has \\(22\\) edges, how many vertices can \\(G\\) have? Note: for full credit, give a complete list of all possibilities, and make sure that every possibility on the list is indeed possible.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Choose a permutation \\(p\\) of length \\(n\\) uniformly at random. Let \\(a_n\\) be the probability that \\(p\\) has no fixed points and no cycles of length three. Compute \\(\\lim_{n\\to\\infty} a_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Choose a permutation \\(p\\) of length \\(n\\) uniformly at random. Let \\(a_n\\) be the probability that \\(p\\) has no fixed points and no cycles of length three. Compute \\(\\lim_{n\\to\\infty} a_n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Recall that the permanent of the \\(n\\times n\\) matrix \\(M\\) is\n\\[\n\\operatorname{per}(M)=\\sum_{\\pi\\in S_n}\\prod_{i=1}^n M_{i,\\pi(i)}\n\\]\nand that a matrix is doubly stochastic if all of its entries are between \\(0\\) and \\(1\\), and each row sum and column sum equals \\(1\\).\n\nVan der Waerden’s Conjecture (now a theorem) states that the permanent of an \\(n\\times n\\) doubly stochastic matrix is at least \\(n!/n^n\\).\n\nShow how van der Waerden’s Conjecture implies that the number of derangements of length \\(n\\) is at least \\(n!\\left(1-\\frac{1}{n}\\right)^n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Recall that the permanent of the \\(n\\times n\\) matrix \\(M\\) is\n\\[\n\\operatorname{per}(M)=\\sum_{\\pi\\in S_n}\\prod_{i=1}^n M_{i,\\pi(i)}\n\\]\nand that a matrix is doubly stochastic if all of its entries are between \\(0\\) and \\(1\\), and each row sum and column sum equals \\(1\\).\n\nVan der Waerden’s Conjecture (now a theorem) states that the permanent of an \\(n\\times n\\) doubly stochastic matrix is at least \\(n!/n^n\\).\n\nShow how van der Waerden’s Conjecture implies that the number of derangements of length \\(n\\) is at least \\(n!\\left(1-\\frac{1}{n}\\right)^n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(G\\) be a connected plane graph where all faces have an even number of edges. Prove that \\(G\\) is bipartite.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a connected plane graph where all faces have an even number of edges. Prove that \\(G\\) is bipartite.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Recall that the Gaussian coefficients (or \\(q\\)-binomial coefficients) are defined by\n\\[\n\\begin{bmatrix}n\\\\k\\end{bmatrix}_q=\\frac{(q^n-1)(q^{n-1}-1)\\cdots(q^{n-k+1}-1)}{(q^k-1)(q^{k-1}-1)\\cdots(q-1)}.\n\\]\nProve that if \\(q\\) is a prime power then \\(\\begin{bmatrix}n\\\\k\\end{bmatrix}_q\\) counts the number of \\(k\\)-dimensional subspaces of an \\(n\\)-dimensional vector space over \\(\\operatorname{GF}(q)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Recall that the Gaussian coefficients (or \\(q\\)-binomial coefficients) are defined by\n\\[\n\\begin{bmatrix}n\\\\k\\end{bmatrix}_q=\\frac{(q^n-1)(q^{n-1}-1)\\cdots(q^{n-k+1}-1)}{(q^k-1)(q^{k-1}-1)\\cdots(q-1)}.\n\\]\nProve that if \\(q\\) is a prime power then \\(\\begin{bmatrix}n\\\\k\\end{bmatrix}_q\\) counts the number of \\(k\\)-dimensional subspaces of an \\(n\\)-dimensional vector space over \\(\\operatorname{GF}(q)\\).",
+        "subparts": []
+      }
     }
   ]
 }

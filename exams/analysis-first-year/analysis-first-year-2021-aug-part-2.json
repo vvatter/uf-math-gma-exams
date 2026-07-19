@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2021-aug-part-2",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,54 +7,67 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-2-2021_08.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(f_A\\) be the indicator function of the countably infinite set \\(A \\subseteq [0,1]\\): that is, \\(f_A(t)\\) is \\(1\\) when \\(t \\in A\\) and \\(0\\) when \\(t \\in [0,1] \\setminus A\\).",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Exhibit (with brief justification) such an \\(A\\) for which \\(f_A\\) is Riemann integrable, or prove that no such \\(A\\) exists.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Exhibit (with brief justification) such an \\(A\\) for which \\(f_A\\) is not Riemann integrable, or prove that no such \\(A\\) exists.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "For each \\(n>0\\) let the function \\(f_n:X\\to\\mathbb{R}\\) be continuous at all but finitely many points. Prove that if \\(f_n\\to f\\) uniformly on \\(X\\), then \\(f\\) is continuous at all but countably many points.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f_A\\) be the indicator function of the countably infinite set \\(A \\subseteq [0,1]\\): that is, \\(f_A(t)\\) is \\(1\\) when \\(t \\in A\\) and \\(0\\) when \\(t \\in [0,1] \\setminus A\\).",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Exhibit (with brief justification) such an \\(A\\) for which \\(f_A\\) is Riemann integrable, or prove that no such \\(A\\) exists.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Exhibit (with brief justification) such an \\(A\\) for which \\(f_A\\) is not Riemann integrable, or prove that no such \\(A\\) exists.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "\\((f_n:n>0)\\) is an equicontinuous sequence of real-valued functions on a compact space. Prove that if \\(f_n\\to f\\) pointwise then \\(f_n\\to f\\) uniformly.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For each \\(n>0\\) let the function \\(f_n:X\\to\\mathbb{R}\\) be continuous at all but finitely many points. Prove that if \\(f_n\\to f\\) uniformly on \\(X\\), then \\(f\\) is continuous at all but countably many points.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\((f_n:n>0)\\) be a sequence of measurable functions on \\(\\Omega\\). Prove that each of the following sets is measurable:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(\\{\\omega\\in\\Omega:\\text{ the sequence }f_n(\\omega)\\text{ is eventually constant}\\}\\);",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(\\{\\omega\\in\\Omega:\\text{ the values }f_n(\\omega)\\text{ are all different}\\}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "\\((f_n:n>0)\\) is an equicontinuous sequence of real-valued functions on a compact space. Prove that if \\(f_n\\to f\\) pointwise then \\(f_n\\to f\\) uniformly.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\((f_n:n>0)\\) be a sequence of non-negative integrable functions that converges pointwise to \\(f\\). Prove that if\n\\[\n\\int_\\Omega f_n\\,d\\mu \\to \\int_\\Omega f\\,d\\mu\n\\]\nthen\n\\[\n\\int_\\Omega |f-f_n|\\,d\\mu \\to 0.\n\\]\n[It might help to consider the positive part \\((f-f_n)^+=\\max\\{0,f-f_n\\}\\).]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((f_n:n>0)\\) be a sequence of measurable functions on \\(\\Omega\\). Prove that each of the following sets is measurable:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(\\{\\omega\\in\\Omega:\\text{ the sequence }f_n(\\omega)\\text{ is eventually constant}\\}\\);",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(\\{\\omega\\in\\Omega:\\text{ the values }f_n(\\omega)\\text{ are all different}\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((f_n:n>0)\\) be a sequence of non-negative integrable functions that converges pointwise to \\(f\\). Prove that if\n\\[\n\\int_\\Omega f_n\\,d\\mu \\to \\int_\\Omega f\\,d\\mu\n\\]\nthen\n\\[\n\\int_\\Omega |f-f_n|\\,d\\mu \\to 0.\n\\]\n[It might help to consider the positive part \\((f-f_n)^+=\\max\\{0,f-f_n\\}\\).]",
+        "subparts": []
+      }
     }
   ]
 }

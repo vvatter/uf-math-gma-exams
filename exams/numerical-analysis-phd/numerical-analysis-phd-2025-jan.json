@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-2025-jan",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,101 +7,124 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-NumericalAnalysis-2025_01.pdf",
-  "instructions": "Do 4 (four) of the first 5 (1-5) and 4 (four) of the last 5 problems (6-10).",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume \\(A\\in\\mathbb{C}^{m\\times m}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(A\\) has a Schur decomposition.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) of the first 5 (1-5) and 4 (four) of the last 5 problems (6-10)."
     },
     {
-      "number": 2,
-      "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V\\subset\\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A\\in\\mathbb{C}^{m\\times m}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(A\\) has a Schur decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(m\\geq n\\) and \\(\\operatorname{rank}(A)=n\\geq 3\\). Let \\(a_1,a_2,\\ldots\\) denote the columns of \\(A\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Using the modified Gram–Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show the vector \\(q_3\\) found in part (a) is orthogonal to both \\(q_1\\) and \\(q_2\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V\\subset\\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\lVert\\cdot\\rVert\\) be a subordinate (induced) matrix norm.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(E\\) is a \\(n\\times n\\) with \\(\\lVert E\\rVert<1\\), then show \\(I+E\\) is nonsingular and\n\\[\\lVert(I+E)^{-1}\\rVert\\leq\\frac{1}{1-\\lVert E\\rVert}.\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(A\\) is a \\(n\\times n\\) invertible and \\(E\\) is \\(n\\times n\\) with \\(\\lVert A^{-1}\\rVert\\lVert E\\rVert<1\\), then show \\(A+E\\) is nonsingular and\n\\[\\lVert(A+E)^{-1}\\rVert\\leq\\frac{\\lVert A^{-1}\\rVert}{1-\\lVert A^{-1}\\rVert\\lVert E\\rVert}.\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(m\\geq n\\) and \\(\\operatorname{rank}(A)=n\\geq 3\\). Let \\(a_1,a_2,\\ldots\\) denote the columns of \\(A\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Using the modified Gram–Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show the vector \\(q_3\\) found in part (a) is orthogonal to both \\(q_1\\) and \\(q_2\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\). Let \\(u_j\\) denote column \\(j\\) of \\(U\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Suppose \\(\\operatorname{rank}(A)=p<n<m\\). Show \\(\\{u_1,u_2,\\ldots,u_p\\}\\) is a basis for \\(\\operatorname{Col}(A)\\) and \\(\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\) is a basis for \\(\\operatorname{Null}(A^*)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose \\(A\\) is full rank and \\(x\\neq 0\\). Let \\(\\sigma_i\\), \\(i=1,\\ldots,n\\), be the singular values of \\(A\\). Show\n\\[\\sigma_1\\geq\\frac{\\lVert Ax\\rVert_2}{\\lVert x\\rVert_2}\\geq\\sigma_n>0.\\]\nIf you want to use the property that \\(\\lVert A\\rVert_2=\\sigma_1\\), then you must prove that it holds.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\lVert\\cdot\\rVert\\) be a subordinate (induced) matrix norm.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(E\\) is a \\(n\\times n\\) with \\(\\lVert E\\rVert<1\\), then show \\(I+E\\) is nonsingular and\n\\[\\lVert(I+E)^{-1}\\rVert\\leq\\frac{1}{1-\\lVert E\\rVert}.\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) is a \\(n\\times n\\) invertible and \\(E\\) is \\(n\\times n\\) with \\(\\lVert A^{-1}\\rVert\\lVert E\\rVert<1\\), then show \\(A+E\\) is nonsingular and\n\\[\\lVert(A+E)^{-1}\\rVert\\leq\\frac{\\lVert A^{-1}\\rVert}{1-\\lVert A^{-1}\\rVert\\lVert E\\rVert}.\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "\\(g(x)=\\frac{x}{2}+\\frac{a}{2x}\\) has \\(x=\\sqrt{a}\\) as a fixed point where \\(a>0\\). Suppose we use the fixed point method with a starting point \\(x_0>\\sqrt{a}\\). Use the theory of the fixed point method to determine the condition on \\(x_0\\) which guarantees\n\\[|x_{k+1}-\\sqrt{a}|\\leq\\frac{1}{2}|x_k-\\sqrt{a}|,\\qquad k\\geq 1.\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\). Let \\(u_j\\) denote column \\(j\\) of \\(U\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Suppose \\(\\operatorname{rank}(A)=p<n<m\\). Show \\(\\{u_1,u_2,\\ldots,u_p\\}\\) is a basis for \\(\\operatorname{Col}(A)\\) and \\(\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\) is a basis for \\(\\operatorname{Null}(A^*)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(A\\) is full rank and \\(x\\neq 0\\). Let \\(\\sigma_i\\), \\(i=1,\\ldots,n\\), be the singular values of \\(A\\). Show\n\\[\\sigma_1\\geq\\frac{\\lVert Ax\\rVert_2}{\\lVert x\\rVert_2}\\geq\\sigma_n>0.\\]\nIf you want to use the property that \\(\\lVert A\\rVert_2=\\sigma_1\\), then you must prove that it holds.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(f\\in C[0,1]\\) and let \\(\\sum_{i=1}^n w_i f(x_i)\\) (\\(n\\geq 1\\)) be an approximation to \\(\\int_0^1 f(x)\\,dx\\). Assume that \\(0\\leq w_i\\leq 1\\), \\(0\\leq x_i\\leq 1\\) (\\(i=1,2,\\ldots,n\\)). Let\n\\[E_n(f)=\\int_0^1 f(x)\\,dx-\\sum_{i=1}^n w_i f(x_i)\\]\nbe the error in the approximation. Assume that \\(E_n(p_n)=0\\) for \\(p_n\\), which denotes any polynomial of degree \\(\\leq n\\). Use the Weierstrass approximation theorem to prove that, given \\(\\epsilon>0\\), there is an \\(N>0\\) such that \\(|E_n(f)|<\\epsilon\\) when \\(n>N\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "\\(g(x)=\\frac{x}{2}+\\frac{a}{2x}\\) has \\(x=\\sqrt{a}\\) as a fixed point where \\(a>0\\). Suppose we use the fixed point method with a starting point \\(x_0>\\sqrt{a}\\). Use the theory of the fixed point method to determine the condition on \\(x_0\\) which guarantees\n\\[|x_{k+1}-\\sqrt{a}|\\leq\\frac{1}{2}|x_k-\\sqrt{a}|,\\qquad k\\geq 1.\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Given a differentiable function \\(f(x)\\), consider the problem of finding a polynomial \\(p(x)\\in\\mathbb{P}^n\\) such that\n\\[p(x_0)=f(x_0),\\qquad p'(x_i)=f'(x_i),\\qquad i=1,2,\\ldots,n,\\]\nwhere \\(x_i\\), \\(i=1,2,\\ldots,n\\), are distinct nodes. (It is not excluded that \\(x_1=x_0\\).) Show that the problem has a unique solution and describe how it can be obtained.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\in C[0,1]\\) and let \\(\\sum_{i=1}^n w_i f(x_i)\\) (\\(n\\geq 1\\)) be an approximation to \\(\\int_0^1 f(x)\\,dx\\). Assume that \\(0\\leq w_i\\leq 1\\), \\(0\\leq x_i\\leq 1\\) (\\(i=1,2,\\ldots,n\\)). Let\n\\[E_n(f)=\\int_0^1 f(x)\\,dx-\\sum_{i=1}^n w_i f(x_i)\\]\nbe the error in the approximation. Assume that \\(E_n(p_n)=0\\) for \\(p_n\\), which denotes any polynomial of degree \\(\\leq n\\). Use the Weierstrass approximation theorem to prove that, given \\(\\epsilon>0\\), there is an \\(N>0\\) such that \\(|E_n(f)|<\\epsilon\\) when \\(n>N\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(\\{p_i(x)\\}_{i=0}^{\\infty}\\) be the sequence of orthogonal polynomials obtained from the Gram–Schmidt orthogonalization process of \\(\\{x^i\\}_{i=0}^{\\infty}\\). Consider the quadrature formula \\(Q(f)=\\sum_{j=0}^m\\alpha_j f(x_j)\\) for \\(J(f)=\\int_a^b f(x)\\rho(x)\\,dx\\). Prove that \\(Q(f)\\) is exact for polynomials of degree \\(\\leq 2m+1\\) if and only if the quadrature nodes \\(x_j\\) (\\(j=0,1,\\ldots,m\\)) are the roots of \\(p_{m+1}(x)\\) and the quadrature weights \\(\\alpha_j=\\int_a^b l_j(x)\\rho(x)\\,dx\\), (\\(j=0,1,\\ldots,m\\)).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Given a differentiable function \\(f(x)\\), consider the problem of finding a polynomial \\(p(x)\\in\\mathbb{P}^n\\) such that\n\\[p(x_0)=f(x_0),\\qquad p'(x_i)=f'(x_i),\\qquad i=1,2,\\ldots,n,\\]\nwhere \\(x_i\\), \\(i=1,2,\\ldots,n\\), are distinct nodes. (It is not excluded that \\(x_1=x_0\\).) Show that the problem has a unique solution and describe how it can be obtained.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Consider numerically solving the initial value problem\n\\[y'(t)=f(t,y),\\qquad 0<t\\leq t_f,\\qquad\\text{with }y(0)=\\eta.\\]\nAssume \\(f\\) is sufficiently differentiable and let \\(h\\) denote the step size. Show that the method\n\\[y_{n+2}-y_{n+1}=\\frac{1}{4}h(f_{n+2}+2f_{n+1}+f_n)\\]\nis \\(A_0\\) stable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\{p_i(x)\\}_{i=0}^{\\infty}\\) be the sequence of orthogonal polynomials obtained from the Gram–Schmidt orthogonalization process of \\(\\{x^i\\}_{i=0}^{\\infty}\\). Consider the quadrature formula \\(Q(f)=\\sum_{j=0}^m\\alpha_j f(x_j)\\) for \\(J(f)=\\int_a^b f(x)\\rho(x)\\,dx\\). Prove that \\(Q(f)\\) is exact for polynomials of degree \\(\\leq 2m+1\\) if and only if the quadrature nodes \\(x_j\\) (\\(j=0,1,\\ldots,m\\)) are the roots of \\(p_{m+1}(x)\\) and the quadrature weights \\(\\alpha_j=\\int_a^b l_j(x)\\rho(x)\\,dx\\), (\\(j=0,1,\\ldots,m\\)).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Consider numerically solving the initial value problem\n\\[y'(t)=f(t,y),\\qquad 0<t\\leq t_f,\\qquad\\text{with }y(0)=\\eta.\\]\nAssume \\(f\\) is sufficiently differentiable and let \\(h\\) denote the step size. Show that the method\n\\[y_{n+2}-y_{n+1}=\\frac{1}{4}h(f_{n+2}+2f_{n+1}+f_n)\\]\nis \\(A_0\\) stable.",
+        "subparts": []
+      }
     }
   ]
 }

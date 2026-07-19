@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-2008-may",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,58 +7,77 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2008_05.pdf",
-  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Define the Hardy–Littlewood maximal function. State and prove the Hardy–Littlewood maximal theorem. (Begin by proving a suitable covering lemma.)",
-      "subparts": []
+      "type": "instructions",
+      "text": "Write solutions in a neat and logical fashion, giving complete reasons for all steps."
     },
     {
-      "number": 2,
-      "text": "Suppose \\(f_n \\to f\\) in measure. Prove the following:",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "If \\(f_n \\geq 0\\) for all \\(n\\), then \\(\\int f \\leq \\liminf \\int f_n\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "If \\(|f_n| \\leq g\\) for all \\(n\\) and \\(g \\in L^1\\), then \\(\\int f = \\lim \\int f_n\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Define the Hardy–Littlewood maximal function. State and prove the Hardy–Littlewood maximal theorem. (Begin by proving a suitable covering lemma.)",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\((X,\\mathcal M,\\mu)\\) be a \\(\\sigma\\)-finite measure space, \\(\\mathcal N\\) a sub-\\(\\sigma\\)-algebra of \\(\\mathcal M\\), and \\(\\nu=\\mu|_{\\mathcal N}\\). Prove that if \\(f\\in L^1(\\mu)\\), then there exists \\(g\\in L^1(\\nu)\\) (unique modulo \\(\\nu\\)-null sets) such that\n\\[\n\\int_E f\\,d\\mu=\\int_E g\\,d\\nu\n\\]\nfor all \\(E\\in\\mathcal N\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(f_n \\to f\\) in measure. Prove the following:",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "If \\(f_n \\geq 0\\) for all \\(n\\), then \\(\\int f \\leq \\liminf \\int f_n\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "If \\(|f_n| \\leq g\\) for all \\(n\\) and \\(g \\in L^1\\), then \\(\\int f = \\lim \\int f_n\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Suppose \\(1<p<\\infty\\), \\(f\\in L^p(0,\\infty)\\), and \\(p^{-1}+q^{-1}=1\\). Define\n\\[\nF(x)=\\int_0^x f(t)\\,dt.\n\\]\nShow that \\(\\dfrac{F(x)}{x^{1/q}}\\to0\\) as \\(x\\to0\\) and \\(x\\to\\infty\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,\\mathcal M,\\mu)\\) be a \\(\\sigma\\)-finite measure space, \\(\\mathcal N\\) a sub-\\(\\sigma\\)-algebra of \\(\\mathcal M\\), and \\(\\nu=\\mu|_{\\mathcal N}\\). Prove that if \\(f\\in L^1(\\mu)\\), then there exists \\(g\\in L^1(\\nu)\\) (unique modulo \\(\\nu\\)-null sets) such that\n\\[\n\\int_E f\\,d\\mu=\\int_E g\\,d\\nu\n\\]\nfor all \\(E\\in\\mathcal N\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(\\mathcal X,\\mathcal Y\\) be Banach spaces. Suppose that \\((T_n)\\) is a sequence of bounded linear operators from \\(\\mathcal X\\) to \\(\\mathcal Y\\) such that \\(\\lim T_nx\\) exists for every \\(x\\in\\mathcal X\\). Prove that\n\\[\nTx:=\\lim T_nx\n\\]\ndefines a bounded linear operator from \\(\\mathcal X\\) to \\(\\mathcal Y\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(1<p<\\infty\\), \\(f\\in L^p(0,\\infty)\\), and \\(p^{-1}+q^{-1}=1\\). Define\n\\[\nF(x)=\\int_0^x f(t)\\,dt.\n\\]\nShow that \\(\\dfrac{F(x)}{x^{1/q}}\\to0\\) as \\(x\\to0\\) and \\(x\\to\\infty\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\mu\\) be a \\(\\sigma\\)-finite positive measure and \\(1\\leq p\\leq\\infty\\). Let \\(g\\in L^\\infty\\). Prove that the operator\n\\[\nTf=gf\n\\]\nis bounded on \\(L^p\\), and \\(\\lVert T\\rVert=\\lVert g\\rVert_\\infty\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal X,\\mathcal Y\\) be Banach spaces. Suppose that \\((T_n)\\) is a sequence of bounded linear operators from \\(\\mathcal X\\) to \\(\\mathcal Y\\) such that \\(\\lim T_nx\\) exists for every \\(x\\in\\mathcal X\\). Prove that\n\\[\nTx:=\\lim T_nx\n\\]\ndefines a bounded linear operator from \\(\\mathcal X\\) to \\(\\mathcal Y\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(\\mathcal X\\) be a normed vector space over \\(\\mathbb C\\). Prove that if \\(\\mathcal M\\) is a closed subspace of \\(\\mathcal X\\) and \\(x\\in\\mathcal X\\setminus\\mathcal M\\), then the subspace \\(\\mathcal M+\\mathbb Cx\\) is closed.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mu\\) be a \\(\\sigma\\)-finite positive measure and \\(1\\leq p\\leq\\infty\\). Let \\(g\\in L^\\infty\\). Prove that the operator\n\\[\nTf=gf\n\\]\nis bounded on \\(L^p\\), and \\(\\lVert T\\rVert=\\lVert g\\rVert_\\infty\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(\\mathcal E\\) be a subset of a Hilbert space \\(\\mathcal H\\). Prove that \\((\\mathcal E^\\perp)^\\perp\\) is equal to the smallest closed subspace of \\(\\mathcal H\\) containing \\(\\mathcal E\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal X\\) be a normed vector space over \\(\\mathbb C\\). Prove that if \\(\\mathcal M\\) is a closed subspace of \\(\\mathcal X\\) and \\(x\\in\\mathcal X\\setminus\\mathcal M\\), then the subspace \\(\\mathcal M+\\mathbb Cx\\) is closed.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal E\\) be a subset of a Hilbert space \\(\\mathcal H\\). Prove that \\((\\mathcal E^\\perp)^\\perp\\) is equal to the smallest closed subspace of \\(\\mathcal H\\) containing \\(\\mathcal E\\).",
+        "subparts": []
+      }
     }
   ]
 }

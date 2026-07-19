@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-2017-may-part-1",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,102 +7,115 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalLinearAlgebra-2017_04.pdf",
-  "instructions": "Do 4 (four) problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Given \\(A \\in \\mathbb{C}^{m \\times n}\\) with \\(m \\geq n\\), show that \\(A^{*}A\\) is nonsingular if and only if \\(A\\) has full rank.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(u,v \\in \\mathbb{C}^{m}\\) and \\(A=uv^{*}\\), show that \\(\\lVert A\\rVert _2=\\lVert u\\rVert _2\\lVert v\\rVert _2\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
     },
     {
-      "number": 2,
-      "text": "Assume \\(S \\in \\mathbb{C}^{m \\times m}\\) is skew-Hermitian, so \\(S^{*}=-S\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that the eigenvalues of \\(S\\) are pure imaginary.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that \\(I-S\\) is nonsingular.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Show that the matrix \\(Q=(I-S)^{-1}(I+S)\\) is unitary.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Given \\(A \\in \\mathbb{C}^{m \\times n}\\) with \\(m \\geq n\\), show that \\(A^{*}A\\) is nonsingular if and only if \\(A\\) has full rank.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(u,v \\in \\mathbb{C}^{m}\\) and \\(A=uv^{*}\\), show that \\(\\lVert A\\rVert _2=\\lVert u\\rVert _2\\lVert v\\rVert _2\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "If \\(A \\in \\mathbb{R}^{m \\times n}\\) with \\(m \\geq n\\), \\(\\operatorname{rank}(A)=n\\) and \\(b \\in \\mathbb{R}^{m}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define the least squares solution to \\(Ax=b\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Derive the normal equations for the least squares problem.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that the unique solution to the least squares problem is \\((A^{T}A)^{-1}A^{T}b\\).",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "Describe how to solve the least squares problem using the SVD decomposition of \\(A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(S \\in \\mathbb{C}^{m \\times m}\\) is skew-Hermitian, so \\(S^{*}=-S\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that the eigenvalues of \\(S\\) are pure imaginary.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that \\(I-S\\) is nonsingular.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that the matrix \\(Q=(I-S)^{-1}(I+S)\\) is unitary.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that every square matrix \\(A\\) has a Schur factorization.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(A\\) is normal (so \\(A^{*}A=AA^{*}\\)) show that the triangular matrix in its Schur factorization is diagonal.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "If \\(A \\in \\mathbb{R}^{m \\times n}\\) with \\(m \\geq n\\), \\(\\operatorname{rank}(A)=n\\) and \\(b \\in \\mathbb{R}^{m}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define the least squares solution to \\(Ax=b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Derive the normal equations for the least squares problem.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that the unique solution to the least squares problem is \\((A^{T}A)^{-1}A^{T}b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Describe how to solve the least squares problem using the SVD decomposition of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Assume \\(A \\in \\mathbb{C}^{m \\times m}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "When \\(A\\) is diagonalizable, prove the Cayley–Hamilton theorem for \\(A\\), i.e. \\(A\\) satisfies its own characteristic polynomial.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that every square matrix \\(A\\) has a Schur factorization.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) is normal (so \\(A^{*}A=AA^{*}\\)) show that the triangular matrix in its Schur factorization is diagonal.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A \\in \\mathbb{C}^{m \\times m}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "When \\(A\\) is diagonalizable, prove the Cayley–Hamilton theorem for \\(A\\), i.e. \\(A\\) satisfies its own characteristic polynomial.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

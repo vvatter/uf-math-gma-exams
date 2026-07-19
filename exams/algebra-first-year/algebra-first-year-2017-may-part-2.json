@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2017-may-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,48 +7,63 @@
   "month": "may",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2017_05.pdf",
-  "instructions": "Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(\\omega=\\frac{-1+\\sqrt{-3}}{2}\\). Show that the ring \\(\\mathbb{Z}[\\omega]\\) of all complex numbers of the form \\(a+b\\omega\\) with \\(a,b\\in\\mathbb{Z}\\) is a Euclidean domain.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(F\\) be a field.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that if \\(F\\) has characteristic zero and \\(n\\geq 1\\) is an integer, the ring \\(F[X,Y]/(X^n+Y^n-1)\\) is an integral domain. (Hint: first show that \\(Y-1\\) and \\(Y^{n-1}+Y^{n-2}+\\cdots+Y+1\\) are relatively prime in \\(F[Y]\\).)",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Find an example of a field of positive characteristic and \\(n\\geq 1\\) for which the conclusion of (i) is false.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\omega=\\frac{-1+\\sqrt{-3}}{2}\\). Show that the ring \\(\\mathbb{Z}[\\omega]\\) of all complex numbers of the form \\(a+b\\omega\\) with \\(a,b\\in\\mathbb{Z}\\) is a Euclidean domain.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(R\\) be an integral domain. Recall that an \\(R\\)-module \\(M\\) has rank \\(n\\) if \\(n\\) is the largest integer such that \\(M\\) has \\(n\\) \\(R\\)-linearly independent elements. Show that an \\(R\\)-module \\(M\\) has rank \\(n\\) if and only if \\(M\\) has a submodule \\(N\\subseteq M\\) such that \\(N\\) is free of rank \\(n\\), and \\(M/N\\) is torsion.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F\\) be a field.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(F\\) has characteristic zero and \\(n\\geq 1\\) is an integer, the ring \\(F[X,Y]/(X^n+Y^n-1)\\) is an integral domain. (Hint: first show that \\(Y-1\\) and \\(Y^{n-1}+Y^{n-2}+\\cdots+Y+1\\) are relatively prime in \\(F[Y]\\).)",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Find an example of a field of positive characteristic and \\(n\\geq 1\\) for which the conclusion of (i) is false.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(F\\) be a field, \\(M\\) an extension of \\(F\\) and \\(L,K\\) two finite extensions of \\(F\\) contained in \\(M\\). Show that if \\([L:F]\\) and \\([K:F]\\) are relatively prime, \\(L\\cap K=F\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be an integral domain. Recall that an \\(R\\)-module \\(M\\) has rank \\(n\\) if \\(n\\) is the largest integer such that \\(M\\) has \\(n\\) \\(R\\)-linearly independent elements. Show that an \\(R\\)-module \\(M\\) has rank \\(n\\) if and only if \\(M\\) has a submodule \\(N\\subseteq M\\) such that \\(N\\) is free of rank \\(n\\), and \\(M/N\\) is torsion.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Show that the group \\(GL_3(\\mathbb{F}_2)\\) has two distinct conjugacy classes of elements of order \\(7\\), and find representatives for each class.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F\\) be a field, \\(M\\) an extension of \\(F\\) and \\(L,K\\) two finite extensions of \\(F\\) contained in \\(M\\). Show that if \\([L:F]\\) and \\([K:F]\\) are relatively prime, \\(L\\cap K=F\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(F\\) be a field, \\(V\\) an \\(F\\)-vector space of finite dimension and \\(T:V\\to V\\) a linear transformation. Show that if the minimal polynomial of \\(T\\) is irreducible of degree \\(d\\) then the dimension of \\(V\\) is a multiple of \\(d\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the group \\(GL_3(\\mathbb{F}_2)\\) has two distinct conjugacy classes of elements of order \\(7\\), and find representatives for each class.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F\\) be a field, \\(V\\) an \\(F\\)-vector space of finite dimension and \\(T:V\\to V\\) a linear transformation. Show that if the minimal polynomial of \\(T\\) is irreducible of degree \\(d\\) then the dimension of \\(V\\) is a multiple of \\(d\\).",
+        "subparts": []
+      }
     }
   ]
 }

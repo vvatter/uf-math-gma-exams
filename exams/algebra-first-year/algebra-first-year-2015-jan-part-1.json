@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2015-jan-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,75 +7,90 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Algebra-1_2015_01.pdf",
-  "instructions": "Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Describe the subgroup\n\\[\n\\left\\{\\begin{pmatrix}a&b\\\\0&c\\end{pmatrix}\\;\\middle|\\;ac\\ne 0\\right\\}\\subseteq GL_2(\\mathbb{R})\n\\]\nas a semidirect product \\(A\\rtimes_\\phi B\\) with nontrivial \\(A,B\\). Specify the groups \\(A,B\\) and the homomorphism \\(\\phi:B\\to\\operatorname{Aut}(A)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(G\\) be a \\(p\\)-group and \\(S\\) a finite set on which \\(G\\) acts. Denote by \\(S^G\\subseteq S\\) the subset of fixed elements (i.e. \\(g(x)=x\\) for all \\(g\\in G\\), \\(x\\in S\\)). Show that \\(|S|\\equiv|S^G|\\pmod p\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Describe the subgroup\n\\[\n\\left\\{\\begin{pmatrix}a&b\\\\0&c\\end{pmatrix}\\;\\middle|\\;ac\\ne 0\\right\\}\\subseteq GL_2(\\mathbb{R})\n\\]\nas a semidirect product \\(A\\rtimes_\\phi B\\) with nontrivial \\(A,B\\). Specify the groups \\(A,B\\) and the homomorphism \\(\\phi:B\\to\\operatorname{Aut}(A)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(G\\) be a group of order \\(3^2\\cdot 11\\cdot 41\\).",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that the 41-Sylow subgroup is normal.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Show that in fact it is contained in the center.",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "Show that \\(G\\) has a normal cyclic subgroup of order \\(451=11\\cdot 41\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a \\(p\\)-group and \\(S\\) a finite set on which \\(G\\) acts. Denote by \\(S^G\\subseteq S\\) the subset of fixed elements (i.e. \\(g(x)=x\\) for all \\(g\\in G\\), \\(x\\in S\\)). Show that \\(|S|\\equiv|S^G|\\pmod p\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Suppose \\(p\\) is an odd prime.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that if \\(0<a<p\\) then the \\(p\\)-Sylow subgroup of the symmetric group \\(S_{ap}\\) is an elementary abelian \\(p\\)-group.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Show that a \\(p\\)-Sylow subgroup of \\(S_{p^2}\\) is nonabelian of order \\(p^{p+1}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group of order \\(3^2\\cdot 11\\cdot 41\\).",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that the 41-Sylow subgroup is normal.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that in fact it is contained in the center.",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Show that \\(G\\) has a normal cyclic subgroup of order \\(451=11\\cdot 41\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Suppose \\(G\\) is a \\(p\\)-group and \\(M\\le G\\) is a maximal subgroup.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that any maximal subgroup of \\(G\\) has index \\(p\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Show that \\(M\\) contains all commutators and \\(p\\)-th powers of elements of \\(G\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(p\\) is an odd prime.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(0<a<p\\) then the \\(p\\)-Sylow subgroup of the symmetric group \\(S_{ap}\\) is an elementary abelian \\(p\\)-group.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that a \\(p\\)-Sylow subgroup of \\(S_{p^2}\\) is nonabelian of order \\(p^{p+1}\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(G\\) be a finite group and \\(H\\mathrel{\\triangleleft}G\\) a normal subgroup. Show that \\(G\\) is solvable if and only if \\(H\\) and \\(G/H\\) are solvable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(G\\) is a \\(p\\)-group and \\(M\\le G\\) is a maximal subgroup.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that any maximal subgroup of \\(G\\) has index \\(p\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that \\(M\\) contains all commutators and \\(p\\)-th powers of elements of \\(G\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group and \\(H\\mathrel{\\triangleleft}G\\) a normal subgroup. Show that \\(G\\) is solvable if and only if \\(H\\) and \\(G/H\\) are solvable.",
+        "subparts": []
+      }
     }
   ]
 }

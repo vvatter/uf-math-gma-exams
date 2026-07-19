@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2024-may-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,64 +7,79 @@
   "month": "may",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2024_05.pdf",
-  "instructions": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove the following version of the Chinese remainder theorem: Let \\(R\\) be a commutative ring with \\(1\\) and let \\(I, J\\) be ideals of \\(R\\) such that \\(I+J=R\\). Then \\(IJ=I\\cap J\\) and there is a ring isomorphism \\(R/IJ\\to (R/I)\\times(R/J)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(R\\) be a commutative ring and let \\(M\\) be a maximal ideal of \\(R\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(R\\) has an identity then \\(R/M\\) is a field.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of a commutative ring \\(R\\) and a maximal ideal \\(M\\) of \\(R\\) such that \\(R/M\\) is not a field.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove the following version of the Chinese remainder theorem: Let \\(R\\) be a commutative ring with \\(1\\) and let \\(I, J\\) be ideals of \\(R\\) such that \\(I+J=R\\). Then \\(IJ=I\\cap J\\) and there is a ring isomorphism \\(R/IJ\\to (R/I)\\times(R/J)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(R\\) be a commutative ring with identity \\(1\\) different from \\(0\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what is a prime ideal of \\(R\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Define what is a minimal prime ideal of \\(R\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that \\(R\\) has a minimal prime ideal.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring and let \\(M\\) be a maximal ideal of \\(R\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(R\\) has an identity then \\(R/M\\) is a field.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a commutative ring \\(R\\) and a maximal ideal \\(M\\) of \\(R\\) such that \\(R/M\\) is not a field.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}]=\\{a+b\\sqrt{-2}:a,b\\in\\mathbb{Z}\\}\\) is a Euclidean domain with respect to the norm defined by \\(N(a+b\\sqrt{-2})=a^2+2b^2\\) for all \\(a,b\\in\\mathbb{Z}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with identity \\(1\\) different from \\(0\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what is a prime ideal of \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Define what is a minimal prime ideal of \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\(R\\) has a minimal prime ideal.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Determine the conjugacy classes of elements of order \\(8\\) in \\(GL(5,\\mathbb{Q})\\), and, for each conjugacy class, give a representative matrix. (You may use the fact that \\(x^4+1\\) is irreducible in \\(\\mathbb{Q}[x]\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}]=\\{a+b\\sqrt{-2}:a,b\\in\\mathbb{Z}\\}\\) is a Euclidean domain with respect to the norm defined by \\(N(a+b\\sqrt{-2})=a^2+2b^2\\) for all \\(a,b\\in\\mathbb{Z}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(F=\\mathbb{Q}(\\sqrt[4]{2},\\sqrt{-1})\\). Calculate the degree of the extension \\(F/\\mathbb{Q}\\), and justify each of the steps of your calculation.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Determine the conjugacy classes of elements of order \\(8\\) in \\(GL(5,\\mathbb{Q})\\), and, for each conjugacy class, give a representative matrix. (You may use the fact that \\(x^4+1\\) is irreducible in \\(\\mathbb{Q}[x]\\).)",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F=\\mathbb{Q}(\\sqrt[4]{2},\\sqrt{-1})\\). Calculate the degree of the extension \\(F/\\mathbb{Q}\\), and justify each of the steps of your calculation.",
+        "subparts": []
+      }
     }
   ]
 }

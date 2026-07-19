@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "pde-phd-2014-jan",
   "subject": "PhD Partial Differential Equations",
   "subject_tag": "pde-phd",
@@ -7,42 +7,55 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_PartialDifferentialEquations_2014_01.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(\\Omega\\) be an open subset of \\(\\mathbb{R}^n\\) and let \\(u\\in C^2(\\Omega)\\) be a harmonic function in \\(\\Omega\\). Prove that \\(u\\) is analytic in \\(\\Omega\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\Omega\\) be an open subset of \\(\\mathbb{R}^n\\) and let \\(u\\in C^2(\\Omega)\\) be a harmonic function in \\(\\Omega\\). Prove that \\(u\\) is analytic in \\(\\Omega\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 2,
-      "text": "Let \\(U\\) be an open and bounded set in \\(\\mathbb{R}^n\\) with smooth boundary. Suppose \\(u_1\\) and \\(u_2\\) are both smooth solutions to\n\\[\n\\begin{cases}\nu_t-\\Delta u=0, & \\text{in } U_T:=U\\times(0,T],\\\\\nu=g, & \\text{on } \\partial U\\times[0,T].\n\\end{cases}\n\\]\nIf \\(u_1(x,T)=u_2(x,T)\\) for all \\(x\\in U\\), prove that \\(u_1\\equiv u_2\\) within \\(U_T\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(U\\) be an open and bounded set in \\(\\mathbb{R}^n\\) with smooth boundary. Suppose \\(u_1\\) and \\(u_2\\) are both smooth solutions to\n\\[\n\\begin{cases}\nu_t-\\Delta u=0, & \\text{in } U_T:=U\\times(0,T],\\\\\nu=g, & \\text{on } \\partial U\\times[0,T].\n\\end{cases}\n\\]\nIf \\(u_1(x,T)=u_2(x,T)\\) for all \\(x\\in U\\), prove that \\(u_1\\equiv u_2\\) within \\(U_T\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Suppose \\(u\\) is a smooth solution to\n\\[\nu_{tt}-\\Delta u=0, \\qquad \\text{in } \\mathbb{R}^n\\times(0,\\infty)\n\\]\nand\n\\[\nu\\equiv u_t\\equiv 0 \\qquad \\text{on } B(x_0,t_0)\\times\\{t=0\\}.\n\\]\nLet\n\\[\nC=\\{(x,t)\\mid 0\\leq t\\leq t_0,\\ |x-x_0|\\leq t_0-t\\}.\n\\]\nProve that \\(u\\equiv 0\\) within \\(C\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(u\\) is a smooth solution to\n\\[\nu_{tt}-\\Delta u=0, \\qquad \\text{in } \\mathbb{R}^n\\times(0,\\infty)\n\\]\nand\n\\[\nu\\equiv u_t\\equiv 0 \\qquad \\text{on } B(x_0,t_0)\\times\\{t=0\\}.\n\\]\nLet\n\\[\nC=\\{(x,t)\\mid 0\\leq t\\leq t_0,\\ |x-x_0|\\leq t_0-t\\}.\n\\]\nProve that \\(u\\equiv 0\\) within \\(C\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Use characteristics to solve the following equation:\n\\[\n\\begin{cases}\nx_1u_{x_1}+2x_2u_{x_2}+u_{x_3}=3u, & \\mathbb{R}_+^3,\\\\\nu(x_1,x_2,0)=g(x_1,x_2), & \\partial\\mathbb{R}_+^3,\n\\end{cases}\n\\]\nwhere \\(g\\) is a given smooth function.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Use characteristics to solve the following equation:\n\\[\n\\begin{cases}\nx_1u_{x_1}+2x_2u_{x_2}+u_{x_3}=3u, & \\mathbb{R}_+^3,\\\\\nu(x_1,x_2,0)=g(x_1,x_2), & \\partial\\mathbb{R}_+^3,\n\\end{cases}\n\\]\nwhere \\(g\\) is a given smooth function.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Fix \\(\\alpha>0\\) and let \\(U=B(0,1)\\) (open ball). Show there exists a constant \\(C\\), depending only on \\(n\\) and \\(\\alpha\\), such that\n\\[\n\\int_U u^2\\,dx\\leq C\\int_U |Du|^2\\,dx,\n\\]\nprovided\n\\[\n|\\{x\\in U\\mid u(x)=0\\}|\\geq\\alpha, \\qquad u\\in H^1(U).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Fix \\(\\alpha>0\\) and let \\(U=B(0,1)\\) (open ball). Show there exists a constant \\(C\\), depending only on \\(n\\) and \\(\\alpha\\), such that\n\\[\n\\int_U u^2\\,dx\\leq C\\int_U |Du|^2\\,dx,\n\\]\nprovided\n\\[\n|\\{x\\in U\\mid u(x)=0\\}|\\geq\\alpha, \\qquad u\\in H^1(U).\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Use Hopf–Lax formula to find a solution of\n\\[\n\\begin{cases}\nu_t+\\dfrac{1}{2}|Du|^2=0, & \\mathbb{R}^n\\times(0,\\infty),\\\\\nu=-\\dfrac{1}{2}|x|, & \\mathbb{R}^n\\times\\{t=0\\}.\n\\end{cases}\n\\]\nIs this solution unique in the weak sense?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Use Hopf–Lax formula to find a solution of\n\\[\n\\begin{cases}\nu_t+\\dfrac{1}{2}|Du|^2=0, & \\mathbb{R}^n\\times(0,\\infty),\\\\\nu=-\\dfrac{1}{2}|x|, & \\mathbb{R}^n\\times\\{t=0\\}.\n\\end{cases}\n\\]\nIs this solution unique in the weak sense?",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(U\\) be a bounded subset of \\(\\mathbb{R}^n\\), \\(u\\in W^{2,p}(U)\\cap W_0^{1,p}(U)\\), and \\(2\\leq p<\\infty\\). Prove that\n\\[\n\\int_U |Du|^p\\,dx\\leq C\\left(\\int_U |u|^p\\,dx\\right)^{\\frac12}\\left(\\int_U |D^2u|^p\\,dx\\right)^{\\frac12}\n\\]\nfor some \\(C\\) independent of \\(u\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(U\\) be a bounded subset of \\(\\mathbb{R}^n\\), \\(u\\in W^{2,p}(U)\\cap W_0^{1,p}(U)\\), and \\(2\\leq p<\\infty\\). Prove that\n\\[\n\\int_U |Du|^p\\,dx\\leq C\\left(\\int_U |u|^p\\,dx\\right)^{\\frac12}\\left(\\int_U |D^2u|^p\\,dx\\right)^{\\frac12}\n\\]\nfor some \\(C\\) independent of \\(u\\).",
+        "subparts": []
+      }
     }
   ]
 }

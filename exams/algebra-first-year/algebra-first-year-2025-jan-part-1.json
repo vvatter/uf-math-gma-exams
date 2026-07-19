@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2025-jan-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,85 +7,100 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1_2025_01.pdf",
-  "instructions": "Answer 4 questions. You should indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "In \\(S_8\\), write down a representative of each conjugacy class of elements of order \\(4\\) and compute the order of its centralizer.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer 4 questions. You should indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(G\\) be a group of order \\(124=2^2\\cdot 31\\). Prove that \\(G\\) has a cyclic subgroup of order \\(62\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "In \\(S_8\\), write down a representative of each conjugacy class of elements of order \\(4\\) and compute the order of its centralizer.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Prove that there exists a nonabelian group of order \\(2025=3^4\\cdot 5^2\\). (You do not have to determine its multiplication explicitly.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group of order \\(124=2^2\\cdot 31\\). Prove that \\(G\\) has a cyclic subgroup of order \\(62\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give the definition of a maximal subgroup of a nontrivial group.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Find two maximal subgroups of \\(S_5\\) of different orders.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Show that the group \\((\\mathbb{Q},+)\\) has no maximal subgroup.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove that there exists a nonabelian group of order \\(2025=3^4\\cdot 5^2\\). (You do not have to determine its multiplication explicitly.)",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(G\\) be a finite group and \\(p\\) a prime. Let \\(K\\) be the intersection of all the Sylow \\(p\\)-subgroups of \\(G\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(K\\) is a characteristic subgroup of \\(G\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose \\(H\\) is a normal \\(p\\)-subgroup of \\(G\\). Prove that \\(H\\subseteq K\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give the definition of a maximal subgroup of a nontrivial group.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Find two maximal subgroups of \\(S_5\\) of different orders.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that the group \\((\\mathbb{Q},+)\\) has no maximal subgroup.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(G\\) be a group, and let \\(Z(G)\\) denote its center.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "State what it means for \\(G\\) to be nilpotent of class \\(c\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that if \\(G\\) is nilpotent of class \\(1\\), then \\(G\\) is abelian.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Define the commutator subgroup \\(G'\\) of \\(G\\).",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "Prove that if \\(G\\) is nilpotent of class \\(2\\), then \\(G'\\subseteq Z(G)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group and \\(p\\) a prime. Let \\(K\\) be the intersection of all the Sylow \\(p\\)-subgroups of \\(G\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(K\\) is a characteristic subgroup of \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(H\\) is a normal \\(p\\)-subgroup of \\(G\\). Prove that \\(H\\subseteq K\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group, and let \\(Z(G)\\) denote its center.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State what it means for \\(G\\) to be nilpotent of class \\(c\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(G\\) is nilpotent of class \\(1\\), then \\(G\\) is abelian.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Define the commutator subgroup \\(G'\\) of \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Prove that if \\(G\\) is nilpotent of class \\(2\\), then \\(G'\\subseteq Z(G)\\).",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,13 +1,11 @@
 # Numerical Analysis, PhD exam, September 2000
 
-*Do any 8 of the following 10 problems. Part 1: Numerical Linear Algebra (problems 1–5). Part II: Numerical Analysis (problems 6–10).*
+*Do any 8 of the following 10 problems.*
 
-**1.** A square matrix \(A\) which can be decomposed into a form \(A=SDS^{-1}\), where \(D\) is diagonal is said to be diagonalizable.
-* (a) Is the matrix
-  \[
-  A=\begin{pmatrix}5&1\\0&3\end{pmatrix}
-  \]
-  diagonalizable? Why?
+## Part 1: Numerical Linear Algebra
+
+**1.** A square matrix \(A\) which can be decomposed into a form \(A=SDS^{-1}\), where \(D\) is diagonal, is said to be diagonalizable.
+* (a) Is the matrix \[A=\begin{pmatrix}5&1\\0&3\end{pmatrix}\] diagonalizable? Why?
 * (b) Can the above matrix \(A\) be diagonalized with a matrix \(S\) such that \(S^*S=I\)?
 
 **2.** This problem has three parts.
@@ -27,18 +25,12 @@
 **5.** This problem has three parts.
 * (a) Give a careful statement of the Gershgorin Circle Theorem.
 * (b) Give a careful proof of the Gershgorin Circle Theorem.
-* (c) Let
-  \[
-  A=\begin{pmatrix}
-  5&.01&.03\\
-  .02&4&.01\\
-  .03&-.01&4
-  \end{pmatrix}.
-  \]
-  What can you say about the location of the eigenvalues of \(A\)?
+* (c) Let \[A=\begin{pmatrix}5&.01&.03\\.02&4&.01\\.03&-.01&4\end{pmatrix}.\] What can you say about the location of the eigenvalues of \(A\)?
+
+## Part II: Numerical Analysis
 
 **6.** This problem has three parts.
-* (a) State Newton’s method (the algorithm) for solving \(f(x)=0\) where \(f:\mathbb{R}\to\mathbb{R}\).
+* (a) State Newton’s method (the algorithm) for solving \(f(x)=0\), where \(f:\mathbb{R}\to\mathbb{R}\).
 * (b) Assuming \(f\) is smooth and we have an initial guess sufficiently close to the root, state sufficient condition(s) for the method to converge quadratically.
 * (c) How would you use Newton’s method to compute \(5^{1/3}\)?
 
@@ -51,10 +43,6 @@
 * (a) Describe Romberg’s technique for numerical approximation of an integral (based on the trapezoid rule).
 * (b) Give a brief justification of the method.
 
-**9.** Triple Recursion Formula. If \(\{\phi_n(x)\}\) is an orthogonal family of polynomials on \([a,b]\), with weight function \(w(x)\geq0\), and \(n\geq1\), then show that
-\[
-\phi_{n+1}(x)=(a_nx+b_n)\phi_n(x)-c_n\phi_{n-1}(x),
-\]
-for some constants \(a_n,b_n\), and \(c_n\). (Hint: Let \(g(x)=\phi_{n+1}(x)-a_nx\phi_n(x)\), where \(a_n\) is a constant chosen so that \(g(x)\) has degree \(n\).)
+**9.** Triple Recursion Formula. If \(\{\phi_n(x)\}\) is an orthogonal family of polynomials on \([a,b]\), with weight function \(w(x)\geq0\), and \(n\geq1\), then show that \[\phi_{n+1}(x)=(a_nx+b_n)\phi_n(x)-c_n\phi_{n-1}(x),\] for some constants \(a_n,b_n\), and \(c_n\). (Hint: Let \(g(x)=\phi_{n+1}(x)-a_nx\phi_n(x)\), where \(a_n\) is a constant chosen so that \(g(x)\) has degree \(n\).)
 
 **10.** Let \(\{\phi_k\}\) be a system of orthogonal polynomials, with respect to a non-negative weight \(w(x)\), on \([a,b]\). Show that each of the polynomials \(\phi_k(x)\) must have exactly \(k\) simple zeros in \([a,b]\).

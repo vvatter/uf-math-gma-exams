@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "complex-analysis-phd-2000-may",
   "subject": "PhD Complex Analysis",
   "subject_tag": "complex-analysis-phd",
@@ -7,101 +7,120 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_ComplexAnalysis_2000_05.pdf",
-  "instructions": "Please write up solutions to the eight problems 1–8 below. Please write LARGE, as the grader’s eyes are older and weaker than your eyes. A square \\(S\\subset\\mathbb C\\) is a set of the form \\([a,a+L]\\times[b,b+L]\\), where \\(L\\) is positive. Use “\\(s:=\\mathrm{Foo}\\)” to mean that Foo is the definition of the new symbol \\(s\\).",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Find complex numbers \\(a,b,c,d\\), with \\(ad-bc\\ne0\\), so that the Möbius transformation\n\\[\n\\mu(z):=\\frac{az+b}{cz+d}\n\\]\ncarries the imaginary axis to the circle whose radius is \\(2\\) and whose center is \\(3=3+0i\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Notes. Please write up solutions to the eight problems 1–8, below. Please write LARGE, as the grader’s eyes are older and weaker than your eyes.\n\nA square \\(S\\subset\\mathbb C\\) is a set of the form \\([a,a+L]\\times[b,b+L]\\), where \\(L\\) is positive. Use “\\(s:=\\mathrm{Foo}\\)” to mean that Foo is the definition of the new symbol \\(s\\)."
     },
     {
-      "number": 2,
-      "text": "With \\(B\\) the open unit ball \\(|z|<1\\), consider a non-constant analytic function \\(h:B\\to\\mathbb C\\).",
-      "subparts": [
-        {
-          "label": "i:",
-          "text": "Suppose that \\(\\Re(h(z))\\ge0\\) for each \\(z\\in B\\). Prove that the inequality can then be strengthened to “\\(>\\).”",
-          "subparts": []
-        },
-        {
-          "label": "ii:",
-          "text": "With \\(\\Re(h(z))>0\\) on \\(B\\), suppose further that \\(h(0)=1\\). Prove, for each \\(z\\in B\\), that\n\\[\n\\frac{1-|z|}{1+|z|}\\le |h(z)|\\le\\frac{1+|z|}{1-|z|}.\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Find complex numbers \\(a,b,c,d\\), with \\(ad-bc\\ne0\\), so that the Möbius transformation\n\\[\n\\mu(z):=\\frac{az+b}{cz+d}\n\\]\ncarries the imaginary axis to the circle whose radius is \\(2\\) and whose center is \\(3=3+0i\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Suppose that \\(P(\\,)\\) is a monic polynomial with degree \\(N\\ge1\\). Let \\(\\alpha_1,\\ldots,\\alpha_N\\) be an enumeration (with multiplicity) of the zeros of \\(P(\\,)\\).",
-      "subparts": [
-        {
-          "label": "①:",
-          "text": "Suppose that \\(\\forall k:\\ \\Re(\\alpha_k)>0\\). Prove that all the zeros of the derivative, \\(P'\\), also lie in the positive half-plane, as follows: Establish that\n\\[\n\\frac{P'(z)}{P(z)}=\\frac{1}{z-\\alpha_1}+\\frac{1}{z-\\alpha_2}+\\cdots+\\frac{1}{z-\\alpha_N},\n\\]\nthen use it to complete the proof.",
-          "subparts": []
-        },
-        {
-          "label": "②:",
-          "text": "Prove Lucas’s theorem: If all the zeros of a non-constant polynomial \\(P\\) lie in a convex polygon \\(Q\\subset\\mathbb C\\), then all the zeros of \\(P'\\) lie in \\(Q\\).",
-          "subparts": []
-        },
-        {
-          "label": "③:",
-          "text": "Show that (②) can fail if \\(P(\\,)\\) is allowed to be a rational function: Namely, by letting\n\\[\nP(z):=\\frac{z}{z^2+1},\n\\]\nfind a half-plane \\(H\\) which owns a zero of \\(P'\\) but has no zero of \\(P\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "With \\(B\\) the open unit ball \\(|z|<1\\), consider a non-constant analytic function \\(h:B\\to\\mathbb C\\).",
+        "subparts": [
+          {
+            "label": "i:",
+            "text": "Suppose that \\(\\Re(h(z))\\ge0\\) for each \\(z\\in B\\). Prove that the inequality can then be strengthened to “\\(>\\)”.",
+            "subparts": []
+          },
+          {
+            "label": "ii:",
+            "text": "With \\(\\Re(h(z))>0\\) on \\(B\\), suppose further that \\(h(0)=1\\). Prove, for each \\(z\\in B\\), that\n\\[\n\\frac{1-|z|}{1+|z|}\\le |h(z)|\\le\\frac{1+|z|}{1-|z|}.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Use the Residue Calculus to compute\n\\[\nI:=\\int_0^{+\\infty}\\frac{1}{[x^4+4]\\cdot[x^2+9]^9}\\,dx.\n\\]\nTo save arithmetic, you may define some explicit points \\(P_1,\\ldots,P_L\\in\\mathbb C\\) (what should \\(L\\) be?) and explicit functions \\(h_1,\\ldots,h_L\\), and then may express your answer in the form\n\\[\nI=[h_1(P_1)+\\cdots+h_L(P_L)]\\cdot\\text{Constant}.\n\\]\n(Do not bother to perform the function-evaluation.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(P()\\) is a monic polynomial with degree \\(N\\ge1\\). Let \\(\\alpha_1,\\ldots,\\alpha_N\\) be an enumeration (with multiplicity) of the zeros of \\(P()\\).",
+        "subparts": [
+          {
+            "label": "①:",
+            "text": "Suppose that \\(\\forall k:\\ \\Re(\\alpha_k)>0\\). Prove that all the zeros of the derivative, \\(P'\\), also lie in the positive half-plane, as follows: Establish that\n\\[\n\\frac{P'(z)}{P(z)}=\\frac{1}{z-\\alpha_1}+\\frac{1}{z-\\alpha_2}+\\cdots+\\frac{1}{z-\\alpha_N},\n\\]\nthen use it to complete the proof.",
+            "subparts": []
+          },
+          {
+            "label": "②:",
+            "text": "Prove Lucas’s theorem: If all the zeros of a non-constant polynomial \\(P\\) lie in a convex polygon \\(Q\\subset\\mathbb C\\), then all the zeros of \\(P'\\) lie in \\(Q\\).",
+            "subparts": []
+          },
+          {
+            "label": "③:",
+            "text": "Show that ② can fail if \\(P()\\) is allowed to be a rational function: Namely, by letting\n\\[\nP(z):=\\frac{z}{z^2+1},\n\\]\nfind a half-plane \\(H\\) which owns a zero of \\(P'\\) but has no zero of \\(P\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "",
-      "subparts": [
-        {
-          "label": "a:",
-          "text": "State (but do not prove) Morera’s Theorem. (You may use this without proof in (b), if you wish.)",
-          "subparts": []
-        },
-        {
-          "label": "b:",
-          "text": "Prove this version of the Schwarz Reflection Principle: Suppose \\(f\\) is continuous in the closed upper half-plane \\(H:=\\mathbb R\\times[0,\\infty)\\) and is analytic on the interior of \\(H\\). Further suppose that \\(f\\) is real-valued on the real-axis. By defining \\(\\Phi=f\\) on \\(H\\), and\n\\[\n\\Phi(z):=\\overline{f(\\overline z)},\\qquad\\text{for all }z\\in\\mathbb C\\setminus H,\n\\]\nextend \\(f\\) to all of \\(\\mathbb C\\). Then this \\(\\Phi\\) is analytic.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Use the Residue Calculus to compute\n\\[\nI:=\\int_0^{+\\infty}\\frac{1}{[x^4+4]\\cdot[x^2+9]^9}\\,dx.\n\\]\nTo save arithmetic, you may define some explicit points \\(P_1,\\ldots,P_L\\in\\mathbb C\\) (what should \\(L\\) be?) and explicit functions \\(h_1,\\ldots,h_L\\), and then may express your answer in the form\n\\[\nI=[h_1(P_1)+\\cdots+h_L(P_L)]\\cdot\\text{Constant}.\n\\]\n(Do not bother to perform the function-evaluation.)",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "①:",
-          "text": "Please state Picard’s Theorem.",
-          "subparts": []
-        },
-        {
-          "label": "②:",
-          "text": "Let \\(f\\) be meromorphic in the whole complex plane. Suppose that the range of \\(f\\) omits three distinct values (one of them can be \\(\\infty\\)). Prove that \\(f\\) is constant.",
-          "subparts": []
-        },
-        {
-          "label": "③:",
-          "text": "Suppose that \\(f\\) and \\(g\\) are entire functions such that, on \\(\\mathbb C\\),\n\\[\nf^3+g^3=1.\n\\]\nProve that \\(f\\) and \\(g\\) are each constant functions. [Note: Symbol \\(f^3\\) means \\(f\\cdot f\\cdot f\\).]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "a:",
+            "text": "State (but do not prove) Morera’s Theorem. (You may use this without proof in (b), if you wish.)",
+            "subparts": []
+          },
+          {
+            "label": "b:",
+            "text": "Prove this version of the Schwarz Reflection Principle: Suppose \\(f\\) is continuous in the closed upper half-plane \\(H=\\mathbb R\\times[0,\\infty)\\) and is analytic on the interior of \\(H\\). Further suppose that \\(f\\) is real-valued on the real-axis. By defining \\(\\Phi=f\\) on \\(H\\), and\n\\[\n\\Phi(z):=\\overline{f(\\overline z)},\\qquad\\text{for all }z\\in\\mathbb C\\setminus H,\n\\]\nextend \\(f\\) to all of \\(\\mathbb C\\). Then this \\(\\Phi\\) is analytic.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Fix a real \\(b>0\\). Write down an entire function, \\(f\\), that vanishes precisely on the sequence \\((z_n)_{n=1}^{\\infty}\\), where \\(z_n:=n^b\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "①:",
+            "text": "Please state Picard’s Theorem.",
+            "subparts": []
+          },
+          {
+            "label": "②:",
+            "text": "Let \\(f\\) be meromorphic in the whole complex plane. Suppose that the range of \\(f\\) omits three distinct values (one of them can be \\(\\infty\\)). Prove that \\(f\\) is constant.",
+            "subparts": []
+          },
+          {
+            "label": "③:",
+            "text": "Suppose that \\(f\\) and \\(g\\) are entire functions such that, on \\(\\mathbb C\\),\n\\[\nf^3+g^3=1.\n\\]\nProve that \\(f\\) and \\(g\\) are each constant functions. [Note: Symbol \\(f^3\\) means \\(f\\cdot f\\cdot f\\).]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Show that all roots of polynomial \\(P(z):=z^5+15z+1\\) lie in the ball \\(|z|<2\\), but that only one root satisfies \\(|z|<\\frac32\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Fix a real \\(b>0\\). Write down an entire function, \\(f\\), that vanishes precisely on the sequence \\((z_n)_{n=1}^{\\infty}\\), where \\(z_n:=n^b\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Show that all roots of polynomial \\(P(z):=z^5+15z+1\\) lie in the ball \\(|z|<2\\), but that only one root satisfies \\(|z|<\\frac32\\).",
+        "subparts": []
+      }
     }
   ]
 }

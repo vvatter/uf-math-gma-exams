@@ -1,6 +1,8 @@
 # Algebra, PhD exam, May 2017
 
-*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Below ring means associative ring with identity, and module means unital module unless otherwise specified.*
+*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
+
+*Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.*
 
 **1.** Let \(F\) and \(K\) be fields and let \(S\) be a set of field homomorphisms from \(F\) to \(K\). Prove that \(S\) is linearly independent over \(K\) in the vector space of functions from \(F\) to \(K\).
 
@@ -18,7 +20,7 @@ as algebras over \(\mathbb{Q}\).
 * (a) Prove that, for every set \(S\), there is a free object in \(C\) with free generator set \(S\).
 * (b) Prove that if \(S\ne\varnothing\), then the free object in \(C\) with free generator set \(S\) is infinite.
 
-**5.** Let \(R\) be a ring. Prove that the following two conditions are equivalent for a left \(R\)-module \(P\). (You may not assume any properties of projective modules).
+**5.** Let \(R\) be a ring. Prove that the following two conditions are equivalent for a left \(R\)-module \(P\). (You may not assume any properties of projective modules.)
 * (a) Every short exact sequence of \(R\)-modules
   \[
   0\to A\to B\to P\to 0
@@ -35,7 +37,7 @@ as algebras over \(\mathbb{Q}\).
 **9.** Prove the following version of Nakayama’s Lemma. Let \(A\) be a commutative ring with identity, let \(M\) be a finitely generated \(A\)-module, and let \(I\) be an ideal contained in the intersection of all the maximal ideals of \(A\). Show that if \(IM=M\) then \(M=\{0\}\).
 
 **10.** Let \(R\) be a ring (possibly non-commutative, and possibly without identity). Let \(M\) be an irreducible left \(R\)-module. Let \(D=\operatorname{End}_R(M)\).
-* (a) Prove \(D=\operatorname{End}_R(M)\) is a division ring. (You may NOT assume Schur’s Lemma for this).
+* (a) Prove \(D=\operatorname{End}_R(M)\) is a division ring. (You may NOT assume Schur’s Lemma for this.)
 * (b) Give an example of a ring \(R\) and an irreducible module \(M\) such that \(D\) is not commutative.
 
-**11.** Classify (up to ring isomorphism) all semisimple rings of order 720.
+**11.** Classify (up to ring isomorphism) all semisimple rings of order \(720\).

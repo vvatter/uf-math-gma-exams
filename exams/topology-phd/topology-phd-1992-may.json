@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-1992-may",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,73 +7,100 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_1992_05.pdf",
-  "instructions": "Answer problems 1–4 without giving proofs. Answer problems 5–10, giving proofs and examples.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Define what it means for a space \\(X\\) to be",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "connected",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "arcwise connected",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "simply connected",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer the following questions without giving proofs."
     },
     {
-      "number": 2,
-      "text": "Let \\(K\\) be a finite simplicial complex. Define \\(\\chi(K)\\), the Euler characteristic of \\(K\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define what it means for a space \\(X\\) to be",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "connected",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "arcwise connected",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "simply connected",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Define the degree of a map \\(f:S^n\\to S^n\\). (You may assume that \\(f\\) is smooth.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(K\\) be a finite simplicial complex. Define \\(\\chi(K)\\), the Euler characteristic of \\(K\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(K=K_1\\cup K_2\\), where \\(K\\) is a simplicial complex and \\(K_1\\), \\(K_2\\), and \\(A=K_1\\cap K_2\\) are subcomplexes of \\(K\\). State the Mayer–Vietoris sequence (in either homology or cohomology) for \\((K,K_1,K_2,A)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define the degree of a map \\(f:S^n\\to S^n\\). (You may assume that \\(f\\) is smooth.)",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Must a continuous map \\(f:S^4\\to S^4\\) of non-negative degree have a fixed point?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(K=K_1\\cup K_2\\), where \\(K\\) is a simplicial complex and \\(K_1\\), \\(K_2\\), and \\(A=K_1\\cap K_2\\) are subcomplexes of \\(K\\). State the Mayer–Vietoris sequence (in either homology or cohomology) for \\((K,K_1,K_2,A)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Compute the fundamental group of a closed, non-orientable surface \\(X\\) of genus 2.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following questions, giving proofs and examples."
     },
     {
-      "number": 7,
-      "text": "State and prove the Brouwer fixed point theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Must a continuous map \\(f:S^4\\to S^4\\) of non-negative degree have a fixed point?",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(U\\) be an open subset of \\(\\mathbb{R}^n\\). Show that \\(U\\) is connected if and only if \\(U\\) is arcwise connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Compute the fundamental group of a closed, non-orientable surface \\(X\\) of genus 2.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Show that no covering space of the two-torus, \\(T^2=S^1\\times S^1\\), has the homotopy type of the figure-8, \\(S^1\\vee S^1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Brouwer fixed point theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Compute the homology groups of the closed unit disk \\(D^n=\\{x\\in\\mathbb{R}^n:\\lVert x\\rVert\\leq 1\\}\\) and the unit sphere \\(S^n=\\{u\\in\\mathbb{R}^{n+1}:\\lVert u\\rVert=1\\}\\), for all \\(n\\geq 0\\). (Note that \\(D^0=\\{0\\}\\) and that \\(S^0=\\{-1,1\\}\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(U\\) be an open subset of \\(\\mathbb{R}^n\\). Show that \\(U\\) is connected if and only if \\(U\\) is arcwise connected.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Show that no covering space for the two-torus, \\(T^2=S^1\\times S^1\\), has the homotopy type of the figure-8, \\(S^1\\vee S^1\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Compute the homology groups of the closed unit disk \\(D^n=\\{x\\in\\mathbb{R}^n:\\lVert x\\rVert\\leq 1\\}\\) and the unit sphere \\(S^n=\\{u\\in\\mathbb{R}^{n+1}:\\lVert u\\rVert=1\\}\\), for all \\(n\\geq 0\\). (Note that \\(D^0=\\{0\\}\\) and that \\(S^0=\\{-1,1\\}\\).)",
+        "subparts": []
+      }
     }
   ]
 }

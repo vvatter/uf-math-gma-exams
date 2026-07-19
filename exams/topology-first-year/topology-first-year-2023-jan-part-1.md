@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2023, Part 1
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that a connected metric space having more than one point is uncountable.
 
@@ -11,6 +11,8 @@
 **4.** Show that the set of irrational numbers in \(\mathbb{R}\) is a Baire space.
 
 **5.** Let \(f:X\to X\) be a map of a compact metric space \((X,d)\) to itself that satisfies the following condition \(d(f(x),f(y))<d(x,y)\) for all \(x\ne y\). Prove that \(f\) is continuous. Show that \(f\) has a unique fixed point.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Intermediate Value Theorem.
 

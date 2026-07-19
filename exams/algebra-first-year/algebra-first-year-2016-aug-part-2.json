@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2016-aug-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,85 +7,100 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Algebra-Semester_2-2016_08.pdf",
-  "instructions": "Answer four problems. (If you turn in more, the first four will be graded.) Put your answers in numerical order. Within reason, you may quote theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(R=\\mathbb{Z}[\\sqrt{-5}]\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Calculate the set of units of \\(R\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(R\\) is not a unique factorization domain.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that \\((2,1+\\sqrt{-5})\\) is a maximal ideal of \\(R\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Put your answers in numerical order. Within reason, you may quote theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(R\\) be an integral domain, let \\(P\\subseteq R\\) be a prime ideal, and let \\(F=\\operatorname{Frac}(R)\\) be the field of fractions of \\(R\\). Define\n\\[\nR_P=\\left\\{\\frac{a}{b}:a,b\\in R\\text{ and }b\\notin P\\right\\}.\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(R_P\\) is a subring of \\(F\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose now that \\(R=\\mathbb{Z}\\) and \\(P=(5)\\). Is \\(R_P\\) isomorphic to \\(\\mathbb{Z}\\)? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R=\\mathbb{Z}[\\sqrt{-5}]\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Calculate the set of units of \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(R\\) is not a unique factorization domain.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\((2,1+\\sqrt{-5})\\) is a maximal ideal of \\(R\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Suppose \\(R\\) is a commutative ring with identity, and \\(S\\subseteq R\\) is a multiplicative subset, i.e. \\(0\\notin S\\), \\(1\\in S\\), and \\(a,b\\in S\\) implies \\(ab\\in S\\). Show that there is a prime ideal \\(P\\subseteq R\\) such that \\(P\\cap S=\\varnothing\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be an integral domain, let \\(P\\subseteq R\\) be a prime ideal, and let \\(F=\\operatorname{Frac}(R)\\) be the field of fractions of \\(R\\). Define\n\\[\nR_P=\\left\\{\\frac{a}{b}:a,b\\in R\\text{ and }b\\notin P\\right\\}.\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(R_P\\) is a subring of \\(F\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose now that \\(R=\\mathbb{Z}\\) and \\(P=(5)\\). Is \\(R_P\\) isomorphic to \\(\\mathbb{Z}\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(F\\) be a field, and let \\(K\\) be a field extension of \\(F\\). Suppose that \\(u\\in K\\), that \\(u^3\\in F\\), and that \\([F(u):F]\\) is relatively prime to \\(6\\). Prove that \\(u\\in F\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(R\\) is a commutative ring with identity, and \\(S\\subseteq R\\) is a multiplicative subset, i.e. \\(0\\notin S\\), \\(1\\in S\\), and \\(a,b\\in S\\) implies \\(ab\\in S\\). Show that there is a prime ideal \\(P\\subseteq R\\) such that \\(P\\cap S=\\varnothing\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "For this question do not assume that rings are necessarily commutative or that they necessarily have an identity. Likewise, do not assume that ring homomorphisms necessarily send the identity of the first ring to the identity of the second.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \\(R\\) be a ring. Prove that \\(R\\) can not have more than one identity.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \\(R\\), and \\(S\\) be rings and let \\(\\phi:R\\to S\\) be a surjective ring homomorphism. Suppose that \\(e\\in R\\) is the identity of \\(R\\). Prove that \\(\\phi(e)\\) is the identity of \\(S\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Let \\(R\\), and \\(S\\) be rings and let \\(\\phi:R\\to S\\) be a ring homomorphism. Suppose that \\(e\\in R\\) is the identity of \\(R\\), and that \\(S\\) is an integral domain, and that \\(\\phi(e)\\ne 0\\). Show that \\(\\phi(e)\\) is the identity of \\(S\\).",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "Give an example of rings \\(R\\) and \\(S\\) both with identity and a ring homomorphism \\(\\phi:R\\to S\\) such that \\(e\\in R\\) is the identity of \\(R\\), \\(f\\in S\\) is the identity of \\(S\\), and \\(\\phi(e)\\notin\\{0,f\\}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F\\) be a field, and let \\(K\\) be a field extension of \\(F\\). Suppose that \\(u\\in K\\), that \\(u^3\\in F\\), and that \\([F(u):F]\\) is relatively prime to \\(6\\). Prove that \\(u\\in F\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\mathbb{F}_2\\) be the field of \\(2\\) elements, and let \\(V\\) be a vector space of dimension \\(3\\) over \\(\\mathbb{F}_2\\). Calculate a set of representatives up to similarity for the linear transformations \\(\\phi\\in\\operatorname{End}(V)\\) of determinant \\(0\\) whose eigenvalues are either \\(0\\) or primitive 3-rd roots of \\(1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For this question do not assume that rings are necessarily commutative or that they necessarily have an identity. Likewise, do not assume that ring homomorphisms necessarily send the identity of the first ring to the identity of the second.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(R\\) be a ring. Prove that \\(R\\) can not have more than one identity.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(R\\), and \\(S\\) be rings and let \\(\\phi:R\\to S\\) be a surjective ring homomorphism. Suppose that \\(e\\in R\\) is the identity of \\(R\\). Prove that \\(\\phi(e)\\) is the identity of \\(S\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(R\\), and \\(S\\) be rings and let \\(\\phi:R\\to S\\) be a ring homomorphism. Suppose that \\(e\\in R\\) is the identity of \\(R\\), and that \\(S\\) is an integral domain, and that \\(\\phi(e)\\ne 0\\). Show that \\(\\phi(e)\\) is the identity of \\(S\\).",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Give an example of rings \\(R\\) and \\(S\\) both with identity and a ring homomorphism \\(\\phi:R\\to S\\) such that \\(e\\in R\\) is the identity of \\(R\\), \\(f\\in S\\) is the identity of \\(S\\), and \\(\\phi(e)\\notin\\{0,f\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathbb{F}_2\\) be the field of \\(2\\) elements, and let \\(V\\) be a vector space of dimension \\(3\\) over \\(\\mathbb{F}_2\\). Calculate a set of representatives up to similarity for the linear transformations \\(\\phi\\in\\operatorname{End}(V)\\) of determinant \\(0\\) whose eigenvalues are either \\(0\\) or primitive 3-rd roots of \\(1\\).",
+        "subparts": []
+      }
     }
   ]
 }

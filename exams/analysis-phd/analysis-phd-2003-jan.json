@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-2003-jan",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,72 +7,123 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2003_01.pdf",
-  "instructions": "Problems 1–8 (Part I): State the following theorems. Part II: Prove one of either the theorem in Problem 3 or the theorem in Problem 7. Problems 9–13 (Part III): Solve the following problems. In Problems 9–12, \\((X,\\Sigma,\\mu)\\) is a measure space and \\(F\\) is a Banach space.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Hölder’s inequality.",
-      "subparts": []
+      "type": "section",
+      "heading": "Part I",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State the following theorems."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Hölder’s inequality.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Hahn Decomposition Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Fubini Theorem for positive measures \\(\\mu\\) and \\(\\nu\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Monotone Class Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Hahn–Banach Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Monotone Convergence Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The completeness of \\(L_E^1(\\mu)\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The theorem of uniform boundedness.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 2,
-      "text": "The Hahn Decomposition Theorem.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Part II Prove one of either Theorem 3 or 7 from part I."
     },
     {
-      "number": 3,
-      "text": "The Fubini Theorem for positive measures \\(\\mu\\) and \\(\\nu\\).",
-      "subparts": []
-    },
-    {
-      "number": 4,
-      "text": "The Monotone Class Theorem.",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "The Hahn–Banach Theorem.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "The Monotone Convergence Theorem.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "The completeness of \\(L_E^1(\\mu)\\).",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "The theorem of uniform boundedness.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Let \\(\\mathcal F\\subset\\Sigma\\) be a \\(\\sigma\\)-subalgebra. Prove the existence of the conditional expectation \\(E(f\\mid\\mathcal F)\\) for \\(f\\in L_F^1(\\mu)\\).",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Let \\(\\mathcal R\\) be a ring generating \\(\\Sigma\\) and suppose \\(f\\in L_F^1(\\mu)\\). Prove, if \\(\\int_A f\\,d\\mu=0\\) for each \\(A\\in\\mathcal R\\), then \\(f=0\\), \\(\\mu\\) almost everywhere.",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "Suppose \\(E\\) (as well as \\(F\\)) is a Banach space and \\(U\\) is a bounded linear operator from \\(E\\) to \\(F\\). Show, if \\(f\\in L_E^1(\\mu)\\), then \\(U\\circ f\\in L_F^1(\\mu)\\) and\n\\[\n\\int U\\circ f\\,d\\mu=U\\int f\\,d\\mu.\n\\]",
-      "subparts": []
-    },
-    {
-      "number": 12,
-      "text": "Suppose \\(X\\) is a locally compact Hausdorff space. Show, if \\(K\\) is a compact set and the restriction of \\(f\\) to \\(K\\), \\(f|_K\\), is continuous, then \\(f\\phi_K\\) is a Borel function. Here \\(\\phi_K\\) is the characteristic function of \\(K\\).",
-      "subparts": []
-    },
-    {
-      "number": 13,
-      "text": "Prove that \\(C([0,1])\\) is a closed proper subspace of \\(L^\\infty([0,1])\\) (the \\(L^\\infty\\) space with respect to Lebesgue measure on the interval \\([0,1]\\)). Explain how to view \\(L^1([0,1])\\) as a subspace of \\(L^\\infty([0,1])^*\\). Is \\(L^1([0,1])\\) a proper subspace of \\(L^\\infty([0,1])^*\\)?",
-      "subparts": []
+      "type": "section",
+      "heading": "Part III",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Solve the following problems. In problems one through four \\((X,\\Sigma,\\mu)\\) is a measure space and \\(F\\) is a Banach space."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(\\mathcal{F}\\subset\\Sigma\\) be a \\(\\sigma\\)-subalgebra. Prove the existence of the conditional expectation \\(E(f\\mid\\mathcal{F})\\) for \\(f\\in L_F^1(\\mu)\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(\\mathcal{R}\\) be a ring generating \\(\\Sigma\\) and suppose \\(f\\in L_F^1(\\mu)\\). Prove, if \\(\\int_A f\\,d\\mu=0\\) for each \\(A\\in\\mathcal{R}\\), then \\(f=0\\), \\(\\mu\\) almost everywhere.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Suppose \\(E\\) (as well as \\(F\\)) is a Banach space and \\(U\\) is a bounded linear operator from \\(E\\) to \\(F\\). Show, if \\(f\\in L_E^1(\\mu)\\), then \\(U\\circ f\\in L_F^1(\\mu)\\) and\n\\[\n\\int U\\circ f\\,d\\mu=U\\int f\\,d\\mu.\n\\]",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Suppose \\(X\\) is a locally compact Hausdorff space. Show, if \\(K\\) is a compact set and the restriction of \\(f\\) to \\(K\\), \\(f|_K\\), is continuous, then \\(f\\phi_K\\) is a Borel function. Here \\(\\phi_K\\) is the characteristic function of \\(K\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that \\(C([0,1])\\) is a closed proper subspace of \\(L^\\infty([0,1])\\) (the \\(L^\\infty\\) space with respect to Lebesgue measure on the interval \\([0,1]\\)). Explain how to view \\(L^1([0,1])\\) as a subspace of \\(L^\\infty([0,1])^*\\). Is \\(L^1([0,1])\\) a proper subspace of \\(L^\\infty([0,1])^*\\)?",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

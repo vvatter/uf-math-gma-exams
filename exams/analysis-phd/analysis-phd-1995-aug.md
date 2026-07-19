@@ -1,6 +1,8 @@
 # Analysis, PhD exam, August 1995
 
-*All work must be presented in a neat and logical fashion to receive credit. Be sure to give reasons for all your steps. DO NOT leave any gaps! \((X,\Sigma,\mu)\) will always denote a measure space (possibly infinite).*
+*All work must be presented in a neat and logical fashion to receive credit. Be sure to give reasons for all your steps. DO NOT leave any gaps!*
+
+*\((X,\Sigma,\mu)\) will always denote a measure space (possibly infinite).*
 
 **1.** Prove that \(L^1(X,\Sigma,\mu)\) is complete.
 
@@ -8,7 +10,7 @@
 
 **3.** Let \((f_n)\) be a sequence of integrable functions such that \(\sum_{n=1}^{\infty}\int |f_n|\,d\mu<\infty\). What can you prove about the a.e. \(\mu\) convergence of \(\sum f_n\)?
 
-**4.** Let \(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon>0\). Is it possible to find a bounded interval \(I\) such that whenever \(E\) is a measurable set such that \(E\cap I=\varnothing\), then \(\left|\int_E f\,m\right|<\epsilon\)?
+**4.** Let \(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon>0\). Is it possible to find a bounded interval \(I\) such that whenever \(E\) is a measurable set such that \(E\cap I=\phi\), then \(\left|\int_E f\,m\right|<\epsilon\)?
 
 **5.** State and prove the Lebesgue Monotone Convergence Theorem.
 

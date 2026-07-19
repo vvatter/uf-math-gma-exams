@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-2009-jan",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,52 +7,94 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2009_01.pdf",
-  "instructions": "Answer six questions and at least one from each section. Problems 1–3 are from Section 1, problems 4–6 are from Section 2, and problems 7–9 are from Section 3.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer six questions and at least one from each section."
     },
     {
-      "number": 2,
-      "text": "Show that for any elementary chain \\(\\{\\mathcal A_i\\}_{i\\in\\omega}\\) of structures, \\(\\mathcal A_i\\) is an elementary submodel of the union \\(\\mathcal A\\)",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 1",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that for any elementary chain \\(\\{\\mathcal A_i\\}_{i\\in\\omega}\\) of structures, \\(\\mathcal A_i\\) is an elementary submodel of the union \\(\\mathcal A\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that the theory of dense linear orderings without end points is complete and decidable.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 3,
-      "text": "Show that the theory of dense linear orderings without end points is complete and decidable.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 2",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Suppose \\(2\\leq\\kappa\\leq\\lambda\\) and \\(\\lambda\\) is infinite. Show that \\(2^\\lambda=\\kappa^\\lambda\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove König’s Lemma. (Hint: trees.)",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that for any notion of forcing \\(\\mathcal P\\) and any countable set \\(\\mathcal D\\) of \\(\\mathcal P\\)-dense sets, there exists a \\(\\mathcal D\\)-generic \\(\\mathcal P\\)-filter.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "Suppose \\(2\\leq\\kappa\\leq\\lambda\\) and \\(\\lambda\\) is infinite. Show that \\(2^\\lambda=\\kappa^\\lambda\\).",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "State and prove König’s Lemma. (Hint: trees.)",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "Show that for any notion of forcing \\(\\mathcal P\\) and any countable set \\(\\mathcal D\\) of \\(\\mathcal P\\)-dense sets, there exists a \\(\\mathcal D\\)-generic \\(\\mathcal P\\)-filter.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Define many-one and truth-table reducibility and show that one implies the other but the converse does not hold in general.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "State the Friedberg–Muchnik Theorem and sketch the proof. Explain how the “priority” argument deals with “injury”.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 3",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Define many-one and truth-table reducibility and show that one implies the other but the converse does not hold in general.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State the Friedberg–Muchnik Theorem and sketch the proof. Explain how the “priority” argument deals with “injury”.",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

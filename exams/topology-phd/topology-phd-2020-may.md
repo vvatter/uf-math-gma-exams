@@ -1,6 +1,6 @@
 # Topology, PhD exam, May 2020
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions, statements, or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Let \(X\) be a nonempty set. A nonempty collection \(\Phi\) of subsets \(U\subseteq X\times X\) is a uniformity if it satisfies the following axioms:
 
@@ -32,12 +32,14 @@ Prove that a metric space \(X\) is uniformizable.
 \[
 H_k(M;\mathbb{Z})=
 \begin{cases}
-\mathbb{Z} & k=0,2,4,\\
-\mathbb{Z}_3 & k=1,\\
-\mathbb{Z}_2 & k=3,\\
-0 & \text{otherwise.}
+\mathbb{Z}, & k=0,2,4,\\
+\mathbb{Z}_3, & k=1,\\
+\mathbb{Z}_2, & k=3,\\
+0, & \text{otherwise}.
 \end{cases}
 \]
+
+*Answer the following with complete definitions, statements, or short proofs.*
 
 **6.** Prove that for a finite CW-complex \(X\), \(H^1(X;\mathbb{Z})\) is free.
 

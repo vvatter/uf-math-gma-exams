@@ -1,6 +1,6 @@
 # Topology, PhD exam, May 2016
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that there is no map \(S^2 \to T^2\) of degree 2. Does there exist a map \(f:T^2 \to S^2\) of degree 2?
 
@@ -12,9 +12,11 @@
 * (c) \(k=2\)?
 * (d) \(k=3\)?
 
-**4.** Prove that the topologist’s sine curve is not path connected.
+**4.** Prove that the topologist sin curve is not path connected.
 
-**5.** Suppose that \(X=C_1\cup C_2\) where each \(C_i\) is homeomorphic to the topologist’s sine curve. Can \(X\) be path connected?
+**5.** Suppose that \(X=C_1\cup C_2\) where each \(C_i\) is homeomorphic to the topologist sin curve. Can \(X\) be path connected?
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Why the \(n\)-sphere \(S^n\) is not homeomorphic to the \(n\)-space \(\mathbb{R}^n\)?
 

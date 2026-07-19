@@ -1,6 +1,8 @@
 # Topology, PhD exam, January 2026
 
-*Be neat and do not write too small. For problems 1–5, show all of your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.*
+*Be neat, and do not write too small.*
+
+*For the first five problems, show all of your work and support all statements.*
 
 **1.** Prove that every metrizable space \((X,d)\) is normal.
 
@@ -13,6 +15,8 @@
 **5.** This problem has two parts.
 * (a) Let \(n>m\). Show there are no maps from \(\mathbb{RP}^n\) to \(\mathbb{RP}^m\) inducing a nontrivial map \(H^1(\mathbb{RP}^m;\mathbb{Z}_2)\to H^1(\mathbb{RP}^n;\mathbb{Z}_2)\).
 * (b) Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \(f:S^n\to\mathbb{R}^n\) satisfies \(f(x)\neq f(-x)\) for all \(x\). Define \(g:S^n\to S^{n-1}\) by \(g(x)=\frac{f(x)-f(-x)}{\lVert f(x)-f(-x)\rVert}\), so \(g(-x)=-g(x)\) and \(g\) induces a map \(\mathbb{RP}^n\to\mathbb{RP}^{n-1}\). Show that (a) applies to this map.
+
+*Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.*
 
 **6.** State the Tietze Extension Theorem.
 
@@ -30,6 +34,6 @@
 
 **13.** Let \(p:Y\to X\) and \(q:Z\to X\) be basepoint-preserving covering space maps, where \(X,Y,Z\) are path-connected and locally path-connected. Prove that if \(p_*(\pi_1(Y))=q_*(\pi_1(Z))\), then the covering spaces \(p\) and \(q\) are isomorphic.
 
-**14.** Does there exist a closed orientable 18-dimensional manifold \(M\) with \(H^9(M;\mathbb{Z})\cong\mathbb{Z}\)?
+**14.** Does there exist a closed orientable \(18\)-dimensional manifold \(M\) with \(H^9(M;\mathbb{Z})\cong\mathbb{Z}\)?
 
 **15.** Prove that if \(X\) is the Möbius band and \(A\) is its boundary circle, then there is no retraction \(r:X\to A\).

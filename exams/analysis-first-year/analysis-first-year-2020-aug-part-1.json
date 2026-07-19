@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2020-aug-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,32 +7,45 @@
   "month": "august",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA-5228_2020_08.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\((a_n)\\) and \\((b_n)\\) be bounded real sequences. Define \\(\\liminf a_n\\) and \\(\\limsup b_n\\). Prove that\n\\[\n\\liminf(a_n+b_n)\\leq \\liminf a_n+\\limsup b_n\\leq \\limsup(a_n+b_n).\n\\]",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Let \\(A\\) be a subset of the metric space \\(M\\). For each \\(t>0\\) let\n\\[\n(A)_t=\\{x\\in M:(\\exists a\\in A)\\ d(x,a)<t\\}\n\\]\n\\[\n[A]_t=\\{x\\in M:(\\exists a\\in A)\\ d(x,a)\\leq t\\}.\n\\]\nIs \\(\\bigcap_{t>0}(A)_t\\) equal to the closure of \\(A\\)? Is \\(\\bigcap_{t>0}[A]_t\\) equal to the closure of \\(A\\)? Proof or counterexample, as appropriate.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((a_n)\\) and \\((b_n)\\) be bounded real sequences. Define \\(\\liminf a_n\\) and \\(\\limsup b_n\\). Prove that\n\\[\n\\liminf(a_n+b_n)\\leq \\liminf a_n+\\limsup b_n\\leq \\limsup(a_n+b_n).\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f:[0,1]\\to[0,1]\\) be continuous and assume that for each positive integer \\(n\\) there exists \\(t\\in[0,1]\\) such that \\(|f(t)-t|<1/n\\). Prove that there exists \\(a\\in[0,1]\\) such that \\(f(a)=a\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a subset of the metric space \\(M\\). For each \\(t>0\\) let\n\\[\n(A)_t=\\{x\\in M:(\\exists a\\in A)\\ d(x,a)<t\\}\n\\]\n\\[\n[A]_t=\\{x\\in M:(\\exists a\\in A)\\ d(x,a)\\leq t\\}.\n\\]\nIs \\(\\bigcap_{t>0}(A)_t\\) equal to the closure of \\(A\\)? Is \\(\\bigcap_{t>0}[A]_t\\) equal to the closure of \\(A\\)? Proof or counterexample, as appropriate.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f:X\\to Y\\) be a map between metric spaces, with graph\n\\[\nG=\\{(x,y):y=f(x)\\}\\subseteq X\\times Y.\n\\]\nProve that \\(f\\) is continuous if \\(G\\) is compact.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:[0,1]\\to[0,1]\\) be continuous and assume that for each positive integer \\(n\\) there exists \\(t\\in[0,1]\\) such that \\(|f(t)-t|<1/n\\). Prove that there exists \\(a\\in[0,1]\\) such that \\(f(a)=a\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "The function \\(f:(-1,1)\\to\\mathbb{R}\\) is differentiable and its derivative is bounded. Prove that there is a continuous function \\(F:[-1,1]\\to\\mathbb{R}\\) with the property that \\(f=F|_{(-1,1)}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:X\\to Y\\) be a map between metric spaces, with graph\n\\[\nG=\\{(x,y):y=f(x)\\}\\subseteq X\\times Y.\n\\]\nProve that \\(f\\) is continuous if \\(G\\) is compact.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "The function \\(f:(-1,1)\\to\\mathbb{R}\\) is differentiable and its derivative is bounded. Prove that there is a continuous function \\(F:[-1,1]\\to\\mathbb{R}\\) with the property that \\(f=F|_{(-1,1)}\\).",
+        "subparts": []
+      }
     }
   ]
 }

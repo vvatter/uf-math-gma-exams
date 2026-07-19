@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-linear-algebra-first-year-2024-jan",
   "subject": "First Year Numerical Linear Algebra",
   "subject_tag": "numerical-linear-algebra-first-year",
@@ -7,76 +7,89 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalLinearAlgebra-2024_01.pdf",
-  "instructions": "Do 4 (four) problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume \\(A\\in\\mathbb{C}^{m\\times m}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(A\\) has a Schur decomposition.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
     },
     {
-      "number": 2,
-      "text": "Let matrix \\(A\\in\\mathbb{C}^{m\\times n}\\) with \\(n<m\\). Let \\(b\\in\\mathbb{C}^m\\), and let \\(r\\) denote the residual vector \\(r=b-Ax\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(x\\) solves the least squares problem \\(\\min\\lVert b-Ax\\rVert_2\\) if and only if \\(r\\in\\operatorname{Null}(A^*)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose \\(A\\) is full rank, and describe how to find the least squares solution using the QR decomposition of \\(A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A\\in\\mathbb{C}^{m\\times m}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(A\\) has a Schur decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(m\\ge n\\) and \\(\\operatorname{rank}(A)=p=n\\ge 3\\). Let \\(a_1,a_2,\\ldots\\) denote the columns of \\(A\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Using the modified Gram–Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show the vector \\(q_3\\) found in part (a) is orthogonal to both \\(q_1\\) and \\(q_2\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let matrix \\(A\\in\\mathbb{C}^{m\\times n}\\) with \\(n<m\\). Let \\(b\\in\\mathbb{C}^m\\), and let \\(r\\) denote the residual vector \\(r=b-Ax\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(x\\) solves the least squares problem \\(\\min\\lVert b-Ax\\rVert_2\\) if and only if \\(r\\in\\operatorname{Null}(A^*)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(A\\) is full rank, and describe how to find the least squares solution using the QR decomposition of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\lVert\\cdot\\rVert\\) be a subordinate (induced) matrix norm.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(E\\) is a \\(n\\times n\\) with \\(\\lVert E\\rVert<1\\), then show \\(I+E\\) is nonsingular and\n\\[\n\\lVert(I+E)^{-1}\\rVert\\leq \\frac{1}{1-\\lVert E\\rVert}.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(A\\) is a \\(n\\times n\\) invertible and \\(E\\) is \\(n\\times n\\) with \\(\\lVert A^{-1}\\rVert\\lVert E\\rVert<1\\), then show \\(A+E\\) is nonsingular and\n\\[\n\\lVert(A+E)^{-1}\\rVert\\leq \\frac{\\lVert A^{-1}\\rVert}{1-\\lVert A^{-1}\\rVert\\lVert E\\rVert}.\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(m\\ge n\\) and \\(\\operatorname{rank}(A)=p=n\\ge 3\\). Let \\(a_1,a_2,\\ldots\\) denote the columns of \\(A\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Using the modified Gram–Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show the vector \\(q_3\\) found in part (a) is orthogonal to both \\(q_1\\) and \\(q_2\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V\\subset\\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\lVert\\cdot\\rVert\\) be a subordinate (induced) matrix norm.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(E\\) is a \\(n\\times n\\) with \\(\\lVert E\\rVert<1\\), then show \\(I+E\\) is nonsingular and\n\\[\n\\lVert(I+E)^{-1}\\rVert\\leq \\frac{1}{1-\\lVert E\\rVert}.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) is a \\(n\\times n\\) invertible and \\(E\\) is \\(n\\times n\\) with \\(\\lVert A^{-1}\\rVert\\lVert E\\rVert<1\\), then show \\(A+E\\) is nonsingular and\n\\[\n\\lVert(A+E)^{-1}\\rVert\\leq \\frac{\\lVert A^{-1}\\rVert}{1-\\lVert A^{-1}\\rVert\\lVert E\\rVert}.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V\\subset\\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
+        "subparts": []
+      }
     }
   ]
 }

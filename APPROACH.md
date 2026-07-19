@@ -69,33 +69,34 @@ does not need to be transcribed or stored separately.
 
 ## Core JSON
 
-The initial public dataset remains intentionally small:
+Schema version 2 stores document content as an ordered block sequence:
 
 ```json
 {
-  "schema_version": 1,
-  "id": "algebra-first-year-2025-may-part-1",
-  "subject": "First Year Algebra",
-  "subject_tag": "algebra-first-year",
-  "year": 2025,
-  "month": "may",
-  "part": 1,
-  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1_2025_05.pdf",
-  "instructions": "Answer four questions. Indicate which four problems should be graded.",
-  "problems": [
+  "schema_version": 2,
+  "id": "analysis-first-year-2015-jan-part-2",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2015,
+  "month": "january",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Analysis-2_2015_01.pdf",
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(p\\) be a prime and let \\(G\\) be a nontrivial finite \\(p\\)-group.",
-      "subparts": [
+      "type": "instructions",
+      "text": "Do exactly 2 problems from Part A and 2 problems from Part B."
+    },
+    {
+      "type": "section",
+      "heading": "Part A",
+      "numbering": "restart",
+      "content": [
         {
-          "label": "(a)",
-          "text": "Prove that \\(Z(G)\\) is nontrivial.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that every nontrivial finite \\(p\\)-group has a normal subgroup of index \\(p\\).",
-          "subparts": []
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(\\sum_{n=0}^{\\infty}c_nx^n\\) be a power series.",
+            "subparts": []
+          }
         }
       ]
     }
@@ -103,18 +104,19 @@ The initial public dataset remains intentionally small:
 }
 ```
 
-`part` is `null` when the exam is not divided. `instructions` is `null` when the
-source provides no meaningful instructions.
+`part` is `null` when the linked exam is not a separately cataloged part. The `content`
+array may contain `instructions`, `problem`, and `section` blocks. A section preserves
+its displayed heading and contains instruction and problem blocks in source order;
+sections are not nested.
 
 A rare linked PDF may contain only a notice that the exam was not provided. Such a
-record preserves the notice in `instructions` and uses an empty `problems` array. This
-is a valid representation of the archive item, not an extraction failure or a synthetic
-exam.
+record contains one instruction block and no problem blocks. This is a valid
+representation of the archive item, not an extraction failure or a synthetic exam.
 
 There is deliberately no field for:
 
-- original top-level problem labels separate from the normalized `number`;
-- sections;
+- stored top-level problem numbers;
+- original noninteger top-level labels;
 - points;
 - page numbers;
 - full dates;
@@ -144,7 +146,9 @@ optimization without erasing provenance or making another model call.
 
 ## Instructions
 
-Each exam has at most one instructions string. It preserves meaningful rules such as:
+An exam may have as many instruction blocks as the source requires. A block remains at
+its source position: before the first problem, inside a section, or between problem
+groups. It preserves meaningful rules such as:
 
 - how many problems to answer;
 - which ranges or groups must be represented;
@@ -153,20 +157,18 @@ Each exam has at most one instructions string. It preserves meaningful rules suc
 - allowed materials or methods, when relevant;
 - notation that applies to the whole exam.
 
-Instructions are not rewritten merely for clarity. Their wording and sentence-level
-detail are preserved as closely as possible. Only the minimum edits needed to combine
-instruction blocks, remove excluded logistics, or update references after problem
-renumbering are allowed. Boilerplate about names, answer sheets, page use, dates, and
-grading boxes is removed, but authored requirements about the expected response are
-retained.
+Instructions are not rewritten merely for clarity, combined into a preamble, or moved
+away from the material they govern. Their wording and sentence-level detail are
+preserved as closely as possible. Boilerplate about names, answer sheets, page use,
+dates, and grading boxes is removed, but authored requirements about the expected
+response are retained. References are changed only when a noninteger source label must
+be normalized.
 
-When the source gives different directions for problem ranges, the directions are
-combined into one coherent string. For example:
-
-```text
-For Problems 1–5, show all work and support all statements. For Problems 6–15,
-give complete definitions, statements, or short proofs.
-```
+When a labeled section line also contains a direction, the label or named title becomes
+the section heading and the direction becomes its first instruction block. A labeled
+direction with no following problems is an ordinary instruction block when it governs
+other listed problems. If the line itself states a mathematical task, it becomes a
+problem inside that section.
 
 Point values are removed from individual problems. If point values are the source's
 only indication that two groups require different levels of response, that distinction
@@ -174,36 +176,37 @@ is expressed in the custom instructions without retaining the scores.
 
 ## Problem Numbering
 
-Ordinary exams retain their top-level problem numbers. Unexpected gaps or cross-problem
-references are flagged for review rather than silently repaired.
+Problems do not store a `number` field. Their order in the JSON determines their
+displayed number. Instructions do not increment the counter. A section has one binary
+numbering policy:
 
-Some single PDFs contain internal parts or sections that restart their problem numbers. In
-that case, the problems receive one consecutive global sequence, the final ranges and their
-source parts are explained in the instructions, and the transformation is logged for review.
-For example, Part I Problems 1–5 followed by Part II Problems 1–5 become global Problems
-1–10, with the instructions identifying Problems 1–5 as Part I and Problems 6–10 as Part II.
+- `restart` resets the displayed counter to 1 for its first problem;
+- `continue` advances from the preceding displayed problem number.
 
-Logic exams are a common instance of this rule. Their section-local labels are replaced
-with one global sequence. Section names are folded into the instructions rather than
-stored as problem metadata. For example:
+This preserves ordinary restarted numbering in parts and topic sections without
+flattening it or rewriting instructions. Review records refer to `problem_indices`,
+which are absolute one-based problem positions in document reading order and therefore
+remain unambiguous when displayed numbers repeat.
 
-```text
-Complete seven problems, including at least one from each topic. Problems 1–3
-concern General Logic, Problems 4–6 concern Model Theory, Problems 7–9 concern
-Set Theory, and Problems 10–12 concern Computability.
-```
+The schema intentionally does not represent noninteger top-level labels. Actual corpus
+cases such as `A–C`, `C1–C8`, `1A–4C`, and `5, 5′, 6, 6′` are normalized to derived
+consecutive numbers in reading order. Each such change receives a
+`numbering-transformation` record, and any instruction reference changed as a result
+receives an `instruction-rewrite` record. Unexpected ambiguity is serious review rather
+than silent normalization.
 
-The generated ranges must be derived from the final problem numbering so they cannot
-drift out of agreement with the problem list.
+The corpus also contains one standalone mathematical task under a section heading with
+no printed integer problem label. It continues the preceding derived sequence and is
+logged as a numbering transformation. This keeps the problem schema minimal while
+making the added presentation number explicit in the audit record.
 
 ## Multipart Problems
 
-Each top-level problem is one JSON object. Subparts do not remain embedded in its
+Each problem block contains one problem object. Subparts do not remain embedded in its
 `text`. They are ordered objects in the problem's `subparts` array:
 
 ```json
 {
-  "number": 4,
   "text": "Determine which of the following are irreducible.",
   "subparts": [
     {
@@ -284,7 +287,7 @@ The model may not:
 uniquely determined by the immediate mathematical context.
 
 Every typographical correction is added to `exams/review-corrections.json`. The record
-includes the original text, corrected text, immediate context, and problem number. If
+includes the original text, corrected text, immediate context, and problem index. If
 more than one correction is plausible, the source reading remains in the dataset and
 the uncertainty is placed in `exams/review-serious.json` instead.
 
@@ -299,10 +302,15 @@ images plus the catalog metadata and returns schema-constrained JSON. The prompt
 it explicitly to ignore printed titles and dates, remove unwanted administrative text,
 preserve problem wording, and transcribe mathematics for MathJax.
 
-The initial corpus run performs one Sol extraction per exam. It does not immediately
-send every result through a second model pass. Raw responses and page evidence are
-retained as build checkpoints; only schema-valid canonical exam JSON enters the
-dataset.
+Native PDF text is sanitized to remove ASCII control characters before it is offered as
+untrusted evidence. `--vision-only` omits native text for documents where that evidence
+is counterproductive. If a model response nevertheless contains control characters, a
+narrow Sol recovery pass receives the escaped extraction and repairs only its encoding
+and MathJax delimiters. Both response IDs and usage records remain in the checkpoint.
+
+The normal path performs one Sol extraction per exam; it does not send every result
+through a second model pass. Raw responses and page evidence are retained as build
+checkpoints; only schema-valid canonical exam JSON enters the dataset.
 
 ## Corpus-Wide Iteration
 
@@ -327,6 +335,25 @@ The later verification pass is a distinct project phase. Its model prompt, evide
 and acceptance rules will be designed after the initial corpus has shown what actually
 needs verification.
 
+### Schema Version 2 Migration
+
+The ordered-block schema was tested as a corpus migration rather than as 127 individual
+reports. Of the 528 version-1 records, 401 flat records were converted mechanically.
+The 127 records previously associated with instruction or numbering transformations
+were selected for fresh extraction from their PDFs. An eight-exam pilot was compared
+manually against source pages and generated Markdown before the complete run.
+
+The pilot added an ASCII-control-character invariant after exposing corrupt mathematical
+text that earlier MathJax matching could not see. That check found four more records for
+fresh extraction, bringing the final source-based set to 131. Two especially malformed
+documents required the narrowly scoped encoding-repair fallback described above.
+
+The finished archive contains 129 section blocks across 48 exams, and 92 exams contain
+more than one positioned instruction block. All 528 records use schema version 2. The
+complete archive validator passed 23,154 MathJax expressions with no control characters
+remaining. Superseded version-1 files are not retained in the canonical dataset; Git
+history and ignored build history provide the audit trail.
+
 ## Review Logs
 
 Extraction writes three files with different operational meanings:
@@ -344,10 +371,10 @@ have `status: logged`.
 `review-transformations.json` logs completed, intentional structural changes. Current
 transformation categories are:
 
-- `numbering-transformation`: section-local or restarted labels were replaced by one
-  global problem sequence;
-- `instruction-rewrite`: multiple instruction blocks were materially consolidated or
-  rewritten to agree with final problem numbers.
+- `numbering-transformation`: noninteger labels or an unnumbered standalone task were
+  assigned derived consecutive numbers;
+- `instruction-rewrite`: an instruction reference was minimally changed to agree with
+  normalized noninteger labels.
 
 Transformation records have `status: logged`. They document what the extractor did and
 do not by themselves require intervention.
@@ -358,7 +385,7 @@ publication. A typical record is:
 ```json
 {
   "exam_id": "topology-phd-2025-may",
-  "problem_numbers": [12],
+  "problem_indices": [12],
   "category": "visual-content",
   "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
   "source_pages": [2],
@@ -371,7 +398,7 @@ Serious-review categories initially include:
 
 - `visual-content`: a figure, diagram, graph, or table carries information;
 - `shared-context`: notation or material applies to only a subset of problems and
-  cannot be represented cleanly in the single instructions field;
+  its scope remains unclear even with ordered instruction blocks;
 - `cross-reference`: a problem refers to another problem and renumbering may matter;
 - `transcription`: words or mathematics remain uncertain after initial extraction;
 - `numbering`: source numbering is missing, duplicated, or otherwise unclear;
@@ -381,10 +408,9 @@ For visual content, the automatic pass transcribes the surrounding problem text 
 does not invent a description or reconstruction. The review record identifies the exam,
 problem, and source page so a person can restore the missing information appropriately.
 
-For shared context that cannot be put into the exam instructions, the automatic pass
-does not invent a new data structure. It flags the case so a reviewer can decide
-whether to duplicate the context into the affected problems or express its scope in the
-instructions.
+For shared context whose scope cannot be represented confidently with a positioned
+instruction block, the automatic pass does not guess. It flags the case so a reviewer
+can resolve the intended scope.
 
 Serious items have `status: open`. They do not stop corpus extraction, but they prevent
 the affected exam from being treated as ready for accessible publication. Logged
@@ -412,22 +438,25 @@ Before an exam JSON is accepted, ordinary code checks that:
    manifest and filename.
 3. It contains at least one nonempty problem, or a nonempty notice when the linked PDF
    contains no exam questions.
-4. Top-level problem numbers are unique.
-5. Logic problem numbers are globally sequential. When source sections required
-   renumbering, the generated topic or section ranges agree with the problem list.
+4. Every section has a nonempty heading, a restart/continue policy, and at least one
+   problem; instruction blocks may occur anywhere but cannot be empty.
+5. Problem numbers are derived from content order and section policy rather than stored,
+   so contradictory sequences cannot enter the data.
 6. Every problem and subpart has a `subparts` array, and every subpart has a nonempty
    original `label` field.
-7. MathJax delimiters are balanced, dollar-sign math delimiters are absent, and every
-   expression completes real MathJax TeX-to-CHTML rendering without an error.
+7. ASCII control characters and dollar-sign math delimiters are absent, MathJax
+   delimiters are balanced, and every expression completes real MathJax TeX-to-CHTML
+   rendering without an error.
 8. Every model-reported correction, transformation, or uncertainty appears in its
    corresponding review file.
 9. Every source PDF has either one dataset JSON or an explicit extraction failure.
 10. No exam with an open serious-review item is marked ready for publication.
 
 Initial extraction results remain provisional until the later verification phase. The
-archive validator additionally checks every PDF hash, JSON and Markdown pair, source
-reference in the review logs, review page number, and expression using the pinned
-MathJax version before publication begins.
+archive validator additionally checks every PDF hash, JSON and Markdown pair, absolute
+review index, source reference in the review logs, review page number, and expression
+using the pinned MathJax version before publication begins. It accepts exam IDs for a
+focused validation run and no IDs for the complete archive.
 
 ## Presentation Is Downstream
 
@@ -435,11 +464,12 @@ The dataset is the source of truth for future outputs. The extraction command al
 creates a Markdown view of each accepted JSON record. Its title contains the subject,
 followed by “first year exam” or “PhD exam,” month, year, and part when present.
 Instructions are italicized, problem numbers are bold, and labeled subparts are compact
-nested bullets. Markdown is always regenerated from JSON and is never independently
-edited or returned by the model.
+nested bullets. Section headings and displayed problem numbers are derived from ordered
+blocks and restart/continue policy. Markdown is always regenerated from JSON and is
+never independently edited or returned by the model.
 
 When a source problem has labeled subparts but no independent stem, the Markdown
-renderer adds a presentation-only sentence such as “This problem has 3 parts.” The
+renderer adds a presentation-only sentence such as “This problem has three parts.” The
 sentence is derived from the subpart array and is not added to the canonical JSON or
 represented as source-authored text.
 

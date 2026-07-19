@@ -1,6 +1,8 @@
 # Topology, first year exam, August 2016, Part 2
 
-*For problems 1–7, complete proofs. Support all statements to the best of your ability. For problems 8–13, answer the following with complete definitions or statements or short proofs.*
+## Part 1.
+
+*Complete Proofs. Support all statements to the best of your ability.*
 
 **1.** Suppose that the continuous maps \(f,g:X\to Y\) are homotopic and the continuous maps \(k,h:Y\to Z\) are homotopic. Prove that \(k\circ f\) and \(h\circ g\) are homotopic.
 
@@ -12,18 +14,22 @@
 
 **5.** Prove that there is no continuous antipode-preserving map \(g:S^2\to S^1\).
 
-**6.** Prove that if \(n\geq 2\), then \(S^n\) is simply connected.
+**6.** Prove that if \(n\ge 2\), then \(S^n\) is simply connected.
 
 **7.** Prove that the fundamental group of the projective plane \(P^2\) is a group of order 2.
+
+## Part 2.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **8.** Are the spaces \(S^1\) and \(S^2\) homeomorphic?
 
 **9.** Are the spaces \(\mathbb{R}^1\) and \(\mathbb{R}^2\) homeomorphic?
 
-**10.** Complete the following definition: Two spaces \(X\) and \(Y\) have the same homotopy type if and only if . . . .
+**10.** Complete the following definition: Two spaces \(X\) and \(Y\) have the same homotopy type if and only if \(\ldots\).
 
 **11.** Is the identity map \(i:S^1\to S^1\) nullhomotopic?
 
 **12.** What is the fundamental group of the torus \(T=S^1\times S^1\)?
 
-**13.** Complete the following definition: Let \(X\) be a topological space and let \(A\) be a subspace of \(X\). We say that \(A\) is a retract of \(X\) if and only if . . . .
+**13.** Complete the following definition: Let \(X\) be a topological space and let \(A\) be a subspace of \(X\). We say that \(A\) is a retract of \(X\) if and only if \(\ldots\).

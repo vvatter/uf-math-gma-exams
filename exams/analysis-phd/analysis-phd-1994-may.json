@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-1994-may",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,97 +7,162 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1994_05.pdf",
-  "instructions": "Problems 1–12: State the following theorems. Prove one of the theorems in problems 8 or 9. Problems 13–18: Solve the following problems. \\((X,\\Sigma,\\mu)\\) is a measure space, \\(E\\) is a Banach space.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "The Uniform Boundedness theorem",
-      "subparts": []
+      "type": "section",
+      "heading": "I.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State the following theorems:"
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Uniform Boundedness theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Hahn–Banach theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Fatou Lemma.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Lebesgue dominated convergence theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Vitali theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Radon–Nikodym theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Egorov theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Fubini theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The dual of \\(L^p\\) \\((1 \\leq p < \\infty)\\)",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Lusin theorem",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Riesz representation theorem in locally compact spaces",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Lebesgue decomposition theorem",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 2,
-      "text": "The Hahn–Banach theorem",
-      "subparts": []
+      "type": "instructions",
+      "text": "II. Prove one of the theorems 8 or 9."
     },
     {
-      "number": 3,
-      "text": "The Fatou Lemma.",
-      "subparts": []
-    },
-    {
-      "number": 4,
-      "text": "The Lebesgue dominated convergence theorem",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "The Vitali theorem",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "The Radon–Nikodym theorem",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "The Egorov theorem",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "The Fubini theorem",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "The dual of \\(L^p\\) \\((1 \\leq p < \\infty)\\)",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "The Lusin theorem",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "The Riesz representation theorem in locally compact spaces",
-      "subparts": []
-    },
-    {
-      "number": 12,
-      "text": "The Lebesgue decomposition theorem",
-      "subparts": []
-    },
-    {
-      "number": 13,
-      "text": "Let \\((f_n)\\) be a sequence of \\(L_E^1(\\mu)\\) such that \\(\\int |f_n|\\,d\\mu < \\frac{1}{n^2}\\) for every \\(n\\). Prove or disprove the pointwise convergence and the convergence in the mean of the series \\(\\sum f_n\\).",
-      "subparts": []
-    },
-    {
-      "number": 14,
-      "text": "Assume \\(\\mu\\) is finite and let \\(R\\) be a ring generating \\(\\Sigma\\). Define \\(\\rho(A,B)=\\mu(A\\mathbin{\\triangle}B)\\) for \\(A,B\\in\\Sigma\\). Prove that \\(\\rho\\) is a semi-distance and that \\(R\\) is dense in \\(\\Sigma\\) for \\(\\rho\\).",
-      "subparts": []
-    },
-    {
-      "number": 15,
-      "text": "Let \\(X=\\mathbb{R}\\) and \\(\\mu\\) the Lebesgue measure. Let \\(f\\in L_E^1(\\mu)\\) such that \\(\\int_0^x f\\,d\\mu=0\\) for every \\(x\\in\\mathbb{R}\\) (if \\(x<0\\), \\(\\int_0^x=-\\int_x^0\\)). Prove that \\(f=0\\), \\(\\mu\\)-a.e.",
-      "subparts": []
-    },
-    {
-      "number": 16,
-      "text": "Let \\(\\mu,\\nu\\) be finite, \\(\\sigma\\)-additive measures on \\(\\Sigma\\), such that \\(\\mu\\ll\\nu\\) and \\(\\nu\\ll\\mu\\). What can be said about the relationship of the Radon–Nikodym densities of one measure with respect to the other.",
-      "subparts": []
-    },
-    {
-      "number": 17,
-      "text": "Let \\((x_n)\\) be a sequence in the Banach space \\(E\\). Assume \\(x_n\\to x\\) weakly in \\(E\\). Show that \\(x\\) is the only weak limit of the sequence \\((x_n)\\) and that \\(\\sup_n\\lVert x_n\\rVert<\\infty\\). (Hint: Consider the \\(x_n\\) as elements of the bidual \\(E^{**}\\).)",
-      "subparts": []
-    },
-    {
-      "number": 18,
-      "text": "Let \\(X=\\mathbb{R}\\) and \\(\\mu\\) the Lebesgue measure. Let \\(f\\in L^1(\\mu)\\) and for each \\(t\\in\\mathbb{R}\\) define \\(f_t(x)=f(x-t)\\). Show that the mapping \\(t\\mapsto f_t\\) is a continuous map from \\(\\mathbb{R}\\) into \\(L^1(\\mu)\\). (Hint: prove it first for continuous functions with compact support).",
-      "subparts": []
+      "type": "section",
+      "heading": "III.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Solve the following problems:"
+        },
+        {
+          "type": "instructions",
+          "text": "\\((X,\\Sigma,\\mu)\\) is a measure space. \\(E\\) is a Banach space."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\((f_n)\\) be a sequence of \\(L_E^1(\\mu)\\) such that \\(\\int \\lVert f_n\\rVert\\,d\\mu < \\frac{1}{n^2}\\) for every \\(n\\). Prove or disprove the pointwise convergence and the convergence in the mean of the series \\(\\sum f_n\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Assume \\(\\mu\\) is finite and let \\(R\\) be a ring generating \\(\\Sigma\\). Define \\(\\rho(A,B)=\\mu(A\\mathbin{\\triangle}B)\\) for \\(A,B\\in\\Sigma\\). Prove that \\(\\rho\\) is a semi-distance and that \\(R\\) is dense in \\(\\Sigma\\) for \\(\\rho\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(X=\\mathbb{R}\\) and \\(\\mu\\) the Lebesgue measure. Let \\(f\\in L_{\\mathbb{C}}^1(\\mu)\\) such that \\(\\int_0^x f\\,d\\mu=0\\) for every \\(x\\in\\mathbb{R}\\) (if \\(x<0\\), \\(\\int_0^x=-\\int_x^0\\)). Prove that \\(f=0\\), \\(\\mu\\)-a.e.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(\\mu,\\nu\\) be finite, \\(\\sigma\\)-additive measures on \\(\\Sigma\\), such that \\(\\mu\\ll\\nu\\) and \\(\\nu\\ll\\mu\\). What can be said about the relationship of the Radon–Nikodym densities of one measure with respect to the other.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\((x_n)\\) be a sequence in the Banach space \\(E\\). Assume \\(x_n\\to x\\) weakly in \\(E\\). Show that \\(x\\) is the only weak limit of the sequence \\((x_n)\\) and that \\(\\sup_n\\lVert x_n\\rVert<\\infty\\). (Hint: Consider the \\(x_n\\) as elements of the bidual \\(E^{**}\\).)",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(X=\\mathbb{R}\\) and \\(\\mu\\) the Lebesgue measure. Let \\(f\\in L^1(\\mu)\\) and for each \\(t\\in\\mathbb{R}\\) define \\(f_t(x)=f(x-t)\\). Show that the mapping \\(t\\mapsto f_t\\) is a continuous map from \\(\\mathbb{R}\\) into \\(L^1(\\mu)\\). (Hint: prove it first for continuous functions with compact support).",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

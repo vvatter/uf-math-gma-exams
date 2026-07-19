@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2024-jan-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,70 +7,85 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2024_01.pdf",
-  "instructions": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State and prove Sylow’s First Theorem.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(G\\) and \\(H\\) be finite groups of orders \\(m\\), and \\(n\\) respectively. Justify your claims.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(m\\) and \\(n\\) are coprime then\n\\[\n\\operatorname{Aut}(G \\times H) \\simeq \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example where \\(m\\) and \\(n\\) are not relatively prime and\n\\[\n\\operatorname{Aut}(G \\times H) \\not\\simeq \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "State and prove Sylow’s First Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Here \\(\\mathbb{Z}\\) is considered as a group. Show that there are two different group homomorphisms \\(\\phi : \\mathbb{Z}/2\\mathbb{Z} \\to \\operatorname{Aut}(\\mathbb{Z}/7\\mathbb{Z})\\), and prove that the corresponding semidirect products \\(\\mathbb{Z}/7\\mathbb{Z} \\rtimes_{\\phi} \\mathbb{Z}/2\\mathbb{Z}\\) are pairwise nonisomorphic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) and \\(H\\) be finite groups of orders \\(m\\), and \\(n\\) respectively. Justify your claims.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(m\\) and \\(n\\) are coprime then\n\\[\n\\operatorname{Aut}(G \\times H) \\simeq \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example where \\(m\\) and \\(n\\) are not relatively prime and\n\\[\n\\operatorname{Aut}(G \\times H) \\not\\simeq \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Note that \\(2024 = 2^3 * 11 * 23\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that the symmetric group \\(S_{42}\\) has at least one element of order \\(2024\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Does the alternating group \\(A_{42}\\) have an element of order \\(2024\\)? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Here \\(\\mathbb{Z}\\) is considered as a group. Show that there are two different group homomorphisms \\(\\phi : \\mathbb{Z}/2\\mathbb{Z} \\to \\operatorname{Aut}(\\mathbb{Z}/7\\mathbb{Z})\\), and prove that the corresponding semidirect products \\(\\mathbb{Z}/7\\mathbb{Z} \\rtimes_{\\phi} \\mathbb{Z}/2\\mathbb{Z}\\) are pairwise nonisomorphic.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(G\\) be a finite group.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what it means to say that \\(G\\) is nilpotent.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Without assuming any result about nilpotent groups (i.e. just from your definition), prove that if the order of \\(G\\) is \\(p^n\\), where \\(p\\) is a prime and \\(n \\in \\mathbb{Z}\\) with \\(n \\geq 0\\), then \\(G\\) is nilpotent.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Note that \\(2024 = 2^3 * 11 * 23\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that the symmetric group \\(S_{42}\\) has at least one element of order \\(2024\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Does the alternating group \\(A_{42}\\) have an element of order \\(2024\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(S\\) be a finite simple group, and let \\(H\\) be a proper subgroup of \\(S\\). Let \\(n = [S : H]\\). Prove that \\(S\\) is isomorphic to a subgroup of the symmetric group \\(S_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means to say that \\(G\\) is nilpotent.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Without assuming any result about nilpotent groups (i.e. just from your definition), prove that if the order of \\(G\\) is \\(p^n\\), where \\(p\\) is a prime and \\(n \\in \\mathbb{Z}\\) with \\(n \\geq 0\\), then \\(G\\) is nilpotent.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(S\\) be a finite simple group, and let \\(H\\) be a proper subgroup of \\(S\\). Let \\(n = [S : H]\\). Prove that \\(S\\) is isomorphic to a subgroup of the symmetric group \\(S_n\\).",
+        "subparts": []
+      }
     }
   ]
 }

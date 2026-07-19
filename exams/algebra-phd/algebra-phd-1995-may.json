@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-1995-may",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,95 +7,120 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_1995_05.pdf",
-  "instructions": "Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(G\\) be a finite group and let \\(A\\) be a subgroup of \\(\\operatorname{Aut}(G)\\) such that \\(G=[G,A]\\). Let \\(N\\) be a normal subgroup of \\(G\\) such that \\([N,A]=1\\). Prove that \\(N\\) is contained in the center of \\(G\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give an example of fields \\(M\\supset L\\supset K\\) such that \\(M/L\\) and \\(L/K\\) are normal extensions, but \\(M/K\\) is not normal. Justify your answer.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \\(L\\supset K\\) be fields such that \\([L:K]=8\\). Prove that there are \\(\\alpha,\\beta,\\gamma\\in L\\) such that \\(L=K(\\alpha,\\beta,\\gamma)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group and let \\(A\\) be a subgroup of \\(\\operatorname{Aut}(G)\\) such that \\(G=[G,A]\\). Let \\(N\\) be a normal subgroup of \\(G\\) such that \\([N,A]=1\\). Prove that \\(N\\) is contained in the center of \\(G\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(A\\) be a semi-simple commutative ring with 1. Prove that if \\(A\\) is Artinian then \\(A\\) is Noetherian. Give a counterexample to show that the converse is not true.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give an example of fields \\(M\\supset L\\supset K\\) such that \\(M/L\\) and \\(L/K\\) are normal extensions, but \\(M/K\\) is not normal. Justify your answer.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(L\\supset K\\) be fields such that \\([L:K]=8\\). Prove that there are \\(\\alpha,\\beta,\\gamma\\in L\\) such that \\(L=K(\\alpha,\\beta,\\gamma)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give an example of a free module \\(F\\) over a ring with 1 which has a submodule \\(M\\) which is not free.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \\(A\\) be a commutative ring with 1 and let \\(P\\) and \\(Q\\) be projective \\(A\\)-modules. Prove that \\(P\\otimes Q\\) is projective.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a semi-simple commutative ring with 1. Prove that if \\(A\\) is Artinian then \\(A\\) is Noetherian. Give a counterexample to show that the converse is not true.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(A\\) be a commutative ring with 1 and let \\(S\\not\\ni 0\\) be a multiplicative subset of \\(A\\). Let \\(P\\) be a maximal element in the set \\(\\{I:I\\text{ is an ideal of }A\\text{ and }I\\cap S=\\varnothing\\}\\). Prove that \\(P\\) is a prime ideal.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give an example of a free module \\(F\\) over a ring with 1 which has a submodule \\(M\\) which is not free.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(A\\) be a commutative ring with 1 and let \\(P\\) and \\(Q\\) be projective \\(A\\)-modules. Prove that \\(P\\otimes Q\\) is projective.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(A\\) be a commutative ring.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(I_1\\) and \\(I_2\\) are ideals in \\(A\\) and \\(P\\) is a prime ideal in \\(A\\) such that \\(I_1\\cap I_2=P\\), then \\(I_1=P\\) or \\(I_2=P\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Is the above statement still true if the word “prime” is replaced by “primary”? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a commutative ring with 1 and let \\(S\\not\\ni 0\\) be a multiplicative subset of \\(A\\). Let \\(P\\) be a maximal element in the set \\(\\{I:I\\text{ is an ideal of }A\\text{ and }I\\cap S=\\varnothing\\}\\). Prove that \\(P\\) is a prime ideal.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(n\\) and \\(m\\) be positive integers. Find \\(r\\) such that \\(\\mathbb{Z}_n\\otimes_{\\mathbb{Z}}\\mathbb{Z}_m\\cong\\mathbb{Z}_r\\). Justify your answer.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a commutative ring.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(I_1\\) and \\(I_2\\) are ideals in \\(A\\) and \\(P\\) is a prime ideal in \\(A\\) such that \\(I_1\\cap I_2=P\\), then \\(I_1=P\\) or \\(I_2=P\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Is the above statement still true if the word “prime” is replaced by “primary”? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(R\\) be a commutative Noetherian ring with 1. Prove that \\(R[[X]]\\) is Noetherian.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(n\\) and \\(m\\) be positive integers. Find \\(r\\) such that \\(\\mathbb{Z}_n\\otimes_{\\mathbb{Z}}\\mathbb{Z}_m\\cong\\mathbb{Z}_r\\). Justify your answer.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(R\\) be a commutative ring with 1 and let \\(S\\subset R\\) be a multiplicative set which contains no zero divisors. Prove that the prime ideals of the ring \\(S^{-1}R\\) are in one-to-one correspondence with the prime ideals \\(P\\) of \\(R\\) such that \\(P\\cap S=\\varnothing\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative Noetherian ring with 1. Prove that \\(R[[X]]\\) is Noetherian.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Let \\(G\\) be an abelian group which is injective. Prove that \\(G\\) is divisible.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with 1 and let \\(S\\subset R\\) be a multiplicative set which contains no zero divisors. Prove that the prime ideals of the ring \\(S^{-1}R\\) are in one-to-one correspondence with the prime ideals \\(P\\) of \\(R\\) such that \\(P\\cap S=\\varnothing\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Let \\(f(X)=2X^5-10X+5\\in\\mathbb{Q}[X]\\) and let \\(L\\) be a splitting field for \\(f\\). Compute the Galois group \\(\\operatorname{Gal}(L/\\mathbb{Q})\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be an abelian group which is injective. Prove that \\(G\\) is divisible.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f(X)=2X^5-10X+5\\in\\mathbb{Q}[X]\\) and let \\(L\\) be a splitting field for \\(f\\). Compute the Galois group \\(\\operatorname{Gal}(L/\\mathbb{Q})\\).",
+        "subparts": []
+      }
     }
   ]
 }

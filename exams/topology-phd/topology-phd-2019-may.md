@@ -1,20 +1,22 @@
 # Topology, PhD exam, May 2019
 
-*Work the following problems and show all your work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.*
+*Work the following problems and show all your work. Support all statements to the best of your ability.*
 
 **1.** Prove that the topologist’s sine curve \(T=\{(x,\sin \frac{1}{x})\mid x\in(0,1]\}\cup\{(0,y)\mid y\in[0,1]\}\) is not path connected.
 
 **2.** Let \(X\) be a connected completely regular topological space having more than one point. Can \(X\) be countable?
 
-**3.** Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{R}P^2\), as well as that \(\mathbb{R}P^2\) is not a retract of \(S^2\).
+**3.** Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{RP}^2\), as well as that \(\mathbb{RP}^2\) is not a retract of \(S^2\).
 
 **4.** Consider the Klein Bottle, \(K\). Give its cellular chain complex and use it to calculate the homology groups of \(K\) with integer coefficients.
 
-**5.** Let \(n>m\). Show that there is no map \(f:\mathbb{C}P^n\to\mathbb{C}P^m\) inducing a nontrivial map \(f^*:H^2(\mathbb{C}P^m;\mathbb{Z})\to H^2(\mathbb{C}P^n;\mathbb{Z})\).
+**5.** Let \(n>m\). Show that there is no map \(f:\mathbb{CP}^n\to\mathbb{CP}^m\) inducing a nontrivial map \(f^*:H^2(\mathbb{CP}^m;\mathbb{Z})\to H^2(\mathbb{CP}^n;\mathbb{Z})\).
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Draw a picture of the universal cover of the 2-sphere with a segment joining the north and south poles.
 
-**7.** Compute the Euler characteristic \(\chi(\mathbb{C}P^2\times\mathbb{R}P^2\times S^4)\).
+**7.** Compute the Euler characteristic \(\chi(\mathbb{CP}^2\times\mathbb{RP}^2\times S^4)\).
 
 **8.** Give a definition of the compact-open topology for the space of functions.
 

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2018-aug-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,75 +7,90 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5312-August-2018.pdf",
-  "instructions": "Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(R\\) be a commutative ring with \\(1\\) and let \\(I, J, P\\) be ideals in \\(R\\) such that \\(I \\cap J \\subset P\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(P\\) is a prime ideal then either \\(I \\subset P\\) or \\(J \\subset P\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example which shows that if \\(P\\) is not prime then the conclusion above may not hold.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}] = \\{a + b\\sqrt{-2} : a,b \\in \\mathbb{Z}\\}\\) is a Euclidean domain with respect to the norm defined by \\(N(a+b\\sqrt{-2})=a^2+2b^2\\) for \\(a,b \\in \\mathbb{Z}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with \\(1\\) and let \\(I, J, P\\) be ideals in \\(R\\) such that \\(I \\cap J \\subset P\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(P\\) is a prime ideal then either \\(I \\subset P\\) or \\(J \\subset P\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example which shows that if \\(P\\) is not prime then the conclusion above may not hold.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Prove that the following polynomials are irreducible over \\(\\mathbb{Q}\\). Cite any theorems that you use.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(X^3-5X^2+X+2\\)",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(X^4+33X^2-6\\)",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(X^4+2X^3-14X^2+31X-7\\)",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}] = \\{a + b\\sqrt{-2} : a,b \\in \\mathbb{Z}\\}\\) is a Euclidean domain with respect to the norm defined by \\(N(a+b\\sqrt{-2})=a^2+2b^2\\) for \\(a,b \\in \\mathbb{Z}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(R\\) be a ring with \\(1\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "State the First Isomorphism Theorem for \\(R\\)-modules.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \\(A_1,A_2,\\ldots,A_n\\) be \\(R\\)-modules and for \\(1 \\leq i \\leq n\\) let \\(B_i\\) be a submodule of \\(A_i\\). Prove that\n\\[\n(A_1 \\times \\cdots \\times A_n)/(B_1 \\times \\cdots \\times B_n) \\cong (A_1/B_1) \\times \\cdots \\times (A_n/B_n).\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the following polynomials are irreducible over \\(\\mathbb{Q}\\). Cite any theorems that you use.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(X^3-5X^2+X+2\\)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(X^4+33X^2-6\\)",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(X^4+2X^3-14X^2+31X-7\\)",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "State the classification theorems for finitely generated modules over a PID. You should give both the invariant factor and the elementary divisor decompositions. Be sure to include the uniqueness statements.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a ring with \\(1\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State the First Isomorphism Theorem for \\(R\\)-modules.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(A_1,A_2,\\ldots,A_n\\) be \\(R\\)-modules and for \\(1 \\leq i \\leq n\\) let \\(B_i\\) be a submodule of \\(A_i\\). Prove that\n\\[\n(A_1 \\times \\cdots \\times A_n)/(B_1 \\times \\cdots \\times B_n) \\cong (A_1/B_1) \\times \\cdots \\times (A_n/B_n).\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(L/K\\) be an algebraic field extension and let \\(R\\) be a subring of \\(L\\) such that \\(K \\subset R\\). Prove that \\(R\\) is a field.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the classification theorems for finitely generated modules over a PID. You should give both the invariant factor and the elementary divisor decompositions. Be sure to include the uniqueness statements.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(L/K\\) be an algebraic field extension and let \\(R\\) be a subring of \\(L\\) such that \\(K \\subset R\\). Prove that \\(R\\) is a field.",
+        "subparts": []
+      }
     }
   ]
 }

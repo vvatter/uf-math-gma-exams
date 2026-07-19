@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-2022-aug",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,153 +7,178 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Algebra-2022_08.pdf",
-  "instructions": "Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give the definition of a free object in a concrete category \u0007(\u0007mathcal C\u0007).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \u0007(\u0007mathcal G\u0007) be the category of finite groups. Prove that an object \u0007(H \u0007in \u0007mathcal G\u0007) is free if and only if \u0007(H\u0007) is a trivial group.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what it means for a group \u0007(G\u0007) to be solvable.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \u0007(G\u0007) be a solvable group and let \u0007(N\u0007) be a normal subgroup of \u0007(G\u0007). Prove that \u0007(G/N\u0007) is solvable.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Let \u0007(F\u0007) be a group which is free on \u0007(n>1\u0007) generators. Prove that \u0007(F\u0007) is not solvable.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give the definition of a free object in a concrete category \\(\\mathcal C\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(\\mathcal G\\) be the category of finite groups. Prove that an object \\(H \\in \\mathcal G\\) is free if and only if \\(H\\) is a trivial group.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \u0007(m,n\u0007) be positive integers. Find \u0007(r\u0007) such that there is an isomorphism of \u0007(\u0007mathbb Z\u0007)-modules\n\u0007[\n(\u0007mathbb Z/m\u0007mathbb Z)\u0007otimes_{\u0007mathbb Z}(\u0007mathbb Z/n\u0007mathbb Z)\u0007cong \u0007mathbb Z/r\u0007mathbb Z.\n\u0007]\nJustify your answer.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for a group \\(G\\) to be solvable.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(G\\) be a solvable group and let \\(N\\) be a normal subgroup of \\(G\\). Prove that \\(G/N\\) is solvable.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(F\\) be a group which is free on \\(n>1\\) generators. Prove that \\(F\\) is not solvable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \u0007(R\u0007) be a ring. Prove that the following are equivalent:",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Every \u0007(R\u0007)-module is projective.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Every \u0007(R\u0007)-module is injective.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Every short exact sequence of \u0007(R\u0007)-modules splits.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(m,n\\) be positive integers. Find \\(r\\) such that there is an isomorphism of \\(\\mathbb Z\\)-modules\n\\[\n(\\mathbb Z/m\\mathbb Z)\\otimes_{\\mathbb Z}(\\mathbb Z/n\\mathbb Z)\\cong \\mathbb Z/r\\mathbb Z.\n\\]\nJustify your answer.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \u0007(G\u0007) be a group, let \u0007(F\u0007) be a field, and let \u0007(\u0007chi_1,\u0007ldots,\u0007chi_n\u0007) be distinct homomorphisms from \u0007(G\u0007) into \u0007(F^\u0007times\u0007). Prove that \u0007(\u0007chi_1,\u0007ldots,\u0007chi_n\u0007) are linearly independent over \u0007(F\u0007).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a ring. Prove that the following are equivalent:",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Every \\(R\\)-module is projective.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Every \\(R\\)-module is injective.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Every short exact sequence of \\(R\\)-modules splits.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \u0007(n\u0007ge 1\u0007). Define the \u0007(n\u0007)th cyclotomic polynomial \u0007(\u0007Phi_n(X)\u0007).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \u0007(\u0007Phi_n(X)\u0007) is irreducible over \u0007(\u0007mathbb Q\u0007). You may assume that \u0007(\u0007Phi_n(X)\u0007in\u0007mathbb Z[X]\u0007).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group, let \\(F\\) be a field, and let \\(\\chi_1,\\ldots,\\chi_n\\) be distinct homomorphisms from \\(G\\) into \\(F^\\times\\). Prove that \\(\\chi_1,\\ldots,\\chi_n\\) are linearly independent over \\(F\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \u0007(R\u0007) be a commutative Noetherian ring with \u0007(1\u0007).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what it means for a proper ideal \u0007(J\u0007subset R\u0007) to be irreducible.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that every irreducible proper ideal in \u0007(R\u0007) is primary.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Let \u0007(I\u0007subset R\u0007) be an ideal. Prove that \u0007(I\u0007) has a primary decomposition.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(n\\geq 1\\). Define the \\(n\\)th cyclotomic polynomial \\(\\Phi_n(X)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(\\Phi_n(X)\\) is irreducible over \\(\\mathbb Q\\). You may assume that \\(\\Phi_n(X)\\in\\mathbb Z[X]\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Let \u0007(S\u0007) be a commutative ring with \u0007(1\u0007), let \u0007(R\u0007) be a subring of \u0007(S\u0007) which contains \u0007(1\u0007), and let \u0007(x\u0007in S\u0007). Suppose there is a subring \u0007(T\u0007subset S\u0007) such that \u0007(T\u0007supset R[x]\u0007) and \u0007(T\u0007) is finitely generated as an \u0007(R\u0007)-module. Prove that \u0007(x\u0007) is a root of some monic polynomial with coefficients in \u0007(R\u0007).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative Noetherian ring with \\(1\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for a proper ideal \\(J\\subset R\\) to be irreducible.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that every irreducible proper ideal in \\(R\\) is primary.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(I\\subset R\\) be an ideal. Prove that \\(I\\) has a primary decomposition.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 9,
-      "text": "Let \u0007(R\u0007) be a Noetherian integral domain with a unique nonzero prime ideal \u0007(P\u0007). Assume that \u0007(R\u0007) is integrally closed in its fraction field \u0007(F\u0007). Prove that \u0007(P\u0007) is a principal ideal.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(S\\) be a commutative ring with \\(1\\), let \\(R\\) be a subring of \\(S\\) which contains \\(1\\), and let \\(x\\in S\\). Suppose there is a subring \\(T\\subset S\\) such that \\(T\\supset R[x]\\) and \\(T\\) is finitely generated as an \\(R\\)-module. Prove that \\(x\\) is a root of some monic polynomial with coefficients in \\(R\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Determine which of the following are Dedekind domains. Give a brief explanation in each case.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\u0007(\u0007mathbb Z[\u0007sqrt{3}]\u0007)",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\u0007(\u0007mathbb Z[\u0007sqrt{5}]\u0007)",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\u0007(\u0007mathbb Q[X]\u0007)",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "\u0007(\u0007mathbb Q[X,Y]\u0007)",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a Noetherian integral domain with a unique nonzero prime ideal \\(P\\). Assume that \\(R\\) is integrally closed in its fraction field \\(F\\). Prove that \\(P\\) is a principal ideal.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Let \u0007(D\u0007) be a finite division ring. Prove that \u0007(D\u0007) is a field.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Determine which of the following are Dedekind domains. Give a brief explanation in each case.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(\\mathbb Z[\\sqrt{3}]\\)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(\\mathbb Z[\\sqrt{5}]\\)",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(\\mathbb Q[X]\\)",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "\\(\\mathbb Q[X,Y]\\)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(D\\) be a finite division ring. Prove that \\(D\\) is a field.",
+        "subparts": []
+      }
     }
   ]
 }

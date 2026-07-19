@@ -2,47 +2,13 @@
   "items": [
     {
       "category": "correction",
-      "context": "Define the map Φ from the fundamental group to the fiber, which gives the lifting correspondence.",
-      "corrected_text": "which gives the lifting correspondence",
-      "exam_id": "topology-first-year-2025-may-part-2",
-      "message": "Removed a duplicated word in the description of the lifting correspondence.",
-      "origin": "extraction",
-      "original_text": "which gives the the lifting correspondence",
-      "problem_numbers": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-2.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Compute the fundamental group of the connected sum, identified immediately afterward as T²#T².",
-      "corrected_text": "the connected sum of a torus and a second torus",
-      "exam_id": "topology-first-year-2025-may-part-2",
-      "message": "Inserted the uniquely implied indefinite article before “second torus.”",
-      "origin": "extraction",
-      "original_text": "the connected sum of a torus and second torus",
-      "problem_numbers": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-2.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "“when \\(K\\) is identified with the subgroup \\(\\{(1,K)\\mid k\\in K\\}\\) of \\(G\\)”",
       "corrected_text": "\\(\\{(1,k)\\mid k\\in K\\}\\)",
       "exam_id": "algebra-first-year-2025-may-part-1",
       "message": "Corrected the second coordinate in the displayed copy of K from the group K itself to the element k; this is uniquely determined by the set-builder variable and the identification of K as a subgroup of the semidirect product.",
       "origin": "extraction",
       "original_text": "\\(\\{(1,K)\\mid k\\in K\\}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -59,7 +25,7 @@
       "message": "Corrected the misspelling of the named orthogonalization process and applied the project’s standard en dash between the two names.",
       "origin": "extraction",
       "original_text": "modified Gramm-Schmidt process",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -70,30 +36,13 @@
     },
     {
       "category": "correction",
-      "context": "“the 2-sphere”",
-      "corrected_text": "\\(S^2=\\{x\\in R^3:|x|=1\\}\\)",
-      "exam_id": "topology-phd-1994-aug",
-      "message": "Corrected the ambient Euclidean space in the definition of the 2-sphere from \\(R^2\\) to \\(R^3\\), as uniquely determined by the immediate context.",
-      "origin": "extraction",
-      "original_text": "\\(S^2=\\{x\\in R^2:|x|=1\\}\\)",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-1994-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Problem 1 asks for the number of nested \\(k\\)-tuples of subsets.",
       "corrected_text": "How many \\(k\\)-tuples \\((A_1,A_2,\\ldots,A_k)\\) of nested subsets of an \\(n\\)-set are there",
       "exam_id": "combinatorics-phd-1991-may",
       "message": "Corrected the evident typographical error “may” to “many.”",
       "origin": "extraction",
       "original_text": "How may \\(k\\)-tuples \\((A_1,A_2,\\ldots,A_k)\\) of nested subsets of an \\(n\\)-set are there",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -110,7 +59,7 @@
       "message": "Capitalized the first word of a new sentence; the intended capitalization is uniquely determined by the immediate context.",
       "origin": "project",
       "original_text": "to obtain any partial credit, all work must be presented in a neat and logical fashion.",
-      "problem_numbers": [],
+      "problem_indices": [],
       "source_pages": [
         1
       ],
@@ -125,7 +74,7 @@
       "message": "Removed an extraneous period between the displayed definition of the polynomial and the continuation “be a monic polynomial.”",
       "origin": "extraction",
       "original_text": "Let \\(f(X)=X^n+a_{n-1}X^{n-1}+\\cdots+a_1X+a_0\\). be a monic polynomial of degree \\(n\\geq 1\\) with coefficients in \\(R\\).",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -142,7 +91,7 @@
       "message": "Inserted the missing closing parenthesis in the definition of the fixed elements.",
       "origin": "extraction",
       "original_text": "Denote by S^G ⊆ S the subset of fixed elements (i.e. g(x) = x for all g ∈ G, x ∈ S. Show that",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -159,7 +108,7 @@
       "message": "Added the necessary condition that the multiplicative subset not contain zero; without it, the stated conclusion is false.",
       "origin": "extraction",
       "original_text": "\\(S\\subseteq R\\) is a multiplicative subset, i.e. \\(1\\in S\\) and \\(a,b\\in S\\) implies \\(ab\\in S\\).",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -176,7 +125,7 @@
       "message": "Inserted the uniquely determined missing group symbol.",
       "origin": "extraction",
       "original_text": "Let \\(=\\mathrm{GL}_3(\\mathbb{F}_2)\\) be the group",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -193,7 +142,7 @@
       "message": "Inserted “elements of” to make the intended conjugacy-class condition explicit, as confirmed by part (ii).",
       "origin": "extraction",
       "original_text": "Find representatives for all the conjugacy classes of order \\(2\\).",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -210,7 +159,7 @@
       "message": "Corrected the typographical error “extendsions” to “extensions.”",
       "origin": "extraction",
       "original_text": "algebraic extendsions of fields",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -227,7 +176,7 @@
       "message": "Corrected an unambiguous typographical error in “characteristic.”",
       "origin": "extraction",
       "original_text": "charactersitic subgroups H and K",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -244,7 +193,7 @@
       "message": "Corrected the evident typographical error “if and only of” to “if and only if.”",
       "origin": "extraction",
       "original_text": "if and only of 1+ab is a unit in R for all b ∈ R",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -261,7 +210,7 @@
       "message": "Corrected inconsistent use of \\(\\alpha\\) to \\(\\theta\\) in part (b), matching the element introduced in the hypothesis and in part (a).",
       "origin": "extraction",
       "original_text": "the smallest subring \\(K[\\alpha]\\) of \\(F\\) containing \\(K\\) and \\(\\alpha\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -278,7 +227,7 @@
       "message": "Corrected the internal reference in part (b) from “part (1)” to “part (a),” the only preceding part establishing the fixed-point congruence to be used.",
       "origin": "extraction",
       "original_text": "Use part (1)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -295,7 +244,7 @@
       "message": "Removed the extraneous word “in” from the description of the matrices.",
       "origin": "extraction",
       "original_text": "Determine the number of similarity classes of matrices in \\(A\\in\\mathrm{M}_5(\\mathbb{C})\\) satisfying \\(A^3=0\\).",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -312,7 +261,7 @@
       "message": "Corrected the baseline period between 7 and 17 to a multiplication dot, since the order of a finite group must be an integer and the immediate context uniquely determines the intended product.",
       "origin": "extraction",
       "original_text": "a group of order \\(7.17^2\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -329,7 +278,7 @@
       "message": "Corrected the singular noun “field” to “fields,” as uniquely required by the three field extensions used immediately afterward.",
       "origin": "extraction",
       "original_text": "Let \\(K\\subset F\\subset E\\) be field.",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -346,7 +295,7 @@
       "message": "Inserted the uniquely determined missing word “than.”",
       "origin": "extraction",
       "original_text": "index less n",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -363,7 +312,7 @@
       "message": "Corrected the extraneous word “if” in the opening sentence.",
       "origin": "extraction",
       "original_text": "Assume that if F is a field.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -380,7 +329,7 @@
       "message": "Corrected an undefined ring name in part (i) to the quotient ring defined immediately before it.",
       "origin": "extraction",
       "original_text": "find all minimal prime ideals of \\(R\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -397,7 +346,7 @@
       "message": "Corrected an evident imperative-form typo in part (b).",
       "origin": "extraction",
       "original_text": "Given an example of a commutative ring R and a maximal ideal M of R such that R/M is not a field.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -414,7 +363,7 @@
       "message": "Inserted the uniquely determined missing article “the” in the definition of the fixed-point set.",
       "origin": "extraction",
       "original_text": "Denote by \\(S^G\\) set of all elements of \\(S\\) fixed by every element of \\(G\\).",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -431,7 +380,7 @@
       "message": "Corrected a uniquely determined subject–verb agreement error.",
       "origin": "extraction",
       "original_text": "Let \\(F_n'\\) denotes the commutator subgroup.",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -448,7 +397,7 @@
       "message": "Corrected an unambiguous typographical error.",
       "origin": "extraction",
       "original_text": "indentity",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -465,7 +414,7 @@
       "message": "Corrected the uniquely determined grammatical error “in with” to “in which.”",
       "origin": "extraction",
       "original_text": "Suppose R is a finite commutative ring with identity in with r³=r for all r∈R.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -482,7 +431,7 @@
       "message": "Corrected the group type to the mathematically determined lowercase-prime notation.",
       "origin": "extraction",
       "original_text": "P-group",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -499,7 +448,7 @@
       "message": "Corrected the first coordinate of an element of the acting group to the lowercase element variable used in the image formula.",
       "origin": "extraction",
       "original_text": "(P, xQ)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -516,7 +465,7 @@
       "message": "Corrected an unambiguous spelling error.",
       "origin": "extraction",
       "original_text": "restricion",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -533,7 +482,7 @@
       "message": "Inserted the uniquely determined missing word “you” in the exam-wide instruction.",
       "origin": "extraction",
       "original_text": "You may quote standard results (within reason) as long as you make it clear that are doing so and you state them clearly.",
-      "problem_numbers": [],
+      "problem_indices": [],
       "source_pages": [
         1
       ],
@@ -548,7 +497,7 @@
       "message": "Inserted the uniquely determined missing pronoun in the instruction about quoting standard results.",
       "origin": "extraction",
       "original_text": "You may quote standard results (within reason) as long as you make it clear that are doing so and you state them clearly.",
-      "problem_numbers": [],
+      "problem_indices": [],
       "source_pages": [
         1
       ],
@@ -563,7 +512,7 @@
       "message": "Corrected the duplicated final subpart label from (c) to (d).",
       "origin": "extraction",
       "original_text": "(c) Give an example of a projective module that is not free.",
-      "problem_numbers": [
+      "problem_indices": [
         11
       ],
       "source_pages": [
@@ -580,7 +529,7 @@
       "message": "Corrected the reversed extension in part (a) to the uniquely intended extension through the full field tower.",
       "origin": "extraction",
       "original_text": "If we have galois extensions of fields \\(K\\subset L\\) and \\(L\\subset M\\) then the extension \\(L\\subset K\\) is galois.",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -597,7 +546,7 @@
       "message": "Corrected the reversed extension in part (b) to the uniquely intended extension through the full field tower.",
       "origin": "extraction",
       "original_text": "If we have algebraic extensions of fields \\(K\\subset L\\) and \\(L\\subset M\\) then the extension \\(L\\subset K\\) is algebraic.",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -614,7 +563,7 @@
       "message": "Corrected the displayed description of the epimorphism in the hint so that its formula has the stated domain \\(Re_i\\) and codomain \\(Re_i m\\).",
       "origin": "extraction",
       "original_text": "the map \\(m\\mapsto e_i m\\) defines an \\(R\\)-module epimorphism \\(Re_i\\to Re_i m\\)",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -631,7 +580,7 @@
       "message": "Corrected the automorphism group so that the stated commutators and action on G are defined.",
       "origin": "extraction",
       "original_text": "Let G be a finite group and let A be a subgroup of Aut(A) such that G = [G,A].",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -648,7 +597,7 @@
       "message": "Removed a duplicated word in the opening sentence of Problem 2(a).",
       "origin": "extraction",
       "original_text": "Let \\(k\\) be an algebraically closed field field and \\(R\\) a commutative, finitely generated \\(k\\)-algebra.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -665,7 +614,7 @@
       "message": "Added “nonzero” to the fixed-vector conclusion; without it, the zero vector makes the assertion trivial and the hint unnecessary.",
       "origin": "extraction",
       "original_text": "Show that there is a vector \\(v\\in V\\) such that \\(\\rho(g)(v)=v\\) for all \\(g\\in G\\).",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -682,7 +631,7 @@
       "message": "Corrected the internal reference in part b) from the nonexistent part (i) to part (a).",
       "origin": "extraction",
       "original_text": "Is the conclusion in (i) still true if G is not assumed to be finite?",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -699,7 +648,7 @@
       "message": "Removed an evident duplicated word in part (a).",
       "origin": "extraction",
       "original_text": "there are only finitely many,many fields K",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -716,7 +665,7 @@
       "message": "Corrected the matrix size lower bound required by the stated equivalence.",
       "origin": "extraction",
       "original_text": "R ≅ M_n(D) for some n ≥ 0 and division ring D.",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -733,7 +682,7 @@
       "message": "Added “free” before the second occurrence of “generators”; the immediate context uniquely indicates that the problem asks for invariance of the cardinality of free generating sets of isomorphic finite free modules.",
       "origin": "extraction",
       "original_text": "Prove that the cardinality of the set of free generators for \\(F_1\\) equals the cardinality of the set of generators for \\(F_2\\).",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -750,7 +699,7 @@
       "message": "Inserted the uniquely required copula “is” in Problem 8(a).",
       "origin": "extraction",
       "original_text": "Prove that every nil left ideal of \\(R\\) contained in \\(J(R)\\).",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -767,7 +716,7 @@
       "message": "Inserted “nonzero” because zero is always nilpotent and the intended reducedness condition is uniquely determined by the mathematical context.",
       "origin": "extraction",
       "original_text": "has no nilpotent elements",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -784,7 +733,7 @@
       "message": "Removed the duplicated indefinite article.",
       "origin": "extraction",
       "original_text": "there is a an algebraically independent set",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -801,7 +750,7 @@
       "message": "Corrected the malformed introductory construction in Problem 9.",
       "origin": "extraction",
       "original_text": "Let \\(p\\) is a prime and \\(K\\) is the splitting field over \\(\\mathbb Q\\) of \\(X^p-1\\).",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -818,7 +767,7 @@
       "message": "Corrected the phrase “extensions fields” to the standard grammatical phrase “extension fields.”",
       "origin": "extraction",
       "original_text": "it is a direct sum of extensions fields of \\(k\\)",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -835,7 +784,7 @@
       "message": "Corrected an unambiguous singular/plural error in the description of the generating set.",
       "origin": "extraction",
       "original_text": "a finite sets \\(X\\)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -846,64 +795,13 @@
     },
     {
       "category": "correction",
-      "context": "Let R be a commutative ring with identity, let M be a maximal ideal of R, and let n a positive integer.",
-      "corrected_text": "let n be a positive integer",
-      "exam_id": "algebra-phd-2017-may",
-      "message": "Inserted the uniquely determined missing verb in the phrase defining the positive integer.",
-      "origin": "extraction",
-      "original_text": "let n a positive integer",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2017-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Given an example of a ring R and an irreducible module M such that D is not commutative.",
-      "corrected_text": "Give an example",
-      "exam_id": "algebra-phd-2017-may",
-      "message": "Corrected the uniquely determined imperative verb in part (b).",
-      "origin": "extraction",
-      "original_text": "Given an example",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2017-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Prove that if \\(R\\) is an integral domain and a local ring, and \\(I\\) an invertible ideal of \\(R\\), then \\(I\\) is principal.",
-      "corrected_text": "and \\(I\\) an invertible ideal of \\(R\\)",
-      "exam_id": "algebra-phd-2018-jan",
-      "message": "Inserted the missing article in the hypothesis describing the ideal.",
-      "origin": "extraction",
-      "original_text": "and \\(I\\) invertible ideal of \\(R\\)",
-      "problem_numbers": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2018-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Problem 8(a), in the formal power series whose unit criterion is being proved.",
       "corrected_text": "\\(a_0+a_1X+a_2X^2+\\cdots\\in F[[X]]\\)",
       "exam_id": "algebra-phd-2018-aug",
       "message": "Inserted the uniquely intended plus sign before the ellipsis in the formal power series.",
       "origin": "extraction",
       "original_text": "\\(a_0+a_1X+a_2X^2\\cdots\\in F[[X]]\\)",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -914,30 +812,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 2 defines \\(p(x)=x^7-3\\), takes \\(\\zeta\\) to be a primitive 7-th root of 1, and defines \\(K\\) as the splitting field of \\(p(x)\\).",
-      "corrected_text": "\\(\\xi=\\sqrt[7]{3}\\in\\mathbb{C}\\)",
-      "exam_id": "algebra-phd-2020-aug",
-      "message": "Corrected the root index in the definition of \\(\\xi\\) from 5 to 7, as uniquely determined by the polynomial \\(x^7-3\\), the primitive 7-th root \\(\\zeta\\), and the subsequent Galois-group questions.",
-      "origin": "extraction",
-      "original_text": "\\(\\xi=\\sqrt[5]{3}\\in\\mathbb{C}\\)",
-      "problem_numbers": [
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2020-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Let \\(P\\) be the set of prime ideals of \\(A\\), \\(P'\\) the set of prime ideals of \\(S^{-1}A\\).",
       "corrected_text": "\\(P'\\) the set of prime ideals of \\(S^{-1}A\\)",
       "exam_id": "algebra-phd-2021-aug",
       "message": "Inserted the uniquely implied preposition in the definition of \\(P'\\).",
       "origin": "extraction",
       "original_text": "\\(P'\\) the set of prime ideals \\(S^{-1}A\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -954,7 +835,7 @@
       "message": "Corrected the ideal variable in the description of the target subset; the displayed variable is \\(\\mathfrak q\\).",
       "origin": "extraction",
       "original_text": "consisting of \\(\\mathfrak q\\in P\\) such that \\(\\mathfrak p\\cap S=\\varnothing\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -971,7 +852,7 @@
       "message": "Corrected subject–verb agreement in the opening sentence.",
       "origin": "extraction",
       "original_text": "Let Groups denotes the category of groups and Sets denotes the category of sets.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -982,47 +863,13 @@
     },
     {
       "category": "correction",
-      "context": "The criterion characterizes elements integral over \\(A\\); because \\(M\\) is a submodule of the field \\(L\\), requiring \\(M\\ne 0\\) supplies the needed faithfulness.",
-      "corrected_text": "there is a nonzero finitely generated \\(A\\)-module \\(M \\subseteq L\\) such that \\(xM \\subseteq M\\)",
-      "exam_id": "algebra-phd-2022-jan",
-      "message": "Added the necessary nonzero condition on the module; otherwise the zero module makes the stated equivalence false for every element.",
-      "origin": "extraction",
-      "original_text": "there is a finitely generated \\(A\\)-module \\(M \\subseteq L\\) such that \\(xM \\subseteq M\\)",
-      "problem_numbers": [
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The hint concerns the partially ordered set of ideals disjoint from \\(S\\); since \\(S\\subset R\\) is nonempty, the printed condition \\(R\\cap S=\\varnothing\\) is impossible.",
-      "corrected_text": "Apply Zorn’s lemma on the ideals \\(I \\subset R\\) such that \\(I \\cap S=\\varnothing\\).",
-      "exam_id": "algebra-phd-2022-jan",
-      "message": "Corrected the ideal-disjointness condition in the hint from \\(R \\cap S=\\varnothing\\) to \\(I \\cap S=\\varnothing\\).",
-      "origin": "extraction",
-      "original_text": "Apply Zorn’s lemma on the ideals \\(I \\subset R\\) such that \\(R \\cap S=\\varnothing\\).",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "The stated diagonal entries are 1, whereas strictly upper triangular matrices have zero diagonal entries.",
       "corrected_text": "upper unitriangular matrices with coefficients in k (this means that the diagonal entries are equal to 1 and the entries below the diagonal are 0)",
       "exam_id": "algebra-phd-2024-may",
       "message": "Corrected terminology to agree with the explicit matrix description and the group notation.",
       "origin": "extraction",
       "original_text": "strictly upper triangular matrices with coefficients in k (this means that the diagonal entries are equal to 1 and the entries below the diagonal are 0)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -1039,7 +886,7 @@
       "message": "Corrected the indefinite article.",
       "origin": "extraction",
       "original_text": "Let R be a integral domain.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1056,7 +903,7 @@
       "message": "Added “nonzero” because zero is always nilpotent.",
       "origin": "extraction",
       "original_text": "has no nilpotent elements",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -1073,7 +920,7 @@
       "message": "Corrected an apparent typographical error joining the two hypotheses.",
       "origin": "extraction",
       "original_text": "Suppose k is a field an R = k[X,Y].",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -1090,7 +937,7 @@
       "message": "In part (ii), the category was corrected from \\(\\mathcal C\\) to \\(\\mathcal T\\), since the immediately preceding sentence defines \\(\\mathcal T\\) as the category of torsion abelian groups and asks for products in that category.",
       "origin": "extraction",
       "original_text": "if \\(\\{X_i\\}_{i\\in I}\\) is any set of objects of \\(\\mathcal C\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1101,47 +948,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 8 begins by specifying that R is an integral domain.",
-      "corrected_text": "Let R be an integral domain.",
-      "exam_id": "algebra-phd-2025-may",
-      "message": "Corrected the uniquely determined indefinite article in the problem stem.",
-      "origin": "extraction",
-      "original_text": "Let R be a integral domain.",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2025-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 3 defines a family of functions \\(F_n(x)\\) and asks for a uniformly convergent subsequence on \\([a,b]\\).",
-      "corrected_text": "\\(F_n(x)=\\int_a^x f_n(t)\\,dt,\\quad a\\leq x\\leq b\\)",
-      "exam_id": "analysis-first-year-2015-jan-part-2",
-      "message": "The upper limit of integration was corrected from \\(b\\) to \\(x\\), as uniquely indicated by the definition of \\(F_n(x)\\), the stated domain \\(a\\leq x\\leq b\\), and the subsequent uniform-convergence request.",
-      "origin": "extraction",
-      "original_text": "\\(F_n(x)=\\int_a^b f_n(t)\\,dt,\\quad a\\leq x\\leq b\\)",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-first-year/analysis-first-year-2015-jan-part-2.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Let E be a dense ssubet of a metric space X.",
       "corrected_text": "subset",
       "exam_id": "analysis-first-year-2015-aug-part-1",
       "message": "Corrected an evident typographical error in the description of E.",
       "origin": "extraction",
       "original_text": "ssubet",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -1158,7 +971,7 @@
       "message": "Corrected the indexed set in the finite union from \\(A_n\\) to \\(A_i\\); the summation index and the asserted closure identity uniquely determine the intended reading.",
       "origin": "extraction",
       "original_text": "\\(B=\\bigcup_{i=1}^n A_n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -1175,7 +988,7 @@
       "message": "Corrected the nonstandard phrase “Riemannian integrable” to the mathematically intended term “Riemann integrable.”",
       "origin": "extraction",
       "original_text": "Riemannian integrable",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1192,7 +1005,7 @@
       "message": "Removed the redundant hypothesis that the map is continuous, since continuity is the conclusion to be proved from compactness of its graph.",
       "origin": "extraction",
       "original_text": "Let f : X → Y be a continuous map between metric spaces",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1209,7 +1022,7 @@
       "message": "Inserted “locally” before “Lebesgue integrable.” Global Lebesgue integrability on \\([0,\\infty)\\) is incompatible with the stated limit \\(f(t)\\to1\\), while local Lebesgue integrability together with that limit ensures the displayed weighted integral is finite.",
       "origin": "extraction",
       "original_text": "Let f : [0, ∞) → ℝ be Lebesgue integrable and assume that f(t) → 1 as t → ∞.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1226,7 +1039,7 @@
       "message": "Corrected the imperative typo “Given an example” to “Give an example.”",
       "origin": "extraction",
       "original_text": "Given an example to show that ∩ₙKₙ can be empty if the Kₙ are only assumed closed.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1243,7 +1056,7 @@
       "message": "Corrected the limiting point in the compact set from \\(0\\) to \\(x\\); an arbitrary metric space need not contain a distinguished point \\(0\\), and the sequence is stated to converge to \\(x\\).",
       "origin": "extraction",
       "original_text": "the set \\(\\{x_n:n\\in\\mathbb{N}\\}\\cup\\{0\\}\\) is compact",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1260,7 +1073,7 @@
       "message": "Corrected the function-declaration punctuation from a semicolon to a colon.",
       "origin": "extraction",
       "original_text": "Let \\(f; [0,1]\\to\\mathbb{R}\\) satisfy the following rules",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -1277,7 +1090,7 @@
       "message": "Corrected the domain of F from the product interval to [0,1], as uniquely determined by the one-variable definition F(x).",
       "origin": "extraction",
       "original_text": "\\(F:[0,1]\\times[0,1]\\to\\mathbb{R}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1294,7 +1107,7 @@
       "message": "Corrected the semicolon in the function declaration to a colon; the immediate context uniquely determines that a domain declaration is intended.",
       "origin": "extraction",
       "original_text": "let \\(f_n;[0,1]\\to[0,1]\\) be a Riemann integrable function",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1311,7 +1124,7 @@
       "message": "Corrected the limiting variable in the displayed convergence statement; the integration variable is x, while n is the exponent and the intended sequence parameter.",
       "origin": "extraction",
       "original_text": "\\(\\int_0^1 f(x^n)\\,dx\\to f(0)\\) as \\(x\\to 0\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -1328,7 +1141,7 @@
       "message": "Corrected the semicolon after the function name to a colon in the function declaration.",
       "origin": "extraction",
       "original_text": "f; [0, 1] × [0, 1] → ℝ",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1345,7 +1158,7 @@
       "message": "Corrected the set named in the containment condition in part (b).",
       "origin": "extraction",
       "original_text": "some Borel set B ⊆ ℝ satisfies U ⊇ X and λ(B) = λ(X).",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -1362,7 +1175,7 @@
       "message": "Removed an accidental duplicated word.",
       "origin": "extraction",
       "original_text": "If it is assumed that that the integrals",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1373,234 +1186,13 @@
     },
     {
       "category": "correction",
-      "context": "Item 1 in the theorem list.",
-      "corrected_text": "The Uniform Boundedness theorem",
-      "exam_id": "analysis-phd-1994-may",
-      "message": "Corrected an unambiguous misspelling in the theorem name.",
-      "origin": "extraction",
-      "original_text": "The Uniform Boundeness theorem",
-      "problem_numbers": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Item 3 in the theorem list.",
-      "corrected_text": "The Fatou Lemma.",
-      "exam_id": "analysis-phd-1994-may",
-      "message": "Corrected an unambiguous misspelling of Fatou's name.",
-      "origin": "extraction",
-      "original_text": "The Faton Lemma.",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Item 6 in the theorem list.",
-      "corrected_text": "The Radon–Nikodym theorem",
-      "exam_id": "analysis-phd-1994-may",
-      "message": "Corrected an unambiguous misspelling in the theorem name.",
-      "origin": "extraction",
-      "original_text": "The Randon–Nikodym theorem",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The hint identifies the canonical embedding of the sequence elements into the bidual.",
-      "corrected_text": "bidual E**",
-      "exam_id": "analysis-phd-1994-may",
-      "message": "Corrected an unambiguous misspelling of the standard term.",
-      "origin": "extraction",
-      "original_text": "bydual E**",
-      "problem_numbers": [
-        17
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The condition is stated for every \\(A\\in\\mathcal A\\) and \\(B\\in\\mathcal B\\).",
-      "corrected_text": "\\(\\mu(A\\cap B)=\\mu(A)\\mu(B)\\)",
-      "exam_id": "analysis-phd-1993-jan",
-      "message": "Corrected the set name in the independence condition from lowercase \\(a\\) to uppercase \\(A\\).",
-      "origin": "extraction",
-      "original_text": "\\(\\mu(A\\cap B)=\\mu(a)\\mu(B)\\)",
-      "problem_numbers": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The preceding hypothesis states that the two sub-σ-algebras are independent, and the problem asks to show the resulting factorization for nonnegative measurable functions.",
-      "corrected_text": "\\(\\int fg\\,d\\mu=(\\int f\\,d\\mu)(\\int g\\,d\\mu)\\)",
-      "exam_id": "analysis-phd-1993-jan",
-      "message": "Inserted the uniquely implied equality sign in the requested integral identity.",
-      "origin": "extraction",
-      "original_text": "\\(\\int fg\\,d\\mu(\\int f\\,d\\mu)(\\int g\\,d\\mu)\\)",
-      "problem_numbers": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The hypothesis integrates each \\(f_n\\) over \\(S\\), and the question asks about pointwise convergence on \\(S\\).",
-      "corrected_text": "\\((S,\\Sigma,\\mu)\\)",
-      "exam_id": "analysis-phd-1993-jan",
-      "message": "Corrected the measure-space underlying set from \\(S_\\infty\\) to \\(S\\), consistent with every subsequent reference in the problem.",
-      "origin": "extraction",
-      "original_text": "\\((S_\\infty,\\Sigma,\\mu)\\)",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "“\\((X,\\Sigma,\\mu)\\) will always denote a measure space (possibly infinite). Prove that … is complete.”",
-      "corrected_text": "\\(L^1(X,\\Sigma,\\mu)\\)",
-      "exam_id": "analysis-phd-1995-aug",
-      "message": "Corrected the underlying set in the function space from the undefined S to X, as uniquely determined by the immediately preceding measure-space notation.",
-      "origin": "extraction",
-      "original_text": "\\(L^1(S,\\Sigma,\\mu)\\)",
-      "problem_numbers": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The problem introduces a sequence \\((f_n)\\) and asks about convergence of \\(\\sum f_n\\).",
-      "corrected_text": "\\(\\sum_{n=1}^{\\infty}\\int |f_n|\\,d\\mu<\\infty\\)",
-      "exam_id": "analysis-phd-1995-aug",
-      "message": "Added the missing sequence subscript in the integrability hypothesis.",
-      "origin": "extraction",
-      "original_text": "\\(\\sum_{n=1}^{\\infty}\\int |f|\\,d\\mu<\\infty\\)",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Definition of \\(\\mathcal S\\) and \\(\\mathcal T\\).",
-      "corrected_text": "the class of all countable subsets",
-      "exam_id": "analysis-phd-1995-aug",
-      "message": "Removed an erroneous comma separating “all” from “countable subsets.”",
-      "origin": "extraction",
-      "original_text": "the class of all, countable subsets",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "“Show that \\(D\\) is NOT \\(\\mathcal S\\times\\mathcal T\\) measurable.”",
-      "corrected_text": "measurable",
-      "exam_id": "analysis-phd-1995-aug",
-      "message": "Corrected a spelling error.",
-      "origin": "extraction",
-      "original_text": "measureable",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The measure space is defined as \\((X,\\Sigma,\\mu)\\); the lowercase form occurs in the definition of \\(V\\) and again in the hint.",
-      "corrected_text": "\\(L^1(X,\\mathcal G,\\mu)\\)",
-      "exam_id": "analysis-phd-1995-aug",
-      "message": "Capitalized the underlying-set symbol in both occurrences of the subspace notation.",
-      "origin": "extraction",
-      "original_text": "\\(L^1(x,\\mathcal G,\\mu)\\)",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 6 begins, “Let \\(x_n\\) be a sequence in a Banach space \\(B\\).”",
-      "corrected_text": "Consider the \\(x_n\\) as elements of the double dual \\(B^{**}\\).",
-      "exam_id": "analysis-phd-1996-jun",
-      "message": "Corrected the double-dual space in the hint from \\(X^{**}\\) to \\(B^{**}\\), since the sequence is stated to lie in the Banach space \\(B\\).",
-      "origin": "extraction",
-      "original_text": "Consider the \\(x_n\\) as elements of the double dual \\(X^{**}\\).",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1996-jun.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "The opening sentence defines \\(\\ell^\\infty\\) as the Banach space of bounded real sequences and specifies its norm.",
       "corrected_text": "\\(\\sup_i|a_i|<\\infty\\), with \\(\\|(a_i)\\|:=\\sup_i|a_i|\\)",
       "exam_id": "analysis-phd-1997-may",
       "message": "Corrected the malformed placement of the norm definition; the intended definition is uniquely determined by the description of the standard Banach space \\(\\ell^\\infty\\).",
       "origin": "extraction",
       "original_text": "\\(\\sup_i|a_i|<\\infty := \\|(a_i)\\|\\)",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -1611,64 +1203,13 @@
     },
     {
       "category": "correction",
-      "context": "The sentence asks for a proof of the existence of a product measure.",
-      "corrected_text": "Prove the existence of the product-measure",
-      "exam_id": "analysis-phd-1999-may",
-      "message": "Corrected the preposition in the product-measure existence statement.",
-      "origin": "extraction",
-      "original_text": "Prove the existence on the product-measure",
-      "problem_numbers": [
-        12
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "“Prove that if \\(f\\in L^1\\) and \\(\\int_A f\\,d\\mu=0\\) for \\(A\\) in a ring \\(\\mathcal R\\) generating the \\(\\sigma\\)-algebra \\(\\Sigma\\), then …”",
-      "corrected_text": "then \\(f=0\\), \\(\\mu\\)-a.e.",
-      "exam_id": "analysis-phd-2001-sep",
-      "message": "Corrected the conclusion’s function name from \\(g\\) to \\(f\\), the only function introduced in the problem.",
-      "origin": "extraction",
-      "original_text": "then \\(g=0\\), \\(\\mu\\)-a.e.",
-      "problem_numbers": [
-        15
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2001-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 12 defines \\(\\lambda\\) as Lebesgue measure and otherwise uses \\(\\lambda\\) throughout; no measure \\(\\mu\\) is defined in that problem.",
-      "corrected_text": "\\(\\int_A f\\,d\\lambda=0\\)",
-      "exam_id": "analysis-phd-2002-may",
-      "message": "Replaced the undefined measure \\(\\mu\\) in the hint with \\(\\lambda\\), the Lebesgue measure defined in the problem.",
-      "origin": "extraction",
-      "original_text": "\\(\\int_A f\\,d\\mu=0\\)",
-      "problem_numbers": [
-        12
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Problem 2 defines an F-space parenthetically.",
       "corrected_text": "a topological vector space whose topology is induced by a complete invariant metric",
       "exam_id": "analysis-phd-2003-may",
       "message": "Inserted the omitted word “space” in the definition of an F-space.",
       "origin": "extraction",
       "original_text": "a topological vector whose topology is induced by a complete invariant metric",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1685,7 +1226,7 @@
       "message": "Corrected an evident spelling error.",
       "origin": "extraction",
       "original_text": "stongly convergent",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1702,7 +1243,7 @@
       "message": "Inserted “closed” before “ideals,” as required for the stated correspondence for C(X).",
       "origin": "extraction",
       "original_text": "ideals in C(X)",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -1719,7 +1260,7 @@
       "message": "Corrected an evident spelling error.",
       "origin": "extraction",
       "original_text": "with repsect to arclength measure",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -1736,7 +1277,7 @@
       "message": "Corrected the grammatical error “Let X and Y are” to “Let X and Y be.”",
       "origin": "extraction",
       "original_text": "Let X and Y are closed subspaces of a Hilbert space.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1753,7 +1294,7 @@
       "message": "Corrected the integrand named in the definition of the indefinite integral; the immediate context uniquely determines that it must be the previously introduced function f.",
       "origin": "extraction",
       "original_text": "Let ν be the indefinite integral of ν.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1764,81 +1305,13 @@
     },
     {
       "category": "correction",
-      "context": "The problem states \\(X=Y=[0,1]\\), calls \\(\\mathcal N\\) a σ-algebra used with counting measure, and forms \\(\\mathcal M\\otimes\\mathcal N\\) on \\([0,1]\\times[0,1]\\).",
-      "corrected_text": "\\(\\mathcal N=2^{[0,1]}\\)",
-      "exam_id": "analysis-phd-2019-jan",
-      "message": "Corrected the power-set notation so that \\(\\mathcal N\\) is a σ-algebra on the stated space \\(Y=[0,1]\\).",
-      "origin": "extraction",
-      "original_text": "\\(\\mathcal N=2^{\\mathbb R}\\)",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2019-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The problem defines \\(\\Delta\\) and asks for the two iterated integrals of its indicator; no set \\(E\\) is defined in problem 3.",
-      "corrected_text": "\\(\\mathbf 1_\\Delta(x,y)\\)",
-      "exam_id": "analysis-phd-2019-jan",
-      "message": "Corrected the undefined indicator \\(\\mathbf 1_E\\) in the second iterated integral to the indicator of the set \\(\\Delta\\) defined in the problem.",
-      "origin": "extraction",
-      "original_text": "\\(\\mathbf 1_E(x,y)\\)",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2019-jan.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "For σ-finite measures μ and ν",
-      "corrected_text": "σ-finite measures",
-      "exam_id": "analysis-phd-2024-may",
-      "message": "Corrected an unambiguous typographical error in the measure hypothesis.",
-      "origin": "extraction",
-      "original_text": "σ-finte measures",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2024-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Give a brief explanation of how the Fourier transform is defined on L²(ℝ).",
-      "corrected_text": "explanation",
-      "exam_id": "analysis-phd-2024-may",
-      "message": "Corrected an unambiguous typographical error.",
-      "origin": "extraction",
-      "original_text": "explanaation",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2024-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Let (T_n) be a sequence of bounded linear operators from X to Y. Supposed that lim_n T_n x exists for each x ∈ X.",
       "corrected_text": "Suppose that lim_n T_n x exists for each x ∈ X.",
       "exam_id": "analysis-phd-2024-aug",
       "message": "Corrected the grammatical typo “Supposed that” to “Suppose that.”",
       "origin": "extraction",
       "original_text": "Supposed that lim_n T_n x exists for each x ∈ X.",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -1855,7 +1328,7 @@
       "message": "Corrected the quantification of the section indices so that both x and y are quantified.",
       "origin": "extraction",
       "original_text": "such that \\([A]_x,[A]^y\\in\\mathcal M\\) for all \\(x\\in X\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1872,7 +1345,7 @@
       "message": "Removed a duplicated phrase in the request to outline a proof.",
       "origin": "extraction",
       "original_text": "Highlighting the key points, outline a proof of a proof of the following statement.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1889,7 +1362,7 @@
       "message": "Corrected subject–verb agreement in part (a).",
       "origin": "extraction",
       "original_text": "Does there exists a bounded linear functional",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -1906,7 +1379,7 @@
       "message": "Corrected the uniquely determined phrase “parts of size of most k” to “parts of size at most k.”",
       "origin": "extraction",
       "original_text": "parts of size of most \\(k\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1923,7 +1396,7 @@
       "message": "Applied the handwritten and mathematically determined correction to the right-hand side of the identity in part b.",
       "origin": "extraction",
       "original_text": "\\(\\displaystyle \\sum_{k=1}^{r}\\frac{(r)_k}{(n-1)_k}=\\frac{n}{n-r}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -1940,7 +1413,7 @@
       "message": "Corrected the possessive pronoun in the definition of “normalized.”",
       "origin": "extraction",
       "original_text": "the sum of it's elements is 0",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1957,7 +1430,7 @@
       "message": "Corrected “length” to “weight,” as uniquely determined by the statement about even-weight codewords and the self-duality argument.",
       "origin": "extraction",
       "original_text": "then all the codewords have even length",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -1974,7 +1447,7 @@
       "message": "Inserted the grammatically required word “of.”",
       "origin": "extraction",
       "original_text": "Find the number cycles of length 2n in K_{n,n}.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1991,7 +1464,7 @@
       "message": "Corrected the variance expression to refer to the random variable defined in the preceding sentence.",
       "origin": "extraction",
       "original_text": "Compute \\(VAR(p)\\).",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2008,7 +1481,7 @@
       "message": "Removed a duplicated “and” in the triangulation assumption.",
       "origin": "extraction",
       "original_text": "using all \\(n_{int}\\) lattice points in the interior and and all \\(n_{bd}\\) lattice points on the boundary",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -2025,7 +1498,7 @@
       "message": "Corrected the generating-function sequence subscript from \\(b\\) to \\(n\\), as uniquely determined by the definition immediately preceding it.",
       "origin": "extraction",
       "original_text": "Find the exponential generating function of the numbers \\(g_b\\).",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -2042,7 +1515,7 @@
       "message": "Corrected a uniquely determined preposition typo.",
       "origin": "extraction",
       "original_text": "a group on n people",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2059,7 +1532,7 @@
       "message": "Corrected the set reference to match the immediately preceding definition.",
       "origin": "extraction",
       "original_text": "each element of n",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2076,7 +1549,7 @@
       "message": "Corrected the grammatical term “partially order set” to the uniquely intended mathematical term “partially ordered set.”",
       "origin": "extraction",
       "original_text": "If a finite partially order set has mn + 1 elements, then there is either a chain of size m + 1 or an antichain of size n + 1.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2093,7 +1566,7 @@
       "message": "Inserted the omitted length parameter; without it, the number defining \\(a_n\\) would be infinite and would not define a sequence indexed by \\(n\\).",
       "origin": "extraction",
       "original_text": "Let a_n denote the number of strings of the letters A, B, C, and D such that the letter A appears an odd number of times.",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -2110,7 +1583,7 @@
       "message": "Corrected the typographical error “thet” to “that.”",
       "origin": "extraction",
       "original_text": "Show thet the minimum distance of the code",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2127,7 +1600,7 @@
       "message": "Corrected the typographical error “minumum” to “minimum.”",
       "origin": "extraction",
       "original_text": "a minumum dependent set of columns of H",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2144,7 +1617,7 @@
       "message": "Added the necessary hypothesis that the simple planar graph has at least three vertices.",
       "origin": "extraction",
       "original_text": "Prove: If n and m are the number of vertices and edges in a simple planar graph, then m ≤ 3n − 6.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2161,7 +1634,7 @@
       "message": "Corrected the duplicated word in the opening sentence to the uniquely intended grammatical reading.",
       "origin": "extraction",
       "original_text": "Recall the the Gaussian coefficients",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -2178,7 +1651,7 @@
       "message": "Inserted “at most” in the degree conclusion. The corrected statement is the standard planar-girth bound needed for the coloring argument in part (b).",
       "origin": "extraction",
       "original_text": "has a vertex of degree 2",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2195,7 +1668,7 @@
       "message": "Corrected an unambiguous misspelling in the list of tile colors.",
       "origin": "extraction",
       "original_text": "greegn",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -2212,7 +1685,7 @@
       "message": "Corrected the inequality direction. The random-graph hint uniquely indicates the standard Ramsey-number lower-bound claim rather than the printed upper-bound claim.",
       "origin": "extraction",
       "original_text": "Prove that \\(R(k,k)<2^{k/2}\\) for all \\(k\\). Hint: Consider a random graph.",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -2229,7 +1702,7 @@
       "message": "Corrected “edge cover” to “vertex cover,” the uniquely determined standard statement of Kőnig’s theorem.",
       "origin": "extraction",
       "original_text": "Recall that Kőnig’s theorem states that in a bipartite graph G, the maximum size of a matching is equal to the minimum size of an edge cover. Prove Kőnig’s theorem from Hall’s marriage theorem.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2246,7 +1719,7 @@
       "message": "Corrected the misspelling “homogenous” in the standard mathematical term “complete homogeneous symmetric function.”",
       "origin": "extraction",
       "original_text": "complete homogenous symmetric function",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -2263,7 +1736,7 @@
       "message": "Removed an extraneous “if” from the definition of pattern avoidance; the intended grammatical reading is uniquely determined by the immediate context.",
       "origin": "extraction",
       "original_text": "and that if \\(\\pi\\) avoids \\(\\sigma\\) if it does not contain \\(\\sigma\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -2280,7 +1753,7 @@
       "message": "Corrected “disjoint vertices” to “nonadjacent vertices,” the uniquely determined graph-theoretic condition in the stated Hamiltonian-cycle criterion.",
       "origin": "extraction",
       "original_text": "the sum of the degree of any two disjoint vertices is at least n",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2297,7 +1770,7 @@
       "message": "Corrected the omitted letter in “the” in part (a).",
       "origin": "extraction",
       "original_text": "let X(C) be he number of parts of C",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -2314,7 +1787,7 @@
       "message": "Corrected the omitted letter in “the” in part (b).",
       "origin": "extraction",
       "original_text": "let Y(C) be he number of parts of C that are equal to 1",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -2331,7 +1804,7 @@
       "message": "Corrected the malformed phrase “of for sequence” to “of the sequence.”",
       "origin": "extraction",
       "original_text": "Find the ordinary generating function of for sequence {h(n)}.",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -2348,7 +1821,7 @@
       "message": "Corrected an evident noun typo in the tournament description.",
       "origin": "extraction",
       "original_text": "each player plays every other play exactly once",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2365,7 +1838,7 @@
       "message": "Corrected an evident typo in the question.",
       "origin": "extraction",
       "original_text": "how may games were played",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2382,7 +1855,7 @@
       "message": "Removed an evident extraneous word.",
       "origin": "extraction",
       "original_text": "never occur in the same block of for any i = 1, 2, ..., n − 1",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -2399,7 +1872,7 @@
       "message": "Corrected the printed factor \\(1/n\\) to \\(1/n!\\). The identification as a Legendre polynomial and the displayed Cauchy integral in the hint uniquely require the factorial.",
       "origin": "extraction",
       "original_text": "\\(P_n(z)=\\frac{1}{n}\\frac{d^n}{dz^n}[z^n(1-z)^n]\\)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2416,7 +1889,7 @@
       "message": "Corrected the malformed set-builder separator in the definition of Ω; the intended separator is uniquely determined by the immediate context.",
       "origin": "extraction",
       "original_text": "\\(\\Omega=\\{z=-1<\\operatorname{Re}z<1\\}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2433,7 +1906,7 @@
       "message": "Corrected the repeated third subpart label from (a) to (c).",
       "origin": "extraction",
       "original_text": "(a) \\(\\{z\\in\\mathbb{C}\\mid |z|>0\\}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2450,7 +1923,7 @@
       "message": "Added the necessary hypothesis that the polynomial is nonconstant; without it, the stated conclusion fails for nonzero constant polynomials.",
       "origin": "extraction",
       "original_text": "Prove the Fundamental Theorem of Algebra: if p(z) = a₀ + a₁z + ⋯ + aₙzⁿ with each coefficient aⱼ ∈ ℂ, then there exists a w ∈ ℂ with p(w) = 0.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2467,7 +1940,7 @@
       "message": "Corrected the typographical error “explict” to “explicit.”",
       "origin": "extraction",
       "original_text": "Give an explict biholomorphism",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -2484,7 +1957,7 @@
       "message": "Corrected the limit variable from \\(n\\) to \\(z\\), since \\(n\\) is fixed and the displayed expression is a function of \\(z\\).",
       "origin": "extraction",
       "original_text": "\\(\\lim_{n\\to\\infty} f(z)/z^n=c\\)",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -2501,7 +1974,7 @@
       "message": "Corrected two inconsistent uses of undefined notation \\(D_f,D_F\\) to the range notation \\(R_f,R_F\\) defined immediately beforehand.",
       "origin": "extraction",
       "original_text": "Suppose \\(F\\) is one to one in \\(U\\), \\(f(0)=F(0)\\) and \\(D_f\\) is contained in \\(D_F\\). ... Also show that the equality holds if and only if \\(D_f=D_F\\).",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -2518,7 +1991,7 @@
       "message": "Inserted the uniquely determined missing verb in the opening sentence.",
       "origin": "extraction",
       "original_text": "Let Γ(z) the Euler gamma function.",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -2529,217 +2002,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 5(e) defines \\(N_k\\) before asking for the limit involving \\(\\log(N_k)\\).",
-      "corrected_text": "Let \\(N_k\\) be the number of fixed points of \\(\\sigma^k\\) in \\(\\Sigma_A^+\\).",
-      "exam_id": "ergodic-theory-phd-2012-may",
-      "message": "Removed an accidental repeated phrase in the definition of \\(N_k\\).",
-      "origin": "extraction",
-      "original_text": "Let \\(N_k\\) be the number of fixed points of fixed points of \\(\\sigma^k\\) in \\(\\Sigma_A^+\\).",
-      "problem_numbers": [
-        5
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 6(b) describes the system as an \\(mpt\\); the notation block defines an \\(mpt\\) in the order \\((X,\\mathcal B,\\mu,f)\\).",
-      "corrected_text": "\\((\\Sigma_2,\\mathcal B,\\mu_p,\\sigma)\\)",
-      "exam_id": "ergodic-theory-phd-2012-may",
-      "message": "Reordered the transformation and measure to agree with the exam’s stated \\(mpt\\) notation and the mathematical context.",
-      "origin": "extraction",
-      "original_text": "\\((\\Sigma_2,\\mathcal B,\\sigma,\\mu_p)\\)",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 6(c) introduces the sequence used in the displayed ergodic average.",
-      "corrected_text": "for \\(\\mu_p\\)-almost every sequence \\(\\underline{s}\\in\\Sigma_2\\)",
-      "exam_id": "ergodic-theory-phd-2012-may",
-      "message": "Removed the extraneous word “in” from the quantified sequence phrase.",
-      "origin": "extraction",
-      "original_text": "for \\(\\mu_p\\)-almost every sequence in \\(\\underline{s}\\in\\Sigma_2\\)",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The parenthetical hint in Problem 7(b).",
-      "corrected_text": "Hint: don’t try too hard",
-      "exam_id": "ergodic-theory-phd-2012-may",
-      "message": "Corrected “to” to “too” in the hint.",
-      "origin": "extraction",
-      "original_text": "Hint: don’t try to hard",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "A strictly increasing map from the natural numbers onto A can exist only when A is infinite.",
-      "corrected_text": "Prove that, if A is infinite, A is recursive if and only if …",
-      "exam_id": "logic-phd-1989-sep",
-      "message": "The handwritten correction adding the necessary hypothesis that A is infinite was incorporated.",
-      "origin": "extraction",
-      "original_text": "Prove that A is recursive if and only if …",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-1989-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Without requiring f to be recursive, every infinite subset of the natural numbers has such an increasing enumeration, so the stated equivalence with A being recursive would fail.",
-      "corrected_text": "there is a strictly increasing recursive function f: N → A that is onto",
-      "exam_id": "logic-phd-1989-sep",
-      "message": "Inserted the uniquely required condition that the enumerating function be recursive.",
-      "origin": "extraction",
-      "original_text": "there is a strictly increasing onto f: N → A",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-1989-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "“any ω-complete theory fo arithmetic has an ω-model”",
-      "corrected_text": "theory for arithmetic",
-      "exam_id": "logic-phd-2000-may",
-      "message": "Corrected an evident omitted letter in the preposition.",
-      "origin": "extraction",
-      "original_text": "theory fo arithmetic",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2000-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "“a function h: ω → ω is (partial) recursive if and only its graph is recursively enumerable”",
-      "corrected_text": "if and only if its graph",
-      "exam_id": "logic-phd-2000-may",
-      "message": "Inserted the second “if” required by the phrase “if and only if.”",
-      "origin": "extraction",
-      "original_text": "if and only its graph",
-      "problem_numbers": [
-        11
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2000-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "“Explain why, for any A ⊂ ω, there at at most countably many sets B such that B <_T A.”",
-      "corrected_text": "there are at most countably many sets B",
-      "exam_id": "logic-phd-2000-may",
-      "message": "Corrected an evident duplicated-word typographical error.",
-      "origin": "extraction",
-      "original_text": "there at at most countably many sets B",
-      "problem_numbers": [
-        13
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2000-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "State and prove Tarski’s criterion for elementary. submodels.",
-      "corrected_text": "elementary submodels",
-      "exam_id": "logic-phd-2006-may",
-      "message": "Removed an erroneous period interrupting the noun phrase “elementary submodels.”",
-      "origin": "extraction",
-      "original_text": "elementary. submodels",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2006-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Prove that every stationary subset of omega one can be split into aleph one many pairwise disjoint. stationary subsets.",
-      "corrected_text": "pairwise disjoint stationary subsets",
-      "exam_id": "logic-phd-2006-may",
-      "message": "Removed an erroneous period interrupting the noun phrase “pairwise disjoint stationary subsets.”",
-      "origin": "extraction",
-      "original_text": "pairwise disjoint. stationary subsets",
-      "problem_numbers": [
-        9
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2006-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Condition (iii) in the definition of the class of finite graphs with a bipartition.",
-      "corrected_text": "if \\((x,y)\\in R^{\\mathcal{M}}\\), then exactly one of \\(x,y\\) belongs to \\(G^{\\mathcal{M}}\\) and the other belongs to \\(B^{\\mathcal{M}}\\).",
-      "exam_id": "logic-phd-2022-aug",
-      "message": "Inserted the omitted preposition “to” in condition (iii).",
-      "origin": "extraction",
-      "original_text": "if \\((x,y)\\in R^{\\mathcal{M}}\\) then exactly one of \\(x,y\\) belongs \\(G^{\\mathcal{M}}\\) and the other belongs to \\(B^{\\mathcal{M}}\\).",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2022-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "The displayed formula uses \\(f(x_0-h)\\), \\(f(x_0)\\), and \\(f(x_0+h)\\), with \\(\\eta\\in[x_0-h,x_0+h]\\).",
       "corrected_text": "\\(f''(x_0)\\)",
       "exam_id": "numerical-analysis-first-year-2017-aug",
       "message": "Corrected the evaluation point in the three-point second-derivative formula from x to x₀, as uniquely determined by the centered nodes and the stated remainder interval.",
       "origin": "extraction",
       "original_text": "\\(f''(x)\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -2756,7 +2025,7 @@
       "message": "Corrected the quadratic form to use the conjugate transpose, as required for a Hermitian matrix over \\(\\mathbb{C}\\).",
       "origin": "extraction",
       "original_text": "\\(x^T A x\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -2773,7 +2042,7 @@
       "message": "Inserted the uniquely implied preposition “on” in the phrase “based on the quadratic interpolant.”",
       "origin": "extraction",
       "original_text": "based the quadratic interpolant p₂",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -2790,7 +2059,7 @@
       "message": "Inserted the missing closing parenthesis in each displayed interpolation-data pair.",
       "origin": "extraction",
       "original_text": "\\(\\{(x_i,f(x_i)\\}_{i=0}^n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -2807,7 +2076,7 @@
       "message": "Inserted the uniquely determined missing preposition “on” in part (a).",
       "origin": "extraction",
       "original_text": "Based the quadratic interpolant \\(p_2\\)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2824,7 +2093,7 @@
       "message": "Corrected the evaluation point of the second derivative to match the centered three-point formula and its stated remainder interval.",
       "origin": "extraction",
       "original_text": "\\(f''(x)\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -2841,7 +2110,7 @@
       "message": "Corrected the evaluation point on the left-hand side of the three-point second-derivative formula from x to x₀, as uniquely determined by the formula’s use of x₀ throughout.",
       "origin": "extraction",
       "original_text": "\\(f''(x)\\)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2858,7 +2127,7 @@
       "message": "Corrected the nearby-system equation so that the computed solution \\(\\hat{x}\\), rather than \\(x\\), appears as the exact solution.",
       "origin": "extraction",
       "original_text": "the computed solution \\(\\hat{x}\\) of \\(Ax=b\\) is the exact solution of a nearby system \\((A+E)x=b\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -2875,7 +2144,7 @@
       "message": "Removed an obviously duplicated word in the description of the eigenvalues.",
       "origin": "extraction",
       "original_text": "has the property that each eigenvalue has negative real real part.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -2892,7 +2161,7 @@
       "message": "Corrected the past-tense form to the imperative form required by the surrounding list of exam prompts.",
       "origin": "extraction",
       "original_text": "Indicated how Aitken’s method can be used to accelerate convergence.",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -2909,7 +2178,7 @@
       "message": "Inserted the uniquely implied missing pronoun in the question.",
       "origin": "extraction",
       "original_text": "What method would recommend for solving the system of linear equations.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2926,7 +2195,7 @@
       "message": "Corrected the verb form in the imperative instruction.",
       "origin": "extraction",
       "original_text": "Indicated how Aitken’s method can be used to accelerate convergence.",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -2943,7 +2212,7 @@
       "message": "Inserted the missing factor \\(x\\) in the hint so that subtracting the leading term can produce a polynomial of degree \\(n\\), as required by the immediate context and the stated recurrence.",
       "origin": "extraction",
       "original_text": "\\(g(x)=\\phi_{n+1}(x)-A_n\\phi_n(x)\\)",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -2960,7 +2229,7 @@
       "message": "Removed a duplicated phrase in part (4).",
       "origin": "extraction",
       "original_text": "then the then the matrix can be diagonalized",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -2977,7 +2246,7 @@
       "message": "Corrected “eigenvectors” to “eigenvalues,” since magnitudes are being compared among eigenvalues.",
       "origin": "extraction",
       "original_text": "from among the eigenvectors of A",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -2994,7 +2263,7 @@
       "message": "Corrected the mismatched subpart reference in part (4).",
       "origin": "extraction",
       "original_text": "(c)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3005,47 +2274,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 5(a) asks for the ellipse or hyperbola that best fits n data points by substituting them into a two-parameter quadratic equation.",
-      "corrected_text": "computing the least squares solution to the n linear equations",
-      "exam_id": "numerical-analysis-phd-2001-may",
-      "message": "Corrected an omitted word in the fitting method; the overdetermined linear system requires a least squares solution.",
-      "origin": "extraction",
-      "original_text": "computing the least solution to the n linear equations",
-      "problem_numbers": [
-        5
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2001-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 9 defines P₂ as interpolating g(x), and part (a) approximates the integral of g(x).",
-      "corrected_text": "Use a Taylor series expansion of g(x) to show I − I_h = 3/8 h^4 g^(3)(0) + O(h^5).",
-      "exam_id": "numerical-analysis-phd-2001-may",
-      "message": "Corrected the function symbol in part (b) to agree with the function defined in the problem stem and integrated in part (a).",
-      "origin": "extraction",
-      "original_text": "Use a Taylor series expansion of f(x) to show I − I_h = 3/8 h^4 f^(3)(0) + O(h^5).",
-      "problem_numbers": [
-        9
-      ],
-      "source_pages": [
-        3
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2001-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Problem 5(a), immediately before the parts asking for properties of the operator 2-norm.",
       "corrected_text": "Define the operator 2-norm for any matrix \\(A\\) in \\(\\mathbb R^{m\\times n}\\).",
       "exam_id": "numerical-analysis-phd-2002-jan",
       "message": "Corrected the malformed definition prompt so that the matrix, rather than the norm, is described as an arbitrary matrix in the stated space.",
       "origin": "extraction",
       "original_text": "Define: The operator 2-norm for a matrix \\(A\\) is any matrix in \\(\\mathbb R^{m\\times n}\\).",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3062,7 +2297,7 @@
       "message": "Inserted the uniquely required conjunction in the hypotheses.",
       "origin": "extraction",
       "original_text": "\\(x\\) and \\(\\Delta x\\) are vectors in \\(\\mathbb R^n\\) are solutions to \\(Ax=b\\) and \\(A\\Delta x=\\Delta b\\), respectively",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3079,7 +2314,7 @@
       "message": "Corrected “Given” to the imperative “Give.”",
       "origin": "extraction",
       "original_text": "Given a careful statement of the convergence theorem for clamped cubic splines.",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -3096,7 +2331,7 @@
       "message": "Corrected “Given” to the imperative “Give.”",
       "origin": "extraction",
       "original_text": "Given a careful statement of the convergence theorem for the second derivatives for clamped cubic splines.",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -3113,7 +2348,7 @@
       "message": "Corrected the matrix whose eigenvalues are requested. The source expression is scalar, while the immediately preceding displayed factorization concerns the outer-product matrix.",
       "origin": "extraction",
       "original_text": "\\(\\mathbf v^{\\mathsf T}\\mathbf w+\\mathbf w^{\\mathsf T}\\mathbf v\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3130,7 +2365,7 @@
       "message": "Corrected the iteration-index variable in the grid definition; the surrounding formula is indexed by n, so the printed i is uniquely inconsistent.",
       "origin": "extraction",
       "original_text": "\\(x_n=nh,\\quad i=1,2,\\ldots\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3147,7 +2382,7 @@
       "message": "Corrected a duplicated article in the opening sentence.",
       "origin": "extraction",
       "original_text": "Let A = QR be the factorization of a A into the product of a unitary matrix and a triangular matrix.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3164,7 +2399,7 @@
       "message": "Corrected the polynomial degree condition so that the interpolation statement and requested uniqueness result hold for arbitrary data.",
       "origin": "extraction",
       "original_text": "a polynomial p_n(x) of degree n",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -3181,7 +2416,7 @@
       "message": "Changed the lower summation index from 0 to 1. The immediately following definitions index both orthonormal vector sets from 1 through r, and the stated decomposition has rank r.",
       "origin": "extraction",
       "original_text": "\\(\\mathbf A=\\sum_{k=0}^r\\sigma_k\\mathbf u_k\\mathbf v_k^*\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -3198,7 +2433,7 @@
       "message": "Corrected the stated matrix norm inequality by inserting the square root required by the standard induced-norm inequality; the printed version is false even for scalar matrices of magnitude less than one.",
       "origin": "extraction",
       "original_text": "\\(\\lVert A\\rVert_2\\le \\lVert A\\rVert_1\\lVert A\\rVert_\\infty\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3215,7 +2450,7 @@
       "message": "Corrected an unambiguous spelling error.",
       "origin": "extraction",
       "original_text": "orthogogonal family of polynomials",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -3232,7 +2467,7 @@
       "message": "Corrected the malformed sequence of interpolation nodes by replacing the repeated punctuation after \\(x_1\\) with an ellipsis.",
       "origin": "extraction",
       "original_text": "\\(a=x_0<x_1.....<x_n=b\\)",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -3249,7 +2484,7 @@
       "message": "Corrected the function-space membership from the value \\(f(x)\\) to the function \\(f\\).",
       "origin": "extraction",
       "original_text": "when \\(f(x)\\in C^{n+1}[a,b]\\)",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -3266,7 +2501,7 @@
       "message": "Corrected a missing exponent in the Frobenius-norm formula.",
       "origin": "extraction",
       "original_text": "\\(\\|A\\|_F=\\sqrt{\\sigma_1^2+\\sigma_2^2+\\sigma_3+\\cdots}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3283,7 +2518,7 @@
       "message": "Corrected interval membership to set inclusion for the image of the interval under \\(g\\).",
       "origin": "extraction",
       "original_text": "\\(g([a,b])\\in[a,b]\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -3300,7 +2535,7 @@
       "message": "Corrected the denominator in the Newton-iteration error limit.",
       "origin": "extraction",
       "original_text": "\\(\\displaystyle \\lim_{n\\to\\infty}\\frac{\\alpha-x_{n+1}}{(\\alpha-x_{n+1})^2}=-\\frac{f''(\\alpha)}{2f'(\\alpha)}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -3317,7 +2552,7 @@
       "message": "Corrected “global error” to “local truncation error”; the stated order conditions characterize truncation order without a zero-stability hypothesis.",
       "origin": "extraction",
       "original_text": "has global error \\(\\tau(h)=O(h^m)\\)",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -3334,7 +2569,7 @@
       "message": "Corrected the function-space assumption so that the displayed derivative and its uniform approximation are defined in the stated context.",
       "origin": "extraction",
       "original_text": "Let \\(f(x)\\in C[a,b]\\).",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3351,7 +2586,7 @@
       "message": "Corrected the lower limit of integration from 0 to \\(a\\); this is required by the initial value \\(f(a)\\) and the claimed error bound on \\([a,b]\\).",
       "origin": "extraction",
       "original_text": "\\(q(x)=f(a)+\\int_0^x p(t)\\,dt\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3362,64 +2597,13 @@
     },
     {
       "category": "correction",
-      "context": "The hypothesis states that the function maps the interval into itself.",
-      "corrected_text": "\\(g([a,b])\\subseteq[a,b]\\)",
-      "exam_id": "numerical-analysis-phd-2013-may",
-      "message": "Corrected the interval-mapping condition from membership to set inclusion, as uniquely required by the types of the expressions.",
-      "origin": "extraction",
-      "original_text": "\\(g([a,b])\\in[a,b]\\)",
-      "problem_numbers": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The problem is posed as \\(y'(t)=f(t,y)\\), and the following truncation-error formula uses \\(f(t_{n-j},Y(t_{n-j}))\\).",
-      "corrected_text": "\\(f(t_{n-j},y_{n-j})\\)",
-      "exam_id": "numerical-analysis-phd-2013-may",
-      "message": "Corrected the independent-variable grid notation in the multistep formula to agree with the stated initial value problem and the immediately following truncation-error formula.",
-      "origin": "extraction",
-      "original_text": "\\(f(x_{n-j},y_{n-j})\\)",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The two consistency conditions immediately preceding this sentence are displayed and labeled (1).",
-      "corrected_text": "that (1) hold",
-      "exam_id": "numerical-analysis-phd-2013-may",
-      "message": "Replaced the unresolved equation placeholder with the uniquely indicated reference to the preceding conditions labeled (1).",
-      "origin": "extraction",
-      "original_text": "that (??) hold",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "The opening sentence reads: “A forth degree polynomial \\(P(x)\\) satisfies …”",
       "corrected_text": "fourth degree polynomial",
       "exam_id": "numerical-analysis-phd-2016-jan-part-2",
       "message": "Corrected an unambiguous typographical error in the polynomial degree.",
       "origin": "extraction",
       "original_text": "forth degree polynomial",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3436,7 +2620,7 @@
       "message": "Corrected the iteration-index declaration; the immediate context uniquely requires an equality sign.",
       "origin": "extraction",
       "original_text": "\\(n-0,1,2,\\ldots\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3453,7 +2637,7 @@
       "message": "Corrected the preposition in part (b), as uniquely determined by the immediate reference to part (a).",
       "origin": "extraction",
       "original_text": "What is the degree of exactness of the formula is part (a)?",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3470,7 +2654,7 @@
       "message": "Corrected the malformed matrix-space dimension notation in the hypothesis.",
       "origin": "extraction",
       "original_text": "\\(A \\in \\mathbb{R}^{m,n}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3487,7 +2671,7 @@
       "message": "Corrected the dimension of the right-hand side to make the least squares problem dimensionally consistent.",
       "origin": "extraction",
       "original_text": "\\(b \\in \\mathbb{R}^{n}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3504,7 +2688,7 @@
       "message": "Corrected the evaluation point on the left side of the three-point second-derivative formula from \\(x\\) to \\(x_0\\), as uniquely determined by the centered values and the stated remainder interval.",
       "origin": "extraction",
       "original_text": "\\(f''(x)\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3521,7 +2705,7 @@
       "message": "Corrected the degree condition in Problem 3(b), since the printed condition on only the final polynomial does not imply linear independence and the intended indexed condition is uniquely determined by the immediate statement.",
       "origin": "extraction",
       "original_text": "If \\(\\varphi_0,\\varphi_1,\\ldots,\\varphi_n\\) are polynomials with \\(\\varphi_n\\) of degree \\(n\\), then the set of \\(\\varphi_i\\) is linearly independent.",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3538,7 +2722,7 @@
       "message": "Corrected the impossible empty intersection of two subspaces to the zero subspace.",
       "origin": "extraction",
       "original_text": "\\(\\operatorname{null}(P)\\cap\\operatorname{range}(P)=\\varnothing\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3555,7 +2739,7 @@
       "message": "Excluded \\(r=0\\), since the two-norm condition number in this context is defined only for a non-singular matrix.",
       "origin": "extraction",
       "original_text": "\\(A=rQ\\) with \\(r\\in\\mathbb{R}\\) and \\(Q\\) unitary",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3572,7 +2756,7 @@
       "message": "Inserted the uniquely determined missing word “be” in the sentence about the normal equations.",
       "origin": "extraction",
       "original_text": "why the normal equations should not solved",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3589,7 +2773,7 @@
       "message": "Corrected the misspelling of “Hermitian.”",
       "origin": "extraction",
       "original_text": "Show H₁ is both unitary and Hermetian.",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3606,7 +2790,7 @@
       "message": "Corrected two occurrences of the misspelling “Hermetian” to “Hermitian.”",
       "origin": "extraction",
       "original_text": "Let A ∈ ℂ^{m×m} be Hermetian. … You may use the fact that Hermetian matrix A is unitarily diagonalizable.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -3617,81 +2801,13 @@
     },
     {
       "category": "correction",
-      "context": "The matrix is specified as \\(A\\in\\mathbb{C}^{m\\times n}\\), so its row index ranges from 1 to \\(m\\).",
-      "corrected_text": "\\(\\max_{1\\le i\\le m}\\sum_{j=1}^n|a_{ij}|\\)",
-      "exam_id": "numerical-analysis-phd-2019-may",
-      "message": "Corrected the row-index bound in the rectangular matrix infinity-norm formula.",
-      "origin": "extraction",
-      "original_text": "\\(\\max_{1\\le i\\le n}\\sum_{j=1}^n|a_{ij}|\\)",
-      "problem_numbers": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Part (a) asks to show that \\(A+E\\) is nonsingular.",
-      "corrected_text": "nonsingular",
-      "exam_id": "numerical-analysis-phd-2019-may",
-      "message": "Corrected a uniquely determined spelling error.",
-      "origin": "extraction",
-      "original_text": "nonsinguar",
-      "problem_numbers": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Part (a) asks for a finite difference approximation derived from the interpolant \\(p_2\\).",
-      "corrected_text": "based on the interpolant \\(p_2\\)",
-      "exam_id": "numerical-analysis-phd-2019-may",
-      "message": "Inserted the uniquely determined missing preposition.",
-      "origin": "extraction",
-      "original_text": "based the interpolant \\(p_2\\)",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Part (b) introduces the displayed expansion of \\(\\psi(h)\\).",
-      "corrected_text": "asymptotic expansion",
-      "exam_id": "numerical-analysis-phd-2019-may",
-      "message": "Corrected a uniquely determined spelling error.",
-      "origin": "extraction",
-      "original_text": "asympototic expansion",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Find the finite difference approximation to f″(a) based on the quadratic interpolant p₂ which satisfies the three interpolation conditions.",
       "corrected_text": "based on the quadratic interpolant p₂",
       "exam_id": "numerical-analysis-phd-2020-jan",
       "message": "Inserted the uniquely determined missing preposition “on” in part (a).",
       "origin": "extraction",
       "original_text": "based the quadratic interpolant p₂",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -3708,7 +2824,7 @@
       "message": "Corrected two occurrences of the misspelled mathematical term “Hermetian” to “Hermitian.”",
       "origin": "extraction",
       "original_text": "“Let A ∈ C^{m×m} be Hermetian” and “the fact that Hermetian matrix A is unitarily diagonalizable”",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3725,7 +2841,7 @@
       "message": "Inserted the uniquely implied preposition “on” in the opening phrase of part (a).",
       "origin": "extraction",
       "original_text": "Based the quadratic interpolant p₂ which satisfies …",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -3742,7 +2858,7 @@
       "message": "Inserted the missing closing parenthesis in the interpolation data pairs.",
       "origin": "extraction",
       "original_text": "\\(\\{(x_i,f(x_i)\\}_{i=0}^n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -3759,7 +2875,7 @@
       "message": "Corrected “linearly dependent” to “linearly independent”; the stated diagonalizability conclusion requires a collection of m linearly independent eigenvectors.",
       "origin": "extraction",
       "original_text": "If A has a collection of m linearly dependent eigenvectors, show that A is diagonalizable.",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3776,7 +2892,7 @@
       "message": "Corrected the standard term “least squared problem” to “least squares problem,” consistent with part (b).",
       "origin": "extraction",
       "original_text": "least squared problem",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3793,7 +2909,7 @@
       "message": "Corrected the ambient space of V from the matrix space C^{m×n} to the vector space C^m; the q_j are columns of an m-by-n matrix Q and QQ* projects onto their span.",
       "origin": "extraction",
       "original_text": "V ⊂ C^{m×n}",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3810,7 +2926,7 @@
       "message": "Corrected the evaluation point on the left side from x to x_0, matching every term in the centered three-point formula and its remainder interval.",
       "origin": "extraction",
       "original_text": "f''(x)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -3827,7 +2943,7 @@
       "message": "Corrected the ambient space of the subspace so that the basis vectors can be the columns of an m-by-n matrix Q.",
       "origin": "extraction",
       "original_text": "\\(V\\subset\\mathbb{C}^{m\\times n}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3844,7 +2960,7 @@
       "message": "Corrected the dimension of the right-hand side vector so that the least squares problem is dimensionally consistent.",
       "origin": "extraction",
       "original_text": "\\(b \\in \\mathbb{R}^n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3861,7 +2977,7 @@
       "message": "Corrected the intersection of the null space and range of a projector from the empty set to the zero subspace.",
       "origin": "extraction",
       "original_text": "\\(\\operatorname{null}(P) \\cap \\operatorname{range}(P)=\\varnothing\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3878,7 +2994,7 @@
       "message": "Corrected an evident typographical error in the description of the basis.",
       "origin": "extraction",
       "original_text": "orthonornal basis",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3895,7 +3011,7 @@
       "message": "Corrected the dimension of the right-hand side vector so that the least squares problem is dimensionally consistent.",
       "origin": "extraction",
       "original_text": "\\(b \\in \\mathbb{R}^n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3912,7 +3028,7 @@
       "message": "Corrected an unambiguous misspelling of “orthogonal.”",
       "origin": "extraction",
       "original_text": "othogonal",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3929,7 +3045,7 @@
       "message": "Corrected the intersection from the empty set to the zero subspace, as uniquely required for the stated projector identity.",
       "origin": "extraction",
       "original_text": "null(P)∩range(P) = ∅",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -3946,7 +3062,7 @@
       "message": "Corrected the singular noun to agree with the single quantity \\(\\sigma_1\\).",
       "origin": "extraction",
       "original_text": "where σ₁ is the largest singular values of A",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -3963,7 +3079,7 @@
       "message": "Corrected the matrix name from \\(A\\) to \\(T\\), the matrix defined in the problem.",
       "origin": "extraction",
       "original_text": "the upper left hand corner of A",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -3980,7 +3096,7 @@
       "message": "Corrected the dimension of the right-hand side so that it is compatible with the product \\(Ax\\).",
       "origin": "extraction",
       "original_text": "\\(b \\in \\mathbb{R}^n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -3997,7 +3113,7 @@
       "message": "Corrected “linearly dependent” to “linearly independent,” the condition that implies diagonalizability.",
       "origin": "extraction",
       "original_text": "a collection of \\(m\\) linearly dependent eigenvectors",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4014,7 +3130,7 @@
       "message": "Corrected the impossible empty intersection of two subspaces to the zero subspace.",
       "origin": "extraction",
       "original_text": "\\(\\operatorname{null}(P)\\cap\\operatorname{range}(P)=\\emptyset\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4031,7 +3147,7 @@
       "message": "Corrected a uniquely identifiable spelling error.",
       "origin": "extraction",
       "original_text": "orthonornal basis",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4048,7 +3164,7 @@
       "message": "Corrected a uniquely identifiable spelling error.",
       "origin": "extraction",
       "original_text": "orthognal projector",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4065,7 +3181,7 @@
       "message": "Inserted the missing verb in the statement about the normal equations.",
       "origin": "extraction",
       "original_text": "why the normal equations should not solved",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4082,7 +3198,7 @@
       "message": "Corrected the misspelling of “Hermitian.”",
       "origin": "extraction",
       "original_text": "Hermetian",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -4099,7 +3215,7 @@
       "message": "Corrected the misspelling of “Hermitian” in the problem stem.",
       "origin": "extraction",
       "original_text": "Hermetian",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -4116,7 +3232,7 @@
       "message": "Corrected the misspelling of “Hermitian” in the final sentence of part (b).",
       "origin": "extraction",
       "original_text": "Hermetian",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -4133,7 +3249,7 @@
       "message": "Corrected the impossible empty intersection of two linear subspaces to the zero subspace.",
       "origin": "extraction",
       "original_text": "\\(\\operatorname{null}(P)\\cap\\operatorname{range}(P)=\\varnothing\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4150,7 +3266,7 @@
       "message": "Corrected “linearly dependent” to “linearly independent”; the latter is required for the stated diagonalizability conclusion.",
       "origin": "extraction",
       "original_text": "linearly dependent eigenvectors",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4167,7 +3283,7 @@
       "message": "Corrected the standard mathematical term “least squared problem” to “least squares problem.”",
       "origin": "extraction",
       "original_text": "least squared problem",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4184,7 +3300,7 @@
       "message": "Corrected the ambient space of V from the matrix space to the vector space consistent with the orthonormal vectors and the columns of Q.",
       "origin": "extraction",
       "original_text": "\\(V\\subset\\mathbb{C}^{m\\times n}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4201,7 +3317,7 @@
       "message": "Corrected the factor named in the conclusion to match the reduced QR factorization introduced in the same sentence.",
       "origin": "extraction",
       "original_text": "the diagonal entries of \\(R\\) are nonzero",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4218,7 +3334,7 @@
       "message": "Corrected the numerator on the left side of the perturbation bound from \\(\\|\\delta A\\|\\) to \\(\\|\\delta x\\|\\), as uniquely determined by the variables and the immediately preceding equations.",
       "origin": "extraction",
       "original_text": "\\(\\dfrac{\\|\\delta A\\|}{\\|x+\\delta x\\|}\\le\\kappa(A)\\dfrac{\\|\\delta A\\|}{\\|A\\|}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4235,7 +3351,7 @@
       "message": "Corrected the ambient space of the subspace from the space of matrices to the vector space required by the stated basis vectors and projector.",
       "origin": "extraction",
       "original_text": "\\(V \\subset \\mathbb{C}^{m \\times n}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4252,7 +3368,7 @@
       "message": "Removed an evidently duplicated word in problem 2(b).",
       "origin": "extraction",
       "original_text": "If Φ is a contraction on K, where K is a closed set, and Φ(x) ∈ K for each x ∈ K, then then show that Φ has a unique fixed point in K.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4269,7 +3385,7 @@
       "message": "Corrected a typographical error in part (b).",
       "origin": "extraction",
       "original_text": "stictly greater than 0",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4286,7 +3402,7 @@
       "message": "Corrected the ambient space in part (c), as uniquely determined by the quadratic program’s vector and matrix dimensions.",
       "origin": "extraction",
       "original_text": "\\(\\mathcal K\\subset A^n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4303,7 +3419,7 @@
       "message": "Removed an extra closing parenthesis.",
       "origin": "extraction",
       "original_text": "(recall that \\(L\\) is concave))",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4320,7 +3436,7 @@
       "message": "Corrected two uniquely determined grammatical typographical errors in one sentence.",
       "origin": "extraction",
       "original_text": "Note that it is only assumed the \\(f\\) is continuously differentiable; you should show show that at a local minimizer of (3), the partial derivative in (5) is continuously differentiable.",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -4337,7 +3453,7 @@
       "message": "Inserted a missing preposition in part (b).",
       "origin": "extraction",
       "original_text": "in terms \\(u_1,\\ldots,u_{N-1}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -4348,30 +3464,13 @@
     },
     {
       "category": "correction",
-      "context": "“Show that u ∈ H₀¹(U) is a weak solution … if and only if u minimizes E(v) …”",
-      "corrected_text": "if and only if",
-      "exam_id": "pde-phd-2001-may",
-      "message": "Corrected the uniquely determined phrase introducing a biconditional.",
-      "origin": "extraction",
-      "original_text": "if only if",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        3
-      ],
-      "source_pdf": "exams/pde-phd/pde-phd-2001-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "The variational class is defined as H_g¹ := {w ∈ H₁(U); w = g on ∂U}.",
       "corrected_text": "w ∈ H¹(U)",
       "exam_id": "pde-phd-2010-sep",
       "message": "Corrected the Sobolev-space notation from a subscript to a superscript, as uniquely determined by the definition of the affine space \\(H_g^1\\).",
       "origin": "extraction",
       "original_text": "w ∈ H₁(U)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4388,7 +3487,7 @@
       "message": "Supplied the uniquely determined missing closing parenthesis in the function-space notation.",
       "origin": "extraction",
       "original_text": "f(x) ∈ C²(ℝⁿ",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -4405,7 +3504,7 @@
       "message": "Corrected an unambiguous typographical error in the name of the law of the iterated logarithm.",
       "origin": "extraction",
       "original_text": "law of the interated logarithm",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -4422,7 +3521,7 @@
       "message": "Corrected the cross-reference in part (ii) from “Using (1)” to “Using (i)”; the immediately preceding labeled part is (i).",
       "origin": "extraction",
       "original_text": "Using (1)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4439,7 +3538,7 @@
       "message": "Corrected the preposition in the definition request.",
       "origin": "extraction",
       "original_text": "an infinitely divisible distribution or R¹",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4456,7 +3555,7 @@
       "message": "Corrected the argument of the process on the left-hand side to agree with the variable used throughout its piecewise definition.",
       "origin": "extraction",
       "original_text": "W₃(b)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -4473,7 +3572,7 @@
       "message": "Corrected the exceptional case to the modulus being identically one; without the modulus, the claim fails for characteristic functions of nonzero point masses.",
       "origin": "extraction",
       "original_text": "unless φ(t) = 1",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -4490,7 +3589,7 @@
       "message": "Changed the purported smallest nonzero value to the smallest positive value, as required by the symmetry of the set where the characteristic function has modulus one.",
       "origin": "extraction",
       "original_text": "a smallest t₀ ≠ 0",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -4501,98 +3600,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 5 asks for the definition of an infinitely divisible distribution on the real line.",
-      "corrected_text": "an infinitely divisible distribution on \\(\\mathbb R^1\\)",
-      "exam_id": "probability-phd-1997-sep",
-      "message": "Corrected a preposition uniquely determined by the immediate grammatical and mathematical context.",
-      "origin": "extraction",
-      "original_text": "an infinitely divisible distribution or \\(\\mathbb R^1\\)",
-      "problem_numbers": [
-        5
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Both branches of the definition are functions of \\(t\\), and the expression defines the process \\(W_3\\).",
-      "corrected_text": "\\(W_3(t)\\)",
-      "exam_id": "probability-phd-1997-sep",
-      "message": "Corrected the argument of the process name to agree with the variable used throughout its piecewise definition.",
-      "origin": "extraction",
-      "original_text": "\\(W_3(b)\\)",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The condition equivalent to recurrence is that the walk is at the origin infinitely often.",
-      "corrected_text": "\\(P(S_n=(0,0)\\text{ i.o.})=1\\)",
-      "exam_id": "probability-phd-1997-sep",
-      "message": "Corrected the recurrence abbreviation in the stated equivalence.",
-      "origin": "extraction",
-      "original_text": "\\(P(S_n=(0,0)\\text{ i.e.})=1\\)",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The sentence states convergence of \\(M_t\\) as the time index tends to infinity.",
-      "corrected_text": "\\(t\\to+\\infty\\)",
-      "exam_id": "probability-phd-1997-sep",
-      "message": "Corrected the convergence arrow to the standard limit notation required by the immediate context.",
-      "origin": "extraction",
-      "original_text": "\\(t\\mapsto+\\infty\\)",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The displayed expression asserts that the second moments form a nondecreasing chain.",
-      "corrected_text": "\\(M_0^2\\leq E[M_1^2]\\leq\\cdots\\leq E[M_t^2]\\leq E[M_\\infty^2]\\)",
-      "exam_id": "probability-phd-1997-sep",
-      "message": "Inserted the missing inequality sign in the monotone chain of second moments.",
-      "origin": "extraction",
-      "original_text": "\\(M_0^2\\leq E[M_1^2]\\leq\\cdots E[M_t^2]\\leq E[M_\\infty^2]\\)",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "The displayed inequality in Problem 7.",
       "corrected_text": "\\(\\mathbb{E}[|X|^p]\\leq\\mathbb{E}[|X+Y|^p]\\)",
       "exam_id": "probability-phd-2005-may",
       "message": "Corrected the mismatched closing delimiter in the first expectation.",
       "origin": "extraction",
       "original_text": "\\(\\mathbb{E}[|X|^p)\\leq\\mathbb{E}[|X+Y|^p]\\)",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -4609,7 +3623,7 @@
       "message": "Inserted the uniquely determined missing preposition in the convergence statement.",
       "origin": "extraction",
       "original_text": "Prove that D_n/n converges to 0 probability one.",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4626,7 +3640,7 @@
       "message": "Corrected an unambiguous typographical error.",
       "origin": "extraction",
       "original_text": "Consider square integrable random vectores",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -4643,7 +3657,7 @@
       "message": "Corrected the range variable from n to m in all four subparts because each displayed sequence is indexed by m.",
       "origin": "extraction",
       "original_text": "a) \\(S_m,\\ n=0,1,2,\\ldots\\); b) \\(\\overline X_1^2+\\cdots+\\overline X_m^2-m\\lambda,\\ n=1,2,\\ldots\\); c) \\(\\exp(\\alpha S_m-m\\lambda),\\ n=0,1,2,\\ldots\\); d) \\(\\overline Y_m=S_{\\min(m,T)},\\ n=0,1,2,\\ldots\\)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -4660,7 +3674,7 @@
       "message": "Corrected the sequence range variable from n to m to agree with the subscript on the measures.",
       "origin": "extraction",
       "original_text": "\\(\\{\\alpha_m\\}_{n=1,2,\\ldots}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -4677,7 +3691,7 @@
       "message": "Corrected the sequence range variables from n to m to agree with the displayed subscripts.",
       "origin": "extraction",
       "original_text": "\\(\\{\\alpha_m\\}_{n=1,2,\\ldots}\\) and \\(\\{\\varphi_m(t)\\}_{n=1,2,\\ldots}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -4694,7 +3708,7 @@
       "message": "Corrected the sequence range variable from n to m to agree with the subscript on the random variables.",
       "origin": "extraction",
       "original_text": "Let \\(\\overline X_m,\\ n=1,2,\\ldots\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4711,7 +3725,7 @@
       "message": "Corrected the sequence range variable from n to m to agree with the subscript on the supermartingale.",
       "origin": "extraction",
       "original_text": "Let \\(\\overline X_m,\\ n=1,2,\\ldots\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -4728,7 +3742,7 @@
       "message": "Corrected the summation index to match the index used throughout the summand.",
       "origin": "extraction",
       "original_text": "\\(\\sum_{i=0}^n f(k/n)\\binom{n}{k}x^k(1-x)^{n-k}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4745,7 +3759,7 @@
       "message": "Removed a stray plus sign following \\(X_1\\) in the list of random variables.",
       "origin": "extraction",
       "original_text": "\\(X_1+,\\ldots,X_n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -4756,30 +3770,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 3, immediately before subparts (a) and (b).",
-      "corrected_text": "Is this true for continuous maps",
-      "exam_id": "topology-first-year-2013-jan-part-1",
-      "message": "Removed an accidental duplicated word.",
-      "origin": "extraction",
-      "original_text": "Is this true for for continuous maps",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Problem 10 defines \\(P^n\\) as a quotient of \\(S^n\\) before asking for its fundamental group.",
       "corrected_text": "Let \\(P^n=S^n/D\\), where \\(D\\) identifies \\(x\\) with \\(-x\\) for all \\(x\\in S^n\\).",
       "exam_id": "topology-first-year-2015-may-part-2",
       "message": "Removed the extraneous word “for” from the phrase “for where,” as uniquely determined by the sentence's grammar and mathematical context.",
       "origin": "extraction",
       "original_text": "Let \\(P^n=S^n/D\\) for where \\(D\\) identifies \\(x\\) with \\(-x\\) for all \\(x\\in S^n\\).",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -4790,19 +3787,765 @@
     },
     {
       "category": "correction",
-      "context": "Problem 8 begins a definition of the relative or subspace topology.",
-      "corrected_text": "Let \\((X,\\mathcal T)\\) be a topological space",
-      "exam_id": "topology-first-year-2016-jan-part-1",
-      "message": "Inserted the missing article “a” in the phrase “be a topological space.”",
+      "context": "The source asks for a space having fundamental group \\(\\mathbb{Z}_3\\), followed by verification using the Seifert–van Kampen Theorem.",
+      "corrected_text": "Describe a space \\(X\\) such that \\(\\pi_1(X,x_0)\\cong\\mathbb{Z}_3\\).",
+      "exam_id": "topology-first-year-2019-may-part-2",
+      "message": "Inserted the uniquely determined missing article in the opening phrase.",
       "origin": "extraction",
-      "original_text": "Let \\((X,\\mathcal T)\\) be topological space",
-      "problem_numbers": [
+      "original_text": "Describe space \\(X\\) such that \\(\\pi_1(X,x_0)\\cong\\mathbb{Z}_3\\).",
+      "problem_indices": [
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2019-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Let \\(R\\) be a commutative ring with identity, let \\(M\\) be a maximal ideal of \\(R\\), and let \\(n\\) be a positive integer.",
+      "corrected_text": "let \\(n\\) be a positive integer",
+      "exam_id": "algebra-phd-2017-may",
+      "message": "Inserted the missing verb “be” in a phrase whose intended grammatical reading is uniquely determined.",
+      "origin": "extraction",
+      "original_text": "let \\(n\\) a positive integer",
+      "problem_indices": [
         8
       ],
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2016-jan-part-1.pdf",
+      "source_pdf": "exams/algebra-phd/algebra-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 10, part (b).",
+      "corrected_text": "Give an example of a ring \\(R\\) and an irreducible module \\(M\\) such that \\(D\\) is not commutative.",
+      "exam_id": "algebra-phd-2017-may",
+      "message": "Corrected “Given” to the imperative “Give,” as uniquely required by the problem statement.",
+      "origin": "extraction",
+      "original_text": "Given an example of a ring \\(R\\) and an irreducible module \\(M\\) such that \\(D\\) is not commutative.",
+      "problem_indices": [
+        10
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Prove that if \\(R\\) is an integral domain and a local ring, and \\(I\\) an invertible ideal of \\(R\\), then \\(I\\) is principal.",
+      "corrected_text": "and \\(I\\) an invertible ideal of \\(R\\)",
+      "exam_id": "algebra-phd-2018-jan",
+      "message": "Inserted the uniquely determined missing article in the description of the ideal.",
+      "origin": "extraction",
+      "original_text": "and \\(I\\) invertible ideal of \\(R\\)",
+      "problem_indices": [
+        4
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2018-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Hint for part (i): Apply Zorn’s lemma on the ideals \\(I \\subset R\\) satisfying the disjointness condition.",
+      "corrected_text": "ideals \\(I \\subset R\\) such that \\(I \\cap S=\\varnothing\\)",
+      "exam_id": "algebra-phd-2022-jan",
+      "message": "The hint’s condition was corrected from \\(R \\cap S=\\varnothing\\) to \\(I \\cap S=\\varnothing\\), as uniquely required by the stated family of ideals and the Zorn’s lemma argument.",
+      "origin": "extraction",
+      "original_text": "ideals \\(I \\subset R\\) such that \\(R \\cap S=\\varnothing\\)",
+      "problem_indices": [
+        10
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Let \\(p(x)=x^7-3\\in\\mathbb{Q}[x]\\), \\(\\zeta\\in\\mathbb{C}\\) a primitive 7-th root of 1, \\(\\xi=\\sqrt[5]{3}\\in\\mathbb{C}\\), and \\(K\\) the splitting field of \\(p(x)\\).",
+      "corrected_text": "\\(\\xi=\\sqrt[7]{3}\\in\\mathbb{C}\\)",
+      "exam_id": "algebra-phd-2020-aug",
+      "message": "The displayed radical index was corrected from 5 to 7, as uniquely determined by the surrounding definition of the splitting field of \\(x^7-3\\), the primitive seventh root of unity, and the later use of \\(\\mathbb{Q}(\\xi)\\).",
+      "origin": "extraction",
+      "original_text": "\\(\\xi=\\sqrt[5]{3}\\in\\mathbb{C}\\)",
+      "problem_indices": [
+        2
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2020-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem first defines equivalence of permutation representations and then asks about two degree-12 coset actions.",
+      "corrected_text": "the following two permutation representations of \\(S_4\\) of degree \\(12\\)",
+      "exam_id": "algebra-phd-1988-sep",
+      "message": "Corrected “permutations” to “permutation representations,” as uniquely determined by the preceding definition and the coset actions in the subparts.",
+      "origin": "extraction",
+      "original_text": "the following two permutations of \\(S_4\\) of degree \\(12\\)",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The two subparts describe right coset spaces of the subgroups \\(\\langle(12)\\rangle\\) and \\(\\langle(12)(34)\\rangle\\).",
+      "corrected_text": "on the right coset space of \\(\\langle(12)\\rangle\\)",
+      "exam_id": "algebra-phd-1988-sep",
+      "message": "Corrected the preposition in subpart (a), as uniquely determined by the parallel wording in subpart (b).",
+      "origin": "extraction",
+      "original_text": "on the right coset space or \\(\\langle(12)\\rangle\\)",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Hint: Consider the \\(x_n\\) as elements of the bydual \\(E^{**}\\).",
+      "corrected_text": "bidual",
+      "exam_id": "analysis-phd-1994-may",
+      "message": "Corrected “bydual” to the uniquely determined mathematical term “bidual.”",
+      "origin": "extraction",
+      "original_text": "bydual",
+      "problem_indices": [
+        17
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 6 introduces a sequence in a Banach space and assumes its weak convergence.",
+      "corrected_text": "Assume that the sequence \\(x_n\\) converges weakly to \\(x\\).",
+      "exam_id": "analysis-phd-1996-jun",
+      "message": "Removed a duplicated word in the hypothesis.",
+      "origin": "extraction",
+      "original_text": "Assume that that the sequence \\(x_n\\) converges weakly to \\(x\\).",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1996-jun.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem defines \\(x_n\\) as a sequence in the Banach space \\(B\\), so its canonical double-dual embedding is into \\(B^{**}\\).",
+      "corrected_text": "Consider the \\(x_n\\) as elements of the double dual \\(B^{**}\\).",
+      "exam_id": "analysis-phd-1996-jun",
+      "message": "Changed the double-dual notation to agree with the Banach-space notation established in the problem.",
+      "origin": "extraction",
+      "original_text": "Consider the \\(x_n\\) as elements of the double dual \\(X^{**}\\).",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1996-jun.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The preceding shared notation defines \\((X,\\Sigma,\\mu)\\) as a measure space; no set \\(S\\) is defined.",
+      "corrected_text": "\\(L^1(X,\\Sigma,\\mu)\\)",
+      "exam_id": "analysis-phd-1995-aug",
+      "message": "The space in the completeness statement has been corrected to use the measure-space set defined immediately beforehand.",
+      "origin": "extraction",
+      "original_text": "\\(L^1(S,\\Sigma,\\mu)\\)",
+      "problem_indices": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem introduces the sequence \\((f_n)\\) and asks about convergence of \\(\\sum f_n\\).",
+      "corrected_text": "\\(\\sum_{n=1}^{\\infty}\\int |f_n|\\,d\\mu<\\infty\\)",
+      "exam_id": "analysis-phd-1995-aug",
+      "message": "The missing sequence index in the summability hypothesis has been restored.",
+      "origin": "extraction",
+      "original_text": "\\(\\sum_{n=1}^{\\infty}\\int |f|\\,d\\mu<\\infty\\)",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The ambient finite measure space is \\((X,\\Sigma,\\mu)\\), and the same subspace notation occurs in both the definition of \\(V\\) and the hint.",
+      "corrected_text": "\\(L^1(X,\\mathcal G,\\mu)\\)",
+      "exam_id": "analysis-phd-1995-aug",
+      "message": "The lowercase set symbol in both occurrences of the subspace notation has been corrected to the previously defined uppercase \\(X\\).",
+      "origin": "extraction",
+      "original_text": "\\(L^1(x,\\mathcal G,\\mu)\\)",
+      "problem_indices": [
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The hypothesis is \\(f\\in L^1\\) and \\(\\int_A f\\,d\\mu=0\\) for sets \\(A\\) in a generating ring.",
+      "corrected_text": "then \\(f=0\\), \\(\\mu\\)-a.e.",
+      "exam_id": "analysis-phd-2001-sep",
+      "message": "The concluding function name was corrected to match the function used throughout the problem.",
+      "origin": "extraction",
+      "original_text": "then \\(g=0\\), \\(\\mu\\)-a.e.",
+      "problem_indices": [
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2001-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The required conclusion is \\(\\int_{X\\setminus X_\\varepsilon}|f|\\,d\\mu<\\varepsilon\\).",
+      "corrected_text": "there is a set \\(X_\\varepsilon\\in\\Sigma\\) with \\(\\mu(X_\\varepsilon)<\\infty\\) such that",
+      "exam_id": "analysis-phd-2002-may",
+      "message": "Inserted the uniquely implied finite-measure condition that is missing after μ(Xε); without it, the phrase is grammatically incomplete and the assertion is trivial.",
+      "origin": "extraction",
+      "original_text": "there is a set \\(X_\\varepsilon\\in\\Sigma\\) with \\(\\mu(X_\\varepsilon)\\) such that",
+      "problem_indices": [
+        11
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem begins, “Let \\(\\lambda\\) be the Lebesgue measure on \\([0,1]\\),” and assumes \\(f\\in L^1(\\lambda)\\).",
+      "corrected_text": "\\(\\int_A f\\,d\\lambda=0\\)",
+      "exam_id": "analysis-phd-2002-may",
+      "message": "Changed μ to λ in the hint because λ is the measure defined and used throughout the problem.",
+      "origin": "extraction",
+      "original_text": "\\(\\int_A f\\,d\\mu=0\\)",
+      "problem_indices": [
+        12
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 8 defines an approximate identity \\((\\varphi_n)\\) in \\(L^1(\\mathbb{R})\\), but the source does not introduce or quantify \\(f\\) before the concluding statement.",
+      "corrected_text": "Prove that for every \\(f\\in L^1(\\mathbb{R})\\), \\(f*\\varphi_n\\to f\\) in \\(L^1(\\mathbb{R})\\).",
+      "exam_id": "analysis-phd-2016-may",
+      "message": "The source conclusion uses an otherwise undefined function \\(f\\). The standard and uniquely determined quantifier and domain have been supplied.",
+      "origin": "extraction",
+      "original_text": "Prove that \\(f*\\varphi_n\\to f\\) in \\(L^1(\\mathbb{R})\\).",
+      "problem_indices": [
+        8
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2016-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "For σ-finte measures μ and ν, define what it means for μ to be absolutely continuous with respect to ν...",
+      "corrected_text": "σ-finite measures",
+      "exam_id": "analysis-phd-2024-may",
+      "message": "Corrected an unambiguous typographical error in “σ-finte.”",
+      "origin": "extraction",
+      "original_text": "σ-finte measures",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2024-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Give a brief explanaation of how the Fourier transform is defined on L²(ℝ).",
+      "corrected_text": "Give a brief explanation",
+      "exam_id": "analysis-phd-2024-may",
+      "message": "Corrected an unambiguous typographical error in “explanaation.”",
+      "origin": "extraction",
+      "original_text": "Give a brief explanaation",
+      "problem_indices": [
+        8
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2024-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem defines \\(\\Delta\\) and asks for the two orders of iterated integration of its indicator.",
+      "corrected_text": "\\(\\mathbf 1_\\Delta(x,y)\\)",
+      "exam_id": "analysis-phd-2019-jan",
+      "message": "The second iterated integral uses an undefined indicator \\(\\mathbf 1_E\\); the immediate context uniquely determines that it should be the indicator of \\(\\Delta\\).",
+      "origin": "extraction",
+      "original_text": "\\(\\mathbf 1_E(x,y)\\)",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2019-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The handwritten words “A infinite” appear above the opening of problem 7; without this hypothesis, the printed equivalence fails for finite recursive sets.",
+      "corrected_text": "Suppose that A is infinite. Prove that A is recursive if and only if there is a strictly increasing onto f: N → A.",
+      "exam_id": "logic-phd-1989-sep",
+      "message": "A handwritten annotation adds the necessary hypothesis that A is infinite.",
+      "origin": "extraction",
+      "original_text": "Prove that A is recursive if and only if there is a strictly increasing onto f: N → A.",
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1989-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 5(e), immediately before the limit involving \\(\\log(N_k)/k\\).",
+      "corrected_text": "Let \\(N_k\\) be the number of fixed points of \\(\\sigma^k\\) in \\(\\Sigma_A^+\\).",
+      "exam_id": "ergodic-theory-phd-2012-may",
+      "message": "Removed an accidental duplicated phrase in the definition of \\(N_k\\).",
+      "origin": "extraction",
+      "original_text": "Let \\(N_k\\) be the number of fixed points of fixed points of \\(\\sigma^k\\) in \\(\\Sigma_A^+\\).",
+      "problem_indices": [
+        5
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 6(c), immediately before the displayed ergodic average.",
+      "corrected_text": "Compute the following limit for \\(\\mu_p\\)-almost every sequence \\(\\underline{s}\\in\\Sigma_2\\):",
+      "exam_id": "ergodic-theory-phd-2012-may",
+      "message": "Removed the extraneous preposition before the sequence variable.",
+      "origin": "extraction",
+      "original_text": "Compute the following limit for \\(\\mu_p\\)-almost every sequence in \\(\\underline{s}\\in\\Sigma_2\\):",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 7(b), the parenthetical hint following the request for an invariant Borel probability measure.",
+      "corrected_text": "Hint: don’t try too hard",
+      "exam_id": "ergodic-theory-phd-2012-may",
+      "message": "Corrected the uniquely determined typo in the hint.",
+      "origin": "extraction",
+      "original_text": "Hint: don’t try to hard",
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Recursion Theory, first problem.",
+      "corrected_text": "is (partial) recursive if and only if its graph is recursively enumerable",
+      "exam_id": "logic-phd-2000-may",
+      "message": "Inserted the missing second “if” in the phrase “if and only if.”",
+      "origin": "extraction",
+      "original_text": "is (partial) recursive if and only its graph is recursively enumerable",
+      "problem_indices": [
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2000-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Recursion Theory, third problem.",
+      "corrected_text": "there are at most countably many sets B",
+      "exam_id": "logic-phd-2000-may",
+      "message": "Removed a duplicated “at.”",
+      "origin": "extraction",
+      "original_text": "there at at most countably many sets B",
+      "problem_indices": [
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2000-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Prove that every stationary subset of omega one can be split into aleph one many pairwise disjoint. stationary subsets",
+      "corrected_text": "pairwise disjoint stationary subsets",
+      "exam_id": "logic-phd-2006-aug",
+      "message": "Removed a period that incorrectly separates the adjective phrase from the noun it modifies.",
+      "origin": "extraction",
+      "original_text": "pairwise disjoint. stationary subsets",
+      "problem_indices": [
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2006-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Define many-one and truth-table reducibility and show that one implies the other but the converse does not hold in general.",
+      "corrected_text": "implies",
+      "exam_id": "logic-phd-2009-jan",
+      "message": "Corrected an unambiguous typographical error in “imnplies.”",
+      "origin": "extraction",
+      "original_text": "imnplies",
+      "problem_indices": [
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2009-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 10(a): “X is recursively enumerable (that is, the range of a total recursive function;”",
+      "corrected_text": "the range of a total recursive function);",
+      "exam_id": "logic-phd-2010-may",
+      "message": "Inserted the uniquely determined missing closing parenthesis in subpart (a).",
+      "origin": "extraction",
+      "original_text": "the range of a total recursive function;",
+      "problem_indices": [
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2010-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Section 3, problem 1.",
+      "corrected_text": "Show that every infinite computably enumerable set has an infinite computable subset.",
+      "exam_id": "logic-phd-2017-may",
+      "message": "Inserted “infinite” before “computably enumerable set”; otherwise finite computably enumerable sets are immediate counterexamples, while the corrected statement is the standard intended theorem.",
+      "origin": "extraction",
+      "original_text": "Show that every computably enumerable set has an infinite computable subset.",
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Condition (iii) defining finite bipartite graph structures: “if (x, y) ∈ R^M then exactly one of x, y belongs G^M and the other belongs to B^M.”",
+      "corrected_text": "exactly one of x, y belongs to G^M",
+      "exam_id": "logic-phd-2022-aug",
+      "message": "Inserted the uniquely implied preposition “to” in condition (iii).",
+      "origin": "extraction",
+      "original_text": "exactly one of x, y belongs G^M",
+      "problem_indices": [
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2022-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 5(a) asks for a best-fitting ellipse or hyperbola by solving the equations obtained from the data points.",
+      "corrected_text": "the least squares solution to the n linear equations",
+      "exam_id": "numerical-analysis-phd-2001-may",
+      "message": "Corrected an omitted word in the name of the fitting method; the surrounding overdetermined linear-system context uniquely indicates a least squares solution.",
+      "origin": "extraction",
+      "original_text": "the least solution to the n linear equations",
+      "problem_indices": [
+        5
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 9 defines P₂ as interpolating g(x) and defines I as the integral of g(x).",
+      "corrected_text": "Use a Taylor series expansion of g(x) to show I − I_h = 3/8 h^4 g^(3)(0) + O(h^5).",
+      "exam_id": "numerical-analysis-phd-2001-may",
+      "message": "Corrected the function name in part (b) to agree with the function defined in the stem and integrated in part (a).",
+      "origin": "extraction",
+      "original_text": "Use a Taylor series expansion of f(x) to show I − I_h = 3/8 h^4 f^(3)(0) + O(h^5).",
+      "problem_indices": [
+        9
+      ],
+      "source_pages": [
+        3
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The matrix is stated to satisfy \\(A\\in\\mathbb{C}^{m\\times n}\\), so its row index ranges from 1 to \\(m\\).",
+      "corrected_text": "\\(\\max_{1\\le i\\le m}\\sum_{j=1}^n|a_{ij}|\\)",
+      "exam_id": "numerical-analysis-phd-2019-may",
+      "message": "Corrected the upper bound of the row index in the matrix infinity-norm formula to agree with the stated dimensions of the matrix.",
+      "origin": "extraction",
+      "original_text": "\\(\\max_{1\\le i\\le n}\\sum_{j=1}^n|a_{ij}|\\)",
+      "problem_indices": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Part (a) asks to show that \\(A+E\\) is nonsingular.",
+      "corrected_text": "nonsingular",
+      "exam_id": "numerical-analysis-phd-2019-may",
+      "message": "Corrected a uniquely identifiable spelling error.",
+      "origin": "extraction",
+      "original_text": "nonsinguar",
+      "problem_indices": [
+        4
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem asks for the interval on which the fixed-point iteration is assured to converge.",
+      "corrected_text": "\\(x_{k+1}=f(x_k)\\)",
+      "exam_id": "numerical-analysis-phd-2019-may",
+      "message": "Corrected the fixed-point iteration so that the right-hand side is evaluated at the current iterate.",
+      "origin": "extraction",
+      "original_text": "\\(x_{k+1}=f(x)\\)",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Part (a) asks for a finite difference approximation based on the specified interpolating polynomial.",
+      "corrected_text": "based on the interpolant \\(p_2\\)",
+      "exam_id": "numerical-analysis-phd-2019-may",
+      "message": "Inserted the uniquely implied missing preposition.",
+      "origin": "extraction",
+      "original_text": "based the interpolant \\(p_2\\)",
+      "problem_indices": [
+        10
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The opening assumptions for the General Fixed Point Theory problem.",
+      "corrected_text": "\\(g([a,b])\\subseteq[a,b]\\)",
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "The source uses membership notation for the image of an interval, but the fixed-point hypothesis uniquely requires set containment.",
+      "origin": "extraction",
+      "original_text": "\\(g([a,b])\\in[a,b]\\)",
+      "problem_indices": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The problem states \\(y'(t)=f(t,y)\\) and subsequently uses \\(f(t_{n-j},Y(t_{n-j}))\\).",
+      "corrected_text": "\\(f(t_{n-j},y_{n-j})\\)",
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "The independent-variable grid symbol in the multistep formula was changed from \\(x\\) to \\(t\\), matching the stated problem and the immediately following truncation-error formula.",
+      "origin": "extraction",
+      "original_text": "\\(f(x_{n-j},y_{n-j})\\)",
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The higher-order conditions follow immediately after the consistency conditions labeled (1).",
+      "corrected_text": "that (1) hold",
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "The unresolved placeholder is uniquely identified as the preceding conditions labeled (1).",
+      "origin": "extraction",
+      "original_text": "that (??) hold",
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The appendix first writes \\(H_n(x)=\\sum f(x_j)h_j(x)+\\sum f'(x_j)\\tilde h_j(x)\\).",
+      "corrected_text": "\\(\\tilde h_j(x)=\\dfrac{\\psi_n(x)l_j(x)}{\\psi_n'(x_j)}\\)",
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "In the appendix, the displayed identity is the Hermite derivative basis function \\(\\tilde h_j\\), not \\(h_j\\), as uniquely determined by the preceding decomposition and the formula itself.",
+      "origin": "extraction",
+      "original_text": "\\(h_j(x)=\\dfrac{\\psi_n(x)l_j(x)}{\\psi_n'(x_j)}\\)",
+      "problem_indices": [],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The second convergence assertion in the problem.",
+      "corrected_text": "\\(\\int_U D_{x_i}(u_{m_j}v_{m_j})\\,dx\\to\\int_U D_{x_i}(uv)\\,dx\\)",
+      "exam_id": "pde-phd-2001-may",
+      "message": "An omitted integral on the right-hand side was restored because the displayed convergence otherwise compares a scalar integral with a function.",
+      "origin": "extraction",
+      "original_text": "\\(\\int_U D_{x_i}(u_{m_j}v_{m_j})\\,dx\\to D_{x_i}(uv)\\)",
+      "problem_indices": [
+        2
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/pde-phd/pde-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The equivalence between being a weak solution and minimizing the functional.",
+      "corrected_text": "if and only if",
+      "exam_id": "pde-phd-2001-may",
+      "message": "The uniquely intended logical phrase was restored.",
+      "origin": "extraction",
+      "original_text": "if only if",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        3
+      ],
+      "source_pdf": "exams/pde-phd/pde-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Problem 3, immediately before subparts (a) and (b).",
+      "corrected_text": "Is this true for continuous maps",
+      "exam_id": "topology-first-year-2013-jan-part-1",
+      "message": "Removed an evidently duplicated word in the question introducing the subparts.",
+      "origin": "extraction",
+      "original_text": "Is this true for for continuous maps",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
       "status": "logged"
     },
     {
@@ -4810,10 +4553,10 @@
       "context": "Is the identity map i : S¹ → S¹ nulhomotopic?",
       "corrected_text": "nullhomotopic",
       "exam_id": "topology-first-year-2016-aug-part-2",
-      "message": "Corrected the misspelling of the standard mathematical term “nullhomotopic.”",
+      "message": "Corrected an apparent spelling error in the mathematical term.",
       "origin": "extraction",
       "original_text": "nulhomotopic",
-      "problem_numbers": [
+      "problem_indices": [
         11
       ],
       "source_pages": [
@@ -4827,10 +4570,10 @@
       "context": "Is the square map s : S¹ → S¹, s(z) = z², nulhomotopic?",
       "corrected_text": "nullhomotopic",
       "exam_id": "topology-first-year-2017-jan-part-2",
-      "message": "Corrected an unambiguous spelling error in the mathematical term.",
+      "message": "Corrected the misspelling “nulhomotopic” to “nullhomotopic.”",
       "origin": "extraction",
       "original_text": "nulhomotopic",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -4841,13 +4584,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 3(a), immediately before the maps listed in parts (b) and (c).",
+      "context": "Problem 3(a), immediately before parts (b) and (c).",
       "corrected_text": "Is this true for continuous maps",
       "exam_id": "topology-first-year-2017-jan-part-1",
-      "message": "Removed a duplicated word in the question introducing parts (b) and (c).",
+      "message": "Removed a duplicated word in the question.",
       "origin": "extraction",
       "original_text": "Is this true for for continuous maps",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -4858,13 +4601,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 5 defines a map on a compact metric space and then asks for continuity and a unique fixed point.",
-      "corrected_text": "\\(d(f(x),f(y))<d(x,y)\\) for all \\(x\\ne y\\).",
+      "context": "The condition imposed on the self-map of a compact metric space in Problem 5.",
+      "corrected_text": "d(f(x), f(y)) < d(x, y) whenever x ≠ y",
       "exam_id": "topology-first-year-2017-jan-part-1",
-      "message": "Added the necessary distinct-point qualification to the strict distance inequality; without it, taking \\(x=y\\) makes the stated condition impossible.",
+      "message": "Added the necessary restriction to distinct points; without it, the displayed strict inequality fails when x = y.",
       "origin": "extraction",
-      "original_text": "\\(d(f(x),f(y))<d(x,y)\\).",
-      "problem_numbers": [
+      "original_text": "d(f(x), f(y)) < d(x, y)",
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4875,13 +4618,64 @@
     },
     {
       "category": "correction",
-      "context": "Show that the fundamental group of the circle is isomorphic [to] the additive group of integers.",
+      "context": "The following sentence asks about a non-trivial infinitely divisible distribution.",
+      "corrected_text": "What is an infinitely divisible distribution on \\(\\mathbb R^1\\)?",
+      "exam_id": "probability-phd-1997-sep",
+      "message": "Corrected the preposition in the definition request.",
+      "origin": "extraction",
+      "original_text": "What is an infinitely divisible distribution or \\(\\mathbb R^1\\)?",
+      "problem_indices": [
+        5
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Both cases defining the process are expressed in terms of \\(t\\): \\(0\\le t\\le1\\) and otherwise.",
+      "corrected_text": "\\(W_3(t)\\)",
+      "exam_id": "probability-phd-1997-sep",
+      "message": "Corrected the argument of the process on the left side of its definition to match the variable used in both branches.",
+      "origin": "extraction",
+      "original_text": "\\(W_3(b)\\)",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "The hypothesis assumes \\(|\\varphi(t)|=1\\) for some nonzero \\(t\\); the conclusion concerns the non-point-mass lattice case.",
+      "corrected_text": "unless \\(|\\varphi(t)|\\equiv1\\)",
+      "exam_id": "probability-phd-1997-sep",
+      "message": "Inserted modulus signs in the exceptional case so that the statement is mathematically consistent with the hypothesis and lattice conclusion.",
+      "origin": "extraction",
+      "original_text": "unless \\(\\varphi(t)\\equiv1\\)",
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Show that the fundamental group of the circle is isomorphic the additive group of integers. That is, π₁(S¹, 1) ≅ ℤ.",
       "corrected_text": "is isomorphic to the additive group of integers",
       "exam_id": "topology-first-year-2018-may-part-2",
-      "message": "Inserted the uniquely determined missing preposition “to.”",
+      "message": "Inserted the uniquely determined missing preposition in the statement about the fundamental group of the circle.",
       "origin": "extraction",
       "original_text": "is isomorphic the additive group of integers",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -4892,13 +4686,13 @@
     },
     {
       "category": "correction",
-      "context": "Is the squaring map s : S¹ → S¹, s(z) = z², nullhomotopic?",
+      "context": "Is the squaring map s : S¹ → S¹, s(z) = z², nulhomotopic?",
       "corrected_text": "nullhomotopic",
       "exam_id": "topology-first-year-2018-may-part-2",
-      "message": "Corrected the spelling of the standard mathematical term “nullhomotopic.”",
+      "message": "Corrected the uniquely determined misspelling of “nullhomotopic.”",
       "origin": "extraction",
       "original_text": "nulhomotopic",
-      "problem_numbers": [
+      "problem_indices": [
         12
       ],
       "source_pages": [
@@ -4909,47 +4703,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 6 contains two periods after “Lemma” in the source.",
-      "corrected_text": "State Urysohn’s Lemma.",
-      "exam_id": "topology-first-year-2019-jan-part-1",
-      "message": "Removed a duplicated terminal period.",
-      "origin": "extraction",
-      "original_text": "State Urysohn’s Lemma..",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2019-jan-part-1.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The source asks for a space having fundamental group \\(\\mathbb{Z}_3\\), followed by verification using the Seifert–van Kampen Theorem.",
-      "corrected_text": "Describe a space \\(X\\) such that \\(\\pi_1(X,x_0)\\cong\\mathbb{Z}_3\\).",
-      "exam_id": "topology-first-year-2019-may-part-2",
-      "message": "Inserted the uniquely determined missing article in the opening phrase.",
-      "origin": "extraction",
-      "original_text": "Describe space \\(X\\) such that \\(\\pi_1(X,x_0)\\cong\\mathbb{Z}_3\\).",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2019-may-part-2.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 5 assumes that \\(f:X\\to X\\) is a map of a compact metric space to itself satisfying a strict distance-decreasing condition.",
-      "corrected_text": "\\(d(f(x),f(y))<d(x,y)\\) for \\(x\\ne y\\).",
+      "context": "Let \\(f:X\\to X\\) be a map of a compact metric space to itself that satisfies the following condition.",
+      "corrected_text": "\\(d(f(x),f(y))<d(x,y)\\) for \\(x\\ne y\\)",
       "exam_id": "topology-first-year-2020-jan-part-1",
-      "message": "Added the necessary restriction that the strict distance inequality applies to distinct points; without it, substituting \\(x=y\\) gives the impossible inequality \\(0<0\\).",
+      "message": "Added the necessary qualifier that the strict inequality applies only to distinct points; without it, taking x = y makes the stated condition impossible.",
       "origin": "extraction",
-      "original_text": "\\(d(f(x),f(y))<d(x,y)\\).",
-      "problem_numbers": [
+      "original_text": "\\(d(f(x),f(y))<d(x,y)\\)",
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -4960,13 +4720,13 @@
     },
     {
       "category": "correction",
-      "context": "The first question in Problem 14, immediately before the corresponding question about \\(\\mathbb{Q}\\).",
-      "corrected_text": "Is the set of integers \\(\\mathbb{Z}\\) locally compact?",
+      "context": "The first question in problem 14.",
+      "corrected_text": "Is the set of integers \\(\\mathbb Z\\) locally compact?",
       "exam_id": "topology-first-year-2020-jan-part-1",
-      "message": "Removed the duplicated verb “is.”",
+      "message": "Removed a duplicated “is” from the question.",
       "origin": "extraction",
-      "original_text": "Is the set of integers \\(\\mathbb{Z}\\) is locally compact?",
-      "problem_numbers": [
+      "original_text": "Is the set of integers \\(\\mathbb Z\\) is locally compact?",
+      "problem_indices": [
         14
       ],
       "source_pages": [
@@ -4977,30 +4737,13 @@
     },
     {
       "category": "correction",
-      "context": "Hint: Let \\(B\\) be the intersection of the unit sphere \\(S^2\\) and the positive octant.",
-      "corrected_text": "\\(\\{(x,y,z)\\in\\mathbb{R}^3\\mid x,y,z\\geq 0\\}\\)",
-      "exam_id": "topology-first-year-2021-may-part-2",
-      "message": "Inserted the missing closing parenthesis in the ordered triple defining the positive octant.",
-      "origin": "extraction",
-      "original_text": "\\(\\{(x,y,z\\in\\mathbb{R}^3\\mid x,y,z\\geq 0\\}\\)",
-      "problem_numbers": [
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2021-may-part-2.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The parenthetical formal description in Problem 4 begins with “(Formally,” and ends with the description of the circle centered at (0,1).",
-      "corrected_text": "the unit circle centered at (0,1).)",
+      "context": "“and Sⁱ₊ is the unit circle centerd at (0, 1).”",
+      "corrected_text": "centered",
       "exam_id": "topology-first-year-2021-aug-part-1",
-      "message": "Corrected a uniquely determined spelling error and supplied the missing closing parenthesis.",
+      "message": "Corrected an unambiguous spelling error in the formal description of the figure eight.",
       "origin": "extraction",
-      "original_text": "the unit circle centerd at (0,1).",
-      "problem_numbers": [
+      "original_text": "centerd",
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -5011,30 +4754,30 @@
     },
     {
       "category": "correction",
-      "context": "Problem 1 assumes a self-map of a compact metric space and asks for continuity and existence and uniqueness of a fixed point.",
-      "corrected_text": "d(f(x), f(y)) < d(x, y) for x ≠ y",
-      "exam_id": "topology-first-year-2023-aug-part-1",
-      "message": "Added the necessary restriction \\(x\\ne y\\) to the strict distance inequality; without it, substituting \\(x=y\\) makes the stated condition impossible.",
+      "context": "Hint: Let \\(B\\) be the intersection of the unit sphere \\(S^2\\) and the positive octant.",
+      "corrected_text": "\\(\\{(x,y,z)\\in\\mathbb{R}^3\\mid x,y,z\\geq 0\\}\\)",
+      "exam_id": "topology-first-year-2021-may-part-2",
+      "message": "Inserted the missing closing parenthesis in the ordered triple defining the positive octant.",
       "origin": "extraction",
-      "original_text": "d(f(x), f(y)) < d(x, y)",
-      "problem_numbers": [
-        1
+      "original_text": "\\(\\{(x,y,z\\in\\mathbb{R}^3\\mid x,y,z\\geq 0\\}\\)",
+      "problem_indices": [
+        2
       ],
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2023-aug-part-1.pdf",
+      "source_pdf": "exams/topology-first-year/topology-first-year-2021-may-part-2.pdf",
       "status": "logged"
     },
     {
       "category": "correction",
-      "context": "In the definition of \\(X\\), the first two terms are coordinate-axis segments, and the third term is intended to be the corresponding segment on the third coordinate axis.",
+      "context": "The definition of \\(X\\) is the union of the three coordinate-axis segments in \\(\\mathbb{R}^3\\).",
       "corrected_text": "\\((\\{0\\}\\times\\{0\\}\\times[-1,1])\\)",
       "exam_id": "topology-first-year-2023-aug-part-2",
-      "message": "Inserted the uniquely determined missing closing brace in the first singleton of the third coordinate-axis segment.",
+      "message": "Corrected the missing closing brace in the first singleton factor of the third coordinate-axis segment.",
       "origin": "extraction",
       "original_text": "\\((\\{0\\times\\{0\\}\\times[-1,1])\\)",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -5045,13 +4788,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 14 asks for an example of a metric space and function satisfying a strict distance-decreasing condition and having no fixed point.",
-      "corrected_text": "\\(d(f(x),f(y))<d(x,y)\\) for all \\(x,y\\in X\\) with \\(x\\ne y\\)",
+      "context": "Give an example of a metric space \\((X,d)\\) and a continuous function \\(f:X\\to X\\) satisfying the stated strict distance inequality and having no fixed point.",
+      "corrected_text": "\\(d(f(x),f(y))<d(x,y)\\) for all distinct \\(x,y\\in X\\)",
       "exam_id": "topology-first-year-2024-aug-part-1",
-      "message": "Added the necessary distinctness condition to the quantified variables; as printed, condition (i) would require \\(0<0\\) when \\(x=y\\), making the requested example impossible.",
+      "message": "The source states the strict distance inequality for all x and y, which includes x = y and would require 0 < 0. The condition has been corrected to apply to distinct points.",
       "origin": "extraction",
       "original_text": "\\(d(f(x),f(y))<d(x,y)\\) for all \\(x,y\\in X\\)",
-      "problem_numbers": [
+      "problem_indices": [
         14
       ],
       "source_pages": [
@@ -5062,30 +4805,13 @@
     },
     {
       "category": "correction",
-      "context": "Problem 2(b) defines the family as \\(\\{\\tau_\\alpha\\}_{\\alpha\\in J}\\) and states in the remark that \\(U\\in\\tau_\\alpha\\) for every \\(\\alpha\\in J\\).",
-      "corrected_text": "\\(\\bigcap_{\\alpha\\in J}\\tau_\\alpha\\)",
-      "exam_id": "topology-first-year-2025-may-part-1",
-      "message": "Corrected the bound index in both intersections to match the indexed family and the membership condition.",
-      "origin": "extraction",
-      "original_text": "\\(\\bigcap_{j\\in J}\\tau_\\alpha\\)",
-      "problem_numbers": [
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-1.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Show that the fundamental group of the circle is isomorphic the additive group of integers.",
+      "context": "Problem 2 states that the fundamental group of the circle is isomorphic to the additive group of integers.",
       "corrected_text": "is isomorphic to the additive group of integers",
       "exam_id": "topology-first-year-2025-aug-part-2",
-      "message": "Inserted the uniquely required preposition in the isomorphism statement.",
+      "message": "Inserted the grammatically necessary preposition in the isomorphism statement.",
       "origin": "extraction",
       "original_text": "is isomorphic the additive group of integers",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -5096,13 +4822,13 @@
     },
     {
       "category": "correction",
-      "context": "Compute the fundamental group of the connected sum of a torus and second torus T²#T².",
+      "context": "The expression immediately following is \\(T^2\\mathbin{\\#}T^2\\).",
       "corrected_text": "the connected sum of a torus and a second torus",
       "exam_id": "topology-first-year-2025-aug-part-2",
-      "message": "Inserted the uniquely required article before “second torus.”",
+      "message": "Inserted the missing article before “second torus.”",
       "origin": "extraction",
       "original_text": "the connected sum of a torus and second torus",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -5113,13 +4839,64 @@
     },
     {
       "category": "correction",
+      "context": "Problem 2(b) defines the family as \\(\\{\\tau_\\alpha\\}_{\\alpha\\in J}\\), and the accompanying set description quantifies \\(\\alpha\\in J\\).",
+      "corrected_text": "\\(\\bigcap_{\\alpha\\in J}\\tau_\\alpha\\)",
+      "exam_id": "topology-first-year-2025-may-part-1",
+      "message": "The intersection in part (b) and its remark uses the bound index \\(j\\) while the indexed family is written with \\(\\alpha\\). The bound index has been corrected to \\(\\alpha\\) in both occurrences.",
+      "origin": "extraction",
+      "original_text": "\\(\\bigcap_{j\\in J}\\tau_\\alpha\\)",
+      "problem_indices": [
+        2
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Part (b) asks the reader to prove that a map with a continuous right inverse is a quotient map.",
+      "corrected_text": "Let p : X → Y be continuous.",
+      "exam_id": "topology-first-year-2025-jan-part-1",
+      "message": "Added the missing continuity hypothesis on p; without it, the assertion in part (b) is false in general.",
+      "origin": "extraction",
+      "original_text": "Let p : X → Y.",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
+      "context": "Define the map Φ from the fundamental group to the fiber, which gives the lifting correspondence.",
+      "corrected_text": "which gives the lifting correspondence",
+      "exam_id": "topology-first-year-2025-may-part-2",
+      "message": "Removed a duplicated word in the description of the lifting correspondence.",
+      "origin": "extraction",
+      "original_text": "which gives the the lifting correspondence",
+      "problem_indices": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
       "context": "Instruction immediately preceding problems 5–10.",
       "corrected_text": "Answer the following questions, giving proofs and examples.",
       "exam_id": "topology-phd-1992-may",
-      "message": "Corrected the second instruction block’s grammatical form.",
+      "message": "Corrected the grammatical form of the instruction from a participial phrase to an imperative.",
       "origin": "extraction",
       "original_text": "Answering the following questions, giving proofs and examples.",
-      "problem_numbers": [
+      "problem_indices": [
         5,
         6,
         7,
@@ -5135,13 +4912,13 @@
     },
     {
       "category": "correction",
-      "context": "Compute the fundamental group of a closed, non-orientable surfaces X of genus 2.",
-      "corrected_text": "a closed, non-orientable surface X",
+      "context": "Problem 6 refers to a single surface denoted X.",
+      "corrected_text": "Compute the fundamental group of a closed, non-orientable surface X of genus 2.",
       "exam_id": "topology-phd-1992-may",
-      "message": "Corrected the plural noun to agree with the singular article and the single space denoted by X.",
+      "message": "Corrected a singular/plural disagreement uniquely determined by the article and notation.",
       "origin": "extraction",
-      "original_text": "a closed, non-orientable surfaces X",
-      "problem_numbers": [
+      "original_text": "Compute the fundamental group of a closed, non-orientable surfaces X of genus 2.",
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -5152,19 +4929,19 @@
     },
     {
       "category": "correction",
-      "context": "Show that no covering space fo the two-torus, T² = S¹ × S¹, has the homotopy type of the figure-8.",
-      "corrected_text": "covering space of the two-torus",
-      "exam_id": "topology-phd-1992-may",
-      "message": "Corrected a transposed preposition.",
+      "context": "For \\(i=1,2,3,\\ldots\\), let \\(X_i\\) be a great circle in the 2-sphere \\(S^2=\\{x\\in\\mathbb{R}^2:|x|=1\\}\\).",
+      "corrected_text": "\\(S^2=\\{x\\in\\mathbb{R}^3:|x|=1\\}\\)",
+      "exam_id": "topology-phd-1994-aug",
+      "message": "Corrected the ambient Euclidean space in the definition of the 2-sphere from \\(\\mathbb{R}^2\\) to \\(\\mathbb{R}^3\\), as uniquely required by the immediate context.",
       "origin": "extraction",
-      "original_text": "covering space fo the two-torus",
-      "problem_numbers": [
-        9
+      "original_text": "\\(S^2=\\{x\\in\\mathbb{R}^2:|x|=1\\}\\)",
+      "problem_indices": [
+        10
       ],
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-phd/topology-phd-1992-may.pdf",
+      "source_pdf": "exams/topology-phd/topology-phd-1994-aug.pdf",
       "status": "logged"
     },
     {
@@ -5172,10 +4949,10 @@
       "context": "Problem 3 asks whether such a covering space exists.",
       "corrected_text": "Does there exist a covering space of the figure eight that has a non-trivial abelian fundamental group?",
       "exam_id": "topology-phd-2004-jan",
-      "message": "Corrected the verb agreement in the question.",
+      "message": "Corrected the grammatically erroneous verb form in the question.",
       "origin": "extraction",
       "original_text": "Does there exists a covering space of the figure eight that has a non-trivial abelian fundamental group?",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -5192,7 +4969,7 @@
       "message": "Corrected the uniquely determined grammatical error in the question opening.",
       "origin": "extraction",
       "original_text": "Does there exists",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -5205,28 +4982,11 @@
       "category": "correction",
       "context": "Problem 3 asks whether such a covering space exists.",
       "corrected_text": "Does there exist a covering space of the figure eight with nontrivial abelian fundamental group?",
-      "exam_id": "topology-phd-2004-sep",
-      "message": "Corrected the uniquely determined subject–verb agreement error in the question opening.",
-      "origin": "extraction",
-      "original_text": "Does there exists a covering space of the figure eight with nontrivial abelian fundamental group?",
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2004-sep.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Does there exists a covering space of the figure eight with nontrivial abelian fundamental group?",
-      "corrected_text": "Does there exist",
       "exam_id": "topology-phd-2008-may",
-      "message": "Corrected the uniquely determined grammatical error “Does there exists” to “Does there exist.”",
+      "message": "Corrected the verb form after “Does” in the question.",
       "origin": "extraction",
-      "original_text": "Does there exists",
-      "problem_numbers": [
+      "original_text": "Does there exists a covering space of the figure eight with non-trivial abelian fundamental group?",
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -5237,47 +4997,13 @@
     },
     {
       "category": "correction",
-      "context": "Let GL(n) be the space of all invertible real n × n-matrices.",
-      "corrected_text": "Is GL_n compact? connected?",
-      "exam_id": "topology-phd-2012-may",
-      "message": "Corrected the duplicated verb in the compactness question.",
-      "origin": "extraction",
-      "original_text": "IS GL_n is compact? connected?",
-      "problem_numbers": [
-        5
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2012-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "The question asks whether every function has a continuous extension to βN.",
-      "corrected_text": "Does every function f : N → R admit a continuous extension",
-      "exam_id": "topology-phd-2012-may",
-      "message": "Corrected subject–verb agreement in the question.",
-      "origin": "extraction",
-      "original_text": "Does every function f : N → R admits a continuous extension",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2012-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 4 begins with the singular auxiliary “Does,” which requires the bare infinitive “exist.”",
+      "context": "Problem 4 asks whether such a covering space exists.",
       "corrected_text": "Does there exist a covering space of the 2-dimensional sphere with four points deleted with nontrivial abelian fundamental group?",
       "exam_id": "topology-phd-2014-may",
-      "message": "Corrected the verb form after the auxiliary “Does.”",
+      "message": "Corrected the grammatical error “Does there exists” to “Does there exist.”",
       "origin": "extraction",
       "original_text": "Does there exists a covering space of the 2-dimensional sphere with four points deleted with nontrivial abelian fundamental group?",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -5288,47 +5014,13 @@
     },
     {
       "category": "correction",
-      "context": "Prove that the topologist sin curve is not path connected.",
-      "corrected_text": "topologist’s sine curve",
-      "exam_id": "topology-phd-2016-may",
-      "message": "Corrected the uniquely identifiable name of the standard topological space.",
-      "origin": "extraction",
-      "original_text": "topologist sin curve",
-      "problem_numbers": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2016-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Suppose that X = C₁ ∪ C₂ where each Cᵢ is homeomorphic to the topologist sin curve.",
-      "corrected_text": "topologist’s sine curve",
-      "exam_id": "topology-phd-2016-may",
-      "message": "Corrected the uniquely identifiable name of the standard topological space.",
-      "origin": "extraction",
-      "original_text": "topologist sin curve",
-      "problem_numbers": [
-        5
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2016-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
       "context": "Problem 5 asks whether such a covering space exists.",
       "corrected_text": "Does there exist a covering space of the 2-dimensional sphere with three points deleted with nontrivial abelian fundamental group?",
       "exam_id": "topology-phd-2017-aug",
       "message": "Corrected the grammatical error “Does there exists” to “Does there exist.”",
       "origin": "extraction",
       "original_text": "Does there exists a covering space of the 2-dimensional sphere with three points deleted with nontrivial abelian fundamental group?",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -5339,30 +5031,13 @@
     },
     {
       "category": "correction",
-      "context": "In the list “What are \\(H_3(M;\\mathbb{Z})\\), \\(H_4(M);\\mathbb{Z}\\), and \\(H_5(M;\\mathbb{Z})\\)?”",
-      "corrected_text": "\\(H_4(M;\\mathbb{Z})\\)",
-      "exam_id": "topology-phd-2022-aug",
-      "message": "Corrected the misplaced semicolon in the coefficient notation for the fourth homology group.",
-      "origin": "extraction",
-      "original_text": "\\(H_4(M);\\mathbb{Z}\\)",
-      "problem_numbers": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2022-aug.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "\\(\\pi_1(M_2)=\\langle a_1,a_2,b_1,b_2\\mid [a_1,b_1][a_2b_2]=1\\rangle\\), where \\(M_2\\) is an orientable surface of genus 2.",
-      "corrected_text": "\\([a_1,b_1][a_2,b_2]=1\\)",
+      "context": "\\(\\pi_1(M_2)=\\langle a_1,a_2,b_1,b_2\\mid [a_1,b_1][a_2,b_2]=1\\rangle\\)",
+      "corrected_text": "\\([a_2,b_2]\\)",
       "exam_id": "topology-phd-2021-may",
-      "message": "Inserted the omitted comma in the second commutator of the standard genus-2 orientable surface group relation.",
+      "message": "Inserted the missing comma in the second commutator of the standard fundamental-group presentation for an orientable surface of genus 2.",
       "origin": "extraction",
-      "original_text": "\\([a_1,b_1][a_2b_2]=1\\)",
-      "problem_numbers": [
+      "original_text": "\\([a_2b_2]\\)",
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -5373,47 +5048,47 @@
     },
     {
       "category": "correction",
-      "context": "“Define 1-cochains that you can show are cocyles and which generate H¹(T).”",
-      "corrected_text": "cocycles",
-      "exam_id": "topology-phd-2023-may",
-      "message": "Corrected an unambiguous typographical error.",
+      "context": "The source asks: “What are \\(H_3(M;\\mathbb{Z})\\), \\(H_4(M);\\mathbb{Z}\\), and \\(H_5(M;\\mathbb{Z})\\)?”",
+      "corrected_text": "\\(H_4(M;\\mathbb{Z})\\)",
+      "exam_id": "topology-phd-2022-aug",
+      "message": "Corrected malformed coefficient notation in the requested fourth homology group.",
       "origin": "extraction",
-      "original_text": "cocyles",
-      "problem_numbers": [
-        2
+      "original_text": "\\(H_4(M);\\mathbb{Z}\\)",
+      "problem_indices": [
+        1
       ],
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-phd/topology-phd-2023-may.pdf",
+      "source_pdf": "exams/topology-phd/topology-phd-2022-aug.pdf",
       "status": "logged"
     },
     {
       "category": "correction",
-      "context": "“Show that there are no maps from CPⁿ to CPᵐ that induces a nontrivial map H²(CPᵐ) → H²(CPⁿ).”",
-      "corrected_text": "maps from CPⁿ to CPᵐ that induce a nontrivial map",
-      "exam_id": "topology-phd-2023-may",
-      "message": "Corrected subject–verb agreement in the relative clause.",
+      "context": "Problem 4, immediately following questions about manifolds and preceding a question about spaces of matrices.",
+      "corrected_text": "Show that the boundary of the Möbius strip is not a retract of the Möbius strip.",
+      "exam_id": "topology-phd-2024-may",
+      "message": "Corrected the direction of the retract relation; under the standard definition, the Möbius strip cannot be a retract of its boundary because it is not a subspace of its boundary. The intended standard result is that the boundary is not a retract of the Möbius strip.",
       "origin": "extraction",
-      "original_text": "maps from CPⁿ to CPᵐ that induces a nontrivial map",
-      "problem_numbers": [
+      "original_text": "Show that the Mobius strip is not a retract of its boundary.",
+      "problem_indices": [
         4
       ],
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-phd/topology-phd-2023-may.pdf",
+      "source_pdf": "exams/topology-phd/topology-phd-2024-may.pdf",
       "status": "logged"
     },
     {
       "category": "correction",
-      "context": "The duplication occurs in the sentence immediately following the assumption that \\(A\\) is a retract of \\(X\\).",
-      "corrected_text": "Suppose that \\(A\\) is a retract of \\(X\\). Show that \\(H_i(A)\\) is a direct summand of \\(H_i(X)\\).",
+      "context": "Suppose that \\(A\\) is a retract of \\(X\\). Show that that \\(H_i(A)\\) is a direct summand of \\(H_i(X)\\).",
+      "corrected_text": "Show that \\(H_i(A)\\) is a direct summand of \\(H_i(X)\\).",
       "exam_id": "topology-phd-2024-aug",
-      "message": "Removed the duplicated word “that” in Problem 9.",
+      "message": "Removed a duplicated occurrence of “that” in the problem statement.",
       "origin": "extraction",
-      "original_text": "Suppose that \\(A\\) is a retract of \\(X\\). Show that that \\(H_i(A)\\) is a direct summand of \\(H_i(X)\\).",
-      "problem_numbers": [
+      "original_text": "Show that that \\(H_i(A)\\) is a direct summand of \\(H_i(X)\\).",
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -5424,74 +5099,40 @@
     },
     {
       "category": "correction",
-      "context": "“show that one imn-plies the other but the converse does not hold in general”",
-      "corrected_text": "implies",
-      "exam_id": "logic-phd-2009-jan",
-      "message": "Corrected an unambiguous typographical error in “implies.”",
+      "context": "Problem 2(b), describing 1-cochains representing generators of \\(H^1(T)\\).",
+      "corrected_text": "Define 1-cochains that you can show are cocycles and which generate H¹(T).",
+      "exam_id": "topology-phd-2023-may",
+      "message": "Corrected the misspelling “cocyles” to “cocycles.”",
       "origin": "extraction",
-      "original_text": "imn-plies",
-      "problem_numbers": [
-        8
+      "original_text": "Define 1-cochains that you can show are cocyles and which generate H¹(T).",
+      "problem_indices": [
+        2
       ],
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/logic-phd/logic-phd-2009-jan.pdf",
+      "source_pdf": "exams/topology-phd/topology-phd-2023-may.pdf",
       "status": "logged"
     },
     {
       "category": "correction",
-      "context": "Problem 10(a), in the list of equivalent conditions.",
-      "corrected_text": "\\(X\\) is recursively enumerable (that is, the range of a total recursive function);",
-      "exam_id": "logic-phd-2010-may",
-      "message": "Inserted the uniquely determined closing parenthesis in part (a).",
+      "context": "The Hammerstein equation is displayed with f(t,u(t)) and asks for a solution in a space of functions; the left-hand side is therefore u(s).",
+      "corrected_text": "u(s)",
+      "exam_id": "analysis-phd-2005-may",
+      "message": "Corrected an apparent typographical inconsistency in the left-hand side of the Hammerstein equation: the displayed source appears to read “ν(s),” while the equation and requested solution use the unknown function u.",
       "origin": "extraction",
-      "original_text": "\\(X\\) is recursively enumerable (that is, the range of a total recursive function;",
-      "problem_numbers": [
-        10
+      "original_text": "ν(s)",
+      "problem_indices": [
+        5
       ],
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/logic-phd/logic-phd-2010-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Problem 10(b), in the list of equivalent conditions.",
-      "corrected_text": "\\(X\\) is semirecursive (there is a recursive relation \\(R\\) such that, for all \\(x\\), \\(x \\in X \\Longleftrightarrow (\\exists y)R(x,y)\\)).",
-      "exam_id": "logic-phd-2010-may",
-      "message": "Inserted the uniquely determined closing parenthesis in part (b).",
-      "origin": "extraction",
-      "original_text": "\\(X\\) is semirecursive (there is a recursive relation \\(R\\) such that, for all \\(x\\), \\(x \\in X \\Longleftrightarrow (\\exists y)R(x,y)\\).",
-      "problem_numbers": [
-        10
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2010-may.pdf",
-      "status": "logged"
-    },
-    {
-      "category": "correction",
-      "context": "Section 3, source Problem 1.",
-      "corrected_text": "Show that every infinite computably enumerable set has an infinite computable subset.",
-      "exam_id": "logic-phd-2017-may",
-      "message": "Inserted “infinite” before “computably enumerable set”; without this condition, the statement is false for finite computably enumerable sets.",
-      "origin": "extraction",
-      "original_text": "Show that every computably enumerable set has an infinite computable subset.",
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/logic-phd/logic-phd-2017-may.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-2005-may.pdf",
       "status": "logged"
     }
   ],
   "purpose": "Every uniquely determined source correction made during extraction.",
   "review_type": "corrections",
-  "schema_version": 1
+  "schema_version": 2
 }

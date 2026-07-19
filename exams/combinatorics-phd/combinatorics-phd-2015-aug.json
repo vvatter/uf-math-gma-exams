@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "combinatorics-phd-2015-aug",
   "subject": "PhD Combinatorics",
   "subject_tag": "combinatorics-phd",
@@ -7,58 +7,73 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Combinatorics_2015_08.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(f(n)\\) be the number of permutations of length \\(n\\) that contain no cycles of length exactly two.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Find the exponential generating function of the sequence \\(f(n)\\). You can assume that \\(f(0)=1\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Find \\(\\lim_{n\\to\\infty} f(n)/n!\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f(n)\\) be the number of permutations of length \\(n\\) that contain no cycles of length exactly two.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Find the exponential generating function of the sequence \\(f(n)\\). You can assume that \\(f(0)=1\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Find \\(\\lim_{n\\to\\infty} f(n)/n!\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 2,
-      "text": "We select an odd number of people from a group of \\(n\\) people to form a committee. Then we select an even number of people from this committee to serve on a subcommittee. (Zero is an even number.) In how many ways can we do this?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "We select an odd number of people from a group of \\(n\\) people to form a committee. Then we select an even number of people from this committee to serve on a subcommittee. (Zero is an even number.) In how many ways can we do this?",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(T\\) be a tree in which no path is longer than \\(k\\). Is it true that there is a vertex \\(v\\in T\\) that is contained in all paths of length \\(k\\) in \\(T\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(T\\) be a tree in which no path is longer than \\(k\\). Is it true that there is a vertex \\(v\\in T\\) that is contained in all paths of length \\(k\\) in \\(T\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(X_n(S)\\) be the size of the subset \\(S\\) of \\([n]\\) selected uniformly, that is, each element of \\([n]\\) has fifty percent chance to be selected. Compute \\(\\mathrm{VAR}(X_n)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X_n(S)\\) be the size of the subset \\(S\\) of \\([n]\\) selected uniformly, that is, each element of \\([n]\\) has fifty percent chance to be selected. Compute \\(\\mathrm{VAR}(X_n)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(f_n\\) be the number of all parts of all compositions of \\(n\\). So \\(f_1=1\\), \\(f_2=3\\), and \\(f_3=8\\). Find and prove an explicit formula for \\(f_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f_n\\) be the number of all parts of all compositions of \\(n\\). So \\(f_1=1\\), \\(f_2=3\\), and \\(f_3=8\\). Find and prove an explicit formula for \\(f_n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(m_n\\) be the number of ways to have a group of \\(n\\) people split into nonempty subsets, to have each subset sit down around a circular table, then to arrange the tables in a circle. Find the exponential growth rate of the sequence \\(m_n/n!\\). Two arrangements are considered identical if each person has the same left neighbor in them, and each table has the same left neighbor in them.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(m_n\\) be the number of ways to have a group of \\(n\\) people split into nonempty subsets, to have each subset sit down around a circular table, then to arrange the tables in a circle. Find the exponential growth rate of the sequence \\(m_n/n!\\). Two arrangements are considered identical if each person has the same left neighbor in them, and each table has the same left neighbor in them.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Prove that every convex polyhedron has two faces that have the same number of vertices.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that every convex polyhedron has two faces that have the same number of vertices.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(p\\) be a permutation that can be decomposed into the disjoint union of \\(k\\) increasing subsequences, but not into the disjoint union of \\(k-1\\) or fewer increasing subsequences. What can be said about the length of the longest decreasing subsequence of \\(p\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p\\) be a permutation that can be decomposed into the disjoint union of \\(k\\) increasing subsequences, but not into the disjoint union of \\(k-1\\) or fewer increasing subsequences. What can be said about the length of the longest decreasing subsequence of \\(p\\)?",
+        "subparts": []
+      }
     }
   ]
 }

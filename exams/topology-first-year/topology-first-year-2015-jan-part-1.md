@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2015, Part 1
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 8–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that there is no continuous function \(f:[0,1]\to[0,1)\) which is onto.
 
@@ -15,6 +15,8 @@
 **6.** State and prove the Contraction Mapping Theorem.
 
 **7.** Suppose that \(X\) is a complete metric space that is countably infinite. Show that \(X\) has an isolated point.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **8.** State the Intermediate Value Theorem.
 

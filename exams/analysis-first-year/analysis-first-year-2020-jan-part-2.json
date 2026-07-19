@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2020-jan-part-2",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,59 +7,72 @@
   "month": "january",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA-5229-January-2020.pdf",
-  "instructions": "Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(f\\) and \\(f_n\\) (\\(n>0\\)) be real-valued functions on \\((0,1)\\) with \\(f_n\\to f\\). Decide (with proof) the truth/falsity of each of the following statements when the convergence of \\(f_n\\) to \\(f\\) is (a) pointwise (b) uniform:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "if each \\(f_n\\) is increasing on \\((0,1)\\) then so is \\(f\\);",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "if each \\(f_n\\) is bounded then so is \\(f\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated."
     },
     {
-      "number": 2,
-      "text": "Let \\(f:[0,1]\\times[0,1]\\to\\mathbb{R}\\) be a continuous function and let \\(\\epsilon>0\\). Prove that there exist finitely many continuous functions \\(g_1,\\ldots,g_n:[0,1]\\to\\mathbb{R}\\) and \\(h_1,\\ldots,h_n:[0,1]\\to\\mathbb{R}\\) such that\n\\[\n\\left|f(x,y)-\\sum_{j=1}^{n}g_j(x)h_j(y)\\right|<\\epsilon \\quad\\text{for all }(x,y)\\in[0,1]\\times[0,1].\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) and \\(f_n\\) (\\(n>0\\)) be real-valued functions on \\((0,1)\\) with \\(f_n\\to f\\). Decide (with proof) the truth/falsity of each of the following statements when the convergence of \\(f_n\\) to \\(f\\) is (a) pointwise (b) uniform:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "if each \\(f_n\\) is increasing on \\((0,1)\\) then so is \\(f\\);",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "if each \\(f_n\\) is bounded then so is \\(f\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f_n\\) be a sequence of nonnegative measurable functions and suppose there is an \\(L^1\\) function \\(g\\) such that \\(f_n\\leq g\\) for all \\(n\\). Prove that\n\\[\n\\limsup_{n\\to\\infty}\\int f_n\\leq\\int\\limsup_{n\\to\\infty}f_n.\n\\]\nGive an example to show the conclusion can fail if the hypothesis \\(f_n\\leq g\\) is removed.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:[0,1]\\times[0,1]\\to\\mathbb{R}\\) be a continuous function and let \\(\\epsilon>0\\). Prove that there exist finitely many continuous functions \\(g_1,\\ldots,g_n:[0,1]\\to\\mathbb{R}\\) and \\(h_1,\\ldots,h_n:[0,1]\\to\\mathbb{R}\\) such that\n\\[\n\\left|f(x,y)-\\sum_{j=1}^{n}g_j(x)h_j(y)\\right|<\\epsilon \\quad\\text{for all }(x,y)\\in[0,1]\\times[0,1].\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\((X,\\mathcal{M})\\) be a measurable space and \\(f_n:X\\to\\mathbb{R}\\), \\(n=1,2,3,\\ldots\\) a sequence of measurable functions. Prove that each of the following subsets of \\(X\\) is measurable:",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "\\(\\{x\\mid f_n(x)\\to+\\infty\\}\\);",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "\\(\\{x\\mid f_{n+1}(x)>f_n(x)\\text{ for infinitely many }n\\}\\);",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "\\(\\{x\\mid f_n(x)\\text{ is rational for all }n\\}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f_n\\) be a sequence of nonnegative measurable functions and suppose there is an \\(L^1\\) function \\(g\\) such that \\(f_n\\leq g\\) for all \\(n\\). Prove that\n\\[\n\\limsup_{n\\to\\infty}\\int f_n\\leq\\int\\limsup_{n\\to\\infty}f_n.\n\\]\nGive an example to show the conclusion can fail if the hypothesis \\(f_n\\leq g\\) is removed.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(E\\subset[0,1]\\) be a Lebesgue measurable set with \\(m(E)>0\\). Prove that there exists a point \\(0<c<1\\) such that\n\\[\nm(E\\cap[0,c])=\\frac{1}{2}m(E).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,\\mathcal{M})\\) be a measurable space and \\(f_n:X\\to\\mathbb{R}\\), \\(n=1,2,3,\\ldots\\) a sequence of measurable functions. Prove that each of the following subsets of \\(X\\) is measurable:",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "\\(\\{x\\mid f_n(x)\\to+\\infty\\}\\);",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "\\(\\{x\\mid f_{n+1}(x)>f_n(x)\\text{ for infinitely many }n\\}\\);",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "\\(\\{x\\mid f_n(x)\\text{ is rational for all }n\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(E\\subset[0,1]\\) be a Lebesgue measurable set with \\(m(E)>0\\). Prove that there exists a point \\(0<c<1\\) such that\n\\[\nm(E\\cap[0,c])=\\frac{1}{2}m(E).\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

@@ -1,6 +1,10 @@
 # Topology, first year exam, August 2019, Part 1
 
-*Work all problems. Problems 1–5 (Theorems and Proofs): In this section state and prove each theorem. The proofs should be complete without being tedious. Problems 6–15 (Examples and Minor Proofs): In this section, give brief examples, counterexamples, or quick proofs.*
+*Work all problems.*
+
+## Theorems and Proofs.
+
+*In this section state and prove each theorem. The proofs should be complete without being tedious.*
 
 **1.** Let \(X\) be a metric space and suppose that \(A_\lambda \subset X\) is connected for all \(\lambda \in \Lambda\). Suppose that there is an \(x_0 \in X\) such that \(x_0 \in A_\lambda\) for all \(\lambda\). Show that \(\bigcup_{\lambda \in \Lambda} A_\lambda\) is connected.
 
@@ -11,6 +15,10 @@
 **4.** Let \(X\) be a topological space. Suppose that \(f:X \to Y\) is continuous. Show that if \(A \subset X\) is connected, then \(f(A) \subset Y\) is connected.
 
 **5.** Suppose that \(X\) and \(Y\) are metric spaces and that \(X\) is compact. Show that if \(f:X \to Y\) is continuous, then \(f\) is uniformly continuous.
+
+## Examples and Minor Proofs.
+
+*In this section, give brief examples, counterexamples, or quick proofs.*
 
 **6.** State Urysohn’s Lemma.
 

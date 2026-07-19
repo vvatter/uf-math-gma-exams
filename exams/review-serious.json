@@ -1,40 +1,6 @@
 {
   "items": [
     {
-      "category": "visual-content",
-      "context": "The problem asks for the simplicial homology of the Δ-complex drawn in the figure.",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2025-may",
-      "message": "The Δ-complex diagram carries essential information, including edge orientations and simplex attachment data, that is not fully specified by the surrounding text.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The problem defines A as the circle shown in the figure.",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2025-may",
-      "message": "The figure carries essential information about the position of the circle A in the solid torus.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        12
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
-      "status": "open"
-    },
-    {
       "category": "cross-reference",
       "context": "Use (without proof) the assertion of problem #1 to prove that the 6-arcs of Π = PG(2,4) form a block design.",
       "corrected_text": null,
@@ -42,7 +8,7 @@
       "message": "Problem 2 explicitly depends on the assertion of problem #1.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         1,
         2
       ],
@@ -60,7 +26,7 @@
       "message": "The displayed variational form places the lower-order terms inside the scope of the outer sum over \\(i,j\\), while also using an inner sum over \\(i\\). This potentially unintended summation scope has been retained because the intended correction is not uniquely determined by the immediate context.",
       "origin": "extraction",
       "original_text": "\\(I(w)=\\int_{B_1}\\sum_{i,j=1}^n\\left(a_{ij}\\partial_iw\\partial_jw+\\sum_i b_i\\partial_iw\\,w+cw^2\\right)dx\\)",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -77,7 +43,7 @@
       "message": "Problem 6 uses \\(q\\) without defining it. Also, the retained Hint 2, \\(g=|f|^{p-1}\\in L^q\\), does not account for the sign of a general \\(f\\), and the endpoint \\(p=1\\) requires separate treatment. The intended correction is not uniquely determined from the immediate context.",
       "origin": "extraction",
       "original_text": "Fix 1 ≤ p < ∞, and let f ∈ L^p(X, A, μ). Show that ‖f‖_p = sup{∫fg dμ : ‖g‖_q ≤ 1}. Hint: 2. Show that g = |f|^{p−1} ∈ L^q.",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -94,7 +60,7 @@
       "message": "The source visibly defines \\(\\mu(A)=\\int_A x\\,dx\\) while calling \\(\\mu\\) a measure on the sigma-algebra of symmetric Borel sets. For sets such as \\(\\mathbb R\\), this signed Lebesgue integral is not defined, so the intended integrand may contain an unprinted or unclear modification. No correction is uniquely determined, and the source reading has been retained.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         8
       ],
       "source_pages": [
@@ -105,40 +71,6 @@
       "status": "open"
     },
     {
-      "category": "visual-content",
-      "context": "The surrounding text states that each row of the diagram is a short exact sequence and refers to maps labeled \\(\\alpha\\), \\(\\beta\\), and \\(\\gamma\\).",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-1988-sep",
-      "message": "A commutative diagram of modules and homomorphisms carries information needed for the problem and has not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        5
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The surrounding text refers to a surjective map \\(g\\), a map \\(f\\), and a lift \\(h:P\\to A\\), with the required relationship conveyed by the diagrams.",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-1988-sep",
-      "message": "Two diagrams specifying the projective-module lifting property carry information needed for the definition and have not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        7
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "Prove that the group G of upper triangular 2 by 2 matrices with integer coefficients is a free nilpotent class 2 group on two generators.",
       "corrected_text": null,
@@ -146,7 +78,7 @@
       "message": "The source clearly appears to say “upper triangular 2 by 2 matrices with integer coefficients,” but as written these matrices do not specify the standard free nilpotent class 2 group on two generators. A possible intended formulation involving upper unitriangular 3 by 3 integer matrices is not uniquely determined from the source, so the source reading has been retained.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -163,7 +95,7 @@
       "message": "Problem 4 includes a commutative diagram of ring homomorphisms whose arrows and labels carry information; the diagram is not transcribed.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -180,7 +112,7 @@
       "message": "The setup beginning “Let \\(K\\) be a subfield of the real numbers” appears between parts a) and b) and supplies the notation \\(K\\) and \\(f\\) used throughout parts b)–(d). It has been included at the beginning of part b).",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -198,7 +130,7 @@
       "message": "The displayed indexing condition has been retained as printed, but its scope is mathematically ambiguous because the relation \\(yx_iy^{-1}=x_{i+1}\\) does not involve \\(j\\).",
       "origin": "extraction",
       "original_text": "\\(x_ix_j=x_jx_i,\\;yx_iy^{-1}=x_{i+1}\\text{ for }1\\leq i<j\\leq n\\)",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -215,7 +147,7 @@
       "message": "The source says only that \\(p\\) is prime, but the assertion that \\(K\\) contains a quadratic extension of \\(\\mathbb Q\\) fails when \\(p=2\\). A possible omitted restriction cannot be determined uniquely, so the source's mathematical scope has been retained.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -232,7 +164,7 @@
       "message": "Even after the grammatical correction, the printed assertion appears to require an additional hypothesis: a finite-dimensional semisimple \\(k\\)-algebra need not be a direct sum of fields. No missing hypothesis is uniquely determined, so none has been added.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -249,32 +181,13 @@
       "message": "Problem 6 depends on a commutative diagram specifying the modules and homomorphisms in two exact rows. The surrounding text and subparts have been transcribed, but the diagram itself has not been reconstructed.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
         1
       ],
       "source_pdf": "exams/algebra-phd/algebra-phd-2018-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "The phrase “see the previous problem for the definition” in Problem 10 points to Problem 9(ii).",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-2022-jan",
-      "message": "Problem 10 refers to the definition of a multiplicative system in the previous problem, namely Problem 9(ii).",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        9,
-        10
-      ],
-      "source_pages": [
-        1,
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
       "status": "open"
     },
     {
@@ -285,7 +198,7 @@
       "message": "The commutative diagram of the projective resolutions carries mathematical information and was not reconstructed.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -302,7 +215,7 @@
       "message": "A commutative diagram carrying mathematical information follows the final sentence of the problem and is not represented in the extracted text.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -319,7 +232,7 @@
       "message": "Part (b) is not valid if the sequence \\(\\{x_n\\}\\) contains repeated values: the jump at \\(x_n\\) would include every \\(c_k\\) for which \\(x_k=x_n\\). The intended repair is not unique; the source reading has therefore been retained.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -336,7 +249,7 @@
       "message": "The source clearly says “Lebesgue-measurable functions,” but measurability and uniform convergence alone do not ensure the stated integrability conclusion, even when the measure is finite. A missing integrability hypothesis may have been intended, but the correction is not uniquely determined, so the source wording has been retained.",
       "origin": "extraction",
       "original_text": "a sequence of Lebesgue-measurable functions converging uniformly to f",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -353,99 +266,13 @@
       "message": "The problem is preserved as printed, but its conclusion generally fails without an additional condition such as \\(f(0)=0\\), or without replacing \\(f(x)/x\\) by \\((f(x)-f(0))/x\\). The intended repair is not uniquely determined.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
         1
       ],
       "source_pdf": "exams/analysis-first-year/analysis-first-year-2019-aug-part-1.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "This instruction refers to two other numbered problems.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1994-may",
-      "message": "The instructions require proving one of the theorems stated in problems 8 or 9.",
-      "origin": "extraction",
-      "original_text": "Prove one of the theorems 8 or 9.",
-      "problem_numbers": [
-        8,
-        9
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "The only global assumption printed is that \\((X,\\Sigma,\\mu)\\) is a finite measure space.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1994-oct",
-      "message": "The printed conclusion does not follow from the stated assumption that the measure space is merely finite. The Schwarz inequality yields a lower bound involving \\(\\mu(X)^2\\); several different additional hypotheses or changes could repair the statement, so no correction was made.",
-      "origin": "extraction",
-      "original_text": "Let \\(f\\ge 0\\) be \\(\\mu\\)-integrable such that \\(\\int f\\,d\\mu\\le 1\\). Prove the \\(\\int \\frac{1}{f}\\,d\\mu\\ge 1\\).",
-      "problem_numbers": [
-        14
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-oct.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": null,
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1999-may",
-      "message": "Problem 13 is cut off at the bottom of the source page after “functions,” so the remainder of the problem is unavailable. The visible value-space letter before “-step” appears to be F but is somewhat ambiguous.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        13
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "“for functions \\(f\\in L^1(\\mu)\\) and for functions \\(f\\in L_F^1(\\mu)\\)”",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2001-may",
-      "message": "The subscript in the second function-space notation is difficult to distinguish in the handwriting; it has been transcribed as \\(F\\).",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        14
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2001-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "Problem 12 ends at the bottom of source page 1.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2002-sep",
-      "message": "The formula following “and the equality” is cut off at the bottom edge of the source image. The extraction preserves the visible fragment and does not reconstruct the missing equality.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        12
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2002-sep.pdf",
       "status": "open"
     },
     {
@@ -456,7 +283,7 @@
       "message": "The mark following the calligraphic S is visually unclear; it has been transcribed as a prime because the parenthetical identifies the space as tempered distributions.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -473,7 +300,7 @@
       "message": "The instruction “Attempt EIGHT problems” is inconsistent with the supplied source, which contains only five top-level problems.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         1,
         2,
         3,
@@ -488,30 +315,13 @@
     },
     {
       "category": "transcription",
-      "context": "Problem 8 defines only the sequence (φₙ) before stating the conclusion about f.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2016-may",
-      "message": "The source does not introduce or quantify the function f used in the conclusion. The source wording has been retained.",
-      "origin": "extraction",
-      "original_text": "Prove that f * φₙ → f in L¹(ℝ).",
-      "problem_numbers": [
-        8
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2016-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
       "context": "“Given \\(f\\in L^1(\\mu)\\), show, by considering the mapping \\(\\rho:\\mathcal N\\to[0,\\infty)\\) defined by \\(\\rho(E)=\\int_E f\\,d\\mu\\)”",
       "corrected_text": null,
       "exam_id": "analysis-phd-2018-may",
       "message": "The source assigns \\(\\rho\\) the codomain \\([0,\\infty)\\), although for an arbitrary \\(f\\in L^1(\\mu)\\), the values \\(\\int_E f\\,d\\mu\\) need not be nonnegative. The intended repair is not uniquely determined: the codomain may be misstated, or a nonnegativity assumption on \\(f\\) may be missing. The source reading has been retained.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -528,7 +338,7 @@
       "message": "The summation upper limit is clearly printed as \\(m\\), but \\(m\\) is otherwise undefined and no conditions are given under which the displayed identity holds. The source reading has been preserved because the intended correction is not uniquely determined.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -545,7 +355,7 @@
       "message": "The recurrence is stated only for \\(n\\ge 1\\), while the sole initial condition is \\(a_0=0\\); these conditions do not determine \\(a_1\\) and hence do not uniquely determine the sequence. The intended lower bound or initial condition is unclear, so the source reading has been retained.",
       "origin": "extraction",
       "original_text": "\\(a_{n+1}=(n+1)a_n+2(n+1)!\\) if \\(n\\ge 1\\), and \\(a_0=0\\)",
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -562,7 +372,7 @@
       "message": "Five diagrams illustrate the tilings counted by a(2) = 5; the visual examples have not been reconstructed.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -579,7 +389,7 @@
       "message": "As printed, part (a) does not yield the Erdős–Szekeres theorem stated in part (b): setting \\(r=s=n\\) gives only size \\(n\\), while setting \\(r=s=n+1\\) does not satisfy the stated threshold. The intended correction is not unique, so the source reading has been retained.",
       "origin": "extraction",
       "original_text": "Prove that if P has size at least rs + 1, then there is either a chain of size r or an antichain of size s.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -596,7 +406,7 @@
       "message": "The problem does not specify the length of the strings, so the requested finite count is underdetermined. A likely missing condition is a fixed length, but the intended wording cannot be determined uniquely from the source.",
       "origin": "extraction",
       "original_text": "How many strings can be formed using the alphabet {A, B, C, D, E} if",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -613,7 +423,7 @@
       "message": "The statement as printed is false when the unique element covered by \\(y\\) is the minimal element \\(0\\). A condition such as \\(x\\ne0\\) may be missing, but the intended correction is not uniquely determined, so the source reading has been retained.",
       "origin": "extraction",
       "original_text": "Let \\(y\\in P\\) so that there is only one \\(x\\) covered by \\(y\\). Show \\(\\mu(0,y)=0\\).",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -630,7 +440,7 @@
       "message": "The source reading is clear, but the hypotheses and conclusion are mathematically inconsistent: \\(\\sin \\pi z\\) has derivative \\(\\pi\\), not 1, at 0 and is unbounded on the imaginary axis. The intended correction is not uniquely determined, so the source text has been retained.",
       "origin": "extraction",
       "original_text": "Suppose \\(f'(0)=1\\), \\(f(1/2)=1\\) and \\(f\\) is bounded on the imaginary axis. Show that \\(f(z)=\\sin \\pi z\\).",
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -647,7 +457,7 @@
       "message": "The statement is preserved as printed, but it overlooks the possible case \\(g\\equiv0\\), for example when \\(g_n\\equiv1/n\\). The intended correction is not uniquely determined: one could assume \\(g\\not\\equiv0\\) or conclude that \\(g\\) is identically zero or has only real zeros.",
       "origin": "extraction",
       "original_text": "If each \\(g_n\\) has only real zeros, show that \\(g\\) has only real zeroes.",
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -664,7 +474,7 @@
       "message": "The displayed tangent-map formula is type-inconsistent with the definitions that follow it. The maps \\(\\lambda^a\\) and \\(\\rho^b\\) are defined as maps into \\(G\\times G\\), so their tangent vectors lie in \\(T_{(a,b)}(G\\times G)\\), while \\(p_*(\\xi,\\eta)\\) lies in \\(T_{p(a,b)}G\\). More than one repair is possible, so the source reading has been retained.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         6
       ],
       "source_pages": [
@@ -681,7 +491,7 @@
       "message": "Problem 5 continues with a part labeled (b) on source page 2, but the preceding task on source page 1 has no displayed (a) label. The unlabeled task has therefore been retained in the problem stem rather than assigning an unprinted label.",
       "origin": "extraction",
       "original_text": "5. Let G = [0,2] ... Use the contraction mapping theorem ...\n(b) Consider the fixed point iteration method ...",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -699,7 +509,7 @@
       "message": "The source calls H an “orthogonal projection,” but H=I−2wwᵗ is generally a Householder reflection (and an orthogonal matrix), not a projection. The source wording was retained because the intended replacement is not uniquely determined.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -716,7 +526,7 @@
       "message": "The displayed dimensions make the product \\(BA\\) undefined in general. The source reading has been retained because it is unclear whether the dimensions or the product order should be corrected.",
       "origin": "extraction",
       "original_text": "If \\(A\\in\\mathbb R^{m\\times n}\\) and \\(B\\in\\mathbb R^{n\\times q}\\), then \\(\\lVert BA\\rVert_2\\leq\\lVert B\\rVert_2\\cdot\\lVert A\\rVert_2\\).",
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -733,7 +543,7 @@
       "message": "The source clearly asks for the projection of \\(A\\) onto its own column space, but the intended object is mathematically ambiguous; it may have intended the orthogonal projection matrix onto the column space. The source wording has been retained.",
       "origin": "extraction",
       "original_text": "Determine the orthogonal projection of \\(A\\) onto the column space of \\(A\\).",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -750,7 +560,7 @@
       "message": "Problem 1(b)(ii) explicitly refers to Problem (1a).",
       "origin": "extraction",
       "original_text": "Problem (1a)",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -767,7 +577,7 @@
       "message": "Problem 9(b) refers to the preceding calculation as “the previous problem.”",
       "origin": "extraction",
       "original_text": "check this result agrees with the previous problem",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -784,7 +594,7 @@
       "message": "Part (b) refers to “the previous problem,” apparently meaning part (a); the source wording has been preserved.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -801,7 +611,7 @@
       "message": "Part (b) explicitly depends on the result of part (a); the reference remains valid under the extracted numbering.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         10
       ],
       "source_pages": [
@@ -818,7 +628,7 @@
       "message": "Problem 4(b) refers to “the previous problem,” apparently referring to part (a); the source wording has been preserved.",
       "origin": "extraction",
       "original_text": "Use these to find the linear least squares approx to \\(f(x)=x^2\\), and check this result agrees with the previous problem.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -835,7 +645,7 @@
       "message": "The allowed Legendre and Chebyshev polynomials are presented as an informational table on source page 1; the table has been transcribed into MathJax in the instructions.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [],
+      "problem_indices": [],
       "source_pages": [
         1
       ],
@@ -850,7 +660,7 @@
       "message": "Part (c) uses \\(A^{-1}\\), but the standing assumption \\(\\lVert A\\rVert_p<1\\) does not imply that \\(A\\) is invertible. The source reading has been retained because the intended correction is not uniquely determined.",
       "origin": "extraction",
       "original_text": "Prove that \\(\\lVert A\\rVert_q\\lVert A^{-1}\\rVert_q\\geq 1\\), \\(\\forall 1\\leq q\\leq\\infty\\).",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -867,7 +677,7 @@
       "message": "The source specifies a potentially rectangular matrix as a projector, although projectors and orthogonal projectors ordinarily require a square matrix. In addition, the stated equivalence has the zero orthogonal projector as a possible exception unless nonzero projectors are assumed. The intended dimensions and convention are not uniquely determined, so the source wording has been retained.",
       "origin": "extraction",
       "original_text": "Let P ∈ C^{m×n} be a projector. Show that ‖P‖₂ = 1 if and only if P is an orthogonal projector.",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -884,7 +694,7 @@
       "message": "Part (b) refers to n singular values and asserts σ_n > 0, which requires full column rank and hence m ≥ n. The condition n < m appears only in part (a), so it is unclear whether it is intended to continue into part (b). The source wording has been retained.",
       "origin": "extraction",
       "original_text": "Suppose A is full rank and x ≠ 0. Let σ_i, i = 1, ···, n be the singular values of A. Show σ_1 ≥ ‖Ax‖₂/‖x‖₂ ≥ σ_n > 0.",
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -901,7 +711,7 @@
       "message": "Part (c) is preserved as printed, but the stated assumptions do not ensure that \\(A^{-1}\\) exists; for example, \\(A=0\\) satisfies \\(\\|A\\|_p<1\\). The intended additional assumption or alteration is not uniquely determined.",
       "origin": "extraction",
       "original_text": "Prove that \\(\\|A\\|_q\\|A^{-1}\\|_q\\ge 1\\), \\(\\forall\\,1\\le q\\le\\infty\\).",
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -918,7 +728,7 @@
       "message": "Problem 5(b) explicitly refers to the quadratic program (QP) in problem 4.",
       "origin": "extraction",
       "original_text": "Returning to (QP) of problem 4, show that there is no duality gap.",
-      "problem_numbers": [
+      "problem_indices": [
         4,
         5
       ],
@@ -937,7 +747,7 @@
       "message": "Several mathematical symbols are absent from the rendered source: the name of the quadratic functional is missing in its definition and later occurrences, and the positive coercivity constant is missing both after “There exists” and before the integral in the inequality. Descriptive placeholders were retained rather than guessing the symbols.",
       "origin": "extraction",
       "original_text": "“Define by (h) := … Suppose that has the following property: There exists > 0 such that (h) ≥ ∫ … Hint: … show that (u) = 0.”",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -954,7 +764,7 @@
       "message": "The source is internally inconsistent: it states “where g, h are smooth functions,” but g does not occur in the displayed problem, while f does. The stated data may also omit an initial-displacement condition. The intended correction is not uniquely determined, so the source reading has been retained.",
       "origin": "extraction",
       "original_text": "u = 0 on Γ_T; u_t = h on U × {t = 0}; where g, h are smooth functions.",
-      "problem_numbers": [
+      "problem_indices": [
         7
       ],
       "source_pages": [
@@ -971,7 +781,7 @@
       "message": "Part (b) is retained as printed, but its conclusion can fail for a nonconstant symmetric characteristic function when the sequence alternates in sign. Any intended additional restriction or alternative conclusion is not uniquely determined.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         4
       ],
       "source_pages": [
@@ -988,7 +798,7 @@
       "message": "A small mark immediately following μ in the first sentence is unclear and may be a superscript or a stray correction mark. The symbol is extracted as μ because the concluding sentence clearly refers to μ.",
       "origin": "extraction",
       "original_text": "Let μ[unclear mark] be a non-trivial infinitely divisible distribution on R¹.",
-      "problem_numbers": [
+      "problem_indices": [
         9
       ],
       "source_pages": [
@@ -1005,7 +815,7 @@
       "message": "The final clause of Problem 1 is partially cut off at the bottom of source page 1. It has been completed from the visible wording and immediate mathematical context.",
       "origin": "extraction",
       "original_text": "For those which are not martingales w.r.t. this filtration, what conditions have to be added to be ...",
-      "problem_numbers": [
+      "problem_indices": [
         1
       ],
       "source_pages": [
@@ -1022,30 +832,13 @@
       "message": "Problem 3 explicitly requires that the conditions of Problem 2 hold.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
         3
       ],
       "source_pdf": "exams/probability-phd/probability-phd-2003-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "The source reads \\(\\{(a,b],[b,c)\\mid a<b,\\ c<d\\}\\). Either the second interval or its accompanying inequality may contain a typographical error.",
-      "corrected_text": null,
-      "exam_id": "topology-first-year-2013-jan-part-1",
-      "message": "The displayed family of intervals contains an internal variable mismatch. The source reading has been retained because the intended correction is not unique.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        11
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
       "status": "open"
     },
     {
@@ -1056,47 +849,13 @@
       "message": "Both subparts of Problem 12 are labeled “(a)” in the source; the duplicate labels have been retained exactly.",
       "origin": "extraction",
       "original_text": "(a) Give a space \\(X\\) whose fundamental group is the free group on three generators. (a) Describe a space \\(Y\\) whose fundamental group is the group \\(G\\).",
-      "problem_numbers": [
+      "problem_indices": [
         12
       ],
       "source_pages": [
         2
       ],
       "source_pdf": "exams/topology-first-year/topology-first-year-2015-may-part-2.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "Problem 6 asks whether this sequence converges in three function-space topologies.",
-      "corrected_text": null,
-      "exam_id": "topology-first-year-2020-may-part-2",
-      "message": "The source clearly gives a real-valued function on all of \\(\\mathbb R\\) by \\(f_n(x)=\\sqrt{x}/n\\), but this formula is not real-valued for negative \\(x\\). The intended domain or formula cannot be determined uniquely, so the source reading has been retained.",
-      "origin": "extraction",
-      "original_text": "\\(f_n:\\mathbb R\\to\\mathbb R,\\ f_n(x)=\\sqrt{x}/n\\)",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2020-may-part-2.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "Problem 6 asks whether this sequence converges in three function-space topologies.",
-      "corrected_text": null,
-      "exam_id": "topology-first-year-2021-aug-part-2",
-      "message": "The source explicitly defines the sequence as real-valued on all of \\(\\mathbb{R}\\), but \\(\\ln(x^{1/n})\\) is not real-defined for every real \\(x\\) and every positive integer \\(n\\). The intended domain or formula is not uniquely determined, so the source reading has been retained.",
-      "origin": "extraction",
-      "original_text": "f_n : R → R, f_n(x) = ln(x^(1/n))",
-      "problem_numbers": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2021-aug-part-2.pdf",
       "status": "open"
     },
     {
@@ -1107,7 +866,7 @@
       "message": "The figures referenced in problems 6 and 7 carry information needed to answer the questions and have not been reconstructed.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         6,
         7
       ],
@@ -1119,13 +878,368 @@
     },
     {
       "category": "transcription",
-      "context": "Describe a space X with π(X) ≅ Z/3Z.",
+      "context": "Problem 3 assumes only that G has order 315; part (i) gives a conclusion conditional on a Sylow 3-subgroup being normal.",
+      "corrected_text": null,
+      "exam_id": "algebra-first-year-2023-may-part-1",
+      "message": "The source clearly states that one should deduce that every group of order 315 is abelian, but this conclusion appears mathematically false; nonabelian groups of order 315 exist. The intended statement is not uniquely determined, so the source reading has been retained.",
+      "origin": "extraction",
+      "original_text": "(ii) Deduce from this that G is abelian.",
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-first-year/algebra-first-year-2023-may-part-1.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "Problem 10 refers to the definition given in Problem 9(ii).",
+      "corrected_text": null,
+      "exam_id": "algebra-phd-2022-jan",
+      "message": "The definition of a multiplicative system is supplied in the preceding problem.",
+      "origin": "extraction",
+      "original_text": "see the previous problem for the definition",
+      "problem_indices": [
+        10
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "visual-content",
+      "context": "The surrounding text asks the student to prove that \\(\\beta\\) is an isomorphism when \\(\\alpha\\) and \\(\\gamma\\) are isomorphisms.",
+      "corrected_text": null,
+      "exam_id": "algebra-phd-1988-sep",
+      "message": "The problem contains a commutative diagram of two short exact sequences. The diagram specifies the modules, maps, and commutativity relations needed for the problem and has not been reconstructed.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        5
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
+      "status": "open"
+    },
+    {
+      "category": "visual-content",
+      "context": "The surrounding text refers to a surjective map \\(g\\), a map \\(h:P\\to A\\), and commutativity of the second diagram.",
+      "corrected_text": null,
+      "exam_id": "algebra-phd-1988-sep",
+      "message": "The definition of a projective module is accompanied by two diagrams specifying the maps and lifting relation. The diagrams carry essential information and have not been reconstructed.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        7
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "“Let \\((S_\\infty,\\Sigma,\\mu)\\) be a finite measure space,” followed later by \\(\\int_S\\) and “pointwise on \\(S\\).”",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1993-jan",
+      "message": "The underlying space in the opening tuple appears to be printed as \\(S_\\infty\\), but the integral and the later pointwise-convergence statement refer to \\(S\\). The intended symbol is uncertain, so the apparent source reading has been retained.",
+      "origin": "extraction",
+      "original_text": "\\((S_\\infty,\\Sigma,\\mu)\\)",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "The referenced prompts are “The Fubini theorem” and “The dual of \\(L^p\\) \\((1 \\leq p < \\infty)\\).”",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1994-may",
+      "message": "The exam-level instruction refers to theorem prompts 8 and 9 in section I.",
+      "origin": "extraction",
+      "original_text": "II. Prove one of the theorems 8 or 9.",
+      "problem_indices": [
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "“Prove 2 of the above theorems 3, 5, 6, 7.”",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2001-sep",
+      "message": "The instruction labeled II refers to the numbered theorem statements in Section I.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        3,
+        5,
+        6,
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2001-sep.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "The referenced theorems are the Vitali convergence theorem and the completeness theorem for \\(L_F^p(\\mu)\\).",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1999-may",
+      "message": "The exam-level instruction refers to theorem numbers 3 and 7 in Section I.",
+      "origin": "extraction",
+      "original_text": "II. Prove one of the theorems 3 or 7.",
+      "problem_indices": [
+        3,
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 5 of Section III ends at the lower edge of the scanned page.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1999-may",
+      "message": "The final problem is cut off at the bottom of page 1, and no continuation appears on page 2. Only the visible text has been transcribed.",
+      "origin": "extraction",
+      "original_text": "If \\(f\\in L_F^p(\\mu)\\), there is a sequence \\((f_n)\\) of \\(F\\)-step functions",
+      "problem_indices": [
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "Part II Prove one of either Theorem 3 or 7 from part I.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2003-jan",
+      "message": "The Part II instruction refers to Theorems 3 and 7 from Part I.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        3,
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2003-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "II. Prove one of the theorems 6 or 7.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1997-jan",
+      "message": "The instruction in Part II refers to theorems 6 and 7, which are the sixth and seventh problems in Part I.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        6,
+        7
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "cross-reference",
+      "context": "Show that the conclusion of the monotone convergence theorem is not true.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1997-jan",
+      "message": "This problem refers to the monotone convergence theorem stated in the first problem of Part I.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        1,
+        15
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Let μ be the Lebesgue measure on (0,1). Each point x∈(0,1] has a binary expansion.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1997-jan",
+      "message": "The source legibly uses \\((0,1)\\) for the measure space but \\((0,1]\\) for the binary-expansion domain; whether this endpoint difference is intentional is unclear.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        16
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
+      "status": "open"
+    },
+    {
+      "category": "shared-context",
+      "context": "Problem 10 uses \\(L_F^1(\\nu)\\) and \\(L_F^1(\\mu)\\), while \\(F\\) is introduced only in Problem 8.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2002-may",
+      "message": "The Banach space symbol F used in L_F^1 is not defined within this problem; it may carry over from the first problem in Section III.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "The problem ends with “Prove the existence of the product measure μ×ν and the equality …” at the bottom of source page 1.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2002-sep",
+      "message": "The final equality in this problem is clipped by the bottom edge of the source image. The extraction uses the likely reading \\(\\lvert\\mu\\times\\nu\\rvert=\\lvert\\mu\\rvert\\times\\lvert\\nu\\rvert\\), but it should be checked against the original document.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-sep.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 1 assumes only that \\(g\\) is continuously differentiable on \\([a,b]\\).",
+      "corrected_text": null,
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "Part (v) asks for quadratic convergence under continuous differentiability and \\(g'(\\alpha)=0\\). Those assumptions generally imply superlinear, but not necessarily quadratic, convergence; a stronger regularity assumption may be missing, but the intended correction is not uniquely determined.",
+      "origin": "extraction",
+      "original_text": "Assume in addition that \\(g'(\\alpha)=0\\) and show that the sequence converges quadratically.",
+      "problem_indices": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "shared-context",
+      "context": "The appendix is displayed after Problem 7 and discusses Hermite interpolation at zeros of orthogonal polynomials.",
+      "corrected_text": null,
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "The appendix appears relevant to the Gaussian Quadrature problem, but the source does not explicitly assign it to that or any other problem.",
+      "origin": "extraction",
+      "original_text": "Appendix: Recall that the Hermite polynomials can be written as …",
+      "problem_indices": [
+        5
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 11 asks whether this family forms a basis for a topology on \\(\\mathbb{R}\\).",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2013-jan-part-1",
+      "message": "The displayed family of half-open intervals uses \\([b,c)\\), while its conditions include the otherwise unused variable \\(d\\). The intended endpoints or inequalities are not uniquely determined, so the source reading has been retained.",
+      "origin": "extraction",
+      "original_text": "\\(\\{(a,b], [b,c) \\mid a<b, c<d\\}\\)",
+      "problem_indices": [
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
+      "status": "open"
+    },
+    {
+      "category": "numbering",
+      "context": "There is no displayed section or part heading that explains the second occurrence of problem numbers 6 and 7.",
+      "corrected_text": null,
+      "exam_id": "probability-phd-1997-sep",
+      "message": "The source numbering is inconsistent: page 1 contains problems 1–7, but page 2 begins again with problem 6 without a displayed section heading, then continues with 7–9. Problems are retained in document reading order.",
+      "origin": "extraction",
+      "original_text": "Page 1: 1, 2, 3, 4, 5, 6, 7; pages 2–3: 6, 7, 8, 9",
+      "problem_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1,
+        2,
+        3
+      ],
+      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Problem 6 defines a sequence of real-valued functions on all of \\(\\mathbb R\\).",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2020-may-part-2",
+      "message": "The displayed definition is mathematically inconsistent over the stated real domain: \\(\\sqrt{x}\\) is not real-valued for negative \\(x\\). The intended correction to the domain or formula is not uniquely determined, so the source reading has been retained.",
+      "origin": "extraction",
+      "original_text": "\\(f_n:\\mathbb R\\to\\mathbb R,\\ f_n(x)=\\sqrt{x}/n\\)",
+      "problem_indices": [
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2020-may-part-2.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "Describe a space \\(X\\) with \\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\).",
       "corrected_text": null,
       "exam_id": "topology-first-year-2025-aug-part-2",
-      "message": "The source clearly reads \\(\\pi(X)\\), but the intended invariant is unclear; \\(\\pi_1(X)\\) may have been intended. The source notation has been retained.",
+      "message": "The source clearly displays \\(\\pi(X)\\), though \\(\\pi_1(X)\\) may have been intended; the source notation has been retained.",
       "origin": "extraction",
       "original_text": "\\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\)",
-      "problem_numbers": [
+      "problem_indices": [
         14
       ],
       "source_pages": [
@@ -1135,31 +1249,14 @@
       "status": "open"
     },
     {
-      "category": "transcription",
-      "context": null,
-      "corrected_text": null,
-      "exam_id": "topology-phd-2006-may",
-      "message": "The source clearly displays \\(j:S^1\\subset S^4\\), although an arrow or hook arrow may have been intended in the declaration of the embedding; the displayed notation has been preserved.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_numbers": [
-        13
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2006-may.pdf",
-      "status": "open"
-    },
-    {
       "category": "visual-content",
-      "context": "Problem 5 refers to the space “as shown” in a diagram.",
+      "context": "“Let \\(X\\) be the space obtained by filling in two discs in the torus, as shown (the discs lie inside the surface of the torus).”",
       "corrected_text": null,
       "exam_id": "topology-phd-2022-aug",
-      "message": "The accompanying diagram carries information about the placement of the two discs in the torus and is necessary for interpreting the space.",
+      "message": "The problem depends on a figure showing the placement of the two discs in the torus; the visual information has not been reconstructed.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         5
       ],
       "source_pages": [
@@ -1170,13 +1267,13 @@
     },
     {
       "category": "visual-content",
-      "context": "The figure following the stem labels boundary edges, diagonal edges, and four 2-simplices.",
+      "context": "Consider the torus \\(T=S^1\\times S^1\\) with the following \\(\\Delta\\)-complex structure.",
       "corrected_text": null,
       "exam_id": "topology-phd-2023-may",
-      "message": "A diagram supplies the oriented Δ-complex structure of the torus needed for all parts of this problem and cannot be represented fully in the text extraction.",
+      "message": "The diagram supplies essential information about the torus’s Δ-complex structure, including simplex labels and edge orientations, and is not reconstructed in the text extraction.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         2
       ],
       "source_pages": [
@@ -1187,13 +1284,13 @@
     },
     {
       "category": "visual-content",
-      "context": "A triangular 2-simplex diagram appears below the problem statement, with vertices and edges identified and arrows indicating edge orientations.",
+      "context": "“Consider the Δ-complex X drawn below. (Note the orientation of the three edges carefully.)”",
       "corrected_text": null,
       "exam_id": "topology-phd-2026-jan",
-      "message": "Problem 3 depends on a diagram showing the identifications and orientations of the edges of a Δ-complex; the visual has not been reconstructed.",
+      "message": "The diagram defining the Δ-complex, including its edge orientations and identifications, carries information needed to solve the problem and is not represented in the extracted text.",
       "origin": "extraction",
       "original_text": null,
-      "problem_numbers": [
+      "problem_indices": [
         3
       ],
       "source_pages": [
@@ -1201,9 +1298,60 @@
       ],
       "source_pdf": "exams/topology-phd/topology-phd-2026-jan.pdf",
       "status": "open"
+    },
+    {
+      "category": "visual-content",
+      "context": "The problem refers to the Δ-complex drawn below.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2025-may",
+      "message": "The diagram of the Δ-complex contains edge orientations and identifications needed to compute its simplicial homology.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        3
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "visual-content",
+      "context": "The problem identifies A as the circle shown in the figure.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2025-may",
+      "message": "The figure specifies how the circle A is embedded in the solid torus and is necessary for the retraction problem.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_indices": [
+        12
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+      "status": "open"
+    },
+    {
+      "category": "transcription",
+      "context": "The exam-level assumption states only that \\((X,\\Sigma,\\mu)\\) is a finite measure space.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1994-oct",
+      "message": "The source statement was retained, but on a general finite measure space the displayed hypotheses do not imply the stated lower bound. An additional normalization such as \\(\\mu(X)=1\\), or a different lower bound, may have been intended; the correction is not uniquely determined.",
+      "origin": "extraction",
+      "original_text": "Let \\(f\\geq 0\\) be \\(\\mu\\)-integrable such that \\(\\int f\\,d\\mu\\leq 1\\). Prove that \\(\\int \\frac{1}{f}\\,d\\mu\\geq 1\\).",
+      "problem_indices": [
+        14
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-oct.pdf",
+      "status": "open"
     }
   ],
   "purpose": "Unresolved cases that require human review before publication.",
   "review_type": "serious",
-  "schema_version": 1
+  "schema_version": 2
 }

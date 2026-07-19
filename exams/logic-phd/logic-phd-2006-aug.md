@@ -1,6 +1,8 @@
 # Logic, PhD exam, August 2006
 
-*Complete seven problems, including one from each section. Problems 1–3 concern General logic; Problems 4–6 concern Model theory; Problems 7–9 concern Set theory; Problems 10–12 concern Computability.*
+*Please complete seven problems among the following, including one from each section.*
+
+## 1. General logic
 
 **1.** State the incompleteness theorem and explain the role of Gödel numbering in its proof.
 
@@ -8,21 +10,27 @@
 
 **3.** Sketch the proof of Tarski’s undefinability of truth.
 
+## 2. Model theory
+
 **4.** Prove that the theory of dense linear orders without endpoints is complete.
 
 **5.** Find two models which are elementarily equivalent but not isomorphic.
 
 **6.** State and prove Tarski’s criterion for elementary submodels.
 
+## 3. Set theory
+
 **7.** Sketch the proof of \(L\) satisfying CH.
 
 **8.** State and prove the infinite Ramsey theorem.
 
-**9.** Prove that every stationary subset of omega one can be split into aleph one many pairwise disjoint stationary subsets.
+**9.** Prove that every stationary subset of \(\omega_1\) can be split into \(\aleph_1\) many pairwise disjoint stationary subsets.
+
+## 4. Computability
 
 **10.** Show how to construct a simple recursively enumerable set \(A\) (meaning that \(\omega-A\) has no infinite r.e. subset).
 
-**11.** Define the recursively enumerable set \(K=\{a:\{a\}(a)\mathord\downarrow\}\). Use the \(S_1^1\) function to show that \(K\) is many-one complete.
+**11.** Define the recursively enumerable set \(K=\{a:\{a\}(a)\mathbin{\downarrow}\}\). Use the \(S_1^1\) function to show that \(K\) is many-one complete.
 
 **12.** Prove that the following are equivalent, for any nonempty \(A\subset\omega\):
 * (a) \(A\) is the domain of some partial recursive function \(\phi\).

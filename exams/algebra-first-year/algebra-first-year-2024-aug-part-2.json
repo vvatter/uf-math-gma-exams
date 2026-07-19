@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2024-aug-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,64 +7,79 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2024-08.pdf",
-  "instructions": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show that the ring \\(\\mathbb{Z}[\\sqrt{-5}]\\) is not a principal ideal domain, and give an example of a non-principal ideal in this ring.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(R=\\mathbb{Z}[\\sqrt{-1}]\\) be the ring of Gaussian integers. Let \\(M\\) be a maximal ideal of \\(R\\). Prove that \\(R/M\\) is a finite field of order \\(p\\) or \\(p^2\\) where \\(p\\) is a (rational) prime number.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the ring \\(\\mathbb{Z}[\\sqrt{-5}]\\) is not a principal ideal domain, and give an example of a non-principal ideal in this ring.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(V\\) be a vector space over a field \\(F\\) and let \\(S\\) be a subset of \\(V\\) such that \\(\\operatorname{Span}(S)=V\\). Prove that there is a subset \\(B\\) of \\(S\\) which is a basis for \\(V\\). (You may not assume that \\(S\\) is finite).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R=\\mathbb{Z}[\\sqrt{-1}]\\) be the ring of Gaussian integers. Let \\(M\\) be a maximal ideal of \\(R\\). Prove that \\(R/M\\) is a finite field of order \\(p\\) or \\(p^2\\) where \\(p\\) is a (rational) prime number.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Which of the following polynomials are irreducible? Explain.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(X^4+X^2+1\\) in \\(\\mathbb{F}_2[X]\\);",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(X^3+X^2+1\\) in \\(\\mathbb{Q}[X]\\);",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(X^5+6X^2+4X+18\\) in \\(\\mathbb{Q}[X]\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(V\\) be a vector space over a field \\(F\\) and let \\(S\\) be a subset of \\(V\\) such that \\(\\operatorname{Span}(S)=V\\). Prove that there is a subset \\(B\\) of \\(S\\) which is a basis for \\(V\\). (You may not assume that \\(S\\) is finite).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Find representatives of all conjugacy classes of elements of order 5 in \\(GL_3(\\mathbb{F}_{19})\\). Hint: \\(x^5-1=(x-1)(x^2-4x+1)(x^2+5x+1)\\) in \\(\\mathbb{F}_{19}[x]\\), and the quadratic factors are irreducible.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Which of the following polynomials are irreducible? Explain.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(X^4+X^2+1\\) in \\(\\mathbb{F}_2[X]\\);",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(X^3+X^2+1\\) in \\(\\mathbb{Q}[X]\\);",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(X^5+6X^2+4X+18\\) in \\(\\mathbb{Q}[X]\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(E/F\\) be a field extension and let \\(R\\) be a subring of \\(E\\) which contains \\(F\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(E/F\\) is an algebraic extension then \\(R\\) is a field.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example where \\(E/F\\) is not an algebraic extension and \\(R\\) is not a field.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Find representatives of all conjugacy classes of elements of order 5 in \\(GL_3(\\mathbb{F}_{19})\\). Hint: \\(x^5-1=(x-1)(x^2-4x+1)(x^2+5x+1)\\) in \\(\\mathbb{F}_{19}[x]\\), and the quadratic factors are irreducible.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(E/F\\) be a field extension and let \\(R\\) be a subring of \\(E\\) which contains \\(F\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(E/F\\) is an algebraic extension then \\(R\\) is a field.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example where \\(E/F\\) is not an algebraic extension and \\(R\\) is not a field.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

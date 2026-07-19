@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "pde-phd-2005-may",
   "subject": "PhD Partial Differential Equations",
   "subject_tag": "pde-phd",
@@ -7,69 +7,84 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_PartialDifferentialEquations_2005_05.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(\\Omega\\) be a bounded smooth set in \\(\\mathbb{R}^n\\) (\\(n\\ge 2\\)) and let \\(L:\\mathbb{R}^n\\times\\mathbb{R}\\times\\overline{\\Omega}\\to\\mathbb{R}\\) be a smooth mapping. Assume in addition that \\(L\\) is bounded below and the mapping \\(p\\mapsto L(p,z,x)\\) is convex for each \\(z\\in\\mathbb{R}\\), \\(x\\in\\overline{\\Omega}\\subseteq\\mathbb{R}^n\\). Prove that \\(I(w):=\\int_\\Omega L(Dw,w,x)\\,dx\\) is weakly lower semicontinuous on \\(W^{1,q}(\\Omega)\\) (\\(1<q<\\infty\\)).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\Omega\\) be a bounded smooth set in \\(\\mathbb{R}^n\\) (\\(n\\ge 2\\)) and let \\(L:\\mathbb{R}^n\\times\\mathbb{R}\\times\\overline{\\Omega}\\to\\mathbb{R}\\) be a smooth mapping. Assume in addition that \\(L\\) is bounded below and the mapping \\(p\\mapsto L(p,z,x)\\) is convex for each \\(z\\in\\mathbb{R}\\), \\(x\\in\\overline{\\Omega}\\subseteq\\mathbb{R}^n\\). Prove that \\(I(w):=\\int_\\Omega L(Dw,w,x)\\,dx\\) is weakly lower semicontinuous on \\(W^{1,q}(\\Omega)\\) (\\(1<q<\\infty\\)).",
+        "subparts": []
+      }
     },
     {
-      "number": 2,
-      "text": "Let \\(\\{a_{ij}\\}_{n\\times n}\\) (\\(n\\ge 2\\)) be a positive definite constant matrix. Let \\(B_1\\) be the unit ball in \\(\\mathbb{R}^n\\). Find the Euler–Lagrange equation for\n\\[\nI(w)=\\int_{B_1}\\sum_{i,j=1}^n\\bigl(a_{ij}\\partial_iw\\partial_jw\\bigr)\\,dx,\\qquad w\\in H_0^1(B_1),\n\\]\nunder the constraint \\(\\int_{B_1}|w|^2=1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\{a_{ij}\\}_{n\\times n}\\) (\\(n\\ge 2\\)) be a positive definite constant matrix. Let \\(B_1\\) be the unit ball in \\(\\mathbb{R}^n\\). Find the Euler–Lagrange equation for\n\\[\nI(w)=\\int_{B_1}\\sum_{i,j=1}^n\\bigl(a_{ij}\\partial_iw\\partial_jw\\bigr)\\,dx,\\qquad w\\in H_0^1(B_1),\n\\]\nunder the constraint \\(\\int_{B_1}|w|^2=1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Prove that if \\(\\lambda>0\\) is large enough, there exists a function \\(u\\in H^2(B_1)\\cap H_0^1(B_1)\\) solving\n\\[\n\\begin{cases}\n-\\Delta u+\\lambda u=\\sqrt{1+|Du|^2}, & \\text{in }B_1,\\\\\nu=0, & \\text{on }\\partial B_1.\n\\end{cases}\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that if \\(\\lambda>0\\) is large enough, there exists a function \\(u\\in H^2(B_1)\\cap H_0^1(B_1)\\) solving\n\\[\n\\begin{cases}\n-\\Delta u+\\lambda u=\\sqrt{1+|Du|^2}, & \\text{in }B_1,\\\\\nu=0, & \\text{on }\\partial B_1.\n\\end{cases}\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\Omega\\) be a bounded smooth subset of \\(\\mathbb{R}^n\\) (\\(n\\ge 2\\)) and let \\(u\\) be a classical solution of\n\\[\n\\begin{cases}\n\\Delta u(x)+a(x)u(x)=0, & \\Omega,\\\\\nu\\ge 0, & \\partial\\Omega,\n\\end{cases}\n\\]\nwhere \\(a(x)\\) is a smooth function. Suppose there exists \\(\\phi(x)>0\\) and smooth over \\(\\overline{\\Omega}\\) such that\n\\[\n\\Delta\\phi+a(x)\\phi\\le 0,\\qquad \\Omega.\n\\]\nShow that either \\(u>0\\) or \\(u=0\\) in \\(\\Omega\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\Omega\\) be a bounded smooth subset of \\(\\mathbb{R}^n\\) (\\(n\\ge 2\\)) and let \\(u\\) be a classical solution of\n\\[\n\\begin{cases}\n\\Delta u(x)+a(x)u(x)=0, & \\Omega,\\\\\nu\\ge 0, & \\partial\\Omega,\n\\end{cases}\n\\]\nwhere \\(a(x)\\) is a smooth function. Suppose there exists \\(\\phi(x)>0\\) and smooth over \\(\\overline{\\Omega}\\) such that\n\\[\n\\Delta\\phi+a(x)\\phi\\le 0,\\qquad \\Omega.\n\\]\nShow that either \\(u>0\\) or \\(u=0\\) in \\(\\Omega\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(u\\in C^2(B_1)\\) be a solution of\n\\[\n\\begin{cases}\n-\\Delta u=e^u, & B_1\\subset\\mathbb{R}^2,\\\\\nu=1, & \\text{on }\\partial B_1.\n\\end{cases}\n\\]\nProve that:",
-      "subparts": [
-        {
-          "label": "(1):",
-          "text": "\\(u>1\\) in \\(B_1\\).",
-          "subparts": []
-        },
-        {
-          "label": "(2):",
-          "text": "\\(u\\) is radially symmetric and \\(\\dfrac{du}{dr}<0\\) for all \\(r\\in(0,1)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(u\\in C^2(B_1)\\) be a solution of\n\\[\n\\begin{cases}\n-\\Delta u=e^u, & B_1\\subset\\mathbb{R}^2,\\\\\nu=1, & \\text{on }\\partial B_1.\n\\end{cases}\n\\]\nProve that:",
+        "subparts": [
+          {
+            "label": "(1):",
+            "text": "\\(u>1\\) in \\(B_1\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2):",
+            "text": "\\(u\\) is radially symmetric and \\(\\dfrac{du}{dr}<0\\) for all \\(r\\in(0,1)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show there exists a unique minimizer \\(u\\in A\\) of\n\\[\nI[w]=\\int_\\Omega\\left(\\frac12|Dw|^2-fw\\right)dx,\n\\]\nwhere \\(\\Omega\\) is a bounded smooth subset of \\(\\mathbb{R}^n\\) (\\(n\\ge 2\\)), \\(f\\in L^2(\\Omega)\\),\n\\[\nA=\\{w\\in H_0^1(\\Omega);\\ |Dw|\\le 1\\ \\text{a.e.}\\}.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove\n\\[\n\\int_\\Omega Du\\cdot D(w-u)\\,dx\\ge\\int_\\Omega f(w-u)\\,dx\n\\]\nfor all \\(w\\in A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show there exists a unique minimizer \\(u\\in A\\) of\n\\[\nI[w]=\\int_\\Omega\\left(\\frac12|Dw|^2-fw\\right)dx,\n\\]\nwhere \\(\\Omega\\) is a bounded smooth subset of \\(\\mathbb{R}^n\\) (\\(n\\ge 2\\)), \\(f\\in L^2(\\Omega)\\),\n\\[\nA=\\{w\\in H_0^1(\\Omega);\\ |Dw|\\le 1\\ \\text{a.e.}\\}.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove\n\\[\n\\int_\\Omega Du\\cdot D(w-u)\\,dx\\ge\\int_\\Omega f(w-u)\\,dx\n\\]\nfor all \\(w\\in A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(u\\in W^{1,p}(B_1)\\). Prove that \\(u^+,u^-,|u|\\in W^{1,p}(B_1)\\) and for almost all points over each region \\((u>0,u<0,u=0)\\) (Recall \\(u=u^+-u^-\\)),\n\\[\nDu^+=\n\\begin{cases}\nDu, & u>0,\\\\\n0, & u\\le 0,\n\\end{cases}\n\\qquad\nDu^-=\n\\begin{cases}\n-Du, & u<0,\\\\\n0, & u\\ge 0,\n\\end{cases}\n\\qquad\nD|u|=\n\\begin{cases}\nDu, & u>0,\\\\\n-Du, & u<0,\\\\\n0, & u=0.\n\\end{cases}\n\\]\nHint: Let\n\\[\nf_\\epsilon(u)=\n\\begin{cases}\n(u^2+\\epsilon^2)^{1/2}-\\epsilon, & u>0,\\\\\n0, & u\\le 0.\n\\end{cases}\n\\]\nFor all \\(\\phi\\in C_0^1(B_1)\\),\n\\[\n\\int_{B_1}f_\\epsilon(u)D\\phi\\,dx\n=-\\int_{\\{u>0\\}}\\frac{uDu}{\\sqrt{u^2+\\epsilon^2}}\\phi\\,dx.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(u\\in W^{1,p}(B_1)\\). Prove that \\(u^+,u^-,|u|\\in W^{1,p}(B_1)\\) and for almost all points over each region \\((u>0,u<0,u=0)\\) (Recall \\(u=u^+-u^-\\)),\n\\[\nDu^+=\n\\begin{cases}\nDu, & u>0,\\\\\n0, & u\\le 0,\n\\end{cases}\n\\qquad\nDu^-=\n\\begin{cases}\n-Du, & u<0,\\\\\n0, & u\\ge 0,\n\\end{cases}\n\\qquad\nD|u|=\n\\begin{cases}\nDu, & u>0,\\\\\n-Du, & u<0,\\\\\n0, & u=0.\n\\end{cases}\n\\]\nHint: Let\n\\[\nf_\\epsilon(u)=\n\\begin{cases}\n(u^2+\\epsilon^2)^{1/2}-\\epsilon, & u>0,\\\\\n0, & u\\le 0.\n\\end{cases}\n\\]\nFor all \\(\\phi\\in C_0^1(B_1)\\),\n\\[\n\\int_{B_1}f_\\epsilon(u)D\\phi\\,dx\n=-\\int_{\\{u>0\\}}\\frac{uDu}{\\sqrt{u^2+\\epsilon^2}}\\phi\\,dx.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(a_{ij}(x)\\), \\(b_i(x)\\) (\\(i,j=1,\\ldots,n\\)), \\(c(x)\\) be \\(C^\\infty\\) functions over \\(B_1\\) (\\(n\\ge 2\\)). Let \\(\\lambda_0,\\lambda_1\\) be two positive constants satisfying\n\\[\n0<\\lambda_0|\\xi|^2\\le a_{ij}(x)\\xi_i\\xi_j\\le\\lambda_1|\\xi|^2\n\\qquad \\forall x\\in B_1,\\quad \\forall\\xi\\in\\mathbb{R}^n.\n\\]\nSuppose \\(u\\in W^{1,q}\\) is a weak solution of\n\\[\n\\sum_{i,j}\\partial_i\\bigl(a_{ij}(x)\\partial_j u\\bigr)\n+\\sum_i b_i(x)\\partial_i u(x)+c(x)u=u^2,\\qquad B_1.\n\\]\nLook for the smallest \\(q_0>1\\) such that for \\(q>q_0\\), \\(u\\in C^\\infty(B_1)\\). Prove your statement.\n\nHint: The following estimates should be used: Suppose \\(u\\in W^{1,q}(B_1)\\) verifies\n\\[\n\\sum_{i,j}\\partial_i\\bigl(a_{ij}(x)\\partial_j u\\bigr)\n+\\sum_i b_i(x)\\partial_i u(x)+c(x)u=f(x),\\qquad B_1,\n\\]\nin the sense of distribution, \\(f\\in L^q\\), \\(q\\in(1,\\infty)\\). Then\n\\[\n\\|u\\|_{W^{2,q}(B_{1/2})}\n\\le C\\bigl(\\|u\\|_{L^q(B_1)}+\\|f\\|_{L^q(B_1)}\\bigr).\n\\]\nIf we further know \\(u\\in C^\\alpha(\\overline{B}_1)\\) and \\(f\\in C^\\alpha(\\overline{B}_1)\\) for some \\(\\alpha\\in(0,1)\\), then the following Schauder estimate holds:\n\\[\n\\|u\\|_{C^{2,\\alpha}(B_{1/2})}\n\\le C\\bigl(\\|u\\|_{C^\\alpha(B_1)}+\\|f\\|_{C^\\alpha(B_1)}\\bigr).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(a_{ij}(x)\\), \\(b_i(x)\\) (\\(i,j=1,\\ldots,n\\)), \\(c(x)\\) be \\(C^\\infty\\) functions over \\(B_1\\) (\\(n\\ge 2\\)). Let \\(\\lambda_0,\\lambda_1\\) be two positive constants satisfying\n\\[\n0<\\lambda_0|\\xi|^2\\le a_{ij}(x)\\xi_i\\xi_j\\le\\lambda_1|\\xi|^2\n\\qquad \\forall x\\in B_1,\\quad \\forall\\xi\\in\\mathbb{R}^n.\n\\]\nSuppose \\(u\\in W^{1,q}\\) is a weak solution of\n\\[\n\\sum_{i,j}\\partial_i\\bigl(a_{ij}(x)\\partial_j u\\bigr)\n+\\sum_i b_i(x)\\partial_i u(x)+c(x)u=u^2,\\qquad B_1.\n\\]\nLook for the smallest \\(q_0>1\\) such that for \\(q>q_0\\), \\(u\\in C^\\infty(B_1)\\). Prove your statement.\n\nHint: The following estimates should be used: Suppose \\(u\\in W^{1,q}(B_1)\\) verifies\n\\[\n\\sum_{i,j}\\partial_i\\bigl(a_{ij}(x)\\partial_j u\\bigr)\n+\\sum_i b_i(x)\\partial_i u(x)+c(x)u=f(x),\\qquad B_1,\n\\]\nin the sense of distribution, \\(f\\in L^q\\), \\(q\\in(1,\\infty)\\). Then\n\\[\n\\|u\\|_{W^{2,q}(B_{1/2})}\n\\le C\\bigl(\\|u\\|_{L^q(B_1)}+\\|f\\|_{L^q(B_1)}\\bigr).\n\\]\nIf we further know \\(u\\in C^\\alpha(\\overline{B}_1)\\) and \\(f\\in C^\\alpha(\\overline{B}_1)\\) for some \\(\\alpha\\in(0,1)\\), then the following Schauder estimate holds:\n\\[\n\\|u\\|_{C^{2,\\alpha}(B_{1/2})}\n\\le C\\bigl(\\|u\\|_{C^\\alpha(B_1)}+\\|f\\|_{C^\\alpha(B_1)}\\bigr).\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

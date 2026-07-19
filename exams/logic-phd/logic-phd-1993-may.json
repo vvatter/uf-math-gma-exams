@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-1993-may",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,67 +7,122 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_1993_05.pdf",
-  "instructions": "This examination is divided into 4 segments, with 3 questions in each segment. Problems 1–3 concern General Logic; problems 4–6 concern Model Theory; problems 7–9 concern Set Theory; and problems 10–12 concern Recursion Theory. Answer any 2 questions from each segment.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State Gödel’s incompleteness theorem. Explain the importance of Gödel numbering.",
-      "subparts": []
+      "type": "instructions",
+      "text": "This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment."
     },
     {
-      "number": 2,
-      "text": "State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "1. General Logic",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State Gödel’s incompleteness theorem. Explain the importance of Gödel numbering.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that if \\(T\\) is a countable theory with arbitrarily large finite models then \\(T\\) has an infinite model.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 3,
-      "text": "Prove that if \\(T\\) is a countable theory with arbitrarily large finite models then \\(T\\) has an infinite model.",
-      "subparts": []
+      "type": "section",
+      "heading": "2. Model Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and sketch the proof of the Łoś theorem on ultraproducts.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and sketch a proof of the elementary substructure version of the downward Löwenheim–Skolem Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that the theory of dense linear orders without endpoints is complete.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "State and sketch the proof of the Łoś theorem on ultraproducts.",
-      "subparts": []
+      "type": "section",
+      "heading": "3. Set Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that the well ordering principle implies the axiom of choice.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove, using the axioms of ZFC, that if \\(X\\) is any set then the transitive closure of \\(X\\) is also a set.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that a countable union of countable sets is countable, pointing out any use of the axiom of choice.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 5,
-      "text": "State and sketch a proof of the elementary substructure version of the downward Löwenheim–Skolem Theorem.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "Prove that the theory of dense linear orders without endpoints is complete.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Prove that the well ordering principle implies the axiom of choice.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Prove, using the axioms of ZFC, that if \\(X\\) is any set then the transitive closure of \\(X\\) is also a set.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Show that a countable union of countable sets is countable, pointing out any use of the axiom of choice.",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Show that a function \\(\\phi:\\omega\\longrightarrow\\omega\\) is (partial) recursive iff its graph is recursively enumerable, and that if \\(\\phi\\) is total and recursive then its graph is recursive.",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "State the halting problem, and show that it is undecidable. You may use the fact that there is a recursive enumeration of the (partial) recursive functions.",
-      "subparts": []
-    },
-    {
-      "number": 12,
-      "text": "Show that if \\(A\\ne\\varnothing\\) is the domain of a partial recursive function \\(f\\) then there is a total recursive function \\(g\\) such that \\(A\\) is the range of \\(g\\).",
-      "subparts": []
+      "type": "section",
+      "heading": "4. Recursion Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that a function \\(\\phi:\\omega\\longrightarrow\\omega\\) is (partial) recursive iff its graph is recursively enumerable, and that if \\(\\phi\\) is total and recursive then its graph is recursive.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State the halting problem, and show that it is undecidable. You may use the fact that there is a recursive enumeration of the (partial) recursive functions.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that if \\(A\\ne\\varnothing\\) is the domain of a partial recursive function \\(f\\) then there is a total recursive function \\(g\\) such that \\(A\\) is the range of \\(g\\).",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

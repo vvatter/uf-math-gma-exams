@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-2022-may",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,96 +7,115 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Analysis-2022_05.pdf",
-  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State Tonelli’s theorem, and give an example to show that the \\(\\sigma\\)-finiteness hypothesis is necessary.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems."
     },
     {
-      "number": 2,
-      "text": "Let \\(\\mu\\) be a positive measure and let \\((E_n)\\) be a sequence of measurable sets with \\(\\mu(E_n)<\\infty\\) for all \\(n\\). Prove that if \\(\\mathbf{1}_{E_n}\\to f\\) in \\(L^1(\\mu)\\), then there exists a measurable set \\(E\\) so that \\(f=\\mathbf{1}_E\\) a.e. and \\(\\mu(E)=\\lim \\mu(E_n)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State Tonelli’s theorem, and give an example to show that the \\(\\sigma\\)-finiteness hypothesis is necessary.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(\\mu\\) and \\(\\nu\\) be finite, positive measures defined on the same measurable space \\((X,\\mathcal{M})\\), and suppose that \\(\\nu\\ll\\mu\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Prove that if \\(L^1(\\mu)\\subset L^1(\\nu)\\), then the inclusion map \\(\\iota:L^1(\\mu)\\hookrightarrow L^1(\\nu)\\) is necessarily bounded.",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Prove that if \\(L^1(\\mu)\\subset L^1(\\nu)\\) then \\(\\frac{d\\nu}{d\\mu}\\in L^\\infty(\\mu)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mu\\) be a positive measure and let \\((E_n)\\) be a sequence of measurable sets with \\(\\mu(E_n)<\\infty\\) for all \\(n\\). Prove that if \\(\\mathbf{1}_{E_n}\\to f\\) in \\(L^1(\\mu)\\), then there exists a measurable set \\(E\\) so that \\(f=\\mathbf{1}_E\\) a.e. and \\(\\mu(E)=\\lim \\mu(E_n)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\mu\\) be a positive measure and suppose that \\(1<p<r<q<\\infty\\). Prove that\n\\[\nL^r(\\mu)\\subset L^p(\\mu)+L^q(\\mu).\n\\]\n(That is, every \\(f\\in L^r(\\mu)\\) can be written as a sum \\(f=g+h\\) where \\(g\\in L^p(\\mu)\\) and \\(h\\in L^q(\\mu)\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mu\\) and \\(\\nu\\) be finite, positive measures defined on the same measurable space \\((X,\\mathcal{M})\\), and suppose that \\(\\nu\\ll\\mu\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Prove that if \\(L^1(\\mu)\\subset L^1(\\nu)\\), then the inclusion map \\(\\iota:L^1(\\mu)\\hookrightarrow L^1(\\nu)\\) is necessarily bounded.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Prove that if \\(L^1(\\mu)\\subset L^1(\\nu)\\) then \\(\\frac{d\\nu}{d\\mu}\\in L^\\infty(\\mu)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(\\mathcal{X}\\) be a Banach space, and let \\(\\mathcal{M},\\mathcal{N}\\) be closed subspaces of \\(\\mathcal{X}\\). Suppose that every \\(x\\in\\mathcal{X}\\) can be decomposed uniquely as\n\\[\nx=m+n\n\\]\nwith \\(m\\in\\mathcal{M}\\), \\(n\\in\\mathcal{N}\\). Prove that the assignment \\(x\\to m\\) defines a bounded linear operator from \\(\\mathcal{X}\\) to \\(\\mathcal{M}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mu\\) be a positive measure and suppose that \\(1<p<r<q<\\infty\\). Prove that\n\\[\nL^r(\\mu)\\subset L^p(\\mu)+L^q(\\mu).\n\\]\n(That is, every \\(f\\in L^r(\\mu)\\) can be written as a sum \\(f=g+h\\) where \\(g\\in L^p(\\mu)\\) and \\(h\\in L^q(\\mu)\\).)",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Prove that for each integer \\(n\\ge 0\\), there exists a function \\(f_n\\in L^2[0,1]\\) such that for every polynomial \\(p\\) of degree at most \\(n\\),\n\\[\np(1)=\\int_0^1 p(x)f_n(x)\\,dx.\n\\]\nIs \\(f_n\\) unique?",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Is there a function \\(f\\in L^2[0,1]\\) such that\n\\[\np(1)=\\int_0^1 p(x)f(x)\\,dx\n\\]\nfor all polynomials \\(p\\)? Prove or disprove.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal{X}\\) be a Banach space, and let \\(\\mathcal{M},\\mathcal{N}\\) be closed subspaces of \\(\\mathcal{X}\\). Suppose that every \\(x\\in\\mathcal{X}\\) can be decomposed uniquely as\n\\[\nx=m+n\n\\]\nwith \\(m\\in\\mathcal{M}\\), \\(n\\in\\mathcal{N}\\). Prove that the assignment \\(x\\to m\\) defines a bounded linear operator from \\(\\mathcal{X}\\) to \\(\\mathcal{M}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "State the Banach Isomorphism Theorem and the Closed Graph Theorem.",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Using the Banach Isomorphism Theorem (or otherwise), prove the Closed Graph Theorem.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Prove that for each integer \\(n\\ge 0\\), there exists a function \\(f_n\\in L^2[0,1]\\) such that for every polynomial \\(p\\) of degree at most \\(n\\),\n\\[\np(1)=\\int_0^1 p(x)f_n(x)\\,dx.\n\\]\nIs \\(f_n\\) unique?",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Is there a function \\(f\\in L^2[0,1]\\) such that\n\\[\np(1)=\\int_0^1 p(x)f(x)\\,dx\n\\]\nfor all polynomials \\(p\\)? Prove or disprove.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "(Short answer, you do not need to give a detailed proof, just a brief explanation.)",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Define the Fourier transform on \\(L^1(\\mathbb{R})\\) and sketch its extension to \\(L^2(\\mathbb{R})\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Sketch a construction of a bounded linear functional \\(\\lambda\\) on \\(L^\\infty(\\mathbb{R})\\) which is not of the form \\(\\lambda(f)=\\int f(x)g(x)\\,dx\\) for any \\(L^1\\) function \\(g\\).",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "Sketch a proof of the fact that there is no norm under which \\(c_{00}\\) is complete.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "State the Banach Isomorphism Theorem and the Closed Graph Theorem.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Using the Banach Isomorphism Theorem (or otherwise), prove the Closed Graph Theorem.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "(Short answer, you do not need to give a detailed proof, just a brief explanation.)",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Define the Fourier transform on \\(L^1(\\mathbb{R})\\) and sketch its extension to \\(L^2(\\mathbb{R})\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Sketch a construction of a bounded linear functional \\(\\lambda\\) on \\(L^\\infty(\\mathbb{R})\\) which is not of the form \\(\\lambda(f)=\\int f(x)g(x)\\,dx\\) for any \\(L^1\\) function \\(g\\).",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "Sketch a proof of the fact that there is no norm under which \\(c_{00}\\) is complete.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

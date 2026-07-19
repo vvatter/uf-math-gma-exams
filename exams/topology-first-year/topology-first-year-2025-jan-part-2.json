@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2025-jan-part-2",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,82 +7,119 @@
   "month": "january",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2_2025_01.pdf",
-  "instructions": "For the first five problems, show all your work and support all statements. Answer Problems 6–15 with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Suppose that the continuous maps \\(f,g:X\\to Y\\) are homotopic and that the continuous maps \\(h,k:Y\\to Z\\) are homotopic. Show that \\(h\\circ f\\) is homotopic to \\(k\\circ g\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "For the first five problems, show all your work and support all statements."
     },
     {
-      "number": 2,
-      "text": "Prove that \\(\\pi_1(S^1,1)\\cong\\mathbb{Z}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that the continuous maps \\(f,g:X\\to Y\\) are homotopic and that the continuous maps \\(h,k:Y\\to Z\\) are homotopic. Show that \\(h\\circ f\\) is homotopic to \\(k\\circ g\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "State and prove the Brouwer fixed point theorem for the unit disk, \\(D^2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that \\(\\pi_1(S^1,1)\\cong\\mathbb{Z}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Prove that for \\(n\\geq 2\\), the fundamental group of the \\(n\\)-sphere, \\(S^n\\), is \\(0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Brouwer fixed point theorem for the unit disk, \\(D^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Show that the torus \\(T=S^1\\times S^1\\) is not homeomorphic to the surface of genus two, \\(M_2=T\\mathbin{\\#}T\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that for \\(n\\geq 2\\), the fundamental group of the \\(n\\)-sphere, \\(S^n\\), is \\(0\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Suppose that \\(f,g:X\\to\\mathbb{R}^n\\) are continuous. Show that \\(f\\) and \\(g\\) are homotopic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the torus \\(T=S^1\\times S^1\\) is not homeomorphic to the surface of genus two, \\(M_2=T\\mathbin{\\#}T\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "State the Seifert–van Kampen Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(f,g:X\\to\\mathbb{R}^n\\) are continuous. Show that \\(f\\) and \\(g\\) are homotopic.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "State the Tietze Extension Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Show that \\(\\mathbb{R}^2\\) is not homeomorphic to \\(\\mathbb{R}^3\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Seifert–van Kampen Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "State the Tychonoff theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Tietze Extension Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Describe a space \\(X\\) with \\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(\\mathbb{R}^2\\) is not homeomorphic to \\(\\mathbb{R}^3\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "If \\(j:A\\hookrightarrow X\\) is the inclusion of a retract, then show that the induced map on fundamental groups \\(j_\\#\\) is injective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Tychonoff theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Give the definition of a deformation retraction.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Describe a space \\(X\\) with \\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Define Stone–Čech compactification.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "If \\(j:A\\hookrightarrow X\\) is the inclusion of a retract, then show that the induced map on fundamental groups \\(j_\\#\\) is injective.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Give the definition of a deformation retraction.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define Stone–Čech compactification.",
+        "subparts": []
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-1988-jan",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,64 +7,79 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1988_01.pdf",
-  "instructions": "Answer all six questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State and prove the Radon–Nikodym Theorem.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer all six questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion."
     },
     {
-      "number": 2,
-      "text": "State and prove the Hahn–Banach Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Radon–Nikodym Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(\\Omega\\) be a topological space, \\(\\mathcal B(\\Omega)\\) the Borel subsets of \\(\\Omega\\). Suppose that for each \\(n\\), \\(\\mu_n\\) is a countably additive positive finite regular measure defined on \\(\\mathcal B(\\Omega)\\). Let\n\\[\n\\mu(\\mathord\\cdot)=\\sum_{n=1}^{\\infty}\\frac{\\mu_n(\\mathord\\cdot)}{2^n\\bigl(1+\\mu_n(\\Omega)\\bigr)}.\n\\]\nShow that \\(\\mu\\) is also a regular countably additive measure.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Hahn–Banach Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\{f_n:n\\geq 0\\}\\) and \\(\\{g_n:n\\geq -1\\}\\) be two sequences of real-valued measurable functions on a measurable space \\((\\Omega,\\mathcal F)\\). Let \\(B\\subset\\mathbb R^1\\) be a Borel set on \\(\\mathbb R^1\\). Define\n\\[\nT(w)=\n\\begin{cases}\n\\sup\\{n\\geq 0:f_n(w)\\in B\\},&\\text{if }\\{n\\geq 0:f_n(w)\\in B\\}\\text{ is bounded and nonempty},\\\\\n0,&\\text{if }\\{n\\geq 0:f_n(w)\\in B\\}=\\varnothing,\\\\\n-1,&\\text{if }\\{n\\geq 0:f_n(w)\\in B\\}\\text{ is unbounded}.\n\\end{cases}\n\\]",
-      "subparts": [
-        {
-          "label": "(A)",
-          "text": "Prove \\(T\\) is \\(\\mathcal F\\)-measurable.",
-          "subparts": []
-        },
-        {
-          "label": "(B)",
-          "text": "Define \\(h(w)=g_{T(w)}(w)\\); prove \\(h\\) is \\(\\mathcal F\\)-measurable.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\Omega\\) be a topological space, \\(\\mathcal B(\\Omega)\\) the Borel subsets of \\(\\Omega\\). Suppose that for each \\(n\\), \\(\\mu_n\\) is a countably additive positive finite regular measure defined on \\(\\mathcal B(\\Omega)\\). Let\n\\[\n\\mu(\\mathord\\cdot)=\\sum_{n=1}^{\\infty}\\frac{\\mu_n(\\mathord\\cdot)}{2^n\\bigl(1+\\mu_n(\\Omega)\\bigr)}.\n\\]\nShow that \\(\\mu\\) is also a regular countably additive measure.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(T:(-\\pi/2,\\pi/2)\\to\\mathbb R\\) be given by \\(T(x)=\\tan x\\). Let \\(\\lambda\\) be Lebesgue measure on \\((-\\pi/2,\\pi/2)\\) and define a measure \\(\\mu\\) on \\((\\mathbb R,\\mathcal B(\\mathbb R))\\) by setting \\(\\mu(A)=\\lambda(T^{-1}(A))\\). Compute \\(\\dfrac{d\\mu}{dx}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\{f_n:n\\geq 0\\}\\) and \\(\\{g_n:n\\geq -1\\}\\) be two sequences of real-valued measurable functions on a measurable space \\((\\Omega,\\mathcal F)\\). Let \\(B\\subset\\mathbb R^1\\) be a Borel set on \\(\\mathbb R^1\\). Define\n\\[\nT(w)=\n\\begin{cases}\n\\sup\\{n\\geq 0:f_n(w)\\in B\\},&\\text{if }\\{n\\geq 0:f_n(w)\\in B\\}\\text{ is bounded and nonempty},\\\\\n0,&\\text{if }\\{n\\geq 0:f_n(w)\\in B\\}=\\varnothing,\\\\\n-1,&\\text{if }\\{n\\geq 0:f_n(w)\\in B\\}\\text{ is unbounded}.\n\\end{cases}\n\\]",
+        "subparts": [
+          {
+            "label": "(A)",
+            "text": "Prove \\(T\\) is \\(\\mathcal F\\)-measurable.",
+            "subparts": []
+          },
+          {
+            "label": "(B)",
+            "text": "Define \\(h(w)=g_{T(w)}(w)\\); prove \\(h\\) is \\(\\mathcal F\\)-measurable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Fix \\(1\\leq p<\\infty\\), and let \\(f\\in L^p(X,\\mathcal A,\\mu)\\). Show that\n\\[\n\\lVert f\\rVert_p=\\sup\\left\\{\\int fg\\,d\\mu:\\lVert g\\rVert_q\\leq 1\\right\\}.\n\\]\nHint:",
-      "subparts": [
-        {
-          "label": "1.",
-          "text": "Show that if \\(\\lVert g\\rVert_q\\leq 1\\), then \\(\\int fg\\,d\\mu\\leq\\lVert f\\rVert_p\\).",
-          "subparts": []
-        },
-        {
-          "label": "2.",
-          "text": "Show that \\(g=|f|^{p-1}\\in L^q\\).",
-          "subparts": []
-        },
-        {
-          "label": "3.",
-          "text": "State why doing 1. and 2. solves the problem.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(T:(-\\pi/2,\\pi/2)\\to\\mathbb R\\) be given by \\(T(x)=\\tan x\\). Let \\(\\lambda\\) be Lebesgue measure on \\((-\\pi/2,\\pi/2)\\) and define a measure \\(\\mu\\) on \\((\\mathbb R,\\mathcal B(\\mathbb R))\\) by setting \\(\\mu(A)=\\lambda(T^{-1}(A))\\). Compute \\(\\dfrac{d\\mu}{dx}\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Fix \\(1\\leq p<\\infty\\), and let \\(f\\in L^p(X,\\mathcal A,\\mu)\\). Show that\n\\[\n\\lVert f\\rVert_p=\\sup\\left\\{\\int fg\\,d\\mu:\\lVert g\\rVert_q\\leq 1\\right\\}.\n\\]\nHint:",
+        "subparts": [
+          {
+            "label": "1.",
+            "text": "Show that if \\(\\lVert g\\rVert_q\\leq 1\\), then \\(\\int fg\\,d\\mu\\leq\\lVert f\\rVert_p\\).",
+            "subparts": []
+          },
+          {
+            "label": "2.",
+            "text": "Show that \\(g=|f|^{p-1}\\in L^q\\).",
+            "subparts": []
+          },
+          {
+            "label": "3.",
+            "text": "State why doing 1. and 2. solves the problem.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

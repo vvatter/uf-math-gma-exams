@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "combinatorics-phd-1989-sep",
   "subject": "PhD Combinatorics",
   "subject_tag": "combinatorics-phd",
@@ -7,110 +7,131 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Combinatorics_1989_09.pdf",
-  "instructions": "Do 7 out of 9 problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Define the Ramsey number \\(r(m,n)\\) and prove that\n\\[\nr(m,n) \\leq \\binom{m+n-2}{m-1}.\n\\]",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do 7 out of 9 problems."
     },
     {
-      "number": 2,
-      "text": "The 12 edges of a cube are each colored one of two colors. Two such colored cubes are regarded as equivalent if one can be rotated so that it becomes identically colored to the other. Compute the number of equivalence classes of these colored cubes.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define the Ramsey number \\(r(m,n)\\) and prove that\n\\[\nr(m,n) \\leq \\binom{m+n-2}{m-1}.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(\\Sigma\\) be a block design with parameters \\(b,v,r,k,\\lambda\\).",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Prove that\n\\[\nMM^T=\n\\begin{pmatrix}\nr & \\lambda & \\cdots & \\lambda\\\\\n\\lambda & r & \\cdots & \\lambda\\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\n\\lambda & \\lambda & \\cdots & r\n\\end{pmatrix},\n\\]\nwhere \\(M^T\\) is the transpose of \\(M\\), an incidence matrix for \\(\\Sigma\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Compute the determinant of \\(MM^T\\).",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "Prove that \\(b \\geq v\\).",
-          "subparts": []
-        },
-        {
-          "label": "(iv)",
-          "text": "If \\(b=v\\) is an even integer, prove that \\(k-\\lambda\\) is the square of an integer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "The 12 edges of a cube are each colored one of two colors. Two such colored cubes are regarded as equivalent if one can be rotated so that it becomes identically colored to the other. Compute the number of equivalence classes of these colored cubes.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Give responses to any 4 out of the 5 parts. You may use the conclusions of (ii) and (iii) in responding to parts (iv) and (v) even if you omit their proofs.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "State the Hall Multiplier Theorem for cyclic difference sets.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Assume that \\(D\\) is a cyclic \\((v,k,\\lambda)\\)-difference set with a multiplier \\(m\\) which satisfies \\((v,m-1)=1\\). Prove the existence of a cyclic \\((v,k,\\lambda)\\)-difference set \\(D'\\) which is fixed by \\(m\\); i.e., which satisfies \\(D'm=D'\\).",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "If there is a cyclic \\((v,k,\\lambda)\\)-difference set \\(D'\\) fixed by a multiplier \\(m\\) and if \\(v\\) is a prime number, prove the existence of a cyclic \\((v,k,\\lambda)\\)-difference set \\(D''\\) that satisfies \\(1\\in D''=D''m\\).",
-          "subparts": []
-        },
-        {
-          "label": "(iv)",
-          "text": "Prove that there is no cyclic \\((67,12,2)\\)-difference set.",
-          "subparts": []
-        },
-        {
-          "label": "(v)",
-          "text": "Find a cyclic \\((73,9,1)\\)-difference set.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\Sigma\\) be a block design with parameters \\(b,v,r,k,\\lambda\\).",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that\n\\[\nMM^T=\n\\begin{pmatrix}\nr & \\lambda & \\cdots & \\lambda\\\\\n\\lambda & r & \\cdots & \\lambda\\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\n\\lambda & \\lambda & \\cdots & r\n\\end{pmatrix},\n\\]\nwhere \\(M^T\\) is the transpose of \\(M\\), an incidence matrix for \\(\\Sigma\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Compute the determinant of \\(MM^T\\).",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Prove that \\(b \\geq v\\).",
+            "subparts": []
+          },
+          {
+            "label": "(iv)",
+            "text": "If \\(b=v\\) is an even integer, prove that \\(k-\\lambda\\) is the square of an integer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "A \\(t\\)-\\((v,k,\\lambda)\\) design \\(\\Sigma\\) is an incidence structure consisting of a set \\(S\\) of \\(v\\) points and a collection of \\(k\\)-subsets of \\(S\\) called blocks such that every \\(t\\)-subset of \\(S\\) is contained in precisely \\(\\lambda\\) blocks.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "If \\(t\\geq 1\\), prove that \\(\\Sigma\\) is also a \\((t-1)\\)-\\((v,k,\\lambda')\\) design with\n\\[\n\\lambda'=\\frac{(v-t+1)\\lambda}{k-t+1}.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Let \\(\\Sigma\\) be a \\(4\\)-\\((23,7,1)\\) design. Let \\(\\Sigma^*\\) be the incidence structure defined on the point set of \\(\\Sigma\\) by taking as blocks the complements of the blocks of \\(\\Sigma\\). Prove that \\(\\Sigma^*\\) is a \\(4\\)-\\((23,16,\\lambda^*)\\) design, and give the value of \\(\\lambda^*\\).\n\nHints: For \\(0\\leq s\\leq 3\\), \\(\\Sigma\\) is an \\(s\\)-\\((23,7,\\lambda_s)\\) design. Use the principle of inclusion and exclusion.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Give responses to any 4 out of the 5 parts. You may use the conclusions of (ii) and (iii) in responding to parts (iv) and (v) even if you omit their proofs.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "State the Hall Multiplier Theorem for cyclic difference sets.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Assume that \\(D\\) is a cyclic \\((v,k,\\lambda)\\)-difference set with a multiplier \\(m\\) which satisfies \\((v,m-1)=1\\). Prove the existence of a cyclic \\((v,k,\\lambda)\\)-difference set \\(D'\\) which is fixed by \\(m\\); i.e., which satisfies \\(D'm=D'\\).",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "If there is a cyclic \\((v,k,\\lambda)\\)-difference set \\(D'\\) fixed by a multiplier \\(m\\) and if \\(v\\) is a prime number, prove the existence of a cyclic \\((v,k,\\lambda)\\)-difference set \\(D''\\) that satisfies \\(1\\in D''=D''m\\).",
+            "subparts": []
+          },
+          {
+            "label": "(iv)",
+            "text": "Prove that there is no cyclic \\((67,12,2)\\)-difference set.",
+            "subparts": []
+          },
+          {
+            "label": "(v)",
+            "text": "Find a cyclic \\((73,9,1)\\)-difference set.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "State and prove Dilworth's Theorem for a finite poset.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "A \\(t\\)-\\((v,k,\\lambda)\\) design \\(\\Sigma\\) is an incidence structure consisting of a set \\(S\\) of \\(v\\) points and a collection of \\(k\\)-subsets of \\(S\\) called blocks such that every \\(t\\)-subset of \\(S\\) is contained in precisely \\(\\lambda\\) blocks.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "If \\(t\\geq 1\\), prove that \\(\\Sigma\\) is also a \\((t-1)\\)-\\((v,k,\\lambda')\\) design with\n\\[\n\\lambda'=\\frac{(v-t+1)\\lambda}{k-t+1}.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Let \\(\\Sigma\\) be a \\(4\\)-\\((23,7,1)\\) design. Let \\(\\Sigma^*\\) be the incidence structure defined on the point set of \\(\\Sigma\\) by taking as blocks the complements of the blocks of \\(\\Sigma\\). Prove that \\(\\Sigma^*\\) is a \\(4\\)-\\((23,16,\\lambda^*)\\) design, and give the value of \\(\\lambda^*\\).\n\nHints: For \\(0\\leq s\\leq 3\\), \\(\\Sigma\\) is an \\(s\\)-\\((23,7,\\lambda_s)\\) design. Use the principle of inclusion and exclusion.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(\\{a_n\\}_{n=0}^{\\infty}\\) be a sequence satisfying a homogeneous linear recurrence relation. Define\n\\[\nr_n=\\frac{a_n}{a_{n-1}},\\qquad n=1,2,3,\\ldots.\n\\]\nGive necessary and sufficient conditions on the recurrence relation for \\(r_n\\) to approach a finite limit, and give a way to find the limit when it exists.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove Dilworth's Theorem for a finite poset.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Describe a combinatorial algorithm of polynomial time efficiency to solve the following problem. Prove that your algorithm has the required efficiency using theorems from the combinatorics class.\n\nInput: \\(X\\) a finite set, \\(\\{A_1,A_2,\\ldots,A_n\\}\\) a collection of subsets of \\(X\\), and \\(p:X\\to\\mathbb{R}\\) a function.\n\nOutput: \\(\\{x_1,x_2,\\ldots,x_n\\}\\) distinct elements of \\(X\\) which maximize\n\\[\n\\sum_{i=1}^n p(x_i)\n\\]\nsubject to \\(x_i\\in A_i\\) for all \\(i\\).\n\n(Assume there exists a set of \\(n\\) elements satisfying the restriction \\(x_i\\in A_i\\), \\(\\forall i\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\{a_n\\}_{n=0}^{\\infty}\\) be a sequence satisfying a homogeneous linear recurrence relation. Define\n\\[\nr_n=\\frac{a_n}{a_{n-1}},\\qquad n=1,2,3,\\ldots.\n\\]\nGive necessary and sufficient conditions on the recurrence relation for \\(r_n\\) to approach a finite limit, and give a way to find the limit when it exists.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Find the number of spanning sets in a vector space \\(V\\) of dimension \\(n\\) over \\(\\operatorname{GF}(q)\\), the finite field with \\(q\\) elements. (Hint: try Möbius inversion.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Describe a combinatorial algorithm of polynomial time efficiency to solve the following problem. Prove that your algorithm has the required efficiency using theorems from the combinatorics class.\n\nInput: \\(X\\) a finite set, \\(\\{A_1,A_2,\\ldots,A_n\\}\\) a collection of subsets of \\(X\\), and \\(p:X\\to\\mathbb{R}\\) a function.\n\nOutput: \\(\\{x_1,x_2,\\ldots,x_n\\}\\) distinct elements of \\(X\\) which maximize\n\\[\n\\sum_{i=1}^n p(x_i)\n\\]\nsubject to \\(x_i\\in A_i\\) for all \\(i\\).\n\n(Assume there exists a set of \\(n\\) elements satisfying the restriction \\(x_i\\in A_i\\), \\(\\forall i\\).)",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Find the number of spanning sets in a vector space \\(V\\) of dimension \\(n\\) over \\(\\operatorname{GF}(q)\\), the finite field with \\(q\\) elements. (Hint: try Möbius inversion.)",
+        "subparts": []
+      }
     }
   ]
 }

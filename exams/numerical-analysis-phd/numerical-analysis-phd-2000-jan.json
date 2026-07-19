@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-2000-jan",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,222 +7,245 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2000_01.pdf",
-  "instructions": "Do any 8 of the following 10 problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Show: If a matrix \\(A \\in \\mathbb{R}^{n \\times n}\\) has eigenvalues \\(\\lambda_1,\\ldots,\\lambda_n\\) such that \\(\\lambda_i \\ne \\lambda_j\\) for all \\(i \\ne j\\), then the corresponding eigenvectors are linearly independent.",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Show: If a symmetric matrix \\(A \\in \\mathbb{R}^{n \\times n}\\) has eigenvalues \\(\\lambda_1,\\ldots,\\lambda_n\\) such that \\(\\lambda_i \\ne \\lambda_j\\) if \\(i \\ne j\\), then the eigenvectors of \\(A\\) are orthogonal.",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Show: If the matrix \\(A \\in \\mathbb{R}^{n \\times n}\\) has \\(n\\) independent eigenvectors, then the matrix can be diagonalized.",
-          "subparts": []
-        },
-        {
-          "label": "(4)",
-          "text": "Show: If \\(A \\in \\mathbb{R}^{n \\times n}\\) is symmetric, then the matrix can be diagonalized by an orthogonal matrix.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do any 8 of the following 10 problems."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Give a careful statement of the singular value decomposition for an arbitrary matrix \\(A \\in \\mathbb{R}^{m \\times n}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Give a careful proof of the singular value decomposition.",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Show how the singular value decomposition for \\(A\\) naturally yields a solution to the least squares problem \\(\\min_x \\|Ax-y\\|_2\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Show: If a matrix \\(A \\in \\mathbb{R}^{n \\times n}\\) has eigenvalues \\(\\lambda_1,\\ldots,\\lambda_n\\) such that \\(\\lambda_i \\ne \\lambda_j\\) for all \\(i \\ne j\\), then the corresponding eigenvectors are linearly independent.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Show: If a symmetric matrix \\(A \\in \\mathbb{R}^{n \\times n}\\) has eigenvalues \\(\\lambda_1,\\ldots,\\lambda_n\\) such that \\(\\lambda_i \\ne \\lambda_j\\) if \\(i \\ne j\\), then the eigenvectors of \\(A\\) are orthogonal.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Show: If the matrix \\(A \\in \\mathbb{R}^{n \\times n}\\) has \\(n\\) independent eigenvectors, then the matrix can be diagonalized.",
+            "subparts": []
+          },
+          {
+            "label": "(4)",
+            "text": "Show: If \\(A \\in \\mathbb{R}^{n \\times n}\\) is symmetric, then the matrix can be diagonalized by an orthogonal matrix.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Show: If \\(w\\) is a unit vector in \\(\\mathbb{R}^n\\), then the matrix \\(H=I-2ww^t\\) is an orthogonal projection.",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Show: If \\(w=\\frac{x-y}{\\|x-y\\|}\\), \\(\\|x\\|=\\|y\\|\\), and \\(H=I-2ww^t\\), then \\(Hx=y\\).",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Given an arbitrary matrix \\(A \\in \\mathbb{R}^{m \\times n}\\), construct an orthogonal matrix \\(Q \\in \\mathbb{R}^{m \\times m}\\) and an upper triangular matrix \\(R \\in \\mathbb{R}^{m \\times n}\\) such that \\(A=QR\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful statement of the singular value decomposition for an arbitrary matrix \\(A \\in \\mathbb{R}^{m \\times n}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give a careful proof of the singular value decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Show how the singular value decomposition for \\(A\\) naturally yields a solution to the least squares problem \\(\\min_x \\|Ax-y\\|_2\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Show: If \\(\\lambda_n\\) is the unique eigenvalue of \\(A \\in \\mathbb{R}^{n \\times n}\\) with largest magnitude and \\(x_0\\) is chosen arbitrarily in \\(\\mathbb{R}^n\\), then the iteration \\(x_k=A^k x_0\\) will almost surely converge to a multiple of \\(v_n\\), the eigenvector associated with \\(\\lambda_n\\).",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "If \\(\\lambda_k\\) is a unique eigenvalue which does not have the largest magnitude from among the eigenvalues of \\(A\\), then describe a method that will compute the eigenvector corresponding to \\(\\lambda_k\\).",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Describe the \\(QR\\) iteration algorithm for computing the eigenvalues for a matrix \\(A \\in \\mathbb{R}^{n \\times n}\\). Draw analogues between the \\(QR\\) method and the power method.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Show: If \\(w\\) is a unit vector in \\(\\mathbb{R}^n\\), then the matrix \\(H=I-2ww^t\\) is an orthogonal projection.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Show: If \\(w=\\frac{x-y}{\\|x-y\\|}\\), \\(\\|x\\|=\\|y\\|\\), and \\(H=I-2ww^t\\), then \\(Hx=y\\).",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Given an arbitrary matrix \\(A \\in \\mathbb{R}^{m \\times n}\\), construct an orthogonal matrix \\(Q \\in \\mathbb{R}^{m \\times m}\\) and an upper triangular matrix \\(R \\in \\mathbb{R}^{m \\times n}\\) such that \\(A=QR\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "BACKGROUND: It can be shown that for \\(\\epsilon\\) small there are differentiable functions \\(x(\\epsilon)\\), and \\(\\lambda(\\epsilon)\\) such that \\((A+\\epsilon F)x(\\epsilon)=\\lambda(\\epsilon)x(\\epsilon)\\), where \\(\\|F\\|_2=1\\). Let \\(x=x(0)\\) be a right eigenvector of \\(A\\), and \\(y\\) be a left eigenvector of \\(A\\).",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "If \\(A=D+F\\), where \\(A,D,F \\in \\mathbb{R}^{n \\times n}\\) and \\(D=\\operatorname{diag}(A)\\), then state and prove a theorem relating the location of the eigenvalues of \\(A\\) to the matrices \\(D\\) and \\(F\\).",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Show: If \\(A,D,F \\in \\mathbb{R}^{n \\times n}\\), \\(Ax'(0)+Fx=\\lambda'(0)x+\\lambda x'(0)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Using part (2) above show that \\(\\left|\\lambda'(0)\\right|=\\left\\|\\frac{y^tFx}{y^tx}\\right\\| \\le \\frac{1}{y^tx}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(4)",
-          "text": "Explain the implications of (3) to the stability of eigenvalues of symmetric matrices, and highly unsymmetric matrices.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Show: If \\(\\lambda_n\\) is the unique eigenvalue of \\(A \\in \\mathbb{R}^{n \\times n}\\) with largest magnitude and \\(x_0\\) is chosen arbitrarily in \\(\\mathbb{R}^n\\), then the iteration \\(x_k=A^k x_0\\) will almost surely converge to a multiple of \\(v_n\\), the eigenvector associated with \\(\\lambda_n\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "If \\(\\lambda_k\\) is a unique eigenvalue which does not have the largest magnitude from among the eigenvalues of \\(A\\), then describe a method that will compute the eigenvector corresponding to \\(\\lambda_k\\).",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Describe the \\(QR\\) iteration algorithm for computing the eigenvalues for a matrix \\(A \\in \\mathbb{R}^{n \\times n}\\). Draw analogues between the \\(QR\\) method and the power method.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Give a careful statement of the error formula for Lagrange interpolation.",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Give a careful proof of the error for formula for Lagrange interpolation.",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Give a careful definition of the Chebyshev Polynomials \\(T_n(x)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(4)",
-          "text": "Give a careful statement of the theorem that shows that the roots of \\(T_n(x)\\) provide the optimal choice on \\([-1,1]\\) for Lagrange interpolation.",
-          "subparts": []
-        },
-        {
-          "label": "(5)",
-          "text": "For the function \\(f(x)=\\sin(\\pi x)\\) defined on \\([-1,1]\\) and polynomial interpolating function \\(p_n(x)\\) with interpolating points taken to be the roots of \\(T_n(x)\\), and tolerance \\(\\epsilon=0.00001\\), find an integer \\(n\\) such that the interpolating polynomial \\(p_n(x)\\) has the property that \\(|p_n(x)-f(x)|<\\epsilon\\) for all \\(x \\in [-1,1]\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "BACKGROUND: It can be shown that for \\(\\epsilon\\) small there are differentiable functions \\(x(\\epsilon)\\), and \\(\\lambda(\\epsilon)\\) such that \\((A+\\epsilon F)x(\\epsilon)=\\lambda(\\epsilon)x(\\epsilon)\\), where \\(\\|F\\|_2=1\\). Let \\(x=x(0)\\) be a right eigenvector of \\(A\\), and \\(y\\) be a left eigenvector of \\(A\\).",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "If \\(A=D+F\\), where \\(A,D,F \\in \\mathbb{R}^{n \\times n}\\) and \\(D=\\operatorname{diag}(A)\\), then state and prove a theorem relating the location of the eigenvalues of \\(A\\) to the matrices \\(D\\) and \\(F\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Show: If \\(A,D,F \\in \\mathbb{R}^{n \\times n}\\), \\(Ax'(0)+Fx=\\lambda'(0)x+\\lambda x'(0)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Using part (2) above show that \\(\\left|\\lambda'(0)\\right|=\\left\\|\\frac{y^tFx}{y^tx}\\right\\| \\le \\frac{1}{y^tx}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(4)",
+            "text": "Explain the implications of (3) to the stability of eigenvalues of symmetric matrices, and highly unsymmetric matrices.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Devise a 2nd order method for computing the cube root of a number.",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Show that your method always works.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful statement of the error formula for Lagrange interpolation.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give a careful proof of the error for formula for Lagrange interpolation.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Give a careful definition of the Chebyshev Polynomials \\(T_n(x)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(4)",
+            "text": "Give a careful statement of the theorem that shows that the roots of \\(T_n(x)\\) provide the optimal choice on \\([-1,1]\\) for Lagrange interpolation.",
+            "subparts": []
+          },
+          {
+            "label": "(5)",
+            "text": "For the function \\(f(x)=\\sin(\\pi x)\\) defined on \\([-1,1]\\) and polynomial interpolating function \\(p_n(x)\\) with interpolating points taken to be the roots of \\(T_n(x)\\), and tolerance \\(\\epsilon=0.00001\\), find an integer \\(n\\) such that the interpolating polynomial \\(p_n(x)\\) has the property that \\(|p_n(x)-f(x)|<\\epsilon\\) for all \\(x \\in [-1,1]\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Explain Romberg’s technique for numerical approximation of an integral.",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Discuss the ideas and concepts that explain why the method works.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Devise a 2nd order method for computing the cube root of a number.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Show that your method always works.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 9,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Set up the system of linear equations to be solved when a finite difference approach is used to solve the two point boundary value problem: \\(v''+b(x)v'+c(x)v=d(x)\\), where \\(v(0)=0\\) and \\(v(1)=0\\).",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Set up the system of linear equations to be solved when a collocation approach (with basis functions \\(\\sin(k\\pi x)\\)) is used to solve the two point boundary value problem: \\(v''+b(x)v'+c(x)v=d(x)\\), where \\(v(0)=0\\) and \\(v(1)=0\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Explain Romberg’s technique for numerical approximation of an integral.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Discuss the ideas and concepts that explain why the method works.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 10,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Describe the defining properties of the Legendre polynomials on the interval \\([-1,1]\\).",
-          "subparts": []
-        },
-        {
-          "label": "(2)",
-          "text": "Give a careful statement of the theorem fundamental to Gauss Quadrature.",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Show how the Gauss Quadrature method can be used to approximate the integral\n\\[\\int_0^1 \\exp(x^2)\\,dx.\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Set up the system of linear equations to be solved when a finite difference approach is used to solve the two point boundary value problem: \\(v''+b(x)v'+c(x)v=d(x)\\), where \\(v(0)=0\\) and \\(v(1)=0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Set up the system of linear equations to be solved when a collocation approach (with basis functions \\(\\sin(k\\pi x)\\)) is used to solve the two point boundary value problem: \\(v''+b(x)v'+c(x)v=d(x)\\), where \\(v(0)=0\\) and \\(v(1)=0\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Describe the defining properties of the Legendre polynomials on the interval \\([-1,1]\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give a careful statement of the theorem fundamental to Gauss Quadrature.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Show how the Gauss Quadrature method can be used to approximate the integral\n\\[\\int_0^1 \\exp(x^2)\\,dx.\\]",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

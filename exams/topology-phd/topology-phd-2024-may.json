@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-2024-may",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,98 +7,135 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Topology-2024_05.pdf",
-  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove that compact Hausdorff space is normal.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "Let \\(X_\\alpha\\) be a family of connected spaces that have a common point. Prove that \\(\\bigcup X_\\alpha\\) is connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that compact Hausdorff space is normal.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Does there exist a closed orientable \\(n\\)-manifold \\(M\\) with",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(n=4\\) and \\(H_2(M)=\\mathbb{Z}\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(n=5\\) and \\(H_3(M)=\\mathbb{Z}\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(n=6\\) and \\(H_3(M)=\\mathbb{Z}\\)?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X_\\alpha\\) be a family of connected spaces that have a common point. Prove that \\(\\bigcup_\\alpha X_\\alpha\\) is connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Show that the Möbius strip is not a retract of its boundary.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Does there exist a closed orientable \\(n\\)-manifold \\(M\\) with",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(n=4\\) and \\(H_2(M)=\\mathbb{Z}\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(n=5\\) and \\(H_3(M)=\\mathbb{Z}\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(n=6\\) and \\(H_3(M)=\\mathbb{Z}\\)?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Is the space of all real \\(n\\times n\\)-matrices compact? Connected?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the boundary of the Möbius strip is not a retract of the Möbius strip.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Explain relations between connectedness and path connectedness.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Is the space of all real \\(n\\times n\\)-matrices compact? Connected?",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "State the Lefschetz Fixed Point Theorem. Explain why every continuous map \\(D^n\\to D^n\\) has a fixed point.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "Give definitions of retraction, deformation retraction, retract, and deformation retract. Give an example of a retract \\(A\\) of a topological space which is not a deformation retract.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Explain relations between connectedness and path connectedness.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Show that the spaces \\(S^2\\times S^2\\) and \\(S^2\\vee S^2\\vee S^4\\) are not homotopy equivalent.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Lefschetz Fixed Point Theorem. Explain why every continuous map \\(D^n\\to D^n\\) has a fixed point.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Give definitions of the mapping cylinder and the mapping cone. Is the Möbius strip a mapping cylinder?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give definitions of retraction, deformation retraction, retract, and deformation retract. Give an example of a retract \\(A\\) of a topological space which is not a deformation retract.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Formulate the Urysohn Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the spaces \\(S^2\\times S^2\\) and \\(S^2\\vee S^2\\vee S^4\\) are not homotopy equivalent.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Does \\(S^1\\vee S^1\\) admit a covering space with an abelian fundamental group?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give definitions of the mapping cylinder and the mapping cone. Is the Möbius strip a mapping cylinder?",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "What is the Euler characteristic of the product of five 2-dimensional spheres \\(S^2\\times S^2\\times S^2\\times S^2\\times S^2\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Formulate the Urysohn Lemma.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Is \\(\\mathbb{R}^\\omega\\) connected in the uniform topology?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Does \\(S^1\\vee S^1\\) admit a covering space with an abelian fundamental group?",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "State the Five Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "What is the Euler characteristic of the product of five 2-dimensional spheres \\(S^2\\times S^2\\times S^2\\times S^2\\times S^2\\)?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Is \\(\\mathbb{R}^\\omega\\) connected in the uniform topology?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State the Five Lemma.",
+        "subparts": []
+      }
     }
   ]
 }

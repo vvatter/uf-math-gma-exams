@@ -7,7 +7,14 @@ import unittest
 
 import pymupdf
 
-from extract_exams import REVIEW_FILES, ExamRecord, Problem, render_markdown, sha256_file
+from extract_exams import (
+    REVIEW_FILES,
+    ExamRecord,
+    Problem,
+    ProblemBlock,
+    render_markdown,
+    sha256_file,
+)
 from validate_archive import validate_archive, validate_mathjax
 
 
@@ -49,8 +56,7 @@ class ArchiveValidationTests(unittest.TestCase):
             month="may",
             part=None,
             pdf_url="https://example.edu/exam.pdf",
-            instructions=None,
-            problems=[Problem(number=1, text="Prove it.", subparts=[])],
+            content=[ProblemBlock(problem=Problem(text="Prove it.", subparts=[]))],
         )
         pdf_path.with_suffix(".json").write_text(
             exam.model_dump_json(indent=2) + "\n", encoding="utf-8"
@@ -61,7 +67,7 @@ class ArchiveValidationTests(unittest.TestCase):
             (review_dir / filename).write_text(
                 json.dumps(
                     {
-                        "schema_version": 1,
+                        "schema_version": 2,
                         "review_type": bucket,
                         "purpose": purpose,
                         "items": [],

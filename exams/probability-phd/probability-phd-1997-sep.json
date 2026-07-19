@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "probability-phd-1997-sep",
   "subject": "PhD Probability",
   "subject_tag": "probability-phd",
@@ -7,148 +7,157 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Probability_1997_09.pdf",
-  "instructions": "The problems are numbered consecutively: problems 1–7 are from the first source sequence, and problems 8–11 are from the restarted source sequence.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(X\\) and \\(Y\\) be independent and uniform on \\([0,1]\\). Find",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "the distribution of \\(X+Y\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "the conditional density of \\(X\\) given \\(X+Y=z\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) and \\(Y\\) be independent and uniform on \\([0,1]\\). Find",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "the distribution of \\(X+Y\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "the conditional density of \\(X\\) given \\(X+Y=z\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 2,
-      "text": "Let \\(X_0,X_1,\\ldots,X_n,\\ldots\\) be i.i.d. with mean \\(m\\). Let \\(N\\) be Poisson with mean \\(\\lambda\\), independent of the \\(X\\)’s. Define\n\\[\nY=X_0+\\cdots+X_N.\n\\]\nProve that \\(Y\\) is integrable. Find \\(E(Y)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X_0,X_1,\\ldots,X_n,\\ldots\\) be i.i.d. with mean \\(m\\). Let \\(N\\) be Poisson with mean \\(\\lambda\\), independent of the \\(X\\)’s. Define\n\\[\nY=X_0+\\cdots+X_N.\n\\]\nProve that \\(Y\\) is integrable. Find \\(E(Y)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "State precisely (all for i.i.d.)",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "the strong law of large numbers and prove it.",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "the central limit theorem.",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "the law of the iterated logarithm.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "State precisely (all for i.i.d.):",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "the strong law of large numbers and prove it.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "the central limit theorem.",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "the law of the iterated logarithm.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Define a martingale relative to a filtration \\(\\{\\mathcal F_n\\}\\), \\(n=0,1,2,\\ldots\\). Define a stopping time relative to this filtration. State the optional sampling theorem. State and prove the martingale convergence theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define a martingale relative to a filtration \\(\\{\\mathcal F_n\\}\\), \\(n=0,1,2,\\ldots\\). Define a stopping time relative to this filtration. State the optional sampling theorem. State and prove the martingale convergence theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "What is an infinitely divisible distribution on \\(\\mathbb R^1\\)? Prove that a non-trivial infinitely divisible distribution cannot have compact support.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "What is an infinitely divisible distribution on \\(\\mathbb R^1\\)? Prove that a non-trivial infinitely divisible distribution cannot have compact support.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Define a standard Brownian motion \\(W\\) starting at 0. Define new processes \\(W_1,W_2,W_3\\) by:\n\\[\nW_1(t)=cW\\!\\left(\\frac{t}{c^2}\\right),\\quad t\\geq0,\\quad c\\text{ real}\\neq0,\n\\]\n\\[\nW_2(t)=tW\\!\\left(\\frac1t\\right),\\quad t>0,\\quad W_2(0)=0,\n\\]\n\\[\nW_3(t)=\n\\begin{cases}\nW(1)-W(1-t),&0\\leq t\\leq1,\\\\\nW(t),&\\text{otherwise.}\n\\end{cases}\n\\]\nShow that \\(W_1,W_2,W_3\\) are the standard Brownian motions.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define a standard Brownian Motion \\(W\\) starting at 0. Define new processes \\(W_1,W_2,W_3\\) by:\n\\[\nW_1(t)=cW\\!\\left(\\frac{t}{c^2}\\right),\\qquad t\\ge 0,\\quad c\\text{ real}\\ne0,\n\\]\n\\[\nW_2(t)=tW\\!\\left(\\frac1t\\right),\\qquad t>0,\\quad W_2(0)=0,\n\\]\n\\[\nW_3(t)=\n\\begin{cases}\nW(1)-W(1-t),&0\\le t\\le1,\\\\\nW(t),&\\text{otherwise}.\n\\end{cases}\n\\]\nShow that \\(W_1,W_2,W_3\\) are the standard Brownian motions.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(\\varphi(t)=\\int e^{itx}\\,\\mu(dx)\\) be a characteristic function where \\(\\mu\\) is a probability measure on \\(\\mathbb R^1\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Suppose \\(|\\varphi(t)|=1\\) for some \\(t\\neq0\\). Then prove that unless \\(\\varphi(t)\\equiv1\\), there is a smallest \\(t_0\\neq0\\) and a \\(d\\) such that \\(\\mu\\) is concentrated on the set\n\\[\n\\left\\{d+\\frac{2\\pi j}{t_0}\\right\\},\\qquad j=0,\\pm1,\\pm2,\\ldots.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Using a) prove that \\(|\\cos t|\\) is not a characteristic function. Hint: \\(\\cos t\\) and \\(\\cos^2t\\) are characteristic functions.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\varphi(t)=\\int e^{itx}\\,\\mu(dx)\\) be a characteristic function where \\(\\mu\\) is a probability measure on \\(\\mathbb R^1\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Suppose \\(|\\varphi(t)|=1\\) for some \\(t\\ne0\\). Then prove that unless \\(|\\varphi(t)|\\equiv1\\), there is a smallest \\(t_0\\ne0\\) and a \\(d\\) such that \\(\\mu\\) is concentrated on the set\n\\[\n\\left\\{d+\\frac{2\\pi j}{t_0}\\right\\},\\qquad j=0,\\pm1,\\pm2,\\ldots.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Using a) prove that \\(|\\cos t|\\) is not a characteristic function. Hint: \\(\\cos t\\) and \\(\\cos^2t\\) are characteristic functions.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(S_n=(U_n,V_n)\\) denote the position after \\(n\\) steps of a random walk on \\(\\mathbb Z^2\\), starting from \\((0,0)\\). Suppose that\n\\[\nU_{n+1}=U_n\\pm1,\n\\qquad\nV_{n+1}=V_n\\pm1,\n\\]\nwhere the signs are picked by two independent tosses of a fair coin, independently at each step. Define\n\\[\np_n=P(S_n=(0,0)),\n\\]\n\\[\n\\tau_n=\\inf\\{m>\\tau_{n-1}:S_m=(0,0)\\}.\n\\]\nAn easy fact is \\(P(\\tau_n<\\infty)=P(\\tau_1<\\infty)^n\\).",
-      "subparts": [
-        {
-          "label": "(1)",
-          "text": "Prove that for any random walk \\(S_n\\in\\mathbb Z^2\\) the following are equivalent:",
-          "subparts": [
-            {
-              "label": "(i)",
-              "text": "\\(P(\\tau_n<\\infty)=1\\).",
-              "subparts": []
-            },
-            {
-              "label": "(ii)",
-              "text": "\\(P(S_n=(0,0)\\text{ i.o.})=1\\).",
-              "subparts": []
-            },
-            {
-              "label": "(iii)",
-              "text": "\\(\\displaystyle \\sum_{n=1}^{\\infty}P(S_n=(0,0))=\\infty\\).",
-              "subparts": []
-            }
-          ]
-        },
-        {
-          "label": "(2)",
-          "text": "Find a formula for \\(p_n\\), \\((n>0)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(3)",
-          "text": "Use (1) and Stirling’s formula\n\\[\nn!=\\sqrt{2\\pi n}\\left(\\frac ne\\right)^n e^S\\qquad(S\\to0\\text{ as }n\\to\\infty)\n\\]\nto show that the diagonal random walk in \\(\\mathbb Z^2\\) is recurrent.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(S_n=(U_n,V_n)\\) denote the position after \\(n\\) steps of a random walk on \\(\\mathbb Z^2\\), starting from \\((0,0)\\). Suppose that\n\\[\nU_{n+1}=U_n\\pm1,\n\\qquad\nV_{n+1}=V_n\\pm1,\n\\]\nwhere the signs are picked by two independent tosses of a fair coin, independently at each step. Define\n\\[\np_n=P(S_n=(0,0)),\n\\]\n\\[\n\\tau_n=\\inf\\{m>\\tau_{n-1}:S_m=(0,0)\\}.\n\\]\nAn easy fact is \\(P(\\tau_n<\\infty)=P(\\tau_1<\\infty)^n\\).",
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Prove that for any random walk \\(S_n\\in\\mathbb Z^2\\) the following are equivalent:",
+            "subparts": [
+              {
+                "label": "(i)",
+                "text": "\\(P(\\tau_n<\\infty)=1\\).",
+                "subparts": []
+              },
+              {
+                "label": "(ii)",
+                "text": "\\(P(S_n=(0,0)\\text{ i.o.})=1\\).",
+                "subparts": []
+              },
+              {
+                "label": "(iii)",
+                "text": "\\(\\displaystyle\\sum_{n=1}^{\\infty}P(S_n=(0,0))=\\infty\\).",
+                "subparts": []
+              }
+            ]
+          },
+          {
+            "label": "(2)",
+            "text": "Find a formula for \\(p_n\\), \\(n>0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Use (1) and Stirling’s formula\n\\[\nn!\\approx\\sqrt{2\\pi n}\\left(\\frac ne\\right)^n e^S\n\\qquad(S\\to0\\text{ as }n\\to\\infty)\n\\]\nto show that the diagonal random walk in \\(\\mathbb Z^2\\) is recurrent.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\((P_t)_{t>0}\\) be a Markov semigroup. Assume \\(P_t(x,dy)=p_t(x,y)\\,dy\\) with \\(p_t(x,y)=p_t(y,x)\\) and \\(p_t(x,y)\\leq M(t)\\), where \\(M(t)\\) is a constant depending on \\(t\\). If \\(\\mu\\) is a finite signed measure, show that\n\\[\n\\int p_t(x,y)\\,\\mu(dx)\\mu(dy)\\geq0.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((P_t)_{t>0}\\) be a Markov semigroup. Assume \\(P_t(x,dy)=p_t(x,y)\\,dy\\) with \\(p_t(x,y)=p_t(y,x)\\) and \\(p_t(x,y)\\le M(t)\\), where \\(M(t)\\) is a constant depending on \\(t\\). If \\(\\mu\\) is a finite signed measure, show that\n\\[\n\\int p_t(x,y)\\,\\mu(dx)\\mu(dy)\\ge0.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "An urn at \\(t=0\\) contains \\(R_0\\), \\((\\geq1)\\) red balls and \\(B_0\\), \\((\\geq1)\\) black balls, and “random sampling with double replacement” is called out as follows. Let \\(M_t\\) be the proportion in red balls in the urn after \\(t\\) such operations, so that\n\\[\nM_0=\\frac{R_0}{R_0+B_0}.\n\\]\nShow that, with respect to a suitable filtration (which you should specify), the sequence \\(M_0,M_1,\\ldots,M_t,\\ldots\\) is a martingale. Prove that \\(M_t\\) converges as \\(t\\to+\\infty\\) almost surely to a random variable \\(M_\\infty\\), \\(0\\leq M_\\infty\\leq1\\). Show that\n\\[\nM_0=EM_1=EM_2=\\cdots=EM_t=EM_\\infty,\n\\]\nand that\n\\[\nM_0^2\\leq E[M_1^2]\\leq\\cdots\\leq E[M_t^2]\\leq E[M_\\infty^2],\n\\]\nand that\n\\[\nP(M_\\infty=M_0)<1.\n\\]\nYou may quote without proof any martingale theorems you need, but should state them carefully.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Choose a ball at random (meaning that each ball in the urn has the same probability to be drawn), and note its color;",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Replace this ball in the urn together with an extra ball of the same color;",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "Go to (i).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "An urn at \\(t=0\\) contains \\(R_0\\) (\\(\\ge1\\)) red balls and \\(B_0\\) (\\(\\ge1\\)) black balls, and “random sampling with double replacement” is called out as follows:\n\n(i) Choose a ball at random (meaning that each ball in the urn has the same probability to be drawn), and note its color;\n\n(ii) Replace this ball in the urn together with an extra ball of the same color;\n\n(iii) Go to (i).\n\nLet \\(M_t\\) be the proportion in red balls in the urn after \\(t\\) such operations, so that\n\\[\nM_0=\\frac{R_0}{R_0+B_0}.\n\\]\nShow that, with respect to a suitable filtration (which you should specify), the sequence \\(M_0,M_1,\\ldots,M_t,\\ldots\\) is a martingale. Prove that \\(M_t\\) converges as \\(t\\to+\\infty\\) almost surely to a random variable \\(M_\\infty\\), \\(0\\le M_\\infty\\le1\\). Show that\n\\[\nM_0=EM_1=EM_2=\\cdots=EM_t=EM_\\infty,\n\\]\nand that\n\\[\nM_0^2\\le E[M_1^2]\\le\\cdots\\le E[M_t^2]\\le E[M_\\infty^2],\n\\]\nand that\n\\[\nP(M_\\infty=M_0)<1.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Let \\(X_n\\) be independent and all distributed according to standard normal distribution. Find constants \\(C_n\\) such that\n\\[\n\\limsup\\frac{X_n}{C_n}=1\\qquad\\text{a.s.}\n\\]\nHint:\n\\[\n\\int_a^\\infty e^{-b^2/2}\\,db\\leq\\frac1a e^{-a^2/2},\n\\]\nand let \\(c_n^2=2\\log(n\\log n)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "NOTE. You may quote without proof any martingale theorems you need, but should state them carefully."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X_n\\) be independent and all distributed according to standard normal distribution. Find constants \\(C_n\\) such that\n\\[\n\\limsup \\frac{X_n}{C_n}=1\\qquad\\text{a.s.}\n\\]\nHint.\n\\[\n\\int_a^\\infty e^{-b^2/2}\\,db\\le\\frac1a e^{-a^2/2},\n\\]\nand let \\(c_n^2=2\\log(n\\log n)\\).",
+        "subparts": []
+      }
     }
   ]
 }

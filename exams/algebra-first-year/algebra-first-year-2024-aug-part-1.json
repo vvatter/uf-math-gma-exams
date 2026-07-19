@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2024-aug-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,101 +7,116 @@
   "month": "august",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2024-08.pdf",
-  "instructions": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Give an example of each, with a few words of explanation.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "A finite abelian simple group.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "A nonabelian simple group.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "A finite nilpotent group which is not a \\(p\\)-group.",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "A finite group which is solvable but not nilpotent.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Consider the symmetric group \\(S_6\\), and the corresponding alternating group \\(A_6\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "How many elements of order 4 are there in \\(S_6\\)? Justify your answer.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "How many elements of order 4 are there in \\(A_6\\)? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Give an example of each, with a few words of explanation.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "A finite abelian simple group.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "A nonabelian simple group.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "A finite nilpotent group which is not a \\(p\\)-group.",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "A finite group which is solvable but not nilpotent.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(G\\) be a finite \\(p\\)-group and suppose that \\(G\\) acts on a finite set \\(S\\). Denote by \\(S^G\\) the set of all elements of \\(S\\) fixed by every element of \\(G\\). Show that \\(|S| \\equiv |S^G| \\pmod p\\), where \\(|A|\\) denotes the cardinality of the set \\(A\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Consider the symmetric group \\(S_6\\), and the corresponding alternating group \\(A_6\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "How many elements of order 4 are there in \\(S_6\\)? Justify your answer.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "How many elements of order 4 are there in \\(A_6\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(G\\) be a group of order \\(32 \\cdot 11 \\cdot 41\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that every 41-Sylow subgroup of \\(G\\) is normal.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that if \\(H\\) is a group of order \\(32 \\cdot 11\\) then every 11-Sylow subgroup of \\(H\\) is normal.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Show that \\(G\\) has a normal cyclic subgroup of order \\(451 = 11 \\cdot 41\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite \\(p\\)-group and suppose that \\(G\\) acts on a finite set \\(S\\). Denote by \\(S^G\\) the set of all elements of \\(S\\) fixed by every element of \\(G\\). Show that \\(|S| \\equiv |S^G| \\pmod p\\), where \\(|A|\\) denotes the cardinality of the set \\(A\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(G\\) be a group and let \\(g \\in G\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what is meant by the order of \\(g\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose that \\(g\\) has infinite order, and suppose that \\(N\\) is a finite normal subgroup of \\(G\\). Prove, from your definition, that the element \\(gN \\in G/N\\) has infinite order.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Suppose that \\(g\\) has finite order, suppose that \\(N\\) is a finite normal subgroup of \\(G\\), and suppose that \\(|N|\\) is relatively prime to the order of \\(g\\). Prove, from your definition, that the element \\(gN \\in G/N\\) has the same order as the element \\(g \\in G\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group of order \\(32 \\cdot 11 \\cdot 41\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that every 41-Sylow subgroup of \\(G\\) is normal.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if \\(H\\) is a group of order \\(32 \\cdot 11\\) then every 11-Sylow subgroup of \\(H\\) is normal.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that \\(G\\) has a normal cyclic subgroup of order \\(451 = 11 \\cdot 41\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Show that for any \\(n \\geq 5\\), the alternating group \\(A_n\\) is the only nontrivial proper normal subgroup of the symmetric group \\(S_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group and let \\(g \\in G\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what is meant by the order of \\(g\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose that \\(g\\) has infinite order, and suppose that \\(N\\) is a finite normal subgroup of \\(G\\). Prove, from your definition, that the element \\(gN \\in G/N\\) has infinite order.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Suppose that \\(g\\) has finite order, suppose that \\(N\\) is a finite normal subgroup of \\(G\\), and suppose that \\(|N|\\) is relatively prime to the order of \\(g\\). Prove, from your definition, that the element \\(gN \\in G/N\\) has the same order as the element \\(g \\in G\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Show that for any \\(n \\geq 5\\), the alternating group \\(A_n\\) is the only nontrivial proper normal subgroup of the symmetric group \\(S_n\\).",
+        "subparts": []
+      }
     }
   ]
 }

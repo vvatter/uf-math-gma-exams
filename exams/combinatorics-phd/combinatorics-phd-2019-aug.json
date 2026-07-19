@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "combinatorics-phd-2019-aug",
   "subject": "PhD Combinatorics",
   "subject_tag": "combinatorics-phd",
@@ -7,58 +7,73 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics-2019_08.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "List the infinite families of symmetries of the standard square tiling of the plane. (No two families should have more than the identity in common.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "List the infinite families of symmetries of the standard square tiling of the plane. (No two families should have more than the identity in common.)",
+        "subparts": []
+      }
     },
     {
-      "number": 2,
-      "text": "Let \\((v,b,r,k,\\lambda)\\) denote the number, respectively, of points, blocks, blocks containing a given point, points in each block, and blocks containing two distinct points of a balanced incomplete block design. Prove that\n\\[\nbk=vr\n\\]\nand\n\\[\n\\lambda(v-1)=r(k-1).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((v,b,r,k,\\lambda)\\) denote the number, respectively, of points, blocks, blocks containing a given point, points in each block, and blocks containing two distinct points of a balanced incomplete block design. Prove that\n\\[\nbk=vr\n\\]\nand\n\\[\n\\lambda(v-1)=r(k-1).\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(h_n\\) be the number of all words over the alphabet \\(\\{A,B,C\\}\\) that are of length \\(n\\) and in which a letter \\(A\\) is never immediately followed by a letter \\(B\\). Set \\(h_0=1\\). Find a closed form for the ordinary generating function\n\\[\nH(z)=\\sum_{n\\ge 0}h_nz^n.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(h_n\\) be the number of all words over the alphabet \\(\\{A,B,C\\}\\) that are of length \\(n\\) and in which a letter \\(A\\) is never immediately followed by a letter \\(B\\). Set \\(h_0=1\\). Find a closed form for the ordinary generating function\n\\[\nH(z)=\\sum_{n\\ge 0}h_nz^n.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\ell_n\\) be the total number of leaves in all unlabeled plane binary trees on \\(n\\) vertices. (These trees are rooted, and each vertex has at most two children, and every child is either a left child or a right child, even if it is an only child.) Note that \\(\\ell_1=1\\), \\(\\ell_2=2\\), and \\(\\ell_3=6\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Find the generating function\n\\[\nL(z)=\\sum_{n\\ge 1}\\ell_nz^n\n\\]\nin closed form.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Find an explicit formula for the numbers \\(\\ell_n\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\ell_n\\) be the total number of leaves in all unlabeled plane binary trees on \\(n\\) vertices. (These trees are rooted, and each vertex has at most two children, and every child is either a left child or a right child, even if it is an only child.) Note that \\(\\ell_1=1\\), \\(\\ell_2=2\\), and \\(\\ell_3=6\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Find the generating function\n\\[\nL(z)=\\sum_{n\\ge 1}\\ell_nz^n\n\\]\nin closed form.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Find an explicit formula for the numbers \\(\\ell_n\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(t_n\\) be the number of ways to choose a permutation of length \\(n\\), and then to color a subset (not necessarily proper) of its even cycles red. Find a closed formula for the exponential generating function of the numbers \\(t_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(t_n\\) be the number of ways to choose a permutation of length \\(n\\), and then to color a subset (not necessarily proper) of its even cycles red. Find a closed formula for the exponential generating function of the numbers \\(t_n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Recall that for a prime power \\(q\\), the Gaussian or \\(q\\)-binomial coefficient \\(\\left[\\begin{smallmatrix}n\\\\k\\end{smallmatrix}\\right]_q\\) is defined to be the number of \\(k\\) dimensional subspaces of an \\(n\\)-dimensional vector space over \\(\\mathrm{GF}(q)\\). Equivalently, we can think of \\(\\left[\\begin{smallmatrix}n\\\\k\\end{smallmatrix}\\right]_q\\) as counting \\(k\\times n\\) matrices over \\(\\mathrm{GF}(q)\\) which are in reduced row echelon form and have no all-zero rows. Using either of these interpretations, prove that\n\\[\n\\left[\\begin{smallmatrix}n\\\\k\\end{smallmatrix}\\right]_q\n=\n\\left[\\begin{smallmatrix}n-1\\\\k\\end{smallmatrix}\\right]_q\n+q^{n-k}\\left[\\begin{smallmatrix}n-1\\\\k-1\\end{smallmatrix}\\right]_q\n\\]\nfor all \\(n,k\\ge 1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Recall that for a prime power \\(q\\), the Gaussian or \\(q\\)-binomial coefficient \\(\\left[\\begin{smallmatrix}n\\\\k\\end{smallmatrix}\\right]_q\\) is defined to be the number of \\(k\\) dimensional subspaces of an \\(n\\)-dimensional vector space over \\(\\mathrm{GF}(q)\\). Equivalently, we can think of \\(\\left[\\begin{smallmatrix}n\\\\k\\end{smallmatrix}\\right]_q\\) as counting \\(k\\times n\\) matrices over \\(\\mathrm{GF}(q)\\) which are in reduced row echelon form and have no all-zero rows. Using either of these interpretations, prove that\n\\[\n\\left[\\begin{smallmatrix}n\\\\k\\end{smallmatrix}\\right]_q\n=\n\\left[\\begin{smallmatrix}n-1\\\\k\\end{smallmatrix}\\right]_q\n+q^{n-k}\\left[\\begin{smallmatrix}n-1\\\\k-1\\end{smallmatrix}\\right]_q\n\\]\nfor all \\(n,k\\ge 1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Recall that \\(R(k,\\ell)\\) is the minimum integer \\(n\\) such that every graph on \\(n\\) vertices contains either a clique (complete subgraph) on \\(k\\) vertices or an independent set on \\(\\ell\\) vertices. Prove that \\(R(k,\\ell)\\) is finite for all \\(k\\) and \\(\\ell\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Recall that \\(R(k,\\ell)\\) is the minimum integer \\(n\\) such that every graph on \\(n\\) vertices contains either a clique (complete subgraph) on \\(k\\) vertices or an independent set on \\(\\ell\\) vertices. Prove that \\(R(k,\\ell)\\) is finite for all \\(k\\) and \\(\\ell\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Prove that \\(R(k,k)>2^{k/2}\\) for all \\(k\\). Hint: Consider a random graph.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that \\(R(k,k)>2^{k/2}\\) for all \\(k\\). Hint: Consider a random graph.",
+        "subparts": []
+      }
     }
   ]
 }

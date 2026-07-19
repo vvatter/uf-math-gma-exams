@@ -10,21 +10,26 @@ import pymupdf
 
 from extract_exams import (
     ExamRecord,
+    InstructionsBlock,
+    NumberingMode,
     PROMPT_VERSION,
     Problem,
+    ProblemBlock,
     ReviewCategory,
     ReviewFlag,
+    SectionBlock,
     SYSTEM_PROMPT,
     SourceExam,
     Subpart,
+    clean_native_text,
     exam_json_path,
     exam_markdown_path,
     extract_one,
+    has_ascii_control_characters,
     part_from_manifest,
     render_markdown,
     select_exam_ids,
     sha256_file,
-    logic_instruction_ranges,
     update_review_files,
     validate_exam,
 )
@@ -54,8 +59,7 @@ def exam_for(item: SourceExam, problems: list[Problem]) -> ExamRecord:
         month=item.month,
         part=item.part,
         pdf_url=item.pdf_url,
-        instructions=None,
-        problems=problems,
+        content=[ProblemBlock(problem=problem) for problem in problems],
     )
 
 
@@ -63,7 +67,7 @@ class ExtractionSchemaTests(unittest.TestCase):
     def test_prompt_normalizes_mathematician_names_and_eponyms(self) -> None:
         normalized_prompt = " ".join(SYSTEM_PROMPT.split())
 
-        self.assertEqual(PROMPT_VERSION, "exam-extraction-v6")
+        self.assertEqual(PROMPT_VERSION, "exam-extraction-v10")
         self.assertIn("Gödel rather than Goedel", normalized_prompt)
         self.assertIn("Hahn–Banach", SYSTEM_PROMPT)
         self.assertIn("Preserve a hyphen that is actually part", SYSTEM_PROMPT)
@@ -74,6 +78,12 @@ class ExtractionSchemaTests(unittest.TestCase):
 
         self.assertEqual(exam_json_path(item), Path("exams/example.json"))
         self.assertEqual(exam_markdown_path(item), Path("exams/example.md"))
+
+    def test_problem_number_is_derived_not_accepted_as_data(self) -> None:
+        with self.assertRaises(ValueError):
+            Problem.model_validate(
+                {"number": 1, "text": "Prove it.", "subparts": []}
+            )
 
     def test_all_selection_skips_completed_before_applying_limit(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
@@ -156,7 +166,9 @@ class ExtractionSchemaTests(unittest.TestCase):
     def test_notice_only_record_validates_and_renders(self) -> None:
         item = source()
         exam = exam_for(item, [])
-        exam.instructions = "This exam was not provided to the archive."
+        exam.content = [
+            InstructionsBlock(text="This exam was not provided to the archive.")
+        ]
 
         self.assertEqual(validate_exam(exam, item, []), [])
         self.assertEqual(
@@ -174,6 +186,25 @@ class ExtractionSchemaTests(unittest.TestCase):
             validate_exam(exam, item, []),
         )
 
+    def test_ascii_control_characters_are_invalid(self) -> None:
+        item = source()
+        exam = exam_for(item, [Problem(text="Let \x07 be a measure.", subparts=[])])
+
+        self.assertIn(
+            "content contains an ASCII control character",
+            validate_exam(exam, item, []),
+        )
+
+    def test_native_text_evidence_drops_ascii_control_characters(self) -> None:
+        self.assertEqual(clean_native_text("  A\x07B\nC\x01  "), "AB\nC")
+
+    def test_control_character_detection_walks_models(self) -> None:
+        clean = exam_for(source(), [Problem(text="Clean.", subparts=[])])
+        corrupt = exam_for(source(), [Problem(text="Bad \x1dmu.", subparts=[])])
+
+        self.assertFalse(has_ascii_control_characters(clean))
+        self.assertTrue(has_ascii_control_characters(corrupt))
+
     def test_cached_extraction_records_approved_working_hash_change(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -187,7 +218,7 @@ class ExtractionSchemaTests(unittest.TestCase):
                 sha256=sha256_file(pdf_path),
                 download_sha256="download-hash",
             )
-            exam = exam_for(item, [Problem(number=1, text="Prove it.", subparts=[])])
+            exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
             pdf_path.with_suffix(".json").write_text(
                 exam.model_dump_json(indent=2), encoding="utf-8"
             )
@@ -222,8 +253,12 @@ class ExtractionSchemaTests(unittest.TestCase):
                 download_sha256="download-hash",
             )
             extraction = {
-                "instructions": None,
-                "problems": [{"number": 1, "text": "Prove it.", "subparts": []}],
+                "content": [
+                    {
+                        "type": "problem",
+                        "problem": {"text": "Prove it.", "subparts": []},
+                    }
+                ],
                 "review_flags": [],
             }
             saved_path = root / "build" / item.id / "extraction.json"
@@ -248,7 +283,7 @@ class ExtractionSchemaTests(unittest.TestCase):
             markdown_exists = pdf_path.with_suffix(".md").exists()
 
         self.assertTrue(cached)
-        self.assertEqual(exam.problems[0].text, "Prove it.")
+        self.assertEqual(exam.content[0].problem.text, "Prove it.")
         self.assertEqual(flags, [])
         self.assertEqual(checkpoint["validation_errors"], [])
         self.assertIn("revalidated_at", checkpoint)
@@ -265,7 +300,6 @@ class ExtractionSchemaTests(unittest.TestCase):
             item,
             [
                 Problem(
-                    number=1,
                     text=r"Let \(G\) be a group.",
                     subparts=[
                         Subpart(
@@ -286,7 +320,6 @@ class ExtractionSchemaTests(unittest.TestCase):
             item,
             [
                 Problem(
-                    number=4,
                     text="Bipartite graphs:",
                     subparts=[
                         Subpart(
@@ -303,7 +336,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         )
 
         self.assertIn(
-            "**4.** Bipartite graphs:\n"
+            "**1.** Bipartite graphs:\n"
             "* (a) Determine when the graph is\n"
             "    * (1) planar;\n"
             "    * (2) Eulerian.",
@@ -316,13 +349,12 @@ class ExtractionSchemaTests(unittest.TestCase):
             item,
             [
                 Problem(
-                    number=1,
                     text=r"Let \(G\) be a group.",
                     subparts=[Subpart(label="(a)", text="Prove it.", subparts=[])],
                 )
             ],
         )
-        exam.instructions = "Answer one problem."
+        exam.content.insert(0, InstructionsBlock(text="Answer one problem."))
 
         self.assertEqual(
             render_markdown(exam),
@@ -341,7 +373,7 @@ class ExtractionSchemaTests(unittest.TestCase):
             year=2026,
             month="january",
         )
-        exam = exam_for(item, [Problem(number=1, text="Prove it.", subparts=[])])
+        exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
 
         self.assertTrue(
             render_markdown(exam).startswith(
@@ -355,7 +387,6 @@ class ExtractionSchemaTests(unittest.TestCase):
             item,
             [
                 Problem(
-                    number=4,
                     text="",
                     subparts=[
                         Subpart(label="(a)", text="First.", subparts=[]),
@@ -366,99 +397,73 @@ class ExtractionSchemaTests(unittest.TestCase):
         )
 
         self.assertIn(
-            "**4.** This problem has two parts.\n* (a) First.\n* (b) Second.",
+            "**1.** This problem has two parts.\n* (a) First.\n* (b) Second.",
             render_markdown(exam),
         )
 
-    def test_logic_requires_global_sequence(self) -> None:
-        item = source("logic-phd")
-        exam = exam_for(
-            item,
-            [
-                Problem(number=1, text="First.", subparts=[]),
-                Problem(number=3, text="Third.", subparts=[]),
-            ],
-        )
-
-        self.assertIn("logic problem numbers are not globally sequential", validate_exam(exam, item, []))
-
-    def test_logic_instructions_must_cover_final_numbers(self) -> None:
-        item = source("logic-phd")
-        exam = exam_for(
-            item,
-            [
-                Problem(number=1, text="First.", subparts=[]),
-                Problem(number=2, text="Second.", subparts=[]),
-            ],
-        )
-        exam.instructions = "Problem 1 concerns Set theory."
-        flags = [
-            ReviewFlag(
-                category=ReviewCategory.NUMBERING_TRANSFORMATION,
-                problem_numbers=[1, 2],
-                source_pages=[1],
-                message="Renumbered source sections.",
-                original_text=None,
-                corrected_text=None,
-                context=None,
-            )
-        ]
-
-        self.assertIn(
-            "logic instructions do not map every final problem to a topic",
-            validate_exam(exam, item, flags),
-        )
-
-    def test_logic_without_numbering_transformation_needs_no_topic_map(self) -> None:
-        item = source("logic-phd")
-        exam = exam_for(
-            item,
-            [
-                Problem(number=1, text="First.", subparts=[]),
-                Problem(number=2, text="Second.", subparts=[]),
-            ],
-        )
-        exam.instructions = "Answer both problems."
-
-        self.assertNotIn(
-            "logic instructions do not map every final problem to a topic",
-            validate_exam(exam, item, []),
-        )
-
-    def test_logic_topic_range_parser_accepts_supported_phrasings(self) -> None:
-        examples = (
-            "Problems 1–3 concern Set Theory, problems 4–6 concern Computability.",
-            "Problems 1–3 are from Section 1, problems 4–6 are from Section 2.",
-            "Problems 1–3 comprise Section 1, Problems 4–6 comprise Section 2.",
-            "Section 1 (Problems 1–3), Section 2 (Problems 4–6).",
-            "Problems 1–3 (Section 1), problems 4–6 (Section 2).",
-        )
-
-        for instructions in examples:
-            with self.subTest(instructions=instructions):
-                self.assertEqual(logic_instruction_ranges(instructions), [(1, 3), (4, 6)])
-
-    def test_numbering_gap_requires_review_flag(self) -> None:
+    def test_sections_control_derived_problem_numbers(self) -> None:
         item = source()
-        exam = exam_for(
-            item,
+        exam = exam_for(item, [Problem(text="Preamble problem.", subparts=[])])
+        exam.content.extend(
             [
-                Problem(number=1, text="First.", subparts=[]),
-                Problem(number=3, text="Third.", subparts=[]),
+                SectionBlock(
+                    heading="II. Set Theory",
+                    numbering=NumberingMode.RESTART,
+                    content=[
+                        InstructionsBlock(text="Prove both statements."),
+                        ProblemBlock(problem=Problem(text="First theorem.", subparts=[])),
+                        ProblemBlock(problem=Problem(text="Second theorem.", subparts=[])),
+                    ],
+                ),
+                SectionBlock(
+                    heading="SECTION III",
+                    numbering=NumberingMode.CONTINUE,
+                    content=[
+                        ProblemBlock(problem=Problem(text="Final theorem.", subparts=[]))
+                    ],
+                ),
+            ]
+        )
+
+        self.assertEqual(validate_exam(exam, item, []), [])
+        self.assertIn(
+            "**1.** Preamble problem.\n\n"
+            "## II. Set Theory\n\n"
+            "*Prove both statements.*\n\n"
+            "**1.** First theorem.\n\n"
+            "**2.** Second theorem.\n\n"
+            "## SECTION III\n\n"
+            "**3.** Final theorem.",
+            render_markdown(exam),
+        )
+
+    def test_empty_section_is_invalid(self) -> None:
+        item = source()
+        exam = ExamRecord(
+            id=item.id,
+            subject=item.subject,
+            subject_tag=item.subject_tag,
+            year=item.year,
+            month=item.month,
+            part=item.part,
+            pdf_url=item.pdf_url,
+            content=[
+                SectionBlock(
+                    heading="Part I",
+                    numbering=NumberingMode.RESTART,
+                    content=[InstructionsBlock(text="Read carefully.")],
+                )
             ],
         )
 
-        self.assertIn(
-            "nonsequential problem numbers lack a numbering review flag",
-            validate_exam(exam, item, []),
-        )
+        self.assertIn("contains no problems", "\n".join(validate_exam(exam, item, [])))
 
     def test_correction_requires_review_evidence(self) -> None:
         item = source()
-        exam = exam_for(item, [Problem(number=1, text="Prove it.", subparts=[])])
+        exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
         flag = ReviewFlag(
             category=ReviewCategory.CORRECTION,
-            problem_numbers=[1],
+            problem_indices=[1],
             source_pages=[1],
             message="Corrected typo.",
             original_text="teh",
@@ -476,7 +481,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         flags = [
             ReviewFlag(
                 category=ReviewCategory.CORRECTION,
-                problem_numbers=[1],
+                problem_indices=[1],
                 source_pages=[1],
                 message="Corrected typo.",
                 original_text="teh",
@@ -485,7 +490,7 @@ class ExtractionSchemaTests(unittest.TestCase):
             ),
             ReviewFlag(
                 category=ReviewCategory.NUMBERING_TRANSFORMATION,
-                problem_numbers=[1, 2],
+                problem_indices=[1, 2],
                 source_pages=[1],
                 message="Renumbered two sections globally.",
                 original_text=None,
@@ -494,7 +499,7 @@ class ExtractionSchemaTests(unittest.TestCase):
             ),
             ReviewFlag(
                 category=ReviewCategory.VISUAL_CONTENT,
-                problem_numbers=[2],
+                problem_indices=[2],
                 source_pages=[1],
                 message="Diagram omitted.",
                 original_text=None,

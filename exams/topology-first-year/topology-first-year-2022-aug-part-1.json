@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2022-aug-part-1",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,117 +7,136 @@
   "month": "august",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2022_08.pdf",
-  "instructions": "Do seven (7) and only seven of the following.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove that a compact Hausdorff space is normal.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do seven (7) and only seven of the following."
     },
     {
-      "number": 2,
-      "text": "Say \\(A \\subset X\\) is dense if \\(\\overline{A}=X\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(A\\) is dense in \\(X\\) if and only if every nonempty open subset \\(V\\) in \\(X\\) satisfies \\(V\\cap A\\ne\\emptyset\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Assume that \\(X\\) and \\(Y\\) are topological spaces with \\(Y\\) Hausdorff and \\(A\\) is dense in \\(X\\). Suppose that \\(f:X\\to Y\\) and \\(g:X\\to Y\\) are continuous functions with \\(f(a)=g(a)\\) for all \\(a\\in A\\). Prove that \\(f(x)=g(x)\\) for all \\(x\\in X\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove that a compact Hausdorff space is normal.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(B\\subset\\mathbb{R}^{\\mathbb{Z}_+}\\) be defined as\n\\[\nB=\\prod_{i\\in\\mathbb{Z}_+}(-1,1)=(-1,1)\\times(-1,1)\\times(-1,1)\\times\\cdots.\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Is \\(B\\) open in the box topology?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Is \\(B\\) open in the uniform topology?",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Is \\(B\\) open in the product topology?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Say \\(A \\subset X\\) is dense if \\(\\overline{A}=X\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(A\\) is dense in \\(X\\) if and only if every nonempty open subset \\(V\\) in \\(X\\) satisfies \\(V\\cap A\\ne\\emptyset\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Assume that \\(X\\) and \\(Y\\) are topological spaces with \\(Y\\) Hausdorff and \\(A\\) is dense in \\(X\\). Suppose that \\(f:X\\to Y\\) and \\(g:X\\to Y\\) are continuous functions with \\(f(a)=g(a)\\) for all \\(a\\in A\\). Prove that \\(f(x)=g(x)\\) for all \\(x\\in X\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "If \\((X,d)\\) is a metric space and \\(A\\subset X\\), for \\(x\\in X\\) define\n\\[\nd(x,A)=\\inf\\{d(x,a):a\\in A\\}.\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that the function \\(f:X\\to[0,\\infty)\\) defined by \\(f(x)=d(x,A)\\) is continuous.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that \\(x\\in\\overline{A}\\) if and only if \\(f(x)=0\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "If \\(A\\) is compact then for any \\(x\\in X\\) there exists an \\(a\\in A\\) with \\(d(x,A)=d(x,a)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(B\\subset\\mathbb{R}^{\\mathbb{Z}_+}\\) be defined as\n\\[\nB=\\prod_{i\\in\\mathbb{Z}_+}(-1,1)=(-1,1)\\times(-1,1)\\times(-1,1)\\times\\cdots.\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Is \\(B\\) open in the box topology?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Is \\(B\\) open in the uniform topology?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Is \\(B\\) open in the product topology?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Show that \\((X,d)\\) is complete if and only if any nested family of nonempty closed sets \\(A_n\\) with \\(\\operatorname{diam}(A_n)\\to0\\) has \\(\\bigcap A_n\\ne\\emptyset\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "If \\((X,d)\\) is a metric space and \\(A\\subset X\\), for \\(x\\in X\\) define\n\\[\nd(x,A)=\\inf\\{d(x,a):a\\in A\\}.\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that the function \\(f:X\\to[0,\\infty)\\) defined by \\(f(x)=d(x,A)\\) is continuous.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that \\(x\\in\\overline{A}\\) if and only if \\(f(x)=0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "If \\(A\\) is compact then for any \\(x\\in X\\) there exists an \\(a\\in A\\) with \\(d(x,A)=d(x,a)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Assume that \\(f:X\\to Y\\) is continuous and surjective.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(X\\) is Lindelöf, show that \\(Y\\) is also.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(X\\) is separable, show that \\(Y\\) is also.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\((X,d)\\) is complete if and only if any nested family of nonempty closed sets \\(A_n\\) with \\(\\operatorname{diam}(A_n)\\to0\\) has \\(\\bigcap A_n\\ne\\emptyset\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "If \\(X\\) and \\(Y\\) are connected topological spaces, show that \\(X\\times Y\\) is connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Assume that \\(f:X\\to Y\\) is continuous and surjective.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(X\\) is Lindelöf, show that \\(Y\\) is also.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(X\\) is separable, show that \\(Y\\) is also.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "In the real line \\(\\mathbb{R}\\) let \\(\\mathcal{T}\\) be the collection of all subsets \\(A\\) of \\(\\mathbb{R}\\) such that \\(\\mathbb{R}-A\\) is either finite or all of \\(\\mathbb{R}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\((\\mathbb{R},\\mathcal{T})\\) is topological space.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Is this topology Hausdorff?",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "To which point or points does the sequence \\(x_n=1/n^2\\) converge?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "If \\(X\\) and \\(Y\\) are connected topological spaces, show that \\(X\\times Y\\) is connected.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "In the real line \\(\\mathbb{R}\\) let \\(\\mathcal{T}\\) be the collection of all subsets \\(A\\) of \\(\\mathbb{R}\\) such that \\(\\mathbb{R}-A\\) is either finite or all of \\(\\mathbb{R}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\((\\mathbb{R},\\mathcal{T})\\) is topological space.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Is this topology Hausdorff?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "To which point or points does the sequence \\(x_n=1/n^2\\) converge?",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

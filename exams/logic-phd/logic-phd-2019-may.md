@@ -1,6 +1,8 @@
 # Logic, PhD exam, May 2019
 
-*Solve 5 problems of the following; at least one from problems 1–3, at least one from problems 4–6, and at least one from problems 7–9. Problems 1–3 concern Set Theory, problems 4–6 concern Computability, and problems 7–9 concern Model theory.*
+*Solve 5 problems of the following; at least one from each section.*
+
+## A. Set Theory.
 
 **1.** Sketch the construction of any model of ZFC and the Continuum Hypothesis.
 
@@ -8,14 +10,18 @@
 
 **3.** Provide an example of an analytic set which is not coanalytic. Provide a proof of these properties of the set.
 
-**4.** Provide an example of a computably enumerable set which is not computable. Provide a proof of these properties of the set.
+## B. Computability.
 
-**5.** What is Gödel’s diagonalization lemma? Prove the lemma.
+**1.** Provide an example of a computably enumerable set which is not computable. Provide a proof of these properties of the set.
 
-**6.** What is Post’s problem? Provide the answer to Post’s problem and an outline of the proof.
+**2.** What is Gödel’s diagonalization lemma? Prove the lemma.
 
-**7.** State the downward Löwenheim–Skolem theorem and prove it.
+**3.** What is Post’s problem? Provide the answer to the Post’s problem and an outline of the proof.
 
-**8.** State Łoś’s theorem and prove it.
+## C. Model theory.
 
-**9.** Find a complete theory with more than one countable model up to isomorphism. Provide two nonisomorphic countable models of the theory.
+**1.** State the downward Löwenheim–Skolem theorem and prove it.
+
+**2.** State the Łoś’ theorem and prove it.
+
+**3.** Find a complete theory with more than one countable model up to isomorphism. Provide two nonisomorphic countable models of the theory.

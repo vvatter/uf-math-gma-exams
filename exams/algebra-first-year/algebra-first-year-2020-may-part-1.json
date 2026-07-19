@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2020-may-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,59 +7,74 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2020_05.pdf",
-  "instructions": "Do four out of the six problems below. If you hand in more than four problems, only the first four will be graded. You may (within reason) use results from the text if you state them fully.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Suppose that \\(M\\) and \\(N\\) are normal subgroups of a group \\(G\\).",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that \\(G/(M \\cap N)\\) is isomorphic to a subgroup of \\(G/M \\times G/N\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Show that if \\(G=MN\\), then in fact \\(G/(M \\cap N) \\simeq G/M \\times G/N\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do four out of the six problems below. If you hand in more than four problems, only the first four will be graded. You may (within reason) use results from the text if you state them fully."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Find a representative for each conjugacy class of elements of order 4 in \\(A_8\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Describe the centralizer of each such representative as a suitable semidirect product.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(M\\) and \\(N\\) are normal subgroups of a group \\(G\\).",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that \\(G/(M \\cap N)\\) is isomorphic to a subgroup of \\(G/M \\times G/N\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\(G=MN\\), then in fact \\(G/(M \\cap N) \\simeq G/M \\times G/N\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Suppose \\(G\\) is a group of order \\(351=3^3 \\cdot 13\\). Show that \\(G\\) has a normal Sylow subgroup.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Find a representative for each conjugacy class of elements of order 4 in \\(A_8\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Describe the centralizer of each such representative as a suitable semidirect product.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "List all isomorphism classes of abelian groups of order 16. One of these has an automorphism of order 5; which is it?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(G\\) is a group of order \\(351=3^3 \\cdot 13\\). Show that \\(G\\) has a normal Sylow subgroup.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Suppose \\(G\\) is a solvable group, \\(H \\subseteq G\\) is a nontrivial normal subgroup. Show that \\(H\\) has a nontrivial abelian subgroup that is normal in \\(G\\) (consider the derived series of \\(H\\)).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "List all isomorphism classes of abelian groups of order 16. One of these has an automorphism of order 5; which is it?",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Construct four nonisomorphic groups of order 28 (use a semidirect product for one case).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(G\\) is a solvable group, \\(H \\subseteq G\\) is a nontrivial normal subgroup. Show that \\(H\\) has a nontrivial abelian subgroup that is normal in \\(G\\) (consider the derived series of \\(H\\)).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Construct four nonisomorphic groups of order 28 (use a semidirect product for one case).",
+        "subparts": []
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2025-may-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,65 +7,78 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1_2025_05.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(A\\) be a subset of the metric space \\(M\\). Decide (with proof or counterexample) whether the following statements are equivalent:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(A\\) is open;",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "for each \\(X\\subseteq M\\), if \\(A\\cap X=\\emptyset\\) then \\(A\\cap\\overline{X}=\\emptyset\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "The function \\(f:X\\to Y\\) between metric spaces is distance-preserving. Must \\(f(X)\\) be closed in \\(Y\\) in each of the following cases? If the answer is Yes, give a proof; if the answer is No, give a counterexample.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(X\\) is compact.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(X\\) is complete.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a subset of the metric space \\(M\\). Decide (with proof or counterexample) whether the following statements are equivalent:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(A\\) is open;",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "for each \\(X\\subseteq M\\), if \\(A\\cap X=\\emptyset\\) then \\(A\\cap\\overline{X}=\\emptyset\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f:X\\to Y\\) be a continuous bijection, \\(g:Y\\to X\\) its inverse. Must \\(g\\) be continuous in each of the following cases? Proof or counterexample, as appropriate.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(X\\) is compact.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(Y\\) is compact.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "The function \\(f:X\\to Y\\) between metric spaces is distance-preserving. Must \\(f(X)\\) be closed in \\(Y\\) in each of the following cases? If the answer is Yes, give a proof; if the answer is No, give a counterexample.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(X\\) is compact.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(X\\) is complete.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "The function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) is continuous and satisfies\n\\[\n\\liminf f(n)<0<\\limsup f(n)\n\\]\nwhere \\(n\\) runs through the natural numbers. Prove that each of \\(f^{-1}(-\\infty,0)\\) and \\(f^{-1}(0,\\infty)\\) is infinite.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:X\\to Y\\) be a continuous bijection, \\(g:Y\\to X\\) its inverse. Must \\(g\\) be continuous in each of the following cases? Proof or counterexample, as appropriate.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(X\\) is compact.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(Y\\) is compact.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be such that\n\\[\n|f(x)-f(y)|\\leqslant |x-y|^a\n\\]\nfor some \\(a>1\\) and all \\(x,y\\in\\mathbb{R}\\). Deduce as much as possible about \\(f\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "The function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) is continuous and satisfies\n\\[\n\\liminf f(n)<0<\\limsup f(n)\n\\]\nwhere \\(n\\) runs through the natural numbers. Prove that each of \\(f^{-1}(-\\infty,0)\\) and \\(f^{-1}(0,\\infty)\\) is infinite.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be such that\n\\[\n|f(x)-f(y)|\\leqslant |x-y|^a\n\\]\nfor some \\(a>1\\) and all \\(x,y\\in\\mathbb{R}\\). Deduce as much as possible about \\(f\\).",
+        "subparts": []
+      }
     }
   ]
 }

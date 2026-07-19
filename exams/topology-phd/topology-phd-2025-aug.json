@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-2025-aug",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,93 +7,134 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Topology_2025_08.pdf",
-  "instructions": "Be neat and do not write too small. For problems 1–5, show all of your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\((X,d)\\) be a compact metric space. Let \\(f:X\\to X\\) and suppose there is some \\(c<1\\) with \\(d(f(x),f(y))\\le c\\cdot d(x,y)\\) for all \\(x,y\\in X\\). Prove there exists a unique \\(x\\in X\\) with \\(f(x)=x\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Be neat and do not write too small."
     },
     {
-      "number": 2,
-      "text": "Pick a CW complex structure on the Klein bottle \\(K\\), and then use cellular homology to compute \\(H_i(K;\\mathbb{Z})\\) for \\(i=0,1,2\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "For the first five problems, show all of your work and support all statements."
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that the antipodal map \\(-1:S^n\\to S^n\\) defined by \\(-1(x)=-x\\) has degree \\((-1)^{n+1}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(S^n\\) has a continuous nonzero tangent vector field if and only if \\(n\\) is odd.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,d)\\) be a compact metric space. Let \\(f:X\\to X\\) and suppose there is some \\(c<1\\) with \\(d(f(x),f(y))\\le c\\cdot d(x,y)\\) for all \\(x,y\\in X\\). Prove there exists a unique \\(x\\in X\\) with \\(f(x)=x\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(M\\) be a compact orientable \\(n\\)-manifold without boundary. Prove that if \\(n\\) is odd, then the Euler characteristic \\(\\chi(M)\\) is zero.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Pick a CW complex structure on the Klein bottle \\(K\\), and then use cellular homology to compute \\(H_i(K;\\mathbb{Z})\\) for \\(i=0,1,2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(M_1\\) and \\(M_2\\) be closed connected \\(n\\)-manifolds, and let \\(M_1\\#M_2\\) be their connected sum obtained by removing a ball from each and gluing along the resulting boundary spheres. Show that there are isomorphisms \\(H_i(M_1\\#M_2;\\mathbb{Z})\\cong H_i(M_1;\\mathbb{Z})\\oplus H_i(M_2;\\mathbb{Z})\\) for \\(0<i<n\\), with one exception: If both \\(M_1\\) and \\(M_2\\) are nonorientable, then \\(H_{n-1}(M_1\\#M_2;\\mathbb{Z})\\) is obtained from \\(H_{n-1}(M_1;\\mathbb{Z})\\oplus H_{n-1}(M_2;\\mathbb{Z})\\) by replacing one of the two \\(\\mathbb{Z}_2\\) summands by a \\(\\mathbb{Z}\\) summand.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that the antipodal map \\(-1:S^n\\to S^n\\) defined by \\(-1(x)=-x\\) has degree \\((-1)^{n+1}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(S^n\\) has a continuous nonzero tangent vector field if and only if \\(n\\) is odd.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Show that if \\(g:S^2\\to S^2\\) is continuous and \\(g(x)\\ne g(-x)\\) for all \\(x\\in S^2\\), then \\(g\\) is surjective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(M\\) be a compact orientable \\(n\\)-manifold without boundary. Prove that if \\(n\\) is odd, then the Euler characteristic \\(\\chi(M)\\) is zero.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "State the Tychonoff Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(M_1\\) and \\(M_2\\) be closed connected \\(n\\)-manifolds, and let \\(M_1\\#M_2\\) be their connected sum obtained by removing a ball from each and gluing along the resulting boundary spheres. Show that there are isomorphisms \\(H_i(M_1\\#M_2;\\mathbb{Z})\\cong H_i(M_1;\\mathbb{Z})\\oplus H_i(M_2;\\mathbb{Z})\\) for \\(0<i<n\\), with one exception: If both \\(M_1\\) and \\(M_2\\) are nonorientable, then \\(H_{n-1}(M_1\\#M_2;\\mathbb{Z})\\) is obtained from \\(H_{n-1}(M_1;\\mathbb{Z})\\oplus H_{n-1}(M_2;\\mathbb{Z})\\) by replacing one of the two \\(\\mathbb{Z}_2\\) summands by a \\(\\mathbb{Z}\\) summand.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Show that \\(\\mathbb{R}^{\\omega}\\) with the box topology is not connected.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following ten problems with complete definitions, complete statements, an example, or a short proof."
     },
     {
-      "number": 9,
-      "text": "Let \\(N_g\\) be the nonorientable surface of genus \\(g\\), i.e., the \\(g\\)-fold connected sum of projective planes. Use the Seifert–van Kampen theorem to derive the fundamental group of \\(N_g\\) for \\(g\\ge 1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(g:S^2\\to S^2\\) is continuous and \\(g(x)\\ne g(-x)\\) for all \\(x\\in S^2\\), then \\(g\\) is surjective.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Let \\(X\\) be two unlinked circles in \\(\\mathbb{R}^3\\) and let \\(Y\\) be two simply linked circles. Show that the complements \\(\\mathbb{R}^3\\setminus X\\) and \\(\\mathbb{R}^3\\setminus Y\\) are not homotopy equivalent.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Tychonoff Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Show that if \\(n\\) is even, then every map \\(f:\\mathbb{RP}^n\\to\\mathbb{RP}^n\\) has a fixed point.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(\\mathbb{R}^{\\omega}\\) with the box topology is not connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Let \\(p_1:(\\widetilde X_1,\\widetilde x_1)\\to(X,x_0)\\) and \\(p_2:(\\widetilde X_2,\\widetilde x_2)\\to(X,x_0)\\) be covering space maps, where all of the involved spaces are path-connected and locally path-connected. An isomorphism of covering spaces \\(f:(\\widetilde X_1,\\widetilde x_1)\\to(\\widetilde X_2,\\widetilde x_2)\\) is a homeomorphism satisfying \\(p_1=p_2f\\). Prove the covering spaces \\(p_1\\) and \\(p_2\\) are isomorphic if and only if \\(p_{1*}(\\pi_1(\\widetilde X_1,\\widetilde x_1))=p_{2*}(\\pi_1(\\widetilde X_2,\\widetilde x_2))\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(N_g\\) be the nonorientable surface of genus \\(g\\), i.e., the \\(g\\)-fold connected sum of projective planes. Use the Seifert–van Kampen theorem to derive the fundamental group of \\(N_g\\) for \\(g\\ge 1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Define what it means for a subspace \\(A\\subseteq X\\) to be a retract. Give an example of a retract \\(A\\subseteq X\\) that is not a deformation retract.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be two unlinked circles in \\(\\mathbb{R}^3\\) and let \\(Y\\) be two simply linked circles. Show that the complements \\(\\mathbb{R}^3\\setminus X\\) and \\(\\mathbb{R}^3\\setminus Y\\) are not homotopy equivalent.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Use the Tietze extension theorem to prove Urysohn’s lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(n\\) is even, then every map \\(f:\\mathbb{RP}^n\\to\\mathbb{RP}^n\\) has a fixed point.",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "What are the cohomology groups and cup product structure in \\(H^*((S^2\\times S^8)\\#(S^4\\times S^6);\\mathbb{Z})\\), where \\(\\#\\) denotes the connected sum of the manifolds? You do not need to prove your answer.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p_1:(\\widetilde{X}_1,\\widetilde{x}_1)\\to(X,x_0)\\) and \\(p_2:(\\widetilde{X}_2,\\widetilde{x}_2)\\to(X,x_0)\\) be covering space maps, where all of the involved spaces are path-connected and locally path-connected. An isomorphism of covering spaces \\(f:(\\widetilde{X}_1,\\widetilde{x}_1)\\to(\\widetilde{X}_2,\\widetilde{x}_2)\\) is a homeomorphism satisfying \\(p_1=p_2f\\). Prove the covering spaces \\(p_1\\) and \\(p_2\\) are isomorphic if and only if \\(p_{1*}(\\pi_1(\\widetilde{X}_1,\\widetilde{x}_1))=p_{2*}(\\pi_1(\\widetilde{X}_2,\\widetilde{x}_2))\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define what it means for a subspace \\(A\\subseteq X\\) to be a retract. Give an example of a retract \\(A\\subseteq X\\) that is not a deformation retract.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Use the Tietze extension theorem to prove Urysohn’s lemma.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "What are the cohomology groups and cup product structure in \\(H^*((S^2\\times S^8)\\#(S^4\\times S^6);\\mathbb{Z})\\), where \\(\\#\\) denotes the connected sum of the manifolds? You do not need to prove your answer.",
+        "subparts": []
+      }
     }
   ]
 }

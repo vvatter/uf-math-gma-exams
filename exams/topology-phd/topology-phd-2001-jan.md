@@ -1,6 +1,6 @@
 # Topology, PhD exam, January 2001
 
-*Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that there is a continuous function from \(I\) onto \(I^2\).
 
@@ -10,7 +10,9 @@
 
 **4.** Show that the fundamental group of \(S^n\) is trivial for \(n>1\).
 
-**5.** Show that \(\pi_1(P_n)=\mathbb{Z}_2\), for \(n>1\), where \(P_n\) is \(n\)-dimensional real projective space.
+**5.** Show that \(\pi_1(P_n)=\mathbb{Z}_2\) for \(n>1\), where \(P_n\) is \(n\)-dimensional real projective space.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Seifert–van Kampen Theorem.
 

@@ -1,6 +1,6 @@
 # Topology, first year exam, May 2023, Part 1
 
-*Work problems 1–5 and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that every continuous map \(f:S^1\to S^2\) of the circle to the 2-sphere is null-homotopic.
 
@@ -8,9 +8,11 @@
 
 **3.** Let \(X_{\geq 0}\), \(Y_{\geq 0}\), and \(Z_{\geq 0}\) denote the nonnegative parts of the \(x\)-axis, the \(y\)-axis, and the \(z\)-axis in \(\mathbb{R}^3\) respectively. Let \(A=\mathbb{R}^3\setminus(X_{\geq 0}\cup Y_{\geq 0}\cup Z_{\geq 0})\). Compute the fundamental group \(\pi_1(A)\).
 
-**4.** Let \(f:S^1\to T=S^1\times S^1\) be a map to a torus defined by the formula \(f(z)=(z,-z)\). Compute the fundamental group \(\pi_1(X)\), where \(X=T\cup_f B^2\) is obtained from \(T\) by attaching a 2-disk along \(f\).
+**4.** Let \(f:S^1\to T=S^1\times S^1\) be a map to a torus defined by the formula \(f(z)=(z,-z)\). Compute the fundamental group \(\pi_1(X)\) where \(X=T\cup_f B^2\) is obtained from \(T\) by attaching a 2-disk along \(f\).
 
-**5.** Show that the projective plane \(\mathbb{R}P^2\) is not homeomorphic to the Klein bottle \(K\). What about the connected sum \(\mathbb{R}P^2\mathbin{\#}\mathbb{R}P^2\)?
+**5.** Show that the projective plane \(\mathbb{R}P^2\) is not homeomorphic to the Klein bottle \(K\). What about the connected sum \(\mathbb{R}P^2\#\mathbb{R}P^2\)?
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Show that \(S^2\) is not homeomorphic to \(S^3\).
 

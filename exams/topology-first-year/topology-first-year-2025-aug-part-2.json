@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2025-aug-part-2",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,104 +7,141 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2_2025_08.pdf",
-  "instructions": "For problems 1–5, show all your work and support all statements. For problems 6–15, answer with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Suppose that the continuous maps \\(f,g:X\\to Y\\) are homotopic and that the continuous maps \\(h,k:Y\\to Z\\) are homotopic. Show that \\(h\\circ f\\) is homotopic to \\(k\\circ g\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "For the first five problems, show all your work and support all statements."
     },
     {
-      "number": 2,
-      "text": "Show that the fundamental group of the circle is isomorphic to the additive group of integers. That is, \\(\\pi_1(S^1,1)\\cong\\mathbb{Z}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that the continuous maps \\(f,g:X\\to Y\\) are homotopic and that the continuous maps \\(h,k:Y\\to Z\\) are homotopic. Show that \\(h\\circ f\\) is homotopic to \\(k\\circ g\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "State and prove the Brouwer fixed point theorem for the unit disk, \\(D^2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the fundamental group of the circle is isomorphic to the additive group of integers. That is, \\(\\pi_1(S^1,1)\\cong\\mathbb{Z}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define the Hawaiian earring space, \\(H\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show the images of the generators of the fundamental groups of the circles do not generate the fundamental group of \\(H\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Brouwer fixed point theorem for the unit disk, \\(D^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define surface.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Compute the fundamental group of the connected sum of a torus and a second torus \\(T^2\\mathbin{\\#}T^2\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define the Hawaiian earring space, \\(H\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show the images of the generators of the fundamental groups of the circles do not generate the fundamental group of \\(H\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "State the Urysohn Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define surface.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Compute the fundamental group of the connected sum of a torus and a second torus \\(T^2\\mathbin{\\#}T^2\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(E\\) and \\(B\\) be topological spaces. Define what it means for a function \\(p:E\\to B\\) to be a covering map.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "If \\(j:A\\hookrightarrow X\\) is the inclusion of a retract, then show that the induced map on fundamental groups is injective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Urysohn Lemma.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(\\alpha\\) be a path in \\(X\\) from \\(x_0\\) to \\(x_1\\). Define the map \\(\\hat{\\alpha}:\\pi_1(X,x_0)\\to\\pi_1(X,x_1)\\) and show that \\(\\hat{\\alpha}\\) is a group isomorphism.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(E\\) and \\(B\\) be topological spaces. Define what it means for a function \\(p:E\\to B\\) to be a covering map.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State the Seifert–van Kampen Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "If \\(j:A\\hookrightarrow X\\) is the inclusion of a retract, then show that the induced map on fundamental groups is injective.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Let \\(S^n\\) be the \\(n\\)-sphere. Prove that \\(\\pi_1(S^n)\\) is trivial for \\(n\\ge 2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\alpha\\) be a path in \\(X\\) from \\(x_0\\) to \\(x_1\\). Define the map \\(\\hat{\\alpha}:\\pi_1(X,x_0)\\to\\pi_1(X,x_1)\\) and show that \\(\\hat{\\alpha}\\) is a group isomorphism.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Seifert–van Kampen Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "State the Tychonoff theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(S^n\\) be the \\(n\\)-sphere. Prove that \\(\\pi_1(S^n)\\) is trivial for \\(n\\ge 2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Describe a space \\(X\\) with \\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Define Stone–Čech compactification.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Tychonoff theorem.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Describe a space \\(X\\) with \\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define Stone–Čech compactification.",
+        "subparts": []
+      }
     }
   ]
 }

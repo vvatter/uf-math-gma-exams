@@ -1,16 +1,16 @@
 # Partial Differential Equations, PhD exam, May 2001
 
-*Do all problems 1–4. Choose one problem from 5 and 6 and one problem from 7 and 8.*
+*Do all problems 1–4. Choose one problem of 5 and 6 and one problem of 7 and 8.*
 
 **1.** Let \(B\) be the unit ball in \(\mathbb{R}^3\). For which values of \(\alpha\) does the function \(|x|^\alpha\) belong to \(H^1(B)\)? Justify your answer.
 
 **2.** Let \(U\subset\mathbb{R}^n\) be open and bounded. Let \(u_m\) and \(v_m\) be bounded sequences in \(H^1(U)\). Show that there exist subsequences \(u_{m_j}\) of \(u_m\) and \(v_{m_j}\) of \(v_m\), and functions \(u,v\in H^1(U)\), such that
 \[
-\int_U u_{m_j}v_{m_j}\to\int_U uv,
+\int_U u_{m_j}v_{m_j}\,dx\to\int_U uv\,dx,
 \]
 and
 \[
-\int_U D_{x_i}(u_{m_j}v_{m_j})\to D_{x_i}(uv),\qquad i=1,\ldots,n,
+\int_U D_{x_i}(u_{m_j}v_{m_j})\,dx\to\int_U D_{x_i}(uv)\,dx,\qquad i=1,\ldots,n,
 \]
 as \(j\to\infty\).
 
@@ -30,7 +30,7 @@ Let
 \]
 Show that the following statements hold.
 
-Hint: Consider the equation for \(v=u-(u)_U\), and use energy estimate for the equation of \(v\), and Poincaré's inequality.
+Hint: Consider the equation for \(v=u-(u)_U\), and use energy estimate for the equation of \(v\), and Poincaré’s inequality.
 * (a) \(\displaystyle \frac{d}{dt}(u)_U(t)\equiv0.\)
 * (b) \(u\to(u)_U\) in \(L^2(U)\), as \(t\to\infty\).
 
@@ -59,7 +59,7 @@ u=0,\qquad \frac{\partial u}{\partial n}=0,\qquad x\in\partial U, \tag{5.2}
 \]
 if
 \[
-\int_U\Delta u\Delta v\,dx=\int_U fv\,dx,\qquad\text{for any }v\in H_0^2(U). \tag{5.3}
+\int_U\Delta u\,\Delta v\,dx=\int_U fv\,dx,\qquad\text{for any }v\in H_0^2(U). \tag{5.3}
 \]
 Prove the following statements:
 * (a) For a given \(f\in L^2(U)\) there is an unique solution to the problem (5.3).
@@ -81,15 +81,15 @@ over \(v\in H_0^1(U)\).
 **7.** Let \(U\subset\mathbb{R}^n\) be open and bounded. We say \(v\in C^2(\overline U)\) is subharmonic if \(-\Delta v\leq0\) for all \(x\in U\).
 * (a) Prove that for any subharmonic \(v\),
   \[
-  v(x)\leq\mathop{⨍}_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subset U.
+  v(x)\leq\frac{1}{|B(x,r)|}\int_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subset U.
   \]
 * (b) Let \(\phi:\mathbb{R}\to\mathbb{R}\) be smooth and convex. Suppose that \(u\) is harmonic and \(v=\phi(u)\). Prove that \(v\) is subharmonic.
 
 **8.** Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\).
-* (a) Write the fundamental solution \(\Phi(x)\) of Laplace's equation.
+* (a) Write the fundamental solution \(\Phi(x)\) of Laplace’s equation.
 * (b) Prove that for any point \(x\in U\) and any function \(u\in C^2(\overline U)\),
   \[
   u(x)=\int_U\Phi(y-x)\Delta u(y)\,dy
-  +\int_{\partial U}\left(\Phi(y-x)\frac{\partial u}{\partial n}(y)-u(y)\frac{\partial\Phi}{\partial n}(y-x)\right)\,dS(y),
+  +\int_{\partial U}\left[\Phi(y-x)\frac{\partial u}{\partial n}(y)-u(y)\frac{\partial\Phi}{\partial n}(y-x)\right]dS(y),
   \]
-  where \(\Phi\) is the fundamental solution of Laplace's equation, and \(n\) is the outward unit normal to \(\partial U\).
+  where \(\Phi\) is the fundamental solution of Laplace’s equation, and \(n\) is the outward unit normal to \(\partial U\).

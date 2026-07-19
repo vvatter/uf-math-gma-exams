@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-2010-may",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,71 +7,115 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2010_05.pdf",
-  "instructions": "Answer six questions, with at least one from each section: problems 1–4 (Section 1), problems 5–7 (Section 2), and problems 8–10 (Section 3).",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer six questions and at least one from each section."
     },
     {
-      "number": 2,
-      "text": "Show that the theory of the class of infinite sets is complete and decidable, but is not finitely axiomatizable.",
-      "subparts": []
-    },
-    {
-      "number": 3,
-      "text": "Sketch a proof of the Vaught test for categoricity using the Löwenheim–Skolem Theorem.",
-      "subparts": []
-    },
-    {
-      "number": 4,
-      "text": "Show that if \\(A\\) and \\(B\\) are two countable atomic structures which are elementarily equivalent, then \\(A \\simeq_p B\\).",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "(ZFC) For any infinite cardinal \\(\\kappa\\), \\(\\kappa \\times \\kappa = \\kappa\\).",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "Describe the constructible universe \\(L\\) and sketch a proof that \\(L\\) satisfies the Continuum Hypothesis.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Show that for any set \\(u\\) and any countable set \\(v\\), \\(FF(u,v)\\) satisfies the countable (anti)-chain condition.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic. You may assume the Representability Hypothesis.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Construct a simple r.e. set.",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Show that the following are equivalent for any infinite \\(X \\subseteq \\omega\\):",
-      "subparts": [
+      "type": "section",
+      "heading": "Section 1",
+      "numbering": "restart",
+      "content": [
         {
-          "label": "(a)",
-          "text": "\\(X\\) is recursively enumerable (that is, the range of a total recursive function);",
-          "subparts": []
+          "type": "problem",
+          "problem": {
+            "text": "Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).",
+            "subparts": []
+          }
         },
         {
-          "label": "(b)",
-          "text": "\\(X\\) is semirecursive (there is a recursive relation \\(R\\) such that, for all \\(x\\), \\(x \\in X \\Longleftrightarrow (\\exists y)R(x,y)\\)).",
-          "subparts": []
+          "type": "problem",
+          "problem": {
+            "text": "Show that the theory of the class of infinite sets is complete and decidable, but is not finitely axiomatizable.",
+            "subparts": []
+          }
         },
         {
-          "label": "(c)",
-          "text": "\\(X\\) is the domain of a partial recursive function.",
-          "subparts": []
+          "type": "problem",
+          "problem": {
+            "text": "Sketch a proof of the Vaught test for categoricity using the Löwenheim–Skolem Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that if \\(A\\) and \\(B\\) are two countable atomic structures which are elementarily equivalent, then \\(A \\simeq_p B\\).",
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Section 2",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "(ZFC) For any infinite cardinal \\(\\kappa\\), \\(\\kappa \\times \\kappa = \\kappa\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Describe the constructible universe \\(L\\) and sketch a proof that \\(L\\) satisfies the Continuum Hypothesis.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that for any set \\(u\\) and any countable set \\(v\\), \\(FF(u,v)\\) satisfies the countable (anti)-chain condition.",
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Section 3",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic. –You may assume the Representability Hypothesis.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Construct a simple r.e. set.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that the following are equivalent for any infinite \\(X \\subseteq \\omega\\):",
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "\\(X\\) is recursively enumerable (that is, the range of a total recursive function);",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "\\(X\\) is semirecursive (there is a recursive relation \\(R\\) such that, for all \\(x\\), \\(x \\in X \\Longleftrightarrow (\\exists y)R(x,y)\\).",
+                "subparts": []
+              },
+              {
+                "label": "(c)",
+                "text": "\\(X\\) is the domain of a partial recursive function.",
+                "subparts": []
+              }
+            ]
+          }
         }
       ]
     }

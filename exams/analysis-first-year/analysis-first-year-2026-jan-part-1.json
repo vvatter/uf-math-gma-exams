@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2026-jan-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,54 +7,67 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2026_01.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "that every real sequence has a monotonic subsequence",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "that every bounded real sequence has a convergent subsequence.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Let \\(T\\) be a two-point metric space. Prove that the metric space \\(X\\) is connected if and only if each continuous function from \\(X\\) to \\(T\\) is constant.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "that every real sequence has a monotonic subsequence",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "that every bounded real sequence has a convergent subsequence.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(X \\subseteq \\mathbb{R}\\) and consider the following statements: Does (a) imply (b)? Does (b) imply (a)? Proof or counterexample for each.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "each continuous function from \\(X\\) to \\(\\mathbb{R}\\) is bounded;",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(X\\) is compact.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(T\\) be a two-point metric space. Prove that the metric space \\(X\\) is connected if and only if each continuous function from \\(X\\) to \\(T\\) is constant.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f : \\mathbb{R} \\to \\mathbb{R}\\) be uniformly continuous and let \\(B \\subseteq \\mathbb{R}\\) be bounded. Must \\(f(B)\\) be bounded? Proof or counterexample.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X \\subseteq \\mathbb{R}\\) and consider the following statements: Does (a) imply (b)? Does (b) imply (a)? Proof or counterexample for each.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "each continuous function from \\(X\\) to \\(\\mathbb{R}\\) is bounded;",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(X\\) is compact.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "The continuous function \\(f : \\mathbb{R} \\to \\mathbb{R}\\) is differentiable except perhaps at the point \\(a\\). Decide whether \\(f\\) is necessarily differentiable at \\(a\\) if it is further assumed that \\(f'(t) \\to 0\\) as \\(t \\to a\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f : \\mathbb{R} \\to \\mathbb{R}\\) be uniformly continuous and let \\(B \\subseteq \\mathbb{R}\\) be bounded. Must \\(f(B)\\) be bounded? Proof or counterexample.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "The continuous function \\(f : \\mathbb{R} \\to \\mathbb{R}\\) is differentiable except perhaps at the point \\(a\\). Decide whether \\(f\\) is necessarily differentiable at \\(a\\) if it is further assumed that \\(f'(t) \\to 0\\) as \\(t \\to a\\).",
+        "subparts": []
+      }
     }
   ]
 }

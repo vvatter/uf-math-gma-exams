@@ -1,6 +1,6 @@
 # Topology, PhD exam, August 2012
 
-*Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Prove that the 3-sphere \(S^3\) is not homeomorphic to the 3-space \(\mathbb{R}^3\).
 
@@ -14,6 +14,8 @@
 
 **5.** Let \(GL_n\) be the space of all invertible real \(n \times n\)-matrices. Is \(GL_n\) compact? Is it connected?
 
+*Answer the following with complete definitions or statements or short proofs.*
+
 **6.** Is the 2-sphere \(S^2\) with \(k\) points removed homeomorphic to a topological group for
 * (a) \(k=1\)?
 * (b) \(k=2\)?
@@ -24,9 +26,9 @@
 
 **8.** Compute the Euler characteristic \(\chi(\mathbb{CP}^5 \times \mathbb{RP}^5 \times S^5 \times S^2)\).
 
-**9.** State the Baire Category Theorem.
+**9.** State the Baire Category Theorem
 
-**10.** Does every function \(f:\mathbb{N} \to \mathbb{R}\) admit a continuous extension \(\overline{f}:\beta\mathbb{N} \to \mathbb{R}\) to the Stone–Čech compactification?
+**10.** Does every function \(f:\mathbb{N} \to \mathbb{R}\) admit a continuous extension \(\bar{f}:\beta\mathbb{N} \to \mathbb{R}\) to the Stone–Čech compactification?
 
 **11.** State the Five Lemma.
 

@@ -1,10 +1,10 @@
 # Topology, first year exam, January 2023, Part 1
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that every map \(f:S^2\to T\) of the 2-sphere to the torus \(T\) is null-homotopic.
 
-**2.** Show that the torus \(T\) is not homeomorphic to the surface of genus 2, \(M_2=T\#T\).
+**2.** Show that the torus \(T\) is not homeomorphic to the surface of genus 2, \(M_2=T\mathbin{\#}T\).
 
 **3.** Show that for every continuous map \(f:S^1\to S^1\) there is \(n\in\mathbb{Z}\) such that \(f\) is homotopic to \(z^n:S^1\to S^1\).
 
@@ -14,6 +14,8 @@
 * (a) \(A=\mathbb{R}^3\setminus X\)?
 * (b) \(A=\mathbb{R}^3\setminus(X\cup Y)\)?
 * (c) \(A=\mathbb{R}^3\setminus(X\cup Y\cup Z)\)?
+
+*Answer the following with complete definitions or statements or proofs.*
 
 **6.** Show that \(S^2\) is not homeomorphic to \(S^3\).
 

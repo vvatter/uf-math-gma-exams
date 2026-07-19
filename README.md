@@ -37,13 +37,19 @@ and completed structural transformations are logged separately.
 
 Each extracted JSON file and its readable Markdown rendering are stored beside the
 source PDF in the same `exams/<subject-tag>/` directory. Matching stems make the three
-files easy to compare during review. Each JSON record includes the current GMA PDF URL,
-one instructions value, and structured problems with recursively nested subparts. Math
-uses MathJax delimiters `\(...\)` and `\[...\]`.
+files easy to compare during review. Each JSON record includes the current GMA PDF URL
+and an ordered sequence of instructions, problems, and optional named sections. Problems
+contain structured, recursively nested subparts. Math uses MathJax delimiters `\(...\)`
+and `\[...\]`.
 
 If a linked PDF contains only a notice that the exam was unavailable, that notice is
-stored in `instructions` and the problem list is empty. The JSON and Markdown still
-document exactly what the archive provides at that URL.
+stored as an instruction block and there are no problem blocks. The JSON and Markdown
+still document exactly what the archive provides at that URL.
+
+Problem numbers are not stored redundantly. Their order in the JSON determines their
+displayed numbers. A section records whether numbering restarts at 1 or continues from
+the preceding problems, so repeated source numbers remain faithful without making
+review references ambiguous. Review logs use absolute one-based problem positions.
 
 The project is designed for a complete initial extraction followed by selective
 reprocessing and a separate later verification pass. It does not spend a second model
@@ -113,14 +119,15 @@ optimized file's current size and hash separately.
 
 ## Extract
 
-Run the representative five-exam pilot with:
+Run the representative eight-exam pilot with:
 
 ```sh
 python3 extract_exams.py --pilot
 ```
 
-The pilot covers a scan, multipart questions, formula-heavy pages, Logic's local
-numbering, two instruction tiers, and essential figures. Canonical records are written
+The pilot covers scans, multipart questions, formula-heavy pages, restarted and
+continuing section numbering, noninteger source labels, instruction blocks between
+sections, and essential figures. Canonical records are written
 beside their source PDFs under `exams/<subject-tag>/`, using the same filename stem and
 `.json` and `.md` extensions. Human-review findings are collected in
 `exams/review-serious.json`. Corrections and completed transformations are recorded in
@@ -130,8 +137,9 @@ token usage, rendered source pages, and validation failures remain under ignored
 so an interrupted bulk run retains both its canonical output and its review findings.
 
 The command resumes valid completed records by default. Use `--force` only when a
-record should be re-extracted after a prompt or policy change. Specific manifest IDs
-can be supplied instead of `--pilot`:
+record should be re-extracted after a prompt or policy change. Superseded JSON,
+Markdown, and checkpoints are archived under ignored `build/extraction/<exam-id>/history/`.
+Specific manifest IDs can be supplied instead of `--pilot`:
 
 ```sh
 python3 extract_exams.py logic-phd-2006-aug topology-phd-2025-may
@@ -160,6 +168,12 @@ record, and MathJax expression with:
 
 ```sh
 python3 validate_archive.py
+```
+
+Supply exam IDs to validate only a focused pilot or retry set:
+
+```sh
+python3 validate_archive.py logic-phd-2009-jan topology-phd-1994-aug
 ```
 
 ## Naming
@@ -207,9 +221,10 @@ uses its ordinary three-letter abbreviation rather than guessing a replacement.
 ## Extraction Options
 
 ```text
---pilot             Extract the five representative pilot exams
+--pilot             Extract the eight representative pilot exams
 --all               Extract every exam without a canonical JSON record
 --subject TAG       Extract missing exams for a subject; repeatable
+--affected [FILE]   Extract IDs from a schema-migration affected list
 --limit N           Limit a bulk selection after completed records are skipped
 --review-dir DIR    Review-log directory (default: exams)
 --build-root DIR    Checkpoint root directory (default: build/extraction)
@@ -217,5 +232,7 @@ uses its ordinary three-letter abbreviation rather than guessing a replacement.
 --reasoning LEVEL   Reasoning effort: low, medium, or high (default: high)
 --dpi N             Source-page rendering resolution (default: 200)
 --workers N         Concurrent model calls (default: 2)
---force             Archive and re-extract completed records
+--force             Archive under build/ and re-extract completed records
+--vision-only       Omit native PDF text and use rendered page images only
+--skip-current      With --affected, skip current-prompt successful checkpoints
 ```

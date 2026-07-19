@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-2001-may",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,73 +7,98 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2001_05.pdf",
-  "instructions": "Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \\(\\mathbb Z\\), resp. \\(\\mathbb Q, \\mathbb C\\), is the set of all integers, resp. of all rational numbers, of all complex numbers.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(G\\) be a finite group of order \\(m\\cdot n\\) and \\(K\\) a normal subgroup of \\(G\\) of order \\(m\\), where \\(m\\) and \\(n\\) are coprime.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Prove that \\(G\\) has exactly one subgroup of order \\(m\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Suppose that \\(n\\) is a prime power. Is there any subgroup \\(H\\) of \\(G\\) such that \\(G\\) is a semidirect product of \\(K\\) by \\(H\\)? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \\(\\mathbb Z\\), resp. \\(\\mathbb Q, \\mathbb C\\), is the set of all integers, resp. of all rational numbers, of all complex numbers."
     },
     {
-      "number": 2,
-      "text": "Prove that any finite group of order \\(616=11\\cdot 8\\cdot 7\\) is solvable. You may assume that every group of order \\(p^a q^b\\), where \\(p\\) and \\(q\\) are primes, is solvable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group of order \\(m\\cdot n\\) and \\(K\\) a normal subgroup of \\(G\\) of order \\(m\\), where \\(m\\) and \\(n\\) are coprime.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that \\(G\\) has exactly one subgroup of order \\(m\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Suppose that \\(n\\) is a prime power. Is there any subgroup \\(H\\) of \\(G\\) such that \\(G\\) is a semidirect product of \\(K\\) by \\(H\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(\\mathrm{GL}_2(\\mathbb C)\\) be the group of invertible \\(2\\times 2\\) complex matrices under matrix multiplication and let \\(G\\) be a finite subgroup of \\(\\mathrm{GL}_2(\\mathbb C)\\). Suppose that \\(G\\) is simple and \\(|G|\\) is even. Prove that \\(|G|=2\\). (Hint: Consider elements of order 2 of \\(G\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that any finite group of order \\(616=11\\cdot 8\\cdot 7\\) is solvable. You may assume that every group of order \\(p^a q^b\\), where \\(p\\) and \\(q\\) are primes, is solvable.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(A\\) be a \\(3\\times 3\\) complex matrix. Suppose that \\(\\operatorname{Tr}(A)=\\operatorname{Tr}(A^2)=\\operatorname{Tr}(A^3)=0\\) (where \\(\\operatorname{Tr}(X)\\) is the trace of the square matrix \\(X\\)). Prove that \\(A^{2001}=0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathrm{GL}_2(\\mathbb C)\\) be the group of invertible \\(2\\times 2\\) complex matrices under matrix multiplication and let \\(G\\) be a finite subgroup of \\(\\mathrm{GL}_2(\\mathbb C)\\). Suppose that \\(G\\) is simple and \\(|G|\\) is even. Prove that \\(|G|=2\\). (Hint: Consider elements of order 2 of \\(G\\).)",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(q\\) be a prime power and \\(F\\) a field of \\(q\\) elements. Find the number \\(N(q)\\) of monic irreducible polynomials of degree 2 over \\(F\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a \\(3\\times 3\\) complex matrix. Suppose that \\(\\operatorname{Tr}(A)=\\operatorname{Tr}(A^2)=\\operatorname{Tr}(A^3)=0\\) (where \\(\\operatorname{Tr}(X)\\) is the trace of the square matrix \\(X\\)). Prove that \\(A^{2001}=0\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(p\\) be a prime. Let \\(K\\) be a subfield of \\(\\mathbb C\\) with the property: “If \\(E\\) is a finite extension of \\(K\\) such that \\([E:K]\\) is coprime to \\(p\\), then \\(E=K\\).” Prove that if \\(F\\) is any finite extension of \\(K\\), then \\([F:K]\\) is a \\(p\\)-power. (Hint: Use normal closure, Galois Theory, and Sylow’s Theorem.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(q\\) be a prime power and \\(F\\) a field of \\(q\\) elements. Find the number \\(N(q)\\) of monic irreducible polynomials of degree 2 over \\(F\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(\\xi\\in\\mathbb C\\) be such that \\(\\xi^{2001}=5\\). Show that \\(\\mathbb Q(\\xi)\\) cannot be contained in any cyclotomic extension of \\(\\mathbb Q\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p\\) be a prime. Let \\(K\\) be a subfield of \\(\\mathbb C\\) with the property: “If \\(E\\) is a finite extension of \\(K\\) such that \\([E:K]\\) is coprime to \\(p\\), then \\(E=K\\).” Prove that if \\(F\\) is any finite extension of \\(K\\), then \\([F:K]\\) is a \\(p\\)-power. (Hint: Use normal closure, Galois Theory, and Sylow’s Theorem.)",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Compute the integral closure \\(R\\) of \\(\\mathbb Z\\) in \\(\\mathbb Q(\\sqrt{-5})\\). Is \\(R\\) a unique factorization domain? A principal ideal domain? A Dedekind domain? Justify your answer(s).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\xi\\in\\mathbb C\\) be such that \\(\\xi^{2001}=5\\). Show that \\(\\mathbb Q(\\xi)\\) cannot be contained in any cyclotomic extension of \\(\\mathbb Q\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(R\\) be a local ring. Prove that every finitely generated projective \\(R\\)-module is free.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Compute the integral closure \\(R\\) of \\(\\mathbb Z\\) in \\(\\mathbb Q(\\sqrt{-5})\\). Is \\(R\\) a unique factorization domain? A principal ideal domain? A Dedekind domain? Justify your answer(s).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State and prove the Hilbert Nullstellensatz.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a local ring. Prove that every finitely generated projective \\(R\\)-module is free.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Let \\(R\\) be a primitive ring such that \\(ab-ba\\) is nilpotent for all \\(a,b\\in R\\). Prove that \\(R\\) is a division ring.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Hilbert Nullstellensatz.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a primitive ring such that \\(ab-ba\\) is nilpotent for all \\(a,b\\in R\\). Prove that \\(R\\) is a division ring.",
+        "subparts": []
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Topology, first year exam, May 2018, Part 2
 
-*Answer problems 1–5 and show all your work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Answer the following problems and show all your work. Support all statements to the best of your ability.*
 
 **1.** Let \(X\) be a completely regular space.
 * (a) Define a compactification of \(X\).
@@ -14,6 +14,8 @@
 **4.** State and prove the Brouwer fixed point theorem for the unit disk, \(D^2\).
 
 **5.** Prove that for \(n\geq 2\), the fundamental group of the \(n\)-sphere, \(S^n\), is \(0\).
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Tietze Extension Theorem.
 

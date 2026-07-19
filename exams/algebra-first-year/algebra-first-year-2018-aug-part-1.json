@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2018-aug-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,64 +7,79 @@
   "month": "august",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5311-August-2018.pdf",
-  "instructions": "Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(G\\) be a group and let \\(A\\) be a set.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give the definition of a group action of \\(G\\) on \\(A\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose we have an action of \\(G\\) on \\(A\\) given by \\((g,x)\\mapsto g\\cdot x\\) for \\(g\\in G\\) and \\(x\\in A\\). For \\(g\\in G\\) define \\(\\sigma_g:A\\to A\\) by \\(\\sigma_g(x)=g\\cdot x\\). Prove that \\(\\sigma_g\\) is a permutation of \\(A\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Define \\(\\phi:G\\to S_A\\) by \\(\\phi(g)=\\sigma_g\\). Prove that \\(\\phi\\) is a homomorphism.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(G\\) be a finite group of order \\(n\\) and let \\(k\\in\\mathbb{Z}\\) be such that \\(\\gcd(k,n)=1\\). Define \\(\\phi:G\\to G\\) by \\(\\phi(x)=x^k\\) for all \\(x\\in G\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(\\phi\\) is a bijection.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example which shows that \\(\\phi\\) need not be a homomorphism.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group and let \\(A\\) be a set.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give the definition of a group action of \\(G\\) on \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose we have an action of \\(G\\) on \\(A\\) given by \\((g,x)\\mapsto g\\cdot x\\) for \\(g\\in G\\) and \\(x\\in A\\). For \\(g\\in G\\) define \\(\\sigma_g:A\\to A\\) by \\(\\sigma_g(x)=g\\cdot x\\). Prove that \\(\\sigma_g\\) is a permutation of \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Define \\(\\phi:G\\to S_A\\) by \\(\\phi(g)=\\sigma_g\\). Prove that \\(\\phi\\) is a homomorphism.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(G,H,K\\) be groups and let \\(\\phi:G\\to H\\), \\(\\psi:G\\to K\\) be homomorphisms such that \\(\\phi\\) is onto and \\(\\ker\\phi\\subset\\ker\\psi\\). Prove that there is a unique homomorphism \\(\\alpha:H\\to K\\) such that \\(\\alpha\\circ\\phi=\\psi\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group of order \\(n\\) and let \\(k\\in\\mathbb{Z}\\) be such that \\(\\gcd(k,n)=1\\). Define \\(\\phi:G\\to G\\) by \\(\\phi(x)=x^k\\) for all \\(x\\in G\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(\\phi\\) is a bijection.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example which shows that \\(\\phi\\) need not be a homomorphism.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(G\\) be a group of order \\(105=3\\cdot5\\cdot7\\) with a normal Sylow \\(3\\)-subgroup. Prove that \\(G\\) is cyclic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G,H,K\\) be groups and let \\(\\phi:G\\to H\\), \\(\\psi:G\\to K\\) be homomorphisms such that \\(\\phi\\) is onto and \\(\\ker\\phi\\subset\\ker\\psi\\). Prove that there is a unique homomorphism \\(\\alpha:H\\to K\\) such that \\(\\alpha\\circ\\phi=\\psi\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Determine all groups of order \\(76=2^2\\cdot19\\) up to isomorphism.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group of order \\(105=3\\cdot5\\cdot7\\) with a normal Sylow \\(3\\)-subgroup. Prove that \\(G\\) is cyclic.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Determine all abelian groups of order \\(800=2^5\\cdot5^2\\) which have at least one element of order \\(40\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Determine all groups of order \\(76=2^2\\cdot19\\) up to isomorphism.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Determine all abelian groups of order \\(800=2^5\\cdot5^2\\) which have at least one element of order \\(40\\).",
+        "subparts": []
+      }
     }
   ]
 }

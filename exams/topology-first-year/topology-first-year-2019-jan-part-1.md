@@ -1,18 +1,26 @@
 # Topology, first year exam, January 2019, Part 1
 
-*Work all problems. For Problems 1–5, state and prove each theorem. The proofs should be complete without being tedious. For Problems 6–15, give brief examples, counterexamples, or quick proofs.*
+*Work all problems.*
+
+## Theorems and Proofs.
+
+*In this section state and prove each theorem. The proofs should be complete without being tedious.*
 
 **1.** Show that a compact Hausdorff space \(X\) is normal.
 
 **2.** State and prove the Contraction Mapping Theorem.
 
-**3.** Give a proof that if \(X\) is any set, there is no function \(f:X\to\mathcal{P}(X)\) which is onto. Here \(\mathcal{P}(X)\) is the power set of \(X\) or the set of all subsets of \(X\).
+**3.** Give a proof that if \(X\) is any set, there is no function \(f:X\to\mathscr{P}(X)\) which is onto. Here \(\mathscr{P}(X)\) is the power set of \(X\) or the set of all subsets of \(X\).
 
 **4.** Suppose that \(X\) is a Hausdorff space. Show that if \(A\subset X\) is compact, then it is closed.
 
 **5.** Suppose that \(X\) and \(Y\) are metric spaces and that \(X\) is compact. Show that if \(f:X\to Y\) is continuous, then \(f\) is uniformly continuous.
 
-**6.** State Urysohn’s Lemma.
+## Examples and Minor Proofs.
+
+*In this section, give brief examples, counterexamples, or quick proofs.*
+
+**6.** State Urysohn’s Lemma..
 
 **7.** Is it possible for there to be a continuous function \(f:[0,1]\to[0,1)\) which is onto?
 

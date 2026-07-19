@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-1999-may",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,72 +7,127 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1999_05.pdf",
-  "instructions": "State the following theorems in problems 1–8. Prove one of the theorems in problem 3 or 7. Solve problems 9–13, where \\((X,\\Sigma,\\mu)\\) is a measure space and \\(F\\) is a Banach space. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Hahn–Banach",
-      "subparts": []
+      "type": "section",
+      "heading": "I",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State the following theorems."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Hahn–Banach.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Egorov theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Vitali convergence theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Radon–Nikodym theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The Fubini theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The monotone convergence theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The completeness theorem for \\(L_F^p(\\mu)\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "The equality \\(|g\\mu|=|g|\\,|\\mu|\\).",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 2,
-      "text": "The Egorov theorem",
-      "subparts": []
+      "type": "instructions",
+      "text": "II. Prove one of the theorems 3 or 7."
     },
     {
-      "number": 3,
-      "text": "The Vitali convergence theorem",
-      "subparts": []
+      "type": "section",
+      "heading": "III",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Solve the following problems, where \\((X,\\Sigma,\\mu)\\) is a measure space and \\(F\\) is a Banach space."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "If \\(f_n\\to f\\) in \\(L_F^p(\\mu)\\) and \\(f_n\\to g\\), \\(\\mu\\)-a.e., then \\(f=g\\), \\(\\mu\\)-a.e.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(\\mathcal F\\subset\\Sigma\\) be a \\(\\sigma\\)-algebra. Prove the existence of the conditional expectation \\(E(f\\mid\\mathcal F)\\) for \\(f\\in L_F^p(\\mu)\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\(\\mathcal R\\) be a ring generating \\(\\Sigma\\) and \\(f\\in L_F^1(\\mu)\\). Prove that if \\(\\int_A f\\,d\\mu=0\\) for every \\(A\\in\\mathcal R\\), then \\(f=0\\), \\(\\mu\\)-a.e.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Let \\((X,\\mathcal F)\\) and \\((Y,\\mathcal T)\\) be measurable spaces, and let \\(\\mu:\\mathcal F\\to\\mathbb R\\) and \\(\\nu:\\mathcal T\\to\\mathbb R\\) be \\(\\sigma\\)-additive measures. Prove the existence of the product measure \\(\\mu\\times\\nu:\\mathcal F\\times\\mathcal T\\to\\mathbb R\\) satisfying \\((\\mu\\times\\nu)(A\\times B)=\\mu(A)\\nu(B)\\) for \\(A\\times B\\in\\mathcal F\\times\\mathcal T\\), and \\(|\\mu\\times\\nu|=|\\mu|\\times|\\nu|\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "If \\(f\\in L_F^p(\\mu)\\), there is a sequence \\((f_n)\\) of \\(F\\)-step functions",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "The Radon–Nikodym theorem",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "The Fubini theorem",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "The monotone convergence theorem",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "The completeness theorem for \\(L_F^2(\\mu)\\).",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "The equality \\(|g\\mu|=|g|\\mu\\).",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "If \\(f_n\\to f\\) in \\(L_F^2(\\mu)\\) and \\(f_n\\to g\\), \\(\\mu\\)-a.e., then \\(f=g\\), \\(\\mu\\)-a.e.",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Let \\(\\mathcal F\\subset\\Sigma\\) be a σ-algebra. Prove the existence of the conditional expectation \\(E(f/\\mathcal F)\\) for \\(f\\in L_F^2(\\mu)\\).",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "Let \\(\\mathcal R\\) be a ring generating \\(\\Sigma\\) and \\(f\\in L_F^1(\\mu)\\). Prove that if \\(\\int_A f\\,d\\mu=0\\) for every \\(A\\in\\mathcal R\\), then \\(f=0\\), \\(\\mu\\)-a.e.",
-      "subparts": []
-    },
-    {
-      "number": 12,
-      "text": "Let \\((X,\\mathcal F)\\) and \\((Y,\\mathcal J)\\) be measurable spaces, \\(\\mu:\\mathcal F\\to\\mathbb R\\) and \\(\\nu:\\mathcal J\\to\\mathbb R\\), σ-additive measures. Prove the existence of the product-measure \\(\\mu\\times\\nu:\\mathcal F\\times\\mathcal J\\to\\mathbb R\\) satisfying \\(\\mu\\times\\nu(A\\times B)=\\mu(A)\\nu(B)\\) for \\(A\\times B\\in\\mathcal F\\times\\mathcal J\\) and \\(|\\mu\\times\\nu|=|\\mu|\\times|\\nu|\\).",
-      "subparts": []
-    },
-    {
-      "number": 13,
-      "text": "If \\(f\\in L_F^p(\\mu)\\), there is a sequence \\((f_n)\\) of \\(F\\)-step functions",
-      "subparts": []
+      "type": "instructions",
+      "text": "Note. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2022-jan-part-2",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,48 +7,61 @@
   "month": "january",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-2-2022_01.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "For each integer \\(n \\geq 1\\), let \\(\\chi_n=n\\mathbf{1}_{[0,1/n]}\\) be \\(n\\) times the indicator function of the interval \\([0,1/n]\\). Prove that if \\(f:[0,1]\\to\\mathbb{R}\\) is continuous, then\n\\[\n\\lim_{n\\to\\infty}\\int_0^1 \\chi_n(t)f(t)\\,dt=f(0).\n\\]",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Let \\(a>0\\). When \\(n\\) is a positive integer and \\(t\\geq 0\\), write\n\\[\nf_n(t)=\\frac{\\sin nt}{1+nt}.\n\\]\nIs the sequence \\((f_n:n>0)\\) uniformly convergent on \\([a,\\infty)\\)? On \\([0,\\infty)\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For each integer \\(n \\geq 1\\), let \\(\\chi_n=n\\mathbf{1}_{[0,1/n]}\\) be \\(n\\) times the indicator function of the interval \\([0,1/n]\\). Prove that if \\(f:[0,1]\\to\\mathbb{R}\\) is continuous, then\n\\[\n\\lim_{n\\to\\infty}\\int_0^1 \\chi_n(t)f(t)\\,dt=f(0).\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f:[0,1]\\to\\mathbb{R}\\) be continuous. Prove that if\n\\[\n\\int_0^1 f(t)t^{n+\\frac12}\\,dt=0\n\\]\nfor each positive integer \\(n\\), then \\(f\\) vanishes identically.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(a>0\\). When \\(n\\) is a positive integer and \\(t\\geq 0\\), write\n\\[\nf_n(t)=\\frac{\\sin nt}{1+nt}.\n\\]\nIs the sequence \\((f_n:n>0)\\) uniformly convergent on \\([a,\\infty)\\)? On \\([0,\\infty)\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "When \\((f_n:n>0)\\) is a sequence of measurable real-valued functions on some measurable space, show that the following sets are measurable:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(\\{\\omega:f_n(\\omega)\\text{ alternates in sign}\\}\\)",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(\\{\\omega:f_n(\\omega)\\text{ is eventually rational}\\}\\)",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "\\(\\{\\omega:\\sum_{n>0}f_n(\\omega)\\text{ is absolutely convergent}\\}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:[0,1]\\to\\mathbb{R}\\) be continuous. Prove that if\n\\[\n\\int_0^1 f(t)t^{n+\\frac12}\\,dt=0\n\\]\nfor each positive integer \\(n\\), then \\(f\\) vanishes identically.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "State the Monotone Convergence Theorem and the Fatou Lemma, and deduce one of these from the other.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "When \\((f_n:n>0)\\) is a sequence of measurable real-valued functions on some measurable space, show that the following sets are measurable:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(\\{\\omega:f_n(\\omega)\\text{ alternates in sign}\\}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(\\{\\omega:f_n(\\omega)\\text{ is eventually rational}\\}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "\\(\\{\\omega:\\sum_{n>0}f_n(\\omega)\\text{ is absolutely convergent}\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State the Monotone Convergence Theorem and the Fatou Lemma, and deduce one of these from the other.",
+        "subparts": []
+      }
     }
   ]
 }

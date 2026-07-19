@@ -1,6 +1,8 @@
 # Topology, PhD exam, May 2025
 
-*For Problems 1–5, show all of your work and support all statements. Answer Problems 6–15 with complete definitions, complete statements, an example, or a short proof.*
+*Be neat and do not write too small.*
+
+*For the first five problems, show all of your work and support all statements.*
 
 **1.** Show that the product of two connected spaces is connected.
 
@@ -24,14 +26,20 @@
   \]
 
 **5.** This problem has two parts.
-* (a) Let \(n>m\). Show there are no maps from \(\mathbb{RP}^n\) to \(\mathbb{RP}^m\) inducing a nontrivial map \(H^1(\mathbb{RP}^m;\mathbb{Z}_2)\to H^1(\mathbb{RP}^n;\mathbb{Z}_2)\).
-* (b) Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \(f:S^n\to\mathbb{R}^n\) satisfies \(f(x)\ne f(-x)\) for all \(x\). Define \(g:S^n\to S^{n-1}\) by \(g(x)=\frac{f(x)-f(-x)}{\lVert f(x)-f(-x)\rVert}\), so \(g(-x)=-g(x)\) and \(g\) induces a map \(\mathbb{RP}^n\to\mathbb{RP}^{n-1}\). Show that (a) applies to this map.
+* (a) Let \(n>m\). Show there are no maps from \(\mathbb{RP}^n\) to \(\mathbb{RP}^m\) inducing a nontrivial map \(H^1(\mathbb{RP}^m;\mathbb Z_2)\to H^1(\mathbb{RP}^n;\mathbb Z_2)\).
+* (b) Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \(f:S^n\to\mathbb R^n\) satisfies \(f(x)\ne f(-x)\) for all \(x\). Define \(g:S^n\to S^{n-1}\) by
+  \[
+  g(x)=\frac{f(x)-f(-x)}{\lVert f(x)-f(-x)\rVert},
+  \]
+  so \(g(-x)=-g(x)\) and \(g\) induces a map \(\mathbb{RP}^n\to\mathbb{RP}^{n-1}\). Show that (a) applies to this map.
+
+*Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.*
 
 **6.** State the Urysohn Lemma.
 
 **7.** Give an example of a space that is path-connected but not locally path-connected.
 
-**8.** Use the Seifert van-Kampen theorem to derive the fundamental group of \(M_g\), the orientable surface of genus \(g\), for \(g\ge 1\).
+**8.** Use the Seifert–van Kampen theorem to derive the fundamental group of \(M_g\), the orientable surface of genus \(g\), for \(g\ge 1\).
 
 **9.** Show that for any connected closed orientable \(n\)-manifold \(M\) there is a degree \(1\) map \(M\to S^n\).
 
@@ -45,4 +53,4 @@
 
 **14.** State the Baire Category Theorem, and use it to prove that \([0,1]\) is uncountable.
 
-**15.** Does there exist a closed orientable 14-dimensional manifold \(M\) with \(H^7(M;\mathbb{Z})\cong\mathbb{Z}\)?
+**15.** Does there exist a closed orientable 14-dimensional manifold \(M\) with \(H^7(M;\mathbb Z)\cong\mathbb Z\)?

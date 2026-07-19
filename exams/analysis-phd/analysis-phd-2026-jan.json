@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-2026-jan",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,106 +7,125 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Analysis-2026_01.pdf",
-  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of eight.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Do two of three.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Give an example of a Lebesgue measurable set \\(E\\subseteq[0,1]\\) that is closed, has positive measure, but contains no non-trivial interval or explain why no such example exists.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Is the function \\(g:\\mathbb R\\to\\mathbb R\\) defined by \\(g(x)=\\frac{1}{1+x^2}\\) the Hardy–Littlewood maximal function of an \\(L^1(\\mathbb R)\\) function \\(f\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "Does there exist a measure space \\((X,\\mathcal M,\\mu)\\) and a nested decreasing sequence \\((E_n)_{n=1}^{\\infty}\\) of measurable sets such that\n\\[\n\\lim_{n\\to\\infty}\\mu(E_n)\\ne\\mu\\left(\\bigcap_{n=1}^{\\infty}E_n\\right)?\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of eight."
     },
     {
-      "number": 2,
-      "text": "Suppose \\(f:[0,1]\\times[0,1]\\to\\mathbb R\\). Show that if the following conditions hold, then \\(F:[0,1]\\to\\mathbb R\\) defined by\n\\[\nF(x)=\\int_{[0,1]}f(x,y)\\,d\\lambda(y)\n\\]\nis continuous. Here \\(\\lambda\\) denotes Lebesgue measure on \\(\\mathbb R\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "For each \\(x\\in[0,1]\\) the function \\(g_x(y)=f(x,y)\\) is continuous;",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "For each \\(y\\in[0,1]\\) the function \\(h_y(x)=f(x,y)\\) is continuous; and",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(f\\) is bounded.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Do two of three.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Give an example of a Lebesgue measurable set \\(E\\subseteq[0,1]\\) that is closed, has positive measure, but contains no non-trivial interval or explain why no such example exists.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Is the function \\(g:\\mathbb R\\to\\mathbb R\\) defined by \\(g(x)=\\frac{1}{1+x^2}\\) the Hardy–Littlewood maximal function of an \\(L^1(\\mathbb R)\\) function \\(f\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Does there exist a measure space \\((X,\\mathcal M,\\mu)\\) and a nested decreasing sequence \\((E_n)_{n=1}^{\\infty}\\) of measurable sets such that\n\\[\n\\lim_{n\\to\\infty}\\mu(E_n)\\ne\\mu\\left(\\bigcap_{n=1}^{\\infty}E_n\\right)?\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\((X,\\mathcal M)\\) denote a measurable space and let \\(P(X)\\) denote the power set of \\(X\\). Prove, if \\(\\mathcal M\\ne P(X)\\) and \\(\\{x\\}\\in\\mathcal M\\) for each \\(x\\in X\\), then there exists an \\(A\\notin\\mathcal M\\otimes\\mathcal M\\) such that \\([A]_x,[A]^y\\in\\mathcal M\\) for all \\(x,y\\in X\\). Suggestion: First show \\(\\delta:X\\to X\\times X\\) defined by \\(\\delta(x)=(x,x)\\) is measurable from \\((X,\\mathcal M)\\) to \\((X\\times X,\\mathcal M\\otimes\\mathcal M)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(f:[0,1]\\times[0,1]\\to\\mathbb R\\). Show that if the following conditions hold, then \\(F:[0,1]\\to\\mathbb R\\) defined by\n\\[\nF(x)=\\int_{[0,1]}f(x,y)\\,d\\lambda(y)\n\\]\nis continuous. Here \\(\\lambda\\) denotes Lebesgue measure on \\(\\mathbb R\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "For each \\(x\\in[0,1]\\) the function \\(g_x(y)=f(x,y)\\) is continuous;",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "For each \\(y\\in[0,1]\\) the function \\(h_y(x)=f(x,y)\\) is continuous; and",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(f\\) is bounded.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Suppose \\((X,\\mathcal M,\\mu)\\) is a measure space and \\(f,g:X\\to[0,\\infty)\\) are measurable. Show:",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(\\mu_f:\\mathcal M\\to[0,\\infty]\\) defined by \\(\\mu_f(A)=\\int\\chi_Af\\,d\\mu=\\int_Af\\,d\\mu\\) is a measure; and",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(\\int g\\,d\\mu_f=\\int gf\\,d\\mu\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,\\mathcal M)\\) denote a measurable space and let \\(P(X)\\) denote the power set of \\(X\\). Prove, if \\(\\mathcal M\\ne P(X)\\) and \\(\\{x\\}\\in\\mathcal M\\) for each \\(x\\in X\\), then there exists an \\(A\\notin\\mathcal M\\otimes\\mathcal M\\) such that \\([A]_x,[A]^y\\in\\mathcal M\\) for all \\(x,y\\in X\\). Suggestion: First show \\(\\delta:X\\to X\\times X\\) defined by \\(\\delta(x)=(x,x)\\) is measurable from \\((X,\\mathcal M)\\) to \\((X\\times X,\\mathcal M\\otimes\\mathcal M)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Do two of three. Short answer: you do not need to give a detailed proof, just a brief explanation.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(a_1,\\ldots,a_n\\) are nonnegative real numbers, must it be the case that\n\\[\n\\left(\\sum_{j=1}^n a_j\\right)^6\\le n^5\\sum_{j=1}^n a_j^6?\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Explain why, given \\(x\\in[0,1]\\), the mapping \\(E_x:C([0,1])\\to\\mathbb C\\) defined by \\(E_x(f)=f(x)\\) is a bounded linear functional. Is the dual of the Banach space \\(C([0,1])\\) separable?",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Give an example where the Radon–Nikodym Theorem fails without the sigma-finite hypothesis.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\((X,\\mathcal M,\\mu)\\) is a measure space and \\(f,g:X\\to[0,\\infty)\\) are measurable. Show:",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(\\mu_f:\\mathcal M\\to[0,\\infty]\\) defined by \\(\\mu_f(A)=\\int\\chi_Af\\,d\\mu=\\int_Af\\,d\\mu\\) is a measure; and",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(\\int g\\,d\\mu_f=\\int gf\\,d\\mu\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\mathbb C[x]\\) denote the complex vector space of polynomials in \\(x\\). Does there exist a norm \\(\\|\\cdot\\|\\) on \\(\\mathbb C[x]\\) such that \\((\\mathbb C[x],\\|\\cdot\\|)\\) is a Banach space. Provide a proof for your answer.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Do two of three. Short answer: you do not need to give a detailed proof, just a brief explanation.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(a_1,\\ldots,a_n\\) are nonnegative real numbers, must it be the case that\n\\[\n\\left(\\sum_{j=1}^n a_j\\right)^6\\le n^5\\sum_{j=1}^n a_j^6?\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Explain why, given \\(x\\in[0,1]\\), the mapping \\(E_x:C([0,1])\\to\\mathbb C\\) defined by \\(E_x(f)=f(x)\\) is a bounded linear functional. Is the dual of the Banach space \\(C([0,1])\\) separable?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Give an example where the Radon–Nikodym Theorem fails without the sigma-finite hypothesis.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Suppose \\(\\phi,\\psi\\) are bounded linear functionals on a Hilbert space \\(V\\). Show, if \\(\\|\\phi+\\psi\\|=\\|\\phi\\|+\\|\\psi\\|\\), then one of \\(\\phi,\\psi\\) is a multiple of the other. Is the result still true if \\(V\\) is only assumed to be a Banach space?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathbb C[x]\\) denote the complex vector space of polynomials in \\(x\\). Does there exist a norm \\(\\|\\cdot\\|\\) on \\(\\mathbb C[x]\\) such that \\((\\mathbb C[x],\\|\\cdot\\|)\\) is a Banach space. Provide a proof for your answer.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Show if \\(f\\in L^1(\\mathbb R)\\) and \\(g\\in L^\\infty(\\mathbb R)\\), then the convolution \\(f*g\\) is continuous. Let \\(E\\subseteq[0,1]\\) be a Lebesgue measurable set of positive measure and let\n\\[\n-E=\\{-x:x\\in E\\}.\n\\]\nBy considering the function \\(h=\\chi_{-E}*\\chi_E\\) or otherwise, show\n\\[\nE-E=\\{x-y:x,y\\in E\\}\n\\]\ncontains an open interval.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(\\phi,\\psi\\) are bounded linear functionals on a Hilbert space \\(V\\). Show, if \\(\\|\\phi+\\psi\\|=\\|\\phi\\|+\\|\\psi\\|\\), then one of \\(\\phi,\\psi\\) is a multiple of the other. Is the result still true if \\(V\\) is only assumed to be a Banach space?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Show if \\(f\\in L^1(\\mathbb R)\\) and \\(g\\in L^\\infty(\\mathbb R)\\), then the convolution \\(f*g\\) is continuous. Let \\(E\\subseteq[0,1]\\) be a Lebesgue measurable set of positive measure and let\n\\[\n-E=\\{-x:x\\in E\\}.\n\\]\nBy considering the function \\(h=\\chi_{-E}*\\chi_E\\) or otherwise, show\n\\[\nE-E=\\{x-y:x,y\\in E\\}\n\\]\ncontains an open interval.",
+        "subparts": []
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-1993-sep",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,101 +7,128 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_1993_09.pdf",
-  "instructions": "Answer questions 1–4 without giving proofs. Answer questions 5–10, giving proofs or counterexamples.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(X \\subset Y\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "What does it mean for \\(X\\) to be a retract of \\(Y\\)?",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "What does it mean for \\(X\\) to be a deformation retract of \\(Y\\)?",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer the following questions without giving proofs."
     },
     {
-      "number": 2,
-      "text": "Let \\(K\\) be a finite simplicial complex. Define \\(\\chi(K)\\), the Euler characteristic of \\(K\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X \\subset Y\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "What does it mean for \\(X\\) to be a retract of \\(Y\\)?",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "What does it mean for \\(X\\) to be a deformation retract of \\(Y\\)?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Define what it means for a topological space to be",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "normal",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "connected",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(K\\) be a finite simplicial complex. Define \\(\\chi(K)\\), the Euler characteristic of \\(K\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "State the Brouwer fixed point theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define what it means for a topological space to be",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "normal",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "connected",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(p:X \\to Y\\) be a \\(d\\)-sheeted covering projection, where \\(X\\) and \\(Y\\) are finite simplicial complexes. Show that \\(\\chi(X)=d\\cdot\\chi(Y)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Brouwer fixed point theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Compute the fundamental group of a closed, orientable surface \\(X\\) of genus 3.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following questions, giving proofs or counterexamples."
     },
     {
-      "number": 7,
-      "text": "Let \\(X\\) be a closed, orientable surface of genus 3.",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Compute the homology groups of \\(X\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Compute the Euler characteristic of this surface \\(X\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p:X \\to Y\\) be a \\(d\\)-sheeted covering projection, where \\(X\\) and \\(Y\\) are finite simplicial complexes. Show that \\(\\chi(X)=d\\cdot\\chi(Y)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Show that every continuous map \\(f:S^2 \\to S^1\\) is homotopic to a constant map.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Compute the fundamental group of a closed, orientable surface \\(X\\) of genus 3.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "For \\(i=1,2,\\ldots\\), let \\(P_i\\) be a 2-dimensional plane in \\(\\mathbb{R}^3\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Show that \\(S=\\mathbb{R}^3\\setminus\\bigcup_{i=1}^{\\infty}P_i\\) is not empty.",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Must \\(S\\) be an open set?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be a closed, orientable surface of genus 3.",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Compute the homology groups of \\(X\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Compute the Euler characteristic of this surface \\(X\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 10,
-      "text": "Let \\(C\\) be the Cantor set and let \\(S\\) be any compact metric space. Show that there is a continuous map \\(f:C \\to S\\) such that \\(f\\) is onto.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that every continuous map \\(f:S^2 \\to S^1\\) is homotopic to a constant map.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "For \\(i=1,2,\\ldots\\), let \\(P_i\\) be a 2-dimensional plane in \\(\\mathbb{R}^3\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Show that \\(S=\\mathbb{R}^3\\setminus\\bigcup_{i=1}^{\\infty}P_i\\) is not empty.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Must \\(S\\) be an open set?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(C\\) be the Cantor set and let \\(S\\) be any compact metric space. Show that there is a continuous map \\(f:C \\to S\\) such that \\(f\\) is onto.",
+        "subparts": []
+      }
     }
   ]
 }

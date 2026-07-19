@@ -1,10 +1,12 @@
 # Algebra, PhD exam, January 2022
 
-*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences. Results from lectures or textbooks may be used without proof (within reason—don’t state results equivalent to the problem), but must be clearly stated. Parts 3(ii), 5(ii), and 10(i) require more substantial responses than parts 3(i), 5(i), and 10(ii).*
+*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.*
+
+*Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.*
 
 **1.** Suppose \(K\) is a field of characteristic different from \(2\), \(a \in K\) is not a square and \(b \in K\) is not a square in \(K(\sqrt{a})\). Compute the degree of \(L=K(\sqrt{a},\sqrt{b})\) over \(K\) and determine all subfields of \(L\) containing \(K\).
 
-**2.** Suppose \(A\) is an integral domain with fraction field \(K\), \(L/K\) is a field extension and \(x \in L\). Show that \(x\) is integral over \(A\) if and only if there is a nonzero finitely generated \(A\)-module \(M \subseteq L\) such that \(xM \subseteq M\).
+**2.** Suppose \(A\) is an integral domain with fraction field \(K\), \(L/K\) is a field extension and \(x \in L\). Show that \(x\) is integral over \(A\) if and only if there is a finitely generated \(A\)-module \(M \subseteq L\) such that \(xM \subseteq M\).
 
 **3.** Suppose \(C\) is a category and \(X\) and \(Y\) are objects of \(C\).
 * (i) Define what it means for an object of \(C\) to be a product of \(X\) and \(Y\).
@@ -35,7 +37,7 @@ is an exact sequence of abelian groups.
 * (ii) Recall that a multiplicative system in \(A\) is a nonempty subset closed under multiplication. Show that if \(S \subset A\) is a multiplicative system then \(S^{-1}A\) is Noetherian.
 
 **10.** Suppose \(R\) is a nontrivial commutative ring with identity and \(S \subset R\) is a multiplicative system not containing \(0\) (see the previous problem for the definition).
-* (i) Show that there is a prime ideal \(\mathfrak{p} \subset R\) such that \(\mathfrak{p} \cap S=\varnothing\). Hint: Apply Zorn’s lemma on the ideals \(I \subset R\) such that \(I \cap S=\varnothing\).
+* (i) Show that there is a prime ideal \(\mathfrak p \subset R\) such that \(\mathfrak p \cap S=\varnothing\). Hint: Apply Zorn’s lemma on the ideals \(I \subset R\) such that \(I \cap S=\varnothing\).
 * (ii) Use this to show that the intersection of all prime ideals of \(R\) is the set of nilpotent elements of \(R\).
 
 **11.** This problem has two parts.

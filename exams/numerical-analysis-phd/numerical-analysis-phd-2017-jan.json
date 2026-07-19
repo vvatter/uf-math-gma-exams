@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-2017-jan",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,65 +7,78 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis-2017_01.pdf",
-  "instructions": "You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that the equation \\(x=\\frac{1}{2}\\cos(x)\\) has a solution \\(\\alpha\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Find an interval \\([a,b]\\) containing \\(\\alpha\\) and such that for every \\(x_0\\in[a,b]\\), the iterative sequence\n\\[\nx_{n+1}=\\frac{1}{2}\\cos x_n\n\\]\nwill converge to \\(\\alpha\\). Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator."
     },
     {
-      "number": 2,
-      "text": "For the basic Lagrange polynomials\n\\[\nL_i(x)=\\prod_{j\\ne i}\\frac{x-x_j}{x_i-x_j}\\qquad\\text{for}\\qquad i=0,\\ldots,n,\n\\]\nshow that\n\\[\n\\sum_i L_i(x)=1\\qquad\\text{for all }x.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that the equation \\(x=\\frac{1}{2}\\cos(x)\\) has a solution \\(\\alpha\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Find an interval \\([a,b]\\) containing \\(\\alpha\\) and such that for every \\(x_0\\in[a,b]\\), the iterative sequence\n\\[\nx_{n+1}=\\frac{1}{2}\\cos x_n\n\\]\nwill converge to \\(\\alpha\\). Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Consider a quadrature rule of the form for \\(0<\\alpha<1\\):\n\\[\n\\int_0^1 x^\\alpha f(x)\\,dx\\approx A\\int_0^1 f(x)\\,dx+B\\int_0^1 xf(x)\\,dx.\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Determine the constants \\(A,B\\) so that the quadrature formula has maximum degree of exactness.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "What is the degree of exactness of the formula in part (a)?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "For the basic Lagrange polynomials\n\\[\nL_i(x)=\\prod_{j\\ne i}\\frac{x-x_j}{x_i-x_j}\\qquad\\text{for}\\qquad i=0,\\ldots,n,\n\\]\nshow that\n\\[\n\\sum_i L_i(x)=1\\qquad\\text{for all }x.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f\\) be an arbitrary (continuous) function on \\([0,1]\\) satisfying\n\\[\nf(x)+f(1-x)\\equiv 1\\qquad\\text{for}\\qquad 0\\le x\\le 1.\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(\\int_0^1 f(x)\\,dx=\\frac{1}{2}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that the composite trapezoidal rule for computing \\(\\int_0^1 f(x)\\,dx\\) is exact.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Consider a quadrature rule of the form for \\(0<\\alpha<1\\):\n\\[\n\\int_0^1 x^\\alpha f(x)\\,dx\\approx A\\int_0^1 f(x)\\,dx+B\\int_0^1 xf(x)\\,dx.\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Determine the constants \\(A,B\\) so that the quadrature formula has maximum degree of exactness.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "What is the degree of exactness of the formula in part (a)?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Assume that you are solving the initial value problem\n\\[\n\\begin{aligned}\ny'&=f(t,y), && a\\le t\\le b,\\\\\ny(a)&=\\alpha.\n\\end{aligned}\n\\]\nThe formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method is (\\(M=\\lVert Y''\\rVert_\\infty\\)):\n\\[\n\\lvert Y(t_i)-w_i\\rvert<\\frac{hM}{2L}\\left[e^{L(b-a)}-1\\right].\n\\]\nCompute the values of \\(L\\) and \\(M=\\lVert Y''\\rVert_\\infty\\) necessary to apply the global error formula above to the specific ODE problem\n\\[\n\\begin{aligned}\ny'&=\\sin(t+2y)+e^t, && 0\\le t\\le 1,\\\\\ny(0)&=0.\n\\end{aligned}\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) be an arbitrary (continuous) function on \\([0,1]\\) satisfying\n\\[\nf(x)+f(1-x)\\equiv 1\\qquad\\text{for}\\qquad 0\\le x\\le 1.\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(\\int_0^1 f(x)\\,dx=\\frac{1}{2}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that the composite trapezoidal rule for computing \\(\\int_0^1 f(x)\\,dx\\) is exact.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Assume that you are solving the initial value problem\n\\[\n\\begin{aligned}\ny'&=f(t,y), && a\\le t\\le b,\\\\\ny(a)&=\\alpha.\n\\end{aligned}\n\\]\nThe formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method is (\\(M=\\lVert Y''\\rVert_\\infty\\)):\n\\[\n\\lvert Y(t_i)-w_i\\rvert<\\frac{hM}{2L}\\left[e^{L(b-a)}-1\\right].\n\\]\nCompute the values of \\(L\\) and \\(M=\\lVert Y''\\rVert_\\infty\\) necessary to apply the global error formula above to the specific ODE problem\n\\[\n\\begin{aligned}\ny'&=\\sin(t+2y)+e^t, && 0\\le t\\le 1,\\\\\ny(0)&=0.\n\\end{aligned}\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

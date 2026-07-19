@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2022-may-part-2",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,74 +7,93 @@
   "month": "may",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2-2022_05.pdf",
-  "instructions": "Do seven 7 and only seven of the following. In the following \\(D^2\\) is the closed, two-dimensional disk, and \\(S^1\\) is the unit circle, its boundary. The cyclic group of order \\(n\\), is \\(\\mathbb{Z}_n=\\mathbb{Z}/n\\mathbb{Z}\\).",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume that \\(X\\) is completely regular. Show that \\(X\\) is connected if and only if \\(\\beta X\\) is connected.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do seven 7 and only seven of the following. In the following \\(D^2\\) is the closed, two-dimensional disk, and \\(S^1\\) is the unit circle, its boundary. The cyclic group of order \\(n\\), is \\(\\mathbb{Z}_n=\\mathbb{Z}/n\\mathbb{Z}\\)."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "a.",
-          "text": "Define a retract and show there is no retract \\(D^2\\to S^1\\).",
-          "subparts": []
-        },
-        {
-          "label": "b.",
-          "text": "Show that any continuous map \\(f:D^2\\to D^2\\) has a fixed point.",
-          "subparts": []
-        },
-        {
-          "label": "c.",
-          "text": "If \\(A\\) is retract of \\(D^2\\) prove that any continuous map \\(f:A\\to A\\) has a fixed point.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Assume that \\(X\\) is completely regular. Show that \\(X\\) is connected if and only if \\(\\beta X\\) is connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(M\\) and \\(N\\) be two connected, compact manifolds with points \\(x_0\\in M\\) and \\(y_0\\in N\\). Define an equivalence relation on their disjoint union, \\(M\\sqcup N\\), as \\(x_0\\sim y_0\\) and all other points are just equivalent to themselves. Let \\(M\\vee N=(M\\sqcup N)/{\\sim}\\). Show that\n\\[\n\\pi_1(M\\vee N,[x_0])=\\pi_1(M,x_0)*\\pi_1(N,y_0)\n\\]\nwhere \\([x_0]\\) is the equivalence class of \\(x_0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "a.",
+            "text": "Define a retract and show there is no retract \\(D^2\\to S^1\\).",
+            "subparts": []
+          },
+          {
+            "label": "b.",
+            "text": "Show that any continuous map \\(f:D^2\\to D^2\\) has a fixed point.",
+            "subparts": []
+          },
+          {
+            "label": "c.",
+            "text": "If \\(A\\) is retract of \\(D^2\\) prove that any continuous map \\(f:A\\to A\\) has a fixed point.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Construct a space whose fundamental group is isomorphic to \\((\\mathbb{Z}\\oplus\\mathbb{Z}_3)*\\mathbb{Z}_5\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(M\\) and \\(N\\) be two connected, compact manifolds with points \\(x_0\\in M\\) and \\(y_0\\in N\\). Define an equivalence relation on their disjoint union, \\(M\\sqcup N\\), as \\(x_0\\sim y_0\\) and all other points are just equivalent to themselves. Let \\(M\\vee N=(M\\sqcup N)/{\\sim}\\). Show that\n\\[\n\\pi_1(M\\vee N,[x_0])=\\pi_1(M,x_0)*\\pi_1(N,y_0)\n\\]\nwhere \\([x_0]\\) is the equivalence class of \\(x_0\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^n\\) for any \\(n>2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Construct a space whose fundamental group is isomorphic to \\((\\mathbb{Z}\\oplus\\mathbb{Z}_3)*\\mathbb{Z}_5\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "State the Seifert–van Kampen Theorem and use it to compute the fundamental group of the space pictured below.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^n\\) for any \\(n>2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "The projective plane \\(PP\\) is constructed by identifying the edges of a disk as pictured below. Compute the fundamental group of \\(PP\\) as well as that of \\(PP\\) minus \\(n\\) points, \\(n>0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Seifert–van Kampen Theorem and use it to compute the fundamental group of the space pictured below.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define a deformation retract and show it induces an isomorphism on fundamental groups.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove or disprove: a retract induces an isomorphism on fundamental groups.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "The projective plane \\(PP\\) is constructed by identifying the edges of a disk as pictured below. Compute the fundamental group of \\(PP\\) as well as that of \\(PP\\) minus \\(n\\) points, \\(n>0\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define a deformation retract and show it induces an isomorphism on fundamental groups.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove or disprove: a retract induces an isomorphism on fundamental groups.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2017, Part 2
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that \(S^1\) is not homeomorphic to \(S^2\).
 
@@ -11,6 +11,8 @@
 **4.** Define retract and deformation retract. Give an example of spaces \(A\) and \(X\) such that \(A\) is a retract of \(X\) but it is not a deformation retract of \(X\).
 
 **5.** Prove that there is no retraction of the disk onto its boundary.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Can the set of irrational numbers given the standard metric be presented as a countable union of closed subsets?
 

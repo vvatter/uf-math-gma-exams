@@ -1,8 +1,8 @@
 # Algebra, PhD exam, August 2025
 
-*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
 
-Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.*
+*Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.*
 
 **1.** Let \(K\) be a field and let \(f(x) \in K[x]\) be a non-zero polynomial.
 * (a) Define what is a splitting field for \(f(x)\) over \(K\).
@@ -28,7 +28,7 @@ Note. Below ring means associative ring with identity, and module means unital m
 
 **6.** Let \(K\) be a field and \(K(x)\) the field of rational functions over \(K\). Let \(\frac{f}{g}\in K(x)\), with \(\frac{f}{g}\notin K\), where \(f\) and \(g\) are relatively prime elements of \(K[x]\).
 * (a) Show that \(\frac{f}{g}\) is transcendental over \(K\).
-* (b) Prove that \(K(x)\) is a finite extension of \(K\left(\frac{f}{g}\right)\).
+* (b) Prove that \(K(x)\) is a finite extension of \(K\!\left(\frac{f}{g}\right)\).
 
 **7.** State and prove the Lying-Over Theorem on prime ideals and ring extensions.
 
@@ -36,6 +36,6 @@ Note. Below ring means associative ring with identity, and module means unital m
 
 **9.** Show that for any extension \(A\subseteq B\) of commutative rings with \(1\), any \(A\)-module \(M\) and any \(B\)-module \(N\), there is an isomorphism \(\operatorname{Hom}_B(M\otimes_A B,N)\simeq \operatorname{Hom}_A(M,N_A)\) (here \(N_A\) denotes \(N\) considered as an \(A\)-module by means of the ring inclusion homomorphism \(A\to B\)).
 
-**10.** Let \(R\) be a commutative ring with \(1\) with \(1\ne 0\). Prove that the set consisting of \(0\) and all zero divisors in \(R\) contains at least one prime ideal of \(R\).
+**10.** Let \(R\) be a commutative ring with \(1\) with \(1\neq 0\). Prove that the set consisting of \(0\) and all zero divisors in \(R\) contains at least one prime ideal of \(R\).
 
 **11.** Classify (up to ring isomorphism) all (not necessarily commutative) semisimple rings of order \(240\).

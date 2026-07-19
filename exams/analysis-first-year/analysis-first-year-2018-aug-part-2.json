@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2018-aug-part-2",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,75 +7,88 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA-5229-August-2018.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let the sequence \\((s_n)_{n=1}^{\\infty}\\) in \\([0,1]\\) be uniformly distributed in the sense that if \\(0 \\le a \\le b \\le 1\\) then\n\\[\n\\lim_{n\\to\\infty}\\frac{\\#\\{k\\le n:s_k\\in[a,b]\\}}{n}=b-a.\n\\]\nLet \\(f:[0,1]\\to\\mathbb{R}\\) and prove that\n\\[\n\\lim_{n\\to\\infty}\\frac{f(s_1)+\\cdots+f(s_n)}{n}=\\int_0^1 f(t)\\,dt\n\\]\nin each of the following cases:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(f\\) is a step function (a finite linear combination of indicators of intervals);",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(f\\) is Riemann-integrable.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Fix \\(a\\in\\mathbb{R}\\) and for each integer \\(n>0\\) write \\(f_n(t)=n^a t(1-t^2)^n\\) whenever \\(0\\le t\\le 1\\).",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that \\((f_n)_{n=1}^{\\infty}\\) converges pointwise on \\([0,1]\\); say to \\(f\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "For which values of \\(a\\) does \\((f_n)_{n=1}^{\\infty}\\) converge uniformly on \\([0,1]\\)? Justify.",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "For which values of \\(a\\) is it true that \\(\\int_0^1 f_n\\to\\int_0^1 f\\)? Justify.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let the sequence \\((s_n)_{n=1}^{\\infty}\\) in \\([0,1]\\) be uniformly distributed in the sense that if \\(0 \\le a \\le b \\le 1\\) then\n\\[\n\\lim_{n\\to\\infty}\\frac{\\#\\{k\\le n:s_k\\in[a,b]\\}}{n}=b-a.\n\\]\nLet \\(f:[0,1]\\to\\mathbb{R}\\) and prove that\n\\[\n\\lim_{n\\to\\infty}\\frac{f(s_1)+\\cdots+f(s_n)}{n}=\\int_0^1 f(t)\\,dt\n\\]\nin each of the following cases:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(f\\) is a step function (a finite linear combination of indicators of intervals);",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(f\\) is Riemann-integrable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f:[1,\\infty)\\to\\mathbb{R}\\) be continuous and satisfy \\(\\lim_{t\\to\\infty}f(t)=A\\in\\mathbb{R}\\). Prove that there is a sequence \\((p_n)_{n=0}^{\\infty}\\) of polynomials such that \\(p_n(1/t)\\) converges to \\(f(t)\\) uniformly for \\(t\\ge 1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Fix \\(a\\in\\mathbb{R}\\) and for each integer \\(n>0\\) write \\(f_n(t)=n^a t(1-t^2)^n\\) whenever \\(0\\le t\\le 1\\).",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that \\((f_n)_{n=1}^{\\infty}\\) converges pointwise on \\([0,1]\\); say to \\(f\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "For which values of \\(a\\) does \\((f_n)_{n=1}^{\\infty}\\) converge uniformly on \\([0,1]\\)? Justify.",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "For which values of \\(a\\) is it true that \\(\\int_0^1 f_n\\to\\int_0^1 f\\)? Justify.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\((f_n)_{n=1}^{\\infty}\\) be a sequence of real-valued measurable functions. Prove that each of the following sets is measurable:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(B=\\{\\omega:(f_n(\\omega))_{n=1}^{\\infty}\\text{ has no biggest term}\\}\\);",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(C=\\{\\omega:\\cos(f_n(\\omega))>0\\text{ for each }n>0\\}\\);",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "\\(D=\\{\\omega:(f_n(\\omega))_{n=1}^{\\infty}\\text{ does not converge to a rational number}\\}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:[1,\\infty)\\to\\mathbb{R}\\) be continuous and satisfy \\(\\lim_{t\\to\\infty}f(t)=A\\in\\mathbb{R}\\). Prove that there is a sequence \\((p_n)_{n=0}^{\\infty}\\) of polynomials such that \\(p_n(1/t)\\) converges to \\(f(t)\\) uniformly for \\(t\\ge 1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "State the Monotone Convergence Theorem. Use it to prove the following: let \\((f_n)_{n=1}^{\\infty}\\) be a sequence of non-negative integrable functions with pointwise limit \\(f\\); if \\(\\int f_n\\,d\\mu\\le M<\\infty\\) for each \\(n\\) then \\(f\\) is integrable and \\(\\int f\\,d\\mu\\le M\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((f_n)_{n=1}^{\\infty}\\) be a sequence of real-valued measurable functions. Prove that each of the following sets is measurable:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(B=\\{\\omega:(f_n(\\omega))_{n=1}^{\\infty}\\text{ has no biggest term}\\}\\);",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(C=\\{\\omega:\\cos(f_n(\\omega))>0\\text{ for each }n>0\\}\\);",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "\\(D=\\{\\omega:(f_n(\\omega))_{n=1}^{\\infty}\\text{ does not converge to a rational number}\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State the Monotone Convergence Theorem. Use it to prove the following: let \\((f_n)_{n=1}^{\\infty}\\) be a sequence of non-negative integrable functions with pointwise limit \\(f\\); if \\(\\int f_n\\,d\\mu\\le M<\\infty\\) for each \\(n\\) then \\(f\\) is integrable and \\(\\int f\\,d\\mu\\le M\\).",
+        "subparts": []
+      }
     }
   ]
 }

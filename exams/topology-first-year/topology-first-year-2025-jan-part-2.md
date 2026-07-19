@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2025, Part 2
 
-*For the first five problems, show all your work and support all statements. Answer Problems 6–15 with complete definitions or statements or short proofs.*
+*For the first five problems, show all your work and support all statements.*
 
 **1.** Suppose that the continuous maps \(f,g:X\to Y\) are homotopic and that the continuous maps \(h,k:Y\to Z\) are homotopic. Show that \(h\circ f\) is homotopic to \(k\circ g\).
 
@@ -11,6 +11,8 @@
 **4.** Prove that for \(n\geq 2\), the fundamental group of the \(n\)-sphere, \(S^n\), is \(0\).
 
 **5.** Show that the torus \(T=S^1\times S^1\) is not homeomorphic to the surface of genus two, \(M_2=T\mathbin{\#}T\).
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Suppose that \(f,g:X\to\mathbb{R}^n\) are continuous. Show that \(f\) and \(g\) are homotopic.
 

@@ -1,19 +1,21 @@
 # Topology, PhD exam, May 2024
 
-*Work the following problems and show all work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Prove that compact Hausdorff space is normal.
 
-**2.** Let \(X_\alpha\) be a family of connected spaces that have a common point. Prove that \(\bigcup X_\alpha\) is connected.
+**2.** Let \(X_\alpha\) be a family of connected spaces that have a common point. Prove that \(\bigcup_\alpha X_\alpha\) is connected.
 
 **3.** Does there exist a closed orientable \(n\)-manifold \(M\) with
 * (a) \(n=4\) and \(H_2(M)=\mathbb{Z}\)?
 * (b) \(n=5\) and \(H_3(M)=\mathbb{Z}\)?
 * (c) \(n=6\) and \(H_3(M)=\mathbb{Z}\)?
 
-**4.** Show that the Möbius strip is not a retract of its boundary.
+**4.** Show that the boundary of the Möbius strip is not a retract of the Möbius strip.
 
 **5.** Is the space of all real \(n\times n\)-matrices compact? Connected?
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Explain relations between connectedness and path connectedness.
 

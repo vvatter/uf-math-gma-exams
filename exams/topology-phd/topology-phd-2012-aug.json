@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-2012-aug",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,125 +7,162 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2012_08.pdf",
-  "instructions": "Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove that the 3-sphere \\(S^3\\) is not homeomorphic to the 3-space \\(\\mathbb{R}^3\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "Let \\(A \\subset \\mathbb{R}^2\\) be an infinite countable subspace.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Can \\(A\\) be connected?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Is \\(\\mathbb{R}^2 \\setminus A\\) connected?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the 3-sphere \\(S^3\\) is not homeomorphic to the 3-space \\(\\mathbb{R}^3\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Construct a map \\(f:T^2 \\to S^2\\) of degree 3 where \\(T^2=S^1 \\times S^1\\) is a torus.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A \\subset \\mathbb{R}^2\\) be an infinite countable subspace.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Can \\(A\\) be connected?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Is \\(\\mathbb{R}^2 \\setminus A\\) connected?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Show that there is no map \\(S^2 \\to T^2\\) of degree 3.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Construct a map \\(f:T^2 \\to S^2\\) of degree 3 where \\(T^2=S^1 \\times S^1\\) is a torus.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(GL_n\\) be the space of all invertible real \\(n \\times n\\)-matrices. Is \\(GL_n\\) compact? Is it connected?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that there is no map \\(S^2 \\to T^2\\) of degree 3.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Is the 2-sphere \\(S^2\\) with \\(k\\) points removed homeomorphic to a topological group for",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(k=1\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(k=2\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(k=3\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "\\(k=0\\)?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(GL_n\\) be the space of all invertible real \\(n \\times n\\)-matrices. Is \\(GL_n\\) compact? Is it connected?",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "State the Lefschetz Fixed Point Theorem.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "Compute the Euler characteristic \\(\\chi(\\mathbb{CP}^5 \\times \\mathbb{RP}^5 \\times S^5 \\times S^2)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Is the 2-sphere \\(S^2\\) with \\(k\\) points removed homeomorphic to a topological group for",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(k=1\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(k=2\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(k=3\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "\\(k=0\\)?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 9,
-      "text": "State the Baire Category Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Lefschetz Fixed Point Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Does every function \\(f:\\mathbb{N} \\to \\mathbb{R}\\) admit a continuous extension \\(\\overline{f}:\\beta\\mathbb{N} \\to \\mathbb{R}\\) to the Stone–Čech compactification?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Compute the Euler characteristic \\(\\chi(\\mathbb{CP}^5 \\times \\mathbb{RP}^5 \\times S^5 \\times S^2)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "State the Five Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Baire Category Theorem",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "What can you say about the \\(k\\)-th cohomology group of a closed oriented manifold for",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(k=n\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(k=n-1\\)?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Does every function \\(f:\\mathbb{N} \\to \\mathbb{R}\\) admit a continuous extension \\(\\bar{f}:\\beta\\mathbb{N} \\to \\mathbb{R}\\) to the Stone–Čech compactification?",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Does there exist a covering space of the figure eight that has a non-trivial abelian fundamental group?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Five Lemma.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Describe all connected subsets of the real line \\(\\mathbb{R}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "What can you say about the \\(k\\)-th cohomology group of a closed oriented manifold for",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(k=n\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(k=n-1\\)?",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 15,
-      "text": "State the Contraction Mapping Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Does there exist a covering space of the figure eight that has a non-trivial abelian fundamental group?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Describe all connected subsets of the real line \\(\\mathbb{R}\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State the Contraction Mapping Theorem.",
+        "subparts": []
+      }
     }
   ]
 }

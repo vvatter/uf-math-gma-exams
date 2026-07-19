@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2025-jan-part-1",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,104 +7,141 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1_2025_01.pdf",
-  "instructions": "For problems 1–5, answer the following problems and show all your work. Support all statements to the best of your ability. For problems 6–15, answer the following with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show that for every set \\(X\\), there is no function \\(f:X\\to 2^X\\) such that \\(f\\) is onto. Note that \\(2^X\\) is the power set on \\(X\\) and is also denoted by \\(\\mathcal P(X)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following problems and show all your work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "Let \\(\\mathbb R^\\infty\\) denote the subset of \\(\\mathbb R^\\omega\\) consisting of all sequences that are “eventually zero,” that is, all sequences \\((x_1,x_2,\\ldots)\\) such that \\(x_i\\ne 0\\) for only finitely many values of \\(i\\). What is the closure of \\(\\mathbb R^\\infty\\) in the box and product topologies? Justify your answer.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that for every set \\(X\\), there is no function \\(f:X\\to 2^X\\) such that \\(f\\) is onto. Note that \\(2^X\\) is the power set on \\(X\\) and is also denoted by \\(\\mathcal{P}(X)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(p:X\\to Y\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what it means for \\(p\\) to be a quotient map.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that if there is a continuous map \\(f:Y\\to X\\) such that \\(p\\circ f\\) equals the identity map of \\(Y\\), then \\(p\\) is a quotient map.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathbb{R}^\\infty\\) denote the subset of \\(\\mathbb{R}^\\omega\\) consisting of all sequences that are “eventually zero,” that is, all sequences \\((x_1,x_2,\\ldots)\\) such that \\(x_i\\ne 0\\) for only finitely many values of \\(i\\). What is the closure of \\(\\mathbb{R}^\\infty\\) in the box and product topologies? Justify your answer.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give the topology of the one-point compactification of a locally compact Hausdorff topological space \\(X\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that the one-point compactification of \\(\\mathbb Z_+\\) is homeomorphic with the subspace \\(\\{0\\}\\cup\\left\\{\\frac{1}{n}\\mid n\\in\\mathbb Z_+\\right\\}\\) of \\(\\mathbb R\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p:X\\to Y\\) be continuous.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for \\(p\\) to be a quotient map.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if there is a continuous map \\(f:Y\\to X\\) such that \\(p\\circ f\\) equals the identity map of \\(Y\\), then \\(p\\) is a quotient map.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\((X,d)\\) be a complete metric space. State and prove the contraction mapping theorem for \\(X\\), which is also called the Banach fixed point theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give the topology of the one-point compactification of a locally compact Hausdorff topological space \\(X\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that the one-point compactification of \\(\\mathbb{Z}_+\\) is homeomorphic with the subspace \\(\\{0\\}\\cup\\{\\frac{1}{n}\\mid n\\in\\mathbb{Z}_+\\}\\) of \\(\\mathbb{R}\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Show that the axiom of choice is equivalent to the statement that for any indexed family \\(\\{A_\\alpha\\}_{\\alpha\\in J}\\) of nonempty sets with \\(J\\ne\\varnothing\\), the cartesian product \\(\\prod_{\\alpha\\in J}A_\\alpha\\) is nonempty.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,d)\\) be a complete metric space. State and prove the contraction mapping theorem for \\(X\\), which is also called the Banach fixed point theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Show that a connected normal space \\(X\\) having more than one point is uncountable.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "Suppose that \\(f:X\\to Y\\) is continuous and that \\(A\\subset X\\) is connected. Show that \\(f(A)\\subset Y\\) is connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the axiom of choice is equivalent to the statement that for any indexed family \\(\\{A_\\alpha\\}_{\\alpha\\in J}\\) of nonempty sets with \\(J\\ne\\varnothing\\), the cartesian product \\(\\prod_{\\alpha\\in J}A_\\alpha\\) is nonempty.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Suppose that \\(f:X\\to Y\\) is continuous and that \\(A\\subset X\\) is compact. Show that \\(f(A)\\) is compact.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that a connected normal space \\(X\\) having more than one point is uncountable.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State the Extreme Value Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(f:X\\to Y\\) is continuous and that \\(A\\subset X\\) is connected. Show that \\(f(A)\\subset Y\\) is connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Define what it means for a topological space to be regular.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(f:X\\to Y\\) is continuous and that \\(A\\subset X\\) is compact. Show that \\(f(A)\\) is compact.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "What does it mean for a topological space \\(X\\) to be a Baire space?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Extreme Value Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "State the Cantor–Schröder–Bernstein theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define what it means for a topological space to be regular.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Is every path connected space locally path connected?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "What does it mean for a topological space \\(X\\) to be a Baire space?",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Define what it means for a topological space \\(X\\) to be separable. Let \\(I\\) denote the unit interval \\([0,1]\\). Is \\(I^{\\mathbb Z_+}\\) separable? What about \\(I^I\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Cantor–Schröder–Bernstein theorem.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Is every path connected space locally path connected?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define what it means for a topological space \\(X\\) to be separable. Let \\(I\\) denote the unit interval \\([0,1]\\). Is \\(I^{\\mathbb{Z}_+}\\) separable? What about \\(I^I\\)?",
+        "subparts": []
+      }
     }
   ]
 }

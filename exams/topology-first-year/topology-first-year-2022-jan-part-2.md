@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2022, Part 2
 
-*Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–10 with complete definitions or statements or proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that the torus \(T\) is not homeomorphic to the surface of genus 2, \(M_2=T\mathbin{\#}T\).
 
@@ -10,13 +10,15 @@
 
 **4.** Let \(CX\) denote the cone over the \(n\)-point space \(X=\{1,\ldots,n\}\). Show that every continuous map \(f:CX\to CX\) has a fixed point.
 
-**5.** Show that the fundamental group of \(M=K\mathbin{\#}T\) is not abelian, where \(K\) is the Klein bottle.
+**5.** Show that the fundamental group of \(M=K\mathbin{\#}T\) is not abelian where \(K\) is the Klein bottle.
+
+*Answer the following with complete definitions or statements or proofs.*
 
 **6.** Show that every map \(f:S^2\to\prod_{\alpha\in J}S^1\) of the 2-sphere to the product of circles is null-homotopic.
 
-**7.** Show that for a retraction \(r:X\to A\), the induced map \(r_\#\) on fundamental groups is surjective.
+**7.** Show that for a retraction \(r:X\to A\) the induced map \(r_\#\) on fundamental groups is surjective.
 
-**8.** Which of the following spaces, taken with the product topology, are locally compact? separable? Here \(I=[0,1]\) and \(\mathbb N\) is the set of natural numbers.
+**8.** Which of the following spaces taken with the product topology are locally compact? separable? Here \(I=[0,1]\) and \(\mathbb N\) is the set of natural numbers.
 * (a) \(\mathbb N^{\mathbb N}\);
 * (b) \(I^{\mathbb N}\);
 * (c) \(\mathbb N^I\);

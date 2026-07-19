@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-2005-sep",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,52 +7,94 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2005_09.pdf",
-  "instructions": "Answer six questions, including at least one from each of the following sections: Section 1 (Problems 1–3), Section 2 (Problems 4–6), and Section 3 (Problems 7–9).",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State and prove the compactness theorem for propositional logic.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer six questions and at least one from each section."
     },
     {
-      "number": 2,
-      "text": "Show that the theory of the class of infinite sets (in the language of equality) is complete and decidable, but not finitely axiomatizable.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 1",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove the compactness theorem for propositional logic.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that the theory of the class of infinite sets (in the language of equality) is complete and decidable, but not finitely axiomatizable.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State the Łoś Theorem for ultraproducts and sketch a proof.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 3,
-      "text": "State the Łoś Theorem for ultraproducts and sketch a proof.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 2",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that Zorn’s Lemma implies that any set can be well-ordered.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch a proof that \\(ZFC \\cup \\{\\neg CH\\}\\) is consistent.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that any countable union of countable sets is countable.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "Show that Zorn’s Lemma implies that any set can be well-ordered.",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "Sketch a proof that \\(ZFC \\cup \\{\\neg CH\\}\\) is consistent.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "Show that any countable union of countable sets is countable.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Show that an infinite set \\(X \\subseteq \\omega\\) is the domain of a partial recursive function if and only if \\(X\\) is the range of \\(\\phi\\) for some partial recursive function \\(\\phi\\).",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Show how to construct a simple recursively enumerable set \\(A\\) (meaning that \\(\\omega-A\\) has no infinite r.e. subset).",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 3",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that an infinite set \\(X \\subseteq \\omega\\) is the domain of a partial recursive function if and only if \\(X\\) is the range of \\(\\phi\\) for some partial recursive function \\(\\phi\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show how to construct a simple recursively enumerable set \\(A\\) (meaning that \\(\\omega-A\\) has no infinite r.e. subset).",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

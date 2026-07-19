@@ -1,6 +1,6 @@
 # Topology, first year exam, August 2025, Part 2
 
-*For problems 1–5, show all your work and support all statements. For problems 6–15, answer with complete definitions or statements or short proofs.*
+*For the first five problems, show all your work and support all statements.*
 
 **1.** Suppose that the continuous maps \(f,g:X\to Y\) are homotopic and that the continuous maps \(h,k:Y\to Z\) are homotopic. Show that \(h\circ f\) is homotopic to \(k\circ g\).
 
@@ -15,6 +15,8 @@
 **5.** This problem has two parts.
 * (a) Define surface.
 * (b) Compute the fundamental group of the connected sum of a torus and a second torus \(T^2\mathbin{\#}T^2\).
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Urysohn Lemma.
 

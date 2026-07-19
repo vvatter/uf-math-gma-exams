@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-2017-may",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,52 +7,94 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Logic-2017_05.pdf",
-  "instructions": "Answer six questions: at least one of Problems 1–3, at least one of Problems 4–6, and at least one of Problems 7–9. Problems 1–3 comprise Section 1, Problems 4–6 comprise Section 2, and Problems 7–9 comprise Section 3.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State and prove Tarski’s criterion for elementarity of submodels.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer six questions, at least one in each section."
     },
     {
-      "number": 2,
-      "text": "State and prove the downward Löwenheim–Skolem theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 1",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove Tarski’s criterion for elementarity of submodels.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove the downward Löwenheim–Skolem theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that the models \\(\\langle \\mathbb{Z},\\leq\\rangle\\) (integers with the usual ordering) and \\(\\langle \\mathbb{Z}+\\mathbb{Z},\\leq\\rangle\\) (two copies of integers with the usual ordering, one following the other) are elementarily equivalent.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 3,
-      "text": "Prove that the models \\(\\langle \\mathbb{Z},\\leq\\rangle\\) (integers with the usual ordering) and \\(\\langle \\mathbb{Z}+\\mathbb{Z},\\leq\\rangle\\) (two copies of integers with the usual ordering, one following the other) are elementarily equivalent.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 2",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that for any cardinal \\(\\kappa\\), the cofinality \\(\\operatorname{cf}(2^\\kappa)>\\kappa\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that the wellordering principle implies the Zorn’s lemma.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that a c.c.c. forcing preserves all cardinals.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "Prove that for any cardinal \\(\\kappa\\), the cofinality \\(\\operatorname{cf}(2^\\kappa)>\\kappa\\).",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "Show that the wellordering principle implies the Zorn’s lemma.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "Show that a c.c.c. forcing preserves all cardinals.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Show that every infinite computably enumerable set has an infinite computable subset.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Show that there are two subsets of \\(\\omega\\) which are incomparable in the sense of the Turing ordering.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Explain what a \\(\\Pi^1_1\\) complete set is and provide an example with a proof.",
-      "subparts": []
+      "type": "section",
+      "heading": "Section 3",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that every infinite computably enumerable set has an infinite computable subset.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that there are two subsets of \\(\\omega\\) which are incomparable in the sense of the Turing ordering.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Explain what a \\(\\Pi^1_1\\) complete set is and provide an example with a proof.",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2024, Part 1
 
-*For problems 1–5, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.*
+*For the first five problems, show all your work and support all statements.*
 
 **1.** Prove that \(\{0,1\}^{\omega}\) is not countable.
 
@@ -12,7 +12,13 @@
 
 **4.** Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c<1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).
 
-**5.** Let \((Y,d)\) be a complete metric space. Let \(J\) be a set. Suppose \(d(y,y')\leq 1\) for all \(y,y'\in Y\), meaning a simpler definition for the uniform metric \(\bar{\rho}\) on \(Y^J\) is \(\bar{\rho}(f,g)=\sup_{\alpha\in J}\{d(f(\alpha),g(\alpha))\}\) for \(f,g:J\to Y\). Prove that \((Y^J,\bar{\rho})\) is a complete metric space.
+**5.** Let \((Y,d)\) be a complete metric space. Let \(J\) be a set. Suppose \(d(y,y')\leq 1\) for all \(y,y'\in Y\), meaning a simpler definition for the uniform metric \(\bar{\rho}\) on \(Y^J\) is
+\[
+\bar{\rho}(f,g)=\sup_{\alpha\in J}\{d(f(\alpha),g(\alpha))\}
+\]
+for \(f,g:J\to Y\). Prove that \((Y^J,\bar{\rho})\) is a complete metric space.
+
+*Answer the following problems with complete definitions, complete statements, an example, or a short proof.*
 
 **6.** Define what it means for a topological space \(X\) to be regular.
 

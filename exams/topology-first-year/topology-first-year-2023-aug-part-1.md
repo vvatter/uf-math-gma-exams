@@ -1,12 +1,12 @@
 # Topology, first year exam, August 2023, Part 1
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 6–10 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
-**1.** Let \(f:X\to X\) be a map of a compact metric space to itself that satisfies the following condition: \(d(f(x),f(y))<d(x,y)\) for \(x\ne y\).
+**1.** Let \(f:X\to X\) be a map of a compact metric space to itself that satisfies the following condition: \(d(f(x),f(y))<d(x,y)\).
 * (a) Prove that \(f\) is continuous.
 * (b) Show that \(f\) has a fixed point and the fixed point is unique.
 
-**2.** Let \(X\subset\mathbb{R}^2\) be a countable subset. Prove that \(\mathbb{R}^2\setminus X\) is connected.
+**2.** Let \(X\subset \mathbb{R}^2\) be a countable subset. Prove that \(\mathbb{R}^2\setminus X\) is connected.
 
 **3.** Let \(X\) be a connected normal space having more than one point. Can \(X\) be countable?
 
@@ -17,9 +17,11 @@
 * (b) connected?
 * (c) path connected?
 
+*Answer the following with complete definitions or statements or short proofs.*
+
 **6.** Give definition of Lebesgue number.
 
-**7.** Show that the power set \(\mathcal{P}(X)\) has strictly greater cardinality than \(X\).
+**7.** Show that the power set \(P(X)\) has strictly greater cardinality than \(X\).
 
 **8.** Show that the 2-sphere is not homeomorphic to
 * (a) the circle \(S^1\);

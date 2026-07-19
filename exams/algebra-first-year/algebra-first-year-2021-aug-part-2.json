@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2021-aug-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,69 +7,84 @@
   "month": "august",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2021_08.pdf",
-  "instructions": "Answer four problems. You should indicate which problems you wish to have graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(R\\) be an integral domain and let \\(P\\) be a prime ideal in \\(R\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that the set \\(D=R\\setminus P\\) is closed under multiplication.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that the fraction ring \\(D^{-1}R\\) has a unique maximal ideal.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer four problems. You should indicate which problems you wish to have graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(R\\) be an integral domain. State and prove Eisenstein’s criterion for the irreducibility of a monic polynomial in \\(R[X]\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be an integral domain and let \\(P\\) be a prime ideal in \\(R\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that the set \\(D=R\\setminus P\\) is closed under multiplication.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that the fraction ring \\(D^{-1}R\\) has a unique maximal ideal.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(R\\) be an integral domain, let \\(M\\) be an \\(R\\)-module, and let \\(0\\leq n<\\infty\\). Say \\(\\operatorname{rank}_R(M)=n\\) if the following two conditions hold:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "There exists a subset of \\(M\\) with cardinality \\(n\\) which is linearly independent over \\(R\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Every subset of \\(M\\) with cardinality \\(>n\\) is linearly dependent over \\(R\\).",
-          "subparts": []
-        },
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(M\\) is an \\(R\\)-module which is free on a set \\(S\\) with cardinality \\(n\\) then \\(\\operatorname{rank}_R(M)=n\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of an integral domain \\(R\\) and an \\(R\\)-module \\(M\\) such that \\(\\operatorname{rank}_R(M)=1\\) but \\(M\\) is not a free \\(R\\)-module.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be an integral domain. State and prove Eisenstein’s criterion for the irreducibility of a monic polynomial in \\(R[X]\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(V\\) be a vector space over the field \\(F\\) and let \\(S\\) be a set which spans \\(V\\). Use Zorn’s Lemma to prove that there is a basis for \\(V\\) which is contained in \\(S\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be an integral domain, let \\(M\\) be an \\(R\\)-module, and let \\(0\\leq n<\\infty\\). Say \\(\\operatorname{rank}_R(M)=n\\) if the following two conditions hold:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "There exists a subset of \\(M\\) with cardinality \\(n\\) which is linearly independent over \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Every subset of \\(M\\) with cardinality \\(>n\\) is linearly dependent over \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(M\\) is an \\(R\\)-module which is free on a set \\(S\\) with cardinality \\(n\\) then \\(\\operatorname{rank}_R(M)=n\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of an integral domain \\(R\\) and an \\(R\\)-module \\(M\\) such that \\(\\operatorname{rank}_R(M)=1\\) but \\(M\\) is not a free \\(R\\)-module.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Give a representative for each similarity class of \\(4\\times 4\\) nilpotent matrices with entries in \\(\\mathbb{F}_3=\\mathbb{Z}/3\\mathbb{Z}\\). (We say that a square matrix \\(A\\) is nilpotent if \\(A^n=0\\) for some \\(n\\geq 1\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(V\\) be a vector space over the field \\(F\\) and let \\(S\\) be a set which spans \\(V\\). Use Zorn’s Lemma to prove that there is a basis for \\(V\\) which is contained in \\(S\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(n\\geq 1\\). Prove that there is at least one irreducible polynomial of degree \\(n\\) over \\(\\mathbb{Q}\\). Deduce that \\(\\mathbb{Q}\\) has at least one extension of degree \\(n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give a representative for each similarity class of \\(4\\times 4\\) nilpotent matrices with entries in \\(\\mathbb{F}_3=\\mathbb{Z}/3\\mathbb{Z}\\). (We say that a square matrix \\(A\\) is nilpotent if \\(A^n=0\\) for some \\(n\\geq 1\\).)",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(n\\geq 1\\). Prove that there is at least one irreducible polynomial of degree \\(n\\) over \\(\\mathbb{Q}\\). Deduce that \\(\\mathbb{Q}\\) has at least one extension of degree \\(n\\).",
+        "subparts": []
+      }
     }
   ]
 }

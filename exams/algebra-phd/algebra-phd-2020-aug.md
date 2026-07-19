@@ -1,15 +1,19 @@
 # Algebra, PhD exam, August 2020
 
-*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Below ring means associative ring with identity, and module means unital module unless otherwise specified.*
+*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
+
+*Below ring means associative ring with identity, and module means unital module unless otherwise specified.*
 
 **1.** Let \(K\) be a finite field, and let \(F\) be a subfield of \(K\). Prove that the extension \(K/F\) is Galois.
 
-**2.** Let \(p(x)=x^7-3\in\mathbb{Q}[x]\), \(\zeta\in\mathbb{C}\) a primitive 7-th root of 1, \(\xi=\sqrt[7]{3}\in\mathbb{C}\), and \(K\) the splitting field of \(p(x)\). In every case, carefully justify that your calculation is correct.
+**2.** Let \(p(x)=x^7-3\in\mathbb{Q}[x]\), \(\zeta\in\mathbb{C}\) a primitive 7-th root of 1, \(\xi=\sqrt[7]{3}\in\mathbb{C}\), and \(K\) the splitting field of \(p(x)\).
 * (a) Compute the Galois group of \(K/\mathbb{Q}\).
 * (b) Compute the Galois group of \(K(\zeta)/\mathbb{Q}(\zeta)\).
 * (c) Compute the Galois group of \(K(\xi)/\mathbb{Q}(\xi)\).
 
-**3.** Let \(A\) and \(B\) be abelian groups, and \(T=A\otimes_{\mathbb{Z}}B\). Let \(\phi:A\to A\) be a group homomorphism. Prove that there is a group homomorphism \(\psi:T\to T\) such that, for all \(a\in A\) and \(b\in B\), we have \(\psi(a\otimes_{\mathbb{Z}}b)=\phi(a)\otimes_{\mathbb{Z}}b\).
+*In every case, carefully justify that your calculation is correct.*
+
+**3.** Let \(A\) and \(B\) be abelian groups, and \(T=A\otimes_{\mathbb{Z}}B\). Let \(\phi:A\to A\) be a group homomorphism. Prove that there is a group homomorphism \[\psi:T\to T\] such that, for all \(a\in A\) and \(b\in B\), we have \[\psi(a\otimes_{\mathbb{Z}}b)=\phi(a)\otimes_{\mathbb{Z}}b.\]
 
 **4.** Let \(\mathcal{FG}\) be the category of all finite groups.
 * (a) Recall the definition of free object in an arbitrary concrete category \(\mathcal{C}\).
@@ -30,4 +34,4 @@
 * (b) Give an example of a Dedekind domain which is not a unique factorization domain.
 * (c) Prove that your example is a Dedekind domain and not a unique factorization domain carefully explaining any standard results you use.
 
-**11.** Let \(R\) be a ring with identity. Consider the ring \(\operatorname{Hom}_R(R,R)\) of left \(R\)-module homomorphisms from \(R\) to itself. Prove that \(\operatorname{Hom}_R(R,R)\) is isomorphic, as a ring, to \(R^{op}\).
+**11.** Let \(R\) be a ring with identity. Consider the ring \(\operatorname{Hom}_R(R,R)\) of left \(R\)-module homomorphisms from \(R\) to itself. Prove that \(\operatorname{Hom}_R(R,R)\) is isomorphic, as a ring, to \(R^{\mathrm{op}}\).

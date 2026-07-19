@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-linear-algebra-first-year-2019-jan",
   "subject": "First Year Numerical Linear Algebra",
   "subject_tag": "numerical-linear-algebra-first-year",
@@ -7,102 +7,115 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalLinearAlgebra-2019_01.pdf",
-  "instructions": "Do 4 (four) problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\) with \\(\\operatorname{rank}(A)=p\\) and \\(p\\leq n\\leq m\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show \\(\\operatorname{Col}(A)=\\operatorname{Span}\\{u_1,u_2,\\ldots,u_p\\}\\), where \\(u_1,\\ldots,u_p\\) are the first \\(p\\) columns of \\(U\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show \\(\\operatorname{Null}(A^*)=\\operatorname{Span}\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Show that \\(A^*A\\) is invertible if and only if \\(A\\) is full rank.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
     },
     {
-      "number": 2,
-      "text": "Let matrix \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(n<m\\). Let vector \\(b\\in\\mathbb{C}^m\\), and let \\(r\\) denote the residual vector \\(r=b-Ax\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(x\\) solves the least-squares problem \\(\\min \\lVert b-Ax\\rVert_2\\) if and only if \\(r\\in\\operatorname{Null}(A^*)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose \\(A\\) is full rank, and describe how to find the least-squares solution using the QR decomposition of \\(A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\) with \\(\\operatorname{rank}(A)=p\\) and \\(p\\leq n\\leq m\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show \\(\\operatorname{Col}(A)=\\operatorname{Span}\\{u_1,u_2,\\ldots,u_p\\}\\), where \\(u_1,\\ldots,u_p\\) are the first \\(p\\) columns of \\(U\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show \\(\\operatorname{Null}(A^*)=\\operatorname{Span}\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that \\(A^*A\\) is invertible if and only if \\(A\\) is full rank.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that if \\(A\\in\\mathbb{C}^{m\\times m}\\), \\(A\\) has a Schur decomposition.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that if \\(T\\in\\mathbb{C}^{m\\times m}\\) is normal and triangular, then \\(T\\) is diagonal.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Show that if \\(A\\in\\mathbb{C}^{m\\times m}\\) is normal and \\(\\lambda\\) is an eigenvalue of \\(A\\), then the geometric multiplicity of \\(\\lambda\\) is equal to the algebraic multiplicity of \\(\\lambda\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let matrix \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(n<m\\). Let vector \\(b\\in\\mathbb{C}^m\\), and let \\(r\\) denote the residual vector \\(r=b-Ax\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(x\\) solves the least-squares problem \\(\\min \\lVert b-Ax\\rVert_2\\) if and only if \\(r\\in\\operatorname{Null}(A^*)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(A\\) is full rank, and describe how to find the least-squares solution using the QR decomposition of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\lVert\\cdot\\rVert\\) be a subordinate (induced) matrix norm. If \\(A\\) is \\(n\\times n\\) invertible and \\(E\\) is \\(n\\times n\\) with \\(\\lVert A^{-1}\\rVert\\lVert E\\rVert<1\\), then show",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(A+E\\) is nonsingular.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\[\\lVert(A+E)^{-1}\\rVert\\leq \\frac{\\lVert A^{-1}\\rVert}{1-\\lVert A^{-1}\\rVert\\lVert E\\rVert}.\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that if \\(A\\in\\mathbb{C}^{m\\times m}\\), \\(A\\) has a Schur decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if \\(T\\in\\mathbb{C}^{m\\times m}\\) is normal and triangular, then \\(T\\) is diagonal.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that if \\(A\\in\\mathbb{C}^{m\\times m}\\) is normal and \\(\\lambda\\) is an eigenvalue of \\(A\\), then the geometric multiplicity of \\(\\lambda\\) is equal to the algebraic multiplicity of \\(\\lambda\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Consider the matrix \\(A\\) given by\n\\[A=\\begin{pmatrix}1&1&2&-3\\\\1&10&-1&1\\\\2&-1&13&-2\\\\-3&1&-2&25\\end{pmatrix}.\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(A\\) is positive definite.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "What can you say about the location of each of the eigenvalues of \\(A\\)? Your answer should be in the form of an interval or a union of intervals.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Suppose the eigenvalues of \\(A\\) are all distinct (they are) and satisfy \\(\\lambda_1>\\lambda_2>\\lambda_3>\\lambda_4\\). Describe an algorithm that could be assured to converge to \\(\\lambda_4\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\lVert\\cdot\\rVert\\) be a subordinate (induced) matrix norm. If \\(A\\) is \\(n\\times n\\) invertible and \\(E\\) is \\(n\\times n\\) with \\(\\lVert A^{-1}\\rVert\\lVert E\\rVert<1\\), then show",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(A+E\\) is nonsingular.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\[\\lVert(A+E)^{-1}\\rVert\\leq \\frac{\\lVert A^{-1}\\rVert}{1-\\lVert A^{-1}\\rVert\\lVert E\\rVert}.\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Consider the matrix \\(A\\) given by\n\\[A=\\begin{pmatrix}1&1&2&-3\\\\1&10&-1&1\\\\2&-1&13&-2\\\\-3&1&-2&25\\end{pmatrix}.\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(A\\) is positive definite.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "What can you say about the location of each of the eigenvalues of \\(A\\)? Your answer should be in the form of an interval or a union of intervals.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Suppose the eigenvalues of \\(A\\) are all distinct (they are) and satisfy \\(\\lambda_1>\\lambda_2>\\lambda_3>\\lambda_4\\). Describe an algorithm that could be assured to converge to \\(\\lambda_4\\).",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

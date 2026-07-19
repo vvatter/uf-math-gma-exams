@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-1996-may",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,106 +7,129 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_1996_05.pdf",
-  "instructions": "Answer seven out of the following ten problems. State clearly any results you need.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(R\\) be an integral domain, with fraction field \\(K\\). Recall that an \\(R\\)-submodule \\(I\\) of \\(K\\) is said to be invertible if \\(II^{-1}=R\\), where \\(I^{-1}=\\{x\\in K\\mid ix\\in R\\text{ for all }i\\in I\\}\\). Show that if \\(I\\) is invertible, then it is finitely generated and projective.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer seven out of the following ten problems. State clearly any results you need."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \\(k\\) be an algebraically closed field and \\(R\\) a commutative, finitely generated \\(k\\)-algebra. Show that the Jacobson radical of \\(R\\) is the same as the nilradical. (Hint: Nullstellensatz).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of a commutative ring with identity whose Jacobson radical is not equal to its nilradical.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be an integral domain, with fraction field \\(K\\). Recall that an \\(R\\)-submodule \\(I\\) of \\(K\\) is said to be invertible if \\(II^{-1}=R\\), where \\(I^{-1}=\\{x\\in K\\mid ix\\in R\\text{ for all }i\\in I\\}\\). Show that if \\(I\\) is invertible, then it is finitely generated and projective.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Compute the Galois group of the extension \\(K/\\mathbb{Q}\\), where \\(K\\) is the splitting field over \\(\\mathbb{Q}\\) of the polynomial \\(X^4-3\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(k\\) be an algebraically closed field and \\(R\\) a commutative, finitely generated \\(k\\)-algebra. Show that the Jacobson radical of \\(R\\) is the same as the nilradical. (Hint: Nullstellensatz).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a commutative ring with identity whose Jacobson radical is not equal to its nilradical.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(K\\) be a field, and \\(R\\) a simple, finite-dimensional \\(K\\)-algebra with identity (not necessarily commutative). Show that if the identity is the only (nonzero) idempotent element of \\(R\\), then \\(R\\) is a division ring.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Compute the Galois group of the extension \\(K/\\mathbb{Q}\\), where \\(K\\) is the splitting field over \\(\\mathbb{Q}\\) of the polynomial \\(X^4-3\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(R\\) be a discrete valuation ring with fraction field \\(K\\). Show that \\(R\\) is integrally closed in \\(K\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(K\\) be a field, and \\(R\\) a simple, finite-dimensional \\(K\\)-algebra with identity (not necessarily commutative). Show that if the identity is the only (nonzero) idempotent element of \\(R\\), then \\(R\\) is a division ring.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Suppose \\(G\\) is a finite \\(p\\)-group and \\(S\\) is a finite set on which \\(G\\) acts. If \\(S^G\\) is the set of elements of \\(S\\) fixed by \\(G\\), show that \\(\\lvert S\\rvert\\equiv\\lvert S^G\\rvert\\pmod p\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suppose \\(G\\) is a \\(p\\)-group, \\(k\\) is a field of characteristic \\(p\\), \\(V\\) is a finite-dimensional \\(k\\)-vector space, and \\(\\rho:G\\to\\operatorname{GL}(V)\\) is a homomorphism. Show that there is a nonzero vector \\(v\\in V\\) such that \\(\\rho(g)(v)=v\\) for all \\(g\\in G\\). Hint: reduce to the case where \\(k\\) is finite, and apply (a).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a discrete valuation ring with fraction field \\(K\\). Show that \\(R\\) is integrally closed in \\(K\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(k\\) be a field and \\(G=\\operatorname{GL}(3,k)\\). Describe the conjugacy classes of elements of order 3 in \\(G\\) if",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(k=\\mathbb{C}\\),",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(k=\\mathbb{R}\\),",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(k=\\mathbb{F}_3\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Suppose \\(G\\) is a finite \\(p\\)-group and \\(S\\) is a finite set on which \\(G\\) acts. If \\(S^G\\) is the set of elements of \\(S\\) fixed by \\(G\\), show that \\(\\lvert S\\rvert\\equiv\\lvert S^G\\rvert\\pmod p\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(G\\) is a \\(p\\)-group, \\(k\\) is a field of characteristic \\(p\\), \\(V\\) is a finite-dimensional \\(k\\)-vector space, and \\(\\rho:G\\to\\operatorname{GL}(V)\\) is a homomorphism. Show that there is a nonzero vector \\(v\\in V\\) such that \\(\\rho(g)(v)=v\\) for all \\(g\\in G\\). Hint: reduce to the case where \\(k\\) is finite, and apply (a).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(R\\) be a commutative ring. Define what it means for an \\(R\\)-module to be injective. Show that an \\(R\\)-module \\(M\\) is injective if and only if for every ideal \\(I\\subseteq R\\) and \\(R\\)-linear map \\(f:I\\to M\\), \\(f\\) extends to a map \\(R\\to M\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(k\\) be a field and \\(G=\\operatorname{GL}(3,k)\\). Describe the conjugacy classes of elements of order 3 in \\(G\\) if",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(k=\\mathbb{C}\\),",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(k=\\mathbb{R}\\),",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(k=\\mathbb{F}_3\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 9,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that there exist solvable groups of arbitrarily large derived length.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that if \\(S\\) is an infinite set, then there is no “free solvable group generated by \\(S\\)”; i.e. there is no solvable group \\(F\\) and map \\(\\alpha:S\\to F\\) such that composition with \\(\\alpha\\) induces, for any solvable group \\(G\\), a bijection between the set of group homomorphisms \\(F\\to G\\) and the set of maps \\(S\\to G\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring. Define what it means for an \\(R\\)-module to be injective. Show that an \\(R\\)-module \\(M\\) is injective if and only if for every ideal \\(I\\subseteq R\\) and \\(R\\)-linear map \\(f:I\\to M\\), \\(f\\) extends to a map \\(R\\to M\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State and prove the Hilbert Basis Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that there exist solvable groups of arbitrarily large derived length.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if \\(S\\) is an infinite set, then there is no “free solvable group generated by \\(S\\)”; i.e. there is no solvable group \\(F\\) and map \\(\\alpha:S\\to F\\) such that composition with \\(\\alpha\\) induces, for any solvable group \\(G\\), a bijection between the set of group homomorphisms \\(F\\to G\\) and the set of maps \\(S\\to G\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Hilbert Basis Theorem.",
+        "subparts": []
+      }
     }
   ]
 }

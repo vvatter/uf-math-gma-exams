@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2023-may-part-1-2",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,82 +7,119 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2-2023_05.pdf",
-  "instructions": "Work problems 1–5 and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show that every continuous map \\(f:S^1\\to S^2\\) of the circle to the 2-sphere is null-homotopic.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "Show that the Stone–Čech compactification \\(\\beta(\\mathbb{N})\\) of the naturals is uncountable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that every continuous map \\(f:S^1\\to S^2\\) of the circle to the 2-sphere is null-homotopic.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(X_{\\geq 0}\\), \\(Y_{\\geq 0}\\), and \\(Z_{\\geq 0}\\) denote the nonnegative parts of the \\(x\\)-axis, the \\(y\\)-axis, and the \\(z\\)-axis in \\(\\mathbb{R}^3\\) respectively. Let \\(A=\\mathbb{R}^3\\setminus(X_{\\geq 0}\\cup Y_{\\geq 0}\\cup Z_{\\geq 0})\\). Compute the fundamental group \\(\\pi_1(A)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the Stone–Čech compactification \\(\\beta(\\mathbb{N})\\) of the naturals is uncountable.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f:S^1\\to T=S^1\\times S^1\\) be a map to a torus defined by the formula \\(f(z)=(z,-z)\\). Compute the fundamental group \\(\\pi_1(X)\\), where \\(X=T\\cup_f B^2\\) is obtained from \\(T\\) by attaching a 2-disk along \\(f\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X_{\\geq 0}\\), \\(Y_{\\geq 0}\\), and \\(Z_{\\geq 0}\\) denote the nonnegative parts of the \\(x\\)-axis, the \\(y\\)-axis, and the \\(z\\)-axis in \\(\\mathbb{R}^3\\) respectively. Let \\(A=\\mathbb{R}^3\\setminus(X_{\\geq 0}\\cup Y_{\\geq 0}\\cup Z_{\\geq 0})\\). Compute the fundamental group \\(\\pi_1(A)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Show that the projective plane \\(\\mathbb{R}P^2\\) is not homeomorphic to the Klein bottle \\(K\\). What about the connected sum \\(\\mathbb{R}P^2\\mathbin{\\#}\\mathbb{R}P^2\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:S^1\\to T=S^1\\times S^1\\) be a map to a torus defined by the formula \\(f(z)=(z,-z)\\). Compute the fundamental group \\(\\pi_1(X)\\) where \\(X=T\\cup_f B^2\\) is obtained from \\(T\\) by attaching a 2-disk along \\(f\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^3\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the projective plane \\(\\mathbb{R}P^2\\) is not homeomorphic to the Klein bottle \\(K\\). What about the connected sum \\(\\mathbb{R}P^2\\#\\mathbb{R}P^2\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(CX\\) denote the cone over the \\(n\\)-point space \\(X=\\{1,\\ldots,n\\}\\). Show that every continuous map \\(f:CX\\to CX\\) has a fixed point.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^3\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Show that if \\(g:S^2\\to S^2\\) is continuous and \\(g(x)\\neq g(-x)\\) for all \\(x\\), then \\(g\\) is surjective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(CX\\) denote the cone over the \\(n\\)-point space \\(X=\\{1,\\ldots,n\\}\\). Show that every continuous map \\(f:CX\\to CX\\) has a fixed point.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State the Tychonoff theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "State the Urysohn Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(g:S^2\\to S^2\\) is continuous and \\(g(x)\\neq g(-x)\\) for all \\(x\\), then \\(g\\) is surjective.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "State the Seifert–van Kampen Theorem. Can it be used to compute the fundamental group of \\(S^1\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Tychonoff theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Show that for a retraction \\(r:X\\to A\\), for any \\(a_0\\in A\\), the induced map \\(r_*:\\pi_1(X,a_0)\\to\\pi_1(A,a_0)\\) on the fundamental groups is surjective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Urysohn Lemma.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Give definition of a deformation retraction. Let \\(A\\) be a deformation retract of \\(X\\). Show that the inclusion map \\(A\\to X\\) is a homotopy equivalence.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Seifert–van Kampen Theorem. Can it be used to compute the fundamental group of \\(S^1\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Is \\(I^I\\) separable?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that for a retraction \\(r:X\\to A\\), for any \\(a_0\\in A\\), the induced map \\(r_*:\\pi_1(X,a_0)\\to\\pi_1(A,a_0)\\) on the fundamental groups is surjective.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Give definition of a deformation retraction. Let \\(A\\) be a deformation retract of \\(X\\). Show that the inclusion map \\(A\\to X\\) is a homotopy equivalence.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Is \\(I^I\\) separable?",
+        "subparts": []
+      }
     }
   ]
 }

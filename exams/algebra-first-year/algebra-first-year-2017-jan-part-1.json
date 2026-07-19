@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2017-jan-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,80 +7,97 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Algebra-Part_1-2017_01.pdf",
-  "instructions": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(G\\) be a group.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "If \\(H \\subseteq G\\) is a normal subgroup and \\(K\\) is a characteristic subgroup of \\(H\\), show that \\(K\\) is normal in \\(G\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Give an example of a group and subgroups \\(K \\subseteq H \\subseteq G\\) with \\(H\\) normal in \\(G\\), \\(K\\) normal in \\(H\\) but not normal in \\(G\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(G\\) be a group.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that if \\(G\\) is abelian, the subset \\(H\\) of elements of finite order is a subgroup.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Give an example of a (nonabelian) group \\(G\\) and elements \\(x, y \\in G\\) such that \\(xy\\) has infinite order.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "If \\(H \\subseteq G\\) is a normal subgroup and \\(K\\) is a characteristic subgroup of \\(H\\), show that \\(K\\) is normal in \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Give an example of a group and subgroups \\(K \\subseteq H \\subseteq G\\) with \\(H\\) normal in \\(G\\), \\(K\\) normal in \\(H\\) but not normal in \\(G\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Show that a group of order \\(3^2 \\cdot 17\\) is abelian.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(G\\) is abelian, the subset \\(H\\) of elements of finite order is a subgroup.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Give an example of a (nonabelian) group \\(G\\) and elements \\(x, y \\in G\\) such that \\(xy\\) has infinite order.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Define what it means for a group \\(G\\) to be nilpotent.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Show that any nilpotent group is solvable.",
-          "subparts": []
-        },
-        {
-          "label": "(iii)",
-          "text": "Give an example of a finite solvable group that is not nilpotent.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Show that a group of order \\(3^2 \\cdot 17\\) is abelian.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(G\\) be a group acting on a set \\(S\\), and \\(H \\subseteq G\\) a normal subgroup. Assume that for any \\(x_1, x_2 \\in S\\) there is a unique \\(h \\in H\\) such that \\(h(x_1)=x_2\\). For \\(x \\in S\\) let \\(G_x\\) be the stabilizer of \\(x\\). Show that for any \\(x \\in S\\), \\(G\\) is a semi-direct product of \\(G_x\\) and \\(H\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Define what it means for a group \\(G\\) to be nilpotent.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that any nilpotent group is solvable.",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Give an example of a finite solvable group that is not nilpotent.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Show that for any \\(n \\geq 5\\), \\(A_n\\) is the only nontrivial proper normal subgroup of \\(S_n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group acting on a set \\(S\\), and \\(H \\subseteq G\\) a normal subgroup. Assume that for any \\(x_1, x_2 \\in S\\) there is a unique \\(h \\in H\\) such that \\(h(x_1)=x_2\\). For \\(x \\in S\\) let \\(G_x\\) be the stabilizer of \\(x\\). Show that for any \\(x \\in S\\), \\(G\\) is a semi-direct product of \\(G_x\\) and \\(H\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Show that the normalizer of a 5-Sylow subgroup of \\(A_5\\) has order 10, and is a maximal subgroup of \\(A_5\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that for any \\(n \\geq 5\\), \\(A_n\\) is the only nontrivial proper normal subgroup of \\(S_n\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Show that the normalizer of a 5-Sylow subgroup of \\(A_5\\) has order 10, and is a maximal subgroup of \\(A_5\\).",
+        "subparts": []
+      }
     }
   ]
 }

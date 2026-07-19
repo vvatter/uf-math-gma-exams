@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2024-jan-part-1-2",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,82 +7,119 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2024_01.pdf",
-  "instructions": "For problems 1–5, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show there is no surjective function \\(f:X\\to\\mathcal{P}(X)\\), where \\(\\mathcal{P}(X)\\) is the power set of \\(X\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "For the first five problems, show all your work and support all statements."
     },
     {
-      "number": 2,
-      "text": "Show that if \\(X\\) is a compact Hausdorff space, then \\(X\\) is a normal space.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show there is no surjective function \\(f:X\\to\\mathcal{P}(X)\\), where \\(\\mathcal{P}(X)\\) is the power set of \\(X\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\((X,d)\\) be a complete metric space. Let \\(f:X\\to X\\) and suppose there is some \\(c<1\\) with \\(d(f(x),f(y))\\leq c\\cdot d(x,y)\\) for all \\(x,y\\in X\\). Prove there exists a unique \\(x\\in X\\) with \\(f(x)=x\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(X\\) is a compact Hausdorff space, then \\(X\\) is a normal space.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(A\\) be a proper subset of \\(X\\), and let \\(B\\) be a proper subset of \\(Y\\). If \\(X\\) and \\(Y\\) are connected, show that \\((X\\times Y)-(A\\times B)\\) is connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,d)\\) be a complete metric space. Let \\(f:X\\to X\\) and suppose there is some \\(c<1\\) with \\(d(f(x),f(y))\\leq c\\cdot d(x,y)\\) for all \\(x,y\\in X\\). Prove there exists a unique \\(x\\in X\\) with \\(f(x)=x\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\((X,d)\\) be a metric space. Suppose there exists some \\(\\varepsilon>0\\) such that for all \\(x\\in X\\), the closure \\(\\overline{B_\\varepsilon(x)}\\) of the \\(\\varepsilon\\)-ball about \\(x\\) is compact. Prove that \\(X\\) is complete.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a proper subset of \\(X\\), and let \\(B\\) be a proper subset of \\(Y\\). If \\(X\\) and \\(Y\\) are connected, show that \\((X\\times Y)-(A\\times B)\\) is connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\{A_n\\}_{n\\in\\mathbb{Z}_+}\\) be a countable collection of countable sets. Prove that the union \\(\\bigcup_{n\\in\\mathbb{Z}_+}A_n\\) is countable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,d)\\) be a metric space. Suppose there exists some \\(\\varepsilon>0\\) such that for all \\(x\\in X\\), the closure \\(\\overline{B_\\varepsilon(x)}\\) of the \\(\\varepsilon\\)-ball about \\(x\\) is compact. Prove that \\(X\\) is complete.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Give an example of a topological space that is path-connected but not locally path-connected.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following problems with complete definitions, complete statements, an example, or a short proof."
     },
     {
-      "number": 8,
-      "text": "Let \\(\\{X_\\alpha\\}_{\\alpha\\in A}\\) be a collection of topological spaces. What is the product topology on \\(\\prod_{\\alpha\\in A}X_\\alpha\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\{A_n\\}_{n\\in\\mathbb{Z}_+}\\) be a countable collection of countable sets. Prove that the union \\(\\bigcup_{n\\in\\mathbb{Z}_+}A_n\\) is countable.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Show that \\(f:\\mathbb{R}\\to\\mathbb{R}^\\omega\\) defined by \\(f(x)=(x,x,x,\\ldots)\\) is not continuous if \\(\\mathbb{R}^\\omega\\) has the box topology.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give an example of a topological space that is path-connected but not locally path-connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "If \\(f:X\\to Y\\) is a continuous bijection with \\(X\\) compact and \\(Y\\) Hausdorff, then show that \\(f^{-1}\\) is continuous.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\{X_\\alpha\\}_{\\alpha\\in A}\\) be a collection of topological spaces. What is the product topology on \\(\\prod_{\\alpha\\in A}X_\\alpha\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Give the definition of a quotient map.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(f:\\mathbb{R}\\to\\mathbb{R}^\\omega\\) defined by \\(f(x)=(x,x,x,\\ldots)\\) is not continuous if \\(\\mathbb{R}^\\omega\\) has the box topology.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Show that \\([0,1]\\) and \\((0,1)\\) are not homeomorphic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "If \\(f:X\\to Y\\) is a continuous bijection with \\(X\\) compact and \\(Y\\) Hausdorff, then show that \\(f^{-1}\\) is continuous.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Using the fact that there exists a continuous surjective function \\([0,1]\\to[0,1]^2\\), show there is a continuous surjective function \\([0,1]\\to[0,1]^3\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give the definition of a quotient map.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "State the Baire Category Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\([0,1]\\) and \\((0,1)\\) are not homeomorphic.",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Let \\(X\\) be a locally compact Hausdorff space. Define the topology on \\(Y=X\\cup\\{\\infty\\}\\) that makes \\(Y\\) the one-point compactification of \\(X\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Using the fact that there exists a continuous surjective function \\([0,1]\\to[0,1]^2\\), show there is a continuous surjective function \\([0,1]\\to[0,1]^3\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State the Baire Category Theorem.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be a locally compact Hausdorff space. Define the topology on \\(Y=X\\cup\\{\\infty\\}\\) that makes \\(Y\\) the one-point compactification of \\(X\\).",
+        "subparts": []
+      }
     }
   ]
 }

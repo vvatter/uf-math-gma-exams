@@ -1,18 +1,24 @@
 # Logic, PhD exam, January 2009
 
-*Answer six questions and at least one from each section. Problems 1–3 are from Section 1, problems 4–6 are from Section 2, and problems 7–9 are from Section 3.*
+*Answer six questions and at least one from each section.*
+
+## Section 1
 
 **1.** Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).
 
-**2.** Show that for any elementary chain \(\{\mathcal A_i\}_{i\in\omega}\) of structures, \(\mathcal A_i\) is an elementary submodel of the union \(\mathcal A\)
+**2.** Show that for any elementary chain \(\{\mathcal A_i\}_{i\in\omega}\) of structures, \(\mathcal A_i\) is an elementary submodel of the union \(\mathcal A\).
 
 **3.** Show that the theory of dense linear orderings without end points is complete and decidable.
+
+## Section 2
 
 **4.** Suppose \(2\leq\kappa\leq\lambda\) and \(\lambda\) is infinite. Show that \(2^\lambda=\kappa^\lambda\).
 
 **5.** State and prove König’s Lemma. (Hint: trees.)
 
 **6.** Show that for any notion of forcing \(\mathcal P\) and any countable set \(\mathcal D\) of \(\mathcal P\)-dense sets, there exists a \(\mathcal D\)-generic \(\mathcal P\)-filter.
+
+## Section 3
 
 **7.** Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic.
 

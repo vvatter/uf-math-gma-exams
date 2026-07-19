@@ -1,6 +1,6 @@
 # Topology, PhD exam, May 2008
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Compute \(\pi_1(S^2)\) and \(H_*(S^2)\).
 
@@ -12,6 +12,8 @@
 
 **5.** Prove that there is no map of degree two from \(S^2\) to the torus \(T^2\).
 
+*Answer the following with complete definitions or statements or short proofs.*
+
 **6.** State the Baire Category Theorem.
 
 **7.** State the homology Mayer–Vietoris Theorem.
@@ -20,7 +22,7 @@
 
 **9.** State the Five Lemma.
 
-**10.** Compute the Euler characteristic \(\chi(RP^4 \times S^3 \times T^2)\).
+**10.** Compute the Euler characteristic \(\chi(\mathbb{R}P^4 \times S^3 \times T^2)\).
 
 **11.** Define retraction and deformation retraction.
 

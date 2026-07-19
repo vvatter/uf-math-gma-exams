@@ -15,21 +15,26 @@ import os
 from pathlib import Path
 import re
 import shutil
-from typing import Iterator
+from typing import Iterator, Literal
 
 from openai import OpenAI
 import pymupdf
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 DEFAULT_MODEL = "gpt-5.6-sol"
-PROMPT_VERSION = "exam-extraction-v6"
+PROMPT_VERSION = "exam-extraction-v10"
+NATIVE_EVIDENCE_VERSION = "native-text-c0-sanitized-v1"
+VISION_ONLY_EVIDENCE_VERSION = "page-images-only-v1"
 PILOT_IDS = [
-    "algebra-first-year-2025-may-part-1",
-    "topology-first-year-2025-may-part-2",
-    "logic-phd-2006-aug",
-    "numerical-analysis-phd-2025-aug",
-    "topology-phd-2025-may",
+    "logic-phd-2023-may",
+    "logic-phd-2009-jan",
+    "logic-phd-2006-may",
+    "topology-phd-1994-aug",
+    "analysis-phd-1994-may",
+    "analysis-first-year-2015-jan-part-2",
+    "differential-geometry-phd-1992-may",
+    "pde-phd-2001-may",
 ]
 MONTH_ORDER = {
     month: index
@@ -65,7 +70,11 @@ class ReviewCategory(str, Enum):
     INSTRUCTIONS = "instructions"
 
 
-class Subpart(BaseModel):
+class StrictModel(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class Subpart(StrictModel):
     label: str = Field(description="Original displayed label, such as (a), A., 1., or i.")
     text: str = Field(description="Subpart text without its label, using MathJax TeX delimiters")
     subparts: list[Subpart] = Field(
@@ -73,8 +82,7 @@ class Subpart(BaseModel):
     )
 
 
-class Problem(BaseModel):
-    number: int = Field(ge=1, description="Final top-level problem number")
+class Problem(StrictModel):
     text: str = Field(description="Problem stem without top-level number or subpart text")
     subparts: list[Subpart] = Field(
         description="Labeled parts in source order; empty when there are none"
@@ -83,7 +91,9 @@ class Problem(BaseModel):
 
 class ReviewFlag(BaseModel):
     category: ReviewCategory
-    problem_numbers: list[int]
+    problem_indices: list[int] = Field(
+        description="One-based positions of affected problems in document reading order"
+    )
     source_pages: list[int]
     message: str
     original_text: str | None
@@ -91,14 +101,59 @@ class ReviewFlag(BaseModel):
     context: str | None
 
 
-class ModelExtraction(BaseModel):
-    instructions: str | None
-    problems: list[Problem]
+class NumberingMode(str, Enum):
+    RESTART = "restart"
+    CONTINUE = "continue"
+
+
+class InstructionsBlock(StrictModel):
+    type: Literal["instructions"] = "instructions"
+    text: str
+
+
+class ProblemBlock(StrictModel):
+    type: Literal["problem"] = "problem"
+    problem: Problem
+
+
+SectionContentBlock = InstructionsBlock | ProblemBlock
+
+
+class SectionBlock(StrictModel):
+    type: Literal["section"] = "section"
+    heading: str = Field(description="Exact displayed part, section, or topic heading")
+    numbering: NumberingMode
+    content: list[SectionContentBlock]
+
+
+ExamContentBlock = InstructionsBlock | ProblemBlock | SectionBlock
+
+
+class ModelExtraction(StrictModel):
+    content: list[ExamContentBlock]
     review_flags: list[ReviewFlag]
 
 
-class ExamRecord(BaseModel):
-    schema_version: int = 1
+class ExamRecord(StrictModel):
+    schema_version: Literal[2] = 2
+    id: str
+    subject: str
+    subject_tag: str
+    year: int
+    month: str
+    part: int | None
+    pdf_url: str
+    content: list[ExamContentBlock]
+
+
+class LegacyProblem(StrictModel):
+    number: int = Field(ge=1)
+    text: str
+    subparts: list[Subpart]
+
+
+class LegacyExamRecord(StrictModel):
+    schema_version: Literal[1] = 1
     id: str
     subject: str
     subject_tag: str
@@ -107,7 +162,7 @@ class ExamRecord(BaseModel):
     part: int | None
     pdf_url: str
     instructions: str | None
-    problems: list[Problem]
+    problems: list[LegacyProblem]
 
 
 @dataclass(frozen=True)
@@ -145,37 +200,63 @@ grids, page numbers, headers, footers, answer space, blank pages, scan noise, an
 Omit instructions about writing names, using separate sheets, or similar logistics. Preserve
 authored requirements about clarity, detail, showing work, legibility, proofs, and conclusions.
 
+CONTENT STRUCTURE
+Return the meaningful document content in reading order as instruction, problem, and section
+blocks. A section represents a displayed part, section, topic, or comparable named division that
+contains problems. Preserve its complete displayed heading exactly, including words, numerals, and
+topic names. Do not create sections merely for pages, columns, visual spacing, or unlabeled groups.
+A section contains instruction and problem blocks in source order. Do not nest sections.
+
+Create a section only when at least one following problem belongs to it before the next heading. If
+a displayed section label and a direction share one line, put the label or named title in heading
+and put the direction in the section's first instruction block. For example, "I. State the following
+theorems:" becomes heading "I." followed by instructions "State the following theorems." A labeled
+direction with no following problems before the next heading is an exam-level instruction block
+when it only governs or selects other listed problems; retain its label when needed for the
+reference. A labeled line that itself states an independent mathematical task is a section with a
+problem block even when no separately numbered problem follows. For example, "II. Prove that
+\((L^1)^*=L^\infty\)." contains a problem, while "II. Prove one of the theorems 8 or 9." is an
+instruction governing existing problems 8 and 9. For a standalone mathematical task with no
+printed integer label, use "continue" so its derived number follows the preceding problem, and add
+a numbering-transformation flag documenting that the presentation assigned a number to an
+unnumbered task.
+
 INSTRUCTIONS
-Return at most one coherent instructions string. Preserve selection rules, required problem
-groups, expected proof/detail level, allowed methods or materials, and notation applying to the
-whole exam. If point values are the only signal that problem groups require different response
-depth, express the distinction without scores. Keep the instructions consistent with final
-problem numbers. If you materially combine distinct instruction blocks or rewrite instructions to
-match transformed problem numbers, add an instruction-rewrite review flag describing the completed
-change. Preserve the source wording and sentence-level detail as closely as possible. Make only the
-minimum edits needed to join instruction blocks, remove excluded logistics, or replace references
-after problem renumbering. Do not shorten, summarize, stylistically improve, or generalize authored
-instructions. Do not use the instruction-rewrite category merely for removing excluded logistics.
+Use as many instruction blocks as the source requires. Put each block at its source position: at
+exam level when it applies generally, or inside a section when it occurs there. Instructions may
+appear between problems. Preserve selection rules, expected proof/detail level, allowed methods or
+materials, and shared notation. Preserve wording and sentence-level detail as closely as possible.
+Do not combine separate instruction blocks, summarize, stylistically improve, generalize, or move
+them merely to produce a single preamble. If point values are the only signal that groups require
+different response depth, express that distinction without scores. Removing excluded logistics
+does not require a review flag.
 
 PROBLEMS
 Do not paraphrase, summarize, modernize, solve, or add to a problem. Join visual line wraps and
-remove line-break hyphenation. Preserve ordinary top-level numbering. Put only the problem stem in
-its text field. Put each labeled part in the subparts array, preserve its label exactly in label,
-and do not repeat that label in text. Recurse for nested labeled parts. Use an empty subparts array
-when none exist.
+remove line-break hyphenation. The order of problem blocks determines their numbers; do not include
+the source's top-level number in problem text. Put only the problem stem in its text field. Put each
+labeled part in the subparts array, preserve its label exactly in label, and do not repeat that label
+in text. Recurse for nested labeled parts. Use an empty subparts array when none exist.
 
-If one linked PDF restarts top-level numbering under internal parts or sections, replace the
-restarted labels with one consecutive global sequence beginning at 1. Do not create a section or
-internal-part field. Explain the final problem ranges and their source parts or topics in the single
-instructions string, keep all selection rules consistent with the new numbers, and add a numbering
-transformation review flag describing the completed change. State the requirements directly in
-terms of the final problem numbers. Do not say that final problems merely "correspond to" source
-parts when the source part names are not needed to understand what the student must do.
+NUMBERING
+Preserve ordinary integer top-level problem numbering through block order, including sequences that
+restart inside a section. Set a section's numbering to "restart" when its first output problem starts
+again at 1; set it to "continue" when its first output problem continues the preceding integer
+sequence. The first problem in the exam or first section begins at 1. Problems must be consecutive
+within their source numbering sequence.
+
+The schema intentionally supports only integer top-level numbers. If the source uses noninteger or
+compound top-level labels such as A-C, 1A-1C, or 5, 5-prime, 6, 6-prime, normalize only that exam to
+one consecutive sequence in reading order. Set section numbering to describe the normalized output,
+minimally update instructions that cite those labels, and add numbering-transformation and
+instruction-rewrite flags as applicable. Do not normalize ordinary integer numbering that merely
+restarts inside a section.
 
 MATHEMATICS
 Use Unicode for prose and MathJax-compatible TeX for mathematics. Use \(...\) for inline math and
-\[...\] for display math. Do not use dollar-sign delimiters. Preserve notation and mathematical
-meaning exactly.
+\[...\] for display math. Do not use dollar-sign delimiters. Never copy ASCII control characters
+from native PDF text; reconstruct the intended visible text or TeX from the page image. Preserve
+notation and mathematical meaning exactly.
 
 NAMES AND EPONYMS
 Use the standard spelling and diacritics for every unambiguously identified mathematician, even
@@ -187,16 +268,21 @@ These are controlled presentation normalizations, not source corrections, so do 
 review flags for them. If a person's identity or the appropriate name form is genuinely ambiguous,
 preserve the source reading and add a transcription review flag rather than guessing.
 
+REVIEW REFERENCES
+In every review flag, identify affected problems by their one-based position in overall document
+reading order, ignoring instruction and section blocks. These problem_indices are not displayed
+problem numbers. Use an empty list for an exam-level issue that affects no specific problem.
+
 CORRECTIONS
 Preserve the source reading unless the intended correction is uniquely determined by the immediate
 mathematical context. Every correction, however obvious, requires a correction review flag with the
-original text, corrected text, immediate context, problem number, and source page. If a correction
-is not uniquely determined, retain the source reading and add a transcription review flag.
+original text, corrected text, immediate context, problem index, and source page. If a correction is
+not uniquely determined, retain the source reading and add a transcription review flag.
 
 SERIOUS REVIEW
 If a figure, diagram, graph, or table carries information, transcribe the surrounding words but do
-not invent or reconstruct the visual. Add a visual-content flag. Flag shared notation or material
-that applies only to some problems and cannot fit coherently in the single instructions string.
+not invent or reconstruct the visual. Add a visual-content flag. Put shared notation or material in
+an instruction block at its source position; flag it only when its scope remains genuinely unclear.
 Flag cross-problem references, uncertain words or math, unclear numbering, and instructions that
 may no longer agree with numbering. Findings do not stop extraction. Return null for correction-only
 fields when they do not apply."""
@@ -228,11 +314,15 @@ def write_text(path: Path, content: str) -> None:
     os.replace(temporary, path)
 
 
-def archive(path: Path) -> None:
-    if not path.exists():
+def archive_files(paths: list[Path], history_root: Path) -> None:
+    existing = [path for path in paths if path.exists()]
+    if not existing:
         return
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    shutil.move(path, path.with_name(f"{path.stem}.{timestamp}{path.suffix}"))
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
+    destination = history_root / timestamp
+    destination.mkdir(parents=True, exist_ok=False)
+    for path in existing:
+        shutil.move(path, destination / path.name)
 
 
 def part_from_manifest(record: dict[str, object]) -> int | None:
@@ -349,6 +439,14 @@ def select_exam_ids(
     )
 
 
+def clean_native_text(text: str) -> str:
+    return "".join(
+        character
+        for character in text
+        if ord(character) >= 32 or character in "\n\t"
+    ).strip()
+
+
 def render_pages(source: SourceExam, workdir: Path, dpi: int) -> list[dict[str, object]]:
     page_dir = workdir / "pages"
     page_dir.mkdir(parents=True, exist_ok=True)
@@ -371,29 +469,25 @@ def render_pages(source: SourceExam, workdir: Path, dpi: int) -> list[dict[str, 
                     "image_path": str(image_path),
                     "image_data_url": "data:image/png;base64,"
                     + base64.b64encode(image_bytes).decode("ascii"),
-                    "native_text": page.get_text("text").strip(),
+                    "native_text": clean_native_text(page.get_text("text")),
                 }
             )
     return rendered
 
 
-def extraction_prompt(source: SourceExam, pages: list[dict[str, object]]) -> str:
-    native = "\n\n".join(
-        f"PAGE {page['page_number']} NATIVE TEXT (untrusted evidence):\n"
-        + (str(page["native_text"]) or "(none)")
-        for page in pages
-    )
-    logic_policy = ""
-    if source.subject_tag == "logic-phd":
-        logic_policy = r"""
-
-LOGIC POLICY
-The source may restart numbering inside named topics or use labels such as 1A, 1B, and 2A.
-Replace those top-level labels with one consecutive global sequence beginning at 1. Do not return
-a section field. Add a concise sentence to instructions mapping final problem ranges to the source
-topic names, such as 'Problems 1-3 concern General Logic.' Derive ranges from the final problems.
-Add a numbering-transformation review flag. Preserve any original labels belonging to true
-subparts inside their subpart label fields."""
+def extraction_prompt(
+    source: SourceExam,
+    pages: list[dict[str, object]],
+    include_native_text: bool = True,
+) -> str:
+    if include_native_text:
+        native = "\n\n".join(
+            f"PAGE {page['page_number']} NATIVE TEXT (untrusted evidence):\n"
+            + (str(page["native_text"]) or "(none)")
+            for page in pages
+        )
+    else:
+        native = "Native PDF text is intentionally omitted. Use the page images only."
     part_text = str(source.part) if source.part is not None else "none"
     return f"""CATALOG METADATA (authoritative; do not infer from PDF):
 Subject: {source.subject}
@@ -403,7 +497,6 @@ Month: {source.month}
 Part: {part_text}
 Current PDF URL: {source.pdf_url}
 Source pages: {len(pages)}
-{logic_policy}
 
 PAGE IMAGES are supplied before this text in page order. Native text below is optional evidence and
 may be empty, corrupt, or inaccurate for mathematics. Trust the page images when they disagree.
@@ -418,6 +511,7 @@ def call_model(
     pages: list[dict[str, object]],
     model: str,
     reasoning: str,
+    include_native_text: bool,
 ) -> tuple[ModelExtraction, str | None, dict[str, object] | None]:
     content: list[dict[str, object]] = []
     for page in pages:
@@ -431,7 +525,12 @@ def call_model(
                 "detail": "high",
             }
         )
-    content.append({"type": "input_text", "text": extraction_prompt(source, pages)})
+    content.append(
+        {
+            "type": "input_text",
+            "text": extraction_prompt(source, pages, include_native_text),
+        }
+    )
     response = client.responses.parse(
         model=model,
         reasoning={"effort": reasoning},
@@ -447,42 +546,129 @@ def call_model(
     return response.output_parsed, response.id, usage
 
 
+def has_ascii_control_characters(value: object) -> bool:
+    if isinstance(value, BaseModel):
+        return has_ascii_control_characters(value.model_dump(mode="json"))
+    if isinstance(value, dict):
+        return any(has_ascii_control_characters(item) for item in value.values())
+    if isinstance(value, list):
+        return any(has_ascii_control_characters(item) for item in value)
+    if isinstance(value, str):
+        return any(ord(character) < 32 and character not in "\n\t" for character in value)
+    return False
+
+
+def repair_control_characters(
+    client: OpenAI,
+    extraction: ModelExtraction,
+    model: str,
+    reasoning: str,
+) -> tuple[ModelExtraction, str | None, dict[str, object] | None]:
+    escaped = json.dumps(
+        extraction.model_dump(mode="json"),
+        ensure_ascii=True,
+        sort_keys=True,
+    )
+    response = client.responses.parse(
+        model=model,
+        reasoning={"effort": reasoning},
+        input=[
+            {
+                "role": "system",
+                "content": (
+                    "Repair encoding corruption in an already transcribed exam extraction. "
+                    "The JSON contains escaped ASCII C0 control characters such as "
+                    "\\u0001 or \\u001d where TeX backslashes and MathJax delimiters were "
+                    "intended. Remove every control character and reconstruct valid "
+                    "MathJax using \\(...\\) and \\[...\\]. Do not alter any wording, "
+                    "mathematics, structure, labels, or review findings beyond the minimum "
+                    "encoding repair. Return the complete repaired extraction."
+                ),
+            },
+            {"role": "user", "content": escaped},
+        ],
+        text_format=ModelExtraction,
+    )
+    if response.output_parsed is None:
+        raise RuntimeError(f"{model} returned no parsed control-character repair")
+    usage = response.usage.model_dump(mode="json") if response.usage else None
+    return response.output_parsed, response.id, usage
+
+
 def walk_subparts(subparts: list[Subpart]) -> Iterator[Subpart]:
     for subpart in subparts:
         yield subpart
         yield from walk_subparts(subpart.subparts)
 
 
+def iter_content_blocks(exam: ExamRecord) -> Iterator[InstructionsBlock | ProblemBlock]:
+    for block in exam.content:
+        if isinstance(block, SectionBlock):
+            yield from block.content
+        else:
+            yield block
+
+
+def iter_problems(exam: ExamRecord) -> Iterator[Problem]:
+    for block in iter_content_blocks(exam):
+        if isinstance(block, ProblemBlock):
+            yield block.problem
+
+
+def iter_numbered_problems(exam: ExamRecord) -> Iterator[tuple[int, int, Problem]]:
+    """Yield absolute index, displayed number, and problem in reading order."""
+    problem_index = 0
+    displayed_number = 0
+    for block in exam.content:
+        if isinstance(block, InstructionsBlock):
+            continue
+        if isinstance(block, ProblemBlock):
+            problem_index += 1
+            displayed_number += 1
+            yield problem_index, displayed_number, block.problem
+            continue
+        if block.numbering == NumberingMode.RESTART:
+            displayed_number = 0
+        for item in block.content:
+            if isinstance(item, ProblemBlock):
+                problem_index += 1
+                displayed_number += 1
+                yield problem_index, displayed_number, item.problem
+
+
 def all_content(exam: ExamRecord) -> Iterator[str]:
-    if exam.instructions:
-        yield exam.instructions
-    for problem in exam.problems:
-        yield problem.text
-        for subpart in walk_subparts(problem.subparts):
+    for block in iter_content_blocks(exam):
+        if isinstance(block, InstructionsBlock):
+            yield block.text
+            continue
+        yield block.problem.text
+        for subpart in walk_subparts(block.problem.subparts):
             yield subpart.text
 
 
-def logic_instruction_ranges(instructions: str) -> list[tuple[int, int]]:
-    """Return problem ranges that are explicitly associated with a topic or section."""
-    problem_range = r"Problems?\s+(\d+)(?:\s*[\N{EN DASH}-]\s*(\d+))?"
-    patterns = (
-        rf"{problem_range}\s+(?:concern|are\s+from|are|comprise)\s+[^.;,]+",
-        rf"(?:Section|Topic)\s+[^(),;:.]+\s*\(\s*{problem_range}\s*\)",
-        rf"{problem_range}\s*\(\s*(?:Section|Topic)\b[^)]*\)",
+def migrate_legacy_exam(legacy: LegacyExamRecord) -> ExamRecord:
+    content: list[ExamContentBlock] = []
+    if legacy.instructions is not None:
+        content.append(InstructionsBlock(text=legacy.instructions))
+    content.extend(
+        ProblemBlock(
+            problem=Problem(
+                text=problem.text,
+                subparts=problem.subparts,
+            )
+        )
+        for problem in legacy.problems
     )
-    matches: list[tuple[int, int, int]] = []
-    for pattern in patterns:
-        for match in re.finditer(pattern, instructions, re.IGNORECASE):
-            start = int(match.group(1))
-            end = int(match.group(2) or start)
-            matches.append((match.start(), start, end))
-
-    ordered: list[tuple[int, int]] = []
-    for _position, start, end in sorted(matches):
-        item = (start, end)
-        if item not in ordered:
-            ordered.append(item)
-    return ordered
+    return ExamRecord(
+        id=legacy.id,
+        subject=legacy.subject,
+        subject_tag=legacy.subject_tag,
+        year=legacy.year,
+        month=legacy.month,
+        part=legacy.part,
+        pdf_url=legacy.pdf_url,
+        content=content,
+    )
 
 
 def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag]) -> list[str]:
@@ -495,38 +681,40 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
         errors.append("date or part metadata does not match source")
     if exam.pdf_url != source.pdf_url:
         errors.append("PDF URL does not match current manifest URL")
-    if not exam.problems and not (exam.instructions or "").strip():
+    problems = list(iter_problems(exam))
+    instructions = [
+        block.text for block in iter_content_blocks(exam) if isinstance(block, InstructionsBlock)
+    ]
+    if not problems and not any(text.strip() for text in instructions):
         errors.append("record contains neither problems nor a notice")
-    numbers = [problem.number for problem in exam.problems]
-    if len(numbers) != len(set(numbers)):
-        errors.append("top-level problem numbers are not unique")
-    expected_numbers = list(range(1, len(numbers) + 1))
-    if source.subject_tag == "logic-phd":
-        if numbers != expected_numbers:
-            errors.append("logic problem numbers are not globally sequential")
-        transformed = any(
-            flag.category == ReviewCategory.NUMBERING_TRANSFORMATION for flag in flags
-        )
-        covered = [
-            number
-            for start, end in logic_instruction_ranges(exam.instructions or "")
-            for number in range(start, end + 1)
+    for block in exam.content:
+        if isinstance(block, InstructionsBlock):
+            if not block.text.strip():
+                errors.append("instruction block is empty")
+            continue
+        if isinstance(block, ProblemBlock):
+            continue
+        if not block.heading.strip():
+            errors.append("section heading is empty")
+        section_problems = [
+            item.problem for item in block.content if isinstance(item, ProblemBlock)
         ]
-        if transformed and sorted(covered) != expected_numbers:
-            errors.append("logic instructions do not map every final problem to a topic")
-    elif numbers != expected_numbers and not any(
-        flag.category == ReviewCategory.NUMBERING for flag in flags
-    ):
-        errors.append("nonsequential problem numbers lack a numbering review flag")
-    for problem in exam.problems:
+        if not section_problems:
+            errors.append(f"section {block.heading!r} contains no problems")
+        for item in block.content:
+            if isinstance(item, InstructionsBlock) and not item.text.strip():
+                errors.append(f"section {block.heading!r} contains an empty instruction block")
+    for problem_index, problem in enumerate(problems, start=1):
         if not problem.text.strip() and not problem.subparts:
-            errors.append(f"problem {problem.number} has no content")
+            errors.append(f"problem index {problem_index} has no content")
         for subpart in walk_subparts(problem.subparts):
             if not subpart.label.strip():
-                errors.append(f"problem {problem.number} has an empty subpart label")
+                errors.append(f"problem index {problem_index} has an empty subpart label")
             if not subpart.text.strip() and not subpart.subparts:
-                errors.append(f"problem {problem.number} has an empty subpart")
+                errors.append(f"problem index {problem_index} has an empty subpart")
     for text in all_content(exam):
+        if any(ord(character) < 32 and character not in "\n\t" for character in text):
+            errors.append("content contains an ASCII control character")
         if text.count(r"\(") != text.count(r"\)"):
             errors.append("unbalanced inline MathJax delimiters")
         if text.count(r"\[") != text.count(r"\]"):
@@ -534,8 +722,8 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
         if "$" in text:
             errors.append("dollar-sign math delimiters are not allowed")
     for flag in flags:
-        if any(number not in numbers for number in flag.problem_numbers):
-            errors.append("review flag refers to an unknown problem number")
+        if any(index < 1 or index > len(problems) for index in flag.problem_indices):
+            errors.append("review flag refers to an unknown problem index")
         if flag.category == ReviewCategory.CORRECTION and not all(
             [flag.original_text, flag.corrected_text, flag.context]
         ):
@@ -555,6 +743,25 @@ def checkpoint_path(source: SourceExam, build_root: Path) -> Path:
     return build_root / source.id / "extraction.json"
 
 
+def has_current_extraction(source: SourceExam, build_root: Path) -> bool:
+    output_path = exam_json_path(source)
+    saved_path = checkpoint_path(source, build_root)
+    if not output_path.exists() or not saved_path.exists():
+        return False
+    try:
+        output = json.loads(output_path.read_text(encoding="utf-8"))
+        checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    return (
+        output.get("schema_version") == 2
+        and checkpoint.get("schema_version") == 2
+        and checkpoint.get("prompt_version") == PROMPT_VERSION
+        and checkpoint.get("source_sha256") == source.sha256
+        and checkpoint.get("validation_errors") == []
+    )
+
+
 def build_exam(source: SourceExam, extraction: ModelExtraction) -> ExamRecord:
     return ExamRecord(
         id=source.id,
@@ -564,8 +771,7 @@ def build_exam(source: SourceExam, extraction: ModelExtraction) -> ExamRecord:
         month=source.month,
         part=source.part,
         pdf_url=source.pdf_url,
-        instructions=extraction.instructions,
-        problems=extraction.problems,
+        content=extraction.content,
     )
 
 
@@ -587,6 +793,42 @@ def render_subparts(subparts: list[Subpart], depth: int = 0) -> list[str]:
     return lines
 
 
+def render_problem(problem: Problem, displayed_number: int) -> list[str]:
+    lines: list[str] = []
+    text_lines = problem.text.strip().splitlines()
+    if text_lines:
+        if text_lines[0] != r"\[":
+            lines.append(f"**{displayed_number}.** {text_lines[0]}")
+            lines.extend(text_lines[1:])
+        else:
+            lines.append(f"**{displayed_number}.**")
+            lines.extend(text_lines)
+    elif problem.subparts:
+        noun = "part" if len(problem.subparts) == 1 else "parts"
+        small_numbers = (
+            "zero",
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six",
+            "seven",
+            "eight",
+            "nine",
+        )
+        count = (
+            small_numbers[len(problem.subparts)]
+            if len(problem.subparts) <= 9
+            else str(len(problem.subparts))
+        )
+        lines.append(f"**{displayed_number}.** This problem has {count} {noun}.")
+    else:
+        lines.append(f"**{displayed_number}.**")
+    lines.extend(render_subparts(problem.subparts))
+    return lines
+
+
 def render_markdown(exam: ExamRecord) -> str:
     if exam.subject.startswith("First Year "):
         title = f"{exam.subject.removeprefix('First Year ')}, first year exam"
@@ -600,44 +842,25 @@ def render_markdown(exam: ExamRecord) -> str:
     if exam.part is not None:
         title += f", Part {exam.part}"
     lines = [f"# {title}", ""]
-    if exam.instructions:
-        lines.extend([f"*{exam.instructions.strip()}*", ""])
-    for problem in exam.problems:
-        text_lines = problem.text.strip().splitlines()
-        if text_lines:
-            if text_lines[0] != r"\[":
-                lines.append(f"**{problem.number}.** {text_lines[0]}")
-                lines.extend(text_lines[1:])
-            else:
-                lines.append(f"**{problem.number}.**")
-                lines.extend(text_lines)
-        elif problem.subparts:
-            noun = "part" if len(problem.subparts) == 1 else "parts"
-            small_numbers = (
-                "zero",
-                "one",
-                "two",
-                "three",
-                "four",
-                "five",
-                "six",
-                "seven",
-                "eight",
-                "nine",
-            )
-            count = (
-                small_numbers[len(problem.subparts)]
-                if len(problem.subparts) <= 9
-                else str(len(problem.subparts))
-            )
-            lines.append(
-                f"**{problem.number}.** This problem has {count} {noun}."
-            )
+    displayed_number = 0
+    for block in exam.content:
+        if isinstance(block, InstructionsBlock):
+            lines.extend([f"*{block.text.strip()}*", ""])
+        elif isinstance(block, ProblemBlock):
+            displayed_number += 1
+            lines.extend(render_problem(block.problem, displayed_number))
+            lines.append("")
         else:
-            lines.append(f"**{problem.number}.**")
-            lines.extend(text_lines)
-        lines.extend(render_subparts(problem.subparts))
-        lines.append("")
+            lines.extend([f"## {block.heading.strip()}", ""])
+            if block.numbering == NumberingMode.RESTART:
+                displayed_number = 0
+            for item in block.content:
+                if isinstance(item, InstructionsBlock):
+                    lines.extend([f"*{item.text.strip()}*", ""])
+                else:
+                    displayed_number += 1
+                    lines.extend(render_problem(item.problem, displayed_number))
+                    lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -648,6 +871,7 @@ def extract_one(
     reasoning: str,
     dpi: int,
     force: bool,
+    include_native_text: bool = True,
 ) -> tuple[ExamRecord, list[ReviewFlag], bool]:
     source_hash = sha256_file(source.pdf_path)
     if source_hash != source.sha256:
@@ -693,20 +917,41 @@ def extract_one(
                 write_text(rendered_path, render_markdown(exam))
                 return exam, extraction.review_flags, True
     if force:
-        archive(output_path)
-        archive(rendered_path)
-        archive(saved_path)
+        archive_files(
+            [output_path, rendered_path, saved_path],
+            build_root / source.id / "history",
+        )
 
     workdir = build_root / source.id
     pages = render_pages(source, workdir, dpi)
+    client = OpenAI()
     extraction, response_id, usage = call_model(
-        OpenAI(), source, pages, model=model, reasoning=reasoning
+        client,
+        source,
+        pages,
+        model=model,
+        reasoning=reasoning,
+        include_native_text=include_native_text,
     )
+    repair_response_id = None
+    repair_usage = None
+    if has_ascii_control_characters(extraction):
+        extraction, repair_response_id, repair_usage = repair_control_characters(
+            client,
+            extraction,
+            model=model,
+            reasoning=reasoning,
+        )
     exam = build_exam(source, extraction)
     errors = validate_exam(exam, source, extraction.review_flags)
     checkpoint = {
-        "schema_version": 1,
+        "schema_version": 2,
         "prompt_version": PROMPT_VERSION,
+        "evidence_version": (
+            NATIVE_EVIDENCE_VERSION
+            if include_native_text
+            else VISION_ONLY_EVIDENCE_VERSION
+        ),
         "source_pdf": str(source.pdf_path),
         "source_sha256": source_hash,
         "source_download_sha256": source.download_sha256,
@@ -714,6 +959,8 @@ def extract_one(
         "reasoning_effort": reasoning,
         "response_id": response_id,
         "usage": usage,
+        "control_repair_response_id": repair_response_id,
+        "control_repair_usage": repair_usage,
         "extracted_at": datetime.now(timezone.utc).isoformat(),
         "review_flags": [item.model_dump(mode="json") for item in extraction.review_flags],
         "validation_errors": errors,
@@ -734,7 +981,7 @@ REVIEW_FILES = {
     ),
     "transformations": (
         "review-transformations.json",
-        "Completed structural transformations such as renumbering and instruction consolidation.",
+        "Completed normalization of unsupported labels and dependent instruction references.",
     ),
     "serious": (
         "review-serious.json",
@@ -764,7 +1011,7 @@ def review_records(
         records.append(
             {
                 "exam_id": source.id,
-                "problem_numbers": flag.problem_numbers,
+                "problem_indices": flag.problem_indices,
                 "category": flag.category.value,
                 "source_pdf": str(source.pdf_path),
                 "source_pages": flag.source_pages,
@@ -803,7 +1050,7 @@ def update_review_files(
         write_json(
             path,
             {
-                "schema_version": 1,
+                "schema_version": 2,
                 "review_type": bucket,
                 "purpose": purpose,
                 "items": retained + new_items,
@@ -829,6 +1076,14 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="TAG",
         help="extract missing exams for a subject tag; repeat for multiple subjects",
     )
+    selection.add_argument(
+        "--affected",
+        nargs="?",
+        const=Path("build/schema-v2/affected-exams.json"),
+        type=Path,
+        metavar="FILE",
+        help="extract IDs from the schema-migration affected list",
+    )
     parser.add_argument(
         "--limit",
         type=int,
@@ -842,6 +1097,16 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--dpi", type=int, default=200)
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--vision-only",
+        action="store_true",
+        help="omit native PDF text evidence and use rendered page images only",
+    )
+    parser.add_argument(
+        "--skip-current",
+        action="store_true",
+        help="skip records with a valid checkpoint from the current prompt",
+    )
     return parser
 
 
@@ -852,10 +1117,26 @@ def main() -> int:
     if args.dpi < 100:
         raise SystemExit("--dpi must be at least 100")
     sources = load_sources(args.manifest)
+    exam_ids = args.exam_ids
+    if args.affected is not None:
+        if exam_ids:
+            raise SystemExit("exam IDs cannot be combined with --affected")
+        affected_document = json.loads(args.affected.read_text(encoding="utf-8"))
+        exam_ids = affected_document["exam_ids"]
+    if args.skip_current and args.affected is None:
+        raise SystemExit("--skip-current requires --affected")
+    if args.skip_current:
+        before = len(exam_ids)
+        exam_ids = [
+            exam_id
+            for exam_id in exam_ids
+            if not has_current_extraction(sources[exam_id], args.build_root)
+        ]
+        print(f"skipped_current={before - len(exam_ids)}")
     try:
         selection = select_exam_ids(
             sources,
-            args.exam_ids,
+            exam_ids,
             pilot=args.pilot,
             all_exams=args.all_exams,
             subject_tags=args.subject_tags,
@@ -890,6 +1171,7 @@ def main() -> int:
                 args.reasoning,
                 args.dpi,
                 args.force,
+                not args.vision_only,
             ): exam_id
             for exam_id in requested
         }
@@ -914,7 +1196,7 @@ def main() -> int:
                 extracted_count += 1
             review_flag_count += len(flags)
             print(
-                f"{state}: {exam.id} ({len(exam.problems)} problems, "
+                f"{state}: {exam.id} ({len(list(iter_problems(exam)))} problems, "
                 f"{len(flags)} review flags)"
             )
 

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-2006-sep",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,132 +7,157 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2006_09.pdf",
-  "instructions": "Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give the definition of a solvable group.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that the homomorphic image of a solvable group is solvable.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Let \\(F\\) be a free group on a set \\(S\\) with \\(|S|>1\\). Prove that \\(F\\) is not solvable.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give the definition of an epimorphism in a category \\(C\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that the composition of two epimorphisms is an epimorphism.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Let \\(C\\) be the category whose objects are commutative rings with 1 and whose morphisms are unitary ring homomorphisms. Prove that the natural map \\(\\mathbb{Z}\\to\\mathbb{Q}\\) is an epimorphism in \\(C\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give the definition of a solvable group.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that the homomorphic image of a solvable group is solvable.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(F\\) be a free group on a set \\(S\\) with \\(|S|>1\\). Prove that \\(F\\) is not solvable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(L/K\\) be an algebraic field extension. Let \\(S\\) denote the set of elements of \\(L\\) which are separable over \\(K\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(S\\) is a field.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that for every \\(\\alpha\\in L\\) the extension \\(S(\\alpha)/S\\) is purely inseparable.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give the definition of an epimorphism in a category \\(C\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that the composition of two epimorphisms is an epimorphism.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(C\\) be the category whose objects are commutative rings with 1 and whose morphisms are unitary ring homomorphisms. Prove that the natural map \\(\\mathbb{Z}\\to\\mathbb{Q}\\) is an epimorphism in \\(C\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Give an example of a polynomial \\(f(X)\\in\\mathbb{Q}[X]\\) whose Galois group is isomorphic to \\(S_5\\). Prove that this is the case.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(L/K\\) be an algebraic field extension. Let \\(S\\) denote the set of elements of \\(L\\) which are separable over \\(K\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(S\\) is a field.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that for every \\(\\alpha\\in L\\) the extension \\(S(\\alpha)/S\\) is purely inseparable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that there exists a unitary ring homomorphism \\(\\phi:\\mathbb{Z}[[X]]\\otimes_{\\mathbb{Z}}\\mathbb{Q}\\to\\mathbb{Q}[[X]]\\) such that \\(\\phi(f(X)\\otimes 1)=f(X)\\) for all \\(f(X)\\in\\mathbb{Z}[[X]]\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(\\phi\\) is one-to-one.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that \\(\\phi\\) is not onto.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Give an example of a polynomial \\(f(X)\\in\\mathbb{Q}[X]\\) whose Galois group is isomorphic to \\(S_5\\). Prove that this is the case.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Prove that an abelian group is divisible if and only if it is an injective \\(\\mathbb{Z}\\)-module.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that there exists a unitary ring homomorphism \\(\\phi:\\mathbb{Z}[[X]]\\otimes_{\\mathbb{Z}}\\mathbb{Q}\\to\\mathbb{Q}[[X]]\\) such that \\(\\phi(f(X)\\otimes 1)=f(X)\\) for all \\(f(X)\\in\\mathbb{Z}[[X]]\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(\\phi\\) is one-to-one.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\(\\phi\\) is not onto.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(R\\) be a commutative ring with 1, let \\(M\\) be a finitely generated \\(R\\)-module, and let \\(I\\) be an ideal of \\(R\\) which is contained in every maximal ideal of \\(R\\). Prove that if \\(IM=M\\) then \\(M=0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that an abelian group is divisible if and only if it is an injective \\(\\mathbb{Z}\\)-module.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(R\\) be a commutative Noetherian ring with 1. Let \\(0=Q_1\\cap\\cdots\\cap Q_n\\) be a reduced primary decomposition of the zero ideal in \\(R\\) and set \\(P_i=\\sqrt{Q_i}\\) for \\(1\\leq i\\leq n\\). Prove that \\(P_1\\cup\\cdots\\cup P_n\\) is the set of zero divisors of \\(R\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with 1, let \\(M\\) be a finitely generated \\(R\\)-module, and let \\(I\\) be an ideal of \\(R\\) which is contained in every maximal ideal of \\(R\\). Prove that if \\(IM=M\\) then \\(M=0\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(R\\) be a UFD. Prove that \\(R\\) is integrally closed in its field of fractions.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative Noetherian ring with 1. Let \\(0=Q_1\\cap\\cdots\\cap Q_n\\) be a reduced primary decomposition of the zero ideal in \\(R\\) and set \\(P_i=\\sqrt{Q_i}\\) for \\(1\\leq i\\leq n\\). Prove that \\(P_1\\cup\\cdots\\cup P_n\\) is the set of zero divisors of \\(R\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \\(R\\) be a ring. Prove that the Jacobson radical \\(J(R)\\) contains no nonzero idempotents.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of a ring \\(R\\) with a nonzero idempotent \\(e\\) such that \\(e\\) is a left quasi-regular element of \\(R\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a UFD. Prove that \\(R\\) is integrally closed in its field of fractions.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Let \\(K\\) be a field and let \\(A\\) be a central simple algebra over \\(K\\) such that \\(\\dim_K(A)=n\\) is finite. Prove that \\(A\\otimes_K A^{\\mathrm{op}}\\cong M_{n\\times n}(K)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(R\\) be a ring. Prove that the Jacobson radical \\(J(R)\\) contains no nonzero idempotents.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a ring \\(R\\) with a nonzero idempotent \\(e\\) such that \\(e\\) is a left quasi-regular element of \\(R\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(K\\) be a field and let \\(A\\) be a central simple algebra over \\(K\\) such that \\(\\dim_K(A)=n\\) is finite. Prove that \\(A\\otimes_K A^{\\mathrm{op}}\\cong M_{n\\times n}(K)\\).",
+        "subparts": []
+      }
     }
   ]
 }

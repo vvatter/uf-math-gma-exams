@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-linear-algebra-first-year-2017-aug",
   "subject": "First Year Numerical Linear Algebra",
   "subject_tag": "numerical-linear-algebra-first-year",
@@ -7,81 +7,94 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalLinearAlgebra-2017_08.pdf",
-  "instructions": "Do 4 (four) problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume that \\(A\\) is Hermitian and all its eigenvalues are distinct and nonzero.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that each pair of distinct eigenvectors of \\(A\\) are orthogonal.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(\\lambda\\) is an eigenvalue of \\(A\\) with eigenvector \\(x\\) with \\(\\lVert x\\rVert_2=1\\), then \\(B=A-\\lambda xx^*\\) has the same eigenvectors as \\(A\\) while \\(B\\)'s eigenvalues are the same as those of \\(A\\) except \\(\\lambda\\) is replaced with zero.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(P\\) is a projector, prove that \\(\\operatorname{null}(P)\\cap\\operatorname{range}(P)=\\{0\\}\\) and \\(\\operatorname{null}(P)=\\operatorname{range}(I-P)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(P\\) is an orthogonal projector if and only if it is Hermitian.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Assume that \\(A\\) is Hermitian and all its eigenvalues are distinct and nonzero.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that each pair of distinct eigenvectors of \\(A\\) are orthogonal.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(\\lambda\\) is an eigenvalue of \\(A\\) with eigenvector \\(x\\) with \\(\\lVert x\\rVert_2=1\\), then \\(B=A-\\lambda xx^*\\) has the same eigenvectors as \\(A\\) while \\(B\\)'s eigenvalues are the same as those of \\(A\\) except \\(\\lambda\\) is replaced with zero.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If both \\(A\\) and \\(U\\) are in \\(\\mathbb{C}^{m,m}\\) and \\(U\\) is unitary, prove that \\(\\lVert UA\\rVert_F=\\lVert AU\\rVert_F=\\lVert A\\rVert_F\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If both \\(A\\) and \\(U\\) are in \\(\\mathbb{C}^{m,m}\\) and \\(U\\) is unitary, prove that \\(\\lVert UA\\rVert_2=\\lVert AU\\rVert_2=\\lVert A\\rVert_2\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that \\(\\lVert A\\rVert_2=(\\rho(A^*A))^{1/2}=\\sigma_1\\), where \\(\\sigma_1\\) is the largest singular value of \\(A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(P\\) is a projector, prove that \\(\\operatorname{null}(P)\\cap\\operatorname{range}(P)=\\{0\\}\\) and \\(\\operatorname{null}(P)=\\operatorname{range}(I-P)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(P\\) is an orthogonal projector if and only if it is Hermitian.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(A\\in\\mathbb{C}^{m,n}\\) with \\(m\\geq n\\), prove that \\(A^*A\\) is invertible if and only if \\(\\operatorname{rank}(A)=n\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an explicit formula for \\(\\det(\\lambda I-ww^*)\\) when \\(\\lambda\\in\\mathbb{C}\\), \\(I\\) is the \\(m\\times m\\) identity matrix and \\(w\\in\\mathbb{C}^m\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If both \\(A\\) and \\(U\\) are in \\(\\mathbb{C}^{m,m}\\) and \\(U\\) is unitary, prove that \\(\\lVert UA\\rVert_F=\\lVert AU\\rVert_F=\\lVert A\\rVert_F\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If both \\(A\\) and \\(U\\) are in \\(\\mathbb{C}^{m,m}\\) and \\(U\\) is unitary, prove that \\(\\lVert UA\\rVert_2=\\lVert AU\\rVert_2=\\lVert A\\rVert_2\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\(\\lVert A\\rVert_2=(\\rho(A^*A))^{1/2}=\\sigma_1\\), where \\(\\sigma_1\\) is the largest singular value of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Assume that \\(T\\) is tridiagonal and symmetric with the diagonal entries given by \\(a_j\\) for \\(j=1,\\ldots,m\\) and the super- and sub-diagonal entries by \\(b_j\\) for \\(j=1,\\ldots,m-1\\). Let \\(p_k\\) be the characteristic polynomial of the \\(k\\times k\\) matrix in the upper left hand corner of \\(T\\). Prove that\n\\[\np_k(x)=(a_k-x)p_{k-1}(x)-b_{k-1}^2p_{k-2}(x).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(A\\in\\mathbb{C}^{m,n}\\) with \\(m\\geq n\\), prove that \\(A^*A\\) is invertible if and only if \\(\\operatorname{rank}(A)=n\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an explicit formula for \\(\\det(\\lambda I-ww^*)\\) when \\(\\lambda\\in\\mathbb{C}\\), \\(I\\) is the \\(m\\times m\\) identity matrix and \\(w\\in\\mathbb{C}^m\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Assume that \\(T\\) is tridiagonal and symmetric with the diagonal entries given by \\(a_j\\) for \\(j=1,\\ldots,m\\) and the super- and sub-diagonal entries by \\(b_j\\) for \\(j=1,\\ldots,m-1\\). Let \\(p_k\\) be the characteristic polynomial of the \\(k\\times k\\) matrix in the upper left hand corner of \\(T\\). Prove that\n\\[\np_k(x)=(a_k-x)p_{k-1}(x)-b_{k-1}^2p_{k-2}(x).\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

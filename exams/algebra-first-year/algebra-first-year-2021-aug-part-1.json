@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2021-aug-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,59 +7,74 @@
   "month": "august",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2021_08.pdf",
-  "instructions": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(G\\) be a cyclic group. Prove that every subgroup of \\(G\\) is cyclic. (Be sure to consider infinite cyclic groups as well as finite ones.)",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(G, H\\) be finite groups with orders \\(m, n\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(m\\) and \\(n\\) are coprime then\n\\[\n\\operatorname{Aut}(G \\times H) \\cong \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example where \\(m\\) and \\(n\\) are not relatively prime and\n\\[\n\\operatorname{Aut}(G \\times H) \\not\\cong \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]\nJustify your claims.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a cyclic group. Prove that every subgroup of \\(G\\) is cyclic. (Be sure to consider infinite cyclic groups as well as finite ones.)",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \\(G\\) be a finite group of order \\(n\\) and let \\(p\\) be the smallest prime which divides \\(n\\). Prove that if \\(H\\) is a subgroup of \\(G\\) of index \\(p\\) then \\(H\\) is normal in \\(G\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of a finite group \\(G\\) and a subgroup \\(H \\leq G\\) such that \\(H\\) is not normal in \\(G\\) and the index \\(|G:H|\\) is prime.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G, H\\) be finite groups with orders \\(m, n\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(m\\) and \\(n\\) are coprime then\n\\[\n\\operatorname{Aut}(G \\times H) \\cong \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example where \\(m\\) and \\(n\\) are not relatively prime and\n\\[\n\\operatorname{Aut}(G \\times H) \\not\\cong \\operatorname{Aut}(G) \\times \\operatorname{Aut}(H).\n\\]\nJustify your claims.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(p,q,r\\) be primes such that \\(p<q<r\\) and let \\(G\\) be a group of order \\(pqr\\). Prove that \\(G\\) has a normal Sylow subgroup.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(G\\) be a finite group of order \\(n\\) and let \\(p\\) be the smallest prime which divides \\(n\\). Prove that if \\(H\\) is a subgroup of \\(G\\) of index \\(p\\) then \\(H\\) is normal in \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a finite group \\(G\\) and a subgroup \\(H \\leq G\\) such that \\(H\\) is not normal in \\(G\\) and the index \\(|G:H|\\) is prime.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Prove that the alternating group \\(A_5\\) is simple. Prove that \\(A_4\\) is solvable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p,q,r\\) be primes such that \\(p<q<r\\) and let \\(G\\) be a group of order \\(pqr\\). Prove that \\(G\\) has a normal Sylow subgroup.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Show that there are four different homomorphisms \\(\\phi:\\mathbb{Z}_2\\to\\operatorname{Aut}(\\mathbb{Z}_8)\\), and prove that the corresponding semidirect products \\(\\mathbb{Z}_8\\rtimes_\\phi\\mathbb{Z}_2\\) are pairwise nonisomorphic. (Hint: Consider the number of elements of order 2.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the alternating group \\(A_5\\) is simple. Prove that \\(A_4\\) is solvable.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Show that there are four different homomorphisms \\(\\phi:\\mathbb{Z}_2\\to\\operatorname{Aut}(\\mathbb{Z}_8)\\), and prove that the corresponding semidirect products \\(\\mathbb{Z}_8\\rtimes_\\phi\\mathbb{Z}_2\\) are pairwise nonisomorphic. (Hint: Consider the number of elements of order 2.)",
+        "subparts": []
+      }
     }
   ]
 }

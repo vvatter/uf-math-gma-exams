@@ -17,7 +17,11 @@ from pydantic import ValidationError
 from extract_exams import (
     REVIEW_FILES,
     ExamRecord,
+    InstructionsBlock,
+    NumberingMode,
+    ProblemBlock,
     ReviewFlag,
+    SectionBlock,
     exam_json_path,
     exam_markdown_path,
     load_sources,
@@ -30,7 +34,7 @@ from extract_exams import (
 
 REVIEW_IDENTITY_FIELDS = (
     "exam_id",
-    "problem_numbers",
+    "problem_indices",
     "category",
     "source_pdf",
     "source_pages",
@@ -49,20 +53,39 @@ def review_identity(item: dict[str, object]) -> str:
 
 
 def located_text(exam: ExamRecord) -> Iterator[tuple[str, str]]:
-    if exam.instructions:
-        yield "instructions", exam.instructions
-    for problem in exam.problems:
-        yield f"problem {problem.number}", problem.text
-        pending = [
-            (f"problem {problem.number} subpart {item.label}", item)
-            for item in problem.subparts
-        ]
-        while pending:
-            location, subpart = pending.pop(0)
-            yield location, subpart.text
-            pending[0:0] = [
-                (f"{location} / {item.label}", item) for item in subpart.subparts
+    problem_index = 0
+    displayed_number = 0
+    for block in exam.content:
+        if isinstance(block, InstructionsBlock):
+            yield "instructions", block.text
+            continue
+        if isinstance(block, ProblemBlock):
+            items = [(None, block)]
+        else:
+            if block.numbering == NumberingMode.RESTART:
+                displayed_number = 0
+            items = [(block.heading, item) for item in block.content]
+        for section_heading, item in items:
+            prefix = f"section {section_heading} / " if section_heading else ""
+            if isinstance(item, InstructionsBlock):
+                yield prefix + "instructions", item.text
+                continue
+            problem_index += 1
+            displayed_number += 1
+            problem = item.problem
+            location = f"{prefix}problem {displayed_number} (index {problem_index})"
+            yield location, problem.text
+            pending = [
+                (f"{location} subpart {part.label}", part)
+                for part in problem.subparts
             ]
+            while pending:
+                subpart_location, subpart = pending.pop(0)
+                yield subpart_location, subpart.text
+                pending[0:0] = [
+                    (f"{subpart_location} / {part.label}", part)
+                    for part in subpart.subparts
+                ]
 
 
 def math_expressions(exam: ExamRecord) -> Iterator[dict[str, object]]:
@@ -111,9 +134,20 @@ def validate_mathjax(
     return errors
 
 
-def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[str, int]]:
-    sources = load_sources(manifest)
+def validate_archive(
+    manifest: Path,
+    review_dir: Path,
+    exam_ids: set[str] | None = None,
+) -> tuple[list[str], dict[str, int]]:
+    all_sources = load_sources(manifest)
     errors: list[str] = []
+    unknown_ids = sorted((exam_ids or set()) - set(all_sources))
+    errors.extend(f"unknown requested exam: {exam_id}" for exam_id in unknown_ids)
+    sources = {
+        exam_id: source
+        for exam_id, source in all_sources.items()
+        if exam_ids is None or exam_id in exam_ids
+    }
     flags_by_exam: dict[str, list[ReviewFlag]] = {}
     review_counts: dict[str, int] = {}
     expressions: list[dict[str, object]] = []
@@ -130,6 +164,8 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
             errors.append(f"{path}: review file is invalid: {error}")
             continue
         review_counts[bucket] = len(items)
+        if document.get("schema_version") != 2:
+            errors.append(f"{path}: schema_version is not 2")
         if document.get("review_type") != bucket:
             errors.append(f"{path}: review_type does not match its filename")
         identities = Counter(review_identity(item) for item in items)
@@ -137,7 +173,7 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
             errors.append(f"{path}: contains duplicate review records")
         for index, item in enumerate(items):
             exam_id = item.get("exam_id")
-            if exam_id not in sources:
+            if exam_id not in all_sources:
                 errors.append(f"{path}: item {index} refers to an unknown exam")
                 continue
             try:
@@ -147,9 +183,10 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
                 continue
             if review_bucket(flag.category) != bucket:
                 errors.append(f"{path}: item {index} belongs in another review file")
-            if item.get("source_pdf") != str(sources[exam_id].pdf_path):
+            if item.get("source_pdf") != str(all_sources[exam_id].pdf_path):
                 errors.append(f"{path}: item {index} has the wrong source PDF")
-            flags_by_exam.setdefault(exam_id, []).append(flag)
+            if exam_id in sources:
+                flags_by_exam.setdefault(exam_id, []).append(flag)
 
     for source in sources.values():
         prefix = f"{source.id}: "
@@ -195,13 +232,14 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
         ):
             errors.append(prefix + "Markdown does not match the canonical JSON")
 
-    source_ids = set(sources)
-    for suffix, label in ((".json", "JSON"), (".md", "Markdown")):
-        for path in review_dir.rglob(f"*{suffix}"):
-            if path.parent == review_dir and path.name.startswith("review-"):
-                continue
-            if path.stem not in source_ids:
-                errors.append(f"{path}: orphaned canonical {label} file")
+    if exam_ids is None:
+        source_ids = set(sources)
+        for suffix, label in ((".json", "JSON"), (".md", "Markdown")):
+            for path in review_dir.rglob(f"*{suffix}"):
+                if path.parent == review_dir and path.name.startswith("review-"):
+                    continue
+                if path.stem not in source_ids:
+                    errors.append(f"{path}: orphaned canonical {label} file")
 
     errors.extend(validate_mathjax(expressions))
 
@@ -217,11 +255,16 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate the complete local exam archive")
+    parser.add_argument("exam_ids", nargs="*", help="validate only these manifest IDs")
     parser.add_argument("--manifest", type=Path, default=Path("manifest.json"))
     parser.add_argument("--review-dir", type=Path, default=Path("exams"))
     args = parser.parse_args()
 
-    errors, stats = validate_archive(args.manifest, args.review_dir)
+    errors, stats = validate_archive(
+        args.manifest,
+        args.review_dir,
+        set(args.exam_ids) if args.exam_ids else None,
+    )
     if errors:
         for error in errors:
             print(f"error: {error}")

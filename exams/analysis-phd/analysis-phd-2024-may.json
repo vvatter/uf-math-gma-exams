@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-2024-may",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,100 +7,123 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Analysis-2024_05.pdf",
-  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Consider Lebesgue measure on the real line \\(\\mathbb R\\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \\(f_n\\) in \\(L^1(\\mathbb R)\\) converging to an \\(f\\) in \\(L^1(\\mathbb R)\\)...",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "...in the \\(L^1\\) norm but not in measure,",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "...in measure but not in the \\(L^1\\) norm,",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "...in the \\(L^1\\) norm but not a.e.,",
-          "subparts": []
-        },
-        {
-          "label": "d)",
-          "text": "...a.e. but not in measure.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Write solutions in a neat and logical fashion, giving complete reasons for all steps."
     },
     {
-      "number": 2,
-      "text": "State Tonelli’s theorem, and give an example to show that the \\(\\sigma\\)-finiteness hypothesis is necessary.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Attempt SIX problems."
     },
     {
-      "number": 3,
-      "text": "For \\(\\sigma\\)-finite measures \\(\\mu\\) and \\(\\nu\\), define what it means for \\(\\mu\\) to be absolutely continuous with respect to \\(\\nu\\), and singular with respect to \\(\\nu\\). State the Lebesgue–Radon–Nikodym theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Consider Lebesgue measure on the real line \\(\\mathbb{R}\\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \\(f_n\\) in \\(L^1(\\mathbb{R})\\) converging to an \\(f\\) in \\(L^1(\\mathbb{R})\\)...",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "...in the \\(L^1\\) norm but not in measure,",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "...in measure but not in the \\(L^1\\) norm,",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "...in the \\(L^1\\) norm but not a.e.,",
+            "subparts": []
+          },
+          {
+            "label": "d)",
+            "text": "...a.e. but not in measure.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\((X,\\mathcal M,\\mu)\\) be a \\(\\sigma\\)-finite measure space. Suppose that \\(g\\) is a measurable function with the property that \\(gf\\in L^2\\) for all \\(f\\in L^2\\). Prove that \\(g\\in L^\\infty\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State Tonelli’s theorem, and give an example to show that the \\(\\sigma\\)-finiteness hypothesis is necessary.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Fix \\(1<p<\\infty\\), let \\(\\mu\\) be a \\(\\sigma\\)-finite measure, and let \\((f_n)\\) be a sequence in \\(L^p(\\mu)\\). Suppose that there exists a function \\(f\\in L^p(\\mu)\\) such that\n\\[\n\\int f_ng\\,d\\mu\\to\\int fg\\,d\\mu\n\\]\nfor every \\(g\\in L^q(\\mu)\\), where \\(\\frac1p+\\frac1q=1\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Prove that \\(\\sup_n\\{\\lVert f_n\\rVert_p\\}<+\\infty\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Prove that \\(\\lVert f\\rVert_p\\leq\\limsup\\lVert f_n\\rVert_p\\).",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "Give an example to show that strict inequality can hold in part (b).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "For \\(\\sigma\\)-finite measures \\(\\mu\\) and \\(\\nu\\), define what it means for \\(\\mu\\) to be absolutely continuous with respect to \\(\\nu\\), and singular with respect to \\(\\nu\\). State the Lebesgue–Radon–Nikodym theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\mathcal X\\) be a normed vector space. Say \\(x_n\\to x\\) weakly if \\(f(x_n)\\to f(x)\\) for all \\(f\\in\\mathcal X^*\\). Prove that if \\(\\mathcal M\\) is a norm closed subspace of \\(\\mathcal X\\), and \\((x_n)\\) is a sequence in \\(\\mathcal M\\) converging weakly to \\(x\\), then \\(x\\in\\mathcal M\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,\\mathcal{M},\\mu)\\) be a \\(\\sigma\\)-finite measure space. Suppose that \\(g\\) is a measurable function with the property that \\(gf\\in L^2\\) for all \\(f\\in L^2\\). Prove that \\(g\\in L^\\infty\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(\\mu\\) be a finite signed Borel measure on \\([0,1]\\). Suppose that\n\\[\n\\int_0^1\\sin(2\\pi nx)\\,d\\mu(x)=0\\qquad\\text{and}\\qquad\\int_0^1\\cos(2\\pi nx)\\,d\\mu(x)=0\n\\]\nfor all \\(n=0,1,2,\\ldots\\). Prove that \\(\\mu=0\\). Does it suffice to assume only the vanishing of the sine integrals? Prove, or give a counterexample.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Fix \\(1<p<\\infty\\), let \\(\\mu\\) be a \\(\\sigma\\)-finite measure, and let \\((f_n)\\) be a sequence in \\(L^p(\\mu)\\). Suppose that there exists a function \\(f\\in L^p(\\mu)\\) such that\n\\[\n\\int f_n g\\,d\\mu \\to \\int fg\\,d\\mu\n\\]\nfor every \\(g\\in L^q(\\mu)\\), where \\(\\frac{1}{p}+\\frac{1}{q}=1\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Prove that \\(\\sup_n\\{\\lVert f_n\\rVert_p\\}<+\\infty\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Prove that \\(\\lVert f\\rVert_p\\leq\\limsup\\lVert f_n\\rVert_p\\).",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "Give an example to show that strict inequality can hold in part (b).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Short answer.",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Give a brief explanation of how the Fourier transform is defined on \\(L^2(\\mathbb R)\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Sketch a proof that the Banach space \\(L^1(\\mathbb R)\\) is not reflexive.",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "Explain why the norm in \\(\\ell^1(\\mathbb N)\\) cannot be given by an inner product.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal{X}\\) be a normed vector space. Say \\(x_n\\to x\\) weakly if \\(f(x_n)\\to f(x)\\) for all \\(f\\in\\mathcal{X}^*\\). Prove that if \\(\\mathcal{M}\\) is a norm closed subspace of \\(\\mathcal{X}\\), and \\((x_n)\\) is a sequence in \\(\\mathcal{M}\\) converging weakly to \\(x\\), then \\(x\\in\\mathcal{M}\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mu\\) be a finite signed Borel measure on \\([0,1]\\). Suppose that\n\\[\n\\int_0^1 \\sin(2\\pi nx)\\,d\\mu(x)=0 \\quad\\text{and}\\quad \\int_0^1 \\cos(2\\pi nx)\\,d\\mu(x)=0\n\\]\nfor all \\(n=0,1,2,\\ldots\\). Prove that \\(\\mu=0\\). Does it suffice to assume only the vanishing of the sine integrals? Prove, or give a counterexample.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Short answer.",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Give a brief explanation of how the Fourier transform is defined on \\(L^2(\\mathbb{R})\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Sketch a proof that the Banach space \\(L^1(\\mathbb{R})\\) is not reflexive.",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "Explain why the norm in \\(\\ell^1(\\mathbb{N})\\) cannot be given by an inner product.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

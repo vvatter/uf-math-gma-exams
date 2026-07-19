@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-linear-algebra-first-year-2015-jan",
   "subject": "First Year Numerical Linear Algebra",
   "subject_tag": "numerical-linear-algebra-first-year",
@@ -7,117 +7,130 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_NumericalLinearAlgebra_2015_01.pdf",
-  "instructions": "Do 4 (four) problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume \\(A \\in \\mathbb{R}^{m,n}\\) with \\(m \\geq n\\), \\(\\operatorname{rank}(A)=n\\) and \\(b \\in \\mathbb{R}^m\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define the least squares solution to \\(Ax=b\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Derive the normal equations for the least squares problem.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that \\(A^T A\\) is invertible.",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "Prove that the unique solution to the least squares problem is \\((A^T A)^{-1}A^T b\\).",
-          "subparts": []
-        },
-        {
-          "label": "(e)",
-          "text": "Describe how to solve the least squares problem using the QR decomposition of \\(A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Compute \\(\\det(\\lambda I+uv^*)\\) when \\(\\lambda \\in \\mathbb{C}\\), \\(I\\) is the \\(m \\times m\\) identity matrix, and \\(u,v \\in \\mathbb{C}^m\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove necessary and sufficient conditions for \\(I+uv^*\\) to be nonsingular and when it is, give a formula for its inverse.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A \\in \\mathbb{R}^{m,n}\\) with \\(m \\geq n\\), \\(\\operatorname{rank}(A)=n\\) and \\(b \\in \\mathbb{R}^m\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define the least squares solution to \\(Ax=b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Derive the normal equations for the least squares problem.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\(A^T A\\) is invertible.",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Prove that the unique solution to the least squares problem is \\((A^T A)^{-1}A^T b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(e)",
+            "text": "Describe how to solve the least squares problem using the QR decomposition of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(P\\) is a projector, prove that \\(\\operatorname{null}(P) \\cap \\operatorname{range}(P)=\\{0\\}\\) and \\(\\operatorname{null}(P)=\\operatorname{range}(I-P)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(P\\) is an orthogonal projector if and only if it is Hermitian.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V \\subset \\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Compute \\(\\det(\\lambda I+uv^*)\\) when \\(\\lambda \\in \\mathbb{C}\\), \\(I\\) is the \\(m \\times m\\) identity matrix, and \\(u,v \\in \\mathbb{C}^m\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove necessary and sufficient conditions for \\(I+uv^*\\) to be nonsingular and when it is, give a formula for its inverse.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(\\lVert A\\rVert_F=\\operatorname{trace}(A^*A)^{1/2}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(\\lVert A\\rVert_F=(\\sum \\sigma_i^2)^{1/2}\\), where \\(\\{\\sigma_i\\}\\) are the singular values of \\(A\\) counted with multiplicity.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "If both \\(A\\) and \\(U\\) are in \\(\\mathbb{C}^{m,m}\\) and \\(U\\) is unitary, prove that \\(\\lVert UA\\rVert_F=\\lVert AU\\rVert_F=\\lVert A\\rVert_F\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(P\\) is a projector, prove that \\(\\operatorname{null}(P) \\cap \\operatorname{range}(P)=\\{0\\}\\) and \\(\\operatorname{null}(P)=\\operatorname{range}(I-P)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(P\\) is an orthogonal projector if and only if it is Hermitian.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V \\subset \\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Define a normal matrix and prove that the following are equivalent.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(A\\) is normal.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(A\\) is unitarily diagonalizable.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(\\lVert A\\rVert_F=(\\sum |\\lambda_i|^2)^{1/2}\\), where \\(\\{\\lambda_i\\}\\) are the eigenvalues of \\(A\\) counted with multiplicity.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(\\lVert A\\rVert_F=\\operatorname{trace}(A^*A)^{1/2}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(\\lVert A\\rVert_F=(\\sum \\sigma_i^2)^{1/2}\\), where \\(\\{\\sigma_i\\}\\) are the singular values of \\(A\\) counted with multiplicity.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "If both \\(A\\) and \\(U\\) are in \\(\\mathbb{C}^{m,m}\\) and \\(U\\) is unitary, prove that \\(\\lVert UA\\rVert_F=\\lVert AU\\rVert_F=\\lVert A\\rVert_F\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define a normal matrix and prove that the following are equivalent.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(A\\) is normal.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(A\\) is unitarily diagonalizable.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(\\lVert A\\rVert_F=(\\sum |\\lambda_i|^2)^{1/2}\\), where \\(\\{\\lambda_i\\}\\) are the eigenvalues of \\(A\\) counted with multiplicity.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

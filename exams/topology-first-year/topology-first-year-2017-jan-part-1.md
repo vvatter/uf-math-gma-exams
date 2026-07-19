@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2017, Part 1
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Show that the set of functions \(f:\mathbb{N}\to\mathbb{Z}\) that are eventually zero is countable. A function \(f:\mathbb{N}\to\mathbb{Z}\) is called eventually zero if there is \(N\) such that \(f(n)=0\) for all \(n\ge N\).
 
@@ -15,9 +15,11 @@
 * (a) Does there exist a continuous surjective map from the 2-sphere \(S^2\) to the interval \((0,1)\)?
 * (b) Does there exist a continuous injective map from the 2-sphere \(S^2\) to the interval \((0,1)\)?
 
-**5.** Let \(f:X\to X\) be a map of a compact metric space to itself that satisfies the following condition: \(d(f(x),f(y))<d(x,y)\) for all \(x\ne y\).
+**5.** Let \(f:X\to X\) be a map of a compact metric space to itself that satisfies the following condition: \(d(f(x),f(y))<d(x,y)\) whenever \(x\ne y\).
 * (a) Prove that \(f\) is continuous.
 * (b) Show that \(f\) has a fixed point and the fixed point is unique.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Intermediate Value Theorem.
 

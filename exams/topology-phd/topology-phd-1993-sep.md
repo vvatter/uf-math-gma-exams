@@ -1,6 +1,6 @@
 # Topology, PhD exam, September 1993
 
-*Answer questions 1–4 without giving proofs. Answer questions 5–10, giving proofs or counterexamples.*
+*Answer the following questions without giving proofs.*
 
 **1.** Let \(X \subset Y\).
 * a) What does it mean for \(X\) to be a retract of \(Y\)?
@@ -13,6 +13,8 @@
 * b) connected
 
 **4.** State the Brouwer fixed point theorem.
+
+*Answer the following questions, giving proofs or counterexamples.*
 
 **5.** Let \(p:X \to Y\) be a \(d\)-sheeted covering projection, where \(X\) and \(Y\) are finite simplicial complexes. Show that \(\chi(X)=d\cdot\chi(Y)\).
 

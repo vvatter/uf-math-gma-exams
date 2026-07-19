@@ -1,6 +1,6 @@
 # Topology, first year exam, May 2013, Part 1
 
-*Work problems 1–6 and show all work. Support all statements to the best of your ability. Answer problems 7–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Prove that the spaces \([0,1]\) and \([0,1)\) are not homeomorphic.
 
@@ -19,6 +19,8 @@
 * (d) \(X=\mathbb{R}_\ell\times\mathbb{R}_\ell\)?
 
 **6.** Does there exist a covering map \(p:\mathbb{R}^2\to\mathbb{RP}^2\) from the Euclidean plane to the projective plane?
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **7.** State the Tietze Extension Theorem.
 

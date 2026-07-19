@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-2016-jan-part-2",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,43 +7,56 @@
   "month": "january",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2016_01.pdf",
-  "instructions": "You must show all your work as neatly and clearly as possible and indicate the final answer clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "A fourth degree polynomial \\(P(x)\\) satisfies \\(\\Delta^4P(0)=24\\), \\(\\Delta^3P(0)=6\\), and \\(\\Delta^2P(0)=0\\), where \\(\\Delta P(x)=P(x+1)-P(x)\\). Compute \\(\\Delta^2P(10)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "You must show all your work as neatly and clearly as possible and indicate the final answer clearly."
     },
     {
-      "number": 2,
-      "text": "Consider the fixed point iteration\n\\[\nx_{n+1}=\\phi(x_n),\\qquad n=0,1,2,\\ldots\n\\]\nwhere\n\\[\n\\phi(x)=Ax+Bx^2+Cx^3.\n\\]\nGiven a positive number \\(\\alpha\\), determine the constants \\(A,B,C\\) such that the iteration converges locally to \\(1/\\alpha\\) with order \\(p=3\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "A fourth degree polynomial \\(P(x)\\) satisfies \\(\\Delta^4P(0)=24\\), \\(\\Delta^3P(0)=6\\), and \\(\\Delta^2P(0)=0\\), where \\(\\Delta P(x)=P(x+1)-P(x)\\). Compute \\(\\Delta^2P(10)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "This problem has the following parts:",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Find \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) so that the quadrature formula has a maximum degree of precision. What is the exact degree of precision of this quadrature formula?\n\\[\n\\int_0^2 f(x)\\,dx\\approx \\alpha(f(0)+f(2))+\\beta(f'(0)-f'(2))+\\gamma(f''(0)-f''(2)).\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Suggest your own quadrature formula for the integral\n\\[\n\\int_0^2 f(x)\\,dx.\n\\]\nYour formula should have expected degree of precision at least four (you don’t have to compute to demonstrate that).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Consider the fixed point iteration\n\\[\nx_{n+1}=\\phi(x_n),\\qquad n=0,1,2,\\ldots\n\\]\nwhere\n\\[\n\\phi(x)=Ax+Bx^2+Cx^3.\n\\]\nGiven a positive number \\(\\alpha\\), determine the constants \\(A,B,C\\) such that the iteration converges locally to \\(1/\\alpha\\) with order \\(p=3\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "For the function\n\\[\nf(x)=\\sqrt[m]{|x|},\\qquad m\\ne\\frac12,\n\\]\nin the interval \\([-1,1]\\), find the polynomial of minimax approximation of degree 2. What is the minimax error? What happens if \\(m=\\frac12\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "This problem has the following parts:",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Find \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\) so that the quadrature formula has a maximum degree of precision. What is the exact degree of precision of this quadrature formula?\n\\[\n\\int_0^2 f(x)\\,dx\\approx \\alpha(f(0)+f(2))+\\beta(f'(0)-f'(2))+\\gamma(f''(0)-f''(2)).\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suggest your own quadrature formula for the integral\n\\[\n\\int_0^2 f(x)\\,dx.\n\\]\nYour formula should have expected degree of precision at least four (you don’t have to compute to demonstrate that).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Prove that Gaussian quadrature formula (for any \\(n\\)) in the interval \\([-1,1]\\) and with weight \\(w(x)=1\\) is exact for all odd functions.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For the function\n\\[\nf(x)=\\sqrt[m]{|x|},\\qquad m\\ne\\frac12,\n\\]\nin the interval \\([-1,1]\\), find the polynomial of minimax approximation of degree 2. What is the minimax error? What happens if \\(m=\\frac12\\)?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Prove that Gaussian quadrature formula (for any \\(n\\)) in the interval \\([-1,1]\\) and with weight \\(w(x)=1\\) is exact for all odd functions.",
+        "subparts": []
+      }
     }
   ]
 }

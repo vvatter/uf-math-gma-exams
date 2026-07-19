@@ -1,6 +1,6 @@
 # Topology, PhD exam, September 2000
 
-*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** State and prove the Brouwer Fixed Point Theorem. You may assume some homology.
 
@@ -10,7 +10,9 @@
 
 **4.** Suppose that \(f,g:X\to P\) are two maps and that \(P\) is a compact connected polyhedron. Show that there is an \(\epsilon>0\) such that if \(d(f(x),g(x))<\epsilon\) for all \(x\in X\), then \(f\) and \(g\) are homotopic.
 
-**5.** Show that \(\pi_1(S^1)\simeq\mathbb{Z}\), where \(\mathbb{Z}\) is the group of integers and \(S^1\) is the circle.
+**5.** Show that \(\pi_1(S^1)\cong Z\), where \(Z\) is the group of integers and \(S^1\) is the circle.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Define retraction and deformation retraction.
 

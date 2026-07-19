@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-linear-algebra-first-year-2018-jan",
   "subject": "First Year Numerical Linear Algebra",
   "subject_tag": "numerical-linear-algebra-first-year",
@@ -7,96 +7,109 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAD6406-January-2018.pdf",
-  "instructions": "Do 4 (four) problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume \\(A \\in \\mathbb{R}^{m,n}\\) with \\(m \\geq n\\), \\(\\operatorname{rank}(A)=n\\), and \\(b \\in \\mathbb{R}^m\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define the least squares solution to \\(Ax=b\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Derive the normal equations for the least squares problem.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that \\(A^T A\\) is invertible.",
-          "subparts": []
-        },
-        {
-          "label": "(d)",
-          "text": "Prove that the unique solution to the least squares problem is \\((A^T A)^{-1}A^T b\\).",
-          "subparts": []
-        },
-        {
-          "label": "(e)",
-          "text": "Describe how to solve the least squares problem using the QR decomposition of \\(A\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
     },
     {
-      "number": 2,
-      "text": "Define a normal matrix and prove that the following are equivalent.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(A\\) is normal.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(\\lVert Ax\\rVert_2=\\lVert A^*x\\rVert_2\\) for every \\(x\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(A\\) is unitarily diagonalizable.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A \\in \\mathbb{R}^{m,n}\\) with \\(m \\geq n\\), \\(\\operatorname{rank}(A)=n\\), and \\(b \\in \\mathbb{R}^m\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define the least squares solution to \\(Ax=b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Derive the normal equations for the least squares problem.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\(A^T A\\) is invertible.",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Prove that the unique solution to the least squares problem is \\((A^T A)^{-1}A^T b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(e)",
+            "text": "Describe how to solve the least squares problem using the QR decomposition of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Assume \\(A \\in \\mathbb{R}^{m,m}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(\\langle x,y\\rangle_A=x^*Ay\\) is an inner product on \\(\\mathbb{R}^m\\) if and only if \\(A\\) is symmetric and positive definite.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Assume now that \\(A\\) is symmetric and positive definite. If \\(x_*\\) is the solution to \\(Ax=b\\) and \\(\\{p_1,\\ldots,p_m\\}\\) is an orthonormal basis for \\(\\mathbb{R}^m\\) with respect to \\(\\langle\\ ,\\ \\rangle_A\\) and \\(x_*=\\sum c_i p_i\\), give a formula for the \\(c_i\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Define a normal matrix and prove that the following are equivalent.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(A\\) is normal.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(\\lVert Ax\\rVert_2=\\lVert A^*x\\rVert_2\\) for every \\(x\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(A\\) is unitarily diagonalizable.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V \\subset \\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A \\in \\mathbb{R}^{m,m}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(\\langle x,y\\rangle_A=x^*Ay\\) is an inner product on \\(\\mathbb{R}^m\\) if and only if \\(A\\) is symmetric and positive definite.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Assume now that \\(A\\) is symmetric and positive definite. If \\(x_*\\) is the solution to \\(Ax=b\\) and \\(\\{p_1,\\ldots,p_m\\}\\) is an orthonormal basis for \\(\\mathbb{R}^m\\) with respect to \\(\\langle\\ ,\\ \\rangle_A\\) and \\(x_*=\\sum c_i p_i\\), give a formula for the \\(c_i\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Assume \\(A \\in \\mathbb{C}^{m,m}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that \\(A\\) has a Schur decomposition.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "If \\(q_1,\\ldots,q_n\\) is an orthonormal basis for the subspace \\(V \\subset \\mathbb{C}^m\\) with \\(m>n\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Assume \\(A \\in \\mathbb{C}^{m,m}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(A\\) has a Schur decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

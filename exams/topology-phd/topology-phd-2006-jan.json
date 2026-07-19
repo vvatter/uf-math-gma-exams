@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-2006-jan",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,82 +7,119 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2006_01.pdf",
-  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Describe all metric spaces whose completions are compact.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "Describe (with a proof) all connected subsets of the real line \\(\\mathbb R\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Describe all metric spaces whose completions are compact.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(X\\) be a connected normal space having more than one point. Can \\(X\\) be countable?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Describe (with a proof) all connected subsets of the real line \\(\\mathbb{R}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Show that the 2-torus with a deleted point \\(T\\setminus\\{x_0\\}\\) is not a retract of \\(T\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be a connected normal space having more than one point. Can \\(X\\) be countable?",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Prove that \\(\\mathbb R^n\\) is not homeomorphic to \\(\\mathbb R^m\\) for \\(n\\ne m\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the 2-torus with a deleted point \\(T\\setminus\\{x_0\\}\\) is not a retract of \\(T\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Define the degree of a map. Prove that, given a closed oriented \\(n\\)-dimensional manifold \\(M\\) and an integer number \\(d\\), there exists a map \\(f:M\\to S^n\\) of degree \\(d\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that \\(\\mathbb{R}^n\\) is not homeomorphic to \\(\\mathbb{R}^m\\) for \\(n\\ne m\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Find a degree of the map \\(f:T\\to T\\), \\(f(x)=x^k\\), where \\(T=S^1\\times S^1\\) is the 2-dimensional torus and \\(x^k=x\\cdots x\\) is the \\(k\\)th power in the group \\(S^1\\times S^1\\): \\(x^k=(z_1^k,z_2^k)\\) for \\(x=(z_1,z_2)\\), \\(z_1,z_2\\in S^1\\subset\\mathbb C\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "State the Seifert–van Kampen Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define the degree of a map. Prove that, given a closed oriented \\(n\\)-dimensional manifold \\(M\\) and an integer number \\(d\\), there exists a map \\(f:M\\to S^n\\) of degree \\(d\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Show that two closed orientable surfaces of different genera are not homeomorphic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Find a degree of the map \\(f:T\\to T\\), \\(f(x)=x^k\\), where \\(T=S^1\\times S^1\\) is the 2-dimensional torus and \\(x^k=x\\cdots x\\) is the kth power in the group \\(S^1\\times S^1\\): \\(x^k=(z_1^k,z_2^k)\\) for \\(x=(z_1,z_2)\\), \\(z_1,z_2\\in S^1\\subset\\mathbb{C}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State the Universal Coefficient Theorem relating integral homology with integral cohomology.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Seifert–van Kampen Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "Find the fundamental group and homology groups of the Klein bottle.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that two closed orientable surfaces of different genera are not homeomorphic.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Formulate the Theorem on Invariance of Domain.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Universal Coefficient Theorem relating integral homology with integral cohomology.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Let \\(X\\) be a compact Hausdorff topological space. Describe all compact subsets of the space \\(C(X,\\mathbb R)\\) of continuous functions \\(X\\to\\mathbb R\\) in uniform topology.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Find the fundamental group and homology groups of the Klein bottle.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Define (or describe) the Stone–Čech compactification \\(\\beta X\\) of a topological space \\(X\\). Show that \\(\\beta\\mathbb Z\\) is not metrizable (here \\(\\mathbb Z\\) denotes the set of integer numbers in discrete topology.)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Formulate the Theorem on Invariance of Domain.",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Give a definition of \\(CW\\)-space. State the Cellular Approximation Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be a compact Hausdorff topological space. Describe all compact subsets of the space \\(C(X,\\mathbb{R})\\) of continuous functions \\(X\\to\\mathbb{R}\\) in uniform topology.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define (or describe) the Stone–Čech compactification \\(\\beta X\\) of a topological space \\(X\\). Show that \\(\\beta\\mathbb{Z}\\) is not metrizable (here \\(\\mathbb{Z}\\) denotes the set of integer numbers in discrete topology).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Give a definition of CW-space. State the Cellular Approximation Theorem.",
+        "subparts": []
+      }
     }
   ]
 }

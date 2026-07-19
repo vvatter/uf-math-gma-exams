@@ -1,6 +1,6 @@
 # Topology, first year exam, May 2025, Part 1
 
-*For problems 1–5, answer the following problems and show all your work. Support all statements to the best of your ability. For problems 6–15, answer the following with complete definitions or statements or short proofs.*
+*Answer the following problems and show all your work. Support all statements to the best of your ability.*
 
 **1.** Show that for every set \(X\), there is no function \(f:X\to 2^X\) such that \(f\) is onto. Note that \(2^X\) is the power set on \(X\) and is also denoted by \(\mathcal{P}(X)\).
 
@@ -15,6 +15,8 @@
 **4.** Let \(f,g:X\to Y\) be continuous maps to a Hausdorff space. Prove that the set \(\{x\mid f(x)=g(x)\}\) is a closed subset of \(X\).
 
 **5.** Prove that if \(X\) is a compact Hausdorff space, then \(X\) is a regular space.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Prove that \(\{(a,b]\mid a<b\}\) is a basis for a topology on \(\mathbb{R}\).
 

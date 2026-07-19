@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2018-jan-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,65 +7,78 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA-5528-January-2018.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\((a_n:n\\ge 0)\\) be a bounded real sequence. For each \\(N\\ge 0\\) define \\(\\bar a_N=\\sup\\{a_n:n\\ge N\\}\\) and let \\(s=\\inf\\{\\bar a_N:N\\ge 0\\}\\). Prove:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "if \\(s<t\\) then \\(a_n<t\\) eventually, in the sense \\((\\exists N)(\\forall n\\ge N)(a_n<t)\\);",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "if \\(s>r\\) then \\(a_n>r\\) frequently, in the sense \\((\\forall N)(\\exists n\\ge N)(a_n>r)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Let \\(X\\) be a metric space. Assume that there exists \\(\\delta>0\\) such that the distance between distinct points of \\(X\\) is always \\(\\delta\\) or greater. Determine precisely which subsets of \\(X\\) are open, which closed, which compact and which connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((a_n:n\\ge 0)\\) be a bounded real sequence. For each \\(N\\ge 0\\) define \\(\\bar a_N=\\sup\\{a_n:n\\ge N\\}\\) and let \\(s=\\inf\\{\\bar a_N:N\\ge 0\\}\\). Prove:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "if \\(s<t\\) then \\(a_n<t\\) eventually, in the sense \\((\\exists N)(\\forall n\\ge N)(a_n<t)\\);",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "if \\(s>r\\) then \\(a_n>r\\) frequently, in the sense \\((\\forall N)(\\exists n\\ge N)(a_n>r)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f:X\\to\\mathbb{R}\\) have the property that if \\(a\\) is any real number then \\(U(a)=\\{x:f(x)<a\\}\\) is an open subset of the compact metric space \\(X\\).",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Prove that \\(f\\) is bounded above on \\(X\\).",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Prove that \\(s=\\sup\\{f(x):x\\in X\\}\\) is a value of \\(f\\). For (ii): suppose \\(s\\) not a value and consider the function \\(F=1/(s-f)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be a metric space. Assume that there exists \\(\\delta>0\\) such that the distance between distinct points of \\(X\\) is always \\(\\delta\\) or greater. Determine precisely which subsets of \\(X\\) are open, which closed, which compact and which connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f:X\\to Y\\) be a bijection between metric spaces; assume that \\(Y\\) is complete and that \\(f^{-1}\\) is continuous.",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show that if \\(f\\) is uniformly continuous then \\(X\\) is complete.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Show that if \\(f\\) is only continuous then \\(X\\) can fail to be complete.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:X\\to\\mathbb{R}\\) have the property that if \\(a\\) is any real number then \\(U(a)=\\{x:f(x)<a\\}\\) is an open subset of the compact metric space \\(X\\).",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that \\(f\\) is bounded above on \\(X\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Prove that \\(s=\\sup\\{f(x):x\\in X\\}\\) is a value of \\(f\\). For (ii): suppose \\(s\\) not a value and consider the function \\(F=1/(s-f)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(f:(a,b)\\to\\mathbb{R}\\) be differentiable and assume that its derivative \\(f'\\) is bounded. Prove that the right-hand limit \\(\\lim_{t\\to a+}f(t)\\) exists.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:X\\to Y\\) be a bijection between metric spaces; assume that \\(Y\\) is complete and that \\(f^{-1}\\) is continuous.",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(f\\) is uniformly continuous then \\(X\\) is complete.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\(f\\) is only continuous then \\(X\\) can fail to be complete.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:(a,b)\\to\\mathbb{R}\\) be differentiable and assume that its derivative \\(f'\\) is bounded. Prove that the right-hand limit \\(\\lim_{t\\to a+}f(t)\\) exists.",
+        "subparts": []
+      }
     }
   ]
 }

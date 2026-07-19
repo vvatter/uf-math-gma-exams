@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "complex-analysis-phd-1992-sep",
   "subject": "PhD Complex Analysis",
   "subject_tag": "complex-analysis-phd",
@@ -7,90 +7,111 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_ComplexAnalysis_1992_09.pdf",
-  "instructions": "Present the solutions with the necessary details, so the partial credit can be properly assessed. Do all 9 problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Construct a conformal map which maps the vertical strip \\(0<\\operatorname{Re} z<1\\) onto the upper half-plane.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Present the solutions with the necessary details, so the partial credit can be properly assessed. Do all 9 problems."
     },
     {
-      "number": 2,
-      "text": "The function\n\\[\nf(z)=\\sum_{n=1}^{\\infty}\\frac{z^n}{n^2}\n\\]\nis analytic in the unit circle \\(|z|<1\\). Can it be continued analytically beyond the circle \\(|z|=1\\)? Discuss the nature of the singularities (if any) on \\(|z|=1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Construct a conformal map which maps the vertical strip \\(0<\\operatorname{Re} z<1\\) onto the upper half-plane.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that the function\n\\[\nf(z)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n^z}\n\\]\nis analytic in \\(\\operatorname{Re} z>0\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that it can be analytically continued to the entire complex plane.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "The function\n\\[\nf(z)=\\sum_{n=1}^{\\infty}\\frac{z^n}{n^2}\n\\]\nis analytic in the unit circle \\(|z|<1\\). Can it be continued analytically beyond the circle \\(|z|=1\\)? Discuss the nature of the singularities (if any) on \\(|z|=1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f(z)\\) be analytic in the disc \\(|z|\\leq 1\\). If\n\\[\n|f(z)|\\leq 1 \\quad\\text{for }|z|\\leq 1,\n\\]\nprove that\n\\[\n\\frac{|f'(z)|}{1-|f(z)|^2}\\leq\\frac{1}{1-|z|^2}\\quad\\text{for }|z|\\leq 1.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that the function\n\\[\nf(z)=\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n^z}\n\\]\nis analytic in \\(\\operatorname{Re} z>0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that it can be analytically continued to the entire complex plane.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(F(z)\\) be an entire function with the property that \\(\\operatorname{Re}F(z)\\) is bounded from above. Prove that \\(F(z)\\) is constant.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f(z)\\) be analytic in the disc \\(|z|\\leq 1\\). If\n\\[\n|f(z)|\\leq 1 \\quad\\text{for }|z|\\leq 1,\n\\]\nprove that\n\\[\n\\frac{|f'(z)|}{1-|f(z)|^2}\\leq\\frac{1}{1-|z|^2}\\quad\\text{for }|z|\\leq 1.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\Omega\\) be an open connected subset of \\(\\mathbb{C}\\). Let \\(\\{f_n\\}\\) be a sequence of one-to-one analytic functions on \\(\\Omega\\), and assume that \\(\\{f_n\\}\\) converges uniformly on any compact subset of \\(\\Omega\\) to a function \\(f\\). Show that \\(f\\) is either one-to-one or a constant, and show that both possibilities can occur.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F(z)\\) be an entire function with the property that \\(\\operatorname{Re}F(z)\\) is bounded from above. Prove that \\(F(z)\\) is constant.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Suppose that \\(f\\) is entire, of order \\(\\rho\\). Let \\(n(r)\\) be the number of zeros (counting the multiplicity) of \\(f\\) in the disk \\(\\{z:|z|\\leq r\\}\\). Prove that\n\\[\n\\limsup_{r\\to\\infty}\\frac{\\log n(r)}{\\log r}\\leq\\rho,\n\\]\nand show, by examples, that equality can happen.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\Omega\\) be an open connected subset of \\(\\mathbb{C}\\). Let \\(\\{f_n\\}\\) be a sequence of one-to-one analytic functions on \\(\\Omega\\), and assume that \\(\\{f_n\\}\\) converges uniformly on any compact subset of \\(\\Omega\\) to a function \\(f\\). Show that \\(f\\) is either one-to-one or a constant, and show that both possibilities can occur.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "The expression\n\\[\n\\{f,z\\}=\\frac{f'''(z)}{f'(z)}-\\frac{3}{2}\\left\\{\\frac{f''(z)}{f'(z)}\\right\\}^2\n\\]\nis called the Schwarzian derivative of \\(f\\). Prove the following:",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "If \\(f(z)=a(z-z_0)^m+\\cdots\\), where \\(m\\) is an integer, then\n\\[\n\\{f,z\\}=A(z-z_0)^{-2}+\\cdots.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Find the value of \\(A\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "What can you say about \\(\\{f,z\\}\\) at the point \\(z_0\\) if \\(m=\\pm1\\)?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(f\\) is entire, of order \\(\\rho\\). Let \\(n(r)\\) be the number of zeros (counting the multiplicity) of \\(f\\) in the disk \\(\\{z:|z|\\leq r\\}\\). Prove that\n\\[\n\\limsup_{r\\to\\infty}\\frac{\\log n(r)}{\\log r}\\leq\\rho,\n\\]\nand show, by examples, that equality can happen.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Evaluate\n\\[\n\\frac{1}{2\\pi i}\\int_{2-i\\infty}^{2+i\\infty}\\frac{x^z}{z(z+1)}\\,dz\n\\]\nfor \\(x>1\\).\n\nHint: Write the above integral as \\(\\lim_{t\\to\\infty}I(t)\\), where\n\\[\nI(t)=\\frac{1}{2\\pi i}\\int_{2-it}^{2+it}\\frac{x^z}{z(z+1)}\\,dz,\n\\]\nand evaluate \\(I(t)\\) by using the residue theorem on the rectangle \\(2-it\\), \\(2+it\\), \\(b+it\\), and \\(b-it\\), where \\(b\\) is a large negative number.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "What happens if \\(0<x<1\\)?",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "The expression\n\\[\n\\{f,z\\}=\\frac{f'''(z)}{f'(z)}-\\frac{3}{2}\\left\\{\\frac{f''(z)}{f'(z)}\\right\\}^2\n\\]\nis called the Schwarzian derivative of \\(f\\). Prove the following:",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If \\(f(z)=a(z-z_0)^m+\\cdots\\), where \\(m\\) is an integer, then\n\\[\n\\{f,z\\}=A(z-z_0)^{-2}+\\cdots.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Find the value of \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "What can you say about \\(\\{f,z\\}\\) at the point \\(z_0\\) if \\(m=\\pm1\\)?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Evaluate\n\\[\n\\frac{1}{2\\pi i}\\int_{2-i\\infty}^{2+i\\infty}\\frac{x^z}{z(z+1)}\\,dz\n\\]\nfor \\(x>1\\).\n\nHint: Write the above integral as \\(\\lim_{t\\to\\infty}I(t)\\), where\n\\[\nI(t)=\\frac{1}{2\\pi i}\\int_{2-it}^{2+it}\\frac{x^z}{z(z+1)}\\,dz,\n\\]\nand evaluate \\(I(t)\\) by using the residue theorem on the rectangle \\(2-it\\), \\(2+it\\), \\(b+it\\), and \\(b-it\\), where \\(b\\) is a large negative number.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "What happens if \\(0<x<1\\)?",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

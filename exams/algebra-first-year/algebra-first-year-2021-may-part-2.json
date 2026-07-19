@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2021-may-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,64 +7,79 @@
   "month": "may",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2021_05.pdf",
-  "instructions": "Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove the Chinese remainder theorem: Let \\(R\\) be a commutative ring with \\(1\\) and let \\(I,J\\) be ideals in \\(R\\) such that \\(I+J=R\\). Then \\(IJ=I\\cap J\\) and there is a ring isomorphism \\(R/IJ\\cong(R/I)\\times(R/J)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}]=\\{a+b\\sqrt{-2}:a,b\\in\\mathbb{Z}\\}\\) is a Euclidean domain with respect to the field norm\n\\[\nN:\\mathbb{Z}[\\sqrt{-2}]\\to\\mathbb{Z}_{\\geq 0},\\qquad N(a+b\\sqrt{-2})=a^2+2b^2.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove the Chinese remainder theorem: Let \\(R\\) be a commutative ring with \\(1\\) and let \\(I,J\\) be ideals in \\(R\\) such that \\(I+J=R\\). Then \\(IJ=I\\cap J\\) and there is a ring isomorphism \\(R/IJ\\cong(R/I)\\times(R/J)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Prove that each of the following is irreducible in the indicated ring.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(2X^3+2X^2+3X+1\\in\\mathbb{Q}[X]\\)",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(Y^3+X^2+XY-Y\\in\\mathbb{Q}[X,Y]\\)",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(X^4-X^3+4X^2-15\\in\\mathbb{Z}[X]\\)",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}]=\\{a+b\\sqrt{-2}:a,b\\in\\mathbb{Z}\\}\\) is a Euclidean domain with respect to the field norm\n\\[\nN:\\mathbb{Z}[\\sqrt{-2}]\\to\\mathbb{Z}_{\\geq 0},\\qquad N(a+b\\sqrt{-2})=a^2+2b^2.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(F\\) be a field and let \\(V\\) be a vector space over \\(F\\). Let \\(S\\subset V\\) be a set which spans \\(V\\). Use Zorn’s lemma to prove that \\(V\\) has a basis which is contained in \\(S\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that each of the following is irreducible in the indicated ring.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(2X^3+2X^2+3X+1\\in\\mathbb{Q}[X]\\)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(Y^3+X^2+XY-Y\\in\\mathbb{Q}[X,Y]\\)",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(X^4-X^3+4X^2-15\\in\\mathbb{Z}[X]\\)",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Determine the number of similarity classes of matrices \\(A\\in\\mathrm{M}_5(\\mathbb{C})\\) satisfying \\(A^3=0\\). Give a representative for each similarity class in Jordan canonical form.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F\\) be a field and let \\(V\\) be a vector space over \\(F\\). Let \\(S\\subset V\\) be a set which spans \\(V\\). Use Zorn’s lemma to prove that \\(V\\) has a basis which is contained in \\(S\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \\(L/K\\) be a field extension of degree \\(5\\) and let \\(f(X)\\in K[X]\\) have degree \\(4\\). Prove that if \\(\\alpha\\in L\\) is a root of \\(f(X)\\), then \\(\\alpha\\in K\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of a field extension \\(L/K\\) of degree \\(4\\), a polynomial \\(f(X)\\in K[X]\\) of degree \\(5\\), and a root \\(\\alpha\\) of \\(f(X)\\) such that \\(\\alpha\\in L\\) but \\(\\alpha\\notin K\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Determine the number of similarity classes of matrices \\(A\\in\\mathrm{M}_5(\\mathbb{C})\\) satisfying \\(A^3=0\\). Give a representative for each similarity class in Jordan canonical form.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(L/K\\) be a field extension of degree \\(5\\) and let \\(f(X)\\in K[X]\\) have degree \\(4\\). Prove that if \\(\\alpha\\in L\\) is a root of \\(f(X)\\), then \\(\\alpha\\in K\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a field extension \\(L/K\\) of degree \\(4\\), a polynomial \\(f(X)\\in K[X]\\) of degree \\(5\\), and a root \\(\\alpha\\) of \\(f(X)\\) such that \\(\\alpha\\in L\\) but \\(\\alpha\\notin K\\).",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

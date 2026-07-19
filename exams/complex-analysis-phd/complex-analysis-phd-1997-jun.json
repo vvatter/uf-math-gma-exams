@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "complex-analysis-phd-1997-jun",
   "subject": "PhD Complex Analysis",
   "subject_tag": "complex-analysis-phd",
@@ -7,68 +7,89 @@
   "month": "june",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_ComplexAnalysis_1997_06.pdf",
-  "instructions": "Do each of the problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Evaluate the integral \\(\\displaystyle \\int_0^\\infty \\frac{x^{a-1}}{1+x}\\,dx\\), \\(0<a<1\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do each of the problems."
     },
     {
-      "number": 2,
-      "text": "Suppose \\(\\Omega=\\{z:-1<\\operatorname{Re}z<1\\}\\). Find an explicit formula for the 1-1 conformal mapping \\(f\\) of \\(\\Omega\\) onto \\(\\{z:|z|<1\\}\\) for which \\(f(0)=0\\) and \\(f'(0)>0\\). Compute \\(f'(0)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Evaluate the integral \\(\\displaystyle \\int_0^\\infty \\frac{x^{a-1}}{1+x}\\,dx\\), \\(0<a<1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(F\\) be the class of all analytic functions \\(f\\) in \\(\\mathbb D=\\{z:|z|<1\\}\\) for which\n\\[\n\\iint_{\\mathbb D}|f(z)|^2\\,dx\\,dy\\leq 1.\n\\]\nIs this a normal family? Justify your answer.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(\\Omega=\\{z:-1<\\operatorname{Re}z<1\\}\\). Find an explicit formula for the 1-1 conformal mapping \\(f\\) of \\(\\Omega\\) onto \\(\\{z:|z|<1\\}\\) for which \\(f(0)=0\\) and \\(f'(0)>0\\). Compute \\(f'(0)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(g\\) be a polynomial. Show that\n\\[\n2\\iint_{\\mathbb D}(1-|z|^2)|g'(z)|^2\\,dx\\,dy\\leq \\int_0^{2\\pi}|g(e^{i\\theta})|^2\\,d\\theta,\n\\]\nwhere \\(\\mathbb D=\\{z:|z|<1\\}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(F\\) be the class of all analytic functions \\(f\\) in \\(\\mathbb D=\\{z:|z|<1\\}\\) for which\n\\[\n\\iint_{\\mathbb D}|f(z)|^2\\,dx\\,dy\\leq 1.\n\\]\nIs this a normal family? Justify your answer.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Give a definition of subharmonic functions.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "If \\(f\\) is analytic in \\(\\Omega\\), prove that \\(\\ln(1+|f(z)|^2)\\) is subharmonic.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Let \\(f\\) be analytic in \\(\\Omega\\). Is \\(\\ln|f(z)|\\) subharmonic in \\(\\Omega\\)? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(g\\) be a polynomial. Show that\n\\[\n2\\iint_{\\mathbb D}(1-|z|^2)|g'(z)|^2\\,dx\\,dy\\leq \\int_0^{2\\pi}|g(e^{i\\theta})|^2\\,d\\theta,\n\\]\nwhere \\(\\mathbb D=\\{z:|z|<1\\}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Construct an entire function whose zero set is the set of Gaussian integers \\(a+bi\\), where \\(a,b\\in\\mathbb Z\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Give a definition of subharmonic functions.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(f\\) is analytic in \\(\\Omega\\), prove that \\(\\ln(1+|f(z)|^2)\\) is subharmonic.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(f\\) be analytic in \\(\\Omega\\). Is \\(\\ln|f(z)|\\) subharmonic in \\(\\Omega\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 7,
-      "text": "For \\(|z|<1\\), define \\(f(z)\\) by\n\\[\nf(z)=z+\\frac{z^3}{3}+\\frac{z^5}{5}+\\frac{z^7}{7}+\\cdots.\n\\]\nExtend \\(f(z)\\) analytically in a suitable way so that it can be defined at \\(z=i\\). Using your analytic continuation, determine the radius of convergence of the Taylor series of \\(f\\) with \\(z=i\\) as center.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Construct an entire function whose zero set is the set of Gaussian integers \\(a+bi\\), where \\(a,b\\in\\mathbb Z\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Show \\(ze^z=1\\) has infinitely many solutions.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For \\(|z|<1\\), define \\(f(z)\\) by\n\\[\nf(z)=z+\\frac{z^3}{3}+\\frac{z^5}{5}+\\frac{z^7}{7}+\\cdots.\n\\]\nExtend \\(f(z)\\) analytically in a suitable way so that it can be defined at \\(z=i\\). Using your analytic continuation, determine the radius of convergence of the Taylor series of \\(f\\) with \\(z=i\\) as center.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Define the order and genus of an entire function. What is the relation between the order and genus? Find the order of \\(\\sin z\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show \\(ze^z=1\\) has infinitely many solutions.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Define the order and genus of an entire function. What is the relation between the order and genus? Find the order of \\(\\sin z\\).",
+        "subparts": []
+      }
     }
   ]
 }

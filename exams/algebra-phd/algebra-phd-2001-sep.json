@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-2001-sep",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,95 +7,120 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2001_09.pdf",
-  "instructions": "Do seven of the following eleven problems. Please do not turn in more than seven problems. Read all the problems before starting to do any of them. The problems do not have to be attempted in the order they are listed. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \\(\\mathbb Z\\), resp. \\(\\mathbb Q\\), \\(\\mathbb C\\), is the set of all integers, resp. of all rational numbers, of all complex numbers.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show that any finite group of order \\(280\\) is solvable. You may assume that every group of order \\(p^a q^b\\), where \\(p\\) and \\(q\\) are primes, is solvable.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do seven of the following eleven problems. Please do not turn in more than seven problems. Read all the problems before starting to do any of them. The problems do not have to be attempted in the order they are listed. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \\(\\mathbb Z\\), resp. \\(\\mathbb Q\\), \\(\\mathbb C\\), is the set of all integers, resp. of all rational numbers, of all complex numbers."
     },
     {
-      "number": 2,
-      "text": "Prove or disprove the following statement: “Let \\(G\\) be a group and \\(H\\) a normal subgroup of \\(G\\). Suppose that \\(H\\) and \\(G/H\\) are both nilpotent. Then \\(G\\) is nilpotent.”",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that any finite group of order \\(280\\) is solvable. You may assume that every group of order \\(p^a q^b\\), where \\(p\\) and \\(q\\) are primes, is solvable.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(A, B\\) be two \\(3 \\times 3\\) matrices over a field \\(F\\). Suppose that \\(A^3=B^3=0\\), and \\(\\operatorname{rank}(A)=\\operatorname{rank}(B)\\). Prove that \\(A\\) is similar to \\(B\\). Is the statement true for \\(4 \\times 4\\) matrices?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove or disprove the following statement: “Let \\(G\\) be a group and \\(H\\) a normal subgroup of \\(G\\). Suppose that \\(H\\) and \\(G/H\\) are both nilpotent. Then \\(G\\) is nilpotent.”",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(M\\) be the ring of \\(2 \\times 2\\) matrices over \\(\\mathbb Q\\) (under the usual matrix addition and multiplication). Let \\(A\\in M\\) be a matrix whose characteristic polynomial is not irreducible over \\(\\mathbb Q\\). Show that the subring \\(C_M(A):=\\{X\\in M\\mid XA=AX\\}\\) is not a field.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A, B\\) be two \\(3 \\times 3\\) matrices over a field \\(F\\). Suppose that \\(A^3=B^3=0\\), and \\(\\operatorname{rank}(A)=\\operatorname{rank}(B)\\). Prove that \\(A\\) is similar to \\(B\\). Is the statement true for \\(4 \\times 4\\) matrices?",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(A\\) be a commutative ring with identity. Suppose that \\(M\\) and \\(N\\) are free \\(A\\)-modules of rank \\(m\\) and \\(n\\), respectively. Prove that if \\(M\\simeq N\\), then \\(m=n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(M\\) be the ring of \\(2 \\times 2\\) matrices over \\(\\mathbb Q\\) (under the usual matrix addition and multiplication). Let \\(A\\in M\\) be a matrix whose characteristic polynomial is not irreducible over \\(\\mathbb Q\\). Show that the subring \\(C_M(A):=\\{X\\in M\\mid XA=AX\\}\\) is not a field.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(R\\) be a ring with identity. Prove that a direct sum of left \\(R\\)-modules is projective if and only if each summand is projective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a commutative ring with identity. Suppose that \\(M\\) and \\(N\\) are free \\(A\\)-modules of rank \\(m\\) and \\(n\\), respectively. Prove that if \\(M\\simeq N\\), then \\(m=n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(G\\) be a subgroup of the multiplicative group of nonzero elements of a field \\(F\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Suppose \\(G\\) is finite. Prove that \\(G\\) is cyclic.",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Is the conclusion in (a) still true if \\(G\\) is not assumed to be finite? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a ring with identity. Prove that a direct sum of left \\(R\\)-modules is projective if and only if each summand is projective.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Compute the Galois group over \\(\\mathbb Q\\) of",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "\\(x^5-3\\);",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "\\((x^3-5)(x^2+3)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a subgroup of the multiplicative group of nonzero elements of a field \\(F\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Suppose \\(G\\) is finite. Prove that \\(G\\) is cyclic.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Is the conclusion in (a) still true if \\(G\\) is not assumed to be finite? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(\\xi\\in\\mathbb C\\) be a primitive \\(15^{\\text{th}}\\) root of unity in \\(\\mathbb C\\), and let \\(F=\\mathbb Q(\\xi)\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Show that \\(F/\\mathbb Q\\) is a Galois extension and describe the structure of the Galois group \\(\\operatorname{Aut}_{\\mathbb Q}(F)\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Let \\(\\eta\\) be a primitive \\(41^{\\text{th}}\\) root of unity in \\(\\mathbb C\\). Is \\(F\\) contained in \\(\\mathbb Q(\\eta)\\)? Justify your answer.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Compute the Galois group over \\(\\mathbb Q\\) of",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "\\(x^5-3\\);",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "\\((x^3-5)(x^2+3)\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 10,
-      "text": "State and prove the Hilbert Basis Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\xi\\in\\mathbb C\\) be a primitive \\(15^{\\text{th}}\\) root of unity in \\(\\mathbb C\\), and let \\(F=\\mathbb Q(\\xi)\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Show that \\(F/\\mathbb Q\\) is a Galois extension and describe the structure of the Galois group \\(\\operatorname{Aut}_{\\mathbb Q}(F)\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Let \\(\\eta\\) be a primitive \\(41^{\\text{th}}\\) root of unity in \\(\\mathbb C\\). Is \\(F\\) contained in \\(\\mathbb Q(\\eta)\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 11,
-      "text": "Classify (up to ring isomorphism) all semisimple rings of order \\(720\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Hilbert Basis Theorem.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Classify (up to ring isomorphism) all semisimple rings of order \\(720\\).",
+        "subparts": []
+      }
     }
   ]
 }

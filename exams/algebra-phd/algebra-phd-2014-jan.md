@@ -1,8 +1,10 @@
 # Algebra, PhD exam, January 2014
 
-*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Below ring means associative ring with identity, and module means unital module.*
+*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
 
-**1.** Let \(f(x)=\sum_{i=0}^n a_i x^i\in\mathbb{Z}[x]\) be a polynomial with integer coefficients of degree \(n>1\). Suppose that for some \(k\), with \(0<k<n\) and some prime \(p\), we have \(p\nmid a_n\); \(p\nmid a_k\); \(p\mid a_i\) for \(i=0,\ldots,k-1\); and \(p^2\nmid a_0\). Show that \(f(x)\) has a factor of degree at least \(k\) which is irreducible in \(\mathbb{Z}[x]\).
+*Below, ring means associative ring with identity, and module means unital module.*
+
+**1.** Let \(f(x)=\sum_{i=0}^{n} a_i x^i\in\mathbb{Z}[x]\) be a polynomial with integer coefficients of degree \(n>1\). Suppose that for some \(k\), with \(0<k<n\), and some prime \(p\), we have \(p\nmid a_n\); \(p\nmid a_k\); \(p\mid a_i\) for \(i=0,\ldots,k-1\); and \(p^2\nmid a_0\). Show that \(f(x)\) has a factor of degree at least \(k\) which is irreducible in \(\mathbb{Z}[x]\).
 
 **2.** Calculate the Galois group of \(x^5-12x+2\) over \(\mathbb{Q}\), the field of rational numbers. Justify your answer carefully.
 
@@ -20,7 +22,7 @@ be a short exact sequence of (left) \(R\)-modules. Show that for any (right) \(R
 \[
 M\otimes_R A\xrightarrow{1_M\otimes f}M\otimes_R B\xrightarrow{1_M\otimes g}M\otimes_R C\to 0
 \]
-of tensor products, is exact.
+of tensor products is exact.
 
 **6.** State and prove Hilbert’s Basis Theorem.
 

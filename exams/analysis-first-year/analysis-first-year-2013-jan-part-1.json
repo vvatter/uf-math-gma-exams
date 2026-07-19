@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2013-jan-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,54 +7,67 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Analysis-1_2013_01.pdf",
-  "instructions": "Answer FOUR questions. Write in a neat and logical fashion, giving complete reasons for all steps.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\((a_n)_{n=1}^{\\infty}\\) be a real sequence and for \\(n \\geq 1\\) define\n\\[\n\\alpha_n=(a_1+\\cdots+a_n)/n.\n\\]\nProve that\n\\[\n\\limsup_{n\\to\\infty}\\alpha_n\\leq\\limsup_{n\\to\\infty}a_n\n\\]\nand show by example that the inequality can be strict.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer FOUR questions. Write in a neat and logical fashion, giving complete reasons for all steps."
     },
     {
-      "number": 2,
-      "text": "Let \\(X\\) and \\(Y\\) be metric spaces; give \\(X\\times Y\\) the metric defined by\n\\[\nd((x,y),(a,b))=d_X(x,a)+d_Y(y,b).\n\\]",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "If \\(X\\) and \\(Y\\) are compact, is \\(X\\times Y\\) compact? Proof or counterexample.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "If \\(X\\) and \\(Y\\) are complete, is \\(X\\times Y\\) complete? Proof or counterexample.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((a_n)_{n=1}^{\\infty}\\) be a real sequence and for \\(n \\geq 1\\) define\n\\[\n\\alpha_n=(a_1+\\cdots+a_n)/n.\n\\]\nProve that\n\\[\n\\limsup_{n\\to\\infty}\\alpha_n\\leq\\limsup_{n\\to\\infty}a_n\n\\]\nand show by example that the inequality can be strict.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f:X\\to X\\) be a continuous map from a metric space to itself; assume that \\(f\\) has no fixed points. Prove that if \\(X\\) is compact then there exists \\(\\varepsilon>0\\) such that \\(d(x,f(x))\\geq\\varepsilon\\) for each \\(x\\in X\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) and \\(Y\\) be metric spaces; give \\(X\\times Y\\) the metric defined by\n\\[\nd((x,y),(a,b))=d_X(x,a)+d_Y(y,b).\n\\]",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "If \\(X\\) and \\(Y\\) are compact, is \\(X\\times Y\\) compact? Proof or counterexample.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "If \\(X\\) and \\(Y\\) are complete, is \\(X\\times Y\\) complete? Proof or counterexample.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "For a map \\(f:X\\to Y\\) between metric spaces, consider the statements: Of the implications (a) \\(\\Rightarrow\\) (b) and (b) \\(\\Rightarrow\\) (a), one is false and the other true; give a proof of the true and a counterexample for the false.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(f\\) is uniformly continuous;",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(f\\) maps Cauchy sequences to Cauchy sequences.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:X\\to X\\) be a continuous map from a metric space to itself; assume that \\(f\\) has no fixed points. Prove that if \\(X\\) is compact then there exists \\(\\varepsilon>0\\) such that \\(d(x,f(x))\\geq\\varepsilon\\) for each \\(x\\in X\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable and let \\(b\\) be a real number. Prove that if \\(f'(t)\\to b\\) as \\(t\\to\\infty\\) then \\(f(t)/t\\to b\\) as \\(t\\to\\infty\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For a map \\(f:X\\to Y\\) between metric spaces, consider the statements: Of the implications (a) \\(\\Rightarrow\\) (b) and (b) \\(\\Rightarrow\\) (a), one is false and the other true; give a proof of the true and a counterexample for the false.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(f\\) is uniformly continuous;",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(f\\) maps Cauchy sequences to Cauchy sequences.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable and let \\(b\\) be a real number. Prove that if \\(f'(t)\\to b\\) as \\(t\\to\\infty\\) then \\(f(t)/t\\to b\\) as \\(t\\to\\infty\\).",
+        "subparts": []
+      }
     }
   ]
 }

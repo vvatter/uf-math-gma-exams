@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2024-may-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,43 +7,56 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2024_05.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Assume without proof that if \\((a_n)\\) and \\((b_n)\\) are bounded real sequences then\n\\[\n\\limsup(a_n+b_n)\\leq \\limsup a_n+\\limsup b_n.\n\\]",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Show by example that this inequality can be strict.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Prove that equality holds if \\((a_n)\\) is convergent.",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Let \\(A\\) be a subset of the metric space \\(M\\). Assume that \\(A\\) satisfies the following condition:\n\\[\n\\forall X\\subseteq M\\ \\bigl(A\\cap X=\\varnothing\\Rightarrow A\\cap\\overline{X}=\\varnothing\\bigr).\n\\]\nDoes it follow that \\(A\\) is open? Proof or counterexample.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Assume without proof that if \\((a_n)\\) and \\((b_n)\\) are bounded real sequences then\n\\[\n\\limsup(a_n+b_n)\\leq \\limsup a_n+\\limsup b_n.\n\\]",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show by example that this inequality can be strict.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Prove that equality holds if \\((a_n)\\) is convergent.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(A\\) and \\(B\\) be nonempty compact subsets of the metric space \\(M\\). Prove that there exist \\(a\\in A\\) and \\(b\\in B\\) such that\n\\[\nd(a,b)=\\inf\\{d(x,y):x\\in A,y\\in B\\}.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a subset of the metric space \\(M\\). Assume that \\(A\\) satisfies the following condition:\n\\[\n\\forall X\\subseteq M\\ \\bigl(A\\cap X=\\varnothing\\Rightarrow A\\cap\\overline{X}=\\varnothing\\bigr).\n\\]\nDoes it follow that \\(A\\) is open? Proof or counterexample.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Does there exist a one-to-one continuous function from the unit square \\(\\square=[0,1]\\times[0,1]\\) to \\(\\mathbb{R}\\)? If so, exhibit one; if no, prove not.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) and \\(B\\) be nonempty compact subsets of the metric space \\(M\\). Prove that there exist \\(a\\in A\\) and \\(b\\in B\\) such that\n\\[\nd(a,b)=\\inf\\{d(x,y):x\\in A,y\\in B\\}.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable and let \\(b\\in\\mathbb{R}\\). Prove that if \\(f'(t)\\to b\\) as \\(t\\to\\infty\\) then \\(f(t)/t\\to b\\) as \\(t\\to\\infty\\). [It might help to choose and fix \\(a>0\\).]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Does there exist a one-to-one continuous function from the unit square \\(\\square=[0,1]\\times[0,1]\\) to \\(\\mathbb{R}\\)? If so, exhibit one; if no, prove not.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable and let \\(b\\in\\mathbb{R}\\). Prove that if \\(f'(t)\\to b\\) as \\(t\\to\\infty\\) then \\(f(t)/t\\to b\\) as \\(t\\to\\infty\\). [It might help to choose and fix \\(a>0\\).]",
+        "subparts": []
+      }
     }
   ]
 }

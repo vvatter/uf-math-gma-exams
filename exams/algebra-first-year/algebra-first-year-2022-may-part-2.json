@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2022-may-part-2",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,96 +7,111 @@
   "month": "may",
   "part": 2,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Algebra-2-2022_05.pdf",
-  "instructions": "Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove that the following polynomials are irreducible in \\(\\mathbb{Q}[x]\\), stating clearly any theorems you wish to apply.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(x^4-75\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(x^3-5x^2+x+5\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(x^4-14x^3+2x^2+21x-7\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(R\\) be the quotient of the ring \\(\\mathbb{Z}[i]\\) of Gaussian integers by the principal ideal \\((3+3i)\\). Show that \\(R\\) is finite and determine the number of its elements.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the following polynomials are irreducible in \\(\\mathbb{Q}[x]\\), stating clearly any theorems you wish to apply.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(x^4-75\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(x^3-5x^2+x+5\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(x^4-14x^3+2x^2+21x-7\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(R\\) be a commutative ring with 1 and let \\(I\\), \\(J\\) and \\(P\\) be ideals in \\(R\\) such that \\(I\\cap J\\subseteq P\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(P\\) is a prime ideal then either \\(I\\subseteq P\\) or \\(J\\subseteq P\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example which shows that if \\(P\\) is not prime then the conclusion above may not hold.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be the quotient of the ring \\(\\mathbb{Z}[i]\\) of Gaussian integers by the principal ideal \\((3+3i)\\). Show that \\(R\\) is finite and determine the number of its elements.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(R\\) be a ring with 1 and \\(M\\) a (unital) left \\(R\\)-module.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "State what it means for \\(M\\) to satisfy the Ascending Chain Condition (i.e. for \\(M\\) to be Noetherian).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that if \\(M\\) satisfies the ACC then every submodule of \\(M\\) is finitely generated.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Give an example of a finitely generated module that does not satisfy the ACC.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with 1 and let \\(I\\), \\(J\\) and \\(P\\) be ideals in \\(R\\) such that \\(I\\cap J\\subseteq P\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(P\\) is a prime ideal then either \\(I\\subseteq P\\) or \\(J\\subseteq P\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example which shows that if \\(P\\) is not prime then the conclusion above may not hold.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Determine the conjugacy classes of elements of order 8 in \\(\\mathrm{GL}(4,\\mathbb{Q}(\\sqrt{2}))\\). (Hint: Factorize \\(x^4+1\\) in \\(\\mathbb{Q}(\\sqrt{2})[x]\\).)",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a ring with 1 and \\(M\\) a (unital) left \\(R\\)-module.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State what it means for \\(M\\) to satisfy the Ascending Chain Condition (i.e. for \\(M\\) to be Noetherian).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(M\\) satisfies the ACC then every submodule of \\(M\\) is finitely generated.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Give an example of a finitely generated module that does not satisfy the ACC.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(E\\) be an extension field of the field \\(F\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "What does it mean for \\(E\\) to be an algebraic extension of \\(F\\)?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that if \\(\\alpha\\) and \\(\\beta\\) are elements of \\(E\\) that are both roots of the same irreducible polynomial in \\(F[x]\\), then the subfields \\(F(\\alpha)\\) and \\(F(\\beta)\\) of \\(E\\) are isomorphic.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Give an example where the subfields in (b) are not equal.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Determine the conjugacy classes of elements of order 8 in \\(\\mathrm{GL}(4,\\mathbb{Q}(\\sqrt{2}))\\). (Hint: Factorize \\(x^4+1\\) in \\(\\mathbb{Q}(\\sqrt{2})[x]\\).)",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(E\\) be an extension field of the field \\(F\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "What does it mean for \\(E\\) to be an algebraic extension of \\(F\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if \\(\\alpha\\) and \\(\\beta\\) are elements of \\(E\\) that are both roots of the same irreducible polynomial in \\(F[x]\\), then the subfields \\(F(\\alpha)\\) and \\(F(\\beta)\\) of \\(E\\) are isomorphic.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Give an example where the subfields in (b) are not equal.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

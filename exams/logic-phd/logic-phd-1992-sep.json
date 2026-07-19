@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-1992-sep",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,67 +7,122 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_1992_09.pdf",
-  "instructions": "This examination is divided into 4 segments, with 3 questions in each segment. Problems 1–3 concern General Logic; problems 4–6 concern Model Theory; problems 7–9 concern Set Theory; and problems 10–12 concern Recursion Theory. Answer any 2 questions from each of the ranges 1–3, 4–6, 7–9, and 10–12.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove that there is no single sentence \\(\\phi\\) in the language of ring theory such that a ring \\(R\\) is a model of \\(\\phi\\) if and only if \\(R\\) has characteristic 0.",
-      "subparts": []
+      "type": "instructions",
+      "text": "This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment."
     },
     {
-      "number": 2,
-      "text": "State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "1. General Logic",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that there is no single sentence \\(\\phi\\) in the language of ring theory such that a ring \\(R\\) is a model of \\(\\phi\\) if and only if \\(R\\) has characteristic 0.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and sketch a proof of Gödel’s incompleteness theorem.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 3,
-      "text": "State and sketch a proof of Gödel’s incompleteness theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "2. Model Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that any two elementarily equivalent, countably saturated models are isomorphic.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and sketch a proof of the downward Löwenheim–Skolem Theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State the Omitting types theorem, and use it to show that any \\(\\omega\\)-complete theory of arithmetic has an \\(\\omega\\)-model.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "Show that any two elementarily equivalent, countably saturated models are isomorphic.",
-      "subparts": []
+      "type": "section",
+      "heading": "3. Set Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that a countable union of countable sets is countable. Explain any use of the axiom of choice.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that \\(2^\\kappa = \\kappa^\\kappa\\) for all infinite \\(\\kappa\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Use Fodor’s theorem to prove that the diagonal intersection of a sequence of closed, unbounded sets is closed and unbounded.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 5,
-      "text": "State and sketch a proof of the downward Löwenheim–Skolem Theorem.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "State the Omitting types theorem, and use it to show that any \\(\\omega\\)-complete theory of arithmetic has an \\(\\omega\\)-model.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Show that a countable union of countable sets is countable. Explain any use of the axiom of choice.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Show that \\(2^\\kappa = \\kappa^\\kappa\\) for all infinite \\(\\kappa\\).",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Use Fodor’s theorem to prove that the diagonal intersection of a sequence of closed, unbounded sets is closed and unbounded.",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Show that a function \\(\\phi : \\omega \\to \\omega\\) is (partial) recursive iff its graph is recursively enumerable, and that if \\(\\phi\\) is total and recursive then its graph is recursive.",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "Prove that there is a subset of \\(\\omega\\) which is recursively enumerable but not recursive.",
-      "subparts": []
-    },
-    {
-      "number": 12,
-      "text": "State the normal form theorem for partial recursive functions and use it to prove the enumeration theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "4. Recursion Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that a function \\(\\phi : \\omega \\to \\omega\\) is (partial) recursive iff its graph is recursively enumerable, and that if \\(\\phi\\) is total and recursive then its graph is recursive.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that there is a subset of \\(\\omega\\) which is recursively enumerable but not recursive.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State the normal form theorem for partial recursive functions and use it to prove the enumeration theorem.",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

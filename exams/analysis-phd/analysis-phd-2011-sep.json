@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-phd-2011-sep",
   "subject": "PhD Analysis",
   "subject_tag": "analysis-phd",
@@ -7,47 +7,66 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2011_09.pdf",
-  "instructions": "Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(Y_p\\) denote \\(\\mathbb{R}^3\\) provided with the \\(p\\)-norm. Are the normed spaces \\(Y_1\\) and \\(Y_\\infty\\) isometrically isomorphic? Prove or disprove.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used."
     },
     {
-      "number": 2,
-      "text": "Let \\(X\\) and \\(Y\\) be normed spaces, \\(X\\) being complete. Let \\((T_n)_{n=1}^{\\infty}\\) be a sequence of bounded linear operators \\(X \\to Y\\) and assume that for each \\(x \\in X\\) the limit \\(\\lim_{n\\to\\infty} T_nx =: Tx\\) exists in \\(Y\\). Show that \\(T:X\\to Y\\) is a bounded linear operator.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(Y_p\\) denote \\(\\mathbb{R}^3\\) provided with the \\(p\\)-norm. Are the normed spaces \\(Y_1\\) and \\(Y_\\infty\\) isometrically isomorphic? Prove or disprove.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "State the Closed Graph theorem and the Open Mapping theorem. Derive ONE of these from the Banach Isomorphism theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) and \\(Y\\) be normed spaces, \\(X\\) being complete. Let \\((T_n)_{n=1}^{\\infty}\\) be a sequence of bounded linear operators \\(X \\to Y\\) and assume that for each \\(x \\in X\\) the limit \\(\\lim_{n\\to\\infty} T_nx =: Tx\\) exists in \\(Y\\). Show that \\(T:X\\to Y\\) is a bounded linear operator.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\mathbb{H}\\) be a Hilbert space. Prove that linear maps \\(S\\) and \\(T\\) from \\(\\mathbb{H}\\) to itself that satisfy\n\\[\n(\\forall x,y\\in\\mathbb{H})\\quad \\langle Sx\\mid y\\rangle=\\langle x\\mid Ty\\rangle\n\\]\nare automatically continuous.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Closed Graph theorem and the Open Mapping theorem. Derive ONE of these from the Banach Isomorphism theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(\\phi\\) be a bounded linear functional on the real Hilbert space \\(\\mathbb{H}\\) and for \\(x\\in\\mathbb{H}\\) define\n\\[\nf(x)=\\lVert x\\rVert^2-\\phi(x).\n\\]\nProve that each nonempty closed convex set \\(K\\subset\\mathbb{H}\\) contains a unique point at which the restriction \\(f|_K\\) is minimized. Suggestion: represent the bounded linear functional.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathbb{H}\\) be a Hilbert space. Prove that linear maps \\(S\\) and \\(T\\) from \\(\\mathbb{H}\\) to itself that satisfy\n\\[\n(\\forall x,y\\in\\mathbb{H})\\quad \\langle Sx\\mid y\\rangle=\\langle x\\mid Ty\\rangle\n\\]\nare automatically continuous.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(f\\) be a real-valued measurable function on the measure space \\((\\Omega,\\mathcal{F},\\mu)\\). Prove that if \\(A\\in\\mathcal{F}\\) is an atom then there exists a real number \\(a\\) such that \\(f=a\\) almost everywhere on \\(A\\). Note: To say that \\(A\\in\\mathcal{F}\\) is an atom means that \\(\\mu(A)>0\\) and if \\(B\\in\\mathcal{F}\\) is a subset of \\(A\\) then either \\(\\mu(B)=0\\) or \\(\\mu(A\\setminus B)=0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\phi\\) be a bounded linear functional on the real Hilbert space \\(\\mathbb{H}\\) and for \\(x\\in\\mathbb{H}\\) define\n\\[\nf(x)=\\lVert x\\rVert^2-\\phi(x).\n\\]\nProve that each nonempty closed convex set \\(K\\subset\\mathbb{H}\\) contains a unique point at which the restriction \\(f|_K\\) is minimized. Suggestion: represent the bounded linear functional.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\((\\Omega,\\mathcal{F},\\mu)\\) be a measure space. Prove that if \\(1<p<s<q<\\infty\\) then\n\\[\nL^p(\\mu)\\cap L^q(\\mu)\\subseteq L^s(\\mu).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) be a real-valued measurable function on the measure space \\((\\Omega,\\mathcal{F},\\mu)\\). Prove that if \\(A\\in\\mathcal{F}\\) is an atom then there exists a real number \\(a\\) such that \\(f=a\\) almost everywhere on \\(A\\). Note: To say that \\(A\\in\\mathcal{F}\\) is an atom means that \\(\\mu(A)>0\\) and if \\(B\\in\\mathcal{F}\\) is a subset of \\(A\\) then either \\(\\mu(B)=0\\) or \\(\\mu(A\\setminus B)=0\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "State the (\\(\\sigma\\)-finite) Radon–Nikodym theorem. Prove that if the \\(\\sigma\\)-finite measures \\(\\lambda,\\mu,\\nu\\) satisfy \\(\\nu\\ll\\mu\\) and \\(\\mu\\ll\\lambda\\) then (\\(\\lambda\\)-ae)\n\\[\n\\frac{d\\nu}{d\\lambda}=\\frac{d\\nu}{d\\mu}\\frac{d\\mu}{d\\lambda}.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((\\Omega,\\mathcal{F},\\mu)\\) be a measure space. Prove that if \\(1<p<s<q<\\infty\\) then\n\\[\nL^p(\\mu)\\cap L^q(\\mu)\\subseteq L^s(\\mu).\n\\]",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "State the (\\(\\sigma\\)-finite) Radon–Nikodym theorem. Prove that if the \\(\\sigma\\)-finite measures \\(\\lambda,\\mu,\\nu\\) satisfy \\(\\nu\\ll\\mu\\) and \\(\\mu\\ll\\lambda\\) then (\\(\\lambda\\)-ae)\n\\[\n\\frac{d\\nu}{d\\lambda}=\\frac{d\\nu}{d\\mu}\\frac{d\\mu}{d\\lambda}.\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

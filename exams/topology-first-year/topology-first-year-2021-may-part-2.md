@@ -1,6 +1,6 @@
 # Topology, first year exam, May 2021, Part 2
 
-*For Problems 1–5, answer the following problems and show all your work. Support all statements to the best of your ability. For Problems 6–10, answer the following with complete definitions or statements or short proofs.*
+*Answer the following problems and show all your work. Support all statements to the best of your ability.*
 
 **1.** This problem has two parts.
 * (a) State the Urysohn Lemma.
@@ -8,7 +8,7 @@
 
 **2.** This problem has two parts.
 * (a) State the Brouwer fixed-point theorem for the disc \(B^2\).
-* (b) Let \(A\) be a \(3\) by \(3\) matrix of positive real numbers. Show that \(A\) has a positive real eigenvalue. Hint: Let \(B\) be the intersection of the unit sphere \(S^2\) and the positive octant, \(\{(x,y,z)\in\mathbb{R}^3\mid x,y,z\geq 0\}\).
+* (b) Let \(A\) be a 3 by 3 matrix of positive real numbers. Show that \(A\) has a positive real eigenvalue. Hint: Let \(B\) be the intersection of the unit sphere \(S^2\) and the positive octant, \(\{(x,y,z)\in\mathbb{R}^3\mid x,y,z\geq 0\}\).
 
 **3.** Prove that \(\pi_1(S^1,1)\cong\mathbb{Z}\).
 
@@ -20,6 +20,8 @@
 * (a) Define surface.
 * (b) Compute the fundamental group of the connected sum of a torus and second torus \(T^2\#T^2\).
 
+*Answer the following with complete definitions or statements or short proofs.*
+
 **6.** Show that \(\mathbb{R}^2\) is not homeomorphic to \(\mathbb{R}^3\).
 
 **7.** If \(j:A\hookrightarrow X\) is the inclusion of a retract, then show that the induced map on fundamental groups \(j_\#\) is injective.
@@ -28,4 +30,4 @@
 
 **9.** What is the fundamental group of the torus \(T^2=S^1\times S^1\)?
 
-**10.** Given continuous maps of topological spaces \(f:A\to X\) and \(g:A\to Y\) state the universal property satisfied by the pushout.
+**10.** Given continuous maps of topological spaces \(f:A\to X\) and \(g:A\to Y\), state the universal property satisfied by the pushout.

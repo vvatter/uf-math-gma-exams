@@ -1,18 +1,20 @@
 # Topology, PhD exam, August 2017
 
-*Work problems 1–5 and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Work the following problems and show all work. Support all statements to the best of your ability.*
 
 **1.** Let \(X\) be a connected metric space having more than one point. Can \(X\) be countable?
 
 **2.** Compute \(\pi_1(T^2)\) and \(H_*(T^2)\), where \(T^2=S^1\times S^1\) is the 2-dimensional torus.
 
-**3.** Does there exist a map of degree 2
+**3.** Does there exist a map of degree \(2\)
 * (a) from \(S^2\) to the torus \(T^2\)?
 * (b) from \(T^2\) to \(S^2\)?
 
 **4.** Show that every compact Hausdorff space is normal.
 
 **5.** Does there exist a covering space of the 2-dimensional sphere with three points deleted with nontrivial abelian fundamental group?
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** State the Baire Category Theorem.
 
@@ -28,7 +30,7 @@
 0\to \mathbb{Z}\to A\to B\to 0
 \]
 
-**10.** Compute the Euler characteristic \(\chi(\mathbb{RP}^2\times S^2\times S^2\times S^3)\).
+**10.** Compute the Euler characteristic \(\chi(\mathbb{R}P^2\times S^2\times S^2\times S^3)\).
 
 **11.** Give an example of \(A\subset X\) such that \(A\) is a retract of \(X\) but not a deformation retract.
 

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "combinatorics-phd-1991-sep",
   "subject": "PhD Combinatorics",
   "subject_tag": "combinatorics-phd",
@@ -7,48 +7,61 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Combinatorics_1991_09.pdf",
-  "instructions": "Do 4 out of 5 problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "A \\(k\\)-arc of a projective plane \\(\\Pi\\) is a set of \\(k\\) points, no three of which are collinear. Prove that every 4-arc in the plane \\(PG(2,4)\\) lies in exactly two 5-arcs.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do 4 out of 5 problems."
     },
     {
-      "number": 2,
-      "text": "Use (without proof) the assertion of problem #1 to prove that the 6-arcs of \\(\\Pi=PG(2,4)\\) form a block design \\(\\Sigma\\) on the point set of \\(\\Pi\\), with \\(v=21\\) and \\(k=6\\). Compute \\(\\lambda\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "A \\(k\\)-arc of a projective plane \\(\\Pi\\) is a set of \\(k\\) points, no three of which are collinear. Prove that every 4-arc in the plane \\(PG(2,4)\\) lies in exactly two 5-arcs.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "State the Hall Multiplier Theorem, and use it to find a \\((91,10,1)\\) difference set.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Use (without proof) the assertion of problem #1 to prove that the 6-arcs of \\(\\Pi=PG(2,4)\\) form a block design \\(\\Sigma\\) on the point set of \\(\\Pi\\), with \\(v=21\\) and \\(k=6\\). Compute \\(\\lambda\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "HC is the problem of deciding whether a graph has a Hamiltonian circuit or not, and this problem is known to be NP-complete. Use this fact to prove that HP is also NP-complete, where HP is the problem of deciding whether a graph has a Hamiltonian path (with unspecified initial and terminal vertices).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Hall Multiplier Theorem, and use it to find a \\((91,10,1)\\) difference set.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(E\\) be a finite set and \\(P\\) a partition of \\(E\\). Call a subset \\(I\\) of \\(E\\) independent (\\(I\\in\\mathcal I\\)) if no two elements of \\(I\\) are in the same block of \\(P\\).",
-      "subparts": [
-        {
-          "label": "1.",
-          "text": "Prove that \\((E,\\mathcal I)\\) is a matroid (called a partition matroid).",
-          "subparts": []
-        },
-        {
-          "label": "2.",
-          "text": "For a bipartite graph \\(B\\) with edge set \\(E\\), let \\(\\mathcal M\\subseteq 2^E\\) denote the set of matchings on \\(B\\). Show that \\((E,\\mathcal M)\\) is not a matroid.",
-          "subparts": []
-        },
-        {
-          "label": "3.",
-          "text": "Prove that \\(\\mathcal M\\) is the intersection of two partition matroids. In other words there are partition matroids \\((E,\\mathcal I_1)\\) and \\((E,\\mathcal I_2)\\) such that \\(\\mathcal M=\\mathcal I_1\\cap\\mathcal I_2\\).\n\nPart 3 is significant because there is a general result that states that if \\((E,\\mathcal M)\\) is such a matroid intersection then there is a polynomial algorithm to find a maximum cardinality independent set.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "HC is the problem of deciding whether a graph has a Hamiltonian circuit or not, and this problem is known to be NP-complete. Use this fact to prove that HP is also NP-complete, where HP is the problem of deciding whether a graph has a Hamiltonian path (with unspecified initial and terminal vertices).",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(E\\) be a finite set and \\(P\\) a partition of \\(E\\). Call a subset \\(I\\) of \\(E\\) independent (\\(I\\in\\mathcal I\\)) if no two elements of \\(I\\) are in the same block of \\(P\\).",
+        "subparts": [
+          {
+            "label": "1.",
+            "text": "Prove that \\((E,\\mathcal I)\\) is a matroid (called a partition matroid).",
+            "subparts": []
+          },
+          {
+            "label": "2.",
+            "text": "For a bipartite graph \\(B\\) with edge set \\(E\\), let \\(\\mathcal M\\subseteq 2^E\\) denote the set of matchings on \\(B\\). Show that \\((E,\\mathcal M)\\) is not a matroid.",
+            "subparts": []
+          },
+          {
+            "label": "3.",
+            "text": "Prove that \\(\\mathcal M\\) is the intersection of two partition matroids. In other words there are partition matroids \\((E,\\mathcal I_1)\\) and \\((E,\\mathcal I_2)\\) such that \\(\\mathcal M=\\mathcal I_1\\cap\\mathcal I_2\\).\n\nPart 3 is significant because there is a general result that states that if \\((E,\\mathcal M)\\) is such a matroid intersection then there is a polynomial algorithm to find a maximum cardinality independent set.",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

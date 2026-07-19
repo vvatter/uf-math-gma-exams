@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-2000-sep",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,82 +7,119 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2000_09.pdf",
-  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State and prove the Brouwer Fixed Point Theorem. You may assume some homology.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "State and prove the Baire Category Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Brouwer Fixed Point Theorem. You may assume some homology.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Give the Mayer–Vietoris sequence for homology. Use this to compute the homology groups for the \\(n\\)-sphere \\(S^n\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and prove the Baire Category Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Suppose that \\(f,g:X\\to P\\) are two maps and that \\(P\\) is a compact connected polyhedron. Show that there is an \\(\\epsilon>0\\) such that if \\(d(f(x),g(x))<\\epsilon\\) for all \\(x\\in X\\), then \\(f\\) and \\(g\\) are homotopic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give the Mayer–Vietoris sequence for homology. Use this to compute the homology groups for the \\(n\\)-sphere \\(S^n\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Show that \\(\\pi_1(S^1)\\simeq\\mathbb{Z}\\), where \\(\\mathbb{Z}\\) is the group of integers and \\(S^1\\) is the circle.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(f,g:X\\to P\\) are two maps and that \\(P\\) is a compact connected polyhedron. Show that there is an \\(\\epsilon>0\\) such that if \\(d(f(x),g(x))<\\epsilon\\) for all \\(x\\in X\\), then \\(f\\) and \\(g\\) are homotopic.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Define retraction and deformation retraction.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(\\pi_1(S^1)\\cong Z\\), where \\(Z\\) is the group of integers and \\(S^1\\) is the circle.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "State Urysohn’s Lemma. State the Tietze Extension Theorem.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "State the Five Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define retraction and deformation retraction.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Define the cone of a space \\(X\\). Define the suspension of \\(X\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State Urysohn’s Lemma. State the Tietze Extension Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "State the exact homology sequence for a pair of spaces.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Five Lemma.",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "State the Jordan Curve Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define the cone of a space \\(X\\). Define the suspension of \\(X\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Let \\(A\\) be a countable subset of \\(R^2\\). Show that \\(R^2\\setminus A\\) is arcwise connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the exact homology sequence for a pair of spaces.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Show that the Cantor set less its endpoints is homeomorphic to the irrationals in the unit interval. [Hint: Use the Cantor Ternary Function.]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Jordan Curve Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Let \\(V\\) be a complete metric space such that no point is isolated. Can \\(V\\) be a countably infinite set?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a countable subset of \\(R^2\\). Show that \\(R^2\\setminus A\\) is arcwise connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Let \\(0\\to G\\xrightarrow{g}H\\xrightarrow{h}J\\to 0\\) be an exact sequence. What does this say about \\(g\\) and \\(h\\)? Prove your claims.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the Cantor set less its endpoints is homeomorphic to the irrationals in the unit interval. [Hint: Use the Cantor Ternary Function.]",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(V\\) be a complete metric space such that no point is isolated. Can \\(V\\) be a countably infinite set?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(0\\to G\\xrightarrow{g}H\\xrightarrow{h}J\\to 0\\) be an exact sequence. What does this say about \\(g\\) and \\(h\\)? Prove your claims.",
+        "subparts": []
+      }
     }
   ]
 }

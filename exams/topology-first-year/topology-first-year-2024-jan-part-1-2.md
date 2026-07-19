@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2024, Part 1
 
-*For problems 1–5, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.*
+*For the first five problems, show all your work and support all statements.*
 
 **1.** Show there is no surjective function \(f:X\to\mathcal{P}(X)\), where \(\mathcal{P}(X)\) is the power set of \(X\).
 
@@ -11,6 +11,8 @@
 **4.** Let \(A\) be a proper subset of \(X\), and let \(B\) be a proper subset of \(Y\). If \(X\) and \(Y\) are connected, show that \((X\times Y)-(A\times B)\) is connected.
 
 **5.** Let \((X,d)\) be a metric space. Suppose there exists some \(\varepsilon>0\) such that for all \(x\in X\), the closure \(\overline{B_\varepsilon(x)}\) of the \(\varepsilon\)-ball about \(x\) is compact. Prove that \(X\) is complete.
+
+*Answer the following problems with complete definitions, complete statements, an example, or a short proof.*
 
 **6.** Let \(\{A_n\}_{n\in\mathbb{Z}_+}\) be a countable collection of countable sets. Prove that the union \(\bigcup_{n\in\mathbb{Z}_+}A_n\) is countable.
 

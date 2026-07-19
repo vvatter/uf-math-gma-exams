@@ -1,6 +1,6 @@
 # Topology, first year exam, January 2018, Part 1
 
-*Answer problems 1–5 and show all your work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+*Answer the following problems and show all your work. Support all statements to the best of your ability.*
 
 **1.** A function \(f:\mathbb{N}\to\mathbb{Z}\) is called eventually zero if there is some \(N\) such that \(f(n)=0\) for all \(n\geq N\). Show that the set of functions \(f:\mathbb{N}\to\mathbb{Z}\) that is eventually zero is countable.
 
@@ -11,6 +11,8 @@
 **4.** Prove that if \(X\) is a compact Hausdorff space, then \(X\) is a normal space.
 
 **5.** State and prove the Contraction Mapping Theorem.
+
+*Answer the following with complete definitions or statements or short proofs.*
 
 **6.** Prove that \(\{[a,b)\mid a<b\}\) is a basis for a topology on \(\mathbb{R}\).
 

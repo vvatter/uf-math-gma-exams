@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "complex-analysis-phd-2019-aug",
   "subject": "PhD Complex Analysis",
   "subject_tag": "complex-analysis-phd",
@@ -7,63 +7,84 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-ComplexAnalysis-2019_08.pdf",
-  "instructions": "Answer SIX (out of nine) questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(a\\) be a point of the open unit disc \\(\\mathbb D\\); for \\(z\\in\\mathbb C\\) not equal to \\(1/\\overline a\\) define\n\\[\n\\phi_a(z)=\\frac{z-a}{1-\\overline a z}.\n\\]\nProve that \\(\\phi_a\\) maps \\(\\mathbb D\\) to itself biholomorphically and \\(\\overline{\\mathbb D}\\) to itself homeomorphically; identify its inverse in each capacity.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer SIX (out of nine) questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "Prove that the ring \\(\\mathcal O(\\mathbb D)\\) of functions holomorphic in the open unit disc is an integral domain.",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "Let \\(f\\) be holomorphic in the open unit disc. If \\(f\\) is either even or odd, then its pointwise square \\(f^2\\) is even. Is the converse true or false? Give proof or counterexample as appropriate.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(a\\) be a point of the open unit disc \\(\\mathbb D\\); for \\(z\\in\\mathbb C\\) not equal to \\(1/\\overline a\\) define\n\\[\n\\phi_a(z)=\\frac{z-a}{1-\\overline a z}.\n\\]\nProve that \\(\\phi_a\\) maps \\(\\mathbb D\\) to itself biholomorphically and \\(\\overline{\\mathbb D}\\) to itself homeomorphically; identify its inverse in each capacity.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f\\) be holomorphic in the open unit disc and continuous in the closed unit disc; assume that \\(f(z)=0\\) for each \\(z\\) in the unit circle \\(\\overline{\\mathbb D}\\setminus\\mathbb D\\) such that \\(\\operatorname{Im}z\\geq 0\\). Prove that \\(f\\) is identically zero in \\(\\mathbb D\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that the ring \\(\\mathcal O(\\mathbb D)\\) of functions holomorphic in the open unit disc is an integral domain.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Let \\(f\\) be holomorphic in the open unit disc. If \\(f\\) is either even or odd, then its pointwise square \\(f^2\\) is even. Is the converse true or false? Give proof or counterexample as appropriate.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(f\\) be a nonconstant entire function. Prove that if \\(w_0\\in\\mathbb C\\) is not a value of \\(f\\) then for each \\(r>0\\) there exists \\(z\\in\\mathbb C\\) such that \\(|f(z)-w_0|<r\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) be holomorphic in the open unit disc and continuous in the closed unit disc; assume that \\(f(z)=0\\) for each \\(z\\) in the unit circle \\(\\overline{\\mathbb D}\\setminus\\mathbb D\\) such that \\(\\operatorname{Im}z\\geq 0\\). Prove that \\(f\\) is identically zero in \\(\\mathbb D\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Use the Residue Theorem to evaluate the real integral\n\\[\n\\int_{-\\infty}^{\\infty}\\frac{x^2}{(1+x^2)^2}\\,dx.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) be a nonconstant entire function. Prove that if \\(w_0\\in\\mathbb C\\) is not a value of \\(f\\) then for each \\(r>0\\) there exists \\(z\\in\\mathbb C\\) such that \\(|f(z)-w_0|<r\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(f\\) be holomorphic in the open unit disc, taking real values on the real axis and taking purely imaginary values on the imaginary axis. Prove that \\(f\\) is odd.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Use the Residue Theorem to evaluate the real integral\n\\[\n\\int_{-\\infty}^{\\infty}\\frac{x^2}{(1+x^2)^2}\\,dx.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Prove that the infinite product \\(\\prod_{n=0}^{\\infty}(1+z^{2^n})\\) converges whenever \\(|z|<1\\). What is the value of the product? What is the nature of the convergence?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) be holomorphic in the open unit disc, taking real values on the real axis and taking purely imaginary values on the imaginary axis. Prove that \\(f\\) is odd.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Define the Gamma and Beta functions, stating how they are related. When \\(p\\) and \\(q\\) have strictly positive real part, calculate the integral\n\\[\n\\int_0^{\\pi/2}\\sin^{2p-1}\\theta\\cos^{2q-1}\\theta\\,d\\theta\n\\]\nin terms of the Gamma function.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that the infinite product \\(\\prod_{n=0}^{\\infty}(1+z^{2^n})\\) converges whenever \\(|z|<1\\). What is the value of the product? What is the nature of the convergence?",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Defining \\(J_n(z)\\) to be the coefficient of \\(\\zeta^n\\) in the Laurent expansion of the function \\(\\exp\\{\\tfrac12 z(\\zeta-\\zeta^{-1})\\}\\) of \\(\\zeta\\) about zero, show that\n\\[\nJ_n(z)=\\frac{1}{\\pi}\\int_0^\\pi\\cos(n\\theta-z\\sin\\theta)\\,d\\theta.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Define the Gamma and Beta functions, stating how they are related. When \\(p\\) and \\(q\\) have strictly positive real part, calculate the integral\n\\[\n\\int_0^{\\pi/2}\\sin^{2p-1}\\theta\\cos^{2q-1}\\theta\\,d\\theta\n\\]\nin terms of the Gamma function.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Defining \\(J_n(z)\\) to be the coefficient of \\(\\zeta^n\\) in the Laurent expansion of the function \\(\\exp\\{\\tfrac12 z(\\zeta-\\zeta^{-1})\\}\\) of \\(\\zeta\\) about zero, show that\n\\[\nJ_n(z)=\\frac{1}{\\pi}\\int_0^\\pi\\cos(n\\theta-z\\sin\\theta)\\,d\\theta.\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

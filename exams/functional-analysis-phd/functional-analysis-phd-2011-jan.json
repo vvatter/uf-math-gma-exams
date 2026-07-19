@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "functional-analysis-phd-2011-jan",
   "subject": "PhD Functional Analysis",
   "subject_tag": "functional-analysis-phd",
@@ -7,47 +7,66 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_FunctionalAnalysis_2011_01.pdf",
-  "instructions": "Do only 5 of the 8 problems.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State the Krein–Milman Theorem and sketch the proof.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do only 5 of the 8 problems."
     },
     {
-      "number": 2,
-      "text": "Prove that if \\(A\\) is an element of a Banach algebra \\(\\mathcal U\\), then the spectrum of \\(A\\) is a nonempty closed subset of the closed disk in \\(\\mathbb C\\) with center \\(0\\) and radius \\(\\lVert A\\rVert\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Krein–Milman Theorem and sketch the proof.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "State the “Function Representation Theorem” involving an abelian \\(C^*\\)-algebra \\(\\mathcal U\\) in terms of \\(C(\\mathcal P(\\mathcal U))\\), where \\(\\mathcal P(\\mathcal U)\\) is the set of all pure states of \\(\\mathcal U\\). Sketch the proof of this theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that if \\(A\\) is an element of a Banach algebra \\(\\mathcal U\\), then the spectrum of \\(A\\) is a nonempty closed subset of the closed disk in \\(\\mathbb C\\) with center \\(0\\) and radius \\(\\lVert A\\rVert\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "State and sketch the proof of the theorem involving \\(\\mathcal A\\cong C(X)\\), where \\(\\mathcal A\\) is an abelian von Neumann algebra and \\(X\\) is an extremely disconnected compact Hausdorff space.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the “Function Representation Theorem” involving an abelian \\(C^*\\)-algebra \\(\\mathcal U\\) in terms of \\(C(\\mathcal P(\\mathcal U))\\), where \\(\\mathcal P(\\mathcal U)\\) is the set of all pure states of \\(\\mathcal U\\). Sketch the proof of this theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Give the main elements of the Gelfand–Naimark–Segal construction. State the theorem involving a state \\(\\rho\\) of a \\(C^*\\)-algebra \\(\\mathcal U\\) and a cyclic representation \\(\\pi_\\rho\\) of \\(\\mathcal U\\) on a Hilbert space \\(H_\\rho\\). List the main steps in the proof.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State and sketch the proof of the theorem involving \\(\\mathcal A\\cong C(X)\\), where \\(\\mathcal A\\) is an abelian von Neumann algebra and \\(X\\) is an extremely disconnected compact Hausdorff space.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(\\mathcal U\\) be a \\(C^*\\)-algebra. State and prove equivalent conditions for \\(A\\in\\mathcal U^+\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give the main elements of the Gelfand–Naimark–Segal construction. State the theorem involving a state \\(\\rho\\) of a \\(C^*\\)-algebra \\(\\mathcal U\\) and a cyclic representation \\(\\pi_\\rho\\) of \\(\\mathcal U\\) on a Hilbert space \\(H_\\rho\\). List the main steps in the proof.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(H\\) be a self-adjoint operator on a Hilbert space. Define the Cayley transform \\(U(H)\\) and show that \\(H\\mapsto U(H)\\) on the self-adjoint operators is strong-operator continuous.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal U\\) be a \\(C^*\\)-algebra. State and prove equivalent conditions for \\(A\\in\\mathcal U^+\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(\\mathcal A\\) be the algebra of multiplications by elements of \\(L_\\infty(S,\\mathcal S,m)\\) on \\(L_2=L_2(S,\\mathcal S,m)\\). If \\(T\\) is a bounded operator on \\(L_2\\) commuting with \\(\\mathcal A\\), show \\(T\\in\\mathcal A\\). Assume \\(m(S)<\\infty\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(H\\) be a self-adjoint operator on a Hilbert space. Define the Cayley transform \\(U(H)\\) and show that \\(H\\mapsto U(H)\\) on the self-adjoint operators is strong-operator continuous.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal A\\) be the algebra of multiplications by elements of \\(L_\\infty(S,\\mathcal S,m)\\) on \\(L_2=L_2(S,\\mathcal S,m)\\). If \\(T\\) is a bounded operator on \\(L_2\\) commuting with \\(\\mathcal A\\), show \\(T\\in\\mathcal A\\). Assume \\(m(S)<\\infty\\).",
+        "subparts": []
+      }
     }
   ]
 }

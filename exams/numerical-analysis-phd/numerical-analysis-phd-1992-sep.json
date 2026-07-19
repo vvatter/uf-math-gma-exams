@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-1992-sep",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,136 +7,161 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_1992_09.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show that if \\(A\\in\\mathbb{R}^{n\\times n}\\), then \\(\\lVert A\\rVert_2=\\sigma_1\\), the largest singular value of \\(A\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(A\\in\\mathbb{R}^{n\\times n}\\), then \\(\\lVert A\\rVert_2=\\sigma_1\\), the largest singular value of \\(A\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 2,
-      "text": "Show that if \\(A\\in\\mathbb{R}^{n\\times n}\\), then \\(\\lVert A\\rVert_F=\\lVert QA\\rVert_F=\\lVert AQ\\rVert_F\\), where \\(Q\\) is any orthogonal matrix. Show that \\(\\lVert A\\rVert_F\\) is the square root of the sum of the squares of the singular values of \\(A\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(A\\in\\mathbb{R}^{n\\times n}\\), then \\(\\lVert A\\rVert_F=\\lVert QA\\rVert_F=\\lVert AQ\\rVert_F\\), where \\(Q\\) is any orthogonal matrix. Show that \\(\\lVert A\\rVert_F\\) is the square root of the sum of the squares of the singular values of \\(A\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Carefully state the relation between the SVD of a matrix and its \\(2\\)-norm distance from matrices of lower rank.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Carefully state the relation between the SVD of a matrix and its \\(2\\)-norm distance from matrices of lower rank.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Briefly discuss the distinction between the condition of a problem and the numerical stability of an algorithm for solving it.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Briefly discuss the distinction between the condition of a problem and the numerical stability of an algorithm for solving it.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Show that for invertible \\(A\\) and a suitably small perturbation \\(E\\), the exact solutions \\(x\\) and \\(y\\) of \\(Ax=b\\) and \\((A+E)y=b\\) satisfy\n\\[\n\\frac{\\lVert y-x\\rVert}{\\lVert y\\rVert}\\leq \\kappa(A)\\frac{\\lVert E\\rVert}{\\lVert A\\rVert}.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Recall that backward error analysis of Gaussian elimination with partial pivoting show that the computed solution \\(\\hat{x}\\) of \\(Ax=b\\) is the exact solution of a nearby system \\((A+E)\\hat{x}=b\\), where\n\\[\n\\lVert E\\rVert_\\infty\\approx 8n^3\\rho\\lVert A\\rVert_\\infty\\mu,\n\\]\nwhere \\(\\mu\\) is the unit roundoff and \\(\\rho\\) is the growth factor. Show how to combine the perturbation theory results from part a) with these roundoff error results to obtain results on the accuracy of the computed solution of a linear system via Gaussian elimination with partial pivoting.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Show that for invertible \\(A\\) and a suitably small perturbation \\(E\\), the exact solutions \\(x\\) and \\(y\\) of \\(Ax=b\\) and \\((A+E)y=b\\) satisfy\n\\[\n\\frac{\\lVert y-x\\rVert}{\\lVert y\\rVert}\\leq \\kappa(A)\\frac{\\lVert E\\rVert}{\\lVert A\\rVert}.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Recall that backward error analysis of Gaussian elimination with partial pivoting show that the computed solution \\(\\hat{x}\\) of \\(Ax=b\\) is the exact solution of a nearby system \\((A+E)\\hat{x}=b\\), where\n\\[\n\\lVert E\\rVert_\\infty\\approx 8n^3\\rho\\lVert A\\rVert_\\infty\\mu,\n\\]\nwhere \\(\\mu\\) is the unit roundoff and \\(\\rho\\) is the growth factor. Show how to combine the perturbation theory results from part a) with these roundoff error results to obtain results on the accuracy of the computed solution of a linear system via Gaussian elimination with partial pivoting.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Create a Matlab function chol.m which will overwrite the upper triangle of an invertible upper triangular matrix with its inverse using no scratch arrays. Derive an analytic estimate of the number of flops required.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Create a Matlab function chol.m which will overwrite the upper triangle of an invertible upper triangular matrix with its inverse using no scratch arrays. Derive an analytic estimate of the number of flops required.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Give a careful statement and proof of Gershgorin’s Theorem. Find upper and lower bounds for the set of eigenvalues for the \\(4\\times 4\\) Hilbert matrix \\(a_{ij}=1/(i+j-1)\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give a careful statement and proof of Gershgorin’s Theorem. Find upper and lower bounds for the set of eigenvalues for the \\(4\\times 4\\) Hilbert matrix \\(a_{ij}=1/(i+j-1)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Discuss the relative merits of using a Newton–Cotes method and Gaussian quadrature for numerical integration.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Discuss the relative merits of using a Newton–Cotes method and Gaussian quadrature for numerical integration.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Give a careful statement of the Contraction Mapping Theorem. If a matrix \\(A\\) is diagonally dominant, show how the Contraction Mapping Theorem can be used to justify the convergence of Jacobi’s method for solving \\(Ax=b\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give a careful statement of the Contraction Mapping Theorem. If a matrix \\(A\\) is diagonally dominant, show how the Contraction Mapping Theorem can be used to justify the convergence of Jacobi’s method for solving \\(Ax=b\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "For a given partition \\(\\{x_0,x_1,\\ldots,x_n\\}\\) of an interval \\([a,b]\\),",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Define the Lagrange basis functions \\(l_i(x)\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Derive Lagrange’s formula for the interpolating polynomial of the data \\(\\{y_0,y_1,\\ldots,y_n\\}\\).",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "Show that if \\(\\Psi(x):=(x-x_0)(x-x_1)\\cdots(x-x_n)\\), then\n\\[\nl_i(x)=\\frac{\\Psi(x)}{(x-x_i)\\Psi'(x_i)}.\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "For a given partition \\(\\{x_0,x_1,\\ldots,x_n\\}\\) of an interval \\([a,b]\\),",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Define the Lagrange basis functions \\(l_i(x)\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Derive Lagrange’s formula for the interpolating polynomial of the data \\(\\{y_0,y_1,\\ldots,y_n\\}\\).",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "Show that if \\(\\Psi(x):=(x-x_0)(x-x_1)\\cdots(x-x_n)\\), then\n\\[\nl_i(x)=\\frac{\\Psi(x)}{(x-x_i)\\Psi'(x_i)}.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 11,
-      "text": "Determine the cubic spline \\(s(x)\\) on the grid \\(\\{-1,0,1\\}\\) with \\(s(-1)=s(0)=0\\), \\(s(1)=4\\), and \\(s''(-1)=s''(1)=0\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Determine the cubic spline \\(s(x)\\) on the grid \\(\\{-1,0,1\\}\\) with \\(s(-1)=s(0)=0\\), \\(s(1)=4\\), and \\(s''(-1)=s''(1)=0\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Suppose that \\(f:\\mathbb{R}\\longrightarrow\\mathbb{R}\\) is of class \\(C^2\\) with \\(f(\\alpha)=0\\) and \\(f'(\\alpha)\\neq 0\\). Set \\(g(x):=x-\\frac{f(x)}{f'(x)}\\) so that \\(g(\\alpha)=\\alpha\\).",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "Show that on some neighborhood \\([\\alpha-\\delta,\\alpha+\\delta]\\) of \\(\\alpha\\), \\(g\\) is a contraction.",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Show that for any \\(x_0\\in[\\alpha-\\delta,\\alpha+\\delta]\\), \\(\\lim_{n\\to\\infty}x_n=\\alpha\\), where \\(x_{n+1}:=g(x_n)\\).",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "Conclude that for any \\(x_0\\in[\\alpha-\\delta,\\alpha+\\delta]\\), Newton’s method converges to \\(\\alpha\\).",
-          "subparts": []
-        },
-        {
-          "label": "d)",
-          "text": "Show that the convergence in b)—and hence in c)—is quadratic.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(f:\\mathbb{R}\\longrightarrow\\mathbb{R}\\) is of class \\(C^2\\) with \\(f(\\alpha)=0\\) and \\(f'(\\alpha)\\neq 0\\). Set \\(g(x):=x-\\frac{f(x)}{f'(x)}\\) so that \\(g(\\alpha)=\\alpha\\).",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Show that on some neighborhood \\([\\alpha-\\delta,\\alpha+\\delta]\\) of \\(\\alpha\\), \\(g\\) is a contraction.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Show that for any \\(x_0\\in[\\alpha-\\delta,\\alpha+\\delta]\\), \\(\\lim_{n\\to\\infty}x_n=\\alpha\\), where \\(x_{n+1}:=g(x_n)\\).",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "Conclude that for any \\(x_0\\in[\\alpha-\\delta,\\alpha+\\delta]\\), Newton’s method converges to \\(\\alpha\\).",
+            "subparts": []
+          },
+          {
+            "label": "d)",
+            "text": "Show that the convergence in b)—and hence in c)—is quadratic.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 13,
-      "text": "For a given partition \\(\\{x_0,x_1,\\ldots,x_n\\}\\) of an interval \\([a,b]\\) and function \\(f\\) defined on \\([a,b]\\),",
-      "subparts": [
-        {
-          "label": "a)",
-          "text": "State the divided difference formula for the polynomial \\(p_n(x)\\) interpolating \\(f\\).",
-          "subparts": []
-        },
-        {
-          "label": "b)",
-          "text": "Show that the error in the approximation in part a) is given by\n\\[\nf(x)-p_n(x)=(x-x_0)(x-x_1)\\cdots(x-x_n)f[x_0,x_1,\\ldots,x_n,x].\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "c)",
-          "text": "For \\(\\{x_0,x_1,x_2\\}=\\{0,1,2\\}\\) and \\(f(x)=\\frac{1}{1+x^2}\\), compute the divided difference formula for \\(p_2(x)\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "For a given partition \\(\\{x_0,x_1,\\ldots,x_n\\}\\) of an interval \\([a,b]\\) and function \\(f\\) defined on \\([a,b]\\),",
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "State the divided difference formula for the polynomial \\(p_n(x)\\) interpolating \\(f\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Show that the error in the approximation in part a) is given by\n\\[\nf(x)-p_n(x)=(x-x_0)(x-x_1)\\cdots(x-x_n)f[x_0,x_1,\\ldots,x_n,x].\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "For \\(\\{x_0,x_1,x_2\\}=\\{0,1,2\\}\\) and \\(f(x)=\\frac{1}{1+x^2}\\), compute the divided difference formula for \\(p_2(x)\\).",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

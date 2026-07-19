@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "probability-phd-2008-may",
   "subject": "PhD Probability",
   "subject_tag": "probability-phd",
@@ -7,58 +7,73 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Probability_2008_05.pdf",
-  "instructions": null,
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(\\mathcal F\\) be a sigma field. Two random variables \\(X\\) and \\(Y\\) satisfy\n\\[\n\\mathbb E[Y^2\\mid\\mathcal F]=X^2,\\qquad \\mathbb E[Y\\mid\\mathcal F]=X.\n\\]\nShow that \\(X=Y\\) a.s.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal F\\) be a sigma field. Two random variables \\(X\\) and \\(Y\\) satisfy\n\\[\n\\mathbb E[Y^2\\mid\\mathcal F]=X^2,\\qquad \\mathbb E[Y\\mid\\mathcal F]=X.\n\\]\nShow that \\(X=Y\\) a.s.",
+        "subparts": []
+      }
     },
     {
-      "number": 2,
-      "text": "Let \\(X\\) and \\(Y\\) be two independent random variables with the same probability distribution \\(F(x)\\). If \\((X+Y)/\\sqrt{2}\\) has the same probability distribution \\(F(x)\\), then\n\\[\nF(x)=\\int_{-\\infty}^{x}\\frac{1}{\\sqrt{2\\pi}}e^{-y^2/2}\\,\\mathrm{d}y.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) and \\(Y\\) be two independent random variables with the same probability distribution \\(F(x)\\). If \\((X+Y)/\\sqrt{2}\\) has the same probability distribution \\(F(x)\\), then\n\\[\nF(x)=\\int_{-\\infty}^{x}\\frac{1}{\\sqrt{2\\pi}}e^{-y^2/2}\\,\\mathrm{d}y.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(f_n(x_1,\\ldots,x_n)\\) be the probability density function of the random vector \\((X_1,\\ldots,X_n)\\) and \\(g_n(x_1,\\ldots,x_n)\\) be the probability density function of the random vector \\((Y_1,\\ldots,Y_n)\\). We define\n\\[\nZ_n=\\frac{g_n(X_1,\\ldots,X_n)}{f_n(X_1,\\ldots,X_n)},\n\\]\nif \\(f_n(X_1,\\ldots,X_n)>0\\), otherwise \\(Z_n=0\\). Show that \\(\\{Z_n,n=1,2,\\ldots\\}\\) is a supermartingale.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f_n(x_1,\\ldots,x_n)\\) be the probability density function of the random vector \\((X_1,\\ldots,X_n)\\) and \\(g_n(x_1,\\ldots,x_n)\\) be the probability density function of the random vector \\((Y_1,\\ldots,Y_n)\\). We define\n\\[\nZ_n=\\frac{g_n(X_1,\\ldots,X_n)}{f_n(X_1,\\ldots,X_n)},\n\\]\nif \\(f_n(X_1,\\ldots,X_n)>0\\), otherwise \\(Z_n=0\\). Show that \\(\\{Z_n,n=1,2,\\ldots\\}\\) is a supermartingale.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(X_1,X_2,\\ldots\\) be a sequence of i.i.d random variables with mean \\(0\\) and variance \\(\\sigma^2<\\infty\\). If \\(S_n=X_1+X_2+\\cdots+X_n\\), then\n\\[\n\\lim_{n\\to\\infty}\\mathbb E\\left[\\frac{|S_n|}{\\sqrt n}\\right]=\\sqrt{\\frac{2}{\\pi}}\\sigma.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X_1,X_2,\\ldots\\) be a sequence of i.i.d random variables with mean \\(0\\) and variance \\(\\sigma^2<\\infty\\). If \\(S_n=X_1+X_2+\\cdots+X_n\\), then\n\\[\n\\lim_{n\\to\\infty}\\mathbb E\\left[\\frac{|S_n|}{\\sqrt n}\\right]=\\sqrt{\\frac{2}{\\pi}}\\sigma.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(B_t\\) be a standard Brownian motion and define\n\\[\nD_n=\\max_{n\\le t\\le n+1}|B_t-B_n|.\n\\]\nProve that \\(D_n/n\\) converges to \\(0\\) with probability one.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(B_t\\) be a standard Brownian motion and define\n\\[\nD_n=\\max_{n\\le t\\le n+1}|B_t-B_n|.\n\\]\nProve that \\(D_n/n\\) converges to \\(0\\) with probability one.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Consider square integrable random vectors\n\\[\nY=\\bigl(y(1),y(2),\\ldots,y(d)\\bigr)\n\\]\nand\n\\[\nY_n=\\bigl(y_n(1),y_n(2),\\ldots,y_n(d)\\bigr),\\qquad n\\in\\mathbb N,\n\\]\nwhich satisfy\n\\[\n\\lim_{n\\to\\infty}\\mathbb E\\bigl(|y_n(j)-y(j)|^2\\bigr)=0\\qquad\\text{for }j=1,2,\\ldots,d.\n\\]\nShow that the mean of \\(Y_n\\) converges to the mean of \\(Y\\), and the covariance matrix of \\(Y_n\\) converges to that of \\(Y\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Consider square integrable random vectors\n\\[\nY=\\bigl(y(1),y(2),\\ldots,y(d)\\bigr)\n\\]\nand\n\\[\nY_n=\\bigl(y_n(1),y_n(2),\\ldots,y_n(d)\\bigr),\\qquad n\\in\\mathbb N,\n\\]\nwhich satisfy\n\\[\n\\lim_{n\\to\\infty}\\mathbb E\\bigl(|y_n(j)-y(j)|^2\\bigr)=0\\qquad\\text{for }j=1,2,\\ldots,d.\n\\]\nShow that the mean of \\(Y_n\\) converges to the mean of \\(Y\\), and the covariance matrix of \\(Y_n\\) converges to that of \\(Y\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Suppose that \\(\\{X_t\\}\\) and \\(\\{Y_t\\}\\) are both standard Brownian motion and are independent. Let \\(\\mathcal F_t\\) denote the \\(\\sigma\\)-field \\(\\sigma(X_s,Y_s\\mid s\\in[0,t])\\). Prove that\n\\[\nZ_t=X_t^2Y_t-\\int_0^t Y_u\\,\\mathrm{d}u\n\\]\nis an \\(\\mathcal F_t\\)-martingale.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose that \\(\\{X_t\\}\\) and \\(\\{Y_t\\}\\) are both standard Brownian motion and are independent. Let \\(\\mathcal F_t\\) denote the \\(\\sigma\\)-field \\(\\sigma(X_s,Y_s\\mid s\\in[0,t])\\). Prove that\n\\[\nZ_t=X_t^2Y_t-\\int_0^t Y_u\\,\\mathrm{d}u\n\\]\nis an \\(\\mathcal F_t\\)-martingale.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(\\mathcal F\\) be a sub-sigma field of \\(\\mathcal G\\) and \\(Z\\) be a nonnegative random variable defined on probability space \\((\\Omega,\\mathcal G,\\mathbb P)\\) with \\(\\mathbb E_{\\mathbb P}[Z]=1\\). Define\n\\[\n\\mathbb Q(A)=\\int_A Z\\,\\mathrm{d}\\mathbb P\\qquad\\text{for }A\\in\\mathcal G.\n\\]",
-      "subparts": [
-        {
-          "label": "a).",
-          "text": "Show that \\(\\mathbb Q\\) is a probability measure on \\((\\Omega,\\mathcal G)\\).",
-          "subparts": []
-        },
-        {
-          "label": "b).",
-          "text": "For a random variable \\(X\\), we have\n\\[\n\\mathbb E_{\\mathbb Q}[X\\mid\\mathcal F]=\\frac{\\mathbb E_{\\mathbb P}[ZX\\mid\\mathcal F]}{\\mathbb E_{\\mathbb P}[Z\\mid\\mathcal F]}.\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal F\\) be a sub-sigma field of \\(\\mathcal G\\) and \\(Z\\) be a nonnegative random variable defined on probability space \\((\\Omega,\\mathcal G,\\mathbb P)\\) with \\(\\mathbb E_{\\mathbb P}[Z]=1\\). Define\n\\[\n\\mathbb Q(A)=\\int_A Z\\,\\mathrm{d}\\mathbb P\\qquad\\text{for }A\\in\\mathcal G.\n\\]",
+        "subparts": [
+          {
+            "label": "a).",
+            "text": "Show that \\(\\mathbb Q\\) is a probability measure on \\((\\Omega,\\mathcal G)\\).",
+            "subparts": []
+          },
+          {
+            "label": "b).",
+            "text": "For a random variable \\(X\\), we have\n\\[\n\\mathbb E_{\\mathbb Q}[X\\mid\\mathcal F]=\\frac{\\mathbb E_{\\mathbb P}[ZX\\mid\\mathcal F]}{\\mathbb E_{\\mathbb P}[Z\\mid\\mathcal F]}.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

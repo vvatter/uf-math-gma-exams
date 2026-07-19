@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-first-year-2025-may-part-1",
   "subject": "First Year Algebra",
   "subject_tag": "algebra-first-year",
@@ -7,97 +7,112 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1_2025_05.pdf",
-  "instructions": "Answer 4 questions. Indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(p\\) be a prime and \\(G\\) be a nontrivial finite \\(p\\)-group.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(Z(G)\\) is not trivial.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that every nontrivial finite \\(p\\)-group has a normal subgroup of index \\(p\\).",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "Answer 4 questions. Indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Let \\(\\sigma\\in S_n\\) be an \\(n\\)-cycle.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(\\sigma\\in A_n\\) if and only if \\(n\\) is odd.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that \\(C_{S_n}(\\sigma)=\\langle\\sigma\\rangle\\).",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that when \\(n\\) is odd, \\(A_n\\) has two conjugacy classes of \\(n\\)-cycles.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p\\) be a prime and \\(G\\) be a nontrivial finite \\(p\\)-group.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(Z(G)\\) is not trivial.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that every nontrivial finite \\(p\\)-group has a normal subgroup of index \\(p\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(G\\) be a group and let \\(T(G)=\\{x\\in G:\\exists n\\geq 1, x^n=1\\}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that if \\(G\\) is abelian then \\(T(G)\\) is a subgroup of \\(G\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Give an example of a nonabelian group \\(G\\) such that \\(T(G)\\) is not a subgroup of \\(G\\). Justify any claims that you make.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\sigma\\in S_n\\) be an \\(n\\)-cycle.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(\\sigma\\in A_n\\) if and only if \\(n\\) is odd.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\(C_{S_n}(\\sigma)=\\langle\\sigma\\rangle\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that when \\(n\\) is odd, \\(A_n\\) has two conjugacy classes of \\(n\\)-cycles.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Find the order of the group \\(\\operatorname{GL}(4,\\mathbb{Z}/3\\mathbb{Z})\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Show that there exists a nonabelian group of order \\(2025=3^4\\cdot 5^2\\) in which the Sylow \\(3\\)-subgroup is abelian.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a group and let \\(T(G)=\\{x\\in G:\\exists n\\geq 1, x^n=1\\}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if \\(G\\) is abelian then \\(T(G)\\) is a subgroup of \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a nonabelian group \\(G\\) such that \\(T(G)\\) is not a subgroup of \\(G\\). Justify any claims that you make.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(K\\) and \\(H\\) be groups, with \\(K\\) abelian. Consider a homomorphism \\(\\phi:K\\to\\operatorname{Aut}(H)\\) and the associated semidirect product \\(G=H\\rtimes_\\phi K\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that when \\(K\\) is identified with the subgroup \\(\\{(1,k)\\mid k\\in K\\}\\) of \\(G\\), \\(\\operatorname{Ker}(\\phi)\\) is contained in the center of \\(G\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that every group of order \\(44\\) has a cyclic subgroup of order \\(22\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Find the order of the group \\(\\operatorname{GL}(4,\\mathbb{Z}/3\\mathbb{Z})\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that there exists a nonabelian group of order \\(2025=3^4\\cdot 5^2\\) in which the Sylow \\(3\\)-subgroup is abelian.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(G\\) be a finite group, and let \\(P\\) be a Sylow \\(p\\)-subgroup of \\(G\\) for some prime \\(p\\). Let \\(N=N_G(P)\\), the normalizer of \\(P\\). Prove that \\(N_G(N)=N\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(K\\) and \\(H\\) be groups, with \\(K\\) abelian. Consider a homomorphism \\(\\phi:K\\to\\operatorname{Aut}(H)\\) and the associated semidirect product \\(G=H\\rtimes_\\phi K\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that when \\(K\\) is identified with the subgroup \\(\\{(1,k)\\mid k\\in K\\}\\) of \\(G\\), \\(\\operatorname{Ker}(\\phi)\\) is contained in the center of \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that every group of order \\(44\\) has a cyclic subgroup of order \\(22\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a finite group, and let \\(P\\) be a Sylow \\(p\\)-subgroup of \\(G\\) for some prime \\(p\\). Let \\(N=N_G(P)\\), the normalizer of \\(P\\). Prove that \\(N_G(N)=N\\).",
+        "subparts": []
+      }
     }
   ]
 }

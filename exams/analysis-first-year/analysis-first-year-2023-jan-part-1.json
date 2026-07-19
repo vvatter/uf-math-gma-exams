@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "analysis-first-year-2023-jan-part-1",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -7,65 +7,78 @@
   "month": "january",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2023_01.pdf",
-  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\((a_n)\\) and \\((b_n)\\) be bounded real sequences. Prove that\n\\[\n\\limsup(a_n+b_n)\\leq \\limsup a_n+\\limsup b_n\n\\]\nwith equality when \\((a_n)\\) converges.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
     },
     {
-      "number": 2,
-      "text": "Let \\(A\\) be a subset of the metric space \\((M,d)\\) and define \\(d_A:M\\to\\mathbb{R}\\) by \\(d_A(x)=\\inf\\{d(a,x):a\\in A\\}\\). Prove that:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "\\(d_A\\) is uniformly continuous;",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "\\(\\{x\\in M:d_A(x)=0\\}=\\overline{A}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((a_n)\\) and \\((b_n)\\) be bounded real sequences. Prove that\n\\[\n\\limsup(a_n+b_n)\\leq \\limsup a_n+\\limsup b_n\n\\]\nwith equality when \\((a_n)\\) converges.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(X\\) and \\(Y\\) be metric spaces; let \\(f:X\\to Y\\) be a continuous bijection, with inverse \\(g:Y\\to X\\). For each of the following statements, provide a proof if true or a counterexample (with justification) if false:",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "if \\(X\\) is compact then \\(g\\) is continuous;",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "if \\(Y\\) is compact then \\(g\\) is continuous.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(A\\) be a subset of the metric space \\((M,d)\\) and define \\(d_A:M\\to\\mathbb{R}\\) by \\(d_A(x)=\\inf\\{d(a,x):a\\in A\\}\\). Prove that:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(d_A\\) is uniformly continuous;",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(\\{x\\in M:d_A(x)=0\\}=\\overline{A}\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(X\\) and \\(Y\\) be metric spaces; let \\(f:X\\to Y\\) be a continuous bijection, with uniformly continuous inverse \\(g:Y\\to X\\). For each of the following statements, provide a proof if true or a counterexample if false:\n\n[Be sure to demonstrate uniform continuity of \\(g\\) in any counterexample.]",
-      "subparts": [
-        {
-          "label": "(i)",
-          "text": "if \\(X\\) is complete then \\(Y\\) is complete;",
-          "subparts": []
-        },
-        {
-          "label": "(ii)",
-          "text": "if \\(Y\\) is complete then \\(X\\) is complete.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) and \\(Y\\) be metric spaces; let \\(f:X\\to Y\\) be a continuous bijection, with inverse \\(g:Y\\to X\\). For each of the following statements, provide a proof if true or a counterexample (with justification) if false:",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "if \\(X\\) is compact then \\(g\\) is continuous;",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "if \\(Y\\) is compact then \\(g\\) is continuous.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "The function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) is differentiable, with \\(|f'|\\leq 1\\) everywhere. Prove that if \\(\\varepsilon>0\\) is sufficiently small (how small?) then the function \\(F:\\mathbb{R}\\to\\mathbb{R}\\) defined by \\(F(x)=x+\\varepsilon f(x)\\) is injective.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) and \\(Y\\) be metric spaces; let \\(f:X\\to Y\\) be a continuous bijection, with uniformly continuous inverse \\(g:Y\\to X\\). For each of the following statements, provide a proof if true or a counterexample if false:\n\n[Be sure to demonstrate uniform continuity of \\(g\\) in any counterexample.]",
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "if \\(X\\) is complete then \\(Y\\) is complete;",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "if \\(Y\\) is complete then \\(X\\) is complete.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "The function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) is differentiable, with \\(|f'|\\leq 1\\) everywhere. Prove that if \\(\\varepsilon>0\\) is sufficiently small (how small?) then the function \\(F:\\mathbb{R}\\to\\mathbb{R}\\) defined by \\(F(x)=x+\\varepsilon f(x)\\) is injective.",
+        "subparts": []
+      }
     }
   ]
 }

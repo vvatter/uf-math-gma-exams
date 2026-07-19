@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "numerical-analysis-phd-2014-may",
   "subject": "PhD Numerical Analysis",
   "subject_tag": "numerical-analysis-phd",
@@ -7,70 +7,83 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2014_05.pdf",
-  "instructions": "You have 2 hours to answer the following questions. You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Show that the fixed point equation \\(x=f(x)\\) with a fixed point \\(\\alpha\\) can be solved iteratively, if \\(f'(\\alpha)\\ne 1\\), by one of the following fixed point iteration formulas:",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "\\(x_{n+1}=f(x_n)\\)",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "\\(x_{n+1}=f^{-1}(x_n)\\). Hint: The following formula for the derivative of an inverse is valid\n\\[\n[f^{-1}]'(x)=\\frac{1}{f'(f^{-1}(x))}.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "\\(x_{n+1}=(x_n+f(x_n))/2\\)",
-          "subparts": []
-        }
-      ]
+      "type": "instructions",
+      "text": "You have 2 hours to answer the following questions. You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator."
     },
     {
-      "number": 2,
-      "text": "Let \\(f(x)\\in C^1[a,b]\\). Let \\(p(x)\\) be a polynomial for which\n\\[\n\\lVert f'-p\\rVert_\\infty\\le \\epsilon\n\\]\nand define\n\\[\nq(x)=f(a)+\\int_a^x p(t)\\,dt,\\qquad a\\le x\\le b.\n\\]\nShow that \\(q(x)\\) is a polynomial that satisfies\n\\[\n\\lVert f-q\\rVert_\\infty\\le \\epsilon(b-a).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the fixed point equation \\(x=f(x)\\) with a fixed point \\(\\alpha\\) can be solved iteratively, if \\(f'(\\alpha)\\ne 1\\), by one of the following fixed point iteration formulas:",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(x_{n+1}=f(x_n)\\)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(x_{n+1}=f^{-1}(x_n)\\). Hint: The following formula for the derivative of an inverse is valid\n\\[\n[f^{-1}]'(x)=\\frac{1}{f'(f^{-1}(x))}.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(x_{n+1}=(x_n+f(x_n))/2\\)",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 3,
-      "text": "Consider the integral\n\\[\n\\int_0^\\pi x^2\\cos x\\,dx. \\tag{1}\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Consider a quadrature rule of the form\n\\[\n\\int_0^\\pi x^\\alpha f(x)\\,dx\\approx Af(0)+B\\int_0^\\pi f(x)\\,dx\n\\]\nwhere \\(\\alpha>-1\\), \\(\\alpha\\ne 0\\) is a parameter. Determine the constants \\(A,B\\) so that the quadrature formula has degree of exactness one.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Use the formula in part (a) to approximate the integral (1).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f(x)\\in C^1[a,b]\\). Let \\(p(x)\\) be a polynomial for which\n\\[\n\\lVert f'-p\\rVert_\\infty\\le \\epsilon\n\\]\nand define\n\\[\nq(x)=f(a)+\\int_a^x p(t)\\,dt,\\qquad a\\le x\\le b.\n\\]\nShow that \\(q(x)\\) is a polynomial that satisfies\n\\[\n\\lVert f-q\\rVert_\\infty\\le \\epsilon(b-a).\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "For the function \\(f(x)=\\ln(1+x)\\) for \\(x\\in[0,1]\\), find the minimax approximation polynomial of degree one. Give the exact value of the minimax error.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Consider the integral\n\\[\n\\int_0^\\pi x^2\\cos x\\,dx. \\tag{1}\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Consider a quadrature rule of the form\n\\[\n\\int_0^\\pi x^\\alpha f(x)\\,dx\\approx Af(0)+B\\int_0^\\pi f(x)\\,dx\n\\]\nwhere \\(\\alpha>-1\\), \\(\\alpha\\ne 0\\) is a parameter. Determine the constants \\(A,B\\) so that the quadrature formula has degree of exactness one.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Use the formula in part (a) to approximate the integral (1).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 5,
-      "text": "Assume that you are solving the initial value problem\n\\[\n\\begin{aligned}\ny'&=f(t,y), && a\\le t\\le b,\\\\\ny(a)&=\\alpha.\n\\end{aligned}\n\\]",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Derive the formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method. Hint: The formula is \\(M=\\lVert Y''\\rVert_\\infty\\):\n\\[\n\\lvert Y(t_i)-w_i\\rvert<\\frac{hM}{2L}\\left[e^{L(b-a)}-1\\right].\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Compute the value of \\(M=\\lVert Y''\\rVert_\\infty\\) necessary to apply the global error formula above to the specific ODE problem\n\\[\n\\begin{aligned}\ny'&=\\sin(t+2y)+e^t, && 0\\le t\\le 1,\\\\\ny(0)&=0.\n\\end{aligned}\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "For the function \\(f(x)=\\ln(1+x)\\) for \\(x\\in[0,1]\\), find the minimax approximation polynomial of degree one. Give the exact value of the minimax error.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Assume that you are solving the initial value problem\n\\[\n\\begin{aligned}\ny'&=f(t,y), && a\\le t\\le b,\\\\\ny(a)&=\\alpha.\n\\end{aligned}\n\\]",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Derive the formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method. Hint: The formula is \\(M=\\lVert Y''\\rVert_\\infty\\):\n\\[\n\\lvert Y(t_i)-w_i\\rvert<\\frac{hM}{2L}\\left[e^{L(b-a)}-1\\right].\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Compute the value of \\(M=\\lVert Y''\\rVert_\\infty\\) necessary to apply the global error formula above to the specific ODE problem\n\\[\n\\begin{aligned}\ny'&=\\sin(t+2y)+e^t, && 0\\le t\\le 1,\\\\\ny(0)&=0.\n\\end{aligned}\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

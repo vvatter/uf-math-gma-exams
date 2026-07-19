@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "complex-analysis-phd-2017-may",
   "subject": "PhD Complex Analysis",
   "subject_tag": "complex-analysis-phd",
@@ -7,58 +7,77 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-ComplexAnalysis-2017_05.pdf",
-  "instructions": "Do six of eight. Throughout, \\(\\mathbb{D}=\\{ |z|<1\\}\\) and \\(\\mathbb{H}=\\{\\operatorname{Re} z>0\\}\\).",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Use Liouville’s Theorem to prove the fundamental theorem of algebra.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Do six of eight. Throughout, \\(\\mathbb{D}=\\{ |z|<1\\}\\) and \\(\\mathbb{H}=\\{\\operatorname{Re} z>0\\}\\)."
     },
     {
-      "number": 2,
-      "text": "Suppose \\(f:\\mathbb{C}\\to\\mathbb{C}\\) is entire and \\(|f(z)|=1\\) for \\(|z|=1\\). What can be said about \\(f\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Use Liouville’s Theorem to prove the fundamental theorem of algebra.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Find\n\\[\n\\int_0^\\pi \\frac{dt}{2+\\cos(t)}.\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(f:\\mathbb{C}\\to\\mathbb{C}\\) is entire and \\(|f(z)|=1\\) for \\(|z|=1\\). What can be said about \\(f\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Let \\(\\mathbb{P}=\\{0<|z|<1\\}\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Does there exist an onto analytic map \\(f:\\mathbb{D}\\to\\mathbb{P}\\)? If so, can \\(f\\) be one-one?",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Find a conformal map from the strip \\(S=\\{0<\\operatorname{Im} z<1\\}\\) to \\(\\mathbb{D}\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Find\n\\[\n\\int_0^\\pi \\frac{dt}{2+\\cos(t)}.\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Suppose \\(f:\\mathbb{C}\\to\\mathbb{C}\\) is entire, non-constant and periodic of period 1, meaning \\(f(z+1)=f(z)\\). Prove the entire function \\(g:\\mathbb{C}\\to\\mathbb{C}\\) given by \\(g(z)=f(z)-z\\) is onto.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathbb{P}=\\{0<|z|<1\\}\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Does there exist an onto analytic map \\(f:\\mathbb{D}\\to\\mathbb{P}\\)? If so, can \\(f\\) be one-one?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Find a conformal map from the strip \\(S=\\{0<\\operatorname{Im} z<1\\}\\) to \\(\\mathbb{D}\\).",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Suppose \\(f\\) is analytic in an open set containing \\(\\{|z|\\leq 1\\}\\) and \\(|f(z)|<1\\) for \\(|z|=1\\). Prove \\(f(z)=z\\) has exactly one solution (counting with multiplicity) in \\(\\mathbb{D}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(f:\\mathbb{C}\\to\\mathbb{C}\\) is entire, non-constant and periodic of period 1, meaning \\(f(z+1)=f(z)\\). Prove the entire function \\(g:\\mathbb{C}\\to\\mathbb{C}\\) given by \\(g(z)=f(z)-z\\) is onto.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let\n\\[\n\\mathcal{F}=\\{f:\\mathbb{D}\\to\\mathbb{H}: f\\text{ is analytic and }f(0)=1\\}.\n\\]\nProve \\(\\mathcal{F}\\) is a normal family.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Suppose \\(f\\) is analytic in an open set containing \\(\\{|z|\\leq 1\\}\\) and \\(|f(z)|<1\\) for \\(|z|=1\\). Prove \\(f(z)=z\\) has exactly one solution (counting with multiplicity) in \\(\\mathbb{D}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Fix \\(0<r<1\\) and let \\(\\mathbb{A}=\\{r<|z|<1\\}\\). Show, if \\(u\\) is harmonic on \\(\\mathbb{A}\\), then there is an analytic function \\(f\\) on \\(\\mathbb{A}\\) and a real constant \\(c\\) such that\n\\[\nu(z)=\\operatorname{Re} f(z)+c\\log(|z|).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let\n\\[\n\\mathcal{F}=\\{f:\\mathbb{D}\\to\\mathbb{H}: f\\text{ is analytic and }f(0)=1\\}.\n\\]\nProve \\(\\mathcal{F}\\) is a normal family.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Fix \\(0<r<1\\) and let \\(\\mathbb{A}=\\{r<|z|<1\\}\\). Show, if \\(u\\) is harmonic on \\(\\mathbb{A}\\), then there is an analytic function \\(f\\) on \\(\\mathbb{A}\\) and a real constant \\(c\\) such that\n\\[\nu(z)=\\operatorname{Re} f(z)+c\\log(|z|).\n\\]",
+        "subparts": []
+      }
     }
   ]
 }

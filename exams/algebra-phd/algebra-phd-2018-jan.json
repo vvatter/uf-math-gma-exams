@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "algebra-phd-2018-jan",
   "subject": "PhD Algebra",
   "subject_tag": "algebra-phd",
@@ -7,100 +7,129 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Algebra-January-2018.pdf",
-  "instructions": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(q > 1\\) be a power of a prime \\(p\\). Prove that there exists some field \\(F\\) with \\(|F|=q\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer seven problems. If you turn in more, the first seven will be graded. Within reason, you may quote theorems as long as you state them clearly."
     },
     {
-      "number": 2,
-      "text": "Determine the Galois group of \\(x^4-5\\) over \\(\\mathbb{Q}\\), over \\(\\mathbb{Q}(\\sqrt{5})\\), and over \\(\\mathbb{Q}(\\sqrt{5}i)\\). Justify your answers.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Note. Below ring means associative ring with identity, and module means unital module."
     },
     {
-      "number": 3,
-      "text": "Prove that if \\(G\\) is a finite multiplicative subgroup of a field \\(F\\), then \\(G\\) is cyclic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(q>1\\) be a power of a prime \\(p\\). Prove that there exists some field \\(F\\) with \\(|F|=q\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Prove that if \\(R\\) is an integral domain and a local ring, and \\(I\\) an invertible ideal of \\(R\\), then \\(I\\) is principal.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Determine the Galois group of \\(x^4-5\\) over \\(\\mathbb{Q}\\), over \\(\\mathbb{Q}(\\sqrt{5})\\), and over \\(\\mathbb{Q}(\\sqrt{5}i)\\). Justify your answers.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(R\\) be a commutative ring with identity, and let \\(I\\) and \\(J\\) be ideals of \\(R\\). Prove that the \\(R\\)-modules \\((R/I)\\otimes_R(R/J)\\) and \\(R/(I+J)\\) are isomorphic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that if \\(G\\) is a finite multiplicative subgroup of a field \\(F\\), then \\(G\\) is cyclic.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "State and prove Hilbert’s Basis Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that if \\(R\\) is an integral domain and a local ring, and \\(I\\) an invertible ideal of \\(R\\), then \\(I\\) is principal.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Prove the Lying-Over Theorem: Let \\(S\\) be an integral extension of an integral domain \\(R\\), and let \\(P\\) be a prime ideal of \\(R\\). Then, there exists a prime ideal \\(Q\\) of \\(S\\), such that \\(Q\\cap R=P\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with identity, and let \\(I\\) and \\(J\\) be ideals of \\(R\\). Prove that the \\(R\\)-modules \\((R/I)\\otimes_R(R/J)\\) and \\(R/(I+J)\\) are isomorphic.",
+        "subparts": []
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(R\\) be a ring.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Define what it means for an \\(R\\)-module \\(M\\) to be projective.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that any free \\(R\\)-module is projective.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Prove that there exists some ring \\(R\\) and some projective \\(R\\)-module \\(P\\) such that \\(P\\) is a projective module but not a free module.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "State and prove Hilbert’s Basis Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "Let \\(R\\) be a commutative ring with identity. Let \\(\\phi\\colon R\\to R\\) be a ring homomorphism. Assume \\(R\\) is Noetherian and that \\(\\phi\\) is surjective. Prove that \\(\\phi\\) is an automorphism.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove the Lying-Over Theorem: Let \\(S\\) be an integral extension of an integral domain \\(R\\), and let \\(P\\) be a prime ideal of \\(R\\). Then, there exists a prime ideal \\(Q\\) of \\(S\\), such that \\(Q\\cap R=P\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Let \\(V\\) be a finite dimensional non-zero vector space over a field \\(F\\). Let \\(R=\\operatorname{End}_F(V)\\) be the ring of endomorphisms of \\(V\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that \\(R\\) is a simple ring.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Describe a minimal (non zero) left ideal of \\(R\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a ring.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for an \\(R\\)-module \\(M\\) to be projective.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that any free \\(R\\)-module is projective.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that there exists some ring \\(R\\) and some projective \\(R\\)-module \\(P\\) such that \\(P\\) is a projective module but not a free module.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 11,
-      "text": "Let \\(\\mathcal{FG}\\) be the category of all finite groups.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Recall the definition of free object in an arbitrary concrete category \\(\\mathcal{C}\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove from your definition that there exists a finite set \\(S\\) such that there is no free object in \\(\\mathcal{FG}\\) freely generated by \\(S\\).",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(R\\) be a commutative ring with identity. Let \\(\\phi:R\\to R\\) be a ring homomorphism. Assume \\(R\\) is Noetherian and that \\(\\phi\\) is surjective. Prove that \\(\\phi\\) is an automorphism.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(V\\) be a finite dimensional non-zero vector space over a field \\(F\\). Let \\(R=\\operatorname{End}_F(V)\\) be the ring of endomorphisms of \\(V\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(R\\) is a simple ring.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Describe a minimal (non zero) left ideal of \\(R\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(\\mathcal{FG}\\) be the category of all finite groups.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Recall the definition of free object in an arbitrary concrete category \\(\\mathcal{C}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove from your definition that there exists a finite set \\(S\\) such that there is no free object in \\(\\mathcal{FG}\\) freely generated by \\(S\\).",
+            "subparts": []
+          }
+        ]
+      }
     }
   ]
 }

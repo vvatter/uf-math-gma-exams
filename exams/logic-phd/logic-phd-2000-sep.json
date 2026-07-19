@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-2000-sep",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,62 +7,115 @@
   "month": "september",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2000_09.pdf",
-  "instructions": "Answer 7 questions, including at least one from each of the four segments. Problems 1–3 concern General Logic; problems 4–5 concern Model Theory; problems 6–8 concern Set Theory; problems 9–11 concern Recursion Theory.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State Gödel’s incompleteness theorem, and briefly sketch its proof.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer 7 questions, including at least one from each of the four segments."
     },
     {
-      "number": 2,
-      "text": "Show that any complete, finitely axiomatizable first-order theory is decidable.",
-      "subparts": []
+      "type": "section",
+      "heading": "1. General Logic",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State Gödel’s incompleteness theorem, and briefly sketch its proof.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that any complete, finitely axiomatizable first-order theory is decidable.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Give an example of two countable models which are elementarily equivalent, but not isomorphic.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 3,
-      "text": "Give an example of two countable models which are elementarily equivalent, but not isomorphic.",
-      "subparts": []
+      "type": "section",
+      "heading": "2. Model Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and sketch a proof of the completeness theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and sketch a proof of the Łoś theorem about ultraproducts of models.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 4,
-      "text": "State and sketch a proof of the completeness theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "3. Set Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that a countable union of countable sets is countable.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch the proof that \\(L \\models \\mathrm{GCH}\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that if \\(\\kappa\\) is a regular, uncountable cardinal then any diagonal intersection of closed and unbounded subsets of \\(\\kappa\\) is closed and unbounded.",
+            "subparts": []
+          }
+        }
+      ]
     },
     {
-      "number": 5,
-      "text": "State and sketch a proof of the Łoś theorem about ultraproducts of models.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "Prove that a countable union of countable sets is countable.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Sketch the proof that \\(L \\models \\mathrm{GCH}\\).",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "Prove that if \\(\\kappa\\) is a regular, uncountable cardinal then any diagonal intersection of closed and unbounded subsets of \\(\\kappa\\) is closed and unbounded.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Show that any total function \\(f:\\omega\\to\\omega\\) with a recursively enumerable graph is recursive. Show that this is not true for partial functions.",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Explain why, for any \\(A\\subseteq\\omega\\), there are at most countably many sets \\(B\\) such that \\(B<_T A\\).",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "State and prove Kleene’s Recursion (or Fixed Point) Theorem.",
-      "subparts": []
+      "type": "section",
+      "heading": "4. Recursion Theory",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show that any total function \\(f: \\omega \\to \\omega\\) with a recursively enumerable graph is recursive. Show that this is not true for partial functions.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Explain why, for any \\(A \\subset \\omega\\), there are at most countably many sets \\(B\\) such that \\(B <_T A\\).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove Kleene’s Recursion (or Fixed Point) Theorem.",
+            "subparts": []
+          }
+        }
+      ]
     }
   ]
 }

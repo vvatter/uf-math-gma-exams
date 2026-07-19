@@ -1,6 +1,8 @@
 # Logic, PhD exam, May 2006
 
-*Please complete seven problems among the following, including one problem from each of the ranges 1–3, 4–6, 7–9, and 10–12. Problems 1–3 concern General logic; problems 4–6 concern Model theory; problems 7–9 concern Set theory; problems 10–12 concern Computability.*
+*Please complete seven problems among the following, including one from each section.*
+
+## 1. General logic
 
 **1.** State the incompleteness theorem and explain the role of Gödel numbering in its proof.
 
@@ -8,17 +10,23 @@
 
 **3.** Sketch the proof of Tarski’s undefinability of truth.
 
+## 2. Model theory
+
 **4.** Prove that the theory of dense linear orders without endpoints is complete.
 
 **5.** Find two models which are elementarily equivalent but not isomorphic.
 
 **6.** State and prove Tarski’s criterion for elementary submodels.
 
+## 3. Set theory
+
 **7.** Sketch the proof of \(L\) satisfying CH.
 
 **8.** Prove from Martin’s Axiom that every set of reals of size \(\aleph_1\) has Lebesgue measure zero.
 
 **9.** Prove that every stationary subset of \(\omega_1\) can be split into \(\aleph_1\) many pairwise disjoint stationary subsets.
+
+## 4. Computability
 
 **10.** Show how to construct a simple recursively enumerable set \(A\) (meaning that \(\omega-A\) has no infinite r.e. subset).
 

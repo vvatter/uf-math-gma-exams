@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "complex-analysis-phd-2006-may",
   "subject": "PhD Complex Analysis",
   "subject_tag": "complex-analysis-phd",
@@ -7,96 +7,115 @@
   "month": "may",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_ComplexAnalysis_2006_05.pdf",
-  "instructions": "Give complete proofs and computations. Partial credit will be given where justified.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(0<a<1\\). Evaluate the integral\n\\[\n\\int_{-\\infty}^{\\infty}\\frac{e^{ax}}{1+e^x}\\,dx,\n\\]\nwhere \\(a\\in(0,1)\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Give complete proofs and computations. Partial credit will be given where justified."
     },
     {
-      "number": 2,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that\n\\[\n\\cos \\pi z=\\prod_{n=1}^{\\infty}\\left(1-\\frac{4z^2}{(2n-1)^2}\\right).\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Deduce from (a) that\n\\[\n\\tan \\pi z=\\frac{8}{\\pi}\\sum_{n=1}^{\\infty}\\frac{z}{(2n-1)^2-4z^2}.\n\\]",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(0<a<1\\). Evaluate the integral\n\\[\n\\int_{-\\infty}^{\\infty}\\frac{e^{ax}}{1+e^x}\\,dx,\n\\]\nwhere \\(a\\in(0,1)\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(G\\) be a region and \\(u:G\\to\\mathbb{R}\\) be harmonic. Let \\(v\\) be a harmonic conjugate to \\(u\\) in \\(G\\). Show that the product \\(u\\cdot v\\) is harmonic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that\n\\[\n\\cos \\pi z=\\prod_{n=1}^{\\infty}\\left(1-\\frac{4z^2}{(2n-1)^2}\\right).\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Deduce from (a) that\n\\[\n\\tan \\pi z=\\frac{8}{\\pi}\\sum_{n=1}^{\\infty}\\frac{z}{(2n-1)^2-4z^2}.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 4,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Show that if \\(f\\) is analytic on the closed disk \\(\\overline{B(0;1)}\\), then\n\\[\n|f(a)|^2\\leq \\frac{1}{\\pi R^2}\\int_0^{2\\pi}\\int_0^R|f(a+re^{i\\theta})|^2r\\,dr\\,d\\theta.\n\\]",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Let \\(G\\) be a region and \\(M\\in\\mathbb{R}\\) be fixed. Let\n\\[\n\\mathcal{F}=\\left\\{f\\in H(G)\\mathrel{\\bigg|}\\int_G|f(z)|^2\\,dx\\,dy\\leq M\\right\\}.\n\\]\nShow that \\(\\mathcal{F}\\) is a normal family.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a region and \\(u:G\\to\\mathbb{R}\\) be harmonic. Let \\(v\\) be a harmonic conjugate to \\(u\\) in \\(G\\). Show that the product \\(u\\cdot v\\) is harmonic.",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Let \\(f(z)=\\sum_{n=0}^{\\infty}a_nz^n\\) and \\(g(z)=\\sum_{n=0}^{\\infty}b_nz^n\\) be analytic on \\(\\overline{B(0;1)}\\). Let\n\\[\nF(z)=\\frac{1}{2\\pi i}\\int_{\\partial B(0;1)}\\frac{f(w)}{w}g\\left(\\frac{z}{w}\\right)\\,dw,\\qquad z\\in B(0;1),\n\\]\nwith the contour taken with counterclockwise orientation. Show that\n\\[\nF(z)=\\sum_{n=0}^{\\infty}a_nb_nz^n,\\qquad z\\in B(0;1).\n\\]",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that if \\(f\\) is analytic on the closed disk \\(\\overline{B(0;1)}\\), then\n\\[\n|f(a)|^2\\leq \\frac{1}{\\pi R^2}\\int_0^{2\\pi}\\int_0^R|f(a+re^{i\\theta})|^2r\\,dr\\,d\\theta.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(G\\) be a region and \\(M\\in\\mathbb{R}\\) be fixed. Let\n\\[\n\\mathcal{F}=\\left\\{f\\in H(G)\\mathrel{\\bigg|}\\int_G|f(z)|^2\\,dx\\,dy\\leq M\\right\\}.\n\\]\nShow that \\(\\mathcal{F}\\) is a normal family.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 6,
-      "text": "Let \\(G=\\{z\\in\\mathbb{C}\\mid |z|<1\\text{ and }|2z-1|>1\\}\\), and let \\(f\\in H(G)\\).",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Must there exist a sequence of polynomials \\(P_n\\) such that \\(P_n\\to f\\) uniformly on compact subsets of \\(G\\)? Explain your reasoning.",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Must there exist such a sequence which converges to \\(f\\) uniformly on \\(G\\)? Explain your reasoning.",
-          "subparts": []
-        },
-        {
-          "label": "(c)",
-          "text": "Must there exist such a sequence which converges to \\(f\\) uniformly on \\(G\\), if \\(f\\) is now required to be analytic in some neighborhood of \\(\\overline{G}\\)? Explain your reasoning.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f(z)=\\sum_{n=0}^{\\infty}a_nz^n\\) and \\(g(z)=\\sum_{n=0}^{\\infty}b_nz^n\\) be analytic on \\(\\overline{B(0;1)}\\). Let\n\\[\nF(z)=\\frac{1}{2\\pi i}\\int_{\\partial B(0;1)}\\frac{f(w)}{w}g\\left(\\frac{z}{w}\\right)\\,dw,\\qquad z\\in B(0;1),\n\\]\nwith the contour taken with counterclockwise orientation. Show that\n\\[\nF(z)=\\sum_{n=0}^{\\infty}a_nb_nz^n,\\qquad z\\in B(0;1).\n\\]",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(G\\) be a region and \\(A\\) be a discrete and relatively closed subset of \\(G\\). Assume that \\(f\\in H(G\\setminus A)\\) is injective.",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Prove that no point of \\(A\\) can be an essential singularity of \\(f\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove that if \\(a\\in A\\) is a pole for \\(f\\), then \\(a\\) is a pole of order 1.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G=\\{z\\in\\mathbb{C}\\mid |z|<1\\text{ and }|2z-1|>1\\}\\), and let \\(f\\in H(G)\\).",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Must there exist a sequence of polynomials \\(P_n\\) such that \\(P_n\\to f\\) uniformly on compact subsets of \\(G\\)? Explain your reasoning.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Must there exist such a sequence which converges to \\(f\\) uniformly on \\(G\\)? Explain your reasoning.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Must there exist such a sequence which converges to \\(f\\) uniformly on \\(G\\), if \\(f\\) is now required to be analytic in some neighborhood of \\(\\overline{G}\\)? Explain your reasoning.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Let \\(f\\) be analytic on \\(\\overline{B(0;1)}\\). If \\(|f(z)|<1\\) on \\(\\partial B(0;1)\\), prove that there exists a unique \\(z_0\\in B(0;1)\\) (counting multiplicity) such that \\(f(z_0)=z_0\\). If \\(|f(z)|\\leq 1\\) on \\(\\partial B(0;1)\\), does the same conclusion hold? Justify your assertion.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(G\\) be a region and \\(A\\) be a discrete and relatively closed subset of \\(G\\). Assume that \\(f\\in H(G\\setminus A)\\) is injective.",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that no point of \\(A\\) can be an essential singularity of \\(f\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(a\\in A\\) is a pole for \\(f\\), then \\(a\\) is a pole of order 1.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(f\\) be analytic on \\(\\overline{B(0;1)}\\). If \\(|f(z)|<1\\) on \\(\\partial B(0;1)\\), prove that there exists a unique \\(z_0\\in B(0;1)\\) (counting multiplicity) such that \\(f(z_0)=z_0\\). If \\(|f(z)|\\leq 1\\) on \\(\\partial B(0;1)\\), does the same conclusion hold? Justify your assertion.",
+        "subparts": []
+      }
     }
   ]
 }

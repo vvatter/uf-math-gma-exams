@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-first-year-2023-may-part-1",
   "subject": "First Year Topology",
   "subject_tag": "topology-first-year",
@@ -7,82 +7,119 @@
   "month": "may",
   "part": 1,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2023_05.pdf",
-  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Let \\(X\\) be a locally connected space. Show that each component of \\(X\\) is closed.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
     },
     {
-      "number": 2,
-      "text": "Is \\(\\mathbb{R}_\\ell\\) a Baire space? Here \\(\\mathbb{R}_\\ell\\) denotes the reals with the lower limit topology, i.e. the topology defined by the basis \\(\\{[a,b)\\mid a,b\\in\\mathbb{R}\\}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X\\) be a locally connected space. Show that each component of \\(X\\) is closed.",
+        "subparts": []
+      }
     },
     {
-      "number": 3,
-      "text": "Let \\(X=\\mathbb{Z}\\times[0,1]\\subset\\mathbb{R}^2\\). Let \\(Y=\\mathbb{Z}\\times(0,1]\\) and \\(A=\\mathbb{Z}\\times\\{0\\}\\) be subspaces of \\(X\\). Is the one point compactification of \\(Y\\) homeomorphic to the quotient space \\(X/A\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Is \\(\\mathbb{R}_\\ell\\) a Baire space? Here \\(\\mathbb{R}_\\ell\\) denotes the reals with the lower limit topology, i.e. the topology defined by the basis \\(\\{[a,b) \\mid a,b \\in \\mathbb{R}\\}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "Show that the ordered square \\(I_O^2\\) is not path connected. Here \\(I_O\\) is the square \\([0,1]\\times[0,1]\\) given the lexicographic order topology.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(X=\\mathbb{Z}\\times[0,1]\\subset\\mathbb{R}^2\\). Let \\(Y=\\mathbb{Z}\\times(0,1]\\) and \\(A=\\mathbb{Z}\\times\\{0\\}\\) be subspaces of \\(X\\). Is the one point compactification of \\(Y\\) homeomorphic to the quotient space \\(X/A\\)?",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "Show that the power set \\(\\mathcal{P}(X)\\) has strictly greater cardinality than \\(X\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the ordered square \\(I_O^2\\) is not path connected. Here \\(I_O\\) is the square \\([0,1]\\times[0,1]\\) given the lexicographic order topology.",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "Show that the circle \\(S^1\\) is not homeomorphic to the 2-sphere \\(S^2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the power set \\(\\mathcal{P}(X)\\) has strictly greater cardinality than \\(X\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Show that the 2-sphere \\(S^2\\) is not homeomorphic to the plane \\(\\mathbb{R}^2\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
     },
     {
-      "number": 8,
-      "text": "Is \\(\\mathbb{R}_\\ell\\) regular?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the circle \\(S^1\\) is not homeomorphic to the 2-sphere \\(S^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 9,
-      "text": "State the Baire Category Theorem",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that the 2-sphere \\(S^2\\) is not homeomorphic to the plane \\(\\mathbb{R}^2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Show that a connected metric space cannot be infinite countable.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Is \\(\\mathbb{R}_\\ell\\) regular?",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "State the Intermediate Value Theorem",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Baire Category Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Give definition of a quotient map.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that a connected metric space cannot be infinite countable.",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Are the spaces \\(\\mathbb{R}\\times[0,\\infty)\\) and \\([0,\\infty)\\times[0,\\infty)\\) homeomorphic?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Intermediate Value Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Is every compact Hausdorff space completely regular?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Give definition of a quotient map.",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Is every continuous injective map \\(f:\\mathbb{R}\\to\\mathbb{R}^2\\) an embedding?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Are the spaces \\(\\mathbb{R}\\times[0,\\infty)\\) and \\([0,\\infty)\\times[0,\\infty)\\) homeomorphic?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Is every compact Hausdorff space completely regular?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Is every continuous injective map \\(f:\\mathbb{R}\\to\\mathbb{R}^2\\) an embedding?",
+        "subparts": []
+      }
     }
   ]
 }

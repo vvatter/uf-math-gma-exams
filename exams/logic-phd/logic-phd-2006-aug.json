@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "logic-phd-2006-aug",
   "subject": "PhD Logic",
   "subject_tag": "logic-phd",
@@ -7,76 +7,131 @@
   "month": "august",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2006_08.pdf",
-  "instructions": "Complete seven problems, including one from each section. Problems 1–3 concern General logic; Problems 4–6 concern Model theory; Problems 7–9 concern Set theory; Problems 10–12 concern Computability.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "State the incompleteness theorem and explain the role of Gödel numbering in its proof.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Please complete seven problems among the following, including one from each section."
     },
     {
-      "number": 2,
-      "text": "Sketch the proof of the compactness theorem for first order logic.",
-      "subparts": []
-    },
-    {
-      "number": 3,
-      "text": "Sketch the proof of Tarski’s undefinability of truth.",
-      "subparts": []
-    },
-    {
-      "number": 4,
-      "text": "Prove that the theory of dense linear orders without endpoints is complete.",
-      "subparts": []
-    },
-    {
-      "number": 5,
-      "text": "Find two models which are elementarily equivalent but not isomorphic.",
-      "subparts": []
-    },
-    {
-      "number": 6,
-      "text": "State and prove Tarski’s criterion for elementary submodels.",
-      "subparts": []
-    },
-    {
-      "number": 7,
-      "text": "Sketch the proof of \\(L\\) satisfying CH.",
-      "subparts": []
-    },
-    {
-      "number": 8,
-      "text": "State and prove the infinite Ramsey theorem.",
-      "subparts": []
-    },
-    {
-      "number": 9,
-      "text": "Prove that every stationary subset of omega one can be split into aleph one many pairwise disjoint stationary subsets.",
-      "subparts": []
-    },
-    {
-      "number": 10,
-      "text": "Show how to construct a simple recursively enumerable set \\(A\\) (meaning that \\(\\omega-A\\) has no infinite r.e. subset).",
-      "subparts": []
-    },
-    {
-      "number": 11,
-      "text": "Define the recursively enumerable set \\(K=\\{a:\\{a\\}(a)\\mathord\\downarrow\\}\\). Use the \\(S_1^1\\) function to show that \\(K\\) is many-one complete.",
-      "subparts": []
-    },
-    {
-      "number": 12,
-      "text": "Prove that the following are equivalent, for any nonempty \\(A\\subset\\omega\\):",
-      "subparts": [
+      "type": "section",
+      "heading": "1. General logic",
+      "numbering": "restart",
+      "content": [
         {
-          "label": "(a)",
-          "text": "\\(A\\) is the domain of some partial recursive function \\(\\phi\\).",
-          "subparts": []
+          "type": "problem",
+          "problem": {
+            "text": "State the incompleteness theorem and explain the role of Gödel numbering in its proof.",
+            "subparts": []
+          }
         },
         {
-          "label": "(b)",
-          "text": "\\(A\\) is the range of some (total) recursive function \\(f\\).",
-          "subparts": []
+          "type": "problem",
+          "problem": {
+            "text": "Sketch the proof of the compactness theorem for first order logic.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch the proof of Tarski’s undefinability of truth.",
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "2. Model theory",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that the theory of dense linear orders without endpoints is complete.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Find two models which are elementarily equivalent but not isomorphic.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove Tarski’s criterion for elementary submodels.",
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "3. Set theory",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Sketch the proof of \\(L\\) satisfying CH.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "State and prove the infinite Ramsey theorem.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that every stationary subset of \\(\\omega_1\\) can be split into \\(\\aleph_1\\) many pairwise disjoint stationary subsets.",
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "4. Computability",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Show how to construct a simple recursively enumerable set \\(A\\) (meaning that \\(\\omega-A\\) has no infinite r.e. subset).",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Define the recursively enumerable set \\(K=\\{a:\\{a\\}(a)\\mathbin{\\downarrow}\\}\\). Use the \\(S_1^1\\) function to show that \\(K\\) is many-one complete.",
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "text": "Prove that the following are equivalent, for any nonempty \\(A\\subset\\omega\\):",
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "\\(A\\) is the domain of some partial recursive function \\(\\phi\\).",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "\\(A\\) is the range of some (total) recursive function \\(f\\).",
+                "subparts": []
+              }
+            ]
+          }
         }
       ]
     }

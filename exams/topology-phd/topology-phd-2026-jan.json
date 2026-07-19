@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "topology-phd-2026-jan",
   "subject": "PhD Topology",
   "subject_tag": "topology-phd",
@@ -7,93 +7,134 @@
   "month": "january",
   "part": null,
   "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Topology-2026_01.pdf",
-  "instructions": "Be neat and do not write too small. For problems 1–5, show all of your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
-  "problems": [
+  "content": [
     {
-      "number": 1,
-      "text": "Prove that every metrizable space \\((X,d)\\) is normal.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Be neat, and do not write too small."
     },
     {
-      "number": 2,
-      "text": "Let \\((X,d)\\) be a compact metric space. Let \\(f:X\\to X\\) and suppose there is some \\(c<1\\) with \\(d(f(x),f(y))\\leq c\\cdot d(x,y)\\) for all \\(x,y\\in X\\). Prove there exists a unique \\(x\\in X\\) with \\(f(x)=x\\).",
-      "subparts": []
+      "type": "instructions",
+      "text": "For the first five problems, show all of your work and support all statements."
     },
     {
-      "number": 3,
-      "text": "Consider the \\(\\Delta\\)-complex \\(X\\) drawn below. (Note the orientation of the three edges carefully.) Compute the simplicial homology \\(H_i(X)\\) for \\(i=0,1,2\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that every metrizable space \\((X,d)\\) is normal.",
+        "subparts": []
+      }
     },
     {
-      "number": 4,
-      "text": "For \\(M\\) a compact orientable odd-dimensional manifold without boundary, show that the Euler characteristic \\(\\chi(M)\\) is zero.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\((X,d)\\) be a compact metric space. Let \\(f:X\\to X\\) and suppose there is some \\(c<1\\) with \\(d(f(x),f(y))\\leq c\\cdot d(x,y)\\) for all \\(x,y\\in X\\). Prove there exists a unique \\(x\\in X\\) with \\(f(x)=x\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 5,
-      "text": "",
-      "subparts": [
-        {
-          "label": "(a)",
-          "text": "Let \\(n>m\\). Show there are no maps from \\(\\mathbb{RP}^n\\) to \\(\\mathbb{RP}^m\\) inducing a nontrivial map \\(H^1(\\mathbb{RP}^m;\\mathbb{Z}_2)\\to H^1(\\mathbb{RP}^n;\\mathbb{Z}_2)\\).",
-          "subparts": []
-        },
-        {
-          "label": "(b)",
-          "text": "Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \\(f:S^n\\to\\mathbb{R}^n\\) satisfies \\(f(x)\\neq f(-x)\\) for all \\(x\\). Define \\(g:S^n\\to S^{n-1}\\) by \\(g(x)=\\frac{f(x)-f(-x)}{\\lVert f(x)-f(-x)\\rVert}\\), so \\(g(-x)=-g(x)\\) and \\(g\\) induces a map \\(\\mathbb{RP}^n\\to\\mathbb{RP}^{n-1}\\). Show that (a) applies to this map.",
-          "subparts": []
-        }
-      ]
+      "type": "problem",
+      "problem": {
+        "text": "Consider the \\(\\Delta\\)-complex \\(X\\) drawn below. (Note the orientation of the three edges carefully.) Compute the simplicial homology \\(H_i(X)\\) for \\(i=0,1,2\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 6,
-      "text": "State the Tietze Extension Theorem.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "For \\(M\\) a compact orientable odd-dimensional manifold without boundary, show that the Euler characteristic \\(\\chi(M)\\) is zero.",
+        "subparts": []
+      }
     },
     {
-      "number": 7,
-      "text": "Let \\(M_g\\) be the orientable surface of genus \\(g\\), i.e., the \\(g\\)-fold connected sum of tori. Use the Seifert–van Kampen theorem to derive the fundamental group of \\(M_g\\) for \\(g\\geq 1\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "",
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(n>m\\). Show there are no maps from \\(\\mathbb{RP}^n\\) to \\(\\mathbb{RP}^m\\) inducing a nontrivial map \\(H^1(\\mathbb{RP}^m;\\mathbb{Z}_2)\\to H^1(\\mathbb{RP}^n;\\mathbb{Z}_2)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \\(f:S^n\\to\\mathbb{R}^n\\) satisfies \\(f(x)\\neq f(-x)\\) for all \\(x\\). Define \\(g:S^n\\to S^{n-1}\\) by \\(g(x)=\\frac{f(x)-f(-x)}{\\lVert f(x)-f(-x)\\rVert}\\), so \\(g(-x)=-g(x)\\) and \\(g\\) induces a map \\(\\mathbb{RP}^n\\to\\mathbb{RP}^{n-1}\\). Show that (a) applies to this map.",
+            "subparts": []
+          }
+        ]
+      }
     },
     {
-      "number": 8,
-      "text": "Show that if \\(g:S^n\\to S^n\\) is continuous and \\(g(x)\\neq g(-x)\\) for all \\(x\\in S^n\\), then \\(g\\) is surjective.",
-      "subparts": []
+      "type": "instructions",
+      "text": "Answer the following ten problems with complete definitions, complete statements, an example, or a short proof."
     },
     {
-      "number": 9,
-      "text": "Prove that if \\(f:S^n\\to S^n\\) has no fixed points, then \\(\\deg(f)=(-1)^{n+1}\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Tietze Extension Theorem.",
+        "subparts": []
+      }
     },
     {
-      "number": 10,
-      "text": "Show that \\(\\mathbb{R}^{\\omega}\\) with the box topology is not connected.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(M_g\\) be the orientable surface of genus \\(g\\), i.e., the \\(g\\)-fold connected sum of tori. Use the Seifert–van Kampen theorem to derive the fundamental group of \\(M_g\\) for \\(g\\geq 1\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 11,
-      "text": "State the Five-Lemma.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that if \\(g:S^n\\to S^n\\) is continuous and \\(g(x)\\neq g(-x)\\) for all \\(x\\in S^n\\), then \\(g\\) is surjective.",
+        "subparts": []
+      }
     },
     {
-      "number": 12,
-      "text": "Show that every map \\(f:\\mathbb{CP}^n\\to\\mathbb{CP}^n\\) has a fixed point if \\(n\\) is even.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Prove that if \\(f:S^n\\to S^n\\) has no fixed points, then \\(\\deg(f)=(-1)^{n+1}\\).",
+        "subparts": []
+      }
     },
     {
-      "number": 13,
-      "text": "Let \\(p:Y\\to X\\) and \\(q:Z\\to X\\) be basepoint-preserving covering space maps, where \\(X,Y,Z\\) are path-connected and locally path-connected. Prove that if \\(p_*(\\pi_1(Y))=q_*(\\pi_1(Z))\\), then the covering spaces \\(p\\) and \\(q\\) are isomorphic.",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that \\(\\mathbb{R}^{\\omega}\\) with the box topology is not connected.",
+        "subparts": []
+      }
     },
     {
-      "number": 14,
-      "text": "Does there exist a closed orientable 18-dimensional manifold \\(M\\) with \\(H^9(M;\\mathbb{Z})\\cong\\mathbb{Z}\\)?",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "State the Five-Lemma.",
+        "subparts": []
+      }
     },
     {
-      "number": 15,
-      "text": "Prove that if \\(X\\) is the Möbius band and \\(A\\) is its boundary circle, then there is no retraction \\(r:X\\to A\\).",
-      "subparts": []
+      "type": "problem",
+      "problem": {
+        "text": "Show that every map \\(f:\\mathbb{CP}^n\\to\\mathbb{CP}^n\\) has a fixed point if \\(n\\) is even.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Let \\(p:Y\\to X\\) and \\(q:Z\\to X\\) be basepoint-preserving covering space maps, where \\(X,Y,Z\\) are path-connected and locally path-connected. Prove that if \\(p_*(\\pi_1(Y))=q_*(\\pi_1(Z))\\), then the covering spaces \\(p\\) and \\(q\\) are isomorphic.",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Does there exist a closed orientable \\(18\\)-dimensional manifold \\(M\\) with \\(H^9(M;\\mathbb{Z})\\cong\\mathbb{Z}\\)?",
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "text": "Prove that if \\(X\\) is the Möbius band and \\(A\\) is its boundary circle, then there is no retraction \\(r:X\\to A\\).",
+        "subparts": []
+      }
     }
   ]
 }
