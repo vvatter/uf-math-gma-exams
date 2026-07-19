@@ -22,7 +22,7 @@
     {
       "type": "problem",
       "problem": {
-        "text": "Let \\(k\\) be a field and \\(A,B\\) finitely generated \\(k\\)-algebras. Let \\(f:A\\to B\\) be a \\(k\\)-algebra homomorphism. Show that if \\(\\mathfrak m\\subset B\\) is a maximal ideal, \\(f^{-1}(\\mathfrak m)\\subset A\\) is also a maximal ideal (Hint: Nullstellensatz). Recall that a \\(k\\)-algebra \\(A\\) is a ring homomorphism \\(k\\to A\\) sending the identity to the identity, and if \\(A\\) and \\(B\\) are \\(k\\)-algebras, a \\(k\\)-algebra homomorphism \\(A\\to B\\) is a commutative diagram.",
+      "text": "Let \\(k\\) be a field and \\(A,B\\) finitely generated \\(k\\)-algebras. Let \\(f:A\\to B\\) be a \\(k\\)-algebra homomorphism. Show that if \\(\\mathfrak m\\subset B\\) is a maximal ideal, \\(f^{-1}(\\mathfrak m)\\subset A\\) is also a maximal ideal (Hint: Nullstellensatz). Recall that a \\(k\\)-algebra \\(A\\) is a ring homomorphism \\(k\\to A\\) sending the identity to the identity, and if \\(A\\) and \\(B\\) are \\(k\\)-algebras, a \\(k\\)-algebra homomorphism \\(A\\to B\\) is a commutative diagram\n\\[\n\\begin{array}{ccc}\nA & \\longrightarrow & B \\\\\n\\uparrow & \\nearrow & \\\\\nk & &\n\\end{array}\n\\]",
         "subparts": []
       }
     },

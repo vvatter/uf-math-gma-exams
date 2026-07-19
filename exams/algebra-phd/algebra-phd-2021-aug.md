@@ -1,8 +1,8 @@
 # Algebra, PhD exam, August 2021
 
-*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.
+*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.*
 
-Results from lectures or textbooks may be used without proof (within reason—don’t state results equivalent to the problem), but must be clearly stated.*
+*Results from lectures or textbooks may be used without proof (within reason—don’t state results equivalent to the problem), but must be clearly stated.*
 
 **1.** Suppose \(F\) is a finite field and \(K/F\) is a finite extension. Show that \(K/F\) is Galois and its Galois group is cyclic.
 

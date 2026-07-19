@@ -23,6 +23,14 @@ f=x^4-2\in\mathbb{Q}[x].
 * (b) Prove \(\mathbb{Q}\otimes_{\mathbb{Z}}\mathbb{Q}\simeq\mathbb{Q}\).
 
 **6.** Let \(R\) be a ring and suppose that we have the following commutative diagram of \(R\)-modules and module homomorphisms with exact rows.
+\[
+\require{amscd}
+\begin{CD}
+0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\
+@. @V{\alpha}VV @V{\beta}VV @V{\gamma}VV @. \\
+0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0
+\end{CD}
+\]
 * (a) Show that if \(\alpha\) and \(\gamma\) are monomorphisms, then so is \(\beta\).
 * (b) Show that if \(\alpha\) and \(\gamma\) are epimorphisms, then so is \(\beta\).
 

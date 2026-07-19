@@ -21,6 +21,7 @@
 
 **8.** Prove the following version of the Short Five Lemma. Let \(R\) be a ring and let the following diagram of left \(R\)-modules
 \[
+\require{amscd}
 \begin{CD}
 0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\
 @. @V{\alpha}VV @V{\beta}VV @V{\gamma}VV @. \\

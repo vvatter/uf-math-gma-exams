@@ -75,10 +75,17 @@
         }
       ]
     },
-    {
-      "type": "instructions",
-      "text": "II. Prove one of the theorems 3 or 7."
-    },
+  {
+    "type": "section",
+    "heading": "II",
+    "numbering": "restart",
+    "content": [
+      {
+        "type": "instructions",
+        "text": "Prove one of the theorems 3 or 7."
+      }
+    ]
+  },
     {
       "type": "section",
       "heading": "III",
@@ -116,13 +123,17 @@
             "subparts": []
           }
         },
-        {
-          "type": "problem",
-          "problem": {
-            "text": "If \\(f\\in L_F^p(\\mu)\\), there is a sequence \\((f_n)\\) of \\(F\\)-step functions",
-            "subparts": []
-          }
+      {
+        "type": "problem",
+        "problem": {
+          "text": "If \\(f\\in L_F^1(\\mu)\\), there is a sequence \\((f_n)\\) of \\(\\mathcal R\\)-step functions",
+          "subparts": []
         }
+      },
+      {
+        "type": "instructions",
+        "text": "The remainder of this problem was cut off in the archived source."
+      }
       ]
     },
     {

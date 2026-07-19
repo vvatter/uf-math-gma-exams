@@ -20,7 +20,9 @@
 
 **8.** The Lebesgue dominated convergence theorem.
 
-*II. Prove one of the theorems 6 or 7.*
+## II
+
+*Prove one of the theorems 6 or 7.*
 
 ## III.
 

@@ -3787,6 +3787,23 @@
     },
     {
       "category": "correction",
+      "context": "Problem 12 contains two consecutively displayed subparts both labeled “(a).”",
+      "corrected_text": "(b)",
+      "exam_id": "topology-first-year-2015-may-part-2",
+      "message": "Corrected the duplicated second subpart label from (a) to (b).",
+      "origin": "project",
+      "original_text": "(a)",
+      "problem_indices": [
+        12
+      ],
+      "source_pages": [
+        2
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2015-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "correction",
       "context": "The source asks for a space having fundamental group \\(\\mathbb{Z}_3\\), followed by verification using the Seifert–van Kampen Theorem.",
       "corrected_text": "Describe a space \\(X\\) such that \\(\\pi_1(X,x_0)\\cong\\mathbb{Z}_3\\).",
       "exam_id": "topology-first-year-2019-may-part-2",

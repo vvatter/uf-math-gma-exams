@@ -93,7 +93,7 @@
         {
           "type": "problem",
           "problem": {
-            "text": "Let \\(R\\) be a ring and consider the following commutative diagram of \\(R\\)-modules and \\(R\\)-module homomorphisms such that each row is a short exact sequence. Prove that if \\(\\alpha\\) and \\(\\gamma\\) are isomorphisms then \\(\\beta\\) is also an isomorphism.",
+          "text": "Let \\(R\\) be a ring and consider the following commutative diagram of \\(R\\)-modules and \\(R\\)-module homomorphisms such that each row is a short exact sequence.\n\\[\n\\require{amscd}\n\\begin{CD}\n0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\\\\n@. @V{\\alpha}VV @V{\\beta}VV @V{\\gamma}VV @. \\\\\n0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0\n\\end{CD}\n\\]\nProve that if \\(\\alpha\\) and \\(\\gamma\\) are isomorphisms then \\(\\beta\\) is also an isomorphism.",
             "subparts": []
           }
         },
@@ -118,7 +118,7 @@
         {
           "type": "problem",
           "problem": {
-            "text": "A module \\(P\\) over a ring \\(R\\) is said to be projective if, given any diagram of \\(R\\)-module homomorphisms with \\(g\\) surjective, there exists an \\(R\\)-module homomorphism \\(h:P\\longrightarrow A\\) such that the following diagram is commutative. Prove that the following conditions on a ring \\(R\\) with identity are equivalent:",
+          "text": "A module \\(P\\) over a ring \\(R\\) is said to be projective if, given any diagram of \\(R\\)-module homomorphisms with \\(g\\) surjective\n\\[\n\\begin{array}{ccc}\n& & P \\\\\n& & \\downarrow^{f} \\\\\nA & \\xrightarrow{g} & B\n\\end{array}\n\\]\nthere exists an \\(R\\)-module homomorphism \\(h:P\\longrightarrow A\\) such that the following diagram is commutative\n\\[\n\\begin{array}{ccc}\n& & P \\\\\n& \\overset{h}{\\swarrow} & \\downarrow^{f} \\\\\nA & \\xrightarrow{g} & B\n\\end{array}\n\\]\nProve that the following conditions on a ring \\(R\\) with identity are equivalent:",
             "subparts": [
               {
                 "label": "(a)",

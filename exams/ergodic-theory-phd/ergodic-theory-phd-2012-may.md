@@ -2,9 +2,9 @@
 
 *Do all problems.*
 
-*Notation:
-• The statement that \((X,\mathcal{B},\mu,f)\) is a mpt (measure preserving transformation) means that \(X\) is a set with the probability measure \(\mu\) defined on the \(\sigma\)-algebra \(\mathcal{B}\) and \(f\) is a bijective, bi-measurable map \(f:X\to X\) which preserves the measure \(\mu\).
-• The statement that \((X,d,\mathcal{B},\mu,f)\) is a mph (measure preserving homeomorphism) means that \((X,\mathcal{B},\mu,f)\) is a mpt and in addition, \((X,d)\) is a compact metric space, \(f\) is a homeomorphism, and \(\mathcal{B}\) is the Borel \(\sigma\)-algebra.*
+*Notation:*
+*• The statement that \((X,\mathcal{B},\mu,f)\) is a mpt (measure preserving transformation) means that \(X\) is a set with the probability measure \(\mu\) defined on the \(\sigma\)-algebra \(\mathcal{B}\) and \(f\) is a bijective, bi-measurable map \(f:X\to X\) which preserves the measure \(\mu\).*
+*• The statement that \((X,d,\mathcal{B},\mu,f)\) is a mph (measure preserving homeomorphism) means that \((X,\mathcal{B},\mu,f)\) is a mpt and in addition, \((X,d)\) is a compact metric space, \(f\) is a homeomorphism, and \(\mathcal{B}\) is the Borel \(\sigma\)-algebra.*
 
 **1.** Let \((X,d)\) be a compact metric space and \(f:X\to X\) a homeomorphism.
 * (a) Define the recurrent set \(\Lambda(f)\) and the nonwandering set \(\Omega(f)\) and show they are both compact, invariant sets.

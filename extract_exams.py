@@ -23,7 +23,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 DEFAULT_MODEL = "gpt-5.6-sol"
-PROMPT_VERSION = "exam-extraction-v10"
+PROMPT_VERSION = "exam-extraction-v15"
 NATIVE_EVIDENCE_VERSION = "native-text-c0-sanitized-v1"
 VISION_ONLY_EVIDENCE_VERSION = "page-images-only-v1"
 PILOT_IDS = [
@@ -202,24 +202,25 @@ authored requirements about clarity, detail, showing work, legibility, proofs, a
 
 CONTENT STRUCTURE
 Return the meaningful document content in reading order as instruction, problem, and section
-blocks. A section represents a displayed part, section, topic, or comparable named division that
-contains problems. Preserve its complete displayed heading exactly, including words, numerals, and
-topic names. Do not create sections merely for pages, columns, visual spacing, or unlabeled groups.
-A section contains instruction and problem blocks in source order. Do not nest sections.
+blocks. A section represents a displayed part, section, topic, or comparable named division.
+Preserve its complete displayed heading exactly, including words, numerals, and topic names. Do not
+create sections merely for pages, columns, visual spacing, or unlabeled groups. A section normally
+contains instruction and problem blocks in source order. Do not nest sections.
 
-Create a section only when at least one following problem belongs to it before the next heading. If
-a displayed section label and a direction share one line, put the label or named title in heading
-and put the direction in the section's first instruction block. For example, "I. State the following
-theorems:" becomes heading "I." followed by instructions "State the following theorems." A labeled
-direction with no following problems before the next heading is an exam-level instruction block
-when it only governs or selects other listed problems; retain its label when needed for the
-reference. A labeled line that itself states an independent mathematical task is a section with a
-problem block even when no separately numbered problem follows. For example, "II. Prove that
-\((L^1)^*=L^\infty\)." contains a problem, while "II. Prove one of the theorems 8 or 9." is an
-instruction governing existing problems 8 and 9. For a standalone mathematical task with no
-printed integer label, use "continue" so its derived number follows the preceding problem, and add
-a numbering-transformation flag documenting that the presentation assigned a number to an
-unnumbered task.
+If a displayed section label and a direction share one line before following problems, put the
+label or named title in heading and put the direction in the section's first instruction block. For
+example, "I. State the following theorems:" becomes heading "I." followed by instructions "State
+the following theorems." A labeled direction that only governs or selects previously listed
+problems is an instruction-only section: put the label or named title in heading, put the direction
+in an instruction block, and set restart or continue to reflect the source's numbering policy. For
+example, "II. Prove one of the theorems 8 or 9." becomes heading "II" followed by instructions
+"Prove one of the theorems 8 or 9." A labeled line that itself states an independent mathematical
+task is a section with a problem block even when no separately numbered problem follows. For
+example, "II. Prove that
+\((L^1)^*=L^\infty\)." contains a problem. For a standalone mathematical task with no printed
+integer label, use the section's source-appropriate restart or continue policy to derive its
+displayed number. Add a numbering-transformation flag documenting that the presentation assigned a
+number to an unnumbered task.
 
 INSTRUCTIONS
 Use as many instruction blocks as the source requires. Put each block at its source position: at
@@ -280,12 +281,15 @@ original text, corrected text, immediate context, problem index, and source page
 not uniquely determined, retain the source reading and add a transcription review flag.
 
 SERIOUS REVIEW
-If a figure, diagram, graph, or table carries information, transcribe the surrounding words but do
-not invent or reconstruct the visual. Add a visual-content flag. Put shared notation or material in
-an instruction block at its source position; flag it only when its scope remains genuinely unclear.
-Flag cross-problem references, uncertain words or math, unclear numbering, and instructions that
-may no longer agree with numbering. Findings do not stop extraction. Return null for correction-only
-fields when they do not apply."""
+If a figure, diagram, graph, or table carries information that cannot be transcribed completely and
+unambiguously, transcribe the surrounding words but do not invent or reconstruct the visual. Add a
+visual-content flag. A table that can be represented completely as MathJax or structured text without
+losing information should be transcribed and does not require a visual-content flag. Put shared
+notation or material in an instruction block at its source position; flag it only when its scope
+remains genuinely unclear. Do not flag a clear cross-problem reference merely because it exists;
+flag one only when its target or meaning is broken or ambiguous. Flag uncertain words or math,
+unclear numbering, and instructions that may no longer agree with numbering. Findings do not stop
+extraction. Return null for correction-only fields when they do not apply."""
 
 
 def sha256_file(path: Path) -> str:
@@ -696,11 +700,8 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
             continue
         if not block.heading.strip():
             errors.append("section heading is empty")
-        section_problems = [
-            item.problem for item in block.content if isinstance(item, ProblemBlock)
-        ]
-        if not section_problems:
-            errors.append(f"section {block.heading!r} contains no problems")
+        if not block.content:
+            errors.append(f"section {block.heading!r} is empty")
         for item in block.content:
             if isinstance(item, InstructionsBlock) and not item.text.strip():
                 errors.append(f"section {block.heading!r} contains an empty instruction block")
@@ -829,6 +830,26 @@ def render_problem(problem: Problem, displayed_number: int) -> list[str]:
     return lines
 
 
+def render_instructions(text: str) -> list[str]:
+    """Italicize prose line by line while leaving display math untouched."""
+    lines: list[str] = []
+    in_display_math = False
+    for raw_line in text.strip().splitlines():
+        line = raw_line.strip()
+        if line == r"\[":
+            in_display_math = True
+            lines.append(line)
+        elif in_display_math:
+            lines.append(line)
+            if line == r"\]":
+                in_display_math = False
+        elif line:
+            lines.append(f"*{line}*")
+        else:
+            lines.append("")
+    return lines
+
+
 def render_markdown(exam: ExamRecord) -> str:
     if exam.subject.startswith("First Year "):
         title = f"{exam.subject.removeprefix('First Year ')}, first year exam"
@@ -845,7 +866,8 @@ def render_markdown(exam: ExamRecord) -> str:
     displayed_number = 0
     for block in exam.content:
         if isinstance(block, InstructionsBlock):
-            lines.extend([f"*{block.text.strip()}*", ""])
+            lines.extend(render_instructions(block.text))
+            lines.append("")
         elif isinstance(block, ProblemBlock):
             displayed_number += 1
             lines.extend(render_problem(block.problem, displayed_number))
@@ -856,7 +878,8 @@ def render_markdown(exam: ExamRecord) -> str:
                 displayed_number = 0
             for item in block.content:
                 if isinstance(item, InstructionsBlock):
-                    lines.extend([f"*{item.text.strip()}*", ""])
+                    lines.extend(render_instructions(item.text))
+                    lines.append("")
                 else:
                     displayed_number += 1
                     lines.extend(render_problem(item.problem, displayed_number))

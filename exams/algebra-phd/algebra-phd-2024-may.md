@@ -1,8 +1,8 @@
 # Algebra, PhD exam, May 2024
 
-*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.
+*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.*
 
-Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.*
+*Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.*
 
 **1.** Suppose \(p\) is an odd prime and let \(K\) be the extension of \(\mathbb{Q}\) obtained by adjoining a primitive \(p\)th root of unity. Show that \(K\) has a unique subfield of degree 2 over \(\mathbb{Q}\).
 

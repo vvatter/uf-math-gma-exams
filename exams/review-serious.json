@@ -1,24 +1,6 @@
 {
   "items": [
     {
-      "category": "cross-reference",
-      "context": "Use (without proof) the assertion of problem #1 to prove that the 6-arcs of Π = PG(2,4) form a block design.",
-      "corrected_text": null,
-      "exam_id": "combinatorics-phd-1991-sep",
-      "message": "Problem 2 explicitly depends on the assertion of problem #1.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        1,
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-1991-sep.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "Problem 7, definition of the variational form whose constrained minimum is to be attained.",
       "corrected_text": null,
@@ -88,41 +70,6 @@
       "status": "open"
     },
     {
-      "category": "visual-content",
-      "context": "The diagram appears between the problem stem and part a).",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-1990-sep",
-      "message": "Problem 4 includes a commutative diagram of ring homomorphisms whose arrows and labels carry information; the diagram is not transcribed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        4
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1990-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "shared-context",
-      "context": "Parts c) and (d) continue to use the field \\(K\\) and polynomial \\(f\\) introduced immediately before part b).",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-1992-sep",
-      "message": "The setup beginning “Let \\(K\\) be a subfield of the real numbers” appears between parts a) and b) and supplies the notation \\(K\\) and \\(f\\) used throughout parts b)–(d). It has been included at the beginning of part b).",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        9
-      ],
-      "source_pages": [
-        2,
-        3
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1992-sep.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "The presentation of the hint group \\(G_n\\) in Problem 4.",
       "corrected_text": null,
@@ -174,57 +121,6 @@
       "status": "open"
     },
     {
-      "category": "visual-content",
-      "context": "The diagram displays two exact rows and vertical maps labeled \\(\\alpha\\), \\(\\beta\\), and \\(\\gamma\\).",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-2018-may",
-      "message": "Problem 6 depends on a commutative diagram specifying the modules and homomorphisms in two exact rows. The surrounding text and subparts have been transcribed, but the diagram itself has not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        6
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2018-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The diagram follows the words “making the following diagram commute” and displays the differentials, augmentations, and maps between the two resolutions.",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-2023-aug",
-      "message": "The commutative diagram of the projective resolutions carries mathematical information and was not reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        7
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2023-aug.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The diagram accompanies the statement that a \\(k\\)-algebra homomorphism \\(A\\to B\\) is a commutative diagram.",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-2024-aug",
-      "message": "A commutative diagram carrying mathematical information follows the final sentence of the problem and is not represented in the extracted text.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2024-aug.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "The stem does not require the points \\(x_n\\) to be distinct, while part (b) states \\(f(x_n+)-f(x_n-)=c_n\\) for each \\(n\\).",
       "corrected_text": null,
@@ -273,44 +169,6 @@
         1
       ],
       "source_pdf": "exams/analysis-first-year/analysis-first-year-2019-aug-part-1.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "“the topology of S… (tempered distributions)”",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2003-may",
-      "message": "The mark following the calligraphic S is visually unclear; it has been transcribed as a prime because the parenthetical identifies the space as tempered distributions.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        5
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2003-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "instructions",
-      "context": "Source page 1 lists only problems 1–5 and contains no additional problem page.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2010-sep",
-      "message": "The instruction “Attempt EIGHT problems” is inconsistent with the supplied source, which contains only five top-level problems.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2010-sep.pdf",
       "status": "open"
     },
     {
@@ -484,24 +342,6 @@
       "status": "open"
     },
     {
-      "category": "numbering",
-      "context": "The first task of Problem 5 appears on source page 1, and the only displayed subpart label is (b) at the beginning of source page 2.",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-first-year-2023-may",
-      "message": "Problem 5 continues with a part labeled (b) on source page 2, but the preceding task on source page 1 has no displayed (a) label. The unlabeled task has therefore been retained in the problem stem rather than assigning an unprinted label.",
-      "origin": "extraction",
-      "original_text": "5. Let G = [0,2] ... Use the contraction mapping theorem ...\n(b) Consider the fixed point iteration method ...",
-      "problem_indices": [
-        5
-      ],
-      "source_pages": [
-        1,
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-first-year/numerical-analysis-first-year-2023-may.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "Part (1): If w is a unit vector, then H=I−2wwᵗ is an orthogonal projection.",
       "corrected_text": null,
@@ -550,106 +390,6 @@
         1
       ],
       "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "How will you use Problem (1a) to conclude that the spectra of AB and BA coincide?",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2003-sep",
-      "message": "Problem 1(b)(ii) explicitly refers to Problem (1a).",
-      "origin": "extraction",
-      "original_text": "Problem (1a)",
-      "problem_indices": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2003-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "This follows the request in Problem 9(a) to obtain the same linear least squares approximation by direct optimization.",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2003-sep",
-      "message": "Problem 9(b) refers to the preceding calculation as “the previous problem.”",
-      "origin": "extraction",
-      "original_text": "check this result agrees with the previous problem",
-      "problem_indices": [
-        9
-      ],
-      "source_pages": [
-        3
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2003-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "Problem 4(b): “check this result agrees with the previous problem.”",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2002-sep",
-      "message": "Part (b) refers to “the previous problem,” apparently meaning part (a); the source wording has been preserved.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        4
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "Problem 10(b): “Use Problem (10a) to prove…”",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2002-sep",
-      "message": "Part (b) explicitly depends on the result of part (a); the reference remains valid under the extracted numbering.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        10
-      ],
-      "source_pages": [
-        3
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "This sentence appears in part (b) immediately after part (a), which asks for the same approximation by direct optimization.",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2006-may",
-      "message": "Problem 4(b) refers to “the previous problem,” apparently referring to part (a); the source wording has been preserved.",
-      "origin": "extraction",
-      "original_text": "Use these to find the linear least squares approx to \\(f(x)=x^2\\), and check this result agrees with the previous problem.",
-      "problem_indices": [
-        4
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2006-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "Whole-exam instruction listing degree 0 through degree 4 orthogonal polynomials.",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2021-aug",
-      "message": "The allowed Legendre and Chebyshev polynomials are presented as an informational table on source page 1; the table has been transcribed into MathJax in the instructions.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2021-aug.pdf",
       "status": "open"
     },
     {
@@ -721,25 +461,6 @@
       "status": "open"
     },
     {
-      "category": "cross-reference",
-      "context": "Problem 5(b) depends on the formulation and notation introduced in problem 4.",
-      "corrected_text": null,
-      "exam_id": "numerical-optimization-phd-2025-may",
-      "message": "Problem 5(b) explicitly refers to the quadratic program (QP) in problem 4.",
-      "origin": "extraction",
-      "original_text": "Returning to (QP) of problem 4, show that there is no duality gap.",
-      "problem_indices": [
-        4,
-        5
-      ],
-      "source_pages": [
-        1,
-        2
-      ],
-      "source_pdf": "exams/numerical-optimization-phd/numerical-optimization-phd-2025-may.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "Problem 7 defines a quadratic functional and assumes a coercivity inequality for it.",
       "corrected_text": null,
@@ -791,74 +512,6 @@
       "status": "open"
     },
     {
-      "category": "transcription",
-      "context": "The problem concludes, “Prove that μ cannot have compact support.”",
-      "corrected_text": null,
-      "exam_id": "probability-phd-1989-sep",
-      "message": "A small mark immediately following μ in the first sentence is unclear and may be a superscript or a stray correction mark. The symbol is extracted as μ because the concluding sentence clearly refers to μ.",
-      "origin": "extraction",
-      "original_text": "Let μ[unclear mark] be a non-trivial infinitely divisible distribution on R¹.",
-      "problem_indices": [
-        9
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1989-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "Extracted as: “For those which are not martingales with respect to this filtration, what conditions have to be added to make them martingales?”",
-      "corrected_text": null,
-      "exam_id": "probability-phd-2003-may",
-      "message": "The final clause of Problem 1 is partially cut off at the bottom of source page 1. It has been completed from the visible wording and immediate mathematical context.",
-      "origin": "extraction",
-      "original_text": "For those which are not martingales w.r.t. this filtration, what conditions have to be added to be ...",
-      "problem_indices": [
-        1
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-2003-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "The conclusion reads: “the conditions of Problem 2 hold.”",
-      "corrected_text": null,
-      "exam_id": "probability-phd-2003-may",
-      "message": "Problem 3 explicitly requires that the conditions of Problem 2 hold.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        3
-      ],
-      "source_pages": [
-        3
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-2003-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "numbering",
-      "context": "Problem 12 contains two consecutively displayed subparts with the same label.",
-      "corrected_text": null,
-      "exam_id": "topology-first-year-2015-may-part-2",
-      "message": "Both subparts of Problem 12 are labeled “(a)” in the source; the duplicate labels have been retained exactly.",
-      "origin": "extraction",
-      "original_text": "(a) Give a space \\(X\\) whose fundamental group is the free group on three generators. (a) Describe a space \\(Y\\) whose fundamental group is the group \\(G\\).",
-      "problem_indices": [
-        12
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2015-may-part-2.pdf",
-      "status": "open"
-    },
-    {
       "category": "visual-content",
       "context": "Problem 6 asks for the fundamental group of a pictured space. Problem 7 defines the edge identifications of a disk by a picture.",
       "corrected_text": null,
@@ -894,57 +547,6 @@
       "status": "open"
     },
     {
-      "category": "cross-reference",
-      "context": "Problem 10 refers to the definition given in Problem 9(ii).",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-2022-jan",
-      "message": "The definition of a multiplicative system is supplied in the preceding problem.",
-      "origin": "extraction",
-      "original_text": "see the previous problem for the definition",
-      "problem_indices": [
-        10
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The surrounding text asks the student to prove that \\(\\beta\\) is an isomorphism when \\(\\alpha\\) and \\(\\gamma\\) are isomorphisms.",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-1988-sep",
-      "message": "The problem contains a commutative diagram of two short exact sequences. The diagram specifies the modules, maps, and commutativity relations needed for the problem and has not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        5
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The surrounding text refers to a surjective map \\(g\\), a map \\(h:P\\to A\\), and commutativity of the second diagram.",
-      "corrected_text": null,
-      "exam_id": "algebra-phd-1988-sep",
-      "message": "The definition of a projective module is accompanied by two diagrams specifying the maps and lifting relation. The diagrams carry essential information and have not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        7
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
-      "status": "open"
-    },
-    {
       "category": "transcription",
       "context": "“Let \\((S_\\infty,\\Sigma,\\mu)\\) be a finite measure space,” followed later by \\(\\int_S\\) and “pointwise on \\(S\\).”",
       "corrected_text": null,
@@ -959,133 +561,6 @@
         1
       ],
       "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "The referenced prompts are “The Fubini theorem” and “The dual of \\(L^p\\) \\((1 \\leq p < \\infty)\\).”",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1994-may",
-      "message": "The exam-level instruction refers to theorem prompts 8 and 9 in section I.",
-      "origin": "extraction",
-      "original_text": "II. Prove one of the theorems 8 or 9.",
-      "problem_indices": [
-        8,
-        9
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "“Prove 2 of the above theorems 3, 5, 6, 7.”",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2001-sep",
-      "message": "The instruction labeled II refers to the numbered theorem statements in Section I.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        3,
-        5,
-        6,
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2001-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "The referenced theorems are the Vitali convergence theorem and the completeness theorem for \\(L_F^p(\\mu)\\).",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1999-may",
-      "message": "The exam-level instruction refers to theorem numbers 3 and 7 in Section I.",
-      "origin": "extraction",
-      "original_text": "II. Prove one of the theorems 3 or 7.",
-      "problem_indices": [
-        3,
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
-      "context": "Problem 5 of Section III ends at the lower edge of the scanned page.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1999-may",
-      "message": "The final problem is cut off at the bottom of page 1, and no continuation appears on page 2. Only the visible text has been transcribed.",
-      "origin": "extraction",
-      "original_text": "If \\(f\\in L_F^p(\\mu)\\), there is a sequence \\((f_n)\\) of \\(F\\)-step functions",
-      "problem_indices": [
-        13
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "Part II Prove one of either Theorem 3 or 7 from part I.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2003-jan",
-      "message": "The Part II instruction refers to Theorems 3 and 7 from Part I.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        3,
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2003-jan.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "II. Prove one of the theorems 6 or 7.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1997-jan",
-      "message": "The instruction in Part II refers to theorems 6 and 7, which are the sixth and seventh problems in Part I.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        6,
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
-      "status": "open"
-    },
-    {
-      "category": "cross-reference",
-      "context": "Show that the conclusion of the monotone convergence theorem is not true.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-1997-jan",
-      "message": "This problem refers to the monotone convergence theorem stated in the first problem of Part I.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        1,
-        15
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
       "status": "open"
     },
     {
@@ -1124,23 +599,6 @@
     },
     {
       "category": "transcription",
-      "context": "The problem ends with “Prove the existence of the product measure μ×ν and the equality …” at the bottom of source page 1.",
-      "corrected_text": null,
-      "exam_id": "analysis-phd-2002-sep",
-      "message": "The final equality in this problem is clipped by the bottom edge of the source image. The extraction uses the likely reading \\(\\lvert\\mu\\times\\nu\\rvert=\\lvert\\mu\\rvert\\times\\lvert\\nu\\rvert\\), but it should be checked against the original document.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        12
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2002-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "transcription",
       "context": "Problem 1 assumes only that \\(g\\) is continuously differentiable on \\([a,b]\\).",
       "corrected_text": null,
       "exam_id": "numerical-analysis-phd-2013-may",
@@ -1152,23 +610,6 @@
       ],
       "source_pages": [
         1
-      ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "shared-context",
-      "context": "The appendix is displayed after Problem 7 and discusses Hermite interpolation at zeros of orthogonal polynomials.",
-      "corrected_text": null,
-      "exam_id": "numerical-analysis-phd-2013-may",
-      "message": "The appendix appears relevant to the Gaussian Quadrature problem, but the source does not explicitly assign it to that or any other problem.",
-      "origin": "extraction",
-      "original_text": "Appendix: Recall that the Hermite polynomials can be written as …",
-      "problem_indices": [
-        5
-      ],
-      "source_pages": [
-        2
       ],
       "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
       "status": "open"
@@ -1188,30 +629,6 @@
         1
       ],
       "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
-      "status": "open"
-    },
-    {
-      "category": "numbering",
-      "context": "There is no displayed section or part heading that explains the second occurrence of problem numbers 6 and 7.",
-      "corrected_text": null,
-      "exam_id": "probability-phd-1997-sep",
-      "message": "The source numbering is inconsistent: page 1 contains problems 1–7, but page 2 begins again with problem 6 without a displayed section heading, then continues with 7–9. Problems are retained in document reading order.",
-      "origin": "extraction",
-      "original_text": "Page 1: 1, 2, 3, 4, 5, 6, 7; pages 2–3: 6, 7, 8, 9",
-      "problem_indices": [
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "source_pages": [
-        1,
-        2,
-        3
-      ],
-      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
       "status": "open"
     },
     {

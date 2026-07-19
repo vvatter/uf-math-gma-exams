@@ -65,8 +65,13 @@
     {
       "type": "problem",
       "problem": {
-        "text": "Let \\(G=[0,2]\\) and\n\\[\ng(x)=\\frac{1}{3}\\left(\\frac{x^3}{3}-x^2-\\frac{5x}{4}+4\\right).\n\\]\nUse the contraction mapping theorem to prove that if \\(x_0\\in G\\), then the sequence defined by \\(x_{k+1}=g(x_k)\\) \\((k=0,1,\\ldots)\\) converges to a unique fixed point \\(z\\in G\\).",
+        "text": "Let \\(G=[0,2]\\) and\n\\[\ng(x)=\\frac{1}{3}\\left(\\frac{x^3}{3}-x^2-\\frac{5x}{4}+4\\right).\n\\]",
         "subparts": [
+          {
+            "label": "(a)",
+            "text": "Use the contraction mapping theorem to prove that if \\(x_0\\in G\\), then the sequence defined by \\(x_{k+1}=g(x_k)\\) \\((k=0,1,\\ldots)\\) converges to a unique fixed point \\(z\\in G\\).",
+            "subparts": []
+          },
           {
             "label": "(b)",
             "text": "Consider the fixed point iteration method \\(x_{k+1}=g(x_k)\\) \\((k=0,1,\\ldots)\\) for solving the nonlinear equation \\(f(x)=0\\). Consider choosing an iteration function of the form\n\\[\ng(x)=x-af(x)-b(f(x))^2-c(f(x))^3,\n\\]\nwhere \\(a,b,c\\) are parameters to be determined. Assume \\(f\\) is sufficiently differentiable and the corresponding iterations \\(x_{k+1}=g(x_k)\\) converge to a unique fixed point \\(z\\). Find expressions for the parameters \\(a,b,c\\) in terms of functions of \\(z\\) such that the iteration method is of fourth order.",

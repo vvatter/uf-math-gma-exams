@@ -34,7 +34,7 @@ This represents a group homomorphism \(M:\mathbb{Z}^2\to\mathbb{Z}^2\). Show tha
 
 **12.** Let \(G=\langle a,b,c\mid a\cdot b^{-1}\cdot c\rangle\) be a finitely presented group with 3 generators and 1 relation.
 * (a) Give a space \(X\) whose fundamental group is the free group on three generators.
-* (a) Describe a space \(Y\) whose fundamental group is the group \(G\).
+* (b) Describe a space \(Y\) whose fundamental group is the group \(G\).
 
 **13.** State the following theorems.
 

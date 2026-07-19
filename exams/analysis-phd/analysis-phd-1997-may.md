@@ -1,8 +1,8 @@
 # Analysis, PhD exam, May 1997
 
-*Be sure to write all steps in a neat and logical fashion to receive credit. Give reasons for your steps.
+*Be sure to write all steps in a neat and logical fashion to receive credit. Give reasons for your steps.*
 
-Definition: A σ-algebra \(\mathcal F\) is separable if \(\mathcal F=\sigma\{A_j:j\geq 1\}\) for some sequence of sets \(A_j\).*
+*Definition: A σ-algebra \(\mathcal F\) is separable if \(\mathcal F=\sigma\{A_j:j\geq 1\}\) for some sequence of sets \(A_j\).*
 
 **1.** Let \(\{\mathcal F_k\}\) be a sequence of separable σ-algebras of subsets of a set \(X\). Let \(\mathcal F\) be the smallest σ-algebra of subsets of \(X\) which contains \(\mathcal F_k\) for each \(k\). Prove that \(\mathcal F\) is separable. [Hint: Use the monotone class theorem.]
 

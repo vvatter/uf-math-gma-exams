@@ -1,8 +1,8 @@
 # Complex Analysis, PhD exam, May 2000
 
-*Notes. Please write up solutions to the eight problems 1–8, below. Please write LARGE, as the grader’s eyes are older and weaker than your eyes.
+*Notes. Please write up solutions to the eight problems 1–8, below. Please write LARGE, as the grader’s eyes are older and weaker than your eyes.*
 
-A square \(S\subset\mathbb C\) is a set of the form \([a,a+L]\times[b,b+L]\), where \(L\) is positive. Use “\(s:=\mathrm{Foo}\)” to mean that Foo is the definition of the new symbol \(s\).*
+*A square \(S\subset\mathbb C\) is a set of the form \([a,a+L]\times[b,b+L]\), where \(L\) is positive. Use “\(s:=\mathrm{Foo}\)” to mean that Foo is the definition of the new symbol \(s\).*
 
 **1.** Find complex numbers \(a,b,c,d\), with \(ad-bc\ne0\), so that the Möbius transformation
 \[

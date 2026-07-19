@@ -14,6 +14,13 @@
 **3.** Prove that any simple group of order 60 is isomorphic to \(A_5\). (you need not show that \(A_5\) is simple).
 
 **4.** Let \(A\), \(B\) and \(C\) be rings (with 1) and suppose we have a commutative diagram of ring homomorphisms:
+\[
+\begin{array}{ccc}
+A & \xrightarrow{\alpha} & B \\
+& {}_{\gamma}\searrow \quad \swarrow_{\beta} & \\
+& C &
+\end{array}
+\]
 * a) Define the structure of an \((A,B)\) bimodule on \(B\), ie make \(B\) into a left \(A\)-module and a right \(B\)-module such that \((a\cdot x)b=a(x\cdot b)\) for \(a\in A\), \(x,b\in B\).
 * b) Show that for any right \(A\)-module \(M\), we have a natural isomorphism
   \[M\otimes_A C\cong (M\otimes_A B)\otimes_B C.\]

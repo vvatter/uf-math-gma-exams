@@ -55,9 +55,9 @@
 * (b) If we have algebraic extensions of fields \(K\subset L\) and \(L\subset M\), then the extension \(K\subset M\) is algebraic.
 * (c) Every finite extension of an infinite field is separable.
 
-**9.** This problem has four parts.
+**9.** Let \(K\) be a subfield of the real numbers and \(f\in K[X]\) an irreducible cubic with three real roots.
 * a) Let \(F\) be any field and \(p\) a prime. Show that the polynomial \(X^p-a\in F[X]\) either has a root in \(F\) or is irreducible.
-* b) Let \(K\) be a subfield of the real numbers and \(f\in K[X]\) an irreducible cubic with three real roots. Show that if \(L\) is obtained from \(K\) by adjoining a real number \(\alpha\) with \(\alpha^p\in K\) for some prime \(p\neq 3\), then \(f\) remains irreducible over \(L\).
+* b) Show that if \(L\) is obtained from \(K\) by adjoining a real number \(\alpha\) with \(\alpha^p\in K\) for some prime \(p\neq 3\), then \(f\) remains irreducible over \(L\).
 * c) Let \(E\) be a splitting field of \(f\) over \(K\). Show that there is an intermediate field \(K_1\) with \([E:K_1]=3\) which is a subfield of the real numbers and a radical extension of \(K\).
 * (d) Prove that \(f\) remains irreducible over any subfield of the real numbers which is a radical extension of \(K\). (Hints: First, show that we may reduce to the case where \(K=K_1\) and the radical extension is given by an irreducible polynomial as in (a). Then use (b) for the case \(p\neq 3\). If \(p=3\), use the normality of \(E\) over \(K\) and the facts that \([L:K]=3=[E:K]\) to show that \(f\) cannot have a root in \(L\).)
 

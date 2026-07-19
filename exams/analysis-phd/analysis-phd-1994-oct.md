@@ -28,7 +28,7 @@
 
 ## II.
 
-**11.** Prove the \((L^1)^*=L^\infty\)
+**1.** Prove the \((L^1)^*=L^\infty\)
 
 ## III. Problems
 

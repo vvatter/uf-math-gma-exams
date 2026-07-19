@@ -1,8 +1,8 @@
 # Numerical Analysis, PhD exam, August 2021
 
-*Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).
+*Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).*
 
-You may use the following degree \(n\) orthogonal polynomials as you like.
+*You may use the following degree \(n\) orthogonal polynomials as you like.*
 \[
 \begin{array}{c|c|c}
 n & \text{Legendre} & \text{Chebyshev} \\
@@ -13,7 +13,7 @@ n & \text{Legendre} & \text{Chebyshev} \\
 3 & 5x^3-3x & 4x^3-3x \\
 4 & 35x^4-30x^2+3 & 8x^4-8x^2+1
 \end{array}
-\]*
+\]
 
 **1.** Suppose \(A\in\mathbb{C}^{m\times m}\).
 * (a) Suppose \(A\) is normal and upper-triangular. Show that \(A\) is diagonal.

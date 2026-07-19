@@ -68,12 +68,12 @@ Furthermore, for \(\tau(h)=O(h^m)\) for functions \(Y(x)\) that are \(m+1\) time
 \sum_{j=0}^{p}(-j)^ia_j+i\sum_{j=-1}^{p}(-j)^{i-1}b_j=1,\qquad \text{for }i=2,3,\ldots,m.
 \]
 
-*Appendix: Recall that the Hermite polynomials can be written as
+*Appendix: Recall that the Hermite polynomials can be written as*
 \[
 H_n(x)=\sum_{j=1}^{n}f(x_j)h_j(x)+\sum_{j=1}^{n}f'(x_j)\tilde h_j(x).
 \]
-If the points \(x_j\) are chosen to be the zeros of the orthogonal polynomials on \([a,b]\), then
+*If the points \(x_j\) are chosen to be the zeros of the orthogonal polynomials on \([a,b]\), then*
 \[
 \tilde h_j(x)=\frac{\psi_n(x)l_j(x)}{\psi_n'(x_j)},
 \]
-where \(l_j(x)\) is the Lagrange interpolant for \(x_j\).*
+*where \(l_j(x)\) is the Lagrange interpolant for \(x_j\).*

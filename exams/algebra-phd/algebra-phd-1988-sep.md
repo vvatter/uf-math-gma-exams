@@ -21,13 +21,38 @@
 
 ## II. Homological algebra.
 
-**1.** Let \(R\) be a ring and consider the following commutative diagram of \(R\)-modules and \(R\)-module homomorphisms such that each row is a short exact sequence. Prove that if \(\alpha\) and \(\gamma\) are isomorphisms then \(\beta\) is also an isomorphism.
+**1.** Let \(R\) be a ring and consider the following commutative diagram of \(R\)-modules and \(R\)-module homomorphisms such that each row is a short exact sequence.
+\[
+\require{amscd}
+\begin{CD}
+0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\
+@. @V{\alpha}VV @V{\beta}VV @V{\gamma}VV @. \\
+0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0
+\end{CD}
+\]
+Prove that if \(\alpha\) and \(\gamma\) are isomorphisms then \(\beta\) is also an isomorphism.
 
 **2.** Prove the \(\mathbb Z\)-module isomorphisms, where \(c=(m,n)\) is the greatest common divisor.
 * (a) \(\mathbb Z/m\mathbb Z\otimes\mathbb Z/n\mathbb Z=\mathbb Z/c\mathbb Z\).
 * (b) \(\operatorname{Hom}(\mathbb Z/m\mathbb Z,\mathbb Z/n\mathbb Z)=\mathbb Z/c\mathbb Z\).
 
-**3.** A module \(P\) over a ring \(R\) is said to be projective if, given any diagram of \(R\)-module homomorphisms with \(g\) surjective, there exists an \(R\)-module homomorphism \(h:P\longrightarrow A\) such that the following diagram is commutative. Prove that the following conditions on a ring \(R\) with identity are equivalent:
+**3.** A module \(P\) over a ring \(R\) is said to be projective if, given any diagram of \(R\)-module homomorphisms with \(g\) surjective
+\[
+\begin{array}{ccc}
+& & P \\
+& & \downarrow^{f} \\
+A & \xrightarrow{g} & B
+\end{array}
+\]
+there exists an \(R\)-module homomorphism \(h:P\longrightarrow A\) such that the following diagram is commutative
+\[
+\begin{array}{ccc}
+& & P \\
+& \overset{h}{\swarrow} & \downarrow^{f} \\
+A & \xrightarrow{g} & B
+\end{array}
+\]
+Prove that the following conditions on a ring \(R\) with identity are equivalent:
 * (a) Every \(R\)-module is projective.
 * (b) Every short exact sequence of \(R\)-modules splits.
 

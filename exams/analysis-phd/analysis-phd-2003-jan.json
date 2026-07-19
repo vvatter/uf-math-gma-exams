@@ -75,10 +75,17 @@
         }
       ]
     },
-    {
-      "type": "instructions",
-      "text": "Part II Prove one of either Theorem 3 or 7 from part I."
-    },
+  {
+    "type": "section",
+    "heading": "Part II",
+    "numbering": "restart",
+    "content": [
+      {
+        "type": "instructions",
+        "text": "Prove one of either Theorem 3 or 7 from part I."
+      }
+    ]
+  },
     {
       "type": "section",
       "heading": "Part III",

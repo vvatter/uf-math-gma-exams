@@ -75,10 +75,17 @@
         }
       ]
     },
-    {
-      "type": "instructions",
-      "text": "II. Prove one of the theorems 6 or 7."
-    },
+  {
+    "type": "section",
+    "heading": "II",
+    "numbering": "restart",
+    "content": [
+      {
+        "type": "instructions",
+        "text": "Prove one of the theorems 6 or 7."
+      }
+    ]
+  },
     {
       "type": "section",
       "heading": "III.",

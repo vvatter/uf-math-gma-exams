@@ -106,8 +106,10 @@ Schema version 2 stores document content as an ordered block sequence:
 
 `part` is `null` when the linked exam is not a separately cataloged part. The `content`
 array may contain `instructions`, `problem`, and `section` blocks. A section preserves
-its displayed heading and contains instruction and problem blocks in source order;
-sections are not nested.
+its displayed heading and normally contains instruction and problem blocks in source
+order; sections are not nested. A labeled group that only directs the reader back to
+previously listed problems is represented as an instruction-only section with the
+source-appropriate restart/continue policy.
 
 A rare linked PDF may contain only a notice that the exam was not provided. Such a
 record contains one instruction block and no problem blocks. This is a valid
@@ -164,11 +166,11 @@ dates, and grading boxes is removed, but authored requirements about the expecte
 response are retained. References are changed only when a noninteger source label must
 be normalized.
 
-When a labeled section line also contains a direction, the label or named title becomes
-the section heading and the direction becomes its first instruction block. A labeled
-direction with no following problems is an ordinary instruction block when it governs
-other listed problems. If the line itself states a mathematical task, it becomes a
-problem inside that section.
+When a labeled section line also contains a direction before following problems, the
+label or named title becomes the section heading and the direction becomes its first
+instruction block. The same representation is used when the direction governs
+previously listed problems and the section has no problems of its own. If the line
+itself states a mathematical task, it becomes a problem inside that section.
 
 Point values are removed from individual problems. If point values are the source's
 only indication that two groups require different levels of response, that distinction
@@ -196,9 +198,10 @@ receives an `instruction-rewrite` record. Unexpected ambiguity is serious review
 than silent normalization.
 
 The corpus also contains one standalone mathematical task under a section heading with
-no printed integer problem label. It continues the preceding derived sequence and is
-logged as a numbering transformation. This keeps the problem schema minimal while
-making the added presentation number explicit in the audit record.
+no printed integer problem label. Its section restarts the derived sequence, so the task
+is displayed as Problem 1 and logged as a numbering transformation. This keeps the
+problem schema minimal while making the added presentation number explicit in the audit
+record.
 
 ## Multipart Problems
 
@@ -257,7 +260,9 @@ Display math is reserved for standalone formulas. A short centered instruction s
 math rather than being promoted to a display equation solely because of its source
 layout. Meaningful paragraph boundaries are retained with blank lines; definitions,
 standalone formulas, instructions, and concluding tasks are not merged into adjacent
-paragraphs.
+paragraphs. In generated Markdown, every prose line of an instruction block receives
+its own emphasis markers. Display-math delimiters and their contents remain on separate,
+unitalicized lines so Markdown emphasis cannot interfere with MathJax rendering.
 
 Mathematicians' names use their standard spelling and diacritics when the identity is
 unambiguous, such as `Gödel` rather than `Goedel`. Established eponymous names use an en
@@ -348,7 +353,7 @@ text that earlier MathJax matching could not see. That check found four more rec
 fresh extraction, bringing the final source-based set to 131. Two especially malformed
 documents required the narrowly scoped encoding-repair fallback described above.
 
-The finished archive contains 129 section blocks across 48 exams, and 92 exams contain
+The finished archive contains 134 section blocks across 48 exams, and 92 exams contain
 more than one positioned instruction block. All 528 records use schema version 2. The
 complete archive validator passed 23,154 MathJax expressions with no control characters
 remaining. Superseded version-1 files are not retained in the canonical dataset; Git
@@ -396,16 +401,19 @@ publication. A typical record is:
 
 Serious-review categories initially include:
 
-- `visual-content`: a figure, diagram, graph, or table carries information;
+- `visual-content`: a figure, diagram, graph, or table carries information that was
+  not completely and unambiguously transcribed;
 - `shared-context`: notation or material applies to only a subset of problems and
   its scope remains unclear even with ordered instruction blocks;
-- `cross-reference`: a problem refers to another problem and renumbering may matter;
+- `cross-reference`: a reference to another problem has a broken or ambiguous target;
 - `transcription`: words or mathematics remain uncertain after initial extraction;
 - `numbering`: source numbering is missing, duplicated, or otherwise unclear;
 - `instructions`: selection or response rules may not agree with the final numbering.
 
-For visual content, the automatic pass transcribes the surrounding problem text but
-does not invent a description or reconstruction. The review record identifies the exam,
+For unresolved visual content, the automatic pass transcribes the surrounding problem
+text but does not invent a description or reconstruction. A table that can be represented
+completely and unambiguously as MathJax or structured text is transcribed and does not
+require a serious-review record. Otherwise, the review record identifies the exam,
 problem, and source page so a person can restore the missing information appropriately.
 
 For shared context whose scope cannot be represented confidently with a positioned
@@ -439,7 +447,8 @@ Before an exam JSON is accepted, ordinary code checks that:
 3. It contains at least one nonempty problem, or a nonempty notice when the linked PDF
    contains no exam questions.
 4. Every section has a nonempty heading, a restart/continue policy, and at least one
-   problem; instruction blocks may occur anywhere but cannot be empty.
+   instruction or problem block. A section may contain instructions without containing
+   problems. Instruction blocks may occur anywhere but cannot be empty.
 5. Problem numbers are derived from content order and section policy rather than stored,
    so contradictory sequences cannot enter the data.
 6. Every problem and subpart has a `subparts` array, and every subpart has a nonempty

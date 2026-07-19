@@ -84,6 +84,10 @@
           }
         ]
       }
+    },
+    {
+      "type": "instructions",
+      "text": "A second page was presumably part of the original exam, but it was not present in the exam archive."
     }
   ]
 }

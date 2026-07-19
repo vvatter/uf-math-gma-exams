@@ -33,6 +33,14 @@ is a representable functor. (The representing object, usually denoted \(\Lambda^
 * (c) a non-zero injective \(\mathbb{Z}\)-module.
 
 **7.** Let \(R\) be a ring and \(M\) and \(N\) be \(R\)-modules. Let \(P_\bullet\) and \(P'_\bullet\) be projective resolutions of \(M\) and \(N\). Given a morphism of \(R\)-modules \(f:M\to N\), show that there exists a morphism of resolutions \(f:P_\bullet\to P'_\bullet\) extending \(f\). In other words, show there exists \(f_0,f_1,f_2,\ldots\) making the following diagram commute:
+\[
+\require{amscd}
+\begin{CD}
+\cdots @>>> P_2 @>{d_2}>> P_1 @>{d_1}>> P_0 @>{\epsilon}>> M \\
+@. @V{f_2}VV @V{f_1}VV @V{f_0}VV @V{f}VV \\
+\cdots @>>> P_2' @>{d_2'}>> P_1' @>{d_1'}>> P_0' @>{\epsilon'}>> N
+\end{CD}
+\]
 
 **8.** What are the dimensions of \(\mathbb{Q}[x]/(x^5)\otimes_{\mathbb{Q}}\mathbb{Q}[x]/(x^6)\) and of \(\mathbb{Q}[x]/(x^5)\otimes_{\mathbb{Q}[x]}\mathbb{Q}[x]/(x^6)\) as \(\mathbb{Q}\)-vector spaces?
 

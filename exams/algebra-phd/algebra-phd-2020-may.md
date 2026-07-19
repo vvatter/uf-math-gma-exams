@@ -1,8 +1,8 @@
 # Algebra, PhD exam, May 2020
 
-*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+*Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
 
-Below, ring means associative ring with identity, and module means unital module unless otherwise specified.*
+*Below, ring means associative ring with identity, and module means unital module unless otherwise specified.*
 
 **1.** Let \(q>1\) be a power of a prime \(p\). Prove that there exists some field \(F\) with \(|F|=q\).
 

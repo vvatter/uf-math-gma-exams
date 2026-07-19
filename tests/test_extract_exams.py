@@ -67,11 +67,18 @@ class ExtractionSchemaTests(unittest.TestCase):
     def test_prompt_normalizes_mathematician_names_and_eponyms(self) -> None:
         normalized_prompt = " ".join(SYSTEM_PROMPT.split())
 
-        self.assertEqual(PROMPT_VERSION, "exam-extraction-v10")
+        self.assertEqual(PROMPT_VERSION, "exam-extraction-v15")
         self.assertIn("Gödel rather than Goedel", normalized_prompt)
         self.assertIn("Hahn–Banach", SYSTEM_PROMPT)
         self.assertIn("Preserve a hyphen that is actually part", SYSTEM_PROMPT)
         self.assertIn("not source corrections", SYSTEM_PROMPT)
+        self.assertIn(
+            "does not require a visual-content flag", normalized_prompt
+        )
+        self.assertIn(
+            "Do not flag a clear cross-problem reference merely because it exists",
+            normalized_prompt,
+        )
 
     def test_outputs_are_adjacent_to_source_pdf(self) -> None:
         item = source()
@@ -364,6 +371,31 @@ class ExtractionSchemaTests(unittest.TestCase):
             "* (a) Prove it.\n",
         )
 
+    def test_markdown_italicizes_instruction_lines_but_not_display_math(self) -> None:
+        item = source()
+        exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
+        exam.content.insert(
+            0,
+            InstructionsBlock(
+                text=(
+                    "Use the following identity.\n"
+                    "\\[\n"
+                    "a^2+b^2=c^2\n"
+                    "\\]\n"
+                    "Explain every step."
+                )
+            ),
+        )
+
+        self.assertIn(
+            "*Use the following identity.*\n"
+            "\\[\n"
+            "a^2+b^2=c^2\n"
+            "\\]\n"
+            "*Explain every step.*",
+            render_markdown(exam),
+        )
+
     def test_qualifying_exam_markdown_title(self) -> None:
         item = replace(
             source(),
@@ -437,26 +469,23 @@ class ExtractionSchemaTests(unittest.TestCase):
             render_markdown(exam),
         )
 
-    def test_empty_section_is_invalid(self) -> None:
+    def test_instruction_only_section_is_valid(self) -> None:
         item = source()
-        exam = ExamRecord(
-            id=item.id,
-            subject=item.subject,
-            subject_tag=item.subject_tag,
-            year=item.year,
-            month=item.month,
-            part=item.part,
-            pdf_url=item.pdf_url,
-            content=[
-                SectionBlock(
-                    heading="Part I",
-                    numbering=NumberingMode.RESTART,
-                    content=[InstructionsBlock(text="Read carefully.")],
-                )
-            ],
+        exam = exam_for(item, [Problem(text="First theorem.", subparts=[])])
+        exam.content.append(
+            SectionBlock(
+                heading="II",
+                numbering=NumberingMode.RESTART,
+                content=[InstructionsBlock(text="Prove the first theorem.")],
+            )
         )
 
-        self.assertIn("contains no problems", "\n".join(validate_exam(exam, item, [])))
+        self.assertEqual(validate_exam(exam, item, []), [])
+        self.assertTrue(
+            render_markdown(exam).endswith("## II\n\n*Prove the first theorem.*\n")
+        )
+        exam.content[-1].content = []
+        self.assertIn("section 'II' is empty", validate_exam(exam, item, []))
 
     def test_correction_requires_review_evidence(self) -> None:
         item = source()

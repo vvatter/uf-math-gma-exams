@@ -20,7 +20,9 @@
 
 **8.** The theorem of uniform boundedness.
 
-*Part II Prove one of either Theorem 3 or 7 from part I.*
+## Part II
+
+*Prove one of either Theorem 3 or 7 from part I.*
 
 ## Part III
 

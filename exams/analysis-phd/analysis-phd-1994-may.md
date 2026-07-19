@@ -28,7 +28,9 @@
 
 **12.** The Lebesgue decomposition theorem
 
-*II. Prove one of the theorems 8 or 9.*
+## II
+
+*Prove one of the theorems 8 or 9.*
 
 ## III.
 

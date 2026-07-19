@@ -1,8 +1,8 @@
 # Analysis, PhD exam, September 2010
 
-*Write solutions in a neat and logical fashion, giving complete reasons for all steps.
+*Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 
-Attempt EIGHT problems.*
+*Attempt EIGHT problems.*
 
 **1.** Let \(f\in L^1[0,1]\). Suppose that
 \[
@@ -28,3 +28,5 @@ Prove that if \(f\in L^1[-\tfrac12,\tfrac12]\), then \(f*k_n\to f\) in \(L^1[-\t
 * a) \(k_n\geq 0\) a.e., for all \(n\).
 * b) \(\displaystyle \int_{-1/2}^{1/2}k_n(t)\,dt=1\) for all \(n\).
 * c) For each \(\delta>0\), \(k_n\to 0\) uniformly on the set \(\delta\leq |t|\leq\tfrac12\).
+
+*A second page was presumably part of the original exam, but it was not present in the exam archive.*

@@ -64,7 +64,7 @@
     {
       "type": "problem",
       "problem": {
-        "text": "Prove the following version of the Short Five Lemma. Let \\(R\\) be a ring and let the following diagram of left \\(R\\)-modules\n\\[\n\\begin{CD}\n0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\\\\n@. @V{\\alpha}VV @V{\\beta}VV @V{\\gamma}VV @. \\\\\n0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0\n\\end{CD}\n\\]\nbe a commutative diagram whose rows are short exact sequences. Suppose that both \\(\\alpha\\) and \\(\\gamma\\) are isomorphisms. Prove that \\(\\beta\\) is an isomorphism.",
+        "text": "Prove the following version of the Short Five Lemma. Let \\(R\\) be a ring and let the following diagram of left \\(R\\)-modules\n\\[\n\\require{amscd}\n\\begin{CD}\n0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\\\\n@. @V{\\alpha}VV @V{\\beta}VV @V{\\gamma}VV @. \\\\\n0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0\n\\end{CD}\n\\]\nbe a commutative diagram whose rows are short exact sequences. Suppose that both \\(\\alpha\\) and \\(\\gamma\\) are isomorphisms. Prove that \\(\\beta\\) is an isomorphism.",
         "subparts": []
       }
     },

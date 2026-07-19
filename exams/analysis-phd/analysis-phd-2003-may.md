@@ -10,7 +10,7 @@
 
 **4.** Let \(\delta\) denote the distribution defined by \(\delta(\phi)=\phi(0)\) for \(\phi\in\mathcal D(\mathbb R)\). Find the support of \(\delta'\). For which \(f\in C^\infty(\mathbb R)\) is \(f\delta'=0\). Is it possible that an \(f\in C^\infty(\mathbb R)\) can vanish on the support of an \(A\in\mathcal D'(\mathbb R)\) and yet \(fA\ne0\)?
 
-**5.** Construct a sequence in \(\mathcal D(\mathbb R)\) which converges to \(0\) in the topology of \(\mathcal S'\) (tempered distributions), but not in the topology of \(\mathcal D(\mathbb R)\).
+**5.** Construct a sequence in \(\mathcal D(\mathbb R)\) which converges to \(0\) in the topology of \(\mathcal S_1\) (tempered distributions), but not in the topology of \(\mathcal D(\mathbb R)\).
 
 **6.** Prove, if \(A\) is a finite dimensional Banach algebra with unit \(e\), if \(x,y\in A\), and if \(xy=e\), then \(yx=e\).
 

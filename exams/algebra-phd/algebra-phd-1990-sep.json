@@ -52,7 +52,7 @@
     {
       "type": "problem",
       "problem": {
-        "text": "Let \\(A\\), \\(B\\) and \\(C\\) be rings (with 1) and suppose we have a commutative diagram of ring homomorphisms:",
+      "text": "Let \\(A\\), \\(B\\) and \\(C\\) be rings (with 1) and suppose we have a commutative diagram of ring homomorphisms:\n\\[\n\\begin{array}{ccc}\nA & \\xrightarrow{\\alpha} & B \\\\\n& {}_{\\gamma}\\searrow \\quad \\swarrow_{\\beta} & \\\\\n& C &\n\\end{array}\n\\]",
         "subparts": [
           {
             "label": "a)",

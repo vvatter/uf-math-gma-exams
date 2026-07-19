@@ -24,7 +24,9 @@
 
 **10.** Integrability with respect to the measure \(g\mu\) defined by \(g\mu(A)=\int_A g\,d\mu\).
 
-*II. Prove 2 of the above theorems 3, 5, 6, 7.*
+## II
+
+*Prove 2 of the above theorems 3, 5, 6, 7.*
 
 ## III.
 

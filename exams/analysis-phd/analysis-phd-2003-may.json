@@ -43,7 +43,7 @@
     {
       "type": "problem",
       "problem": {
-        "text": "Construct a sequence in \\(\\mathcal D(\\mathbb R)\\) which converges to \\(0\\) in the topology of \\(\\mathcal S'\\) (tempered distributions), but not in the topology of \\(\\mathcal D(\\mathbb R)\\).",
+        "text": "Construct a sequence in \\(\\mathcal D(\\mathbb R)\\) which converges to \\(0\\) in the topology of \\(\\mathcal S_1\\) (tempered distributions), but not in the topology of \\(\\mathcal D(\\mathbb R)\\).",
         "subparts": []
       }
     },

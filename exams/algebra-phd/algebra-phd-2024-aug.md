@@ -1,12 +1,19 @@
 # Algebra, PhD exam, August 2024
 
-*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.
+*Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.*
 
-Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.*
+*Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.*
 
 **1.** Suppose \(K/k\) is a finite normal extension and let \(G\) be the group of automorphisms of \(K\) fixing every element of \(k\). Denote by \(K^G\) the set of elements of \(K\) fixed by every element of \(G\). Show that \(K^G/k\) is a purely inseparable extension.
 
-**2.** Let \(k\) be a field and \(A,B\) finitely generated \(k\)-algebras. Let \(f:A\to B\) be a \(k\)-algebra homomorphism. Show that if \(\mathfrak m\subset B\) is a maximal ideal, \(f^{-1}(\mathfrak m)\subset A\) is also a maximal ideal (Hint: Nullstellensatz). Recall that a \(k\)-algebra \(A\) is a ring homomorphism \(k\to A\) sending the identity to the identity, and if \(A\) and \(B\) are \(k\)-algebras, a \(k\)-algebra homomorphism \(A\to B\) is a commutative diagram.
+**2.** Let \(k\) be a field and \(A,B\) finitely generated \(k\)-algebras. Let \(f:A\to B\) be a \(k\)-algebra homomorphism. Show that if \(\mathfrak m\subset B\) is a maximal ideal, \(f^{-1}(\mathfrak m)\subset A\) is also a maximal ideal (Hint: Nullstellensatz). Recall that a \(k\)-algebra \(A\) is a ring homomorphism \(k\to A\) sending the identity to the identity, and if \(A\) and \(B\) are \(k\)-algebras, a \(k\)-algebra homomorphism \(A\to B\) is a commutative diagram
+\[
+\begin{array}{ccc}
+A & \longrightarrow & B \\
+\uparrow & \nearrow & \\
+k & &
+\end{array}
+\]
 
 **3.** This problem has three parts.
 * (i) Let \(\mathcal C\) be a category. Define what it means for an object \(X\) of \(\mathcal C\) to be a product of a set of objects \(\{X_i\}_{i\in I}\).

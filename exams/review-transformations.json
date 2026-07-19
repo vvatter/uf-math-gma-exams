@@ -157,10 +157,10 @@
     },
     {
       "category": "numbering-transformation",
-      "context": "Section II follows problems 1–10 in section I.",
+      "context": "The standalone task begins the distinct Section II after problems 1–10 in Section I.",
       "corrected_text": null,
       "exam_id": "analysis-phd-1994-oct",
-      "message": "The standalone mathematical task under section II has no printed integer problem number. It was assigned the next derived integer number after section I.",
+      "message": "The standalone mathematical task under Section II has no printed integer problem number. Because it begins a distinct section, it was assigned derived number 1 by restarting the section numbering.",
       "origin": "extraction",
       "original_text": null,
       "problem_indices": [

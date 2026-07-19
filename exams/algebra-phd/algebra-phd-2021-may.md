@@ -1,8 +1,8 @@
 # Algebra, PhD exam, May 2021
 
-*Answer 7 questions from among the ones below. If you answer more than that, only the first seven will be graded.
+*Answer 7 questions from among the ones below. If you answer more than that, only the first seven will be graded.*
 
-Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
+*Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 
 **1.** Suppose that \(p\) is an odd prime and \(K/\mathbb{Q}\) is the extension of \(\mathbb{Q}\) obtained by adjoining a primitive \(p\)th root of \(1\) in \(\mathbb{C}\).
 * (i) Show that \(K\) contains a unique quadratic extension \(F\) of \(\mathbb{Q}\).

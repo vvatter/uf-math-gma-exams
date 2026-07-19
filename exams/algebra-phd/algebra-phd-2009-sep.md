@@ -1,8 +1,8 @@
 # Algebra, PhD exam, September 2009
 
-*Do seven of the following eleven problems. Do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs.
+*Do seven of the following eleven problems. Do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs.*
 
-In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.*
+*In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.*
 
 **1.** State and prove the Jordan–Hölder theorem for finite groups.
 

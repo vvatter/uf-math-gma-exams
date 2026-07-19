@@ -20,7 +20,9 @@
 
 **8.** The equality \(|g\mu|=|g|\,|\mu|\).
 
-*II. Prove one of the theorems 3 or 7.*
+## II
+
+*Prove one of the theorems 3 or 7.*
 
 ## III
 
@@ -34,6 +36,8 @@
 
 **4.** Let \((X,\mathcal F)\) and \((Y,\mathcal T)\) be measurable spaces, and let \(\mu:\mathcal F\to\mathbb R\) and \(\nu:\mathcal T\to\mathbb R\) be \(\sigma\)-additive measures. Prove the existence of the product measure \(\mu\times\nu:\mathcal F\times\mathcal T\to\mathbb R\) satisfying \((\mu\times\nu)(A\times B)=\mu(A)\nu(B)\) for \(A\times B\in\mathcal F\times\mathcal T\), and \(|\mu\times\nu|=|\mu|\times|\nu|\).
 
-**5.** If \(f\in L_F^p(\mu)\), there is a sequence \((f_n)\) of \(F\)-step functions
+**5.** If \(f\in L_F^1(\mu)\), there is a sequence \((f_n)\) of \(\mathcal R\)-step functions
+
+*The remainder of this problem was cut off in the archived source.*
 
 *Note. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences.*

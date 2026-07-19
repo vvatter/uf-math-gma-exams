@@ -88,7 +88,7 @@
     {
       "type": "problem",
       "problem": {
-        "text": "Let \\(R\\) be a ring and suppose that we have the following commutative diagram of \\(R\\)-modules and module homomorphisms with exact rows.",
+      "text": "Let \\(R\\) be a ring and suppose that we have the following commutative diagram of \\(R\\)-modules and module homomorphisms with exact rows.\n\\[\n\\require{amscd}\n\\begin{CD}\n0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\\\\n@. @V{\\alpha}VV @V{\\beta}VV @V{\\gamma}VV @. \\\\\n0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0\n\\end{CD}\n\\]",
         "subparts": [
           {
             "label": "(a)",

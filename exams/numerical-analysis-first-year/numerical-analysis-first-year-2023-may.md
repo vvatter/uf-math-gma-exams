@@ -29,7 +29,7 @@ has the largest degree of precision.
 \[
 g(x)=\frac{1}{3}\left(\frac{x^3}{3}-x^2-\frac{5x}{4}+4\right).
 \]
-Use the contraction mapping theorem to prove that if \(x_0\in G\), then the sequence defined by \(x_{k+1}=g(x_k)\) \((k=0,1,\ldots)\) converges to a unique fixed point \(z\in G\).
+* (a) Use the contraction mapping theorem to prove that if \(x_0\in G\), then the sequence defined by \(x_{k+1}=g(x_k)\) \((k=0,1,\ldots)\) converges to a unique fixed point \(z\in G\).
 * (b) Consider the fixed point iteration method \(x_{k+1}=g(x_k)\) \((k=0,1,\ldots)\) for solving the nonlinear equation \(f(x)=0\). Consider choosing an iteration function of the form
   \[
   g(x)=x-af(x)-b(f(x))^2-c(f(x))^3,

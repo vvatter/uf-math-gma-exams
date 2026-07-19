@@ -147,7 +147,7 @@
     {
       "type": "problem",
       "problem": {
-        "text": "",
+        "text": "Let \\(K\\) be a subfield of the real numbers and \\(f\\in K[X]\\) an irreducible cubic with three real roots.",
         "subparts": [
           {
             "label": "a)",
@@ -156,7 +156,7 @@
           },
           {
             "label": "b)",
-            "text": "Let \\(K\\) be a subfield of the real numbers and \\(f\\in K[X]\\) an irreducible cubic with three real roots. Show that if \\(L\\) is obtained from \\(K\\) by adjoining a real number \\(\\alpha\\) with \\(\\alpha^p\\in K\\) for some prime \\(p\\neq 3\\), then \\(f\\) remains irreducible over \\(L\\).",
+            "text": "Show that if \\(L\\) is obtained from \\(K\\) by adjoining a real number \\(\\alpha\\) with \\(\\alpha^p\\in K\\) for some prime \\(p\\neq 3\\), then \\(f\\) remains irreducible over \\(L\\).",
             "subparts": []
           },
           {

@@ -89,10 +89,17 @@
         }
       ]
     },
-    {
-      "type": "instructions",
-      "text": "II. Prove 2 of the above theorems 3, 5, 6, 7."
-    },
+  {
+    "type": "section",
+    "heading": "II",
+    "numbering": "restart",
+    "content": [
+      {
+        "type": "instructions",
+        "text": "Prove 2 of the above theorems 3, 5, 6, 7."
+      }
+    ]
+  },
     {
       "type": "section",
       "heading": "III.",
