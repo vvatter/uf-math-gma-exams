@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-phd-2005-may",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2005,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2005_05.pdf",
+  "instructions": "Do any eight of the ten problems below.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Consider the matrix \\(A=uv^*\\), where \\(u\\) and \\(v\\in\\mathbb{C}^n\\). Under what condition on \\(u\\) and \\(v\\) is \\(A\\) a projector?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that the Householder matrix \\(H=I-2ww^*\\), where \\(\\lVert w\\rVert=1\\), is unitary.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Given a vector \\(x\\in\\mathbb{C}^n\\) and an integer \\(k\\) with \\(1<k<n\\), derive a formula for a Householder matrix with the property that \\((Hx)_i=0\\) for \\(i>k\\) and \\((Hx)_i=x_i\\) for \\(i<k\\). Be sure to choose the signs so that the formula is numerically stable.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Given a matrix \\(A\\in\\mathbb{C}^{m\\times n}\\) with \\(n\\) linearly independent columns, derive the formula (the normal equation) for the least squares solution to the possibly overdetermined linear system \\(Ax=b\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Given a matrix \\(A\\in\\mathbb{C}^{m\\times n}\\) with \\(m\\) linearly independent rows, derive the formula (the analogue of the normal equation) for the minimum norm solution \\(Ax=b\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Suppose you are given the singular value decomposition (SVD) \\(A=U\\Sigma V^*\\). Derive a single formula for the least squares/minimum norm solution to \\(Ax=b\\) which is expressed in terms of \\(U\\), \\(\\Sigma\\), and \\(V\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Consider the invertible linear system \\(Ax=b\\). Derive a tight bound for the condition number with respect to perturbations in \\(b\\). If \\(A(x+\\delta x)=b+\\delta b\\) is the perturbed system, then with the 2-norm, for which choice of \\(b\\) and for which perturbation \\(\\delta b\\) is this bound tight?",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let\n\\[\nC=\\begin{bmatrix}\n-a_1&-a_2&\\cdots&-a_{n-1}&-a_n\\\\\n1&0&\\cdots&0&0\\\\\n0&1&\\ddots&\\vdots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0&\\vdots\\\\\n0&\\cdots&0&1&0\n\\end{bmatrix},\n\\qquad\ne=\\begin{bmatrix}1\\\\0\\\\\\vdots\\\\\\vdots\\\\0\\end{bmatrix}.\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "What is the characteristic polynomial of \\(C\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Consider any \\(A\\in\\mathbb{C}^{n\\times n}\\) and \\(b\\in\\mathbb{C}^n\\). Let the characteristic polynomial of \\(A\\) be\n\\[\np(\\lambda)=\\lambda^n+a_1\\lambda^{n-1}+a_2\\lambda^{n-2}+\\cdots+a_{n-1}\\lambda+a_n,\n\\]\n\\[\nK=[b,Ab,A^2b,\\ldots,A^{n-1}b],\n\\qquad\nR=\\begin{bmatrix}\n1&a_1&a_2&\\cdots&a_{n-1}\\\\\n0&1&a_1&\\cdots&a_{n-2}\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&&\\ddots&\\ddots&a_1\\\\\n0&\\cdots&\\cdots&0&1\n\\end{bmatrix}.\n\\]\nShow that if \\(K\\) is invertible, then\n\\[\n(KR)^{-1}A(KR)=C\n\\qquad\\text{and}\\qquad\n(KR)^{-1}b=e.\n\\]\n(Suggestion: Prove that \\(A(KR)=(KR)C\\) using \\(p(A)=0\\).)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \\(A=QR\\) be the factorization of \\(A\\) into the product of a unitary matrix and a triangular matrix. Suppose that the columns of \\(A\\) are linearly independent. Show that \\(|r_{kk}|\\) is the distance from the \\(k\\)-th column of \\(A\\) to the linear space spanned by the first \\(k-1\\) columns of \\(A\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Show that \\(x=\\pi+0.5\\sin(x/2)\\) has a unique solution \\(\\alpha\\) in \\(\\mathbb{R}\\). Give a fixed point iteration by which one can compute an approximation to \\(\\alpha\\) numerically and prove that it converges at order one.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "The Lagrange interpolation problem is to find a polynomial \\(p_n(x)\\) of degree at most \\(n\\) such that\n\\[\np_n(x_i)=y_i,\\qquad i=0,\\ldots,n,\n\\]\nwhere \\(x_0,\\ldots,x_n\\) are distinct real points and \\(y_0,\\ldots,y_n\\) are given data. Prove that this problem always has a unique solution.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Consider the quadrature that approximates\n\\[\n\\int_a^b f(x)\\,dx\n\\]\nby\n\\[\nI_3(f):=\\int_a^b P_3(x)\\,dx,\n\\]\nwhere \\(P_3(x)\\) is the cubic Hermite interpolant to \\(f(x)\\) at the points \\(x=a,b\\). Obtain an error formula for this approximation. (This is called the corrected trapezoid rule.)",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Consider multistep methods of the form\n\\[\ny_{n+1}=y_{n-q}+h\\sum_{j=-1}^{p}b_jf(x_{n-j},y_{n-j})\n\\]\nwith \\(q\\geq1\\). Show that such methods do not satisfy the strong root condition. Find an example with \\(q=1\\) that is relatively stable.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Let \\(S_n^1\\) denote the space of linear splines based on knots \\(a=t_0<t_1<\\cdots<t_n=b\\), i.e.,\n\\[\nS_n^1=\\left\\{v:v|_{[t_j,t_{j+1}]}\\text{ is linear for all }j=0,1,\\ldots,n-1\\text{ and }v\\text{ is continuous on }[a,b]\\right\\}.\n\\]\nLet \\(s_f\\in S_n^1\\) interpolate a continuous function \\(f\\) at the knots.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(\\lVert s_f\\rVert_\\infty\\leq\\lVert f\\rVert_\\infty\\). (Here \\(\\lVert v\\rVert_\\infty=\\max_{x\\in[a,b]}|v(x)|\\).)",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that \\(\\lVert f-s_f\\rVert_\\infty\\leq2\\lVert f-s\\rVert_\\infty\\) for any \\(s\\in S_n^1\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Consider the error in best approximation to \\(f\\) from \\(S_n^1\\) and the error in approximating \\(f\\) by its linear interpolant \\(s_f\\). If one goes to zero, does the other go to zero?",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

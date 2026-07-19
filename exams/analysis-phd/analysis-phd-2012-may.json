@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2012-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2012,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2012_05.pdf",
+  "instructions": "Be sure to carefully present all work in a neat and logical fashion. Do not leave any gaps. State clearly theorems used in your proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(\\mu\\) be a real-valued signed measure on a \\(\\sigma\\)-algebra \\(\\Sigma\\). Does there exist a set in \\(\\Sigma\\) on which \\(\\mu\\) attains its minimum value? Prove or disprove.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be a Banach space. Show that there exists a compact \\(T_2\\) space \\(S\\) such that \\(X\\) is isometrically isomorphic to a closed linear subspace of \\(C(S)\\). [Hint: Examine the unit ball of the dual space \\(X^*\\) with the appropriate topology and the action of \\(X\\) on \\(X^*\\).]",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(\\{f_n\\}\\) be a sequence of integrable functions on \\(S\\) such that \\(\\sum \\int |f_n|\\,d\\mu < \\infty\\). Give all details concerning the convergence of \\(\\sum f_n(s)\\), \\(s \\in S\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "State and prove the Fubini theorem.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(\\pi\\) be the natural map from the Banach space \\(X\\) into its second dual \\(X^{**}\\). Show \\(\\pi(X)\\) is closed in the norm topology of \\(X^{**}\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Show that the continuous functions on \\([0,1]\\) are dense in \\(L^1[0,1]\\) (Lebesgue measure). [Hint: First show this is true for the indicator function of a Lebesgue measurable subset of \\([0,1]\\).]",
+      "subparts": []
+    }
+  ]
+}

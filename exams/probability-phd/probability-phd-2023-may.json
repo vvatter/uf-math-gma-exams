@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "id": "probability-phd-2023-may",
+  "subject": "PhD Probability",
+  "subject_tag": "probability-phd",
+  "year": 2023,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Exam-Probability_2023_05.pdf",
+  "instructions": "Carefully justify your answers.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Give the mathematical definition of:",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "conditional expectation,",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "martingale,",
+          "subparts": []
+        },
+        {
+          "label": "3.",
+          "text": "Poisson process,",
+          "subparts": []
+        },
+        {
+          "label": "4.",
+          "text": "standard Brownian motion.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "State the weak and strong law of large numbers for i.i.d. random variables.",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Prove the strong law of large numbers under the additional assumption of finite fourth moment \u0001(\u0001\u0018\\mathbb E[X_1^4]<+\\infty\u0001)\u0001.",
+          "subparts": []
+        },
+        {
+          "label": "3.",
+          "text": "Let \u0001(\u0001\u0018\\{B_t\\}\u0001)\u0001 be a standard Brownian motion. Prove that \u0001(\u0001\u0018\\left\\{\\frac{B_n}{n}\\right\\}\u0001)\u0001 converges to \u0001(\u0001\u00180\u0001)\u0001 almost surely as \u0001(\u0001\u0018n\\to+\\infty\u0001)\u0001 \u0001(\u0001\u0018n\\in\\mathbb N\u0001)\u0001.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Let \u0001(\u0001\u0018X\u0001)\u0001 be a random variable with a standard Gaussian distribution. Find the probability density function of \u0001(\u0001\u0018e^X\u0001)\u0001.",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Let \u0001(\u0001\u0018X\u0001)\u0001 be a random variable with a standard Cauchy distribution. Find the probability density function of \u0001(\u0001\u0018\\frac{1}{X}\u0001)\u0001.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Let \u0001(\u0001\u0018p\\ge 1\u0001)\u0001. Prove that if \u0001(\u0001\u0018X\u0001)\u0001 is a random variable, then\n\u0001[\u0001\u0018\\mathbb E[|X|^p]=\\int_0^{+\\infty}p x^{p-1}\\mathbb P(|X|\\ge x)\\,dx.\u0001]\u0001",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Let \u0001(\u0001\u0018p\\ge 1\u0001)\u0001. Let \u0001(\u0001\u0018X\u0001)\u0001 and \u0001(\u0001\u0018Y\u0001)\u0001 be two independent random variables with \u0001(\u0001\u0018\\mathbb E[Y]=0\u0001)\u0001. Show that\n\u0001[\u0001\u0018\\mathbb E[|X+Y|^p]\\ge\\mathbb E[|X|^p].\u0001]\u0001",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \u0001(\u0001\u0018\\{a_n\\}_{n\\ge1}\u0001)\u0001 be a sequence of real numbers such that \u0001(\u0001\u00180<\\sum_{k=1}^{+\\infty}|a_k|^2<+\\infty\u0001)\u0001. Denote \u0001(\u0001\u0018\\|a_n\\|=\\sqrt{\\sum_{k=1}^n|a_k|^2}\u0001)\u0001 and \u0001(\u0001\u0018\\|a\\|=\\sqrt{\\sum_{k=1}^{+\\infty}|a_k|^2}\u0001)\u0001. Let \u0001(\u0001\u0018\\{X_n\\}_{n\\ge1}\u0001)\u0001 be a sequence of i.i.d. symmetric Bernoulli, that is\n\u0001[\u0001\u0018\\forall k\\ge1,\\qquad \\mathbb P(X_k=1)=\\mathbb P(X_k=-1)=\\frac12.\u0001]\u0001\nDenote, for \u0001(\u0001\u0018n\\ge1\u0001)\u0001, \u0001(\u0001\u0018S_n=\\sum_{k=1}^n a_kX_k\u0001)\u0001, and denote \u0001(\u0001\u0018\\mathcal F_n=\\sigma\\{S_1,\\ldots,S_n\\}\u0001)\u0001.",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Prove that \u0001(\u0001\u0018\\{S_n\\}\u0001)\u0001 is an \u0001(\u0001\u0018\\{\\mathcal F_n\\}\u0001)\u0001-martingale.",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Prove that \u0001(\u0001\u0018\\{S_n\\}\u0001)\u0001 converges almost surely.",
+          "subparts": []
+        },
+        {
+          "label": "3.",
+          "text": "Prove that for all \u0001(\u0001\u0018n\\ge1\u0001)\u0001, for all \u0001(\u0001\u0018\\lambda\\in\\mathbb R\u0001)\u0001,\n\u0001[\u0001\u0018\\mathbb E[e^{\\lambda S_n}]\\le e^{\\frac{\\lambda^2\\|a_n\\|^2}{2}}.\u0001]\u0001\n(Hint: \u0001(\u0001\u0018\\frac{e^x+e^{-x}}2\\le e^{\\frac{x^2}{2}}\u0001)\u0001)",
+          "subparts": []
+        },
+        {
+          "label": "4.",
+          "text": "Use question 3. and the symmetry of \u0001(\u0001\u0018S_n\u0001)\u0001 to prove that for all \u0001(\u0001\u0018n\\ge1\u0001)\u0001, for all \u0001(\u0001\u0018x\\ge0\u0001)\u0001,\n\u0001[\u0001\u0018\\mathbb P(|S_n|\\ge x)\\le 2e^{-\\frac{x^2}{2\\|a_n\\|^2}}.\u0001]\u0001\n(Hint: The minimum of the function \u0001(\u0001\u0018\\lambda\\mapsto e^{-\\lambda x}e^{\\frac{\\lambda^2\\|a_n\\|^2}{2}}\u0001)\u0001 is attained at \u0001(\u0001\u0018\\lambda=\\frac{x}{\\|a_n\\|^2}\u0001)\u0001)",
+          "subparts": []
+        },
+        {
+          "label": "5.",
+          "text": "Deduce the Khintchine inequality: \u0001(\u0001\u0018\\forall p\\ge1\u0001)\u0001, \u0001(\u0001\u0018\\forall n\\ge1\u0001)\u0001,\n\u0001[\u0001\u0018\\mathbb E\\left[\\left|\\sum_{k=1}^n a_kX_k\\right|^p\\right]^{\\frac1p}\\le C\\|a_n\\|,\u0001]\u0001\nwhere \u0001(\u0001\u0018C\u0001)\u0001 is a numerical constant depending on \u0001(\u0001\u0018p\u0001)\u0001 only (You do not need to compute \u0001(\u0001\u0018C\u0001)\u0001).\n\n(Hint: \u0001(\u0001\u0018\\mathbb E[|X|^p]=\\int_0^{+\\infty}p x^{p-1}\\mathbb P(|X|\\ge x)\\,dx\u0001)\u0001)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Give the definition of convergence of a sequence of random variables in probability and in distribution.",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Which mode of convergence is stronger between convergence in probability and in distribution? Prove it.",
+          "subparts": []
+        },
+        {
+          "label": "3.",
+          "text": "Give a counterexample showing that convergence in probability is not equivalent to convergence in distribution.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "Let \u0001(\u0001\u0018\\{B_t\\}\u0001)\u0001 be a standard Brownian motion. Define, for \u0001(\u0001\u0018x\\in\\mathbb R\u0001)\u0001,\n\u0001[\u0001\u0018T_x=\\min\\{t\\ge0:B_t=x\\}.\u0001]\u0001",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Prove that for all \u0001(\u0001\u0018x\\in\\mathbb R\u0001)\u0001, \u0001(\u0001\u0018T_x\u0001)\u0001 is finite almost surely (that is, \u0001(\u0001\u0018\\mathbb P(T_x<+\\infty)=1\u0001)\u0001).",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Find \u0001(\u0001\u0018\\mathbb P(T_{-2}<T_1)\u0001)\u0001. You can use a picture as justification.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "Let \u0001(\u0001\u0018n\\in\\mathbb N\u0001)\u0001. Let \u0001(\u0001\u0018X_1,\\ldots,X_n\u0001)\u0001 be i.i.d. random variables in \u0001(\u0001\u0018L_1\u0001)\u0001. Find \u0001(\u0001\u0018\\mathbb E[X_1\\mid X_1+\\cdots+X_n]\u0001)\u0001.",
+      "subparts": []
+    }
+  ]
+}

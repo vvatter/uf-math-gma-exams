@@ -462,6 +462,29 @@ def all_content(exam: ExamRecord) -> Iterator[str]:
             yield subpart.text
 
 
+def logic_instruction_ranges(instructions: str) -> list[tuple[int, int]]:
+    """Return problem ranges that are explicitly associated with a topic or section."""
+    problem_range = r"Problems?\s+(\d+)(?:\s*[\N{EN DASH}-]\s*(\d+))?"
+    patterns = (
+        rf"{problem_range}\s+(?:concern|are\s+from|are|comprise)\s+[^.;,]+",
+        rf"(?:Section|Topic)\s+[^(),;:.]+\s*\(\s*{problem_range}\s*\)",
+        rf"{problem_range}\s*\(\s*(?:Section|Topic)\b[^)]*\)",
+    )
+    matches: list[tuple[int, int, int]] = []
+    for pattern in patterns:
+        for match in re.finditer(pattern, instructions, re.IGNORECASE):
+            start = int(match.group(1))
+            end = int(match.group(2) or start)
+            matches.append((match.start(), start, end))
+
+    ordered: list[tuple[int, int]] = []
+    for _position, start, end in sorted(matches):
+        item = (start, end)
+        if item not in ordered:
+            ordered.append(item)
+    return ordered
+
+
 def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag]) -> list[str]:
     errors: list[str] = []
     if exam.id != source.id:
@@ -481,17 +504,15 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
     if source.subject_tag == "logic-phd":
         if numbers != expected_numbers:
             errors.append("logic problem numbers are not globally sequential")
-        ranges = re.findall(
-            r"Problems?\s+(\d+)(?:\s*[\N{EN DASH}-]\s*(\d+))?\s+concern\s+([^.;]+)",
-            exam.instructions or "",
-            re.IGNORECASE,
+        transformed = any(
+            flag.category == ReviewCategory.NUMBERING_TRANSFORMATION for flag in flags
         )
         covered = [
             number
-            for start, end, _topic in ranges
-            for number in range(int(start), int(end or start) + 1)
+            for start, end in logic_instruction_ranges(exam.instructions or "")
+            for number in range(start, end + 1)
         ]
-        if covered != expected_numbers:
+        if transformed and sorted(covered) != expected_numbers:
             errors.append("logic instructions do not map every final problem to a topic")
     elif numbers != expected_numbers and not any(
         flag.category == ReviewCategory.NUMBERING for flag in flags
@@ -652,6 +673,25 @@ def extract_one(
             raise RuntimeError(f"cached extraction invalid for {source.id}: {'; '.join(errors)}")
         write_text(rendered_path, render_markdown(exam))
         return exam, flags, True
+    if saved_path.exists() and not force:
+        checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
+        if (
+            checkpoint.get("source_sha256") == source_hash
+            and checkpoint.get("model_extraction") is not None
+        ):
+            extraction = ModelExtraction.model_validate(checkpoint["model_extraction"])
+            exam = build_exam(source, extraction)
+            errors = validate_exam(exam, source, extraction.review_flags)
+            if not errors:
+                checkpoint["review_flags"] = [
+                    item.model_dump(mode="json") for item in extraction.review_flags
+                ]
+                checkpoint["validation_errors"] = []
+                checkpoint["revalidated_at"] = datetime.now(timezone.utc).isoformat()
+                write_json(saved_path, checkpoint)
+                write_json(output_path, exam)
+                write_text(rendered_path, render_markdown(exam))
+                return exam, extraction.review_flags, True
     if force:
         archive(output_path)
         archive(rendered_path)

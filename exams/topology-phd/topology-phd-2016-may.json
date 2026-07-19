@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-2016-may",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2016,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2016_05.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that there is no map \\(S^2 \\to T^2\\) of degree 2. Does there exist a map \\(f:T^2 \\to S^2\\) of degree 2?",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Does every function \\(f(x)=x^2\\) admit a continuous extension \\(\\bar f:\\beta\\mathbb{R}\\to\\mathbb{R}\\) to the Stone–Čech compactification?",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Is the 2-sphere \\(S^2\\) with \\(k\\) points removed homeomorphic to a topological group for",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(k=0\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(k=1\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(k=2\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(d)",
+          "text": "\\(k=3\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Prove that the topologist’s sine curve is not path connected.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Suppose that \\(X=C_1\\cup C_2\\) where each \\(C_i\\) is homeomorphic to the topologist’s sine curve. Can \\(X\\) be path connected?",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Why the \\(n\\)-sphere \\(S^n\\) is not homeomorphic to the \\(n\\)-space \\(\\mathbb{R}^n\\)?",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State the Contraction Mapping Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Compute the Euler characteristic \\(\\chi(\\mathbb{C}P^5\\times\\mathbb{R}P^5\\times S^5\\times S^2)\\).",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Does a surface of genus 2 admit a nonzero vector field?",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Five Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "What can you say about the \\(k\\)-th cohomology group of a closed oriented \\(n\\)-manifold for",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(k=n\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(k=n-1\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "text": "Does there exist a covering space of the figure eight that has a non-trivial abelian fundamental group?",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "State the Künneth Formula for homology.",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "State the Lefschetz Fixed Point Theorem.",
+      "subparts": []
+    }
+  ]
+}

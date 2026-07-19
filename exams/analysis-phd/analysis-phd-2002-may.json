@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2002-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2002,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2002_05.pdf",
+  "instructions": "For Problems 1–5, state the following theorems. For Problems 6–7, state and prove one of the following theorems. Solve Problems 8–12. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences. State the complete framework for each theorem.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "The Egorov theorem.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "The Radon–Nikodym theorem.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Density of step functions in \\(L^p\\) and \\(L^\\infty\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "The Fubini theorem for \\(\\mu\\times\\nu\\)-integrable functions.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "The Riesz representation theorem of the dual of \\(C(K)\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "The integral representation of the dual of \\(L^1(\\mu)\\) (the finite measure case).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "The theorem of integration with respect to \\(g\\mu\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\((X,\\Sigma,\\mu)\\) be a measure space with \\(\\mu(X)<\\infty\\), \\(F\\) a Banach space and \\(\\mathcal F\\subset\\Sigma\\) a \\(\\sigma\\)-algebra. Prove the existence of the conditional expectation \\(E(f\\mid\\mathcal F)\\) for \\(f\\in L_F^1(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Let \\((X,\\mathcal S)\\), \\((Y,\\mathcal T)\\) be measurable spaces and \\(\\mu:\\mathcal S\\to\\mathbb R\\), \\(\\nu:\\mathcal T\\to\\mathbb R\\) \\(\\sigma\\)-additive measures. Prove the existence of the product measure \\(\\mu\\times\\nu\\) and the equality \\(\\|\\mu\\times\\nu\\|=\\|\\mu\\|\\times\\|\\nu\\|\\).",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Let \\((X,\\mathcal S)\\), \\((Y,\\mathcal T)\\) be measurable spaces, \\(p:X\\to Y\\) an \\((\\mathcal S,\\mathcal T)\\)-measurable mapping, \\(\\mu:\\mathcal S\\to\\mathbb R_+\\) a \\(\\sigma\\)-additive measure and \\(\\nu=p(\\mu)\\) the image measure of \\(\\mu\\) under the mapping \\(p\\). Prove that if \\(f\\in L_F^1(\\nu)\\), then \\(f\\circ p\\in L_F^1(\\mu)\\) and \\(\\int f\\circ p\\,d\\mu=\\int f\\,dp(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Let \\((X,\\Sigma,\\mu)\\) be a measure space and \\(f\\in L^1(\\mu)\\). Prove that: for every \\(\\varepsilon>0\\), there is a set \\(X_\\varepsilon\\in\\Sigma\\) with \\(\\mu(X_\\varepsilon)<\\infty\\), such that\n\\[\n\\int_{X-X_\\varepsilon}|f|\\,d\\mu<\\varepsilon.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "Let \\(\\lambda\\) be the Lebesgue measure on \\([0,1]\\) and \\(f\\in L^1(\\lambda)\\). Prove that if\n\\[\n\\int_{[0,1]}x^n f\\,d\\lambda=0\\quad\\text{for every }n,\n\\]\nthen \\(f=0\\), \\(\\lambda\\)-a.e.\n\nHint: Use the fact that the continuous functions on \\([0,1]\\) are dense in \\(L^1(\\lambda)\\) and reduce to the case \\(\\int_A f\\,d\\lambda=0\\) for \\(A\\in\\mathcal B([0,1])\\).",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "complex-analysis-phd-2020-jan",
+  "subject": "PhD Complex Analysis",
+  "subject_tag": "complex-analysis-phd",
+  "year": 2020,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-ComplexAnalysis-2020_01.pdf",
+  "instructions": "Answer SIX questions in detail. State carefully any results used without proof. Throughout, \\(\\mathbb{D}\\) is the open unit disc in \\(\\mathbb{C}\\).",
+  "problems": [
+    {
+      "number": 1,
+      "text": "When \\(n>1\\) is a positive integer, evaluate the integral\n\\[\n\\int_0^\\infty \\frac{1}{1+x^n}\\,dx.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "True or false? There exists a holomorphic function \\(f:\\mathbb{D}\\to\\mathbb{C}\\) such that \\(f(1/n)=f(-1/n)=1/n^3\\) for each integer \\(n>1\\). Prove or disprove.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "The functions \\(f\\) and \\(g\\) are holomorphic and never zero in \\(\\mathbb{D}\\). Assume that\n\\[\n\\frac{f'}{f}(2^{-n})=\\frac{g'}{g}(2^{-n})\n\\]\nfor each positive integer \\(n\\). Deduce as much as possible about the relationship between \\(f\\) and \\(g\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(f\\) be holomorphic in \\(\\mathbb{D}\\setminus\\{0\\}\\) and assume that its derivative \\(f'\\) extends holomorphically to \\(\\mathbb{D}\\). Must \\(f\\) itself extend holomorphically to \\(\\mathbb{D}\\)? Explain.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let the continuous function \\(f:\\mathbb{D}\\to\\mathbb{C}\\) be holomorphic except (perhaps) on the interval \\([-1/2,1/2]\\). Prove that \\(f\\) is in fact holomorphic on \\(\\mathbb{D}\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let the entire function \\(f\\) never take purely imaginary values. Without using a theorem of Picard, prove that \\(f\\) is constant.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let the entire function \\(f\\) satisfy \\(|f(z)|\\leq A+B|z|^M\\) whenever \\(|z|\\geq N\\), where \\(A,B,M,N\\) are positive constants. Prove that \\(f\\) is a polynomial.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(f\\) be holomorphic in \\(\\mathbb{D}\\). Assume that for each \\(z\\in\\mathbb{D}\\) there exists \\(n=n_z\\in\\mathbb{N}\\) such that \\(f^{(n)}(z)=0\\). Prove that \\(f\\) is a polynomial.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Prove that if \\(z\\) and \\(w\\) lie in the (open) right half-plane then\n\\[\n\\int_0^\\infty e^{-wt}t^{z-1}\\,dt=w^{-z}\\Gamma(z)\n\\]\nby integrating \\(e^{-\\zeta}\\zeta^{z-1}\\) around a suitable closed contour.",
+      "subparts": []
+    }
+  ]
+}

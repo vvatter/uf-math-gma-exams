@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-first-year-2018-may",
+  "subject": "First Year Numerical Analysis",
+  "subject_tag": "numerical-analysis-first-year",
+  "year": 2018,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAD-6407-May-2018.pdf",
+  "instructions": "Do all five (5) problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Consider\n\\[\ny' = 4ty;\\quad t \\in [0,1];\\quad y(0)=2, \\tag{1}\n\\]\nwhich has solution \\(Y(t)=2e^{2t^2}\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Using the Euler method error estimate find the value of \\(h\\) required to ensure that the Euler method solution \\(w_i\\) of (1) satisfies \\(|Y(t_i)-w_i|\\leq 0.1\\) for all \\(i\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Derive the Taylor method of order 2 for (1).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\(g\\in C^2([a,b])\\) and \\(p\\in(a,b)\\) with \\(g(p)=p\\), \\(g'(p)=0\\), \\(g''(p)\\neq 0\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show there is an \\(\\epsilon>0\\) so that for all \\(x\\in[p-\\epsilon,p+\\epsilon]\\), we have \\(g^n(x)\\to p\\) as \\(n\\to\\infty\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "With \\(\\epsilon\\) as in part (a), show that for all \\(x\\in[p-\\epsilon,p+\\epsilon]\\), we have \\(|g(x)-p|\\leq M|x-p|^2\\), where \\(M=\\max\\{|g''(x)|:|x-p|\\leq\\epsilon\\}/2\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Find the second order (i.e. quadratic) least squares approximation to the function \\(f(x)=x^4\\) on the interval \\([-1,1]\\) with respect to the weight \\(w(x)\\equiv 1\\) using the fact that the first three orthonormal polynomials on \\([-1,1]\\) with respect to this weight are\n\\[\n\\varphi_0(x)=\\sqrt{1/2},\\quad \\varphi_1(x)=\\sqrt{3/2}\\,x,\\quad\\text{and}\\quad \\varphi_2(x)=\\sqrt{5/8}(3x^2-1).\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Assume \\(N(h)\\) is the computed approximation for \\(M\\) for each \\(h>0\\) and\n\\[\nM=N(h)+C_1h+C_2h^2+C_3h^3+\\cdots.\n\\]\nUse the values \\(N(h)\\), \\(N(h/3)\\), and \\(N(h/9)\\) to produce a \\(O(h^3)\\) approximation to \\(M\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Taylor’s formula yields the following.\n\\[\nf'(x_0)=\\frac{1}{h}\\bigl(f(x_0+h)-f(x_0)\\bigr)-\\frac{h}{2}f''(x_0)-\\frac{h^2}{6}f'''(x_0)+O(h^3).\n\\]\nUse this with the extrapolation of part (a) to derive an \\(O(h^3)\\) formula for \\(f'(x_0)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Find \\(a,b,c\\) so that the quadrature formula\n\\[\n\\int_0^2 f(x)\\,dx=af(0)+bf(1)+cf(2)\n\\]\nhas degree of precision as large as possible, and show it is no larger than your answer.",
+      "subparts": []
+    }
+  ]
+}

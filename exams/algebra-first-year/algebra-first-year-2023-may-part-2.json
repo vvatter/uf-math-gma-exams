@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "algebra-first-year-2023-may-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2023,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2023_05.pdf",
+  "instructions": "Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that the ring\n\\[\\mathbb{Z}[\\sqrt{-5}]=\\{a+b\\sqrt{-5}\\mid a,b\\in\\mathbb{Z}\\}\\]\nis not a unique factorization domain.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Which of the following rings are integral domains? Fields? Explain.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "\\(\\mathbb{Q}[X,Y]/(X(X+1)+2X^2Y-Y^3)\\)",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(\\mathbb{Q}[X,Y]/(X^2-Y^2)\\)",
+          "subparts": []
+        },
+        {
+          "label": "(iii)",
+          "text": "\\(\\mathbb{Z}[X,Y]/(2,X,Y-1)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let \\(R\\) be an integral domain. Recall that an \\(R\\)-module \\(M\\) has rank \\(n\\) if \\(n\\) is the largest integer such that \\(M\\) has \\(n\\) \\(R\\)-linearly independent elements. Show that an \\(R\\)-module \\(M\\) has rank \\(n\\) if and only if \\(M\\) has a submodule \\(N\\subseteq M\\) such that \\(N\\) is free of rank \\(n\\), and \\(M/N\\) is torsion.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(F\\) be a field, \\(M\\) an extension of \\(F\\) and \\(L,K\\) two finite extensions of \\(F\\) contained in \\(M\\). Show that if \\([L:F]\\) and \\([K:F]\\) are relatively prime, \\(L\\cap K=F\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "List all irreducible polynomials in \\(\\mathbb{F}_2[X]\\) of degree at most three.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "List representatives for each conjugacy class of the group \\(GL_3(\\mathbb{F}_2)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\(F\\) be a field, \\(V\\) an \\(F\\)-vector space of finite dimension and \\(T:V\\to V\\) a linear transformation. Show that if the minimal polynomial of \\(T\\) is irreducible of degree \\(d\\) then the dimension of \\(V\\) is a multiple of \\(d\\).",
+      "subparts": []
+    }
+  ]
+}

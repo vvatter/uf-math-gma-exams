@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "combinatorics-phd-1995-aug",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 1995,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Combinatorics_1995_08.pdf",
+  "instructions": null,
+  "problems": [
+    {
+      "number": 1,
+      "text": "Every simple planar graph has a vertex of degree at most \\(5\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "State the max-flow min-cut theorem for networks.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that the max-flow min-cut theorem implies the following version of Menger’s Theorem.\n\nThe maximum number of edge disjoint directed paths between two given points \\(s,t\\) of a directed graph equals the minimum number of edges whose removal separates \\(s\\) from \\(t\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "We have an unlimited supply of bricks of length \\(1\\), each painted red, white or blue, and bricks of length \\(2\\), each painted green or yellow. Explicitly find \\(a_n\\) = the number of ways to choose a sequence of bricks of total length \\(n\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "State and prove Dilworth’s Theorem for a finite poset.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Each of \\(n\\) gentlemen checks both his hat and his umbrella at a restaurant. Both the hats and the umbrellas are returned randomly. What is the probability that no man gets back both his hat and his umbrella?",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Prove that\n\\[\n\\sum_{i=0}^{m} \\binom{s}{i}\\binom{t}{k-i}=\\binom{s+t}{k}.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "\\(6\\) identical black balls and \\(n-6\\) identical white balls are arranged in a row. How many ways are there to do this so that no \\(3\\) consecutive balls are black?",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Define a \\(q\\)-Hamming code \\(C\\) as one whose parity-check matrix \\(H\\) has as its columns one non-zero vector from each \\(1\\)-dimensional subspace of the vector space \\(\\mathrm{GF}(q)^r\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "What is the length of \\(C\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "What is the minimum distance in \\(C\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(C\\) is perfect.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "State the Bruck–Ryser–Chowla theorem.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Use this theorem to prove that a projective plane of order \\(6\\) cannot exist.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

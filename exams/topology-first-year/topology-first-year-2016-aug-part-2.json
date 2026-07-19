@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2016-aug-part-2",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2016,
+  "month": "august",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Topology-Part_2-2016_08.pdf",
+  "instructions": "For problems 1–7, complete proofs. Support all statements to the best of your ability. For problems 8–13, answer the following with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Suppose that the continuous maps \\(f,g:X\\to Y\\) are homotopic and the continuous maps \\(k,h:Y\\to Z\\) are homotopic. Prove that \\(k\\circ f\\) and \\(h\\circ g\\) are homotopic.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Prove that in a simply connected space \\(X\\), any two paths having the same initial and final points are path homotopic.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Prove that if \\(X\\) is path connected and \\(x_0\\) and \\(x_1\\) are two points of \\(X\\), then \\(\\pi_1(X,x_0)\\) is isomorphic to \\(\\pi_1(X,x_1)\\). Recall that \\(\\pi_1(X,x_0)\\) denotes the fundamental group of \\(X\\) relative to the base point \\(x_0\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(p:E\\to B\\) be a covering map, and let \\(p(e_0)=b_0\\). Let \\(f:[0,1]\\to B\\) be a path beginning at \\(b_0\\). Prove that \\(f\\) has a lifting \\(\\widetilde f\\) beginning at \\(e_0\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Prove that there is no continuous antipode-preserving map \\(g:S^2\\to S^1\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Prove that if \\(n\\geq 2\\), then \\(S^n\\) is simply connected.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Prove that the fundamental group of the projective plane \\(P^2\\) is a group of order 2.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Are the spaces \\(S^1\\) and \\(S^2\\) homeomorphic?",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Are the spaces \\(\\mathbb{R}^1\\) and \\(\\mathbb{R}^2\\) homeomorphic?",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Complete the following definition: Two spaces \\(X\\) and \\(Y\\) have the same homotopy type if and only if . . . .",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Is the identity map \\(i:S^1\\to S^1\\) nullhomotopic?",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "What is the fundamental group of the torus \\(T=S^1\\times S^1\\)?",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Complete the following definition: Let \\(X\\) be a topological space and let \\(A\\) be a subspace of \\(X\\). We say that \\(A\\) is a retract of \\(X\\) if and only if . . . .",
+      "subparts": []
+    }
+  ]
+}

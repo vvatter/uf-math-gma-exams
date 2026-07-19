@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-first-year-2017-aug",
+  "subject": "First Year Numerical Analysis",
+  "subject_tag": "numerical-analysis-first-year",
+  "year": 2017,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_NumericalAnalysis_2017_08.pdf",
+  "instructions": "Do all 5 (five) problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(f(x)=e^x\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Find the linear Taylor polynomial \\(T_1(x)\\) of \\(f(x)\\) expanded about \\(x_0=1/2\\) and give an estimate for the maximum of \\(|T_1(x)-f(x)|\\) on the interval \\([0,1]\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Find the linear minimax approximation \\(P_1(x)\\) to \\(f(x)\\) on \\([0,1]\\) and find the maximum error of \\(|P_1(x)-f(x)|\\) on \\([0,1]\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Find the linear least squares approximation to \\(f\\) on \\([0,1]\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "The midpoint method for DE’s is\n\\[\nw_0=\\alpha\n\\]\n\\[\nw_{n+1}=w_n+hf\\left(t_n+\\frac{h}{2},w_n+\\frac{h}{2}f(t_n,w_n)\\right).\n\\]\nApply this method to the IVP, \\(y'=\\lambda y;\\ y(0)=1\\), with \\(\\lambda<0\\) and find the constant \\(c\\) so that \\(|h\\lambda|<c\\) implies that \\(w_n\\to0\\) as \\(n\\to\\infty\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Derive this three-point formula for the second derivative.\n\\[\nf''(x_0)=\\frac{1}{h^2}\\bigl(f(x_0-h)-2f(x_0)+f(x_0+h)\\bigr)-\\frac{h^2}{12}f^{(4)}(\\eta)\n\\]\nfor some \\(\\eta\\in[x_0-h,x_0+h]\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(f(x)=2^x\\) Let \\(x_0=-1,x_1=0,x_2=1\\). Find the total error bound for the degree two interpolating polynomial \\(p_2(x)\\) with these nodes and \\(f\\) on the interval \\([-1,1]\\), i.e. derive a \\(K\\) with\n\\[\n\\max_{t\\in[-1,1]}|f(t)-p_2(t)|<K.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(g\\in C^2([a,b])\\) and \\(p\\in(a,b)\\) with \\(g(p)=p\\), \\(g'(p)=0\\), \\(g''(p)\\ne0\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show there is an \\(\\epsilon>0\\) so that for all \\(x\\in[p-\\epsilon,p+\\epsilon]\\), we have \\(g^n(x)\\to p\\) as \\(n\\to\\infty\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "With \\(\\epsilon\\) as in part (a), show that for all \\(x\\in[p-\\epsilon,p+\\epsilon]\\), we have \\(|g(x)-p|\\le M|x-p|^2\\) where \\(M=\\max\\{|g''(x)|:|x-p|\\le\\epsilon\\}/2\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

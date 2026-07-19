@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2024-jan",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2024,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Analysis-2024_01.pdf",
+  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\((X,\\mathcal{M},\\mu)\\) be a finite measure space. Let \\((f_n)\\) be a sequence of measurable functions and suppose that \\(\\sum_n \\int |f_n|\\,d\\mu<\\infty\\). Consider the series \\(\\sum_n f_n(x)\\). Does this series converge… Prove your claims.",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "pointwise a.e.?",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "in measure?",
+          "subparts": []
+        },
+        {
+          "label": "c)",
+          "text": "in the \\(L^1\\) norm?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "State Tonelli’s theorem, and give an example to show that the \\(\\sigma\\)-finiteness hypothesis is necessary.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "Let \\(\\nu\\) be a signed measure on \\((X,\\mathcal{M})\\). Define what it means for a set to be positive, negative or null for \\(\\nu\\), and state the Hahn decomposition theorem.",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "Prove that if \\(\\nu\\) is a signed measure, then there exist unique positive measures \\(\\nu^+,\\nu^-\\) so that \\(\\nu=\\nu^+-\\nu^-\\) and \\(\\nu^+\\perp\\nu^-\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(\\varphi_n:\\mathbb{R}\\to\\mathbb{C}\\) be a sequence of Lebesgue measurable functions and suppose that there is a number \\(M\\) such that \\(\\|\\varphi_n\\|_\\infty\\le M\\) for all \\(n\\). Prove that if\n\\[\n\\int_a^b \\varphi_n(t)\\,dt\\to 0\n\\]\nfor every interval \\([a,b]\\subset\\mathbb{R}\\), then\n\\[\n\\int_{-\\infty}^{\\infty}\\varphi_n(t)f(t)\\,dt\\to 0\n\\]\nfor every \\(f\\in L^1(\\mathbb{R})\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(\\mu\\) and \\(\\nu\\) be finite, positive measures defined on the same measurable space \\((X,\\mathcal{M})\\), and suppose that \\(\\nu\\ll\\mu\\).",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "Prove that if \\(L^1(\\mu)\\subset L^1(\\nu)\\), then the inclusion map \\(\\iota:L^1(\\mu)\\hookrightarrow L^1(\\nu)\\) is necessarily bounded.",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "Prove that if \\(L^1(\\mu)\\subset L^1(\\nu)\\) then \\(\\frac{d\\nu}{d\\mu}\\in L^\\infty(\\mu)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\(\\mathcal{X},\\mathcal{Y}\\) be Banach spaces and \\(T:\\mathcal{X}\\to\\mathcal{Y}\\) a linear map. Prove that if \\(f\\circ T\\in\\mathcal{X}^*\\) for all \\(f\\in\\mathcal{Y}^*\\), then \\(T\\) is bounded.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Short answer.",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "Explain why there is no norm on \\(c_{00}\\) (the space of finitely nonzero sequences) which makes it into a Banach space.",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "Explain why there is no bounded, surjective linear map from \\(c_0\\) onto \\(\\ell^\\infty\\).",
+          "subparts": []
+        },
+        {
+          "label": "c)",
+          "text": "Explain why the norm in \\(L^1(\\mathbb{R})\\) cannot be given by an inner product.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "Let \\(H\\) be a Hilbert space with orthonormal basis \\(\\{e_k\\}_{k=1}^\\infty\\). Let \\((h_n)\\) be a sequence in \\(H\\) and let \\(h\\in H\\). Prove that the following statements are equivalent:",
+      "subparts": [
+        {
+          "label": "1)",
+          "text": "\\(\\langle h_n,g\\rangle\\to\\langle h,g\\rangle\\) for all \\(g\\in H\\).",
+          "subparts": []
+        },
+        {
+          "label": "2)",
+          "text": "\\(\\langle h_n,e_k\\rangle\\to\\langle h,e_k\\rangle\\) for all \\(k=1,2,\\ldots\\), AND \\(\\sup_n\\|h_n\\|<\\infty\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

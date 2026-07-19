@@ -413,19 +413,19 @@ Before an exam JSON is accepted, ordinary code checks that:
 3. It contains at least one nonempty problem, or a nonempty notice when the linked PDF
    contains no exam questions.
 4. Top-level problem numbers are unique.
-5. Logic problem numbers are globally sequential and their generated topic ranges agree
-   with the problem list.
+5. Logic problem numbers are globally sequential. When source sections required
+   renumbering, the generated topic or section ranges agree with the problem list.
 6. Every problem and subpart has a `subparts` array, and every subpart has a nonempty
    original `label` field.
-7. MathJax delimiters are balanced and the TeX can be parsed by the target renderer.
+7. MathJax delimiters are balanced and dollar-sign math delimiters are absent.
 8. Every model-reported correction, transformation, or uncertainty appears in its
    corresponding review file.
 9. Every source PDF has either one dataset JSON or an explicit extraction failure.
 10. No exam with an open serious-review item is marked ready for publication.
 
-Initial extraction results remain provisional until the later verification phase. A
-representative pilot and the full first pass will establish additional checks before
-publication begins.
+Initial extraction results remain provisional until the later verification phase. The
+archive validator additionally checks every PDF hash, JSON and Markdown pair, source
+reference in the review logs, and review page number before publication begins.
 
 ## Presentation Is Downstream
 

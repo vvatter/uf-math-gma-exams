@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-phd-2000-sep",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2000,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2000_09.pdf",
+  "instructions": "Do any 8 of the following 10 problems. Part 1: Numerical Linear Algebra (problems 1–5). Part II: Numerical Analysis (problems 6–10).",
+  "problems": [
+    {
+      "number": 1,
+      "text": "A square matrix \\(A\\) which can be decomposed into a form \\(A=SDS^{-1}\\), where \\(D\\) is diagonal is said to be diagonalizable.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Is the matrix\n\\[\nA=\\begin{pmatrix}5&1\\\\0&3\\end{pmatrix}\n\\]\ndiagonalizable? Why?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Can the above matrix \\(A\\) be diagonalized with a matrix \\(S\\) such that \\(S^*S=I\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "State a procedure for factoring a matrix \\(A\\) (without pivoting) into a form \\(A=LDU\\), where \\(L\\) is unit lower triangular, \\(U\\) is unit upper triangular, and \\(D\\) is diagonal.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "State sufficient conditions on \\(A\\) for the procedure in part (a) (without pivoting) to work.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "What is the computational advantage of having lower and upper triangular matrices? An explanation without specific computation counts is sufficient.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Under what conditions can a matrix be factored into a form \\(A=U^*TU\\), where \\(U^*U=I\\), and \\(T\\) is upper triangular?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "If \\(A\\) is Hermitian, how is \\(U\\) constructed? (You don’t need to actually give an algorithm.)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "State the power method algorithm for finding a dominant eigenvalue and an associated eigenvector of a matrix \\(A\\). (An eigenvalue \\(\\lambda_i\\) is said to be dominant if \\(|\\lambda_i|>|\\lambda_k|\\) for all other \\(k\\).)",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that the power method converges (for almost any starting value) when \\(A\\) is real symmetric and has a dominant eigenvalue.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Explain how the inverse power method can be used to find non-dominant eigenvalues and eigenvectors for a matrix \\(A\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Give a careful statement of the Gershgorin Circle Theorem.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give a careful proof of the Gershgorin Circle Theorem.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Let\n\\[\nA=\\begin{pmatrix}\n5&.01&.03\\\\\n.02&4&.01\\\\\n.03&-.01&4\n\\end{pmatrix}.\n\\]\nWhat can you say about the location of the eigenvalues of \\(A\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "State Newton’s method (the algorithm) for solving \\(f(x)=0\\) where \\(f:\\mathbb{R}\\to\\mathbb{R}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Assuming \\(f\\) is smooth and we have an initial guess sufficiently close to the root, state sufficient condition(s) for the method to converge quadratically.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "How would you use Newton’s method to compute \\(5^{1/3}\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Give an exact expression for a Lagrange polynomial of degree \\(n\\) which would interpolate \\(n+1\\) given data points, \\(f(x_k)\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Describe the differences between Hermite polynomials and Lagrange polynomials.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Suppose we have a set of Lagrange polynomials of degree \\(2n+1\\) which interpolate a smooth function at the points \\(x_0,x_0+h,x_1,x_1+h,x_2,x_2+h,\\ldots,x_n,x_n+h\\). What is the pointwise limit of this interpolant as \\(h\\to0\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Describe Romberg’s technique for numerical approximation of an integral (based on the trapezoid rule).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give a brief justification of the method.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "Triple Recursion Formula. If \\(\\{\\phi_n(x)\\}\\) is an orthogonal family of polynomials on \\([a,b]\\), with weight function \\(w(x)\\geq0\\), and \\(n\\geq1\\), then show that\n\\[\n\\phi_{n+1}(x)=(a_nx+b_n)\\phi_n(x)-c_n\\phi_{n-1}(x),\n\\]\nfor some constants \\(a_n,b_n\\), and \\(c_n\\). (Hint: Let \\(g(x)=\\phi_{n+1}(x)-a_nx\\phi_n(x)\\), where \\(a_n\\) is a constant chosen so that \\(g(x)\\) has degree \\(n\\).)",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Let \\(\\{\\phi_k\\}\\) be a system of orthogonal polynomials, with respect to a non-negative weight \\(w(x)\\), on \\([a,b]\\). Show that each of the polynomials \\(\\phi_k(x)\\) must have exactly \\(k\\) simple zeros in \\([a,b]\\).",
+      "subparts": []
+    }
+  ]
+}

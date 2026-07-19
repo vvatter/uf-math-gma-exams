@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2013-jan-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2013,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Topology_2013_01_part1.pdf",
+  "instructions": "Work problems 1–5 and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that the set of functions \\(f:\\mathbb{Z}\\to\\mathbb{Z}\\) that are eventually constant is countable.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be a connected metric space having more than one point. Can \\(X\\) be countable?",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that every continuous map \\(f:[0,1]\\to[0,1]\\) has a fixed point. Is this true for continuous maps",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(f:(0,1)\\to(0,1)\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(f:[0,1]\\to[0,1)\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(A\\) be a proper subset of \\(X\\) and let \\(B\\) be a proper subset of \\(Y\\). If \\(X\\) and \\(Y\\) are connected, show that \\((X\\times Y)-(A\\times B)\\) is connected.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(f:X\\to X\\) be a map of a complete metric space to itself that satisfies the following condition: There exists \\(\\lambda<1\\) such that \\(d(f(x),f(y))\\leq \\lambda d(x,y)\\). Prove that \\(f\\) is continuous. Show that \\(f\\) has a fixed point and the fixed point is unique.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State the Intermediate Value Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Does there exist a continuous surjective map from the 2-sphere \\(S^2\\) to the interval \\((0,1)\\)?",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Does there exist a continuous injective map from the 2-sphere \\(S^2\\) to the interval \\((0,1)\\)?",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Cantor–Schröder–Bernstein Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Is every connected space path connected?",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "What is a basis of a topology? Does the set of all half-open intervals \\(\\{(a,b],[b,c)\\mid a<b,\\ c<d\\}\\) form a basis of a topology on \\(\\mathbb{R}\\)?",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the Extreme Value Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Is \\(\\mathbb{R}^{\\omega}\\) connected in the uniform topology?",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Is the subspace \\(X=\\{(x,y)\\in\\mathbb{R}^2\\mid y=\\frac{1}{x}\\}\\) compact? locally compact?",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Describe all connected subsets of \\(\\mathbb{R}\\).",
+      "subparts": []
+    }
+  ]
+}

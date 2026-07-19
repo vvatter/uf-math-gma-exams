@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-2004-jan",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2004,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2004_01.pdf",
+  "instructions": "Work problems 1–5 and show all work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that no covering of the 2-torus has the homotopy type of a figure eight.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Show that there is no retraction of the Möbius band onto its boundary.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Does there exist a covering space of the figure eight that has a non-trivial abelian fundamental group?",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Show that the 2-torus with a point deleted does not admit a structure of a topological group.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that the space \\(\\mathbb{R}^2 \\setminus A\\) is path connected for any countable set \\(A\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State the Seifert–van Kampen Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State the Lefschetz Fixed Point Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Arzelà–Ascoli Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Let \\(X\\) be a finite complex. Find \\(\\chi(X \\times S^n)\\).",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Five Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the Poincaré Duality Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Define retraction and deformation retraction.",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "State the Mayer–Vietoris exact sequence for cohomology.",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Let \\(X\\) be a complete metric space such that no point is isolated. Can \\(X\\) be countable?",
+      "subparts": []
+    }
+  ]
+}

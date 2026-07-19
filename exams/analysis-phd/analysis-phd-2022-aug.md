@@ -1,0 +1,30 @@
+# Analysis, PhD exam, August 2022
+
+*Write solutions in a neat and logical fashion, giving complete reasons for all steps. You must attempt SIX problems.*
+
+**1.** Let \((X,\mathcal{M})\) be a measurable space and \(\nu\) a signed measure. Define the Hahn decomposition of \(X\) and the Jordan decomposition of \(\nu\). Prove that the Jordan decomposition is unique.
+
+**2.** Let \(\mu,\nu\) be positive measures defined on the same measure space. Define what it means for \(\nu\) to be absolutely continuous with respect to \(\mu\), and state the Radon–Nikodym theorem.
+
+**3.** State Tonelli’s theorem, and give an example to show that the \(\sigma\)-finiteness hypothesis is necessary.
+
+**4.** Give an example of each of the following, if possible. (If not possible, give a brief explanation of why.) (When giving examples, be clear about what measure space you are working in.)
+* a) a sequence of functions converging in measure but not in \(L^1\),
+* b) a sequence converging almost uniformly but not essentially uniformly,
+* c) a sequence converging in \(L^1\) but not almost everywhere.
+
+**5.** Let \((X,\mathcal{M},\mu)\) be a \(\sigma\)-finite measure space. Prove that the simple functions which belong to \(L^2(\mu)\) are dense in \(L^2(\mu)\).
+
+**6.** Let \(\mathcal{X}\) be a Banach space and \(\mathcal{N}\subset\mathcal{X}\) a closed subspace, and let \(\pi:\mathcal{X}\to\mathcal{X}/\mathcal{N}\) be the quotient map. Show that if \(f:\mathcal{X}\to\mathbb{F}\) is a bounded linear functional such that \(f(n)=0\) for all \(n\in\mathcal{N}\), then there is a bounded linear functional \(g:\mathcal{X}/\mathcal{N}\to\mathbb{F}\) such that \(f=g\circ\pi\).
+
+**7.** Let \(\mathcal{X}\) be a reflexive Banach space, with dual space \(\mathcal{X}^*\). Suppose \(B:\mathcal{X}\times\mathcal{X}^*\to\mathbb{F}\) is a bilinear mapping, and there is a constant \(C>0\) so that
+\[
+|B(x,x^*)|\le C\|x\|\|x^*\| \text{ for all } x\in\mathcal{X},\ x^*\in\mathcal{X}^*.
+\]
+Prove that there is a bounded linear operator \(T:\mathcal{X}\to\mathcal{X}\) such that \(B(x,x^*)=x^*(Tx)\) for all \(x\in\mathcal{X},x^*\in\mathcal{X}^*\). Must \(T\) be unique?
+
+**8.** Let \(f:\mathbb{R}\to\mathbb{R}\) be a continuous function with compact support, and let \(\phi:\mathbb{R}\to\mathbb{R}\) be a nonnegative \(L^1\) function with \(\int_{-\infty}^{\infty}\phi(t)\,dt=1\). For each real \(\lambda>0\), consider the function
+\[
+f_\lambda(x):=\frac{1}{\lambda}\int_{-\infty}^{\infty}\phi\left(\frac{x-t}{\lambda}\right)f(t)\,dt.
+\]
+Prove that \(f_\lambda\to f\) uniformly on \(\mathbb{R}\) as \(\lambda\to0\).

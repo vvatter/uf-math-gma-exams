@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2001-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2001,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2001_05.pdf",
+  "instructions": "State the following theorems for Problems 1–10. State and prove the following theorems for Problems 11–12. Solve Problems 13–17. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences. State the relevant framework for each theorem and problem.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "The Hahn–Banach theorem.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "The monotone class theorem.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "The monotone convergence theorem in \\(L^1(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "The Lebesgue dominated convergence theorem in \\(L^p(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "The density of step functions in \\(L^p(\\mu)\\), \\(1\\leq p<\\infty\\), and \\(L^\\infty(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "The computation of the seminorm \\(\\lVert f\\rVert_p\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "The integrability with respect to a measure defined by density.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "The Fubini theorem for \\(\\mu\\times\\nu\\)-integrable functions.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "The Lusin theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "The Riesz representation theorem.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "The Egorov theorem.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "The integral representation of the dual of \\(L^1(\\mu)\\), \\(\\mu\\) finite.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Prove that if \\(X\\) is a normed space and \\(Y\\) is a Banach space, then \\(L(X,Y)\\) is a Banach space.",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Prove the existence of the conditional expectation for functions \\(f\\in L^1(\\mu)\\) and for functions \\(f\\in L_F^1(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Prove that the set of step functions is dense in \\(L^\\infty(\\mu)\\).",
+      "subparts": []
+    },
+    {
+      "number": 16,
+      "text": "Let \\((X,\\Sigma,\\mu)\\) be a measure space and \\(R\\) a ring generating the \\(\\sigma\\)-algebra \\(\\Sigma\\). Let \\(g:X\\to\\mathbb{R}\\) be a \\(\\mu\\)-measurable function. Prove that if \\(\\int_A g\\,d\\mu=0\\) for every \\(A\\in R\\), then \\(g=0\\), \\(\\mu\\)-a.e. Is this true for \\(g:X\\to F\\), where \\(F\\) is a Banach space?",
+      "subparts": []
+    },
+    {
+      "number": 17,
+      "text": "Let \\((X,\\Sigma)\\) be a measurable space and \\((\\mu_n)\\) a sequence of real-valued measures on \\(\\Sigma\\). Define \\(\\lambda:\\Sigma\\to\\mathbb{R}_+\\) by\n\\[\n\\lambda(A)=\\sum_{n=1}^{\\infty}\\frac{1}{2^n}\\frac{|\\mu_n|(A)}{1+|\\mu_n|(X)},\\qquad A\\in\\Sigma.\n\\]\nProve that \\(\\lambda\\) is finite, \\(\\sigma\\)-additive on \\(\\Sigma\\), and \\(\\mu_n\\ll\\lambda\\) for each \\(n\\).",
+      "subparts": []
+    }
+  ]
+}

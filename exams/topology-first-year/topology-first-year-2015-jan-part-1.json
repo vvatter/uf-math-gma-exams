@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2015-jan-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2015,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Topology-1_2015_01.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 8–15 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that there is no continuous function \\(f:[0,1]\\to[0,1)\\) which is onto.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Show that there is no continuous function \\(f:\\mathbb{R}\\to\\{0,1\\}\\) which is onto.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(X\\) be a metric space and let \\(f:X\\to X\\) be a continuous function. Suppose that there is a point \\(x_0\\in X\\) such that \\(f^n(x_0)\\to z\\) as \\(n\\to\\infty\\). Show that \\(f(z)=z\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Show that if \\(A\\subset\\mathbb{R}\\) is connected, then \\(A\\) is an interval.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Prove that if \\(X\\) is compact Hausdorff, then \\(X\\) is a normal space.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State and prove the Contraction Mapping Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Suppose that \\(X\\) is a complete metric space that is countably infinite. Show that \\(X\\) has an isolated point.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State the Intermediate Value Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Urysohn Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State the Tietze Extension Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "Give an example of a connected space \\(X\\) that is not path connected.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Let \\(n\\ge 2\\). Suppose that \\(A\\) is a countable subset of \\(\\mathbb{R}^n\\). Let \\(X=\\mathbb{R}^n\\setminus A\\). Is \\(X\\) arcwise connected?",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Suppose that \\(r>0\\) and that \\(B_r(x)\\) is a ball of radius \\(r\\) centered at \\(x\\) in \\(\\mathbb{R}^n\\). Show that \\(B_r(x)\\) is connected.",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Show that \\([0,1]\\) is uncountable.",
+      "subparts": []
+    }
+  ]
+}

@@ -24,6 +24,7 @@ from extract_exams import (
     render_markdown,
     select_exam_ids,
     sha256_file,
+    logic_instruction_ranges,
     update_review_files,
     validate_exam,
 )
@@ -207,6 +208,53 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertEqual(checkpoint["source_sha256_history"], ["download-hash"])
         self.assertEqual(checkpoint["source_download_sha256"], "download-hash")
 
+    def test_valid_checkpoint_is_promoted_without_another_model_call(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            pdf_path = root / "exam.pdf"
+            with pymupdf.open() as document:
+                document.new_page()
+                document.save(pdf_path)
+            item = replace(
+                source(),
+                pdf_path=pdf_path,
+                sha256=sha256_file(pdf_path),
+                download_sha256="download-hash",
+            )
+            extraction = {
+                "instructions": None,
+                "problems": [{"number": 1, "text": "Prove it.", "subparts": []}],
+                "review_flags": [],
+            }
+            saved_path = root / "build" / item.id / "extraction.json"
+            saved_path.parent.mkdir(parents=True)
+            saved_path.write_text(
+                json.dumps(
+                    {
+                        "source_sha256": item.sha256,
+                        "review_flags": [],
+                        "validation_errors": ["obsolete validator error"],
+                        "model_extraction": extraction,
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            exam, flags, cached = extract_one(
+                item, root / "build", "unused-model", "high", 200, False
+            )
+            checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
+            json_exists = pdf_path.with_suffix(".json").exists()
+            markdown_exists = pdf_path.with_suffix(".md").exists()
+
+        self.assertTrue(cached)
+        self.assertEqual(exam.problems[0].text, "Prove it.")
+        self.assertEqual(flags, [])
+        self.assertEqual(checkpoint["validation_errors"], [])
+        self.assertIn("revalidated_at", checkpoint)
+        self.assertTrue(json_exists)
+        self.assertTrue(markdown_exists)
+
     def test_manifest_part_label(self) -> None:
         self.assertEqual(part_from_manifest({"source_label": "Part 2"}), 2)
         self.assertIsNone(part_from_manifest({"source_label": "Exam"}))
@@ -344,11 +392,51 @@ class ExtractionSchemaTests(unittest.TestCase):
             ],
         )
         exam.instructions = "Problem 1 concerns Set theory."
+        flags = [
+            ReviewFlag(
+                category=ReviewCategory.NUMBERING_TRANSFORMATION,
+                problem_numbers=[1, 2],
+                source_pages=[1],
+                message="Renumbered source sections.",
+                original_text=None,
+                corrected_text=None,
+                context=None,
+            )
+        ]
 
         self.assertIn(
             "logic instructions do not map every final problem to a topic",
+            validate_exam(exam, item, flags),
+        )
+
+    def test_logic_without_numbering_transformation_needs_no_topic_map(self) -> None:
+        item = source("logic-phd")
+        exam = exam_for(
+            item,
+            [
+                Problem(number=1, text="First.", subparts=[]),
+                Problem(number=2, text="Second.", subparts=[]),
+            ],
+        )
+        exam.instructions = "Answer both problems."
+
+        self.assertNotIn(
+            "logic instructions do not map every final problem to a topic",
             validate_exam(exam, item, []),
         )
+
+    def test_logic_topic_range_parser_accepts_supported_phrasings(self) -> None:
+        examples = (
+            "Problems 1–3 concern Set Theory, problems 4–6 concern Computability.",
+            "Problems 1–3 are from Section 1, problems 4–6 are from Section 2.",
+            "Problems 1–3 comprise Section 1, Problems 4–6 comprise Section 2.",
+            "Section 1 (Problems 1–3), Section 2 (Problems 4–6).",
+            "Problems 1–3 (Section 1), problems 4–6 (Section 2).",
+        )
+
+        for instructions in examples:
+            with self.subTest(instructions=instructions):
+                self.assertEqual(logic_instruction_ranges(instructions), [(1, 3), (4, 6)])
 
     def test_numbering_gap_requires_review_flag(self) -> None:
         item = source()

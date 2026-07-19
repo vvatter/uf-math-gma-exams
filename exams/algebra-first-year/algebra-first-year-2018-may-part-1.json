@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "algebra-first-year-2018-may-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2018,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5311-May-2018.pdf",
+  "instructions": "Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(G\\) be a finite group and let \\(x,y \\in G\\) satisfy \\(|x|=m\\) and \\(|y|=n\\), with \\(\\gcd(m,n)=1\\). (Here \\(|x|\\) denotes the order of \\(x\\).)",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that if \\(xy=yx\\) and \\(\\gcd(m,n)=1\\) then \\(|xy|=mn\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example where \\(xy \\ne yx\\), \\(\\gcd(m,n)=1\\), and \\(|xy|>mn\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Give an example where \\(xy \\ne yx\\), \\(\\gcd(m,n)=1\\), and \\(|xy|<mn\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\(G\\) be a group and let \\(S \\subset G\\). Let \\(N\\) be the intersection of all normal subgroups \\(H\\) of \\(G\\) such that \\(S \\subset H\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(N \\trianglelefteq G\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that \\(N=\\langle T\\rangle\\), where \\(T=\\{gxg^{-1}:g\\in G,\\ x\\in S\\}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Let \\(n \\ge 3\\) and let \\(\\sigma,\\tau \\in S_n\\). Prove that \\(\\sigma\\) and \\(\\tau\\) are conjugate in \\(S_n\\) if and only if \\(\\sigma\\) and \\(\\tau\\) have the same cycle type.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example of \\(\\sigma,\\tau \\in A_5\\) such that \\(\\sigma\\) and \\(\\tau\\) are conjugate in \\(S_5\\) but \\(\\sigma\\) and \\(\\tau\\) are not conjugate in \\(A_5\\). Prove that your example is correct.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(G\\) be a group of order \\(715=5\\cdot 11\\cdot 13\\). Prove that \\(Z(G)\\) is nontrivial.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Determine the number of abelian groups of order \\(324=2^2\\cdot 3^4\\). Give a representative for each isomorphism class of such groups.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Let \\(H\\) and \\(K\\) be groups and let \\(\\phi:K\\to \\operatorname{Aut}(H)\\) be a homomorphism. Give the definition of the semidirect product \\(H\\rtimes_\\phi K\\). You should give the group operation on \\(H\\rtimes_\\phi K\\), but you don’t need to prove that the group axioms are satisfied.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example of abelian groups \\(H\\) and \\(K\\), a homomorphism \\(\\phi:K\\to \\operatorname{Aut}(H)\\), and two elements of \\(H\\rtimes_\\phi K\\) which don’t commute.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

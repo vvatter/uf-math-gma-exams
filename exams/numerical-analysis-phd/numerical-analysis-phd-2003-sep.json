@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-phd-2003-sep",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2003,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2003_09.pdf",
+  "instructions": "Do any 8 of the following 10 problems:",
+  "problems": [
+    {
+      "number": 1,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Let \\(V\\) be the space of all complex \\(m\\times n\\) matrices endowed with any norm. Prove that its subset of full rank matrices is dense in \\(V\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Suppose \\(A\\) and \\(B\\) are square matrices.",
+          "subparts": [
+            {
+              "label": "i.",
+              "text": "If \\(A\\) is invertible, show that \\(AB\\) and \\(BA\\) are similar matrices (so their spectra coincide).",
+              "subparts": []
+            },
+            {
+              "label": "ii.",
+              "text": "How will you use Problem (1a) to conclude that the spectra of \\(AB\\) and \\(BA\\) coincide when nothing is known about the invertibility of \\(A\\) or \\(B\\)?",
+              "subparts": []
+            }
+          ]
+        },
+        {
+          "label": "(c)",
+          "text": "For all rectangular matrices \\(A\\in\\mathbb C^{m\\times n}\\), \\(B\\in\\mathbb C^{n\\times m}\\) (\\(m\\ne n\\)), does the spectrum of \\(AB\\) and \\(BA\\) coincide?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\(A\\in\\mathbb C^{m\\times m}\\), and let \\(E\\in\\mathbb C^{m\\times m}\\) be of rank \\(k<m\\). Suppose the matrix \\(M=A+E\\) is invertible. Consider GMRES applied to the preconditioned system\n\\[\nM^{-1}Ax=M^{-1}b.\n\\]\nGive a tight bound, independent of the starting guess, on the number of GMRES iterations needed to compute the exact solution \\(x\\) (ignoring roundoff). Your answer should be less than \\(m\\). Give clear reasons.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(U\\) be the upper triangular matrix obtained by applying Gaussian elimination with partial pivoting (the “\\(PA=LU\\)” factorization) to a matrix \\(A\\in\\mathbb C^{m\\times m}\\). Show that the growth factor\n\\[\n\\rho=\\frac{\\max_{i,j}|U_{ij}|}{\\max_{i,j}|A_{ij}|}\n\\]\nsatisfies\n\\[\n\\rho\\le 2^{m-1}.\n\\]\nExhibit a matrix \\(A\\) for which the growth factor is \\(2^{m-1}\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Suppose \\(A=QR\\) is a QR factorization of a symmetric tridiagonal \\(A\\). Which entries of \\(R\\) and \\(Q\\) are zero, in general?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "State the (unshifted) QR iteration for eigenvalues. Show that if one iterate of the QR iteration is symmetric and tridiagonal, then the next one is also symmetric and tridiagonal.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Given \\(\\mathbf v\\) and \\(\\mathbf w\\in\\mathbb R^n\\), show that\n\\[\n\\mathbf v\\mathbf w^{\\mathsf T}+\\mathbf w\\mathbf v^{\\mathsf T}\n=\\frac{\\lVert\\mathbf v\\rVert\\lVert\\mathbf w\\rVert}{2}\n\\left(\\mathbf a\\mathbf a^{\\mathsf T}-\\mathbf b\\mathbf b^{\\mathsf T}\\right)\n\\]\n\\[\n=\\begin{bmatrix}\n\\dfrac{\\mathbf a}{\\lVert\\mathbf a\\rVert} & \\big| & \\dfrac{\\mathbf b}{\\lVert\\mathbf b\\rVert}\n\\end{bmatrix}\n\\begin{bmatrix}\n\\mathbf v^{\\mathsf T}\\mathbf w+\\lVert\\mathbf v\\rVert\\lVert\\mathbf w\\rVert & 0\\\\\n0 & \\mathbf v^{\\mathsf T}\\mathbf w-\\lVert\\mathbf v\\rVert\\lVert\\mathbf w\\rVert\n\\end{bmatrix}\n\\begin{bmatrix}\n\\dfrac{\\mathbf a}{\\lVert\\mathbf a\\rVert} & \\big| & \\dfrac{\\mathbf b}{\\lVert\\mathbf b\\rVert}\n\\end{bmatrix}^{\\mathsf T},\n\\]\nwhere\n\\[\n\\mathbf a=\\frac{\\mathbf v}{\\lVert\\mathbf v\\rVert}+\\frac{\\mathbf w}{\\lVert\\mathbf w\\rVert}\n\\quad\\text{and}\\quad\n\\mathbf b=\\frac{\\mathbf v}{\\lVert\\mathbf v\\rVert}-\\frac{\\mathbf w}{\\lVert\\mathbf w\\rVert}.\n\\]\nWhat is \\(\\mathbf a^{\\mathsf T}\\mathbf b\\)? What are the eigenvalues of \\(\\mathbf v\\mathbf w^{\\mathsf T}+\\mathbf w\\mathbf v^{\\mathsf T}\\)?",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Show that \\(x=1+\\tan^{-1}(x)\\) has a solution \\(\\alpha\\). Find an interval \\([a,b]\\) containing \\(\\alpha\\) such that for every \\(x_0\\in[a,b]\\) the iteration\n\\[\nx_{n+1}=1+\\tan^{-1}(x_n)\n\\]\nwill converge to \\(\\alpha\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(x_0,\\ldots,x_n\\) be distinct real points. Let\n\\[\n\\{l_j(x)\\}_{j=0,\\ldots,n}\n\\]\nbe the Lagrange basis functions for these points. Prove that\n\\[\n\\sum_{j=0}^n l_j(x)=1\n\\]\nfor all \\(x\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Suppose you want to solve numerically the ode\n\\[\ny'=f(x,y),\\qquad y(0)=y_0.\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "By applying the midpoint rule to the integral in the equation\n\\[\ny(x_{n+1})=y(x_{n-1})+\\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\\,ds,\n\\]\nderive the midpoint method for odes.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Find the order of the local truncation error for this method.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Determine if this method is stable or not.",
+          "subparts": []
+        },
+        {
+          "label": "(d)",
+          "text": "Would this method be a good choice for a stiff system such as \\(y'=-100y\\)? Why or why not?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Find the linear least squares approximation to \\(f(x)=x^2\\) on the interval \\([0,2]\\) by optimizing the least squares error over \\(a\\) and \\(b\\) in \\(r^*(x)=ax+b\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Find the first two orthonormal polynomials \\(\\phi_0(x),\\phi_1(x)\\) on \\([0,2]\\) (weight function \\(w(x)=1\\)). Use these to find the linear least squares approx to \\(f(x)=x^2\\), and check this result agrees with the previous problem.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "text": "Derive the one point Gaussian quadrature formula for\n\\[\nI=\\int_0^1 xf(x)\\,dx\\approx\\sum_{j=1}^n w_jf(x_j)\n\\]\nwith weight function \\(w(x)=x\\). Find the system to solve for the two point Gaussian quadrature formula. (You do not need to solve the system)",
+      "subparts": []
+    }
+  ]
+}

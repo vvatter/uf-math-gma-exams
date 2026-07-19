@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2023-aug",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2023,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Analysis-2023_08.pdf",
+  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. You must attempt SIX problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "State Tonelli’s theorem, and give an example to show that the \\(\\sigma\\)-finiteness hypothesis is necessary.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Give an example of each of the following, if possible. (If not possible, give a brief explanation of why.) When giving examples, be clear about what measure space you are working in.",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "a sequence of functions converging in measure but not in \\(L^1\\),",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "a sequence converging almost uniformly but not essentially uniformly,",
+          "subparts": []
+        },
+        {
+          "label": "c)",
+          "text": "a sequence converging in \\(L^1\\) but not almost everywhere.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let \\((X,\\mathcal{M},\\mu)\\) be a measure space. Prove that \\(L^2(\\mu)\\) is complete (in the \\(L^2\\) norm).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(\\mathcal{X}\\) be a Banach space. Prove that every finite-dimensional subspace \\(\\mathcal{M}\\subset\\mathcal{X}\\) is closed.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "State the Lebesgue–Radon–Nikodym theorem.",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "State and prove a version of the chain rule for Radon–Nikodym derivatives.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\((X,\\mathcal{M},\\mu)\\) be a \\(\\sigma\\)-finite measure space, let \\(1\\leq q<p<\\infty\\) and suppose that \\(L^q(\\mu)\\subseteq L^p(\\mu)\\). Prove that there exists a constant \\(c>0\\) such that, for every \\(E\\in\\mathcal{M}\\), either \\(\\mu(E)=0\\) or \\(\\mu(E)\\geq c\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(\\mathcal{H}\\) be a Hilbert space and let \\(A:\\mathcal{H}\\to\\mathcal{H}\\) be a linear map (not assumed bounded). Suppose there exists another linear map \\(B:\\mathcal{H}\\to\\mathcal{H}\\) (not assumed bounded) so that \\(\\langle Ax,y\\rangle=\\langle x,By\\rangle\\) for all \\(x,y\\in\\mathcal{H}\\). Prove that \\(A\\) and \\(B\\) are bounded.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "State the Closed Graph Theorem and Banach Isomorphism theorem.",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "Using the Banach Isomorphism theorem (or otherwise), prove the Closed Graph Theorem.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

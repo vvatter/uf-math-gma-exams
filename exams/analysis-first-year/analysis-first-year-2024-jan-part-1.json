@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2024-jan-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2024,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2024_01.pdf",
+  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be continuous. Prove that if\n\\[\n\\limsup_{n\\to\\infty} f(n)>0>\\liminf_{n\\to\\infty} f(n)\n\\]\nthen \\(f\\) has infinitely many zeros. Does the same conclusion hold if one of the strict inequalities is replaced by a weak inequality?",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be continuous and assume that \\(f^{-1}(y)\\subseteq\\mathbb{Q}\\) whenever \\(y\\in\\mathbb{R}\\setminus\\mathbb{Q}\\). What can be deduced about \\(f\\)?",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let the function \\(f:(0,1)\\to\\mathbb{R}\\) be uniformly continuous.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Prove that \\(f\\) extends to a continuous function \\(F:[0,1]\\to\\mathbb{R}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Does the same conclusion follow if \\(f\\) is merely continuous? What if \\(f\\) is continuous and bounded? Justify your assertions.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(f:X\\to Y\\) be a map between metric spaces and consider the following two statements. For each implication (i) \\(\\Rightarrow\\) (ii) and (ii) \\(\\Rightarrow\\) (i), give a proof (if true) or a counterexample (if false).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "if \\((x_n)\\) is a Cauchy sequence in \\(X\\), then \\((f(x_n))\\) is Cauchy in \\(Y\\);",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(f\\) is uniformly continuous.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "The function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) is differentiable, except perhaps at \\(a\\in\\mathbb{R}\\). Prove that if the real limit \\(\\lim_{t\\to a}f'(t)\\) exists then \\(f\\) is in fact differentiable at \\(a\\).",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2012-aug",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2012,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2012_08.pdf",
+  "instructions": "Be sure to carefully present all work in a neat and logical fashion. Do not leave any gaps. State clearly theorems used in your proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "State the Vitali convergence theorem (define all terms).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Use this theorem to prove the Lebesgue Dominated Convergence theorem (first state this theorem).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\(f\\) be an integrable function on \\((S,\\Sigma,\\mu)\\). Let \\(\\nu\\) be the indefinite integral of \\(f\\). Let \\(|\\nu|(\\cdot)\\) denote the total variation of \\(\\nu\\) defined on \\(\\Sigma\\). Show that \\(|\\nu|(\\cdot)\\) is the indefinite integral of an a.e. unique integrable function \\(g\\). What is the relationship between \\(g\\) and \\(f\\)? Prove.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\((S,\\Sigma,\\mu)\\) be a finite measure space. Suppose \\(x^*\\) belongs to the dual space of \\(L^1(S,\\Sigma,\\mu)\\). Show that there exist an a.e. unique integrable function \\(g\\) such that\n\\[\nx^*(f)=\\int_S fg\\,d\\mu,\\quad\\text{for each }f\\in L^1(S,\\Sigma,\\mu).\n\\]\n[You need not prove that \\(g\\in L^\\infty\\), etc].",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(\\{y_n\\}\\) be an orthogonal sequence in a Hilbert space. Show \\(\\sum y_n\\) converges unconditionally if and only if \\(\\sum |y_n|^2<\\infty\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(X\\) be a Banach space with closed linear subspaces \\(Y\\) and \\(Z\\). Suppose each \\(x\\) in \\(X\\) is the unique sum \\(y+z\\) where \\(y\\in Y\\) and \\(z\\in Z\\). Show that there is a constant \\(K\\) such that \\(|y|\\le K|x|\\) and \\(|z|\\le K|x|\\) for each \\(x\\) in \\(X\\) with representation \\(x=y+z\\).\n[Hint: Use the open mapping theorem or closed graph theorem for certain maps]",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(\\{x_n\\}\\) be a weakly convergent sequence in a normed space \\(X\\). Show that the weak limit belongs to the norm closed span of \\(x_n\\).",
+      "subparts": []
+    }
+  ]
+}

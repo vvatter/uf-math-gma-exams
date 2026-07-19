@@ -1,0 +1,36 @@
+# Topology, PhD exam, September 2004
+
+*Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.*
+
+**1.** Show that \(\pi_1(S^2)\) is trivial.
+
+**2.** Show that there is no retraction of the Möbius band onto its boundary.
+
+**3.** Does there exist a covering space of the figure eight with nontrivial abelian fundamental group?
+
+**4.** Show that the 2-dimensional sphere with three points deleted cannot be a topological group.
+
+**5.** Let \(M\) be a 4-dimensional closed simply connected manifold. Show that every continuous map \(f:M\to M\) which is homotopic to the identity has a fixed point.
+
+**6.** State the Baire Category Theorem.
+
+**7.** State the Lefschetz Fixed Point Theorem.
+
+**8.** State the Jordan Curve Theorem.
+
+**9.** State the Five Lemma.
+
+**10.** Show that no covering of the 2-torus has the homotopy type of a figure eight.
+
+**11.** Let \(S_r(x,y)\) denote a circle of radius \(r\) centered at \((x,y)\in\mathbb{R}^2\). Let \(\Sigma R\) be the suspension over Hawaiian ring \(R=\bigcup_{n=1}^{\infty}S_{\frac{1}{n}}\!\left(\frac{1}{n},0\right)\). Is \(\Sigma R\)
+* (a) locally path connected?
+* (b) locally simply connected?
+* (c) semi-locally simply connected?
+
+**12.** State the Tietze Extension Theorem.
+
+**13.** Define retraction and deformation retraction.
+
+**14.** State the Universal Coefficient formula for homology.
+
+**15.** Let \(X\) be a complete metric space such that no point is isolated. Can \(X\) be countable?

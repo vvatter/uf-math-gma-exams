@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2014-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2014,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2014_05.pdf",
+  "instructions": "You must answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\((X,\\mathcal{M},\\mu)\\) be a measure space and \\(f\\in L^1(\\mu)\\). Prove that for every \\(\\epsilon>0\\), there exists a \\(\\delta>0\\) such that if \\(\\mu(E)<\\delta\\), then \\(\\int_E |f|\\,d\\mu<\\epsilon\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State the Hahn decomposition theorem for signed measures. Prove that if \\(\\rho\\) is a signed measure on a measurable space \\((X,\\mathcal{M})\\), then there exist unique positive measures \\(\\rho_+,\\rho_-\\) such that \\(\\rho_+\\perp\\rho_-\\) and \\(\\rho=\\rho_+-\\rho_-\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "State the Fubini–Tonelli theorem and give a sketch of its proof.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(C^1[0,1]\\) denote the set of all continuous (real-valued) functions \\(f\\) on \\([0,1]\\) such that \\(f\\) is differentiable in \\((0,1)\\) and \\(f'\\) extends continuously to \\([0,1]\\). Prove that \\(C^1[0,1]\\) is a Banach space under the norm\n\\[\n\\|f\\|=\\|f\\|_\\infty+\\|f'\\|_\\infty.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(\\mathcal{X}\\) be a normed vector space (over \\(\\mathbb{C}\\)) and \\(\\mathcal{M}\\subset\\mathcal{X}\\) a closed subspace. Prove that if \\(x\\in\\mathcal{X}\\setminus\\mathcal{M}\\), then \\(\\mathcal{M}+\\mathbb{C}x\\) is closed.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "State the Closed Graph Theorem and the Banach Isomorphism Theorem.",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "Assuming the Banach Isomorphism Theorem (or otherwise), prove the Closed Graph Theorem.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "Let \\(\\mathcal{X}\\) be a Banach space and \\(\\mathcal{Y}\\) a normed vector space. Suppose that \\(T_n\\) is a sequence of bounded linear operators from \\(\\mathcal{X}\\) to \\(\\mathcal{Y}\\). Prove that if \\(\\lim T_nx\\) exists for each \\(x\\in\\mathcal{X}\\), then the mapping \\(Tx=\\lim T_nx\\) defines a bounded linear operator from \\(\\mathcal{X}\\) to \\(\\mathcal{Y}\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\((X,\\mathcal{M},\\mu)\\) be a \\(\\sigma\\)-finite measure space. Prove that the simple functions that belong to \\(L^2(\\mu)\\) are dense in \\(L^2(\\mu)\\).",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-first-year-2025-may",
+  "subject": "First Year Numerical Analysis",
+  "subject_tag": "numerical-analysis-first-year",
+  "year": 2025,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalAnalysis_2025_05.pdf",
+  "instructions": "Do 4 (four) problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Consider the function \\(g(x)=e^{-x}\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(g\\) is a contraction on \\(G=[\\ln 1.1,\\ln 3]\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that \\(g\\) maps \\(G=[\\ln 1.1,\\ln 3]\\) into \\(G=[\\ln 1.1,\\ln 3]\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(x_{k+1}=g(x_k)\\) converges to an unique fixed point \\(z\\in G=[\\ln 1.1,\\ln 3]\\) for any initial value \\(x_0\\in G=[\\ln 1.1,\\ln 3]\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Based on \\(u_1(x)=1,u_2(x)=x,u_3(x)=x^2\\), use Gram–Schmidt orthogonalization process to compute the three polynomials \\(w_1(x),w_2(x),w_3(x)\\) which are orthonormal on the interval \\([0,1]\\) with respect to the inner product \\((f,g)=\\int_0^1 f(x)g(x)\\,dx\\). Using these polynomials, find the best approximation in \\(P^2[0,1]\\) for \\(f(x)=x^{\\frac12}\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Consider the finite difference formula\n\\[\nf'(t_j)=\\frac{1}{12h}\\left[f(t_j-2h)-8f(t_j-h)+8f(t_j+h)-f(t_j+2h)\\right]+O(h^4).\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Derive this formula by using Taylor’s theorem.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Derive this formula by using Lagrange polynomial representation.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Assume the numerical quadrature for \\(\\hat f(\\hat x)\\) on \\([0,1]\\) is\n\\[\n\\hat J(\\hat f)=\\int_0^1 \\hat f(\\hat x)\\,d\\hat x\\approx \\hat Q(\\hat f)=\\sum_{j=0}^m \\hat\\alpha_j\\hat f(\\hat x_j).\n\\]\nDerive the numerical quadrature of \\(J(f)=\\int_a^b f(x)\\,dx\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Consider numerically solving the initial value problem\n\\[\ny'(t)=f(t,y),\\quad 0<t\\leq t_f,\\qquad \\text{with }y(0)=\\eta.\n\\]\nAssume \\(f\\) is sufficiently differentiable and let \\(h\\) denote the step size. Show that all convergent members of the family of methods\n\\[\ny_{n+2}+(\\theta-2)y_{n+1}+(1-\\theta)y_n=\\frac14h\\left[(6+\\theta)f_{n+2}+3(\\theta-2)f_n\\right],\n\\]\nparameterized by \\(\\theta\\), are also \\(A_0\\)-stable.",
+      "subparts": []
+    }
+  ]
+}

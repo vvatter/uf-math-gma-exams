@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-2001-jan",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2001,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2001_01.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that there is a continuous function from \\(I\\) onto \\(I^2\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State and prove the Brouwer Fixed Point Theorem. You may assume that \\(H_n(S^n;\\mathbb{Z})=\\mathbb{Z}\\) for all \\(n\\geq 1\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that \\(H_n(S^n;\\mathbb{Z})=\\mathbb{Z}\\) and that \\(H_0(S^n;\\mathbb{Z})=\\mathbb{Z}\\) for \\(n\\geq 1\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Show that the fundamental group of \\(S^n\\) is trivial for \\(n>1\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that \\(\\pi_1(P_n)=\\mathbb{Z}_2\\), for \\(n>1\\), where \\(P_n\\) is \\(n\\)-dimensional real projective space.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State the Seifert–van Kampen Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State the Hahn–Mazurkiewicz Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State the Lefschetz Fixed Point Theorem for compact simplicial complexes.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Define the cone of a space \\(X\\). Define the suspension of \\(X\\).",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State the exact homology sequence for a pair of spaces.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Jordan Curve Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the Contraction Mapping Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "State the Ascoli (Arzelà–Ascoli) Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Let \\(A\\) and \\(B\\) be disjoint closed sets in a metric space \\(X\\). Show that there is a continuous function \\(f:X\\to[0,1]\\) such that \\(f^{-1}(1)=A\\) and \\(f^{-1}(0)=B\\).",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Show that \\(I\\) and \\(I^2\\) are not homeomorphic. Show that \\(I^2\\) and \\(I^3\\) are not homeomorphic.",
+      "subparts": []
+    }
+  ]
+}

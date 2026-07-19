@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "combinatorics-phd-2010-may",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2010,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Combinatorics_2010_05.pdf",
+  "instructions": null,
+  "problems": [
+    {
+      "number": 1,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that\n\\[\n\\sum_{i=0}^{n} \\binom{i}{k}=\\binom{n+1}{k+1}.\n\\]",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that the number of solutions of \\(x_1+\\cdots+x_k\\leq n\\) in positive integers is \\(\\binom{n}{k}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that the number of Hamiltonian cycles in the complete bipartite graph \\(K_{n,n}\\) is \\(\\frac{1}{2}(n-1)!n!\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Let \\(e\\) be an edge of the complete graph \\(K_n\\). Use Cayley’s Theorem to find the number of spanning trees in \\(K_n-e\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Recall that the average degree of a graph \\(G\\) of order \\(n\\) is\n\\[\nav(G)=\\frac{\\sum_{v\\in V}\\deg(v)}{n}.\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that\n\\[\n\\chi(G)\\leq 1+\\Delta(G),\n\\]\nwhere \\(\\chi\\) denotes the chromatic number and \\(\\Delta\\) the maximum degree.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "For an arbitrary graph \\(G\\), prove or give a counterexample to the statement\n\\[\n\\chi(G)\\leq 1+av(G).\n\\]",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(C\\) be a binary code and let \\(\\overline{C}\\) be the code obtained from \\(C\\) by adding an even parity check. Find the minimum distance \\(d(\\overline{C})\\) in terms of \\(d(C)\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Prove that balanced incomplete block designs with the following parameters do not exist:\n\\[\n(12,8,6,4,3),\\qquad (22,22,7,7,2).\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Find the unique sequence \\(\\{a_n\\}\\) with\n\\[\n\\sum_{k=0}^{n} a_k a_{n-k}=1.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Use inclusion-exclusion to find a formula for the number of surjective functions \\(f:X\\to Y\\) with \\(|X|=n\\) and \\(|Y|=m\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(f(n,k)\\) be the number of \\(k\\)-subsets of \\(\\{1,2,\\ldots,n\\}\\) that do not contain a pair of consecutive integers.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Find a recurrence for \\(f(n,k)\\) by considering the \\(k\\)-subsets that do, and do not, contain \\(1\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Use part (a) to show that \\(f(n,k)=\\binom{n-k+1}{k}\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

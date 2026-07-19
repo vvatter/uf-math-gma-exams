@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "id": "numerical-optimization-phd-2018-jan",
+  "subject": "PhD Variational Analysis/Numerical Optimization",
+  "subject_tag": "numerical-optimization-phd",
+  "year": 2018,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-VariationalAnalysis-NumericalOptimization-2018_01.pdf",
+  "instructions": "Do 8 (eight) problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(\\mathbf Q\\) denote an \\(n\\) by \\(n\\) symmetric matrix and let \\(\\mathbf d_k\\), \\(1\\leq k\\leq n\\), denote a collection of directions that are \\(\\mathbf Q\\)-conjugate.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Suppose the \\(\\mathbf Q\\) is positive definite. Show that the directions \\(\\mathbf d_k\\), \\(1\\leq k\\leq n\\), are linearly independent, and express the solution of the linear system \\(\\mathbf Q\\mathbf x=\\mathbf b\\) in terms of the conjugate directions.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "If \\(\\mathbf d_k^{\\mathrm T}\\mathbf Q\\mathbf d_k>0\\) for each \\(k\\), then show that \\(\\mathbf Q\\) is positive definite.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Consider the following variational problem:\n\\[\n\\min\\left\\{\\int_0^1 \\frac{1}{2}u'(x)^2+e^{u(x)}\\,dx:u\\in H^1([0,1]),\\quad u(0)=u(1)=0\\right\\}.\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "What is the first-order necessary optimality condition (Euler equation) for this variational problem?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Consider a uniform mesh \\(x_k=kh\\) where \\(h=1/N\\); let \\(u_k\\) denote an approximation to \\(u(x_k)\\). Of course, \\(u_0=u_N=0\\). Give a finite difference approximation in terms \\(u_1,\\ldots,u_{N-1}\\) to the solution of the Euler equation.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Let \\(\\mathbf F(\\mathbf u)\\) denote the finite difference system where \\(\\mathbf u=(u_1,u_2,\\ldots,u_{N-1})\\in\\mathbb R^{N-1}\\), and let \\(\\mathbf u^*\\) denote the vector formed by evaluating the solution of the Euler equation at the mesh points \\(x_1,x_2,\\ldots,x_{N-1}\\). Obtain a bound for the components of \\(\\mathbf F(\\mathbf u^*)\\) in terms of the mesh spacing \\(h\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Consider the following variational problem where \\(f\\) is a given smooth function:\n\\[\n\\min\\left\\{\\Phi(u):=\\int_0^1 \\frac{1}{2}u'(x)^2+f(x)u(x)\\,dx:u\\in H^1([0,1]),\\quad u(0)=u(1)=0\\right\\}.\n\\]\nLet \\(S^h\\) denote the piecewise linear finite element space defined on a uniform mesh with \\(v^h(0)=v^h(1)=0\\) for all \\(v^h\\in S^h\\). Obtain a bound for the error in the finite element approximation \\(u^h\\) obtained by minimizing \\(\\Phi\\) over \\(S^h\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Suppose that \\(f:\\mathbb R^n\\to\\mathbb R\\) is twice continuously differentiable, \\(\\mathbf x^*\\in\\mathbb R^n\\), \\(\\nabla f(\\mathbf x^*)=0\\), and \\(\\nabla^2f(\\mathbf x^*)\\) is positive definite. Show that \\(\\mathbf x^*\\) is a strict local minimizer of \\(f\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Suppose that a quadratic \\(\\Phi(\\mathbf x)=\\frac{1}{2}\\mathbf x^{\\mathrm T}\\mathbf Q\\mathbf x-\\mathbf b^{\\mathrm T}\\mathbf x\\) is minimized by steepest descent: \\(\\mathbf x_{k+1}=\\mathbf x_k-s_k\\mathbf g_k\\), where \\(\\mathbf g_k=\\nabla\\Phi(\\mathbf x_k)\\) and \\(s_k\\) is the stepsize.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Derive the formula for the Cauchy step.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Derive the formula for the BB step.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Consider the system of differential equations \\(\\dot{\\mathbf x}(t)=\\mathbf f(\\mathbf x(t),\\mathbf u(t))\\), \\(\\mathbf x(0)=\\mathbf x_0\\), where \\(\\mathbf f:\\mathbb R^n\\times\\mathbb R^m\\to\\mathbb R^n\\) and \\(\\mathbf f\\) satisfies the global Lipschitz condition\n\\[\n\\|\\mathbf f(\\mathbf x_1,\\mathbf u_1)-\\mathbf f(\\mathbf x_2,\\mathbf u_2)\\|\\leq L\\bigl(\\|\\mathbf x_1-\\mathbf x_2\\|+\\|\\mathbf u_1-\\mathbf u_2\\|\\bigr).\n\\]\nShow that the differential equation has a global solution and on any interval \\([0,T]\\), the following bound holds for all \\((\\mathbf u_1,\\mathbf u_2)\\in\\mathcal L^\\infty([0,T])\\):\n\\[\n\\|\\mathbf x_1-\\mathbf x_2\\|_{\\mathcal L^\\infty}\\leq e^{LT}\\|\\mathbf u_1-\\mathbf u_2\\|_{\\mathcal L^1},\n\\]\nwhere \\(\\mathbf x_i\\) is the solution of the differential equation associated with \\(\\mathbf u_i\\), \\(i=1,2\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Suppose that \\(P\\) and \\(Q\\) are continuous on \\([0,1]\\) and the following functional is nonnegative over all \\(h\\in H_0^1([0,1])\\):\n\\[\n\\Omega(h)=\\int_0^1 \\bigl(P(x)h'(x)^2+Q(x)h(x)^2\\bigr)\\,dx.\n\\]\nShow that \\(P\\geq0\\) on \\([0,1]\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Suppose that \\(u:[0,1]\\to\\mathbb R\\) is twice continuously differentiable, and let \\(u^I\\) be the continuous, piecewise linear interpolant of \\(u\\). Prove the following bound:\n\\[\n\\|u-u^I\\|_{\\mathcal L^\\infty}\\leq\\frac{h^2}{8}\\|u''\\|_{\\mathcal L^\\infty}.\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Suppose that \\(f:\\mathbb R^n\\to\\mathbb R\\) is a convex function.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "If \\(f\\) is continuously differentiable, then show that for all \\(\\mathbf x\\) and \\(\\mathbf y\\in\\mathbb R^n\\), we have\n\\[\nf(\\mathbf y)\\geq f(\\mathbf x)+\\nabla f(\\mathbf x)(\\mathbf y-\\mathbf x).\n\\]",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "If \\(f\\) is twice continuously differentiable, then show that the Hessian \\(\\nabla^2f(\\mathbf x)\\) is positive semidefinite for all \\(\\mathbf x\\in\\mathbb R^n\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "text": "Suppose that \\(\\boldsymbol\\Phi:\\mathbb R^n\\to\\mathbb R^n\\) and \\(\\mathbf x^*\\in\\mathbb R^n\\) is a fixed point of \\(\\boldsymbol\\Phi\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "If \\(\\boldsymbol\\Phi\\) is a contraction mapping with contraction constant \\(\\lambda\\), then show that the iteration \\(\\mathbf x_{k+1}=\\boldsymbol\\Phi(\\mathbf x_k)\\) converges to \\(\\mathbf x^*\\) from any starting guess \\(\\mathbf x_0\\), and\n\\[\n\\|\\mathbf x_k-\\mathbf x^*\\|\\leq\\lambda^k\\|\\mathbf x_0-\\mathbf x^*\\|.\n\\]",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Suppose that \\(\\boldsymbol\\Phi\\) is continuously differentiable on a convex set \\(\\mathcal K\\subset\\mathbb R^n\\). Let \\(\\mu\\) denote the supremum of the singular values of \\(\\nabla\\boldsymbol\\Phi\\) over \\(\\mathcal K\\). Show that\n\\[\n\\|\\boldsymbol\\Phi(\\mathbf x)-\\boldsymbol\\Phi(\\mathbf y)\\|\\leq\\mu\\|\\mathbf x-\\mathbf y\\|\n\\]\nfor all \\(\\mathbf x\\) and \\(\\mathbf y\\in\\mathcal K\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

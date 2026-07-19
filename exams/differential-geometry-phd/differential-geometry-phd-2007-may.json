@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "differential-geometry-phd-2007-may",
+  "subject": "PhD Differential Geometry",
+  "subject_tag": "differential-geometry-phd",
+  "year": 2007,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_DifferentialGeometry_2007_05.pdf",
+  "instructions": "Attempt SIX problems. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Decide which of the following are submanifolds of \\(\\mathbb{R}^3\\):",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(A=\\{(x,y,z):z^2=x^2+y^2-1\\}\\);",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(B=\\{(x,y,z):z^2=x^2+y^2+1\\}\\);",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(C=\\{(x,y,z):z^2=x^2+y^2\\}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Defining the terms involved, prove the Cartan identity\n\\[\nL_\\zeta=(\\zeta\\mathbin{\\lrcorner})\\circ d+d\\circ(\\zeta\\mathbin{\\lrcorner})\n\\]\nfor the Lie derivative of differential forms along the vector field \\(\\zeta\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(\\theta\\in\\Omega^1(M)\\) be nonsingular (that is, nowhere zero) with \\(\\theta\\wedge d\\theta=0\\). Briefly explaining why it is possible, choose \\(\\alpha\\in\\Omega^1(M)\\) such that \\(d\\theta=\\theta\\wedge\\alpha\\) and choose \\(\\beta\\in\\Omega^1(M)\\) such that \\(d\\alpha=\\theta\\wedge\\beta\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that the three-form \\(\\alpha\\wedge d\\alpha\\) on \\(M\\) is closed.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that if also \\(d\\theta=\\theta\\wedge\\alpha'\\) then \\(\\alpha'\\wedge d\\alpha'-\\alpha\\wedge d\\alpha\\) is exact.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(k\\in\\mathbb{R}\\) and define \\(\\omega_m\\in\\Omega^m(\\mathbb{R}^{m+1}-\\{0\\})\\) by\n\\[\n(x_0^2+\\cdots+x_m^2)^k\\omega_m=\\sum_{j=0}^m(-1)^j x_j\\,dx_0\\wedge\\cdots\\wedge\\widehat{dx_j}\\wedge\\cdots\\wedge dx_m,\n\\]\nwhere the circumflex over a term indicates that it is omitted.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Determine the value(s) of \\(k\\) (if any) for which the \\(m\\)-form \\(\\omega_m\\) is closed.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Determine the value(s) of \\(k\\) (if any) for which the \\(2\\)-form \\(\\omega_2\\) is exact.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Define the Poisson bracket between smooth functions on a symplectic manifold, both in invariant form and in terms of (local) Darboux coordinates. Let \\(\\omega=\\sum_{j=1}^3dp_j\\wedge dq_j\\) be the standard symplectic form on \\(\\mathbb{R}^6\\) and define\n\\[\nL_1=q_2p_3-q_3p_2,\\qquad L_2=q_3p_1-q_1p_3,\\qquad L_3=q_1p_2-q_2p_1.\n\\]\nExplaining the terms, prove that if \\(L_1\\) and \\(L_2\\) are constants of the motion for a given Hamiltonian function on \\((\\mathbb{R}^6,\\omega)\\) then so is \\(L_3\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(G\\) be both a group and a smooth manifold; suppose that the group operation \\(p:G\\times G\\to G\\) is smooth. By considering the function\n\\[\nf:G\\times G\\to G\\times G:(x,y)\\mapsto(x,p(x,y))\n\\]\nor otherwise, prove that the inversion map \\(G\\to G:g\\mapsto g^{-1}\\) is smooth. [It may be assumed that the tangent map of \\(p\\) at \\((a,b)\\) is given by\n\\[\n\\xi\\in T_aG,\\ \\eta\\in T_bG\\Rightarrow p_*(\\xi,\\eta)=\\lambda_*^a\\eta+\\rho_*^b\\xi,\n\\]\nwhere \\(\\lambda^a:G\\to G\\times G:y\\mapsto(a,y)\\) and \\(\\rho^b:G\\to G\\times G:x\\mapsto(x,b)\\).]",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(\\sigma:G\\times M\\to M:(g,x)\\mapsto\\sigma_g(x)\\) be a smooth (left) action of the Lie group \\(G\\) on the smooth manifold \\(M\\). Explain how the induced map \\(\\dot{\\sigma}:\\mathfrak{g}\\to\\mathrm{Vec}\\,M\\) is defined. For \\(\\xi\\in\\mathfrak{g}\\) and \\(x\\in M\\) define\n\\[\n\\gamma:\\mathbb{R}\\to M:t\\mapsto\\sigma_{\\exp(t\\xi)}(x).\n\\]\nShow that the tangent vector to this curve at time \\(t\\) is given by\n\\[\n\\dot{\\gamma}(t)=(\\sigma_{\\exp(t\\xi)})_*\\dot{\\gamma}(0).\n\\]\nHence show that if the action \\(\\sigma\\) is free and \\(\\dot{\\sigma}(\\xi)_x=0\\) for some \\(x\\in M\\), then \\(\\xi=0\\).",
+      "subparts": []
+    }
+  ]
+}

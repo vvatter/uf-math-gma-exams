@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2017-aug-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2017,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Analysis-Part_1-2017_08.pdf",
+  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "\\(A\\) and \\(B\\) are nonempty sets of real numbers such that: (i) \\(A \\cup B = \\mathbb{R}\\) and (ii) \\(a < b\\) whenever \\(a \\in A\\) and \\(b \\in B\\). Prove that there exists a unique \\(s \\in \\mathbb{R}\\) such that \\((−\\infty,s) \\subseteq A\\) and \\((s,\\infty) \\subseteq B\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be a metric space, of which \\(A\\) and \\(B\\) are compact subsets; define \\(\\delta := \\inf\\{d(a,b):a \\in A,b \\in B\\}\\). Prove that there exist \\(a_0 \\in A\\) and \\(b_0 \\in B\\) such that \\(d(a_0,b_0)=\\delta\\). Must \\(a_0\\) and \\(b_0\\) be unique? Proof or counterexample, as appropriate.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(f\\) be a surjective map from the precompact metric space \\(X\\) onto the metric space \\(Y\\). Prove that if \\(f\\) is uniformly continuous then \\(Y\\) is also precompact. Show by example that if uniformly is dropped then \\(Y\\) can fail to be precompact.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be continuous. Can it be the case that for each \\(t \\in \\mathbb{R}\\), the value \\(f(t)\\) is irrational iff \\(t\\) itself is rational? If yes, give an example; if no, give a proof.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable and assume that \\(f(t)\\to\\ell \\in \\mathbb{R}\\) as \\(t\\to\\infty\\). Prove that if \\(f'(t)\\to L \\in \\mathbb{R}\\) as \\(t\\to\\infty\\) then \\(L=0\\).",
+      "subparts": []
+    }
+  ]
+}

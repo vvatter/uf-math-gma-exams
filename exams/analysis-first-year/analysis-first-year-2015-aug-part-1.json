@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2015-aug-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2015,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Analysis-1_2015_08.pdf",
+  "instructions": "Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(E\\) be a dense subset of a metric space \\(X\\) and let \\(U\\) be an open subset of \\(X\\). Prove that \\(U \\subset \\overline{E \\cap U}\\). (Here \\(\\overline{E \\cap U}\\) denotes the closure of \\(E \\cap U\\).)",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be a metric space and \\(K \\subset X\\) a compact subset. Prove that \\(K\\) is closed.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(X\\) be a compact metric space and \\(\\mathcal F\\) a collection of closed subsets of \\(X\\) with the following property: for all finite subcollections \\(\\mathcal G \\subset \\mathcal F\\), the intersection \\(\\bigcap_{F \\in \\mathcal G} F\\) is nonempty. Prove that \\(\\bigcap_{F \\in \\mathcal F} F\\) is nonempty.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(X,Y\\) be metric spaces and \\(f:X\\to Y\\) a continuous function. Prove that if \\(X\\) is connected, then its image \\(f(X)\\) is connected.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\((a_n)_{n\\in\\mathbb N}\\) be a sequence of real numbers and \\(\\sigma\\) a permutation of \\(\\mathbb N\\). For each of the following provide either a proof or a counterexample.",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "If the sequence \\((a_n)_{n\\in\\mathbb N}\\) converges then so does the rearrangement \\((a_{\\sigma(n)})_{n\\in\\mathbb N}\\).",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "If the series \\(\\sum_{n\\in\\mathbb N}a_n\\) converges then so does the rearrangement \\(\\sum_{n\\in\\mathbb N}a_{\\sigma(n)}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\(f(x)=x^2\\sin\\frac{1}{x}\\) for \\(x\\in\\mathbb R\\setminus\\{0\\}\\) and \\(f(0)=0\\). Prove that \\(f\\) is differentiable at every \\(x\\in\\mathbb R\\). Is \\(f'\\) continuous at \\(x=0\\)? (Prove your claim.)",
+      "subparts": []
+    }
+  ]
+}

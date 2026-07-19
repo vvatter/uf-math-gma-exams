@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2017-jan-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2017,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Topology-Semester_1-2017_01.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that the set of functions \\(f:\\mathbb{N}\\to\\mathbb{Z}\\) that are eventually zero is countable. A function \\(f:\\mathbb{N}\\to\\mathbb{Z}\\) is called eventually zero if there is \\(N\\) such that \\(f(n)=0\\) for all \\(n\\ge N\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be a connected metric space having more than one point. Can \\(X\\) be countable?",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that every continuous map \\(f:[0,1]\\to[0,1]\\) has a fixed point. Is this true for continuous maps",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(f:(0,1)\\to(0,1)\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(f:[0,1]\\to[0,1)\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Does there exist a continuous surjective map from the 2-sphere \\(S^2\\) to the interval \\((0,1)\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Does there exist a continuous injective map from the 2-sphere \\(S^2\\) to the interval \\((0,1)\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \\(f:X\\to X\\) be a map of a compact metric space to itself that satisfies the following condition: \\(d(f(x),f(y))<d(x,y)\\) for all \\(x\\ne y\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(f\\) is continuous.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that \\(f\\) has a fixed point and the fixed point is unique.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "State the Intermediate Value Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State the Cantor–Schröder–Bernstein Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Is every connected space path connected?",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "What is a basis of a topology? Does the set of all half-open intervals \\(\\{(a,b],[c,d)\\mid a<b,\\ c<d\\}\\) form a basis of a topology on \\(\\mathbb{R}\\)?",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Is \\(\\mathbb{R}^{\\omega}\\) connected in the uniform topology?",
+      "subparts": []
+    }
+  ]
+}

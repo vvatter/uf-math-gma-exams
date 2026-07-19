@@ -1,0 +1,33 @@
+# Analysis, first year exam, January 2014, Part 2
+
+*Answer FOUR questions. Write in a neat and logical fashion, giving complete reasons for all steps.*
+
+**1.** Let \(f\) be a continuous real-valued function on \([0,1]\). For each \(n \geq 1\), let \(h_n=n\mathbf{1}_{[0,1/n]}\) be \(n\) times the indicator function of \([0,1/n]\). Prove that
+\[
+\lim_{n\to\infty}\int_0^1 f(t)h_n(t)\,dt=f(0).
+\]
+
+**2.** Let \(f\) be a continuous real-valued function on \([0,1]\). For \(n\geq 1\) and \(0\leq t\leq 1\), let \(f_n(t)=f(t)t^n\). Determine a condition on \(f(1)\) that is necessary and sufficient for the sequence \((f_n)_{n=1}^{\infty}\) to be uniformly convergent; be sure to prove necessity and sufficiency.
+
+**3.** For \(n\geq 1\), let \(f_n\) be a continuous real-valued function on \([0,1]\), and for \(0\leq t\leq 1\) define
+\[
+F_n(t)=\int_0^t f_n(u)\,du.
+\]
+In each of the following cases, decide whether \((F_n)_{n=1}^{\infty}\) must have a uniformly convergent subsequence, giving proof or counterexample as appropriate:
+* (i) \(|f_n|\leq g\) for some continuous \(g\) and all \(n\);
+* (ii) \(0\leq f_1\leq f_2\leq\cdots\).
+
+**4.** Let \((f_n)_{n=1}^{\infty}\) be a sequence of measurable functions on some measure space. Show that each of the following sets is measurable:
+\[
+A=\{\omega\mid f_n(\omega)>0\text{ for infinitely many }n\};
+\]
+\[
+B=\{\omega\mid f_n(\omega)\leq 0\text{ for finitely many }n\}.
+\]
+Warning: \(A\) and \(B\) need not be complementary!
+
+**5.** Let \((f_n)_{n=1}^{\infty}\) be a uniformly-bounded sequence of continuous functions on \([0,1]\) that converges pointwise to zero. Does it follow that
+\[
+\lim_{n\to\infty}\int_0^1 f_n(t)\,dt=0?
+\]
+Does the answer change if ‘uniformly-bounded’ is removed from the hypotheses? Give proof or counterexample as appropriate.

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2005-sep",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2005,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2005_09.pdf",
+  "instructions": "Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true. Partial credit will be given where justified.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(\\Omega\\subset\\mathbb R^n\\) be open. Prove that \\(A\\subset\\mathcal D(\\Omega)\\) is bounded if and only if\n\\[\n\\sup\\{|\\Lambda(\\varphi)|\\mid \\varphi\\in A\\}<\\infty,\n\\]\nfor every \\(\\Lambda\\in\\mathcal D'(\\Omega)\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(\\mu\\) be Lebesgue measure on \\(\\mathbb R\\) and \\(f\\) be \\(\\mu\\)-integrable on \\([0,1]\\). Suppose \\(\\int_0^r f\\,d\\mu=0\\), for every rational \\(r\\in[0,1]\\). Give a complete characterization of \\(f\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(\\mathcal H\\) be a Hilbert space and suppose \\(A\\) is a bounded operator on \\(\\mathcal H\\) such that the range of \\(A\\) is finite dimensional. Let \\(\\{y_1,\\ldots,y_n\\}\\) be an orthonormal basis for the range of \\(A\\). Prove that there exist \\(x_1,\\ldots,x_n\\in\\mathcal H\\) such that\n\\[\nAx=\\sum_{j=1}^n[x,x_j]y_j,\n\\]\nfor all \\(x\\in\\mathcal H\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(A\\) be a bounded operator on a Hilbert space \\(\\mathcal H\\) such that \\(A(B_1)=\\{Ax\\mid x\\in B_1\\}\\) is compact, where \\(B_1\\) is the closed unit ball of \\(\\mathcal H\\). Prove that, as a map from \\(B_1\\) with the weak vector topology to \\(\\mathcal H\\) with the norm topology, \\(A\\) is continuous. (Hint: show that the weak and norm topologies on \\(A(B_1)\\) must coincide under the given hypothesis.)",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(\\mu\\) be a positive Radon measure on \\(\\mathbb R^N\\) and \\(f\\) be \\(\\mu\\)-integrable. Show that for each \\(\\epsilon>0\\) there exist an upper semi-continuous function \\(u_\\epsilon\\) and a lower semi-continuous function \\(v_\\epsilon\\) such that \\(u_\\epsilon\\leq f\\leq v_\\epsilon\\) and \\(\\int(v_\\epsilon-u_\\epsilon)\\,d\\mu<\\epsilon\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(\\mu\\) be a finite positive Radon measure on \\(\\mathbb R^N\\) and \\(\\{f_n\\}_{n\\in\\mathbb N}\\subset L^2(\\mu)\\) with \\(\\|f_n\\|_2\\leq1\\). Suppose \\(\\{f_n\\}_{n\\in\\mathbb N}\\) converges \\(\\mu\\)-a.e. to \\(f\\). Show that \\(\\int|f_n-f|\\,d\\mu\\to0\\), as \\(n\\to\\infty\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(E\\) be a topological vector space. Prove that if \\(A\\) and \\(B\\) are compact subsets of \\(E\\), then so is \\(A+B\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Consider \\(X\\in\\mathcal D(\\mathbb R^2)^*\\) defined by\n\\[\n\\mathcal D(\\mathbb R^2)\\ni\\phi\\mapsto X(\\phi)=\\int_{\\mathbb R}\\phi(x,-x)\\,dx.\n\\]\nNote. So \\(X\\) is a solution of the PDE \\((\\partial_1-\\partial_2)X=0\\) which is not a classical solution.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that \\(X\\) is a distribution of order zero.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "What is the support of \\(X\\)? (Prove it.) Use this to prove that \\(X\\) is not a regular distribution with continuous coefficient function.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Show that \\((\\partial_1-\\partial_2)X=0\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

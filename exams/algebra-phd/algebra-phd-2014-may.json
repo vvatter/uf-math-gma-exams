@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "algebra-phd-2014-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2014,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2014_05.pdf",
+  "instructions": "Do any 7 of the 11 problems, and mark clearly which problems you want graded if you try more than 7. State clearly any theorems that you use.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Suppose \\(p_1,p_2,\\ldots,p_r\\) are distinct primes, and \\(K=\\mathbb{Q}(\\sqrt{p_1},\\ldots,\\sqrt{p_r})\\), find the Galois group of \\(K/\\mathbb{Q}\\). How many fields \\(F\\) are there such that \\(\\mathbb{Q}\\subseteq F\\subseteq K\\)?",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Show that if \\(K/k\\) and \\(L/K\\) are separable algebraic extensions, then so is \\(L/k\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Give an example of normal extensions \\(K/k\\), \\(L/K\\) such that \\(L/k\\) is not normal.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Suppose \\(K\\) is an algebraic extension field of \\(k\\) and \\(\\bar{k}\\) is an algebraic closure of \\(k\\). Show that \\(K/k\\) is separable if and only if the ring \\(\\bar{k}\\otimes_k K\\) has no nonzero nilpotent elements.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Suppose \\(A\\) is a commutative ring with identity and \\(S\\subset A\\) is a multiplicative set not containing \\(0\\).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Show that there is a prime ideal \\(\\mathfrak{p}\\subset A\\) such that \\(\\mathfrak{p}\\cap S=\\phi\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Use part (i) to show that the intersection of all prime ideals of \\(A\\) is the set of nilpotent elements.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Suppose \\(k\\) is a field and \\(A\\) is a finitely generated commutative \\(k\\)-algebra. Let \\(\\bar{k}\\) be an algebraic closure of \\(k\\). Note that the Galois group \\(G=\\operatorname{Gal}(\\bar{k}/k)\\) acts on the set \\(\\operatorname{Hom}_k(A,\\bar{k})\\) of \\(k\\)-algebra homomorphisms \\(A\\to\\bar{k}\\) by composition. Construct a bijection of the set of orbits of \\(G\\) on \\(\\operatorname{Hom}_k(A,\\bar{k})\\) with the set of maximal ideals in \\(A\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Suppose \\(A\\) is an integral domain. Show that an ideal \\(I\\subseteq A\\) is invertible if and only if it is projective and finitely generated.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Suppose \\(X\\) is a nonempty set and \\(F(X)\\) is the free group on \\(X\\). Show that \\(F(X)\\) is abelian if and only if \\(X\\) is a singleton.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Define what it means for a group to be nilpotent.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Show that if \\(G\\) is a finite nilpotent group, then any Sylow subgroup is normal.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "Suppose \\(A\\) is a commutative ring with identity and \\(B\\) is a commutative \\(A\\)-algebra with structure map \\(f:A\\to B\\). Show that the forgetful functor from the category of \\(B\\)-modules to the category of \\(A\\)-modules induced by \\(f\\) has a left adjoint.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Let \\(p\\) be a prime. Find all the isomorphism classes of noncommutative semisimple rings \\(A\\) of cardinality \\(p^{10}\\).",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Suppose \\(R\\) is a finite commutative ring with identity, such that \\(x^3=x\\) for all \\(x\\in R\\). Show that \\(R\\) is a finite direct sum of fields isomorphic to \\(\\mathbb{F}_2\\) or \\(\\mathbb{F}_3\\).",
+      "subparts": []
+    }
+  ]
+}

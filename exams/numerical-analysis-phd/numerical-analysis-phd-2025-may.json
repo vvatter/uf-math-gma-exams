@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "numerical-analysis-phd-2025-may",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2025,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-NumericalAnalysis_2025_05.pdf",
+  "instructions": "Do 4 (four) of the first 5 (1-5) and 4 (four) of the last 5 problems (6-10).",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Assume \\(A \\in \\mathbb{C}^{m\\times m}\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that \\(A\\) has a Schur decomposition.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "If \\(A\\) is normal, show that \\(A\\) is diagonalizable.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Suppose \\(A\\) is Hermitian positive definite.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that each principal submatrix of \\(A\\) is Hermitian positive definite.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that an element of \\(A\\) with largest magnitude lies on the diagonal.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(A\\) has a Cholesky decomposition.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that \\(\\lVert x\\rVert_\\infty\\) is equivalent to \\(\\lVert x\\rVert_2\\) for all \\(x\\in\\mathbb{R}^n\\). That is to find \\(C\\) and \\(c\\) such that \\(c\\lVert x\\rVert_\\infty\\leq \\lVert x\\rVert_2\\leq C\\lVert x\\rVert_\\infty\\), for all \\(x\\in\\mathbb{R}^n\\). Note that the constants should be determined so that the equalities hold for some nonzero \\(x\\in\\mathbb{R}^n\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that \\(\\lVert QA\\rVert_2=\\lVert A\\rVert_2\\) if \\(Q\\) is a unitary matrix.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Assume that \\(A\\in\\mathbb{C}^{n\\times n}\\) and there exists \\(p\\geq 1\\) such that \\(\\lVert A\\rVert_p<1\\), where \\(\\lVert\\cdot\\rVert_p\\) is a vector-induced matrix norm.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(I-A\\) is invertible.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that\n\\[\n(I-A)^{-1}=\\sum_{k=0}^{\\infty}A^k.\n\\]",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(\\lVert A\\rVert_q\\lVert A^{-1}\\rVert_q\\geq 1\\), \\(\\forall 1\\leq q\\leq\\infty\\).",
+          "subparts": []
+        },
+        {
+          "label": "(d)",
+          "text": "Prove that\n\\[\n\\frac{1}{1+\\lVert A\\rVert_p}\\leq \\lVert(I-A)^{-1}\\rVert_p\\leq \\frac{1}{1-\\lVert A\\rVert_p}.\n\\]",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\). Let \\(u_j\\) denote column \\(j\\) of \\(U\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Suppose \\(\\operatorname{rank}(A)=p<n<m\\). Show \\(\\{u_1,u_2,\\ldots,u_p\\}\\) is a basis for \\(\\operatorname{Col}(A)\\) and \\(\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\) is a basis for \\(\\operatorname{Null}(A^*)\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Suppose \\(A\\) is full rank and \\(x\\neq 0\\). Let \\(\\sigma_i\\), \\(i=1,\\ldots,n\\), be the singular values of \\(A\\). Show\n\\[\n\\sigma_1\\geq \\frac{\\lVert Ax\\rVert_2}{\\lVert x\\rVert_2}\\geq \\sigma_n>0.\n\\]\nIf you want to use the property that \\(\\lVert A\\rVert_2=\\sigma_1\\), then you must prove that it holds.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Consider the function \\(g(x)=e^{-x}\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(g\\) is a contraction on \\(G=[\\ln 1.1,\\ln 3]\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that \\(g\\) maps \\(G=[\\ln 1.1,\\ln 3]\\) into \\(G=[\\ln 1.1,\\ln 3]\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(x_{k+1}=g(x_k)\\) converges to an unique fixed point \\(z\\in G=[\\ln 1.1,\\ln 3]\\) for any initial value \\(x_0\\in G=[\\ln 1.1,\\ln 3]\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "Based on \\(u_1(x)=1\\), \\(u_2(x)=x\\), \\(u_3(x)=x^2\\), use Gram–Schmidt orthogonalization process to compute the three polynomials \\(w_1(x)\\), \\(w_2(x)\\), \\(w_3(x)\\) which are orthonormal on the interval \\([0,1]\\) with respect to the inner product \\((f,g)=\\int_0^1 f(x)g(x)\\,dx\\). Using these polynomials, find the best approximation in \\(P^2[0,1]\\) for \\(f(x)=x^{1/2}\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Consider the finite difference formula\n\\[\nf'(t_j)=\\frac{1}{12h}\\bigl[f(t_j-2h)-8f(t_j-h)+8f(t_j+h)-f(t_j+2h)\\bigr]+O(h^4).\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Derive this formula by using Taylor’s theorem.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Derive this formula by using Lagrange polynomial representation.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "Assume the numerical quadrature for \\(\\hat f(\\hat x)\\) on \\([0,1]\\) is\n\\[\n\\hat J(\\hat f)=\\int_0^1\\hat f(\\hat x)\\,d\\hat x\\approx \\hat Q(\\hat f)=\\sum_{j=0}^m\\hat\\alpha_j\\hat f(\\hat x_j).\n\\]\nDerive the numerical quadrature of \\(J(f)=\\int_a^b f(x)\\,dx\\).",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Consider numerically solving the initial value problem\n\\[\ny'(t)=f(t,y),\\qquad 0<t\\leq t_f,\\qquad \\text{with }y(0)=\\eta.\n\\]\nAssume \\(f\\) is sufficiently differentiable and let \\(h\\) denote the step size. Show that all convergent members of the family of methods\n\\[\ny_{n+2}+(\\theta-2)y_{n+1}+(1-\\theta)y_n=\\frac14h\\bigl[(6+\\theta)f_{n+2}+3(\\theta-2)f_n\\bigr],\n\\]\nparameterized by \\(\\theta\\), are also \\(A_0\\)-stable.",
+      "subparts": []
+    }
+  ]
+}

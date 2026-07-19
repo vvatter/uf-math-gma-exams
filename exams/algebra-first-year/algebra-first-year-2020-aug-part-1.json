@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "algebra-first-year-2020-aug-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2020,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5311_2020_08.pdf",
+  "instructions": "Answer four problems. Write your answers clearly in complete English sentences.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Denote by \\(Q_8\\) the quaternion group. Show that if \\(f:Q_8\\to S_n\\) is an injective homomorphism then \\(n\\geq 8\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(G\\) be a group.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Show that if \\(G\\) is abelian, the subset \\(H\\) of elements of finite order is a subgroup.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Give an example of a (nonabelian) group \\(G\\) and elements of finite order \\(x,y\\in G\\) such that \\(xy\\) has infinite order, and prove that this example is correct.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Prove the first assertion of Sylow’s theorem: if \\(G\\) is a group of order \\(n\\), \\(p\\) is prime and \\(p^a\\) is the largest power of \\(p\\) dividing \\(n\\), then \\(G\\) has a subgroup of order \\(p^a\\). State clearly any preliminary results you need.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Define what it means for a group \\(G\\) to be nilpotent.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Show that any nilpotent group is solvable.",
+          "subparts": []
+        },
+        {
+          "label": "(iii)",
+          "text": "Give an example of a finite solvable group that is not nilpotent, and prove that this example is correct.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \\(G\\) be a group acting on a set \\(S\\), and \\(H\\subseteq G\\) a normal subgroup. Assume that for any \\(x_1,x_2\\in S\\) there is a unique \\(h\\in H\\) such that \\(h(x_1)=x_2\\). For \\(x\\in S\\) let \\(G_x\\) be the stabilizer of \\(x\\). Show that for any \\(x\\in S\\), \\(G\\) is a semi-direct product of \\(G_x\\) and \\(H\\). Do not assume that \\(G\\) is finite.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "In both cases, justify your answer.",
+      "subparts": [
+        {
+          "label": "(1)",
+          "text": "Find all conjugacy classes of elements of order \\(2\\) in \\(S_6\\).",
+          "subparts": []
+        },
+        {
+          "label": "(2)",
+          "text": "Do the same for \\(A_6\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "Show that the normalizer of a \\(5\\)-Sylow subgroup of \\(A_5\\) has order \\(10\\), and is a maximal subgroup of \\(A_5\\).",
+      "subparts": []
+    }
+  ]
+}

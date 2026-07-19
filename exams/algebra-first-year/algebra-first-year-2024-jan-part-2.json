@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "algebra-first-year-2024-jan-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2024,
+  "month": "january",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2024_01.pdf",
+  "instructions": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Suppose \\(k\\) is a field.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "If \\(A=k[X,Y]/(X^2Y^3)\\), find all minimal prime ideals of \\(A\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Show that \\(B=k[X,Y]/(X^2,Y^3)\\) has a unique prime ideal, and that this prime ideal is maximal. What is it?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Which of the following polynomials are irreducible? Explain.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(X^3+X+1\\) in \\(\\mathbb{F}_2[X]\\);",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(X^3+X+1\\) in \\(\\mathbb{Q}[X]\\);",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(X^5+10X^2+25X+5\\) in \\(\\mathbb{Q}[X]\\);",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Suppose \\(R\\) is a ring with identity and \\(M\\) is a nonzero left \\(R\\)-module. Let \\(\\operatorname{End}_R(M)\\) be the ring of \\(R\\)-linear maps \\(M\\to M\\). Show that if \\(0\\) and \\(M\\) are the only \\(R\\)-submodules of \\(M\\), then \\(\\operatorname{End}_R(M)\\) is a division ring.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(R\\) be an integral domain.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Define what it means for an element of \\(R\\) to be irreducible, and to be prime.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Show that a prime element is irreducible.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Suppose \\(F\\) is a field, \\(V\\) and \\(W\\) are \\(F\\)-vector spaces of finite dimension and \\(f:V\\to W\\) is a surjective linear map, and let \\(U=\\operatorname{Ker}(f)\\). Show using the definitions that \\(\\dim_F(V)=\\dim_F(W)+\\dim_F(U)\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Suppose \\(L/K\\) is an extension of fields. Show that \\(\\alpha\\in L\\) is algebraic over \\(K\\) if and only if there is a nonzero sub-\\(K\\)-vector space \\(V\\subseteq L\\) of finite dimension such that \\(\\alpha V\\subseteq V\\) (for “if,” pick a nonzero \\(v\\in V\\) and consider \\(\\alpha^n v\\) for \\(n\\in\\mathbb{N}\\)).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Find representatives of each conjugacy class of \\(GL_4(\\mathbb{F}_2)\\) of order \\(3\\) or \\(5\\) (the order of a conjugacy class is the order of any element of it).",
+      "subparts": []
+    }
+  ]
+}

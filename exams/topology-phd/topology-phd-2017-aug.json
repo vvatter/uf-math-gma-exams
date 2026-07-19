@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-2017-aug",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2017,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2017_08.pdf",
+  "instructions": "Work problems 1–5 and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(X\\) be a connected metric space having more than one point. Can \\(X\\) be countable?",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Compute \\(\\pi_1(T^2)\\) and \\(H_*(T^2)\\), where \\(T^2=S^1\\times S^1\\) is the 2-dimensional torus.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Does there exist a map of degree 2",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "from \\(S^2\\) to the torus \\(T^2\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "from \\(T^2\\) to \\(S^2\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Show that every compact Hausdorff space is normal.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Does there exist a covering space of the 2-dimensional sphere with three points deleted with nontrivial abelian fundamental group?",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State the homology Mayer–Vietoris Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State the Urysohn Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Do the following short exact sequences always split?\n\\[\n0\\to A\\to B\\to \\mathbb{Z}^2\\to 0\n\\]\n\\[\n0\\to \\mathbb{Z}\\to A\\to B\\to 0\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Compute the Euler characteristic \\(\\chi(\\mathbb{RP}^2\\times S^2\\times S^2\\times S^3)\\).",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Give an example of \\(A\\subset X\\) such that \\(A\\) is a retract of \\(X\\) but not a deformation retract.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the Lefschetz Fixed Point Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Can irrational numbers be presented as a countable union of closed in \\(\\mathbb{R}\\) subsets?",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Draw a picture of the universal cover of the 2-sphere with the segment joining the north and south poles.",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "List all \\(i\\) for which there is a closed orientable 6-manifold \\(M\\) with \\(H_i(M)=\\mathbb{Z}\\oplus\\mathbb{Z}\\oplus\\mathbb{Z}\\).",
+      "subparts": []
+    }
+  ]
+}

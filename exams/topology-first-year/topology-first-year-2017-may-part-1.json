@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2017-may-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2017,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2017_05.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Prove that the circle \\(S^1\\) is not homeomorphic to the closed 2-disk \\(B^2\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(A \\subset \\mathbb{R}^2\\) be an infinite countable subspace.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Can \\(A\\) be connected?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Is \\(\\mathbb{R}^2 \\setminus A\\) connected?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let \\(f:X \\to \\mathbb{R}^2\\) be continuous injective map. Is \\(f\\) an embedding if",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(X=(0,1)\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(X=[0,1]\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(X=[0,1)\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Show that a continuous injective map \\(f:(0,1) \\to \\mathbb{R}\\) is an embedding.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that every compact Hausdorff space is normal.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Describe all connected subsets of the real line \\(\\mathbb{R}\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State the Contraction Mapping Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(\\mathbb{R}_\\ell\\) denote the reals with the lower limit topology, i.e. topology defined by the basis \\(\\{[a,b) \\mid a,b \\in \\mathbb{R}\\}\\). Is \\(\\mathbb{R}_\\ell\\)",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "connected?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "regular?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Show that a connected metric space cannot be infinite countable.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Urysohn Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "Give definition of a quotient map.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Are the spaces \\((0,1) \\times [0,1)\\) and \\([0,1) \\times [0,1)\\) homeomorphic?",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Describe the one-point compactification of \\(X=(0,1) \\cup (2,3)\\)?",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Let \\(X\\) be a locally connected space. Is every component of \\(X\\) closed?",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "combinatorics-phd-2021-may",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2021,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics-2021_05.pdf",
+  "instructions": null,
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(a_n\\) be the number of ways to select a permutation of length \\(n\\), and then color each of its cycles red, blue, or green. Find an explicit formula for \\(a_n\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(A\\) be the graph obtained from \\(K_n\\) by deleting an edge. Find a closed formula (so no summation signs) for the number of spanning trees of \\(A\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Prove bijectively that the number of graphs with vertex set \\([n]\\) for which all vertices have even degree is \\(2^{\\binom{n-1}{2}}\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Prove that for every \\(n\\), there is a tournament \\(T\\) on \\(n\\) vertices with at least \\(n!/2^{n-1}\\) Hamiltonian paths.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(\\mathbb{P}=\\{1,2,\\ldots\\}\\) and \\((\\mathbb{P},\\mid)\\) be the division poset (so \\(m\\mid n\\) if \\(n/m\\in\\mathbb{P}\\)). Find a formula for the Möbius function \\(\\mu\\) and prove that it is correct. (Hint: decompose intervals in \\((\\mathbb{P},\\mid)\\) as products of chains.)",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(\\mathcal{A}\\) be the class of compositions into odd parts, where the size of \\(\\alpha=(a_1,\\ldots,a_n)\\in\\mathcal{A}\\) is \\(|\\alpha|=a_1+\\cdots+a_n\\). Find the associated ordinary generating function \\(A(x)=\\sum_{n\\geq 0}a_nx^n\\) and compute its growth rate \\(\\limsup a_n^{1/n}\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(\\mathcal{P}\\) be the class of integer partitions. Give a bijective proof of the Cauchy identity\n\\[\n\\prod_{i,j\\geq 1}(1-x_i y_j)^{-1}=\\sum_{\\lambda\\in\\mathcal{P}}s_\\lambda(x_1,x_2,\\ldots)s_\\lambda(y_1,y_2,\\ldots)\n\\]\nwhere \\(s_\\lambda\\) is the Schur function of shape \\(\\lambda\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(\\mathcal{A}\\) and \\(\\mathcal{B}\\) be labeled combinatorial classes with size functions \\(|\\cdot|_{\\mathcal{A}}\\) and \\(|\\cdot|_{\\mathcal{B}}\\), respectively. Define an admissible construction \\(\\star\\) so that \\(\\mathcal{C}=\\mathcal{A}\\star\\mathcal{B}\\) satisfies the exponential generating function identity \\(C_E(x)=A_E(x)\\cdot B_E(x)\\).",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2019-jan-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2019,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2019_01.pdf",
+  "instructions": "Work all problems. For Problems 1–5, state and prove each theorem. The proofs should be complete without being tedious. For Problems 6–15, give brief examples, counterexamples, or quick proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that a compact Hausdorff space \\(X\\) is normal.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State and prove the Contraction Mapping Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Give a proof that if \\(X\\) is any set, there is no function \\(f:X\\to\\mathcal{P}(X)\\) which is onto. Here \\(\\mathcal{P}(X)\\) is the power set of \\(X\\) or the set of all subsets of \\(X\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Suppose that \\(X\\) is a Hausdorff space. Show that if \\(A\\subset X\\) is compact, then it is closed.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Suppose that \\(X\\) and \\(Y\\) are metric spaces and that \\(X\\) is compact. Show that if \\(f:X\\to Y\\) is continuous, then \\(f\\) is uniformly continuous.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State Urysohn’s Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Is it possible for there to be a continuous function \\(f:[0,1]\\to[0,1)\\) which is onto?",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State the Bolzano–Weierstrass Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Define a continuous function \\(f:C\\to[0,1]\\) which is onto where \\(C\\) is the Cantor set and \\([0,1]\\) is the unit interval.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Give an example of a space \\(X\\) which is \\(T_1\\) but not Hausdorff.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Tietze Extension Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "Define a quotient map.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Let \\(\\{X_\\alpha\\}_{\\alpha\\in A}\\) be a collection of topological spaces. What is the product topology on \\(\\prod_{\\alpha\\in A}X_\\alpha\\)?",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "What does it mean for a space \\(X\\) to be first countable? Show that every metric space is first-countable.",
+      "subparts": []
+    }
+  ]
+}

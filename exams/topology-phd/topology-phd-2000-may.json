@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-2000-may",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2000,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2000_05.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that there is no retraction of the Möbius band onto its boundary.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State and prove the Contraction Mapping Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Give the Mayer–Vietoris sequence for homology. Use this to compute the homology groups for the \\(n\\)-sphere \\(S^n\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Suppose that \\(f,g\\colon X \\to S^n\\) are two maps such that \\(f(x)\\) and \\(g(x)\\) are not antipodal for all \\(x \\in X\\). Show that \\(f\\) and \\(g\\) are homotopic.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that no covering space of the 2-torus has the homotopy type of a figure 8.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Give a classification of the compact surfaces.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State Urysohn’s Lemma. State the Tietze Extension Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State the Five Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Define the mapping cylinder of \\(f\\colon X \\to Y\\). Define the mapping torus of \\(f\\colon X \\to X\\).",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State the exact homology sequence for a pair of spaces.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Jordan Curve Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "Define retraction and deformation retraction.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "State the Ascoli (Arzelà–Ascoli) Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Let \\(V\\) be a complete metric space such that no point is isolated. Can \\(V\\) be a countably infinite set?",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "Let \\(A\\) be a countable subset of \\(\\mathbb{R}^2\\). Show that \\(\\mathbb{R}^2 \\setminus A\\) is arcwise connected.",
+      "subparts": []
+    }
+  ]
+}

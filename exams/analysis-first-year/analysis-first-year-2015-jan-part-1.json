@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2015-jan-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2015,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Analysis-1_2015_01.pdf",
+  "instructions": "Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\((X,d_X)\\), \\((Y,d_Y)\\) be metric spaces. On the Cartesian product \\(X\\times Y:=\\{(x,y):x\\in X,y\\in Y\\}\\) define the function\n\\[\nd_{X\\times Y}((x_1,y_1),(x_2,y_2))=d_X(x_1,x_2)+d_Y(y_1,y_2).\n\\]\nIt is known that \\(d_{X\\times Y}\\) is a metric on \\(X\\times Y\\). If \\(X\\) and \\(Y\\) are complete, must \\(X\\times Y\\) be complete? Prove or give a counterexample.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be a metric space and suppose it has the following property: whenever \\(\\mathcal C\\) is a collection of closed subsets of \\(X\\), and \\(\\bigcap_{C\\in F}C\\) is nonempty for every finite \\(F\\subset\\mathcal C\\), then \\(\\bigcap_{C\\in\\mathcal C}C\\) is nonempty. Prove that \\(X\\) is compact.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(X\\) be a metric space and \\(A,B\\) connected subsets of \\(X\\). Prove that if \\(A\\cap B\\) is nonempty, then \\(A\\cup B\\) is connected.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "a)",
+          "text": "Define what it means for a function \\(f:X\\to Y\\) to be uniformly continuous on a set \\(E\\subset X\\).",
+          "subparts": []
+        },
+        {
+          "label": "b)",
+          "text": "Prove that if \\(f:X\\to Y\\) is continuous and \\(X\\) is compact, then \\(f\\) is uniformly continuous on \\(X\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \\(f:X\\to Y\\) be a continuous bijection. Prove that if \\(X\\) is compact, then \\(f^{-1}\\) is continuous. Give an example to show that the conclusion can fail if \\(X\\) is not assumed compact.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(f:(a,b)\\to\\mathbb R\\) be differentiable and suppose that \\(f'\\) is monotonically increasing. Prove that \\(f'\\) is continuous.",
+      "subparts": []
+    }
+  ]
+}

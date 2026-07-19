@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2022-may-part-2",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2022,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-2-2022_05.pdf",
+  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(f:[a,b]\\to\\mathbb{R}\\) have the property that for each \\(\\varepsilon>0\\) there exist Riemann integrable functions \\(\\ell\\) and \\(u\\) on \\([a,b]\\) such that \\(\\ell\\leq f\\leq u\\) and \\(\\int_a^b(u-\\ell)<\\varepsilon\\). Does it follow that \\(f\\) is Riemann integrable on \\([a,b]\\)? Proof or counterexample.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Suppose \\((p_n)_{n=0}^{\\infty}\\) is a sequence of polynomials in one variable.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Assume that \\(p_n\\to f\\) uniformly on \\([0,1]\\) as \\(n\\to\\infty\\); deduce as much as possible about the function \\(f:[0,1]\\to\\mathbb{R}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Assume that \\(p_n\\to f\\) uniformly on \\(\\mathbb{R}\\) as \\(n\\to\\infty\\); deduce as much as possible about the function \\(f:\\mathbb{R}\\to\\mathbb{R}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let the continuous function \\(f:[0,1]\\to\\mathbb{R}\\) satisfy\n\\[\n\\int_0^1 f(t)t^n\\,dt=1/(n+2)\n\\]\nfor all but finitely many positive integers \\(n\\). Deduce as much as possible about \\(f\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\((f_n)_{n=0}^{\\infty}\\) be a sequence of measurable real-valued functions on some measurable space. Prove that each of the following sets is measurable:",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "\\(A=\\{\\omega:\\sum_{n=0}^{\\infty}f_n(\\omega)\\text{ is absolutely convergent}\\}\\);",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(C=\\{\\omega:\\sum_{n=0}^{\\infty}f_n(\\omega)\\text{ is conditionally convergent}\\}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let \\((\\Omega,\\mathcal{A},\\mu)\\) be a measure space; let \\(A_0\\subseteq A_1\\subseteq\\cdots\\) be an increasing sequence in \\(\\mathcal{A}\\) such that \\(\\bigcup_{n=0}^{\\infty}A_n=\\Omega\\); let \\(f:\\Omega\\to\\mathbb{R}\\) be measurable; and let \\(L\\) be a real number. Consider the statements:\n\nProve that (i) implies (ii) and decide (with proof or counterexample) whether (ii) implies (i).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "\\(f\\) is integrable on \\(\\Omega\\) and \\(\\int_\\Omega f\\,d\\mu=L\\);",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(f\\) is integrable on each \\(A_n\\) and \\(\\int_{A_n}f\\,d\\mu\\to L\\) as \\(n\\to\\infty\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "algebra-first-year-2020-aug-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2020,
+  "month": "august",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5312_2020_08.pdf",
+  "instructions": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Suppose \\(R\\) is a commutative ring with identity and \\(F\\) is a free \\(R\\)-module of rank \\(n\\). Show that for any \\(R\\)-module \\(M\\) the \\(R\\)-module \\(\\operatorname{Hom}_R(F,M)\\) is isomorphic to the direct sum of \\(n\\) copies of \\(M\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Which of the following polynomials are irreducible? Explain, and factor the ones that are not irreducible.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(X^3+X+1\\) in \\(\\mathbb{Q}[X]\\);",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(X^4+X^2+1\\) in \\(\\mathbb{Q}[X]\\);",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(Y^2-X^3+X^2\\) in \\(\\mathbb{C}[X,Y]\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let \\(R\\) be an integral domain.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define what it means for an element of \\(R\\) to be irreducible.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Define what it means for an element of \\(R\\) to be prime.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Show that a prime element is irreducible.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Suppose \\(F\\) is a field, \\(V\\) is an \\(F\\)-vector space and \\(f:V\\to V\\) is a linear map.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that if \\(V\\) has finite dimension then \\(f\\) is injective if and only if it is surjective.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give examples with \\(V\\) of infinite dimension, in which \\(f\\) is surjective but not injective.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Give an example in which \\(f\\) is injective but not surjective. Justify both examples; you may use any results on dimension if they are stated clearly.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "A minimal prime ideal of a ring \\(R\\) is a prime ideal that does not properly contain any other prime ideal. If \\(F\\) is a field, find all minimal prime ideals in the ring\n\\[\nR=F[x_1,x_2,x_3,x_4,x_5,x_6]/(x_1x_2,x_3x_4,x_5x_6).\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Suppose \\(K\\) is a field and \\(a\\in K\\) is such that \\(X^3-a\\) and \\(X^2+X+1\\) are irreducible in \\(K[X]\\). If \\(L=K[X]/(X^3-a)\\), show that \\(L\\) contains exactly one root of the polynomial \\(X^3-a\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Find representatives in rational canonical form for all conjugacy classes in \\(GL_6(\\mathbb{Q})\\) with characteristic polynomial \\((X^3-1)^2\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "For each representative, give the Jordan normal form in \\(GL_6(\\mathbb{C})\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

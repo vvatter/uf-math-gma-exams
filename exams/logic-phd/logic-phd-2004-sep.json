@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "logic-phd-2004-sep",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2004,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2004_09.pdf",
+  "instructions": "Answer 7 questions.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Sketch a proof that every truth function \\(E:\\{T,F\\}^n\\to\\{T,F\\}\\) can be represented by a propositional sentence.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State the (Countable) Compactness for First Order Logic and sketch the proof using Henkin completeness.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Sketch a proof that the theory of dense linear orderings without end points satisfies Quantifier Elimination and hence is complete and decidable.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "State and prove the Omitting Types Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that Zorn’s Lemma implies the Axiom of Choice.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Show that for any notion of forcing \\(P\\) and any countable set \\(D\\) of \\(P\\)-dense sets, there exists a \\(D\\)-generic \\(P\\)-filter.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Define the constructible universe \\(L\\) and sketch a proof that \\(L\\) satisfies the Continuum Hypothesis.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Sketch a proof of the Undecidability of (Peano) Arithmetic.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Show that an infinite set \\(X\\subseteq\\omega\\) is the domain of a partial recursive function if and only if \\(X\\) is semirecursive (that is, \\(x\\in X\\Longleftrightarrow(\\exists y)R(x,y)\\) where \\(R\\) is a recursive relation).",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Show how to construct a simple recursively enumerable set which is neither recursive nor \\(m\\)-complete.",
+      "subparts": []
+    }
+  ]
+}

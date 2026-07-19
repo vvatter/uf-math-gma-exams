@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2026-jan-part-2",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2026,
+  "month": "january",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2-2026_01.pdf",
+  "instructions": "Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that for every continuous map \\(f:S^1\\to S^1\\) there is \\(n\\in\\mathbb{Z}\\) such that \\(f\\) is homotopic to \\(z^n:S^1\\to S^1\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Derive the Brouwer Fixed Point Theorem for \\(B^2\\) from the Borsuk–Ulam Theorem for \\(S^2\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^3\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Show that every map \\(f:S^3\\to S^1\\times S^1\\times S^1\\) of the 3-sphere to the 3-torus is null-homotopic.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that the Stone–Čech compactification of the reals is not metrizable.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Compute the fundamental group \\(\\pi_1(S^2)\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Show that any two continuous maps \\(f,g:X\\to I^n\\) to the \\(n\\)-cube are homotopic.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Is the space \\(I^I\\) separable where \\(I=[0,1]\\)?",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Seifert–van Kampen Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State the Tychonoff Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Show that the projective plane \\(\\mathbb{R}P^2\\) is not homeomorphic to the surface of genus 2, \\(M_2=T\\mathbin{\\#}T\\).",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "Let \\(X=[0,1]^{(0,1)}\\) be given the product topology. Is the space \\(X\\)",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "compact?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "metrizable?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "separable?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "text": "Let \\(X=\\mathbb{R}\\) and \\(A=\\mathbb{Z}\\) be the reals and the integers respectively. Here \\(X^*\\) is the partition into \\(A\\) and singletons.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Is the quotient space \\(X^*=X/A\\) metrizable?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "What is \\(\\pi_1(X^*)\\)?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "text": "Give definition of a deformation retraction.",
+      "subparts": []
+    },
+    {
+      "number": 15,
+      "text": "If \\(r:X\\to A\\) is a retraction, show that the induced map for the fundamental groups \\(r_\\#\\) is surjective.",
+      "subparts": []
+    }
+  ]
+}

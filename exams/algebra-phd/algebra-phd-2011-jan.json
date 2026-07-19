@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "id": "algebra-phd-2011-jan",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2011,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2011_01.pdf",
+  "instructions": "Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(F\\) be a field and let \\(g(X) \\in F[X]\\). Prove that if \\(E/F\\) and \\(E'/F\\) are splitting fields for \\(g(X)\\), then there is an isomorphism \\(\\phi : E \\to E'\\) such that \\(\\phi|_F = \\operatorname{id}_F\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(F\\) be a splitting field over \\(\\mathbb{Q}\\) for the polynomial \\(h(X) = X^{12} - 1\\). Determine the Galois group \\(G = \\operatorname{Gal}(F/\\mathbb{Q})\\). For each subgroup \\(H\\) of \\(G\\), determine the fixed field \\(F^H\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that there exists a one-to-one ring homomorphism\n\\[\n\\phi : \\mathbb{Z}[[X]] \\otimes_{\\mathbb{Z}} \\mathbb{Q} \\longrightarrow \\mathbb{Q}[[X]].\n\\]",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example of an element of \\(\\mathbb{Q}[[X]]\\) which is not in the image of \\(\\phi\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(\\mathcal{C}\\) be a category and let \\(\\Lambda\\) be a set. For each \\(\\lambda \\in \\Lambda\\), let \\(X_\\lambda\\) be an object in \\(\\mathcal{C}\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Give the definition of a coproduct of the collection of objects \\(\\{X_\\lambda\\}_{\\lambda \\in \\Lambda}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that any two coproducts of the collection \\(\\{X_\\lambda\\}_{\\lambda \\in \\Lambda}\\) are isomorphic.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Let \\(\\mathcal{C}\\) be the category of abelian groups. Prove that every collection \\(\\{X_\\lambda\\}_{\\lambda \\in \\Lambda}\\) of objects in \\(\\mathcal{C}\\) has a coproduct in \\(\\mathcal{C}\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Give an example of a ring \\(R\\) and a left \\(R\\)-module \\(M\\) such that \\(M\\) is projective but not free. Justify any claims that you make.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(X\\) be a set, let \\(Y\\) be subset of \\(X\\), and let \\(F\\) be a group which is free on \\(X\\). Let \\(N\\) be the smallest normal subgroup of \\(F\\) which contains \\(Y\\). Prove that \\(F/N\\) is a free group. (Hint: Show \\(F/N\\) is free on the set \\(X \\setminus Y\\).)",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(A\\) be a commutative ring with \\(1\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that if \\(I_1\\) and \\(I_2\\) are ideals in \\(A\\) and \\(P\\) is a prime ideal in \\(A\\) such that \\(I_1 \\cap I_2 = P\\), then \\(I_1 = P\\) or \\(I_2 = P\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Is the above statement still true if the word “prime” is replaced by “primary”? Justify your answer.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "Let \\(R\\) be a commutative ring with \\(1\\) and let \\(S \\subset R\\) be a multiplicative set which does not contain zero and does not contain any zero divisors. Prove that the prime ideals of the ring \\(S^{-1}R\\) are in one-to-one correspondence with the prime ideals \\(P\\) of \\(R\\) such that \\(P \\cap S = \\varnothing\\).",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Give an example of each of the following. Justify any claims you make.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "A Dedekind domain which is not a PID.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "An integral domain which is not integrally closed in its field of fractions.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "A field of characteristic \\(p\\) which is not perfect.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "text": "Let \\(R\\) be a ring and let \\(J(R)\\) be the Jacobson radical of \\(R\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Let \\(I\\) be a left ideal of \\(R\\) all of whose elements are nilpotent. Prove that \\(I\\) is contained in \\(J(R)\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example that shows that \\(R\\) may contain nilpotent elements which do not lie in \\(J(R)\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that if \\(R\\) is left Artinian, then there is \\(n \\geq 1\\) such that \\(J(R)^n = 0\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "text": "Let \\(R\\) be a commutative Noetherian ring with \\(1\\) and let \\(\\phi : R \\to R\\) be an onto ring homomorphism. Prove that \\(\\phi\\) is one-to-one.",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "topology-phd-1993-may",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 1993,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_1993_05.pdf",
+  "instructions": "For problems 1–5, state the following theorems. For problems 6–10, show all work and write clearly. The proofs should be detailed, leaving no doubt about the correctness!",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Baire Category Theorem",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Urysohn’s Lemma",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Brouwer Fixed Point Theorem",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Jordan Separation Theorem for \\(R^2\\)",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Schoenflies Theorem for \\(R^2\\). Does the corresponding statement hold for \\(R^3\\)? Explain.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "What is the universal cover of \\(P^2\\)? Prove your answer.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Prove: Let \\(C\\) be the Cantor set, and let \\(X\\) be any compact metric space. Then there exists a continuous, surjective function \\(f : C \\to X\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State and prove the Finite Simplicial Approximation Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Use the Seifert–van Kampen Theorem to compute the fundamental group of the Klein bottle.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "What is \\(\\widetilde{H}_0(X)\\), when \\(X\\) is a two point space? (Do not prove.)",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Use the Mayer–Vietoris sequence and (i) to compute the homology of \\(S^n\\), for \\(n \\ge 1\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "id": "ergodic-theory-phd-2012-may",
+  "subject": "PhD Ergodic Theory",
+  "subject_tag": "ergodic-theory-phd",
+  "year": 2012,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Ergodic_2012_05.pdf",
+  "instructions": "Do all problems.\n\nNotation:\n\n• The statement that \\((X,\\mathcal B,\\mu,f)\\) is a \\(mpt\\) (measure preserving transformation) means that \\(X\\) is a set with the probability measure \\(\\mu\\) defined on the \\(\\sigma\\)-algebra \\(\\mathcal B\\) and \\(f\\) is a bijective, bi-measurable map \\(f:X\\to X\\) which preserves the measure \\(\\mu\\).\n\n• The statement that \\((X,d,\\mathcal B,\\mu,f)\\) is a \\(mph\\) (measure preserving homeomorphism) means that \\((X,\\mathcal B,\\mu,f)\\) is a \\(mpt\\) and in addition, \\((X,d)\\) is a compact metric space, \\(f\\) is a homeomorphism, and \\(\\mathcal B\\) is the Borel \\(\\sigma\\)-algebra.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\((X,d)\\) be a compact metric space and \\(f:X\\to X\\) a homeomorphism.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define the recurrent set \\(\\Lambda(f)\\) and the nonwandering set \\(\\Omega(f)\\) and show they are both compact, invariant sets.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that \\(\\Lambda(f)\\subset\\Omega(f)\\) and give an example where the inclusion is proper.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Define the omega-limit set \\(\\omega(x,f)\\) of a point \\(x\\in X\\) and show it is a compact, invariant set.",
+          "subparts": []
+        },
+        {
+          "label": "(d)",
+          "text": "Prove or disprove: For every \\(x\\in X\\), that \\(\\omega(x,f)\\subset\\Lambda(f)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\((X,d)\\) be a compact metric space and \\(f:X\\to X\\) a homeomorphism.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that there is always an \\(f\\)-invariant subset \\(Z\\subset X\\) so that \\(f\\) restricted to \\(Z\\) is minimal.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that there is always a measure \\(\\mu\\) so that \\((X,d,\\mathcal B,\\mu,f)\\) is a \\(mph\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Assume \\((X,d,\\mathcal B,\\mu,f)\\) is a \\(mph\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define the support, \\(\\operatorname{supp}(\\mu)\\), of the measure \\(\\mu\\) and show it is a compact, invariant set.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that almost every point in \\(\\operatorname{supp}(\\mu)\\) is recurrent.",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Show that every point in \\(\\operatorname{supp}(\\mu)\\) is nonwandering.",
+          "subparts": []
+        },
+        {
+          "label": "(d)",
+          "text": "Show that \\(\\mu(\\Omega(f))=1\\).",
+          "subparts": []
+        },
+        {
+          "label": "(e)",
+          "text": "If \\((X,d,\\mathcal B,\\mu,f)\\) is ergodic, show that \\(f\\) is full orbit transitive on \\(\\operatorname{supp}(\\mu)\\).",
+          "subparts": []
+        },
+        {
+          "label": "(f)",
+          "text": "Show that \\(\\operatorname{supp}(\\mu)\\subset\\Lambda(f)\\), where \\(\\Lambda(f)\\) is the recurrent set of \\(f\\)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "State carefully with complete hypothesis.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Birkhoff’s pointwise ergodic theorem",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "von Neumann’s \\(L^2\\)-mean ergodic theorem",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Let\n\\[\nA=\\begin{pmatrix}1&1\\\\1&0\\end{pmatrix}.\n\\]",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define the one-sided subshift of finite type \\(\\Sigma_A^+\\) determined by \\(A\\) and the shift map \\(\\sigma:\\Sigma_A^+\\to\\Sigma_A^+\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Define one of the standard metrics on \\(\\Sigma_A^+\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Show that periodic points of \\(\\sigma\\) are dense in \\(\\Sigma_A^+\\).",
+          "subparts": []
+        },
+        {
+          "label": "(d)",
+          "text": "Show that \\((\\Sigma_A^+,\\sigma)\\) is forward orbit transitive.",
+          "subparts": []
+        },
+        {
+          "label": "(e)",
+          "text": "Let \\(N_k\\) be the number of fixed points of \\(\\sigma^k\\) in \\(\\Sigma_A^+\\). Compute explicitly\n\\[\n\\lim_{k\\to\\infty}\\frac{\\log(N_k)}{k}\n\\]\nand justify your answer completely.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Fix a \\(p\\) with \\(0<p<1\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define the Bernoulli measure \\(\\mu_p\\) on the two-sided shift on two symbols \\(\\Sigma_2\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Show that \\((\\Sigma_2,\\mathcal B,\\mu_p,\\sigma)\\) is strong mixing (you don’t have to prove it is a \\(mpt\\), you may assume that is true).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Define \\(\\alpha:\\Sigma_2\\to\\mathbb R\\) by\n\\[\n\\alpha(\\ldots s_{-1}s_0s_1s_2\\ldots)=2s_{-1}-s_0+s_2^2.\n\\]\nCompute the following limit for \\(\\mu_p\\)-almost every sequence \\(\\underline{s}\\in\\Sigma_2\\):\n\\[\n\\lim_{N\\to\\infty}\\frac{1}{N}\\sum_{i=0}^{N-1}\\alpha\\bigl(\\sigma^i(\\underline{s})\\bigr).\n\\]\nand justify your answer completely.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "Let \\(f:\\mathbb R^2\\to\\mathbb R^2\\) be defined by \\(f(x,y)=(3x,(1/2)y)\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Show that the origin is an unstable fixed point for \\(f\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Find an invariant, Borel probability measure for \\(f\\) (Hint: don’t try too hard).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Show that your invariant measure in (b) is the only invariant, Borel probability measure.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

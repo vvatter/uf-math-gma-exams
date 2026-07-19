@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "analysis-phd-2025-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2025,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Analysis_2025_05.pdf",
+  "instructions": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of the eight problems.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "For any two of the following, either give an example or explain why no example exists.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "A Lebesgue measurable set \\(E \\subseteq [0,1]\\) that is closed, has positive measure, but contains no non-trivial interval.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "A Lebesgue measurable set \\(E \\subseteq [0,1]\\) of positive measure such that \\(E-E=\\{x-y:x,y\\in E\\}\\) contains no non-trivial interval.",
+          "subparts": []
+        },
+        {
+          "label": "(iii)",
+          "text": "A measure space \\((X,\\mathcal M)\\) and a set \\(E\\subseteq X\\times X\\) such that \\([E]_x,[E]^y\\in\\mathcal M\\) for all \\(x,y\\in X\\), but \\(E\\notin\\mathcal M\\otimes\\mathcal M\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Suppose \\(X,Y\\) are metric spaces. Show, if \\(f:X\\to Y\\) is continuous, then \\(f\\) is Borel measurable.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(I=(-1,1)\\) and let \\(m^*\\) denote Lebesgue outer measure. Show, if \\(A\\subseteq I\\) and \\(m^*(A)+m^*(I\\setminus A)=2\\), then \\(A\\) is Lebesgue measurable.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "State the Radon–Nikodym Theorem and give an example that shows the \\(\\sigma\\)-finite hypothesis is needed.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Suppose \\(\\mathcal X\\) is a Banach space and \\(\\mathcal M\\) and \\(\\mathcal N\\) are (closed) subspaces of \\(\\mathcal X\\). Show, if each \\(x\\in\\mathcal X\\) has a unique representation as \\(x=m+n\\) for some \\(m\\in\\mathcal M\\) and \\(n\\in\\mathcal N\\), then the mapping \\(\\mathcal X\\to\\mathcal M\\) sending \\(x=m+n\\) to \\(m\\) is linear and bounded.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Prove, if \\(\\mathcal X\\) is a Banach space and \\(\\mathcal X^*\\) is separable, then \\(\\mathcal X\\) is separable. Is \\(\\ell^1\\) isomorphic, as a Banach space, to \\((\\ell^\\infty)^*\\)?",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Short answer. Do two.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Suppose \\(h:\\mathbb R\\to\\mathbb C\\) is a measurable function. If \\(hf\\in L^1(\\mathbb R)\\) for every \\(f\\in L^4(\\mathbb R)\\), what can be said about \\(h\\)? Explain your answer.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Does there exist a (bounded) linear functional \\(L:\\ell^\\infty(\\mathbb N)\\to\\mathbb C\\) such that \\(L(f)=\\lim f(n)\\) whenever \\(f\\in\\ell^\\infty(\\mathbb N)\\) and \\((f(n))_n\\) converges? Explain your answer.",
+          "subparts": []
+        },
+        {
+          "label": "(iii)",
+          "text": "Does there exist an inner product on \\(\\mathbb R^2\\) that induces the norm \\(\\lVert x\\rVert=|x_1|+|x_2|\\) for \\(x=\\binom{x_1}{x_2}\\in\\mathbb R^2\\)? Explain your answer.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "Do two providing short justifications for your answers. Here \\(\\widehat{\\phantom{f}}\\) denotes the Fourier transform of an \\(L^1\\) function and \\(\\mathcal Ff\\) denotes the Fourier transform of an \\(L^2(\\mathbb R)\\) function \\(f\\).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Define \\(f\\in L^1(\\mathbb R)\\) by \\(f(x)=e^{-x^4}\\chi_{[1,\\infty)}(x)\\). Is \\(\\widehat f\\in L^1(\\mathbb R)\\)?",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Recall, if \\(f\\in L^1(\\mathbb R)\\), then \\(\\lVert\\widehat f\\rVert_\\infty\\leq\\lVert f\\rVert_1\\). When does equality hold?",
+          "subparts": []
+        },
+        {
+          "label": "(iii)",
+          "text": "Does there exist \\(0\\neq f\\in L^2(\\mathbb R)\\) such that \\(\\mathcal Ff=e^{i\\pi/4}f\\)?",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

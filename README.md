@@ -148,6 +148,13 @@ python3 extract_exams.py --subject logic-phd --subject topology-phd
 With bulk selection, `--force` includes completed records and re-extracts them. Without
 `--force`, rerunning the same command continues with the remaining exams.
 
+Validate every local PDF hash, canonical JSON record, generated Markdown file, and
+review record with:
+
+```sh
+python3 validate_archive.py
+```
+
 ## Naming
 
 A single-file sitting is named as follows:

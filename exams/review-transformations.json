@@ -142,6 +142,4265 @@
       ],
       "source_pdf": "exams/topology-phd/topology-phd-1994-aug.pdf",
       "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "algebra-first-year-2023-may-part-1",
+      "message": "Converted the unequal point values for the two parts of Problem 4 into a response-depth instruction while omitting the numerical scores.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        4
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-first-year/algebra-first-year-2023-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The section-specific numbering was replaced by one consecutive global sequence beginning at 1.",
+      "corrected_text": "Problems 1–4 are Group Theory; problems 5–7 are Homological algebra; problems 8–11 are Commutative algebra.",
+      "exam_id": "algebra-phd-1988-sep",
+      "message": "The source restarts problem numbering in each of three sections. The final numbering retains Group Theory as problems 1–4, renumbers Homological algebra as problems 5–7, and renumbers Commutative algebra as problems 8–11.",
+      "origin": "extraction",
+      "original_text": "I. Group Theory: 1–4; II. Homological algebra: 1–3; III. Commutative algebra: 1–4.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1,
+        2,
+        3
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source identifies the three sections on separate pages and restarts numbering in each section.",
+      "corrected_text": "Do seven problems, at least two from each section. Problems 1–4 are Group Theory; problems 5–7 are Homological algebra; problems 8–11 are Commutative algebra.",
+      "exam_id": "algebra-phd-1988-sep",
+      "message": "The section ranges and topics were incorporated into the instructions so that the selection rule remains clear after global renumbering.",
+      "origin": "extraction",
+      "original_text": "Do seven problems, at least two from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1,
+        2,
+        3
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-1988-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source presents the theorem-quotation instruction in a boxed block and the ring/module conventions in a separate note.",
+      "corrected_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Below ring means associative ring with identity, and module means unital module.",
+      "exam_id": "algebra-phd-2014-jan",
+      "message": "Combined the boxed exam instructions and the global notation note into the single instructions string, while omitting administrative response-order and name-field logistics.",
+      "origin": "extraction",
+      "original_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2014-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "General exam instructions and notation on source page 1.",
+      "corrected_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Below ring means associative ring with identity, and module means unital module unless otherwise specified.",
+      "exam_id": "algebra-phd-2017-may",
+      "message": "Combined the retained selection, theorem-quotation, and global notation instructions into one coherent instructions string; excluded the administrative directions about answer order, circling problem numbers, and the name field.",
+      "origin": "extraction",
+      "original_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Put your answers in numerical order and circle the numbers of the seven problems below your name. Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.",
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The directions appear in a boxed block, while the notation convention appears separately below the grading field.",
+      "corrected_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module.",
+      "exam_id": "algebra-phd-2018-jan",
+      "message": "Combined the general directions and the global notation note into the single instructions string; excluded the administrative directions about answer order and circling problem numbers.",
+      "origin": "extraction",
+      "original_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Put your answers in numerical order and circle the numbers of the seven problems below your name. Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module.",
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2018-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source presents the answer directions in a boxed instruction block and the ring/module convention as a separate note.",
+      "corrected_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Below ring means associative ring with identity, and module means unital module unless otherwise specified.",
+      "exam_id": "algebra-phd-2020-aug",
+      "message": "Combined the general answer and quotation directions with the separate ring/module convention into one coherent instructions string.",
+      "origin": "extraction",
+      "original_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly. Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.",
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2020-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Problems 3 and 5 assign greater weight to part (ii), while Problem 10 assigns greater weight to part (i).",
+      "corrected_text": null,
+      "exam_id": "algebra-phd-2022-jan",
+      "message": "Converted the omitted point allocations into a score-free statement of the relative expected response depth for the affected subparts.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        3,
+        5,
+        10
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2022-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Both instruction blocks apply to the entire exam.",
+      "corrected_text": null,
+      "exam_id": "algebra-phd-2025-may",
+      "message": "Combined the boxed response instructions and the subsequent exam-wide notation note into one coherent instructions string.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2025-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places the global algebra convention below the answer-selection block, separated by excluded name and problem-circling logistics.",
+      "corrected_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.\n\nNote. Below ring means associative ring with identity, and module means unital module unless otherwise specified.",
+      "exam_id": "algebra-phd-2025-aug",
+      "message": "Combined the selection and theorem-quotation directions with the global ring and module convention into one coherent instructions string; excluded intervening answer-order and problem-circling logistics.",
+      "origin": "extraction",
+      "original_text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Put your answers in numerical order and circle the numbers of the seven problems below your name. Within reason, you may quote theorems as long as you state them clearly.\n\nNote. Below ring means associative ring with identity, and module means unital module unless otherwise specified.",
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/algebra-phd/algebra-phd-2025-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Top-level numbering was converted to one consecutive global sequence.",
+      "corrected_text": "Part A: 1–3; Part B: 4–6",
+      "exam_id": "analysis-first-year-2015-jan-part-2",
+      "message": "The source restarts numbering at 1 in Part B. Part A problems were retained as final problems 1–3, and Part B problems were renumbered as final problems 4–6.",
+      "origin": "extraction",
+      "original_text": "Part A: 1–3; Part B: 1–3",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2015-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Part B's restarted numbering was transformed to final problem numbers 4–6.",
+      "corrected_text": "Do exactly 2 of problems 1–3 (Part A) and 2 of problems 4–6 (Part B).",
+      "exam_id": "analysis-first-year-2015-jan-part-2",
+      "message": "The selection instruction was rewritten to use the final consecutive problem numbers while preserving the Part A and Part B groupings.",
+      "origin": "extraction",
+      "original_text": "Do exactly 2 problems from Part A and 2 problems from Part B.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2015-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The linked exam uses separate top-level numbering within Parts A and B.",
+      "corrected_text": "Final problems 1–3: Part A; final problems 4–6: Part B.",
+      "exam_id": "analysis-first-year-2015-aug-part-2",
+      "message": "The top-level numbering restarted in Part B. Part A problems retain final numbers 1–3, and Part B problems have been renumbered as final problems 4–6.",
+      "origin": "extraction",
+      "original_text": "Part A: problems 1–3; Part B: problems 1–3.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2015-aug-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source selection rule referred to internal parts whose problem numbering restarted.",
+      "corrected_text": "Problems 1–3 are Part A, and problems 4–6 are Part B. Do exactly 2 problems from 1–3 and 2 problems from 4–6.",
+      "exam_id": "analysis-first-year-2015-aug-part-2",
+      "message": "The selection instruction was rewritten to use the consecutive final problem numbers after Part B was renumbered.",
+      "origin": "extraction",
+      "original_text": "Do exactly 2 problems from Part A and 2 problems from Part B.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2015-aug-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Source Part A contains problems 1–3, and source Part B contains a second set numbered 1–3.",
+      "corrected_text": null,
+      "exam_id": "analysis-first-year-2016-jan-part-2",
+      "message": "The source restarts top-level numbering at 1 under Part B. Part A problems retain numbers 1–3, and Part B problems have been renumbered consecutively as 4–6.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2016-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source requires exactly two problems from Part A and two problems from Part B.",
+      "corrected_text": null,
+      "exam_id": "analysis-first-year-2016-jan-part-2",
+      "message": "The selection instruction was rewritten to use the final consecutive problem numbers, and the final ranges were identified by source part.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2016-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts Arabic numbering under section III.",
+      "corrected_text": "Problems 1–12; problems 13–18.",
+      "exam_id": "analysis-phd-1994-may",
+      "message": "The six problems in source section III restarted at 1; they were renumbered consecutively as final problems 13–18 after the twelve theorem-statement problems in source section I.",
+      "origin": "extraction",
+      "original_text": "Section I: problems 1–12; section III: problems 1–6.",
+      "problem_numbers": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Section-level instructions were consolidated while preserving the proof-selection rule and shared notation.",
+      "corrected_text": "Problems 1–12: State the following theorems. Prove one of the theorems in problems 8 or 9. Problems 13–18: Solve the following problems. (X, Σ, μ) is a measure space, E is a Banach space.",
+      "exam_id": "analysis-phd-1994-may",
+      "message": "The three section-level instruction blocks were combined into one coherent instruction, and the section III range was updated to the final numbering.",
+      "origin": "extraction",
+      "original_text": "I. State the following theorems: II. Prove one of the theorems 8 or 9. III. Solve the following problems: (X, Σ, μ) is a measure space. E is a Banach space.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source begins problem 1 with “(X, Σ, μ) will always denote a measure space (possibly infinite).”",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1995-aug",
+      "message": "Moved the exam-wide notation statement from the beginning of source problem 1 into the single instructions string and combined it with the general instructions.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1995-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source presents the definition as a “Remark” immediately before the general “Instructions.”",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1996-jun",
+      "message": "Combined the exam-wide remark defining “measure” with the instruction to complete all problems into the single instructions string.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1996-jun.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts Arabic numbering under Part III.",
+      "corrected_text": "Problems 1–10, Problem 11, and Problems 12–15.",
+      "exam_id": "analysis-phd-1994-oct",
+      "message": "The section-based numbering was replaced by one consecutive sequence: Part I items 1–10 became Problems 1–10, the Part II assertion became Problem 11, and Part III items 1–4 became Problems 12–15.",
+      "origin": "extraction",
+      "original_text": "I. State the following theorems: 1–10; II. Prove the \\((L^1)^*=L^\\infty\\); III. Problems 1–4.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-oct.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Required by the flattening and renumbering of the three source parts.",
+      "corrected_text": "\\((X,\\Sigma,\\mu)\\) is a finite measure space. State the theorems in Problems 1–10. Prove the assertion in Problem 11. Solve Problems 12–15.",
+      "exam_id": "analysis-phd-1994-oct",
+      "message": "The global measure-space statement and section-level directives were combined and rewritten to use the final consecutive problem numbers.",
+      "origin": "extraction",
+      "original_text": "\\((X,\\Sigma,\\mu)\\) is a finite measure space. I. State the following theorems. II. Prove the \\((L^1)^*=L^\\infty\\). III. Problems.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-oct.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1997-jan",
+      "message": "The source restarts numbering at 1 in Section III. The theorem list was retained as Problems 1–8, and the restarted problem list was renumbered consecutively as Problems 9–16. Selection instructions were updated to use the final numbering.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1997-jan",
+      "message": "The three source instruction blocks and the shared measure-space notation were combined into one coherent instructions string, with references revised to match the final problem numbering.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1999-may",
+      "message": "Converted the source’s internal organization to one global sequence: part (i), items 1–8, are final problems 1–8; part (ii) is retained as a selection instruction; and part (iii), items 1–5, are final problems 9–13.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "analysis-phd-1999-may",
+      "message": "Combined the section-level directions and shared notation on page 1 with the writing requirements on page 2, and updated the problem ranges after global renumbering.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-1999-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The part-specific directives were incorporated into the instructions using the final problem ranges.",
+      "corrected_text": "One consecutive global sequence, Problems 1–17, is used.",
+      "exam_id": "analysis-phd-2001-may",
+      "message": "The source restarts numbering in three internal parts. The problems were renumbered into one global sequence: source Part I became Problems 1–10, source Part II became Problems 11–12, and source Part III became Problems 13–17.",
+      "origin": "extraction",
+      "original_text": "Parts I, II, and III each begin their own top-level numbering at 1.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source numbering restarts under each internal part.",
+      "corrected_text": "State the following theorems for Problems 1–10. State and prove the following theorems for Problems 11–12. Solve Problems 13–17.",
+      "exam_id": "analysis-phd-2001-may",
+      "message": "The three part-specific directives and the general writing requirements were combined into one instructions string, with references rewritten to use the final global problem numbers.",
+      "origin": "extraction",
+      "original_text": "I. State the following theorems. II. State and prove the following theorems. III. Solve the following problems.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Source Part I contains theorem items 1–10, Part II requires proofs of two selected theorems, and Part III contains problem items 1–6.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2001-sep",
+      "message": "The source restarts numbering at 1 for the six problems after the theorem section. Those items were renumbered as Problems 11–16 following the ten theorem items; the intervening proof-selection requirement was retained as an instruction.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2001-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source presents these instructions in separate Parts I–III and a concluding note.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2001-sep",
+      "message": "Combined the theorem-statement requirement, proof-selection rule, problem-solving requirement, shared measure-space declaration, and concluding writing requirements into one instructions string, with references changed to the final problem numbers.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2001-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source sections are labeled (I), (II), and (III).",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2002-may",
+      "message": "The source restarts numbering in each of its three sections. Source Section I items 1–5 were retained as Problems 1–5, Section II items 1–2 were renumbered as Problems 6–7, and Section III items 1–5 were renumbered as Problems 8–12. The selection rules were updated to use the final numbering.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source separately directs the student to state the first group, state and prove one theorem from the second group, and solve the third group; general writing requirements appear at the end.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2002-may",
+      "message": "Combined the three section-level directions with the concluding writing requirements into one instructions string and replaced the restarted source numbering with the final problem ranges.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts numbering at 1 in each of three internal parts.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2002-sep",
+      "message": "Completed global renumbering: source Part I items 1–5 are final Problems 1–5; source Part II items 1–2 are final Problems 6–7; source Part III items 1–5 are final Problems 8–12.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Directions and common notation appear on source page 1, while the writing requirements appear on source page 2.",
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2002-sep",
+      "message": "Combined the three section-specific directions with the writing requirements and rewrote the problem ranges to agree with the completed global renumbering. The common measure-space and Banach-space setup was limited to final Problems 8–11 because Problem 12 supplies its own spaces and measures.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts numbering under Part III after eight numbered theorem statements in Part I and an unnumbered Part II proof requirement.",
+      "corrected_text": "Part I: Problems 1–8. Part III: Problems 9–13; the shared measure-space notation applies to Problems 9–12.",
+      "exam_id": "analysis-phd-2003-jan",
+      "message": "Part III restarted top-level numbering at 1. Its five problems were renumbered consecutively as Problems 9–13 after the eight numbered items in Part I. The unnumbered Part II proof requirement remains in the instructions and refers directly to final Problems 3 and 7.",
+      "origin": "extraction",
+      "original_text": "Part I: Problems 1–8. Part III: Problems 1–5; “In problems one through four” the shared measure-space notation applies.",
+      "problem_numbers": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2003-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source has separate instructions for Parts I–III, while Part III restarts problem numbering.",
+      "corrected_text": "Problems 1–8 (Part I): State the following theorems. Part II: Prove one of either the theorem in Problem 3 or the theorem in Problem 7. Problems 9–13 (Part III): Solve the following problems. In Problems 9–12, (X, Σ, μ) is a measure space and F is a Banach space.",
+      "exam_id": "analysis-phd-2003-jan",
+      "message": "The three part-level instruction blocks were combined into one coherent instruction string, and references were updated to agree with the consecutive final numbering.",
+      "origin": "extraction",
+      "original_text": "Part I State the following theorems. Part II Prove one of either Theorem 3 or 7 from part I. Part III Solve the following problems. In problems one through four (X, Σ, μ) is a measure space and F is a Banach space.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2003-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2016-may",
+      "message": "The source restarts top-level numbering in Part B. Part A problems remain 1–4, and Part B problems have been renumbered from 1–4 to final problems 5–8.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2016-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "analysis-phd-2016-may",
+      "message": "The selection instruction was rewritten to use the consecutive final numbering: choose three problems from 1–4 and three from 5–8.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2016-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Problems 1–4 appear under Part A, and problems 5–8 appear under Part B.",
+      "corrected_text": "Do three from Part A (problems 1–4) and three from Part B (problems 5–8).",
+      "exam_id": "analysis-phd-2019-jan",
+      "message": "The Part A and Part B selection rule was rewritten to include the final problem ranges because section headings are not represented as structured fields.",
+      "origin": "extraction",
+      "original_text": "Do three from part A and three from part B.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2019-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Global examination instructions.",
+      "corrected_text": "Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.",
+      "exam_id": "analysis-phd-2024-may",
+      "message": "Combined the two retained instruction blocks into one coherent instructions string after omitting the separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": "Write solutions in a neat and logical fashion, giving complete reasons for all steps.\n\nAttempt SIX problems.",
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/analysis-phd/analysis-phd-2024-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source uses C-prefixed top-level labels, while the final integer problem numbers are 1 through 8.",
+      "corrected_text": "Please write up solutions to the eight problems 1–8 below.",
+      "exam_id": "complex-analysis-phd-2000-may",
+      "message": "Updated the source instruction’s reference to “C1–C8” to use the final problem numbers “1–8.”",
+      "origin": "extraction",
+      "original_text": "Please write up solutions to the eight problems C1–C8, below.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/complex-analysis-phd/complex-analysis-phd-2000-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Top-level numbering restarts under the source's internal sections.",
+      "corrected_text": "Problems 1–7, with source Section II questions A–C numbered 5–7.",
+      "exam_id": "differential-geometry-phd-1992-may",
+      "message": "The source numbers Section I as 1–4 and labels Section II as A–C. Section II has been renumbered as Problems 5–7 to create one consecutive global sequence.",
+      "origin": "extraction",
+      "original_text": "Section I: 1–4; Section II: A–C.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/differential-geometry-phd/differential-geometry-phd-1992-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Section II questions A–C were renumbered as Problems 5–7.",
+      "corrected_text": "Problems 1–4 are Section I; answer three questions from Problems 1–4. Problems 5–7 are Section II; answer each of Problems 5–7.",
+      "exam_id": "differential-geometry-phd-1992-may",
+      "message": "The selection instruction was rewritten to use the final global problem numbers while preserving the source requirements and section groupings.",
+      "origin": "extraction",
+      "original_text": "Answer three questions from Section I and each question in Section II.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/differential-geometry-phd/differential-geometry-phd-1992-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source presents an Instructions line followed immediately by a notation block applying to the whole exam.",
+      "corrected_text": null,
+      "exam_id": "ergodic-theory-phd-2012-may",
+      "message": "Joined the general instruction and the notation block into the single permitted instructions field. The excluded separate-page logistics were omitted.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2012-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "ergodic-theory-phd-2025-may",
+      "message": "The three category headings and their problem ranges were incorporated into the selection instruction so that “at least one problem from each category” remains unambiguous after omitting section headings from the problem list.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/ergodic-theory-phd/ergodic-theory-phd-2025-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Source topic-local numbering was transformed into global numbering.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-1992-sep",
+      "message": "The four topic sections each restarted question numbering at 1. These labels were replaced by one consecutive sequence, with General Logic numbered 1–3, Model Theory 4–6, Set Theory 7–9, and Recursion Theory 10–12.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1992-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source requires answering any two of the three questions in each of four topic segments.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-1992-sep",
+      "message": "The segment-selection instruction was rewritten to state the required choices directly in terms of the final problem ranges, and the topic-to-range mapping was added.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1992-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-1989-sep",
+      "message": "The topic headings were omitted and the top-level problems were presented as one global sequence 1–9; the topic ranges are stated in the instructions.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1989-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source groups problems under General Logic, Set Theory, and Recursion Theory.",
+      "corrected_text": "Do 2 from each section. Problems 1–3 concern General Logic. Problems 4–6 concern Set Theory. Problems 7–9 concern Recursion Theory.",
+      "exam_id": "logic-phd-1989-sep",
+      "message": "The selection instruction was combined with the required mapping from final problem ranges to the three source topics.",
+      "origin": "extraction",
+      "original_text": "Do 2 from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1989-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source sections are General Logic, Model Theory, Set Theory, and Recursion Theory.",
+      "corrected_text": "The questions are numbered consecutively 1–12.",
+      "exam_id": "logic-phd-1993-may",
+      "message": "Replaced the restarted question numbering 1–3 in each of the four source sections with one consecutive sequence: General Logic 1–3, Model Theory 4–6, Set Theory 7–9, and Recursion Theory 10–12.",
+      "origin": "extraction",
+      "original_text": "Each of the four sections numbers its questions 1–3.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1993-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The original selection rule refers to four named sections whose internal numbering restarts at 1.",
+      "corrected_text": "This examination is divided into 4 segments, with 3 questions in each segment. Problems 1–3 concern General Logic; problems 4–6 concern Model Theory; problems 7–9 concern Set Theory; and problems 10–12 concern Recursion Theory. Answer any 2 questions from each segment.",
+      "exam_id": "logic-phd-1993-may",
+      "message": "Added the final problem ranges and source topic names to the exam-wide instructions so that the segment-based selection rule remains clear after global renumbering.",
+      "origin": "extraction",
+      "original_text": "This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-1993-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The final topic ranges were added to the instructions so that the selection rule remains clear after renumbering.",
+      "corrected_text": "General Logic: 1–3; Model Theory: 4–5; Set Theory: 6–8; Recursion Theory: 9–11.",
+      "exam_id": "logic-phd-2000-sep",
+      "message": "The problem numbering restarted within each of four topic segments and was replaced with one consecutive global sequence.",
+      "origin": "extraction",
+      "original_text": "General Logic: 1–3; Model Theory: 1–2; Set Theory: 1–3; Recursion Theory: 1–3.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2000-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Each source topic numbered its problems locally beginning with 1.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2000-may",
+      "message": "Replaced the numbering that restarted within each of the four topic segments with one consecutive global sequence: General Logic became problems 1–4, Model Theory 5–7, Set Theory 8–10, and Recursion Theory 11–13.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2000-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts lettered problem numbering within four named topic sections.",
+      "corrected_text": "1–12",
+      "exam_id": "logic-phd-2006-may",
+      "message": "Replaced the source labels 1A–1C, 2A–2C, 3A–3C, and 4A–4C with the consecutive global problem numbers 1–12.",
+      "origin": "extraction",
+      "original_text": "1A–1C, 2A–2C, 3A–3C, 4A–4C",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2006-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Top-level source labels were transformed into a consecutive global sequence.",
+      "corrected_text": "Please complete seven problems among the following, including one problem from each of the ranges 1–3, 4–6, 7–9, and 10–12. Problems 1–3 concern General logic; problems 4–6 concern Model theory; problems 7–9 concern Set theory; problems 10–12 concern Computability.",
+      "exam_id": "logic-phd-2006-may",
+      "message": "Rewrote the requirement to choose one problem from each section in terms of the final problem ranges and added the required topic mapping.",
+      "origin": "extraction",
+      "original_text": "Please complete seven problems among the following, including one from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2006-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts top-level numbering at 1 in each named section.",
+      "corrected_text": "Problems 1–3 concern Set Theory; problems 4–6 concern Computability; problems 7–9 concern Model theory.",
+      "exam_id": "logic-phd-2019-aug",
+      "message": "Restarted numbering within the three source sections was replaced by one consecutive global sequence: Set Theory became problems 1–3, Computability became problems 4–6, and Model theory became problems 7–9.",
+      "origin": "extraction",
+      "original_text": "A. Set Theory: 1–3; B. Computability: 1–3; C. Model theory: 1–3.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2019-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source sections were removed as structural fields when their restarted problem numbers were transformed into a global sequence.",
+      "corrected_text": "Solve 5 problems of the following; solve at least one problem from each of the ranges 1–3, 4–6, and 7–9. Problems 1–3 concern Set Theory; problems 4–6 concern Computability; problems 7–9 concern Model theory.",
+      "exam_id": "logic-phd-2019-aug",
+      "message": "The selection rule was rewritten in terms of the final global problem ranges, and the source topic names were mapped to those ranges.",
+      "origin": "extraction",
+      "original_text": "Solve 5 problems of the following; at least one from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2019-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-2020-aug",
+      "message": "Restarted numbering within the Set Theory, Computability, and Model theory sections was replaced by one consecutive global sequence: problems 1–3, 4–6, and 7–9, respectively.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2020-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source restarts numbering in each of three named sections.",
+      "corrected_text": "Solve 5 problems of the following; at least one from problems 1–3, at least one from problems 4–6, and at least one from problems 7–9. Problems 1–3 concern Set Theory; problems 4–6 concern Computability; problems 7–9 concern Model theory.",
+      "exam_id": "logic-phd-2020-aug",
+      "message": "The selection rule was rewritten in terms of the final problem ranges, and the required topic-to-range mapping was added.",
+      "origin": "extraction",
+      "original_text": "Solve 5 problems of the following; at least one from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2020-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Source sections A, B, and C each numbered their problems 1–3.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2022-jan",
+      "message": "The source restarted numbering at 1 in each topic section. The problems were renumbered into one global sequence: Set Theory 1–3, Computability 4–6, and Model theory 7–9.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2022-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts top-level problem numbering in each named section.",
+      "corrected_text": "Set Theory: Problems 1–3; Computability: Problems 4–7; Model theory: Problems 8–11.",
+      "exam_id": "logic-phd-2022-may",
+      "message": "Restarted numbering under the three source sections was replaced by one consecutive global sequence: Set Theory became Problems 1–3, Computability became Problems 4–7, and Model theory became Problems 8–11.",
+      "origin": "extraction",
+      "original_text": "A. Set Theory: 1–3; B. Computability: 1–4; C. Model theory: 1–4.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2022-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source section references were replaced with the final ranges for Set Theory, Computability, and Model theory.",
+      "corrected_text": "Solve 5 problems of the following; at least one from Problems 1–3, at least one from Problems 4–7, and at least one from Problems 8–11.",
+      "exam_id": "logic-phd-2022-may",
+      "message": "The selection rule was rewritten to use the final global problem numbers after renumbering.",
+      "origin": "extraction",
+      "original_text": "Solve 5 problems of the following; at least one from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2022-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source organizes the exam into three named sections and restarts numbering at 1 in each section.",
+      "corrected_text": "Problems 1–3: Set Theory; problems 4–6: Computability; problems 7–9: Model theory.",
+      "exam_id": "logic-phd-2023-jan",
+      "message": "The top-level numbering restarted within each of three source sections. It was replaced with one consecutive global sequence: Set Theory became problems 1–3, Computability became problems 4–6, and Model theory became problems 7–9.",
+      "origin": "extraction",
+      "original_text": "A. Set Theory: 1–3; B. Computability: 1–3; C. Model theory: 1–3.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2023-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Section fields were removed and restarted source numbering was transformed into a single global sequence.",
+      "corrected_text": "Solve 5 problems of the following; at least one from problems 1–3, at least one from problems 4–6, and at least one from problems 7–9. Problems 1–3 concern Set Theory; problems 4–6 concern Computability; problems 7–9 concern Model theory.",
+      "exam_id": "logic-phd-2023-jan",
+      "message": "The selection rule was rewritten to refer directly to the globally renumbered problem ranges, and the required topic-range mapping was added.",
+      "origin": "extraction",
+      "original_text": "Solve 5 problems of the following; at least one from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2023-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-2022-aug",
+      "message": "The three source sections each numbered their problems 1–3; they were renumbered consecutively as problems 1–9, with Set Theory as 1–3, Computability as 4–6, and Model Theory as 7–9.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2022-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-2022-aug",
+      "message": "Replaced “at least one from each section” with explicit final problem ranges and added the topic-range mapping required after global renumbering.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2022-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source restarts problem numbering at 1 under each topic.",
+      "corrected_text": "Set Theory: 1–3; Computability: 4–6; Model theory: 7–9.",
+      "exam_id": "logic-phd-2023-may",
+      "message": "Restarted numbering within the three source sections was replaced by one consecutive global sequence.",
+      "origin": "extraction",
+      "original_text": "Set Theory: 1–3; Computability: 1–3; Model theory: 1–3.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2023-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source section numbering was transformed into a consecutive global sequence.",
+      "corrected_text": "Solve 5 problems of the following; at least one from problems 1–3, at least one from problems 4–6, and at least one from problems 7–9. Problems 1–3 concern Set Theory; problems 4–6 concern Computability; problems 7–9 concern Model theory.",
+      "exam_id": "logic-phd-2023-may",
+      "message": "The selection rule was rewritten in terms of the final global problem numbers, and the topic ranges were added.",
+      "origin": "extraction",
+      "original_text": "Solve 5 problems of the following; at least one from each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2023-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The selection rule appears before Part 1 on source page 1; Part II begins with problem 6 on source page 2.",
+      "corrected_text": "Do any 8 of the following 10 problems. Part 1: Numerical Linear Algebra (problems 1–5). Part II: Numerical Analysis (problems 6–10).",
+      "exam_id": "numerical-analysis-phd-2000-sep",
+      "message": "Combined the exam-wide selection rule with the two internal part headings and added the applicable final problem ranges to form one coherent instructions string.",
+      "origin": "extraction",
+      "original_text": "Do any 8 of the following 10 problems.\nPart 1: Numerical Linear Algebra\nPart II: Numerical Analysis",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2000-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The Part II heading appears between problems 5 and 6; the topic ranges were made explicit in the single instructions string.",
+      "corrected_text": "Do any 8 of the following 10 problems. Problems 1–5: Numerical Linear Algebra. Problems 6–10: Numerical Analysis.",
+      "exam_id": "numerical-analysis-phd-2001-may",
+      "message": "Combined the exam-wide selection rule with the two internal topic headings and stated their problem ranges explicitly.",
+      "origin": "extraction",
+      "original_text": "Do any 8 of the following 10 problems. Part 1: Numerical Linear Algebra. Part II: Numerical Analysis.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places “Do 5 of 7” near the beginning and a separate reference appendix after Problem 7.",
+      "corrected_text": null,
+      "exam_id": "numerical-analysis-phd-2013-may",
+      "message": "Combined the selection rule on page 1 and the separate Appendix on page 2 into the single instructions field. Problem numbering was unchanged.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The linked PDF contains two topic groups with independently restarted problem numbering.",
+      "corrected_text": "The groups are numbered consecutively 1–10.",
+      "exam_id": "numerical-analysis-phd-2019-may",
+      "message": "The source restarts top-level numbering at 1 on page 2. The first Numerical Linear Algebra group remains problems 1–5, and the Numerical Analysis group has been renumbered consecutively as problems 6–10.",
+      "origin": "extraction",
+      "original_text": "Each source group is numbered 1–5.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Each source topic group independently requires four of its five problems.",
+      "corrected_text": "Do 4 (four) problems from problems 1–5 (Numerical Linear Algebra), and do 4 (four) problems from problems 6–10 (Numerical Analysis).",
+      "exam_id": "numerical-analysis-phd-2019-may",
+      "message": "The two identical selection instructions were combined and rewritten with final problem ranges so that each topic group's requirement remains explicit after renumbering.",
+      "origin": "extraction",
+      "original_text": "Do 4 (four) problems. Do 4 (four) problems.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source requires choosing one of 5 and 5′ and one of 6 and 6′.",
+      "corrected_text": null,
+      "exam_id": "pde-phd-2001-may",
+      "message": "The source's alternative top-level labels 5, 5′, 6, and 6′ were converted to consecutive final problem numbers 5, 6, 7, and 8, respectively.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_pdf": "exams/pde-phd/pde-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The final instruction requires choosing one problem from 5 and 6 and one problem from 7 and 8.",
+      "corrected_text": null,
+      "exam_id": "pde-phd-2001-may",
+      "message": "The selection instruction was rewritten to use the consecutive final problem numbers after transforming the primed source labels.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/pde-phd/pde-phd-2001-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Top-level numbering was made consecutive across the linked PDF.",
+      "corrected_text": "Final problems 1–7 and 8–11, respectively.",
+      "exam_id": "probability-phd-1997-sep",
+      "message": "The source begins with problems 1–7 on page 1, then restarts at problem 6 on page 2 and continues through problem 9 on page 3. The restarted sequence was renumbered globally as problems 8–11.",
+      "origin": "extraction",
+      "original_text": "Source page 1: problems 1–7; source pages 2–3: problems 6–9.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_pages": [
+        1,
+        2,
+        3
+      ],
+      "source_pdf": "exams/probability-phd/probability-phd-1997-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between problems 6 and 7 and changes the expected response depth for problems 7–15.",
+      "corrected_text": "Work problems 1–6 and show all work. Support all statements to the best of your ability. Answer problems 7–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2013-may-part-1",
+      "message": "Combined the two instruction blocks into one coherent instruction string and made their respective problem ranges explicit; omitted the separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2013-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places “Answer the following with complete definitions or statements or short proofs” immediately before Problem 8.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2015-jan-part-1",
+      "message": "Combined the general instruction block with the later instruction applying to Problems 8–15, and stated that range explicitly in the single instructions string.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2015-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The opening instructions apply to problems 1–5, while the later instruction beginning “Answer the following” applies to problems 6–15. The excluded separate-sheet instruction was omitted as logistical.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2013-jan-part-1",
+      "message": "Combined the two instruction blocks and stated their scopes using the final problem ranges.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction appears immediately before Problem 8 and governs Problems 8–13.",
+      "corrected_text": "Answer all questions and work all problems. Answer Problems 8–13 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2015-aug-part-1",
+      "message": "Combined the general instruction with the instruction governing the final problem group and replaced “the following” with the explicit final range Problems 8–13.",
+      "origin": "extraction",
+      "original_text": "Answer all questions and work all problems.\nAnswer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2015-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2016-jan-part-1",
+      "message": "Combined the two part-specific instruction blocks into one instructions string and replaced the internal part references with the final problem ranges 1–7 and 8–13. Omitted point values and separate-sheet/name logistics.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2016-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source gives separate instruction blocks for problems 1–7 and 8–13.",
+      "corrected_text": "For problems 1–7, complete proofs. Support all statements to the best of your ability. For problems 8–13, answer the following with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2016-aug-part-2",
+      "message": "Combined the two internal-part instruction blocks into one coherent instructions string and stated their scopes using the final problem ranges; excluded separate-sheet and name-writing logistics and omitted point values.",
+      "origin": "extraction",
+      "original_text": "Part 1. Complete Proofs (7 items, 10 points each). Work each problem on a separate sheet of paper with your name on the sheet. Support all statements to the best of your ability. Part 2. Answer the following with complete definitions or statements or short proofs (6 items, 5 points each).",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2016-aug-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2017-jan-part-2",
+      "message": "Combined the general instruction block with the instruction preceding problem 6 and made its scope explicit as problems 6–10.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2017-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between problems 5 and 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2017-jan-part-1",
+      "message": "Combined the general instruction block with the later instruction block and made the latter's scope explicit as problems 6–10.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2017-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before Problem 6 and applies to Problems 6–15.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2017-may-part-1",
+      "message": "Combined the two instruction blocks into one coherent instruction string and stated the second block in terms of final problem numbers; omitted point values and separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper (10 pts each problem). Answer the following with complete definitions or statements or short proofs (5 pts each problem).",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2017-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block applies to problems 1–5, and the second applies to problems 6–15.",
+      "corrected_text": "Answer problems 1–5 and show all your work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2018-jan-part-1",
+      "message": "Combined the two instruction blocks into one coherent instruction string and made their respective problem ranges explicit.",
+      "origin": "extraction",
+      "original_text": "Answer the following problems and show all your work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2018-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Problems 1–5 and problems 6–15 were introduced by separate instruction blocks.",
+      "corrected_text": "Answer problems 1–5 and show all your work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2018-aug-part-1",
+      "message": "Combined the two instruction blocks and replaced “the following problems” with the applicable problem ranges. The point-value distinction was expressed through the source’s differing response-depth requirements.",
+      "origin": "extraction",
+      "original_text": "Answer the following problems and show all your work. Support all statements to the best of your ability. Each is worth 10 points. Answer the following with complete definitions or statements or short proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2018-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between problems 5 and 6.",
+      "corrected_text": "Answer problems 1–5 and show all your work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2018-may-part-2",
+      "message": "Combined the two instruction blocks into one coherent string and replaced “the following” with explicit final problem ranges. Excluded score and separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": "Answer the following problems and show all your work. Support all statements to the best of your ability. Use a separate sheet of paper for each problem. Each is worth 10 points. [After problem 5:] Answer the following with complete definitions or statements or short proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2018-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source separately gives instructions under “Theorems and Proofs” for Problems 1–5 and “Examples and Minor Proofs” for Problems 6–15.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2019-jan-part-1",
+      "message": "Combined the general instruction and the two section-specific instruction blocks into one coherent instruction string, replacing section references with the applicable problem ranges and expressing the response-depth distinction without point values.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2019-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places separate instructions before Problems 1 and 6.",
+      "corrected_text": "Work all problems. Problems 1–5 (Theorems and Proofs): In this section state and prove each theorem. The proofs should be complete without being tedious. Problems 6–15 (Examples and Minor Proofs): In this section, give brief examples, counterexamples, or quick proofs.",
+      "exam_id": "topology-first-year-2019-aug-part-1",
+      "message": "Combined the two section-specific instruction blocks into one coherent instructions string and added the applicable final problem ranges. Point values and excluded sheet/name logistics were omitted.",
+      "origin": "extraction",
+      "original_text": "Work all problems. Use a separate sheet for each problem with your name on the sheet. Theorems and Proofs. In this section state and prove each theorem. The proofs should be complete without being tedious. Each problem is worth 10 points. Examples and Minor Proofs. In this section, give brief examples, counterexamples, or quick proofs. Each problem is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2019-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between Problems 5 and 6 and applies to Problems 6–10.",
+      "corrected_text": "Answer Problems 6–10 with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2020-may-part-2",
+      "message": "Combined the two instruction blocks into one coherent instructions string and replaced “the following” in the second block with the explicit final range “Problems 6–10.”",
+      "origin": "extraction",
+      "original_text": "Answer the following with complete definitions or statements or proofs.",
+      "problem_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2020-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The general work requirements appear before Problem 1, while the requirement concerning complete definitions, statements, or short proofs appears before Problem 6.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2020-jan-part-1",
+      "message": "Combined the opening instructions with the instruction preceding Problem 6 and replaced “the following” in the latter with the explicit final range “problems 6–15.”",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2020-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between Problems 5 and 6 and applies to Problems 6–10.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 6–10 with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2020-aug-part-1",
+      "message": "Combined the two authored instruction blocks into one coherent instructions string and made the scope of the second block explicit as Problems 6–10.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2020-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source gives distinct instructions for its two problem groups.",
+      "corrected_text": "For problems 1–5, work each problem and show all work. Support all statements to the best of your ability. For problems 6–10, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2021-may-part-1",
+      "message": "Combined the two part-specific instruction blocks into one coherent instruction string and replaced “the following” and “these five problems” with the applicable final problem ranges. Excluded the separate-sheet logistics and point values.",
+      "origin": "extraction",
+      "original_text": "Part 1. Work each of the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. These five problems will be worth 15 points each. Part 2. Answer the following with complete definitions or statements or short proofs. These five problems will be worth 5 points each.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2021-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block precedes Problem 1, and the second precedes Problem 6.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2021-may-part-2",
+      "message": "Combined the two group-specific instruction blocks into one instructions string and made their scopes explicit as Problems 1–5 and Problems 6–10.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2021-may-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block applies to Problems 1–5, and the second applies to Problems 6–10.",
+      "corrected_text": "For Problems 1–5: Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–10: Answer the following with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2021-aug-part-1",
+      "message": "Combined the two instruction blocks into one instructions string and stated directly which final problem ranges each block governs. Separate-sheet logistics and point values were omitted.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Each problem is worth 15 points. Answer the following with complete definitions or statements or proofs. Each problem is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2021-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between Problems 5 and 6.",
+      "corrected_text": "For Problems 1–5, work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–10, answer the following with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2021-aug-part-2",
+      "message": "Combined the two instruction blocks into one instructions string and identified their applicable problem ranges; omitted point values and the separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Each problem is worth 15 points. Answer the following with complete definitions or statements or proofs. Each problem is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2021-aug-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block precedes Problems 1–5, and the second precedes Problems 6–10.",
+      "corrected_text": "Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–10 with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2022-jan-part-2",
+      "message": "Combined the two instruction blocks into one string, stated their scopes using the final problem ranges, and omitted logistical and point-value language.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Each is worth 15 points. Answer the following with complete definitions or statements or proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2022-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6 and applies to problems 6–10.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2023-jan-part-1",
+      "message": "Combined the general instructions with the separate instruction applying to problems 6–10, replacing “the following” with the explicit final problem range. The excluded separate-sheet logistics were omitted.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper.\n\nAnswer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2023-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–10 with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2023-jan-part-1-2",
+      "message": "Combined the opening instruction block with the instruction appearing before problem 6 and made the latter's scope explicit as problems 6–10. Excluded the separate-sheet logistical instruction.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2023-jan-part-1-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2023-may-part-1",
+      "message": "Combined the two instruction blocks into one coherent instructions string and explicitly scoped the second block to problems 6–15; omitted point values and separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2023-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between problems 5 and 6 and applies to problems 6–15.",
+      "corrected_text": "Work problems 1–5 and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2023-may-part-1-2",
+      "message": "Combined the two instruction blocks into one coherent instruction string, stated their scopes using the final problem ranges, and omitted logistical directions and point values.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper (10 pts each problem). Answer the following with complete definitions or statements or short proofs (5 pts each problem).",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2023-may-part-1-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places “Answer the following with complete definitions or statements or short proofs” immediately before Problem 6.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2023-aug-part-1",
+      "message": "Combined the opening work/detail requirements with the later instruction block, explicitly identifying Problems 6–10 as the problems requiring complete definitions or statements or short proofs.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2023-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block preceded problems 1–5, and the second preceded problems 6–15.",
+      "corrected_text": null,
+      "exam_id": "topology-first-year-2024-jan-part-1",
+      "message": "Combined the two distinct instruction blocks into one instructions string and made the scope of the second block explicit as problems 6–15.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2024-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6; the separate-page requirement was omitted as exam logistics.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. For problems 6–10, answer with complete definitions or proofs.",
+      "exam_id": "topology-first-year-2023-aug-part-2",
+      "message": "Combined the opening instructions with the later instruction block and made its scope explicit as problems 6–10.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate page. Answer the following with complete definitions or proofs.",
+      "problem_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2023-aug-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places the second instruction block between problems 5 and 6.",
+      "corrected_text": "For problems 1–5, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
+      "exam_id": "topology-first-year-2024-jan-part-1-2",
+      "message": "Combined the two instruction blocks into one coherent instructions string and replaced “the first five problems” and “the following problems” with the explicit final ranges 1–5 and 6–15.",
+      "origin": "extraction",
+      "original_text": "For the first five problems, show all your work and support all statements. Answer the following problems with complete definitions, complete statements, an example, or a short proof.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2024-jan-part-1-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places the second instruction block between problems 5 and 6.",
+      "corrected_text": "For the first five problems, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
+      "exam_id": "topology-first-year-2024-jan-part-2",
+      "message": "Combined the two distinct instruction blocks into one coherent instruction string and replaced “the following problems” with the explicit final range 6–15.",
+      "origin": "extraction",
+      "original_text": "For the first five problems, show all your work and support all statements. Answer the following problems with complete definitions, complete statements, an example, or a short proof.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2024-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block precedes problems 1–5, and the second precedes problems 6–15.",
+      "corrected_text": "For problems 1–5, answer the following problems and show all your work. Support all statements to the best of your ability. For problems 6–15, answer the following with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2025-jan-part-1",
+      "message": "Combined the two instruction blocks into one instructions string and stated directly that the first block applies to problems 1–5 and the second to problems 6–15. Omitted separate-sheet logistics and point values.",
+      "origin": "extraction",
+      "original_text": "Answer the following problems and show all your work. Support all statements to the best of your ability. Use a separate sheet of paper for each problem. Each is worth 10 points. Answer the following with complete definitions or statements or short proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-jan-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction applies to problems 1–5, and the second appears immediately before problems 6–15.",
+      "corrected_text": "For problems 1–5, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
+      "exam_id": "topology-first-year-2024-aug-part-1",
+      "message": "Combined the two distinct instruction blocks into one instructions string and replaced their positional references with explicit final problem ranges.",
+      "origin": "extraction",
+      "original_text": "For the first five problems, show all your work and support all statements. Answer the following problems with complete definitions, complete statements, an example, or a short proof.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2024-aug-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places one instruction block before Problems 1–5 and another before Problems 6–15.",
+      "corrected_text": "For the first five problems, show all your work and support all statements. Answer Problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2025-jan-part-2",
+      "message": "Combined the two problem-group instruction blocks into one coherent instructions string, omitted logistical and point-value material, and replaced “the following” with the explicit final range “Problems 6–15.”",
+      "origin": "extraction",
+      "original_text": "For the first five problems, show all your work and support all statements. Use a separate sheet of paper for each problem. (Each problem 10 points.) Answer the following with complete definitions or statements or short proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block precedes problems 1–5, and the second precedes problems 6–15.",
+      "corrected_text": "For problems 1–5, answer the following problems and show all your work. Support all statements to the best of your ability. For problems 6–15, answer the following with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2025-may-part-1",
+      "message": "Combined the two instruction blocks into one coherent instruction string and stated their scopes explicitly as problems 1–5 and 6–15. Excluded the separate-sheet logistics and point values.",
+      "origin": "extraction",
+      "original_text": "Answer the following problems and show all your work. Support all statements to the best of your ability. Use a separate sheet of paper for each problem. Each is worth 10 points. Answer the following with complete definitions or statements or short proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-may-part-1.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6.",
+      "corrected_text": "For problems 1–5, show all your work and support all statements. For problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-first-year-2025-aug-part-2",
+      "message": "Combined the two instruction blocks into one instructions string and stated the second block directly in terms of problems 6–15; excluded separate-sheet logistics and point values.",
+      "origin": "extraction",
+      "original_text": "For the first five problems, show all your work and support all statements. Use a separate sheet of paper for each problem. (Each problem 10 points.) Answer the following with complete definitions or statements or short proofs. Each is worth 5 points.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-aug-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block precedes Problem 1, and the second precedes Problem 6.",
+      "corrected_text": "Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or proofs.",
+      "exam_id": "topology-first-year-2026-jan-part-2",
+      "message": "Combined the two instruction blocks into one coherent instruction string and stated their scopes using the final problem ranges. Excluded the separate-sheet logistics and point values.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper (10 pts each problem). Answer the following with complete definitions or statements or proofs (5 pts each problem).",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-first-year/topology-first-year-2026-jan-part-2.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Part I uses labels (1)–(5), and Part II restarts with labels 1–5.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-1993-may",
+      "message": "The source restarts top-level numbering in Part II. The five theorem-statement problems in Part I were numbered globally as problems 1–5, and the five proof/computation problems in Part II were renumbered globally as problems 6–10.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1993-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source instructs Part I to state the listed theorems and gives separate work, clarity, and proof-detail requirements for Part II.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-1993-may",
+      "message": "The separate Part I and Part II instruction blocks were combined into one instructions string, and their references were rewritten to use the final global problem ranges 1–5 and 6–10.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1993-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction applies to problems 1–4, and the second applies to problems 5–10.",
+      "corrected_text": "Answer problems 1–4 without giving proofs. Answer problems 5–10, giving proofs and examples.",
+      "exam_id": "topology-phd-1992-may",
+      "message": "Combined the two instruction blocks into one coherent instruction string and stated their scopes directly using the final problem ranges.",
+      "origin": "extraction",
+      "original_text": "Answer the following questions without giving proofs. Answering the following questions, giving proofs and examples.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1992-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places “Answer the following with complete definitions or statements or short proofs” between problems 5 and 6.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2000-may",
+      "message": "Combined the general instruction block with the separate instruction preceding problem 6 and rewrote “the following” as “problems 6–15” so that its scope remains explicit in the single instructions string.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2000-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction applies to problems 1–4, and the second applies to problems 5–10.",
+      "corrected_text": "Answer questions 1–4 without giving proofs. Answer questions 5–10, giving proofs or counterexamples.",
+      "exam_id": "topology-phd-1993-sep",
+      "message": "Combined the two instruction blocks and replaced “the following questions” with explicit final problem ranges so that each proof requirement remains unambiguous.",
+      "origin": "extraction",
+      "original_text": "Answer the following questions without giving proofs.\nAnswer the following questions, giving proofs or counterexamples.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-1993-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between source problems 5 and 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2000-sep",
+      "message": "Combined the global instruction block with the instruction appearing before problem 6 and replaced its local reference to “the following” with the explicit final range 6–15.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2000-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before Problem 6 and applies through Problem 15.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2001-jan",
+      "message": "Combined the opening instructions with the instruction preceding Problem 6 and made the latter's problem range explicit.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2001-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before Problem 6 and applies through Problem 15.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2002-may",
+      "message": "Combined the two instruction blocks into one coherent instruction string and made the scope of the second block explicit as Problems 6–15.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2002-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-phd-2004-jan",
+      "message": "Combined the two instruction blocks into one and made their scopes explicit: the first block applies to problems 1–5, and the second applies to problems 6–15.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2004-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before Problem 6 and applies through Problem 15.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2002-sep",
+      "message": "Combined the general work requirements with the separate response-format instruction for Problems 6–15 into one coherent instructions string.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2002-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-phd-2004-sep",
+      "message": "Combined the general work requirements with the separate instruction for the latter problem group, replacing “the following” in that second block with the explicit final range “problems 6–15.”",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2004-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6 and governs problems 6–15.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2006-jan",
+      "message": "Combined the general instruction block with the later instruction block and replaced “the following” in the latter with the explicit final range “problems 6–15.”",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2006-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-phd-2006-may",
+      "message": "Combined the two instruction blocks into one instructions string and made their applicable problem ranges explicit.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2006-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-phd-2008-may",
+      "message": "Combined the two instruction blocks into one coherent instructions string and replaced “the following” in the second block with “problems 6–15”; omitted the separate-sheet logistics.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2008-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between Problems 5 and 6 and applies to Problems 6–15.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2010-may",
+      "message": "Combined the opening instruction block with the separate instruction introducing Problems 6–15, and stated the latter directly in terms of its applicable problem range. The excluded separate-sheet logistics were omitted.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2010-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2012-may",
+      "message": "Combined the general instruction block with the instruction block preceding problem 6 and stated the latter directly for final problems 6–15. The separate-sheet logistical instruction was omitted.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2012-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between Problems 5 and 6 and changes the expected response style for Problems 6–15.",
+      "corrected_text": "Work Problems 1–5 and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2012-aug",
+      "message": "Combined the two authored instruction blocks into one coherent instruction string and made their respective problem ranges explicit.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2012-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The separate-sheet instruction was omitted as administrative logistics.",
+      "corrected_text": "For Problems 1–5: Work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–15: Answer the following with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2014-may",
+      "message": "Combined the two instruction blocks into one instructions string and made their applicable problem ranges explicit.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper.\n\nAnswer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2014-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places the second instruction immediately before problem 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2016-may",
+      "message": "Combined the general instruction block with the instruction applying to problems 6–15, and stated the latter’s scope explicitly in the single instructions string.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2016-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears between Problems 5 and 6 and therefore applies to Problems 6–15; the separate-sheet logistics were omitted.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions, statements, or short proofs.",
+      "exam_id": "topology-phd-2017-may",
+      "message": "Combined the two instruction blocks into one coherent instructions string and made the scope of the second block explicit as Problems 6–15.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper. Answer the following with complete definitions, statements, or short proofs.",
+      "problem_numbers": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before problem 6 and applies through problem 15.",
+      "corrected_text": "Work the following problems and show all your work. Support all statements to the best of your ability. For problems 6–15, answer with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2019-may",
+      "message": "Combined the general instruction block with the separate instruction applying to problems 6–15, replacing “the following” with the explicit final problem range.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all your work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The first instruction block applies to problems 1–5, while the second introduces problems 6–15.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2017-aug",
+      "message": "Combined the two instruction blocks into one coherent instruction string and replaced “the following” with explicit problem ranges to preserve the differing response requirements.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2017-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The separate-sheet instruction was omitted as excluded logistics; the second instruction block appears immediately before problem 6.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions, statements, or short proofs.",
+      "exam_id": "topology-phd-2020-may",
+      "message": "Combined the opening exam-wide instructions with the additional instruction preceding problems 6–15 and made the latter's scope explicit in the single instructions string.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper.\n\nAnswer the following with complete definitions, statements, or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2020-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-phd-2020-aug",
+      "message": "Combined the opening work requirements with the later response-format instruction and made the latter’s scope explicit as problems 6–15.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2020-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places “Answer the following with complete definitions, statements, or short proofs” immediately before Problem 6.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2022-aug",
+      "message": "Combined the general work requirements with the separate instruction block for Problems 6–15, explicitly stating the latter block's final problem range. The excluded separate-sheet instruction was omitted as logistical.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2022-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The second instruction block appears immediately before Problem 6 and governs Problems 6–15.",
+      "corrected_text": "Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2021-may",
+      "message": "Combined the opening exam instructions with the later instruction for Problems 6–15, omitted logistical directions and point values, and stated the later problem range explicitly.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all work. Support all statements to the best of your ability. Work each problem on a separate sheet of paper (10 pts each). Answer the following with complete definitions or statements or short proofs (5 pts each).",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2021-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places “Answer the following with complete definitions or statements or short proofs.” between problems 5 and 6.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2024-may",
+      "message": "Combined the opening instructions with the separate instruction block preceding problem 6, and made its scope explicit as problems 6–15.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2024-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source places the general instructions before problems 1–5 and the second instruction block immediately before problems 6–15.",
+      "corrected_text": "Work the following problems and show all your work. Support all statements to the best of your ability. Answer problems 6–15 with complete definitions or statements or short proofs.",
+      "exam_id": "topology-phd-2023-may",
+      "message": "Combined the general instruction block on page 1 with the separate instruction block on page 2, replacing the latter's reference to “the following” with the final problem range 6–15.",
+      "origin": "extraction",
+      "original_text": "Work the following problems and show all your work. Support all statements to the best of your ability. Answer the following with complete definitions or statements or short proofs.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2023-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "topology-phd-2024-aug",
+      "message": "Combined the two instruction blocks into one coherent instruction string and made their respective scopes explicit as problems 1–5 and problems 6–15.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2024-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Problems 1–5 require all work and support for statements; problems 6–15 call for complete definitions, complete statements, an example, or a short proof.",
+      "corrected_text": null,
+      "exam_id": "topology-phd-2025-aug",
+      "message": "Combined the two page-level instruction blocks into one coherent instruction string, replaced “the first five problems” and “the following ten problems” with final ranges 1–5 and 6–15, and omitted point values and excluded paper/margin logistics while preserving the distinct response-detail requirements.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2025-aug.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Instructions appeared in separate blocks on source pages 1 and 2.",
+      "corrected_text": "For problems 1–5, show all of your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
+      "exam_id": "topology-phd-2026-jan",
+      "message": "Combined the two problem-group instruction blocks into one coherent instructions string, stated the second group directly as problems 6–15, and omitted excluded logistics and point values.",
+      "origin": "extraction",
+      "original_text": "For the first five problems, show all of your work and support all statements. Use a separate sheet of paper for each problem. (Each problem 10 points.) Answer the following ten problems with complete definitions, complete statements, an example, or a short proof. (Each problem 5 points.)",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_pdf": "exams/topology-phd/topology-phd-2026-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source uses section headings with a single consecutive sequence of problem labels.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2005-sep",
+      "message": "Consolidated the three source sections into one global sequence: Problems 1–3 are Section 1, Problems 4–6 are Section 2, and Problems 7–9 are Section 3.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2005-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Source instruction: “Answer six questions and at least one from each section.”",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2005-sep",
+      "message": "Rewrote the selection instruction to state the at-least-one requirement directly in terms of the final problem ranges and incorporated the source section mapping.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2005-sep.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Problems 1–3 appeared under Section 1, problems 4–6 under Section 2, and problems 7–9 under Section 3.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2009-jan",
+      "message": "Removed the Section 1–3 divisions as structural fields, retained the consecutive global numbering 1–9, and added the section ranges to the instructions.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2009-jan.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-2010-may",
+      "message": "The three source sections were flattened into one problem list. Final problems 1–4 are from Section 1, problems 5–7 are from Section 2, and problems 8–10 are from Section 3; the already consecutive source labels were retained.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2010-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Source instruction: “Answer six questions and at least one from each section.”",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2010-may",
+      "message": "The selection rule was rewritten to identify the three sections by their final problem ranges.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2010-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Source Section 1 contains problems 1–3, Section 2 contains problems 4–6, and Section 3 contains problems 7–9.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2013-may",
+      "message": "Presented the problems as one global sequence from 1 through 9 and recorded the source section ranges in the instructions.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The original instruction was followed by a direct mapping of final problem ranges to Sections 1–3.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2013-may",
+      "message": "Added the final problem ranges for each source section to keep the selection rule explicit under the global numbering.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2013-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "The source numbers the three problems in each section as 1, 2, and 3.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2017-may",
+      "message": "Replaced the numbering restarted in each of Sections 1–3 with one consecutive global sequence: Section 1 became Problems 1–3, Section 2 became Problems 4–6, and Section 3 became Problems 7–9.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "Source instruction: “Answer six questions, at least one in each section.”",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2017-may",
+      "message": "Rewrote the selection rule to refer directly to the final global problem ranges and added the section-range mapping required by the numbering transformation.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2017-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": "Each source section contains problems numbered 1–3.",
+      "corrected_text": null,
+      "exam_id": "logic-phd-2018-may",
+      "message": "The source restarts problem numbering at 1 in each of three sections. The problems were renumbered consecutively: Section 1 became problems 1–3, Section 2 became problems 4–6, and Section 3 became problems 7–9.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2018-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": "The source organizes the questions into three sections whose internal numbering restarts.",
+      "corrected_text": "Answer six questions, at least one from each section: problems 1–3 are Section 1, problems 4–6 are Section 2, and problems 7–9 are Section 3.",
+      "exam_id": "logic-phd-2018-may",
+      "message": "The selection instruction was rewritten to identify each source section by its final problem range after global renumbering.",
+      "origin": "extraction",
+      "original_text": "Answer six questions, at least one in each section.",
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2018-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "numbering-transformation",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-2019-may",
+      "message": "Restarted numbering within the three source sections was replaced by one consecutive sequence: Set Theory became problems 1–3, Computability became problems 4–6, and Model theory became problems 7–9.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2019-may.pdf",
+      "status": "logged"
+    },
+    {
+      "category": "instruction-rewrite",
+      "context": null,
+      "corrected_text": null,
+      "exam_id": "logic-phd-2019-may",
+      "message": "The selection rule referring to “each section” was rewritten using the final problem ranges, and the source topic names were mapped to those ranges.",
+      "origin": "extraction",
+      "original_text": null,
+      "problem_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_pages": [
+        1
+      ],
+      "source_pdf": "exams/logic-phd/logic-phd-2019-may.pdf",
+      "status": "logged"
     }
   ],
   "purpose": "Completed structural transformations such as renumbering and instruction consolidation.",

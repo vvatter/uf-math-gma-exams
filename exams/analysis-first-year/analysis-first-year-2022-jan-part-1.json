@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2022-jan-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2022,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2022_01.pdf",
+  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\((a_n)\\) be a bounded real sequence. Let\n\\[\nU=\\{u:(\\exists N)(\\forall n\\geq N)(a_n<u)\\}\n\\]\nand\n\\[\nL=\\{\\ell:(\\exists N)(\\forall n\\geq N)(a_n>\\ell)\\}.\n\\]\nProve that \\(\\sup L\\) and \\(\\inf U\\) exist and satisfy \\(\\sup L\\leq\\inf U\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X\\) be the set of all bounded real-valued functions on the set \\(S\\). Prove that the rule\n\\[\nd(f,g)=\\sup\\{|f(s)-g(s)|:s\\in S\\}\n\\]\ndefines a metric on \\(X\\). Are closed and bounded subsets of \\(X\\) compact when \\(S\\) is finite? Explain.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Prove that if \\((x_n)_{n=0}^{\\infty}\\) converges to \\(x\\) in a metric space then the set \\(\\{x_n:n\\in\\mathbb{N}\\}\\cup\\{x\\}\\) is compact.",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Prove that the function \\(f:X\\to Y\\) between metric spaces is continuous if and only if its restriction \\(f|_K\\) to each compact subset \\(K\\) of \\(X\\) is continuous.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(f:X\\to Y\\) be a map between metric spaces. Consider the statements: Prove or disprove each of the implications (i) \\(\\Rightarrow\\) (ii) and (ii) \\(\\Rightarrow\\) (i).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "\\(f\\) maps Cauchy sequences to Cauchy sequences;",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(f\\) is uniformly continuous.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "The function \\(f:(0,\\infty)\\to\\mathbb{R}\\) is differentiable and \\(\\lim_{x\\to\\infty}f'(x)=b\\in\\mathbb{R}\\).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "For \\(h>0\\) fixed, calculate the limit of \\((f(x+h)-f(x))/x\\) as \\(x\\to\\infty\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Determine \\(b\\) if it is also known that \\(f(x)\\to a\\in\\mathbb{R}\\) as \\(x\\to\\infty\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

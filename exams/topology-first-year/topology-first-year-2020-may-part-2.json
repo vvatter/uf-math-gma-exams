@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2020-may-part-2",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2020,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2-2020_05.pdf",
+  "instructions": "Work the following problems and show all work. Support all statements to the best of your ability. Answer Problems 6–10 with complete definitions or statements or proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^3\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Prove that the set of irrational numbers \\(\\mathcal I \\subset \\mathbb R\\) cannot be presented as a countable union of closed sets each of which has empty interior in \\(\\mathcal I\\).",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that for every continuous map \\(f:S^1\\to S^1\\) there is \\(n\\in\\mathbb Z\\) such that \\(f\\) is homotopic to \\(z^n:S^1\\to S^1\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Show that every map \\(f:S^2\\to T\\) of the 2-sphere to the torus \\(T\\) is null-homotopic.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that the torus \\(T\\) is not homeomorphic to the surface of genus 2, \\(M_2=T\\mathbin{\\#}T\\).",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Does the sequence \\(f_n:\\mathbb R\\to\\mathbb R\\), \\(f_n(x)=\\sqrt{x}/n\\), converge in",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "the point-wise convergence topology?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "the uniform topology?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "compact open topology?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Is the space \\(I^I\\) separable where \\(I=[0,1]\\)?",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Seifert–van Kampen Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State and prove the Tychonoff Theorem.",
+      "subparts": []
+    }
+  ]
+}

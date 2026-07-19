@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2021-aug-part-2",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2021,
+  "month": "august",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2-2021_08.pdf",
+  "instructions": "For Problems 1–5, work the following problems and show all work. Support all statements to the best of your ability. For Problems 6–10, answer the following with complete definitions or statements or proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that \\(S^2\\) is not homeomorphic to \\(S^4\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Show that the Stone–Čech compactification \\(\\beta X\\) of \\(X\\) is connected if and only if \\(X\\) is connected.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(X_{\\ge 0}\\), \\(Y_{\\ge 0}\\), and \\(Z_{\\ge 0}\\) denote the nonnegative parts of the \\(x\\)-axis, the \\(y\\)-axis, and the \\(z\\)-axis in \\(\\mathbb{R}^3\\) respectively. Let \\(A=\\mathbb{R}^3\\setminus(X_{\\ge 0}\\cup Y_{\\ge 0}\\cup Z_{\\ge 0})\\). Is the fundamental group \\(\\pi_1(A)\\) abelian?",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Show that the torus \\(T\\) is not homeomorphic to the Klein bottle \\(K\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "By the definition the triod (or the letter T space) is a space homeomorphic to \\(X=([0,1]\\times\\{0\\})\\cup(\\{0\\}\\times[-1,1])\\subset\\mathbb{R}^2\\). Show that every continuous map of the triod to itself has a fixed point.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Does the sequence \\(f_n:\\mathbb{R}\\to\\mathbb{R}\\), \\(f_n(x)=\\ln\\left(x^{1/n}\\right)\\), converge in",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "the point-wise convergence topology?",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "the uniform topology?",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "compact open topology?",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "State the Borsuk–Ulam Theorem for \\(S^2\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(X=\\mathbb{R}\\) and \\(A=\\mathbb{Z}\\) be the reals and the integers respectively. Is the quotient space \\(Y=X/A\\) metrizable?",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "State the Seifert–van Kampen Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State the Urysohn Lemma.",
+      "subparts": []
+    }
+  ]
+}

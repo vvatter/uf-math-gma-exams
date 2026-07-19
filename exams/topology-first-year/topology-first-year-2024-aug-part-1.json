@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2024-aug-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2024,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2024_08.pdf",
+  "instructions": "For problems 1–5, show all your work and support all statements. Answer problems 6–15 with complete definitions, complete statements, an example, or a short proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(X\\) be a set. Show there is no bijection between \\(X\\) and \\(\\mathcal{P}(X)\\), the power set of \\(X\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Show that \\(\\mathbb{R}^\\omega\\) with the box topology is not connected.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that if \\(X\\) is a compact Hausdorff space, then \\(X\\) is a regular space.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(A\\) be a partially ordered set. The maximum principle states that there is a maximal totally ordered subset \\(B\\) of \\(A\\). Zorn’s lemma states that if every totally ordered subset of \\(A\\) has an upper bound in \\(A\\), then \\(A\\) has a maximal element. Prove that the maximum principle implies Zorn’s lemma.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\((X,d)\\) be a metric space. Suppose there exists some \\(\\varepsilon>0\\) such that for all \\(x\\in X\\), the closure \\(\\overline{B_\\varepsilon(x)}\\) of the \\(\\varepsilon\\)-ball about \\(x\\) is compact. Prove that \\(X\\) is complete.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Define what it means for a topological space \\(X\\) to be normal.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(X\\) be compact, and let \\(C_1,C_2,C_3,\\ldots\\) be a sequence of closed sets in \\(X\\). If \\(\\bigcap_{i=1}^k C_i\\) is nonempty for all \\(k\\geq 1\\), then prove that \\(\\bigcap_{i=1}^\\infty C_i\\) is nonempty.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(\\{A_n\\}_{n\\in\\mathbb{Z}_+}\\) be a countable collection of countable sets. Prove that the union \\(\\bigcup_{n\\in\\mathbb{Z}_+}A_n\\) is countable.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Show that \\([0,1]\\) and \\([0,1)\\) are not homeomorphic.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Show that \\(f:\\mathbb{R}\\to\\mathbb{R}^\\omega\\) defined by \\(f(x)=(x,x,x,\\ldots)\\) is not continuous if \\(\\mathbb{R}^\\omega\\) has the box topology.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Give an example of a topological space that is connected but not locally connected.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the Baire Category Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Let \\((x_n)\\) be a Cauchy sequence in the metric space \\(X\\). Show that if \\((x_n)\\) has a subsequence \\((x_{n_k})\\) that converges, then \\((x_n)\\) also converges.",
+      "subparts": []
+    },
+    {
+      "number": 14,
+      "text": "Give an example of a metric space \\((X,d)\\) and a continuous function \\(f:X\\to X\\) satisfying (i)–(ii).",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "\\(d(f(x),f(y))<d(x,y)\\) for all \\(x,y\\in X\\) with \\(x\\ne y\\)",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(f(x)\\ne x\\) for all \\(x\\in X\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "text": "Let \\(X\\) be a topological space. Suppose there is a space \\(Y\\) such that (i)–(iii). Prove that \\(X\\) is locally compact.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "\\(X\\) is a subspace of \\(Y\\),",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "\\(Y\\setminus X\\) is a single point, and",
+          "subparts": []
+        },
+        {
+          "label": "(iii)",
+          "text": "\\(Y\\) is compact Hausdorff.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

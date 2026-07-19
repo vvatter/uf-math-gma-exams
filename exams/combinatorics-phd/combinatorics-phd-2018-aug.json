@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "combinatorics-phd-2018-aug",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2018,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/Qual2018AugustCombinatorics.pdf",
+  "instructions": null,
+  "problems": [
+    {
+      "number": 1,
+      "text": "Find a generating function for the number of positive integer solutions to \\(x_1+2x_2+3x_3+4x_4+5x_5=n\\).",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Tickets numbered \\(\\{1,2,\\ldots,n\\}\\) are drawn from an urn at random one after the other without replacement. What is the probability that the number \\(r\\) is drawn on the \\(k^{th}\\) drawing?\n\nAmong a population of \\(n+1\\) people, a rumor is spread at random. One person tells the rumor to a second, who in turn repeats it to a third person, etc. What is the probability that the rumor will be told \\(k\\) times without being repeated to any person?",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Prove that there exists no simple, bipartite, planar graph with minimum degree at least \\(4\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(\\mu\\) be the largest eigenvalue of the adjacency matrix of a graph \\(G\\) and \\(\\Delta\\) the maximum degree of \\(G\\). Prove that \\(\\mu\\leq\\Delta\\).\n\n(Hint: Consider the largest, in absolute value, coordinate of a corresponding eigenvector.)",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that a \\(k\\)-regular graph of girth \\(4\\) has at least \\(2k\\) vertices, and a \\(k\\)-regular graph of girth \\(5\\) has at least \\(k^2+1\\) vertices. Draw a \\(3\\)-regular graph of girth \\(4\\) with \\(2\\cdot 3=6\\) vertices and a \\(3\\)-regular graph of girth \\(5\\) with \\(3^2+1=10\\) vertices.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(f_n\\) be the number of all compositions of the integer \\(n\\) into odd parts. Find the exponential order of the numbers \\(f_n\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Recall that a permutation is called even if it has an even number of even cycles, and it is called odd if it has an odd number of even cycles. Also recall that a derangement is a permutation with no \\(1\\)-cycles.\n\nLet \\(A_n\\) be the number of all even derangements of length \\(n\\), and let \\(B_n\\) be the number of all odd derangements of length \\(n\\). Find an exact formula for \\(A_n-B_n\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that if a \\((v,k,\\lambda)\\) BIBD exists with block set \\(\\mathcal{B}\\) on a point set \\(V\\), then the set \\(\\mathcal{B}'=\\{V\\setminus B\\mid B\\in\\mathcal{B}\\}\\) is a BIBD.",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Construct a \\((7,4,2)\\) BIBD.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

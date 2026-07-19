@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "id": "algebra-phd-1999-sep",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 1999,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_1999_09.pdf",
+  "instructions": "Please do 7 out of the 11 problems below.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Here \\(\\mathbb{Z}_n\\) denotes the cyclic group of order \\(n\\).",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Let \\(p\\) be a prime. How many subgroups of order \\(p^2\\) does the abelian group \\(\\mathbb{Z}_{p^3}\\oplus\\mathbb{Z}_{p^2}\\) have?",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "What are the elementary divisors of the group \\(\\mathbb{Z}_{26}\\oplus\\mathbb{Z}_{42}\\oplus\\mathbb{Z}_{49}\\oplus\\mathbb{Z}_{200}\\)? What are its invariant factors?",
+          "subparts": []
+        },
+        {
+          "label": "(c).",
+          "text": "Determine up to isomorphism all abelian groups of order 20.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Exhibit an automorphism of the cyclic group of order 6 that is not an inner automorphism.",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "Show that if a normal subgroup \\(N\\) of order \\(p\\) (\\(p\\) prime) is contained in a group \\(G\\) of order \\(p^n\\), then \\(N\\) is in the center of \\(G\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Is the additive group \\(\\mathbb{Q}\\) of rationals a divisible abelian group?",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "Show that no nonzero finite abelian group is divisible.",
+          "subparts": []
+        },
+        {
+          "label": "(c).",
+          "text": "Show that no nonzero free abelian group is divisible.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(R\\) and \\(S\\) be rings and \\(A_R, {}_R B_S, C_S\\) (bi)-modules. Demonstrate an isomorphism of abelian groups between \\(\\operatorname{Hom}_S(A\\otimes_R B,C)\\) and \\(\\operatorname{Hom}_R(A,\\operatorname{Hom}_S(B,C))\\). (You should state very clearly what must be checked.)",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(R\\) be a ring, let\n\\[\n0\\longrightarrow A\\xrightarrow{f}B\\xrightarrow{g}C\\longrightarrow 0\n\\]\nbe a short exact sequence of left \\(R\\)-modules and let \\(D\\) be a right \\(R\\)-module. Show that\n\\[\n0\\longrightarrow D\\otimes_R A\\xrightarrow{1_D\\otimes f}D\\otimes_R B\\xrightarrow{1_D\\otimes g}D\\otimes_R C\\longrightarrow 0\n\\]\nis a short exact sequence of abelian groups under each one of the following hypotheses:",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "\\(0\\longrightarrow A\\xrightarrow{f}B\\xrightarrow{g}C\\longrightarrow 0\\) is split exact.",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "\\(R\\) has an identity and \\(D\\) is a free right \\(R\\)-module.",
+          "subparts": []
+        },
+        {
+          "label": "(c).",
+          "text": "\\(R\\) has an identity and \\(D\\) is a projective unitary right \\(R\\)-module.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\(A\\) be a commutative ring with 1 such that every element \\(x\\in A\\) satisfies \\(x^n=x\\) for some \\(n>1\\), depending on \\(x\\). Prove that",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "every prime ideal of \\(A\\) is maximal.",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "the Jacobson radical of \\(A\\) is \\((0)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "Let \\(C\\) and \\(D\\) be categories, and let \\(S\\) and \\(T\\) be covariant functors from \\(C\\) to \\(D\\).",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Define a natural isomorphism \\(\\alpha:S\\to T\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "If \\(B\\) is a unitary left module over a ring \\(R\\) with identity, show that there is a “natural” isomorphism of modules\n\\[\n\\alpha_B:R\\otimes_R B\\cong B.\n\\]",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Give an example of commutative rings \\(R,A\\) with \\(R\\subset A\\), where \\(A\\) is Noetherian but \\(R\\) is not.",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "Let \\(R=K[x,y]\\) be the polynomial ring in two variables over the field \\(K\\), let \\(A\\) denote the ideal \\((xy,y^2)\\) in \\(R\\) and let \\(c\\in K\\). Show that\n\\[\nA=(y)\\cap(x+cy,y^2)\n\\]\nand that this is a primary decomposition.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Show that if \\(S\\) is a multiplicative subset of a Dedekind domain \\(R\\) (with \\(1\\in S\\), \\(0\\notin S\\)), then \\(S^{-1}R\\) is a Dedekind domain.",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "Show that if \\(I\\) is a nonzero ideal in a Dedekind domain, then \\(R/I\\) is an Artinian ring.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "text": "Let \\(p\\) be a prime and \\(n\\geq 1\\) an integer. Show that \\(F\\) is a finite field with \\(p^n\\) elements if and only if \\(F\\) is a splitting field of \\((x^{p^n}-x)\\) over the field \\(\\mathbb{Z}_p\\) of \\(p\\) elements.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a).",
+          "text": "Give an example of fields \\(M\\supset L\\supset K\\) such that \\(M/L\\) and \\(L/K\\) are normal extensions, but \\(M/K\\) is not normal. Justify your answer.",
+          "subparts": []
+        },
+        {
+          "label": "(b).",
+          "text": "Let \\(L\\supset K\\) be fields such that \\([L:K]=8\\). Prove that there exist \\(\\alpha,\\beta,\\gamma\\in L\\) such that \\(L=K(\\alpha,\\beta,\\gamma)\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

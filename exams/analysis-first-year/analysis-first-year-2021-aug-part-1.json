@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2021-aug-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2021,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2021_08.pdf",
+  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be continuous. Prove that if \\(\\limsup_{n\\to\\infty} f(n)=1\\) and \\(\\liminf_{n\\to\\infty} f(n)=-1\\) then \\(f\\) has infinitely many zeros.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(f:X\\to Y\\) be a continuous bijection between metric spaces. For each of the following statements, give a proof or a counterexample, as appropriate:",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "If \\(X\\) is compact then \\(f^{-1}\\) is continuous;",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "if \\(Y\\) is compact then \\(f^{-1}\\) is continuous.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "The function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) satisfies \\(\\lim_{x\\to-\\infty}f(x)=0\\) and \\(\\lim_{x\\to\\infty}f(x)=0\\). Prove that if \\(f\\) is continuous then it is uniformly continuous.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\((a_n)_{n=0}^{\\infty}\\) be a sequence of positive reals. Prove that if the series \\(\\sum_{n=0}^{\\infty}a_n\\) converges then so does the series \\(\\sum_{n=0}^{\\infty}\\sqrt{a_na_{n+1}}\\). Prove also that the converse holds when \\((a_n)_{n=0}^{\\infty}\\) is decreasing.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let the function \\(f\\) be defined on an open interval about \\(0\\); assume that \\(f(0)=0\\) and that \\(f\\) is differentiable at \\(0\\). When \\(n\\) is a positive integer, determine the value of the limit\n\\[\n\\lim_{x\\to 0}\\frac{1}{x}\\left[f(x)+f\\!\\left(\\frac{x}{2}\\right)+f\\!\\left(\\frac{x}{3}\\right)+\\cdots+f\\!\\left(\\frac{x}{n}\\right)\\right].\n\\]",
+      "subparts": []
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "logic-phd-2000-may",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2000,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2000_05.pdf",
+  "instructions": "Answer 7 questions, including at least one from each of the four segments. Problems 1–4 concern General Logic; problems 5–7 concern Model Theory; problems 8–10 concern Set Theory; and problems 11–13 concern Recursion Theory.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "State Gödel’s incompleteness theorem, and explain the role of Gödel numbering in its proof.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Prove that there is no finite set \\(\\Gamma\\) of sentences in the language of groups such that a group \\(G\\) satisfies all the sentences in \\(\\Gamma\\) if and only if \\(G\\) is not torsion free. [The group \\(G\\) is torsion free if \\(g^n \\ne e\\) for all \\(g \\ne e\\) in \\(G\\).]",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that any complete, finitely axiomatizable first-order theory is decidable.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Give an example of two models which are elementarily equivalent, but not isomorphic.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "State and sketch a proof of the downward Löwenheim–Skolem theorem.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "State the omitting types theorem, and use it to prove that any \\(\\omega\\)-complete theory for arithmetic has an \\(\\omega\\)-model.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "State and sketch a proof of the Łoś theorem about ultraproducts of models.",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Prove that a countable union of countable sets is countable.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Sketch the proof that \\(L \\models \\mathrm{GCH}\\).",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "Prove that if \\(\\kappa\\) is a regular, uncountable cardinal then any diagonal intersection of closed and unbounded subsets of \\(\\kappa\\) is closed and unbounded.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Show that a function \\(h:\\omega \\to \\omega\\) is (partial) recursive if and only if its graph is recursively enumerable; and that if \\(h\\) is total then its graph is recursive.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the halting problem, and prove that it is undecidable.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Explain why, for any \\(A \\subset \\omega\\), there are at most countably many sets \\(B\\) such that \\(B <_T A\\).",
+      "subparts": []
+    }
+  ]
+}

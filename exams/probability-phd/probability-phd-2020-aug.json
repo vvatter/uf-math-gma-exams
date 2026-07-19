@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "probability-phd-2020-aug",
+  "subject": "PhD Probability",
+  "subject_tag": "probability-phd",
+  "year": 2020,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Exam-Probability_2020_08.pdf",
+  "instructions": "Carefully justify your answers.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "State the weak and strong law of large numbers for i.i.d. random variables.",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Prove the weak law of large numbers (for i.i.d. random variables).",
+          "subparts": []
+        },
+        {
+          "label": "3.",
+          "text": "Prove the strong law of large numbers under the additional assumption of finite fourth moment \\(\\bigl(\\mathbb{E}[X_1^4]<+\\infty\\bigr)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\(X,Y\\) be independent and uniformly distributed on \\([0,1]\\).",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Find the density of the random variable \\(X+Y\\).",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Find the density of the random variable \\(\\mathbb{E}[X\\mid X+Y]\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let \\(\\{X_n\\}\\) be a sequence of random variables uniformly bounded, that is, there exists \\(M>0\\) such that for all \\(n\\in\\mathbb{N}\\), \\(|X_n|\\le M\\). Prove that \\(\\{X_n\\}\\) converges to \\(0\\) in \\(L^1\\) if and only if \\(\\{X_n\\}\\) converges to \\(0\\) in probability.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Let \\(\\{X_n\\}\\) be a sequence of random variables such that for all \\(n\\ge 1\\), \\(X_n\\) has a Poisson distribution of parameter \\(n\\). Does the random variable\n\\[\n\\frac{X_n-n}{\\sqrt n}\n\\]\nconverges in distribution as \\(n\\to+\\infty\\)? If so, what is the limit? What about convergence in probability? Carefully justify all your answers.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(\\{X_n\\}\\) be a sequence of i.i.d. random variables in \\(L^1\\) \\(\\bigl(\\mathbb{E}[|X_1|]<+\\infty\\bigr)\\). Take \\(\\mathcal{F}_n=\\sigma\\{X_1,\\ldots,X_n\\}\\), \\(n\\ge 1\\), and denote \\(S_n=\\sum_{k=1}^n X_k\\), \\(S_0=0\\).",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Let \\(\\tau\\) be an \\(\\{\\mathcal{F}_n\\}\\)-stopping time in \\(L^1\\). Prove that \\(S_\\tau\\) is in \\(L^1\\), and\n\\[\n\\mathbb{E}[S_\\tau]=\\mathbb{E}[X_1]\\mathbb{E}[\\tau].\n\\]",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Let \\(\\{X_n\\}\\) be a sequence of i.i.d. random variables such that \\(\\mathbb{P}(X_1=1)=\\mathbb{P}(X_1=-1)=\\frac12\\). Denote \\(S_n=\\sum_{k=1}^n X_k\\), \\(S_0=0\\), and \\(T=\\inf\\{n\\ge 0:S_n=1\\}\\). Prove that \\(\\mathbb{E}[T]=+\\infty\\). (One may use question 1.)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\(X_1,\\ldots,X_n\\) be a sequence of i.i.d. random variables in \\(L^1\\). Compute \\(\\mathbb{E}[X_1\\mid X_1+\\cdots+X_n]\\).\n\nHint: for all \\(i,j\\in\\{1,\\ldots,n\\}\\), \\(\\mathbb{E}[X_i\\mid X_1+\\cdots+X_n]=\\mathbb{E}[X_j\\mid X_1+\\cdots+X_n]\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Give the definition of a standard Brownian motion.",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Let \\(\\{B_t\\}\\) and \\(\\{\\widetilde B_t\\}\\) be two independent standard Brownian motion. Let \\(\\rho\\in(0,1)\\). Define, for \\(t\\ge 0\\),\n\\[\nX_t=\\rho B_t+\\sqrt{1-\\rho^2}\\,\\widetilde B_t.\n\\]\nIs \\(\\{X_t\\}\\) a standard Brownian motion? Carefully justify.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "Let \\(\\{B_t\\}\\) be a standard Brownian motion.",
+      "subparts": [
+        {
+          "label": "1.",
+          "text": "Fix \\(u>0\\). Prove that \\(M_t=e^{uB_t-\\frac12u^2t}\\) is a martingale (with respect to the same filtration as \\(\\{B_t\\}\\)).",
+          "subparts": []
+        },
+        {
+          "label": "2.",
+          "text": "Fix \\(a>0\\). Define \\(T_a=\\inf\\{t\\ge 0:B_t=a\\}\\). Prove that \\(T_a<+\\infty\\) a.s. and \\(\\mathbb{E}[T_a]=+\\infty\\).\n\nHint: One may find the density of \\(T_a\\) by considering \\(X_t=\\max_{0\\le s\\le t}B_s\\), and noticing that \\(\\{T_a\\le t\\}=\\{X_t\\ge a\\}\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

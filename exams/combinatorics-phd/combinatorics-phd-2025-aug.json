@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "combinatorics-phd-2025-aug",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2025,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics_2025_08.pdf",
+  "instructions": null,
+  "problems": [
+    {
+      "number": 1,
+      "text": "Find the number of sequences of length \\(n \\leq 26\\) of letters from the alphabet, each such sequence required to be in alphabetical order with no letter repeated.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(n \\geq 3\\) be an odd number. Prove that the sequence\n\\[\n\\binom{n}{1},\\binom{n}{2},\\ldots,\\binom{n}{\\frac{n-1}{2}}\n\\]\ncontains an odd number of odd numbers.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Find a second order linear recurrence for the number of ways to properly 3-color an \\(n\\)-cycle. (No two adjacent vertices receive the same color.)",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "In a tournament, each player plays every other player exactly once, except in the process 3 players dropped out after playing exactly 2 games each. If 50 games were played, how many games were played just among the 3 players who dropped out? Explain your answer.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Suppose a convex polyhedron has 6 vertices and 12 edges. Prove that each facet is a triangle.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(A(n)\\) be the number of set partitions of \\([n]\\) such that \\(i\\) and \\(i+1\\) never occur in the same block for any \\(i=1,2,\\ldots,n-1\\). Show that\n\\[\nA(n)=\\sum_{i=0}^{n-1}(-1)^i\\binom{n-1}{i}B(n-i),\n\\]\nwhere \\(B(n)\\) is the \\(n^{th}\\) Bell number. Alternatively, show that\n\\[\nA(n)=B(n-1).\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(P\\) be a finite poset with a bottom element \\(0\\). Show that if \\(x\\) covers exactly one element of \\(P\\), then\n\\[\n\\mu(x,0)=\n\\begin{cases}\n-1 & \\text{if }x\\text{ covers }0,\\\\\n0 & \\text{otherwise.}\n\\end{cases}\n\\]\nFor any \\(n\\in\\mathbb{Z}\\), construct a poset containing an element \\(x\\) with \\(\\mu(x)=n\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Prove that a simple \\(k\\)-regular graph with girth \\(k\\) has order at least \\(2k\\).",
+      "subparts": []
+    }
+  ]
+}

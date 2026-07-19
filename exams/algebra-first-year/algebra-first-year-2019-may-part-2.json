@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "algebra-first-year-2019-may-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2019,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-2-2019_05.pdf",
+  "instructions": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "State and prove the Chinese Remainder Theorem for rings.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let \\(R=\\mathbb{Z}[\\sqrt{-1}]\\) be the ring of Gaussian integers. Suppose that \\(F\\) is a finite field of characteristic \\(5\\), and \\(\\phi:R\\to F\\) is a (unital) ring homomorphism. Prove that \\(R/\\ker(\\phi)\\) has exactly \\(5\\) elements.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Let \\(\\omega=\\frac{-1+\\sqrt{-3}}{2}\\in\\mathbb{C}\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that \\(\\omega\\) is a root of the polynomial \\(f(x)=x^2+x+1\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that the set \\(\\mathbb{Z}[\\omega]=\\{a+b\\omega:a,b\\in\\mathbb{Z}\\}\\) is a subring of \\(\\mathbb{C}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(\\mathbb{Z}[\\omega]\\) is a Euclidean domain with respect to the norm \\(N(\\alpha)=\\alpha\\overline{\\alpha}\\) for all \\(\\alpha\\in\\mathbb{Z}[\\omega]\\), where \\(\\overline{\\alpha}\\) denotes the complex conjugate of \\(\\alpha\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "Let \\(R\\) be an integral domain, and \\(M\\) be an \\(R\\)-module.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define the rank of \\(M\\);",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that if \\(M\\) is a free \\(R\\)-module of rank \\(n\\), (where \\(n\\) is a non-negative integer), then the rank of any submodule of \\(M\\) is at most \\(n\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Let \\(p\\) be an odd prime. Let \\(A\\in\\operatorname{GL}(2,p)\\) be an invertible two by two matrix over the field with \\(p\\) elements such that \\(A\\) has order \\(2\\) and \\(A\\ne-I\\) (where \\(I\\) is the identity matrix). Prove that \\(A\\) is conjugate to the diagonal matrix whose diagonal entries are \\(-1\\) and \\(1\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example of an element of order \\(2\\) in \\(\\operatorname{GL}(2,2)\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Let \\(F/K\\) be a field extension.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define what it means to say that \\(\\theta\\in F\\) is algebraic over \\(K\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Let \\(A\\) be the set of all elements of \\(F\\) that are algebraic over \\(K\\). Prove that \\(A\\) is a subfield of \\(F\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that every element of \\(F\\) that is not in \\(A\\) is transcendental over \\(A\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

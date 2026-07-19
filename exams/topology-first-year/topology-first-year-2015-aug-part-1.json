@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "topology-first-year-2015-aug-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2015,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Topology-1_2015_08.pdf",
+  "instructions": "Answer all questions and work all problems. Answer Problems 8–13 with complete definitions or statements or short proofs.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Suppose that \\(f:X\\to Y\\) is continuous and onto. Show that if \\(X\\) is compact, then \\(Y\\) is also compact.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Suppose that \\(A\\subset X\\) is connected. Show that the closure of \\(A\\), \\(\\overline{A}\\), is also connected..",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "State and prove the Banach Fixed-Point Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Suppose that \\(X\\) is a compact metric space. Show that if \\(\\{x_i\\}\\) is a sequence of points in \\(X\\), then there is a point \\(z\\in X\\) and a subsequence, \\(\\{x_{i_j}\\}\\), such that \\(x_{i_j}\\to z\\).",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Give an example of a sequence of functions \\(f_i:[0,1]\\to[0,1]\\) such that \\(f_i(x)\\to g(x)\\) for all \\(x\\in[0,1]\\), but such that \\(g:[0,1]\\to[0,1]\\) is not continuous..",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Suppose that \\(X\\) is a set and that \\(f:X\\to 2^X\\). Show that \\(f\\) cannot be onto.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Suppose that \\(X\\) is a complete metric space that is countably infinite. Show that \\(X\\) has an isolated point, i.e., there is a point \\(x\\in X\\) such that \\(\\{x\\}\\) is open in \\(X\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "State The Urysohn Lemma.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Show that \\([0,1)\\) is not compact.",
+      "subparts": []
+    },
+    {
+      "number": 10,
+      "text": "State the Tietze Extension Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "State the Tychonoff Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 12,
+      "text": "State the Alexander Subbase Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 13,
+      "text": "Give an example of a Hausdorff space that is not normal.",
+      "subparts": []
+    }
+  ]
+}

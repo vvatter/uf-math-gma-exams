@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "id": "algebra-phd-2019-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2019,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Algebra-2019_05.pdf",
+  "instructions": "Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\(F\\) be a finite field and let \\(n \\geq 1\\).",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that there is an extension \\(E/F\\) of degree \\(n\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that if \\(E'/F\\) is another extension of degree \\(n\\) then there is an isomorphism \\(\\sigma:E\\to E'\\) such that \\(\\sigma|_F=\\operatorname{id}_F\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Prove that \\(E/F\\) is Galois, with cyclic Galois group.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Let \\(C/K\\) be a field extension.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Define what it means for \\(C\\) to be an algebraic closure of \\(K\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Prove that \\(C\\) is an algebraic closure of \\(K\\) if and only if \\(C\\) is algebraic over \\(K\\) and for every algebraic extension \\(L\\) of \\(K\\) there is a field map \\(\\sigma:L\\to C\\) such that \\(\\sigma|_K=\\operatorname{id}_K\\).",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "Let \\(R\\) be an integral domain, let \\(D\\) be a divisible \\(R\\)-module, and let \\(T\\) be a torsion \\(R\\)-module. Prove that \\(D\\otimes_R T=\\{0\\}\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Let \\(C\\) be a category and let \\(f:X\\to Y\\) be a \\(C\\)-morphism.",
+          "subparts": [
+            {
+              "label": "i.",
+              "text": "Define what it means for \\(f\\) to be an epimorphism.",
+              "subparts": []
+            },
+            {
+              "label": "ii.",
+              "text": "Define what it means for \\(f\\) to be a monomorphism.",
+              "subparts": []
+            }
+          ]
+        },
+        {
+          "label": "(b)",
+          "text": "Give an example of a category \\(C\\) and a \\(C\\)-morphism \\(f\\) which is an epimorphism and a monomorphism, but not an isomorphism.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "text": "Prove that the group \\(G\\) which is described below using generators and relations is not solvable.\n\\[\nG=\\langle x,y\\mid x^6=y^2=1\\rangle\n\\]",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Let \\(R\\) be a Noetherian ring. Prove that the ring \\(R[[X]]\\) is Noetherian.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Let \\(S\\) be a commutative ring with \\(1\\), let \\(R\\) be a subring of \\(S\\) which contains \\(1_S\\), and let \\(\\alpha\\in S\\). Suppose there is a subring \\(T\\subset S\\) such that \\(T\\supset R[\\alpha]\\) and \\(T\\) is finitely generated as an \\(R\\)-module. Prove that \\(\\alpha\\) is integral over \\(R\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Let \\(R\\) be a commutative ring with \\(1\\) and let \\(D\\) be a subset of \\(R\\) such that \\(1_R\\in D\\) and \\(D\\) is closed under multiplication. Prove that if\n\\[\n0\\longrightarrow A\\longrightarrow B\\longrightarrow C\\longrightarrow 0\n\\]\nis an exact sequence of \\(R\\)-modules then the induced sequence of \\(D^{-1}R\\)-modules\n\\[\n0\\longrightarrow D^{-1}A\\longrightarrow D^{-1}B\\longrightarrow D^{-1}C\\longrightarrow 0\n\\]\nis also exact.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Determine which of the following are Dedekind domains. Give a brief explanation in each case.",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(\\mathbb{Z}[\\sqrt{-3}]\\)",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(\\mathbb{C}[X]\\)",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "\\(\\mathbb{Z}[X]\\)",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "text": "Let \\(R\\) be a ring with \\(1\\). Let \\(S\\) denote the set of primitive ideals of \\(R\\), that is, the annihilators in \\(R\\) of simple left \\(R\\)-modules. Let \\(T\\) denote the set of maximal left ideals in \\(R\\). Prove that \\(\\bigcap_{P\\in S}P=\\bigcap_{L\\in T}L\\).",
+      "subparts": []
+    },
+    {
+      "number": 11,
+      "text": "Let \\(R\\) be a ring with \\(1\\) and let \\(M\\) be an \\(R\\)-module which is generated by the union of its simple submodules. Prove that if \\(N\\subset M\\) is a submodule then there is a submodule \\(N'\\subset M\\) such that \\(M=N\\oplus N'\\).",
+      "subparts": []
+    }
+  ]
+}

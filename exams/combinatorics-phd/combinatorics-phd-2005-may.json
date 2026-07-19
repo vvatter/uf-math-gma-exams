@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "combinatorics-phd-2005-may",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2005,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Combinatorics_2005_05.pdf",
+  "instructions": "Show your work.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Prove that, for any \\(n+1\\) numbers chosen from the set \\(\\{1,2,3,\\ldots,2n\\}\\), one divides another.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State the Multiplier Theorem and use it to find two normalized \\((11,5,2)\\)-difference sets. (Normalized means that the sum of its elements is \\(0\\).)",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that a plane graph for which every face has an even number of edges must be bipartite.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Prove that for a binary linear code \\(C\\), either all the codewords have even weight or exactly half the codewords have even weight. Show by example that this is not true for all ternary codes. Prove that if \\(C\\) is a self-dual binary linear code, then all the codewords have even weight.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Find the number of cycles of length \\(2n\\) in \\(K_{n,n}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Find the number of \\(6\\)-cycles in \\(K_{m,n}\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "Find the number of \\(6\\)-cycles in the \\(n\\)-cube.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "Find a recurrence for the number \\(a_n\\) of ways of going up \\(n\\) stairs if we may take one or two steps at a time. Find the generating function for the sequence of \\(a_n\\) and an explicit formula for \\(a_n\\).",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "Prove that for a \\((v,k,\\lambda)\\)-BIBD we have \\(\\lambda(v-1)=r(k-1)\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "Consider a symmetric \\((v,k,\\lambda)\\)-BIBD and denote the order by \\(n:=k-\\lambda\\). Using calculus to minimize, prove that \\(v\\geq 4n-1\\).",
+          "subparts": []
+        },
+        {
+          "label": "(c)",
+          "text": "If \\(v=4n-1\\), show that \\((v,k,\\lambda)=(4n-1,2n-1,n-1)\\) or \\((4n-1,2n,n)\\). Provide a family of symmetric designs with one of these sets of parameters.",
+          "subparts": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "If \\(\\lambda\\) is an eigenvalue of (the adjacency matrix \\(A\\) of) a graph with \\(n\\) vertices, \\(m\\) edges and maximum degree \\(\\Delta\\), then prove that",
+      "subparts": [
+        {
+          "label": "(a)",
+          "text": "\\(\\lambda\\leq\\Delta\\).",
+          "subparts": []
+        },
+        {
+          "label": "(b)",
+          "text": "\\(\\lambda\\leq\\sqrt{\\frac{2m(n-1)}{n}}\\).\n\nHint on (b): use the trace of \\(A\\), \\(A^2\\) and an appropriate inequality.",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}

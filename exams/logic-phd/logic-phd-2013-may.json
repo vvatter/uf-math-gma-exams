@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "logic-phd-2013-may",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2013,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2013_05.pdf",
+  "instructions": "Answer six questions and at least one from each section. Problems 1–3 are from Section 1, problems 4–6 are from Section 2, and problems 7–9 are from Section 3.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Show that the theory of the class of infinite sets is complete and decidable, but is not finitely axiomatizable.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "State and sketch a proof of the Łoś theorem about ultraproducts of models.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Show that for any elementary chain \\(\\{\\mathcal A_i\\}_{i\\in\\omega}\\) of structures, \\(\\mathcal A_i\\) is an elementary submodel of the union \\(\\mathcal A\\).",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "State and prove the Schröder–Bernstein Theorem.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Show that Zorn’s Lemma implies the Well-Ordering Principle.",
+      "subparts": []
+    },
+    {
+      "number": 6,
+      "text": "Show that for any notion of forcing \\(\\mathcal P\\) and any countable set \\(\\mathcal D\\) of \\(\\mathcal P\\)-dense sets, there exists a \\(\\mathcal D\\)-generic \\(\\mathcal P\\)-filter.",
+      "subparts": []
+    },
+    {
+      "number": 7,
+      "text": "Prove that if \\(X\\subseteq\\omega\\) has an infinite computably enumerable subset \\(A\\), then it has an infinite computable subset \\(B\\).",
+      "subparts": []
+    },
+    {
+      "number": 8,
+      "text": "Sketch the proof that there are \\(\\le_m\\)-incomparable c.e. sets.",
+      "subparts": []
+    },
+    {
+      "number": 9,
+      "text": "Explain why the set \\(WF\\) of well-founded trees in \\(\\omega^*\\) and the set \\(WO\\) of well-orderings of \\(\\omega\\) are \\(\\Pi^1_1\\) complete and prove the Boundedness Principle, that any \\(\\Sigma^1_1\\) subset of \\(WO\\) is bounded below \\(\\omega_1\\).",
+      "subparts": []
+    }
+  ]
+}

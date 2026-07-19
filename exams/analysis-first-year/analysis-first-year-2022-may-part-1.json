@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "analysis-first-year-2022-may-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2022,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2022_05.pdf",
+  "instructions": "Answer FOUR questions in detail. State carefully any results used without proof.",
+  "problems": [
+    {
+      "number": 1,
+      "text": "Let \\((a_n)_{n=0}^{\\infty}\\) and \\((b_n)_{n=0}^{\\infty}\\) be bounded real sequences. Prove that\n\\[\n\\liminf(a_n+b_n) \\geq \\liminf a_n+\\liminf b_n\n\\]\nand show by example that the inequality can be strict.",
+      "subparts": []
+    },
+    {
+      "number": 2,
+      "text": "Let the metric space \\(M\\) be compact; let \\(f:M\\to M\\) be distance-preserving and let \\(a\\in M\\). Prove that \\(a\\) is in the closure of the sequence \\(f(a),f(f(a)),\\ldots\\) that \\(a\\) generates by repeated application of \\(f\\). Conclude that \\(f\\) is surjective.",
+      "subparts": []
+    },
+    {
+      "number": 3,
+      "text": "Determine precisely all real numbers \\(x\\) for which the series\n\\[\n\\sum_{n=0}^{\\infty}\\frac{x^n}{1+x^n}\n\\]\nis convergent.",
+      "subparts": []
+    },
+    {
+      "number": 4,
+      "text": "Prove that no real-valued function on the unit square \\([0,1]\\times[0,1]\\) can be simultaneously continuous and injective.",
+      "subparts": []
+    },
+    {
+      "number": 5,
+      "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable; let \\(A\\) and \\(L\\) be real numbers.",
+      "subparts": [
+        {
+          "label": "(i)",
+          "text": "Define what is meant by the statement \\(\\lim_{x\\to\\infty}f(x)=A\\).",
+          "subparts": []
+        },
+        {
+          "label": "(ii)",
+          "text": "Prove that if \\(\\lim_{x\\to\\infty}f(x)=A\\) and \\(\\lim_{x\\to\\infty}f'(x)=L\\), then \\(L=0\\).",
+          "subparts": []
+        }
+      ]
+    }
+  ]
+}
