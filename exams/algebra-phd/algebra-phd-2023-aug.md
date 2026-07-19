@@ -38,7 +38,7 @@ is a representable functor. (The representing object, usually denoted \(\Lambda^
 
 **9.** Let \(F\) be a field. Prove that the power series ring
 \[
-F\llbracket x\rrbracket=\left\{\sum_{n=0}^{\infty}a_nx^n:a_n\in F\right\}
+F[\![x]\!]=\left\{\sum_{n=0}^{\infty}a_nx^n:a_n\in F\right\}
 \]
 is a Noetherian ring.
 

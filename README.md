@@ -3,7 +3,7 @@
 > **Development disclosure:** This project is vibe-coded using **ChatGPT-5.6 Sol
 > (xhigh)**. Its architecture, implementation, tests, extraction workflow, and
 > documentation are being developed through human-directed collaboration with that
-> model.
+> model. The model also wrote this disclosure.
 
 ## Purpose
 
@@ -61,6 +61,13 @@ access to `gpt-5.6-sol`. This project uses the base Python environment directly.
 ```sh
 python3 -m pip install "openai>=2.0" "pydantic>=2.8" "PyMuPDF>=1.26"
 export OPENAI_API_KEY="your-key"
+```
+
+Archive validation also requires Node.js 20 or newer. Install the exact MathJax version
+recorded in `package-lock.json` with:
+
+```sh
+npm ci
 ```
 
 ## Download
@@ -148,8 +155,8 @@ python3 extract_exams.py --subject logic-phd --subject topology-phd
 With bulk selection, `--force` includes completed records and re-extracts them. Without
 `--force`, rerunning the same command continues with the remaining exams.
 
-Validate every local PDF hash, canonical JSON record, generated Markdown file, and
-review record with:
+Validate every local PDF hash, canonical JSON record, generated Markdown file, review
+record, and MathJax expression with:
 
 ```sh
 python3 validate_archive.py

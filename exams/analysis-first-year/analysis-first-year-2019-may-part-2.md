@@ -21,7 +21,7 @@ Prove
 **4.** Let \((X,\mathcal{M})\) be a measurable space and \(f_n:X\to\mathbb{R}\), \(n=1,2,3,\ldots\), a sequence of measurable functions. Prove that each of the following subsets of \(X\) is measurable:
 * a) \(\{x\mid f_n(x)>0\text{ for infinitely many values of }n\}\)
 * b) \(\{x\mid \text{the sequence }(f_n(x))\text{ is eventually monotone}\}\)
-* c) \(\left\{x\mathrel{\left|}\displaystyle\lim_{n\to\infty}n f_n(x)=0\right.\right\}\)
+* c) \(\left\{x\,\middle|\,\displaystyle\lim_{n\to\infty}n f_n(x)=0\right\}\)
 
 **5.** Let \(f_1\ge f_2\ge f_3\ge\cdots\) be nonnegative measurable functions on a measure space \((X,\mathcal{M},\mu)\), and put \(f=\lim f_n\). Suppose that \(\int f_k\,d\mu<\infty\) for some \(k\). Prove that
 \[

@@ -7,6 +7,9 @@ import argparse
 from collections import Counter
 import json
 from pathlib import Path
+import re
+import subprocess
+from typing import Iterator
 
 import pymupdf
 from pydantic import ValidationError
@@ -37,6 +40,7 @@ REVIEW_IDENTITY_FIELDS = (
     "context",
     "origin",
 )
+MATH_PATTERN = re.compile(r"\\\((.*?)\\\)|\\\[(.*?)\\\]", re.DOTALL)
 
 
 def review_identity(item: dict[str, object]) -> str:
@@ -44,11 +48,75 @@ def review_identity(item: dict[str, object]) -> str:
     return json.dumps(identity, ensure_ascii=False, sort_keys=True)
 
 
+def located_text(exam: ExamRecord) -> Iterator[tuple[str, str]]:
+    if exam.instructions:
+        yield "instructions", exam.instructions
+    for problem in exam.problems:
+        yield f"problem {problem.number}", problem.text
+        pending = [
+            (f"problem {problem.number} subpart {item.label}", item)
+            for item in problem.subparts
+        ]
+        while pending:
+            location, subpart = pending.pop(0)
+            yield location, subpart.text
+            pending[0:0] = [
+                (f"{location} / {item.label}", item) for item in subpart.subparts
+            ]
+
+
+def math_expressions(exam: ExamRecord) -> Iterator[dict[str, object]]:
+    for location, content in located_text(exam):
+        for match in MATH_PATTERN.finditer(content):
+            inline, display = match.groups()
+            yield {
+                "exam_id": exam.id,
+                "location": location,
+                "tex": inline if inline is not None else display,
+                "display": display is not None,
+            }
+
+
+def validate_mathjax(
+    expressions: list[dict[str, object]], script: Path | None = None
+) -> list[str]:
+    script = script or Path(__file__).resolve().with_name("validate_mathjax.mjs")
+    input_text = "".join(
+        json.dumps(expression, ensure_ascii=False) + "\n" for expression in expressions
+    )
+    try:
+        result = subprocess.run(
+            ["node", str(script)],
+            input=input_text,
+            capture_output=True,
+            check=False,
+            encoding="utf-8",
+        )
+    except FileNotFoundError:
+        return ["MathJax validation requires Node.js; the node executable was not found"]
+    try:
+        output = json.loads(result.stdout)
+        failures = output["failures"]
+    except (KeyError, TypeError, ValueError):
+        detail = result.stderr.strip() or result.stdout.strip() or "no diagnostic output"
+        return [f"MathJax validator could not run; use npm ci: {detail}"]
+    errors = [
+        f"{item['exam_id']}: {item['location']}: MathJax: {item['message']} "
+        f"in {item['tex']!r}"
+        for item in failures
+    ]
+    if result.returncode not in (0, 1) and not errors:
+        detail = result.stderr.strip() or f"exit status {result.returncode}"
+        errors.append(f"MathJax validator could not run; use npm ci: {detail}")
+    return errors
+
+
 def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[str, int]]:
     sources = load_sources(manifest)
     errors: list[str] = []
     flags_by_exam: dict[str, list[ReviewFlag]] = {}
     review_counts: dict[str, int] = {}
+    expressions: list[dict[str, object]] = []
 
     for bucket, (filename, _purpose) in REVIEW_FILES.items():
         path = review_dir / filename
@@ -120,6 +188,7 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
             if any(page < 1 or page > page_count for page in flag.source_pages):
                 errors.append(prefix + "review flag refers to an unknown source page")
         errors.extend(prefix + error for error in validate_exam(exam, source, flags))
+        expressions.extend(math_expressions(exam))
         if (
             markdown_path.exists()
             and markdown_path.read_text(encoding="utf-8") != render_markdown(exam)
@@ -134,11 +203,14 @@ def validate_archive(manifest: Path, review_dir: Path) -> tuple[list[str], dict[
             if path.stem not in source_ids:
                 errors.append(f"{path}: orphaned canonical {label} file")
 
+    errors.extend(validate_mathjax(expressions))
+
     stats = {
         "exams": len(sources),
         "corrections": review_counts.get("corrections", 0),
         "transformations": review_counts.get("transformations", 0),
         "serious": review_counts.get("serious", 0),
+        "math_expressions": len(expressions),
     }
     return errors, stats
 
@@ -157,7 +229,8 @@ def main() -> int:
         return 1
     print(
         f"valid: exams={stats['exams']} corrections={stats['corrections']} "
-        f"transformations={stats['transformations']} serious={stats['serious']}"
+        f"transformations={stats['transformations']} serious={stats['serious']} "
+        f"math_expressions={stats['math_expressions']}"
     )
     return 0
 

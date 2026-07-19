@@ -81,7 +81,7 @@ over \(v\in H_0^1(U)\).
 **7.** Let \(U\subset\mathbb{R}^n\) be open and bounded. We say \(v\in C^2(\overline U)\) is subharmonic if \(-\Delta v\leq0\) for all \(x\in U\).
 * (a) Prove that for any subharmonic \(v\),
   \[
-  v(x)\leq\fint_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subset U.
+  v(x)\leq\mathop{⨍}_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subset U.
   \]
 * (b) Let \(\phi:\mathbb{R}\to\mathbb{R}\) be smooth and convex. Suppose that \(u\) is harmonic and \(v=\phi(u)\). Prove that \(v\) is subharmonic.
 

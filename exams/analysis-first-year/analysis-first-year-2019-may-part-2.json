@@ -51,7 +51,7 @@
         },
         {
           "label": "c)",
-          "text": "\\(\\left\\{x\\mathrel{\\left|}\\displaystyle\\lim_{n\\to\\infty}n f_n(x)=0\\right.\\right\\}\\)",
+          "text": "\\(\\left\\{x\\,\\middle|\\,\\displaystyle\\lim_{n\\to\\infty}n f_n(x)=0\\right\\}\\)",
           "subparts": []
         }
       ]

@@ -67,7 +67,7 @@
       "subparts": [
         {
           "label": "(a)",
-          "text": "Prove that for any subharmonic \\(v\\),\n\\[\nv(x)\\leq\\fint_{B(x,r)}v(y)\\,dy,\\qquad\\text{for all }B(x,r)\\subset U.\n\\]",
+          "text": "Prove that for any subharmonic \\(v\\),\n\\[\nv(x)\\leq\\mathop{⨍}_{B(x,r)}v(y)\\,dy,\\qquad\\text{for all }B(x,r)\\subset U.\n\\]",
           "subparts": []
         },
         {

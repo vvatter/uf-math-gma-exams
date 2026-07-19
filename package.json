@@ -1,0 +1,10 @@
+{
+  "name": "uf-math-gma-exams-validation",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@mathjax/src": "4.1.3"
+  }
+}

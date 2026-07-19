@@ -8,7 +8,7 @@ import unittest
 import pymupdf
 
 from extract_exams import REVIEW_FILES, ExamRecord, Problem, render_markdown, sha256_file
-from validate_archive import validate_archive
+from validate_archive import validate_archive, validate_mathjax
 
 
 class ArchiveValidationTests(unittest.TestCase):
@@ -86,6 +86,41 @@ class ArchiveValidationTests(unittest.TestCase):
             errors, _stats = validate_archive(manifest, review_dir)
 
         self.assertTrue(any("Markdown does not match" in error for error in errors))
+
+    def test_mathjax_catches_renderer_errors(self) -> None:
+        errors = validate_mathjax(
+            [
+                {
+                    "exam_id": "valid",
+                    "location": "problem 1",
+                    "tex": r"\left\{x\,\middle|\,x>0\right\}",
+                    "display": False,
+                },
+                {
+                    "exam_id": "valid-cd",
+                    "location": "problem 2",
+                    "tex": r"\begin{CD}A @>>> B\end{CD}",
+                    "display": True,
+                },
+                {
+                    "exam_id": "invalid",
+                    "location": "problem 1",
+                    "tex": r"\mathrel{\middle|}",
+                    "display": False,
+                },
+                {
+                    "exam_id": "undefined",
+                    "location": "problem 2",
+                    "tex": r"\notarealmacro{x}",
+                    "display": False,
+                },
+            ]
+        )
+
+        self.assertEqual(len(errors), 2)
+        self.assertIn("invalid: problem 1", "\n".join(errors))
+        self.assertIn(r"Extra \middle", "\n".join(errors))
+        self.assertIn(r"Undefined control sequence \notarealmacro", "\n".join(errors))
 
 
 if __name__ == "__main__":

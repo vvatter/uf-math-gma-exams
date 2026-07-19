@@ -417,7 +417,8 @@ Before an exam JSON is accepted, ordinary code checks that:
    renumbering, the generated topic or section ranges agree with the problem list.
 6. Every problem and subpart has a `subparts` array, and every subpart has a nonempty
    original `label` field.
-7. MathJax delimiters are balanced and dollar-sign math delimiters are absent.
+7. MathJax delimiters are balanced, dollar-sign math delimiters are absent, and every
+   expression completes real MathJax TeX-to-CHTML rendering without an error.
 8. Every model-reported correction, transformation, or uncertainty appears in its
    corresponding review file.
 9. Every source PDF has either one dataset JSON or an explicit extraction failure.
@@ -425,7 +426,8 @@ Before an exam JSON is accepted, ordinary code checks that:
 
 Initial extraction results remain provisional until the later verification phase. The
 archive validator additionally checks every PDF hash, JSON and Markdown pair, source
-reference in the review logs, and review page number before publication begins.
+reference in the review logs, review page number, and expression using the pinned
+MathJax version before publication begins.
 
 ## Presentation Is Downstream
 
