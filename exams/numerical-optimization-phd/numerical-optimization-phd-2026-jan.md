@@ -1,4 +1,4 @@
-# Variational Analysis/Numerical Optimization, PhD exam, January 2026
+# Variational Analysis/Numerical Optimization PhD exam, January 2026
 
 *Do 8 problems, 4 from problems 1–5 and 4 from problems 6–10.*
 

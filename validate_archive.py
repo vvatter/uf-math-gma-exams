@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the complete committed PDF, JSON, Markdown, and review archive."""
+"""Validate the complete committed PDF, JSON, Markdown, HTML, and review archive."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ from typing import Iterator
 import pymupdf
 from pydantic import ValidationError
 
+from build_indexes import expected_index_pages
 from extract_exams import (
     REVIEW_FILES,
     ExamRecord,
@@ -22,9 +23,11 @@ from extract_exams import (
     ProblemBlock,
     ReviewFlag,
     SectionBlock,
+    exam_html_path,
     exam_json_path,
     exam_markdown_path,
     load_sources,
+    render_html,
     render_markdown,
     review_bucket,
     sha256_file,
@@ -151,6 +154,18 @@ def validate_archive(
     flags_by_exam: dict[str, list[ReviewFlag]] = {}
     review_counts: dict[str, int] = {}
     expressions: list[dict[str, object]] = []
+    index_pages: dict[Path, str] = {}
+
+    if exam_ids is None:
+        try:
+            index_pages = expected_index_pages(all_sources.values(), manifest.parent)
+        except ValueError as error:
+            errors.append(f"archive indexes cannot be generated: {error}")
+        for path, expected in index_pages.items():
+            if not path.exists():
+                errors.append(f"{path}: archive index is missing")
+            elif path.read_text(encoding="utf-8") != expected:
+                errors.append(f"{path}: archive index does not match the manifest")
 
     for bucket, (filename, _purpose) in REVIEW_FILES.items():
         path = review_dir / filename
@@ -206,9 +221,11 @@ def validate_archive(
 
         json_path = exam_json_path(source)
         markdown_path = exam_markdown_path(source)
+        html_path = exam_html_path(source)
         for path, label in (
             (json_path, "canonical JSON"),
             (markdown_path, "Markdown rendering"),
+            (html_path, "HTML rendering"),
         ):
             if not path.exists():
                 errors.append(prefix + f"{label} is missing")
@@ -231,12 +248,23 @@ def validate_archive(
             and markdown_path.read_text(encoding="utf-8") != render_markdown(exam)
         ):
             errors.append(prefix + "Markdown does not match the canonical JSON")
+        if (
+            html_path.exists()
+            and html_path.read_text(encoding="utf-8") != render_html(exam)
+        ):
+            errors.append(prefix + "HTML does not match the canonical JSON")
 
     if exam_ids is None:
         source_ids = set(sources)
-        for suffix, label in ((".json", "JSON"), (".md", "Markdown")):
+        for suffix, label in (
+            (".json", "JSON"),
+            (".md", "Markdown"),
+            (".html", "HTML"),
+        ):
             for path in review_dir.rglob(f"*{suffix}"):
                 if path.parent == review_dir and path.name.startswith("review-"):
+                    continue
+                if path in index_pages:
                     continue
                 if path.stem not in source_ids:
                     errors.append(f"{path}: orphaned canonical {label} file")
@@ -249,6 +277,7 @@ def validate_archive(
         "transformations": review_counts.get("transformations", 0),
         "serious": review_counts.get("serious", 0),
         "math_expressions": len(expressions),
+        "indexes": len(index_pages),
     }
     return errors, stats
 
@@ -273,7 +302,7 @@ def main() -> int:
     print(
         f"valid: exams={stats['exams']} corrections={stats['corrections']} "
         f"transformations={stats['transformations']} serious={stats['serious']} "
-        f"math_expressions={stats['math_expressions']}"
+        f"math_expressions={stats['math_expressions']} indexes={stats['indexes']}"
     )
     return 0
 

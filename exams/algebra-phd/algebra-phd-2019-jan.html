@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra PhD exam, January 2019</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra PhD exam, January 2019</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Determine the Galois group of the polynomial</p>
+        <div class="display-math">\[f(x)=x^4-14x^2+9\in\mathbb{Q}[x].\]</div>
+      </li>
+      <li class="problem">
+        <p>This problem has three parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Give the definition of a separable field extension.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that a finite separable extension is contained in a finite Galois extension.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Prove the Primitive Element Theorem: If \(E\) is a finite separable extension of \(F\), then \(E=F(\alpha)\) for some \(\alpha\in E\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>A pointed set is a pair \((S,x)\) with \(S\) a set and \(x\in S\). A morphism of pointed sets \((S,x)\to(S&#x27;,x&#x27;)\) is a function \(f:S\to S&#x27;\) such that \(f(x)=x&#x27;\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Show that pointed sets and their morphisms form a category.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that coproducts of arbitrarily indexed families of objects exist in this category.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(F\) be the free group on \(n\) generators, \(n\geq 1\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that the automorphism group of \(F\) contains a subgroup isomorphic to the symmetric group \(S_n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Give an example of an automorphism of \(F\) that does not belong to this subgroup.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Define the term injective module for a ring \(R\) with 1. Prove Baer’s criterion: A unitary left module \(J\) is injective if and only if for every left ideal \(L\) of \(R\), any \(R\)-module homomorphism \(L\to J\) can be extended to an \(R\)-module homomorphism \(R\to J\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a ring and suppose that we have a short exact sequence</p>
+        <div class="display-math">\[0\to A\xrightarrow{f}B\xrightarrow{g}C\to 0\]</div>
+        <p>of left \(R\)-modules. Let \(M\) be a right \(R\)-module. Show that the induced sequence</p>
+        <div class="display-math">\[M\otimes_R A\xrightarrow{1\otimes f}M\otimes_R B\xrightarrow{1\otimes g}M\otimes_R C\to 0\]</div>
+        <p>is exact.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a commutative ring with \(1\neq 0\) and let \(S\) be a multiplicative set containing 1.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>State the universal mapping property of the localization \(S^{-1}R\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that if \(S=R\setminus P\), the complement of a prime ideal \(P\), then \(S^{-1}R\) has a unique maximal ideal.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Prove the following properties of \(R=\mathbb{Z}[\sqrt{10}]\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(R\) is noetherian.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>\(R\) is an integrally closed integral domain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Every nonzero prime ideal of \(R\) is maximal.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(J\) be an ideal in a commutative ring \(R\) with 1. Assume that \(J\) is contained in every maximal ideal. Prove that if \(A\) is an \(R\)-module that satisfies the ascending chain condition on submodules, then \(\bigcap_{n=1}^{\infty}J^nA=0\).</p>
+      </li>
+      <li class="problem">
+        <p>Prove the Noether Normalization Lemma: Let \(R\) be an integral domain that is a finitely generated extension ring of a field \(K\). Let \(F\) be the field of quotients of \(R\) and let \(r\) be the transcendence degree of \(F\) over \(K\). Then there exist a subset of \(r\) elements \(t_1,\ldots,t_r\) which are algebraically independent over \(K\) and such that \(R\) is integral over \(K[t_1,\ldots,t_r]\).</p>
+      </li>
+      <li class="problem">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Define the term left primitive ring and state Jacobson’s Density Theorem.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Prove that if \(R\) is a finite left primitive ring then \(R\cong M_n(F)\) for some finite field \(F\) and some natural number \(n\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Algebra PhD exams</a></li>
+        <li><a href="algebra-phd-2019-jan.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

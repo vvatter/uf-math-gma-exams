@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 2000
+# Complex Analysis PhD exam, May 2000
 
 *Notes. Please write up solutions to the eight problems 1–8, below. Please write LARGE, as the grader’s eyes are older and weaker than your eyes.*
 

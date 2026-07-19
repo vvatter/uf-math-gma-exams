@@ -1,4 +1,4 @@
-# Algebra, first year exam, May 2015, Part 2
+# Algebra first year exam, May 2015, Part 2
 
 *Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.*
 

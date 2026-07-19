@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, September 1988
+# Complex Analysis PhD exam, September 1988
 
 *Present your work clearly and do not leave any gaps in the proofs. Do all 9 problems.*
 

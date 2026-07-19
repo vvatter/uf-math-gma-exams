@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2018
+# Combinatorics PhD exam, August 2018
 
 **1.** Find a generating function for the number of positive integer solutions to \(x_1+2x_2+3x_3+4x_4+5x_5=n\).
 

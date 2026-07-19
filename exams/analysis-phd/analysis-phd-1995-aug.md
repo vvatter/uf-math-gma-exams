@@ -1,4 +1,4 @@
-# Analysis, PhD exam, August 1995
+# Analysis PhD exam, August 1995
 
 *All work must be presented in a neat and logical fashion to receive credit. Be sure to give reasons for all your steps. DO NOT leave any gaps!*
 

@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 2021
+# Complex Analysis PhD exam, May 2021
 
 *Solve five of the following problems. Please explain your work in a careful and logical way. You can use any theorem, identity, functional equation proved in class during Fall 2020 and Spring 2021. Please make sure to state precisely any result or theorem you are using in your solutions. Failing to do so may result in a lower grade.*
 

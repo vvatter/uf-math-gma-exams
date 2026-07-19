@@ -1,4 +1,4 @@
-# Topology, first year exam, May 2022, Part 2
+# Topology first year exam, May 2022, Part 2
 
 *Do seven 7 and only seven of the following. In the following \(D^2\) is the closed, two-dimensional disk, and \(S^1\) is the unit circle, its boundary. The cyclic group of order \(n\), is \(\mathbb{Z}_n=\mathbb{Z}/n\mathbb{Z}\).*
 

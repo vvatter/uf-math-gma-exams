@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2024
+# Combinatorics PhD exam, August 2024
 
 **1.** Let \(h(n)\) be the number of words of length \(n\) over the alphabet \(\{a,b,c\}\) in which an \(a\) is never immediately followed by a \(b\). Find the ordinary generating function of the sequence \(\{h(n)\}\).
 

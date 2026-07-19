@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2007
+# Algebra PhD exam, May 2007
 
 *Answer seven problems. You may quote results (within reason) as long as you state them clearly.*
 

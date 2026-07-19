@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, September 2004
+# Numerical Analysis PhD exam, September 2004
 
 *Do any eight of the ten problems below. Notations used are standard: \(\mathbb{C}\) and \(\mathbb{R}\) denote the fields of complex and real numbers, respectively. The space of all real valued continuous functions on \([a,b]\) whose derivatives up to order \(k\) are also continuous on \([a,b]\) is denoted by \(C^k[a,b]\). For all \(u\in C^0[a,b]\), let \(\lVert u\rVert_\infty=\max_{x\in[a,b]}|u(x)|\). While for vectors \(x\in\mathbb{C}^m\), the vector norm \(\lVert x\rVert_2\) denotes the Euclidean distance of \(x\) to the origin, for matrices \(A\in\mathbb{C}^{n\times n}\), \(\lVert A\rVert_2\) denotes the matrix norm induced by the vector norm \(\lVert\cdot\rVert_2\).*
 

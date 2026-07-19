@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, August 2025
+# Complex Analysis PhD exam, August 2025
 
 *Answer SIX of the following eight questions. Explain your work in a precise and logical way. Any standard result may be used without proof but must be stated clearly and correctly. Throughout the exam, \(\mathbb{D}\) is the open unit disk in \(\mathbb{C}\).*
 

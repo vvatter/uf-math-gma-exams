@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2013
+# Algebra PhD exam, May 2013
 
 *Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

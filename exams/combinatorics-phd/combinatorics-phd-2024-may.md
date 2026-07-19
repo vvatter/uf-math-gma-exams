@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2024
+# Combinatorics PhD exam, May 2024
 
 **1.** This problem has two parts.
 * (a) Let \(g(n)\) be the number of all permutations of length \(n\) in which every cycle length is odd. Find the closed form of the exponential generating function of the sequence \(g(n)\).

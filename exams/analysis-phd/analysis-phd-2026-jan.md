@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 2026
+# Analysis PhD exam, January 2026
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of eight.*
 

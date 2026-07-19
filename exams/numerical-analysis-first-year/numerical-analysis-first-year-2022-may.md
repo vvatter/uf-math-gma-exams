@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, May 2022
+# Numerical Analysis first year exam, May 2022
 
 *Do 4 (four) problems.*
 

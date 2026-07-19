@@ -1,4 +1,4 @@
-# Topology, PhD exam, August 2020
+# Topology PhD exam, August 2020
 
 *Work the following problems and show all work. Support all statements to the best of your ability.*
 

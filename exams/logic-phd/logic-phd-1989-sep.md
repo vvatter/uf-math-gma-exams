@@ -1,4 +1,4 @@
-# Logic, PhD exam, September 1989
+# Logic PhD exam, September 1989
 
 *Do 2 from each section.*
 

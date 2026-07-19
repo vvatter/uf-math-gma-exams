@@ -1,4 +1,4 @@
-# Topology, PhD exam, January 2026
+# Topology PhD exam, January 2026
 
 *Be neat, and do not write too small.*
 

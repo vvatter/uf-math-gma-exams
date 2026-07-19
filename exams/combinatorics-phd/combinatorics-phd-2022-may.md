@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2022
+# Combinatorics PhD exam, May 2022
 
 **1.** Let \(G_n\) be the graph whose vertex set is the set of all permutations of \([n]\) (in one line notation), with two vertices adjacent if they differ by switching two consecutive entries in the permutation. What is the chromatic number of \(G_n\) (with proof).
 

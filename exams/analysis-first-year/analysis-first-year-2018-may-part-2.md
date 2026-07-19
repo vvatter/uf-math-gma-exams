@@ -1,4 +1,4 @@
-# Analysis, first year exam, May 2018, Part 2
+# Analysis first year exam, May 2018, Part 2
 
 *Answer FOUR questions in detail. State carefully any results used without proof.*
 

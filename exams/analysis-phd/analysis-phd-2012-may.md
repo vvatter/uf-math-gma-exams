@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2012
+# Analysis PhD exam, May 2012
 
 *Be sure to carefully present all work in a neat and logical fashion. Do not leave any gaps. State clearly theorems used in your proofs.*
 

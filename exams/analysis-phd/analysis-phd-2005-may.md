@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2005
+# Analysis PhD exam, May 2005
 
 *Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true.*
 

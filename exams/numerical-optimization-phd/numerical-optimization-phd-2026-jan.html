@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variational Analysis/Numerical Optimization PhD exam, January 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Variational Analysis/Numerical Optimization PhD exam, January 2026</h1>
+    </header>
+    <div class="instructions">
+      <p>Do 8 problems, 4 from problems 1–5 and 4 from problems 6–10.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Recall that \(f:\mathbb{R}^n\to\mathbb{R}\) is convex if and only if</p>
+        <div class="display-math">\[
+f[(1-\alpha)\mathbf{x}+\alpha\mathbf{y}]\leq (1-\alpha)f(\mathbf{x})+\alpha f(\mathbf{y})
+\]</div>
+        <p>for all \(\mathbf{x},\mathbf{y}\in\mathbb{R}^n\) and \(\alpha\in[0,1]\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(f\) is continuously differentiable, then show that \(f\) is convex if and only if</p>
+                <div class="display-math">\[
+f(\mathbf{y})\geq f(\mathbf{x})+\nabla f(\mathbf{x})(\mathbf{y}-\mathbf{x})
+\]</div>
+                <p>for all \(\mathbf{x},\mathbf{y}\in\mathbb{R}^n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(f\) is twice continuously differentiable, then show that \(f\) is convex if and only if \(\nabla^2f\) is positive semidefinite on \(\mathbb{R}^n\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Given \(\mathbf{x}_0\in\mathbb{R}^n\), let \(0&lt;\sigma&lt;\mu&lt;1\) be Wolfe line search parameters. In a Wolfe line search for minimizing \(f:\mathbb{R}^n\to\mathbb{R}\), \(\mathbf{x}_{k+1}=\mathbf{x}_k-s_k\mathbf{g}_k\), where \(\mathbf{g}_k=\nabla f(\mathbf{x}_k)^T\), and the stepsize \(s_k\) at step \(k\) is chosen so that the following two conditions hold:</p>
+        <p>W1. \(F(s_k)\leq F_L(s_k)\), where \(F(s)=f(\mathbf{x}_k-s\mathbf{g}_k)\) and \(F_L(s)=f(\mathbf{x}_k)-\sigma s\lVert\mathbf{g}_k\rVert^2\).</p>
+        <p>W2. \(F&#x27;(s_k)\geq\mu F&#x27;(0)=-\mu\lVert\mathbf{g}_k\rVert^2\).</p>
+        <p>If \(f\) is bounded from below, prove that there exists a stepsize \(s_k&gt;0\) satisfying the Wolfe conditions. If \(f\) is twice continuously differentiable over the convex hull of the level set</p>
+        <div class="display-math">\[
+L=\{\mathbf{x}\in\mathbb{R}^n:f(\mathbf{x})\leq f(\mathbf{x}_0)\},
+\]</div>
+        <p>and the largest eigenvalue of \(\nabla^2f\) is bounded by \(M&lt;\infty\) over \(L\), then prove that the gradient \(\mathbf{g}_k\) converges to zero.</p>
+      </li>
+      <li class="problem">
+        <p>Suppose \(f:\mathcal{K}\to\mathbb{R}\), where \(\mathcal{K}\subset\mathbb{R}^n\) is a convex set.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(\mathbf{x}^*\) is a local minimizer of \(f\), then show that</p>
+                <div class="display-math">\[
+\nabla f(\mathbf{x}^*)(\mathbf{x}-\mathbf{x}^*)\geq 0\qquad\text{for all }\mathbf{x}\in\mathcal{K}. \tag{1}
+\]</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(f\) is convex over \(\mathcal{K}\) and differentiable at some point \(\mathbf{x}^*\in\mathcal{K}\) where (1) holds, then show that \(\mathbf{x}^*\) is a global minimizer for \(f\) over \(\mathcal{K}\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Consider the quadratic programming problem</p>
+                <div class="display-math">\[
+\min \frac{1}{2}\mathbf{x}^T\mathbf{A}\mathbf{x}-\mathbf{b}^T\mathbf{x}\qquad\text{subject to }\mathbf{x}\in\mathcal{K},
+\]</div>
+                <p>where \(\mathcal{K}\subset\mathbb{R}^n\) is a closed convex set and \(\mathbf{A}\in\mathbb{R}^{n\times n}\) is positive definite with smallest eigenvalue \(\alpha&gt;0\). Show that the solutions \(\mathbf{u}_i\), \(i=1,2\), associated with \(\mathbf{b}=\mathbf{b}_i\), \(i=1,2\), respectively, satisfy</p>
+                <div class="display-math">\[
+\lVert\mathbf{u}_1-\mathbf{u}_2\rVert\leq \lVert\mathbf{b}_1-\mathbf{b}_2\rVert/\alpha.
+\]</div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Prove the arithmetic-geometric mean inequality:</p>
+        <div class="display-math">\[
+\left(\prod_{i=1}^n x_i\right)^{1/n}\leq \frac{1}{n}\sum_{i=1}^n x_i
+\]</div>
+        <p>where \(\mathbf{x}\geq 0\). Hint: change variables to \(\mathbf{y}=c\mathbf{x}\), where \(c\) is a scalar chosen so that the components of \(\mathbf{y}\) sum to 1. Note that maximizing the product of the \(y_i\) is equivalent to maximizing the log of the product since \(\log(t)\) is a monotone increasing function of \(t\) on \((0,\infty)\). Using duality, the max of the log of the product can be determined explicitly.</p>
+      </li>
+      <li class="problem">
+        <p>Consider the quadratic program</p>
+        <div class="display-math">\[
+\min \frac{1}{2}\mathbf{x}^T\mathbf{A}\mathbf{x}-\mathbf{b}^T\mathbf{x}\qquad\text{subject to }\mathbf{a}^T\mathbf{x}=c, \tag{2}
+\]</div>
+        <p>where \(\mathbf{A}\) is a symmetric, positive definite matrix. The penalty approximation to (2) is</p>
+        <div class="display-math">\[
+\min \frac{1}{2}\mathbf{x}^T\mathbf{A}\mathbf{x}-\mathbf{b}^T\mathbf{x}+\frac{p}{2}(\mathbf{a}^T\mathbf{x}-c)^2, \tag{3}
+\]</div>
+        <p>where \(p&gt;0\) is the penalty parameter. Use the first-order optimality conditions for both (2) and (3) to obtain a bound for the distance between the solution of (2) and the solution of (3).</p>
+      </li>
+      <li class="problem">
+        <p>Let us consider the minimization problem</p>
+        <div class="display-math">\[
+\min I(y):=\int_0^1 f(y&#x27;(x),y(x),x)\,dx\qquad\text{subject to }y\in C_0^1, \tag{4}
+\]</div>
+        <p>where \(f\) is a given continuously differentiable function. If \(y^*\) is a local minimizer of this problem, \(s\) is a scalar, \(h\in C_0^1\), then setting to zero the derivative of \(I(y^*+sh)\) evaluated at \(s=0\) yields the following first-order optimality condition:</p>
+        <div class="display-math">\[
+\int_0^1\left[\left(\frac{\partial f}{\partial y&#x27;}\right)^*(x)h&#x27;(x)+\left(\frac{\partial f}{\partial y}\right)^*(x)h(x)\right]dx=0 \tag{5}
+\]</div>
+        <p>for all \(h\in C_0^1\), where</p>
+        <div class="display-math">\[
+\left(\frac{\partial f}{\partial y&#x27;}\right)^*(x):=\frac{\partial f}{\partial y&#x27;}(y^{*&#x27;}(x),y^*(x),x)
+\quad\text{and}\quad
+\left(\frac{\partial f}{\partial y}\right)^*(x):=\frac{\partial f}{\partial y}(y^{*&#x27;}(x),y^*(x),x).
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>As a consequence of (5), show that</p>
+                <div class="display-math">\[
+\left(\frac{\partial f}{\partial y&#x27;}\right)^*\in C^1 \tag{6}
+\]</div>
+                <p>and the Euler equation is satisfied. Note that it is only assumed that \(f\) is continuously differentiable; you should show that at a local minimizer of (4), the partial derivative in (6) is continuously differentiable.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>For the special case</p>
+                <div class="display-math">\[
+f(y&#x27;(x),y(x),x)=\frac{1}{2}y&#x27;(x)^2-\varphi(x)y(x)^2,
+\]</div>
+                <p>where \(\varphi\in C^k\) for some integer \(k\geq 0\), what does the observation in (a) imply concerning the smoothness of a minimizer \(y^*\) for (4)?</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Suppose that \(P\) and \(Q\) are real-valued functions defined on the interval \([0,1]\), with \(P\) continuously differentiable and \(Q\) continuous. It is assumed that there exists \(\alpha&gt;0\) such that \(P(x)\geq\alpha\) for all \(x\in[0,1]\). Define</p>
+        <div class="display-math">\[
+\text{[missing functional symbol]}(h):=\int_0^1 P(x)h&#x27;(x)^2+Q(x)h(x)^2\,dx.
+\]</div>
+        <p>Suppose that \(\text{[missing functional symbol]}\) has the following property: There exists \(\text{[missing positive constant]}&gt;0\) such that</p>
+        <div class="display-math">\[
+\text{[missing functional symbol]}(h)\geq \text{[missing positive constant]}\int_0^1 h&#x27;(x)^2+h(x)^2\,dx\qquad\text{for all }h\in H_0^1,
+\]</div>
+        <p>where \(H_0^1\) is the space of functions with \(h&#x27;\) square integrable over \([0,1]\) and \(h(0)=h(1)=0\).</p>
+        <p>Prove the following: If \(u\) is a solution of the boundary-value problem</p>
+        <div class="display-math">\[
+\frac{d}{dx}(P(x)u&#x27;(x))=Q(x)u(x)\qquad\text{for all }x\in[0,a],\qquad u(0)=0=u(a),
+\]</div>
+        <p>where \(a\in(0,1)\) is given, then \(u\) vanishes on the entire interval \([0,a]\). Hint: extend \(u\) from \([0,a]\) to \([0,1]\) by setting \(u(x)=0\) for \(x\in[a,1]\). Then integrate by parts to show that \(\text{[missing functional symbol]}(u)=0\).</p>
+      </li>
+      <li class="problem">
+        <p>Consider the variational problem</p>
+        <div class="display-math">\[
+\min \int_0^1\left(\frac{1}{2}u&#x27;(x)^2+e^{u(x)}\right)dx\qquad\text{subject to }u\in H_0^1. \tag{7}
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>What is the first-order necessary optimality condition (Euler equation) for a local minimizer of this variational problem?</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that if a minimizer of (7) exists, then it is unique.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider the initial-value problem</p>
+        <div class="display-math">\[
+\dot{\mathbf{x}}(t)=\mathbf{A}(t)\mathbf{x}(t)+\mathbf{u}(t),\qquad \mathbf{x}(0)=0,
+\]</div>
+        <p>where \(\mathbf{x}:[0,1]\to\mathbb{R}^n\) and \(\mathbf{A}\in L^\infty([0,1];\mathbb{R}^{n\times n})\). Obtain a bound for the sup-norm of \(\mathbf{x}\) in terms of the \(L^2\) norm of \(\mathbf{u}\). Hint: Recall Grönwall’s inequality</p>
+        <div class="display-math">\[
+x(t)\leq\alpha(t)+L\int_0^t x(s)\,ds\text{ on }[0,a]\quad\Rightarrow\quad x(t)\leq\alpha(t)e^{Lt}\text{ on }[0,a],
+\]</div>
+        <p>where \(\alpha\) is monotone nondecreasing.</p>
+      </li>
+      <li class="problem">
+        <p>Consider the following control problem:</p>
+        <div class="display-math">\[
+\min \int_0^1\left(\frac{1}{2}u^2(x)+y(x)\right)dx\qquad\text{subject to }y&#x27;(x)=u(x),\quad y(0)=0,\quad u(x)\geq\ell(x),
+\]</div>
+        <p>where \(\ell(x)\) is a given lower bound for the control \(u(x)\) at each \(x\in[0,1]\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>What is the first-order optimality condition (Pontryagin minimum principle) for this problem?</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>What is the solution of the control problem?</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Variational Analysis/Numerical Optimization PhD exams</a></li>
+        <li><a href="numerical-optimization-phd-2026-jan.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

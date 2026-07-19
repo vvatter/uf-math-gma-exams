@@ -1,4 +1,4 @@
-# Probability, PhD exam, September 2009
+# Probability PhD exam, September 2009
 
 **1.** For each fixed \(n\), \(X_n^1, X_n^2, \ldots, X_n^n\) are independent random variables and have the same Binomial distribution, that is, \(\mathbb P(X_n^i=1)=p_n\) and \(\mathbb P(X_n^i=0)=1-p_n\) for \(i=1,2,\ldots,n\). Let \(S_n=X_n^1+X_n^2+\cdots+X_n^n\). Given the condition that \(np_n\) converges to a positive constant \(\beta\) as \(n\) goes to \(\infty\), find the limit distribution of \(S_n\) and prove it.
 

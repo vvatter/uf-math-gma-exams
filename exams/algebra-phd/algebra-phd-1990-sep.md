@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 1990
+# Algebra PhD exam, September 1990
 
 *Read through the questions carefully before you begin. Your six best solutions will count. Theorems from the course may be quoted (within reason) as long as you give a clear indication and state the result in full.*
 

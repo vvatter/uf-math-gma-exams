@@ -1,4 +1,4 @@
-# Probability, PhD exam, May 2003
+# Probability PhD exam, May 2003
 
 *Write clearly. State precisely results you use. Do not omit steps.*
 

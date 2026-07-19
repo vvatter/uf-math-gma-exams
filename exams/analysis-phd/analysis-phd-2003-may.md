@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2003
+# Analysis PhD exam, May 2003
 
 *Do All Nine.*
 

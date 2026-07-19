@@ -1,4 +1,4 @@
-# Topology, PhD exam, May 1993
+# Topology PhD exam, May 1993
 
 ## PART I
 

@@ -1,4 +1,4 @@
-# Topology, PhD exam, September 1993
+# Topology PhD exam, September 1993
 
 *Answer the following questions without giving proofs.*
 

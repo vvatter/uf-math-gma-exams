@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, January 2013
+# Numerical Analysis first year exam, January 2013
 
 *Answer any 4 questions.*
 

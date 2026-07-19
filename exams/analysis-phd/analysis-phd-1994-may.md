@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 1994
+# Analysis PhD exam, May 1994
 
 ## I.
 

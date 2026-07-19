@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, August 2023
+# Complex Analysis PhD exam, August 2023
 
 *Answer FIVE (out of eight) questions in detail, explaining your work in a precise and logical way. State carefully any results used without proof.*
 

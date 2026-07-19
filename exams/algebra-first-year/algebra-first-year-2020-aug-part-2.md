@@ -1,4 +1,4 @@
-# Algebra, first year exam, August 2020, Part 2
+# Algebra first year exam, August 2020, Part 2
 
 *Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

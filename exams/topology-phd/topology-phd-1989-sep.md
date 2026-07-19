@@ -1,4 +1,4 @@
-# Topology, PhD exam, September 1989
+# Topology PhD exam, September 1989
 
 **1.** State the exact homology sequence of a pair.
 

@@ -1,4 +1,4 @@
-# Ergodic Theory, PhD exam, May 2012
+# Ergodic Theory PhD exam, May 2012
 
 *Do all problems.*
 

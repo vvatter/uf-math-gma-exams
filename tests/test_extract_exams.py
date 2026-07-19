@@ -22,11 +22,13 @@ from extract_exams import (
     SourceExam,
     Subpart,
     clean_native_text,
+    exam_html_path,
     exam_json_path,
     exam_markdown_path,
     extract_one,
     has_ascii_control_characters,
     part_from_manifest,
+    render_html,
     render_markdown,
     select_exam_ids,
     sha256_file,
@@ -85,6 +87,7 @@ class ExtractionSchemaTests(unittest.TestCase):
 
         self.assertEqual(exam_json_path(item), Path("exams/example.json"))
         self.assertEqual(exam_markdown_path(item), Path("exams/example.md"))
+        self.assertEqual(exam_html_path(item), Path("exams/example.html"))
 
     def test_problem_number_is_derived_not_accepted_as_data(self) -> None:
         with self.assertRaises(ValueError):
@@ -180,7 +183,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertEqual(validate_exam(exam, item, []), [])
         self.assertEqual(
             render_markdown(exam),
-            "# Algebra, first year exam, May 2025, Part 1\n\n"
+            "# Algebra first year exam, May 2025, Part 1\n\n"
             "*This exam was not provided to the archive.*\n",
         )
 
@@ -288,6 +291,7 @@ class ExtractionSchemaTests(unittest.TestCase):
             checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
             json_exists = pdf_path.with_suffix(".json").exists()
             markdown_exists = pdf_path.with_suffix(".md").exists()
+            html_exists = pdf_path.with_suffix(".html").exists()
 
         self.assertTrue(cached)
         self.assertEqual(exam.content[0].problem.text, "Prove it.")
@@ -296,6 +300,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertIn("revalidated_at", checkpoint)
         self.assertTrue(json_exists)
         self.assertTrue(markdown_exists)
+        self.assertTrue(html_exists)
 
     def test_manifest_part_label(self) -> None:
         self.assertEqual(part_from_manifest({"source_label": "Part 2"}), 2)
@@ -365,10 +370,114 @@ class ExtractionSchemaTests(unittest.TestCase):
 
         self.assertEqual(
             render_markdown(exam),
-            "# Algebra, first year exam, May 2025, Part 1\n\n"
+            "# Algebra first year exam, May 2025, Part 1\n\n"
             "*Answer one problem.*\n\n"
             "**1.** Let \\(G\\) be a group.\n"
             "* (a) Prove it.\n",
+        )
+
+    def test_html_is_semantic_escaped_and_accessible(self) -> None:
+        item = source()
+        exam = exam_for(
+            item,
+            [
+                Problem(
+                    text=r"Let \(G < H\) and prove the claim.",
+                    subparts=[
+                        Subpart(
+                            label="(a)",
+                            text="Handle the first case.",
+                            subparts=[
+                                Subpart(label="i.", text="Give details.", subparts=[])
+                            ],
+                        )
+                    ],
+                )
+            ],
+        )
+        exam.content.insert(0, InstructionsBlock(text="Answer one problem."))
+
+        rendered = render_html(exam)
+
+        self.assertTrue(rendered.startswith("<!doctype html>\n<html lang=\"en\">"))
+        self.assertIn('<meta charset="utf-8">', rendered)
+        self.assertIn('<main id="main-content">', rendered)
+        self.assertIn(
+            "<h1>Algebra first year exam, May 2025, Part 1</h1>", rendered
+        )
+        self.assertIn(
+            '<p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, '
+            '<a href="https://math.ufl.edu/">Department of Mathematics</a></p>',
+            rendered,
+        )
+        self.assertIn('<ol class="problems" start="1">', rendered)
+        self.assertIn('<ol class="subparts">', rendered)
+        self.assertIn('<span class="subpart-label">(a)</span>', rendered)
+        self.assertIn('<span class="subpart-label">i.</span>', rendered)
+        self.assertIn(r"Let \(G &lt; H\) and prove the claim.", rendered)
+        self.assertIn("computer-modern@0.1.3/cmu-serif.css", rendered)
+        self.assertIn("mathjax@4/tex-chtml.js", rendered)
+        self.assertNotIn("gma.math.ufl.edu", rendered)
+        self.assertIn(
+            '<a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a>',
+            rendered,
+        )
+        self.assertIn('<a href="../../index.html">All exam subjects</a>', rendered)
+        self.assertIn(
+            '<a href="index.html">Algebra First-Year exams</a>', rendered
+        )
+        self.assertIn(
+            '<a href="algebra-first-year-2025-may-part-1.pdf">Original PDF</a>',
+            rendered,
+        )
+        self.assertLess(rendered.index("Project source"), rendered.index("All exam subjects"))
+        self.assertIn(
+            '<p class="page-updated">Page updated <time datetime="2026-07-19">'
+            "July 19, 2026</time>.</p>",
+            rendered,
+        )
+        self.assertNotIn('target="_blank"', rendered)
+        self.assertNotIn("border-left", rendered)
+        self.assertIn("footer { display: none; }", rendered)
+        self.assertIn("body { font-size: 11pt; line-height: 1.28;", rendered)
+        self.assertIn(".institution { margin-bottom: .2rem; font-size: 9pt; }", rendered)
+        self.assertIn('.institution a { text-decoration: none; }', rendered)
+
+    def test_html_preserves_section_numbering_and_instruction_math(self) -> None:
+        item = source()
+        exam = exam_for(item, [Problem(text="Preamble problem.", subparts=[])])
+        exam.content.extend(
+            [
+                SectionBlock(
+                    heading="II. Set Theory",
+                    numbering=NumberingMode.RESTART,
+                    content=[
+                        InstructionsBlock(
+                            text="Use this identity.\n\\[\na^2+b^2=c^2\n\\]"
+                        ),
+                        ProblemBlock(problem=Problem(text="First theorem.", subparts=[])),
+                        ProblemBlock(problem=Problem(text="Second theorem.", subparts=[])),
+                    ],
+                ),
+                SectionBlock(
+                    heading="SECTION III",
+                    numbering=NumberingMode.CONTINUE,
+                    content=[
+                        ProblemBlock(problem=Problem(text="Final theorem.", subparts=[]))
+                    ],
+                ),
+            ]
+        )
+
+        rendered = render_html(exam)
+
+        self.assertIn('<section aria-labelledby="section-1">', rendered)
+        self.assertIn('<h2 id="section-1">II. Set Theory</h2>', rendered)
+        self.assertEqual(rendered.count('<ol class="problems" start="1">'), 2)
+        self.assertIn('<ol class="problems" start="3">', rendered)
+        self.assertIn('<div class="instructions">', rendered)
+        self.assertIn(
+            '<div class="display-math">\\[\na^2+b^2=c^2\n\\]</div>', rendered
         )
 
     def test_markdown_italicizes_instruction_lines_but_not_display_math(self) -> None:
@@ -409,7 +518,7 @@ class ExtractionSchemaTests(unittest.TestCase):
 
         self.assertTrue(
             render_markdown(exam).startswith(
-                "# Algebra, qualifying exam, January 2026, Part 1\n"
+                "# Algebra qualifying exam, January 2026, Part 1\n"
             )
         )
 

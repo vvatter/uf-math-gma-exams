@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, January 2012
+# Combinatorics PhD exam, January 2012
 
 **1.** Prove that there exists a simple \(k\)-regular graph on \(n\) vertices if and only if \(nk\) is even, and \(n \geq k+1\).
 

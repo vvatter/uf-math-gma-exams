@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2011
+# Combinatorics PhD exam, May 2011
 
 **1.** Let \(f(n)\) be the number of permutations of length \(n\) that have no cycle that is shorter than three.
 * (a) Find the exponential generating function of the sequence \(f(n)\). You can assume that \(f(0)=1\).

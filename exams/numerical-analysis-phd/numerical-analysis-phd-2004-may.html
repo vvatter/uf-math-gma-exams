@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numerical Analysis PhD exam, May 2004</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Numerical Analysis PhD exam, May 2004</h1>
+    </header>
+    <div class="instructions">
+      <p>Do any eight of the following ten problems.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \(w(x)\) be a positive integrable function on \([a,b]\). Let \(p(x)\) denote the Hermite interpolant of \(f(x)\) such that \(d^\ell f/dx^\ell\) and \(d^\ell p/dx^\ell\) coincide at distinct nodes \(x_0,x_1,\ldots,x_n\) in \([a,b]\) for \(\ell=0,1\) and \(2\). Consider the quadrature that approximates \(\int_a^b f(x)w(x)\,dx\) by</p>
+        <div class="display-math">\[
+\int_a^b p(x)w(x)\,dx:=\sum_{k=0}^n\left(A_kf(x_k)+A&#x27;_kf&#x27;(x_k)+A&#x27;&#x27;_kf&#x27;&#x27;(x_k)\right). \tag{1}
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that the precision of the quadrature is at least \(4n+3\) if and only if the nodes are chosen such that \(\pi_{n+1}(x)=(x-x_0)(x-x_1)\cdots(x-x_n)\) satisfies</p>
+                <div class="display-math">\[
+\int_a^b \pi_{n+1}(x)^3q(x)w(x)\,dx=0
+\]</div>
+                <p>for all polynomials \(q\) of degree at most \(n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Prove that there cannot exist numbers \(\{A_j\},\{A&#x27;_j\},\{A&#x27;&#x27;_j\},\{x_j\}\) such that a quadrature formula of the type (1) has precision greater than \(4n+3\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>To find a root of \(f(x)=0\), let \(g(x)=x+cf(x)\) for some constant \(c\ne0\). If \(\alpha\) is a root of \(f(x)\) and \(f&#x27;(\alpha)=2\), for what values of \(c\) will the sequence</p>
+        <div class="display-math">\[
+x_{n+1}=g(x_n)
+\]</div>
+        <p>be guaranteed to converge to \(\alpha\) (assuming \(x_0\) is close enough to \(\alpha\) and \(f\) is smooth)? For what value of \(c\) will the convergence be quadratic?</p>
+      </li>
+      <li class="problem">
+        <p>Denote the complete and natural cubic splines interpolating \(f\in C^2[a,b]\) at knots \(t_0&lt;t_1&lt;\cdots&lt;t_n\) by \(s_c(t)\) and \(s_n(t)\), respectively.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that</p>
+                <div class="display-math">\[
+\int_a^b|s_c&#x27;&#x27;(x)|^2\,dx\leq\int_a^b|f&#x27;&#x27;(x)|^2\,dx.
+\]</div>
+                <p>State an analogous inequality for \(s_n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Which of the two interpolating splines has smaller “energy”, i.e., which of \(\int_a^b|s_c&#x27;&#x27;(x)|^2\,dx\) and \(\int_a^b|s_n&#x27;&#x27;(x)|^2\,dx\) is smaller?</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>To numerically solve the initial value problem</p>
+        <div class="display-math">\[
+Y&#x27;(t)=f(t,Y),\qquad \text{for all }t\in(0,1), \tag{2}
+\]</div>
+        <div class="display-math">\[
+Y(0)=Y_0, \tag{3}
+\]</div>
+        <p>consider using the Runge–Kutta type iteration</p>
+        <div class="display-math">\[
+y_{n+1}=y_n+h(\alpha_1k_1+\alpha_2k_2),
+\]</div>
+        <p>where \(k_1=f(t_n,y_n)\), \(k_2=f(t_n+\mu h,y_n+\mu hk_1)\), \(t_n=nh\), and \(\alpha_1,\alpha_2\), and \(\mu\) are three real parameters. Suppose \(f(t,Y)=Y^\lambda\) for some \(\lambda&gt;0\). Find an interval \(I\) such that for \(\lambda\in I\) there are choices of the parameters \(\alpha_1,\alpha_2,\mu\in(0,1)\) for which the method is of third order. For these choices of parameters, what is the order of convergence one can expect in general when the method is applied to (2)–(3) with any \(f(t,Y)\)?</p>
+      </li>
+      <li class="problem">
+        <p>Let \(x_m\) and \(x_{m+1}\) be two successive iterates when Newton’s method is applied to a polynomial \(p(z)\) of degree \(n\). Prove that there is a zero of \(p(z)\) in the disk</p>
+        <div class="display-math">\[
+\{z\in\mathbb C:|z-x_m|\leq n|x_{m+1}-x_m|\}.
+\]</div>
+        <p>(Suggestion: Use \(p&#x27;(z)/p(z)=\sum_{j=1}^n1/(z-r_j)\), where \(r_1,r_2,\ldots,r_n\) are the roots of \(p\).)</p>
+      </li>
+      <li class="problem">
+        <p>Consider the Arnoldi iteration on the Krylov spaces \(\mathcal K_k=\operatorname{span}\{b,Ab,A^2b,\ldots,A^{k-1}b\}\) for some \(b\in\mathbb C^m\) and \(A\in\mathbb C^{m\times m}\), using the following algorithm:</p>
+        <p>Algorithm 1 (Arnoldi iteration)</p>
+        <p>(a) Set \(q_1=b/\|b\|_2\).</p>
+        <p>(b) For \(n=1,2,3,\ldots\) do:</p>
+        <p>i. Set \(v=Aq_n\).</p>
+        <p>ii. For \(j=1,2,\ldots,n\) do:</p>
+        <p>A. Set \(h_{jn}=q_j^*v\).</p>
+        <p>B. Replace \(v\) by \(v-h_{jn}q_j\).</p>
+        <p>iii. Set \(h_{n+1,n}=\|v\|_2\).</p>
+        <p>iv. Set \(q_{n+1}=v/h_{n+1,n}\).</p>
+        <p>Suppose the algorithm proceeds without breakdown until, for some \(n&lt;m\), it encounters \(h_{n+1,n}=0\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Show that \(\mathcal K_n\) is an invariant subspace of \(A\), i.e., \(A\mathcal K_n\subseteq\mathcal K_n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that \(\mathcal K_n=\mathcal K_{n+1}=\mathcal K_{n+2}=\cdots\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Let \(H_n\) be the \(n\times n\) Hessenberg matrix whose \(ij\)-th entry (\(i\leq j+1\)) is the number \(h_{ij}\) computed in the algorithm. Show that each eigenvalue of \(H_n\) is an eigenvalue of \(A\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(d)</span>
+              <div class="subpart-body">
+                <p>Show that if \(A\) is nonsingular, then the solution \(x\) of \(Ax=b\) lies in \(\mathcal K_n\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(A\in\mathbb C^{m\times m}\). Diagonalize the \(2m\times2m\) matrix</p>
+        <div class="display-math">\[
+\begin{pmatrix}0&amp;A^*\\A&amp;0\end{pmatrix}
+\]</div>
+        <p>using an SVD of \(A\).</p>
+      </li>
+      <li class="problem">
+        <p>Consider \(\mathbb C^{m\times n}\) with any norm topology.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Let \(m=n\). The map \(f(A)=A^{-1}\) is defined on the (open) subset \(V\subseteq\mathbb C^{n\times n}\) of all invertible matrices. Is \(f\) continuous on \(V\)?</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Let \(m\ne n\). The map \(g(A)=A^+\) (where \(A^+\) is the Moore–Penrose pseudoinverse) is defined on all \(\mathbb C^{m\times n}\). Is \(g\) continuous on \(\mathbb C^{m\times n}\)?</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Given \(A\in\mathbb C^{m\times n}\) of full rank and \(b\in\mathbb C^m\), consider the block \(2\times2\) system</p>
+        <div class="display-math">\[
+\begin{pmatrix}I&amp;A\\A^*&amp;0\end{pmatrix}
+\begin{pmatrix}r\\x\end{pmatrix}
+=
+\begin{pmatrix}b\\0\end{pmatrix},
+\]</div>
+        <p>where \(I\) is the \(m\times m\) identity matrix. Show that this system has a unique solution \(\begin{pmatrix}r\\x\end{pmatrix}\), and that the vectors \(r\) and \(x\) are the residual and the solution respectively of the least squares problem: \(\min_x\|b-Ax\|_2\).</p>
+      </li>
+      <li class="problem">
+        <p>Consider the Rayleigh quotient iteration applied to the \(2\times2\) real matrix</p>
+        <div class="display-math">\[
+A=\begin{bmatrix}\lambda_1&amp;0\\0&amp;\lambda_2\end{bmatrix},
+\]</div>
+        <p>where \(\lambda_1\ne\lambda_2\). Find the subset \(S\subset\mathbb R^2\) having the property that the Rayleigh quotient iteration with initial guesses in \(S\) do not converge. Is \(S\) a set of measure zero?</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Numerical Analysis PhD exams</a></li>
+        <li><a href="numerical-analysis-phd-2004-may.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

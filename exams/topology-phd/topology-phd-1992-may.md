@@ -1,4 +1,4 @@
-# Topology, PhD exam, May 1992
+# Topology PhD exam, May 1992
 
 *Answer the following questions without giving proofs.*
 

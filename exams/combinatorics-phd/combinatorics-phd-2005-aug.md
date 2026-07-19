@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2005
+# Combinatorics PhD exam, August 2005
 
 *Show your work.*
 

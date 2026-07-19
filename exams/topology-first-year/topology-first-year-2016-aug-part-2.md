@@ -1,4 +1,4 @@
-# Topology, first year exam, August 2016, Part 2
+# Topology first year exam, August 2016, Part 2
 
 ## Part 1.
 

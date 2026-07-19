@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2017, Part 1
+# Numerical Analysis PhD exam, May 2017, Part 1
 
 *Do 4 (four) problems.*
 

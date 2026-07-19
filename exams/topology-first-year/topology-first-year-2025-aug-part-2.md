@@ -1,4 +1,4 @@
-# Topology, first year exam, August 2025, Part 2
+# Topology first year exam, August 2025, Part 2
 
 *For the first five problems, show all your work and support all statements.*
 

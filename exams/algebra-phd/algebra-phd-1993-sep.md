@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 1993
+# Algebra PhD exam, September 1993
 
 *Do seven of the following questions (the exam committee will NOT select your best seven answers if you answer more than seven). You may quote standard results (within reason) as long as you make it clear that you are doing so and you state them clearly.*
 

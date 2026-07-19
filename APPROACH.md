@@ -16,28 +16,29 @@ that has no continuing value.
 
 The Git repository is also the durable project archive. It tracks the acquisition and
 extraction code, documentation and tests, losslessly optimized source PDFs, canonical
-JSON records, generated Markdown views, and `manifest.json` provenance. The original
+JSON records, generated Markdown and HTML views, and `manifest.json` provenance. The original
 download size and hash remain in the manifest even when optimization changes the stored
 PDF bytes. Regenerable page renders, model checkpoints, and other build artifacts remain
 outside Git under `build/`.
 
 ## Unit of Work
 
-Every linked PDF is one exam record and produces one adjacent JSON file plus one
-Markdown view generated from that JSON. A PDF labeled Part 1 and a PDF labeled Part 2
+Every linked PDF is one exam record and produces one adjacent JSON file plus Markdown
+and HTML views generated from that JSON. A PDF labeled Part 1 and a PDF labeled Part 2
 are separate exams for this purpose. If a part was never published, no placeholder or
 synthetic record is created.
 
 Files that repeat questions from another exam are extracted independently. The dataset
 does not deduplicate questions or create shared question records.
 
-The PDF, canonical JSON, and generated Markdown are stored together for efficient
-review. They share a filename stem and differ only by extension:
+The PDF, canonical JSON, generated Markdown, and generated HTML are stored together for
+efficient review. They share a filename stem and differ only by extension:
 
 ```text
 exams/algebra-first-year/algebra-first-year-2025-may-part-1.pdf
 exams/algebra-first-year/algebra-first-year-2025-may-part-1.json
 exams/algebra-first-year/algebra-first-year-2025-may-part-1.md
+exams/algebra-first-year/algebra-first-year-2025-may-part-1.html
 ```
 
 An exam without a part has no part suffix:
@@ -45,6 +46,7 @@ An exam without a part has no part suffix:
 ```text
 exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.json
 exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.md
+exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.html
 ```
 
 The filename stem is the stable exam identifier.
@@ -143,7 +145,7 @@ are restored. OCRmyPDF is an optional archive-maintenance tool, not part of extr
 
 When an approved working hash differs from an existing extraction checkpoint, the old
 working hash is retained in `source_sha256_history` and the checkpoint adopts the new
-manifest-approved hash. This allows cached JSON and Markdown to survive byte-level PDF
+manifest-approved hash. This allows cached JSON, Markdown, and HTML to survive byte-level PDF
 optimization without erasing provenance or making another model call.
 
 ## Instructions
@@ -462,28 +464,48 @@ Before an exam JSON is accepted, ordinary code checks that:
 10. No exam with an open serious-review item is marked ready for publication.
 
 Initial extraction results remain provisional until the later verification phase. The
-archive validator additionally checks every PDF hash, JSON and Markdown pair, absolute
-review index, source reference in the review logs, review page number, and expression
+archive validator additionally checks every PDF hash, JSON, Markdown, HTML, and site-index
+set, absolute review index, source reference in the review logs, review page number, and expression
 using the pinned MathJax version before publication begins. It accepts exam IDs for a
 focused validation run and no IDs for the complete archive.
 
 ## Presentation Is Downstream
 
-The dataset is the source of truth for future outputs. The extraction command also
-creates a Markdown view of each accepted JSON record. Its title contains the subject,
+The dataset is the source of truth for generated outputs. The extraction command creates
+Markdown and HTML views of each accepted JSON record. Their title contains the subject,
 followed by “first year exam” or “PhD exam,” month, year, and part when present.
 Instructions are italicized, problem numbers are bold, and labeled subparts are compact
 nested bullets. Section headings and displayed problem numbers are derived from ordered
-blocks and restart/continue policy. Markdown is always regenerated from JSON and is
-never independently edited or returned by the model.
+blocks and restart/continue policy. Both formats are always regenerated from JSON and
+are never independently edited or returned by the model.
 
 When a source problem has labeled subparts but no independent stem, the Markdown
 renderer adds a presentation-only sentence such as “This problem has three parts.” The
 sentence is derived from the subpart array and is not added to the canonical JSON or
 represented as source-authored text.
 
-A WordPress renderer can create semantic headings, ordered problem lists, labeled nested
-subpart lists, and accessible MathJax output.
+The static HTML renderer creates semantic headings, ordered problem lists, labeled
+nested subpart lists, keyboard-visible links, responsive equations, accessible MathJax
+output, and print styles. It uses a narrow reading column and Computer Modern webfonts.
+The source-PDF and subject-index links are omitted when the page is printed.
+
+A second deterministic renderer creates a root archive index and one index inside every
+subject directory. The root page orders levels as Qualifying, First-year, and PhD, then
+orders subjects alphabetically within each level. Subject tables order exams from newest
+to oldest and link to the accessible HTML and archived PDF. The index pages use semantic
+navigation, scoped table headings, visible keyboard focus, responsive overflow, and the
+same institutional identity and typography as the exam pages. The complete archive
+validator compares every generated index against `manifest.json`.
+
+Website navigation is self-contained. Generated pages do not link to the retiring GMA
+website; source URLs remain in canonical data only as provenance. Every page footer puts
+the project-source link first and includes a subdued semantic update date. Subject pages
+then link to the main archive, while exam pages link to the main archive, their named
+subject archive, and the adjacent committed PDF. The site-wide update date is an explicit
+renderer constant so regeneration remains deterministic and does not make every page
+appear changed merely because validation ran on another day.
+
+The same semantic HTML can be adapted for WordPress publication.
 
 A PDF generator can produce a newly typeset accessible PDF from the same record.
 

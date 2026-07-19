@@ -1,4 +1,4 @@
-# Analysis, PhD exam, June 1996
+# Analysis PhD exam, June 1996
 
 *Remark. In the sequel the word measure means positive, countably additive measure, unless otherwise stated.*
 

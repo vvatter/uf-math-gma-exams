@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, January 2014
+# Numerical Linear Algebra first year exam, January 2014
 
 *Answer any 4 questions.*
 

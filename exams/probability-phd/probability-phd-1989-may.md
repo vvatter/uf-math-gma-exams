@@ -1,4 +1,4 @@
-# Probability, PhD exam, May 1989
+# Probability PhD exam, May 1989
 
 **1.** Let \(X_n\) be independent identically distributed random variables and \(S_n=\sum_{i=1}^n X_i\). Suppose
 \[

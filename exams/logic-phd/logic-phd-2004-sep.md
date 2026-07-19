@@ -1,4 +1,4 @@
-# Logic, PhD exam, September 2004
+# Logic PhD exam, September 2004
 
 *Answer 7 questions.*
 

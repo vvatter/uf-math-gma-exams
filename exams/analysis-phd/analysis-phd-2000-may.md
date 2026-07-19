@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2000
+# Analysis PhD exam, May 2000
 
 *Be sure to write all proofs in a neat and logical fashion. Give reasons for all steps!*
 

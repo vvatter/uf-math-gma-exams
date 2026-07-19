@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2019
+# Combinatorics PhD exam, August 2019
 
 **1.** List the infinite families of symmetries of the standard square tiling of the plane. (No two families should have more than the identity in common.)
 

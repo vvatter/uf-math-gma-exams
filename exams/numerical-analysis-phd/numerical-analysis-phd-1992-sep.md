@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, September 1992
+# Numerical Analysis PhD exam, September 1992
 
 **1.** Show that if \(A\in\mathbb{R}^{n\times n}\), then \(\lVert A\rVert_2=\sigma_1\), the largest singular value of \(A\).
 

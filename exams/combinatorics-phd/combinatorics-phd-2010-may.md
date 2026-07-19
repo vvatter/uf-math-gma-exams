@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2010
+# Combinatorics PhD exam, May 2010
 
 **1.** This problem has two parts.
 * (a) Prove that

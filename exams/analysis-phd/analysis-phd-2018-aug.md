@@ -1,4 +1,4 @@
-# Analysis, PhD exam, August 2018
+# Analysis PhD exam, August 2018
 
 *Do six of eight. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

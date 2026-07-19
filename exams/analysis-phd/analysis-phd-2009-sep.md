@@ -1,4 +1,4 @@
-# Analysis, PhD exam, September 2009
+# Analysis PhD exam, September 2009
 
 *Do 6 out of the 7 problems.*
 

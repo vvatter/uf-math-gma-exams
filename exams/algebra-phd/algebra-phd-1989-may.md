@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 1989
+# Algebra PhD exam, May 1989
 
 *Do 7 out of the following questions.*
 

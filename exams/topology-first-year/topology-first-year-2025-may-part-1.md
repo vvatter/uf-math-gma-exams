@@ -1,4 +1,4 @@
-# Topology, first year exam, May 2025, Part 1
+# Topology first year exam, May 2025, Part 1
 
 *Answer the following problems and show all your work. Support all statements to the best of your ability.*
 

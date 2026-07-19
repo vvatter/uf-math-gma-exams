@@ -1,4 +1,4 @@
-# Analysis, first year exam, August 2019, Part 2
+# Analysis first year exam, August 2019, Part 2
 
 *Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.*
 

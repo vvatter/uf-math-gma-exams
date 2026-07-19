@@ -1,4 +1,4 @@
-# Partial Differential Equations, PhD exam, May 2001
+# Partial Differential Equations PhD exam, May 2001
 
 *Do all problems 1–4. Choose one problem of 5 and 6 and one problem of 7 and 8.*
 

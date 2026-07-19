@@ -1,4 +1,4 @@
-# Logic, PhD exam, September 1992
+# Logic PhD exam, September 1992
 
 *This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment.*
 

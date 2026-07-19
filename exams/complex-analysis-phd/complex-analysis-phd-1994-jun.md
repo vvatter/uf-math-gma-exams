@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, June 1994
+# Complex Analysis PhD exam, June 1994
 
 **1.** Show, if \(a>e\), then \(e^z-az^n\) has \(n\) zeros in \(|z|<1\).
 

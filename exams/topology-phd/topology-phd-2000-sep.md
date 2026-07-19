@@ -1,4 +1,4 @@
-# Topology, PhD exam, September 2000
+# Topology PhD exam, September 2000
 
 *Work the following problems and show all work. Support all statements to the best of your ability.*
 

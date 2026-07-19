@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2013
+# Combinatorics PhD exam, May 2013
 
 *Answer all questions.*
 

@@ -1,4 +1,4 @@
-# Numerical Analysis, qualifying exam, January 2026, Part 1
+# Numerical Analysis qualifying exam, January 2026, Part 1
 
 *Do 4 (four) problems.*
 

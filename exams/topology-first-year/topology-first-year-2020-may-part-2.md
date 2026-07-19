@@ -1,4 +1,4 @@
-# Topology, first year exam, May 2020, Part 2
+# Topology first year exam, May 2020, Part 2
 
 *Work the following problems and show all work. Support all statements to the best of your ability.*
 

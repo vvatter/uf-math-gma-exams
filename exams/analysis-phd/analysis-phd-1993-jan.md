@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 1993
+# Analysis PhD exam, January 1993
 
 *Be sure to present all work in a neat and logical fashion in order to receive credit.*
 

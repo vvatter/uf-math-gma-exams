@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 2017
+# Analysis PhD exam, January 2017
 
 *Do six of eight. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

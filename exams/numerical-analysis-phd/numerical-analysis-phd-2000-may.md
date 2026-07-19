@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2000
+# Numerical Analysis PhD exam, May 2000
 
 **1.** This problem has two parts.
 * (a) State the conditions under which a square matrix \(A\) can be decomposed into a form \(A=SDS^{-1}\), where \(D\) is diagonal.

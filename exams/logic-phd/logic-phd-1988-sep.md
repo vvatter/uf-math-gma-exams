@@ -1,4 +1,4 @@
-# Logic, PhD exam, September 1988
+# Logic PhD exam, September 1988
 
 *Do any 8 problems.*
 

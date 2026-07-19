@@ -1,4 +1,4 @@
-# Analysis, PhD exam, September 2011
+# Analysis PhD exam, September 2011
 
 *Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.*
 

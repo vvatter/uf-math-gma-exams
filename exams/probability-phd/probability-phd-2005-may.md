@@ -1,4 +1,4 @@
-# Probability, PhD exam, May 2005
+# Probability PhD exam, May 2005
 
 **1.** Let \(X_1, X_2\) be two independent random variables with the same uniform distribution on \((\theta-1/2,\theta+1/2)\), and let \(Y_1=\min(X_1,X_2)\), \(Y_2=\max(X_1,X_2)\),
 * (a). Find \(\mathbb{P}(Y_1\leq\theta\leq Y_2)\),

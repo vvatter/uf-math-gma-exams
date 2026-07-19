@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 1991
+# Combinatorics PhD exam, May 1991
 
 *Do 9 out of 12 problems. Show all of your work.*
 

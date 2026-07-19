@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 1992
+# Complex Analysis PhD exam, May 1992
 
 *Do all problems. Show all the necessary details so partial credit can be properly assessed.*
 

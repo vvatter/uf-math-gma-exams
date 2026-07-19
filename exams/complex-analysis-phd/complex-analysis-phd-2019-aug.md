@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, August 2019
+# Complex Analysis PhD exam, August 2019
 
 *Answer SIX (out of nine) questions in detail. State carefully any results used without proof.*
 

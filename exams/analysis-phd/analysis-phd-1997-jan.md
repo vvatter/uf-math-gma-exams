@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 1997
+# Analysis PhD exam, January 1997
 
 ## I.
 

@@ -1,4 +1,4 @@
-# Topology, first year exam, May 2019, Part 2
+# Topology first year exam, May 2019, Part 2
 
 *Answer all questions and work all problems. Make proofs as succinct as possible.*
 

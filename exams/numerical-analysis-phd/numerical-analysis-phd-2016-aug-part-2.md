@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, August 2016, Part 2
+# Numerical Analysis PhD exam, August 2016, Part 2
 
 *You have 2 hours to answer the following questions. You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.*
 

@@ -1,4 +1,4 @@
-# Algebra, first year exam, May 2020, Part 1
+# Algebra first year exam, May 2020, Part 1
 
 *Do four out of the six problems below. If you hand in more than four problems, only the first four will be graded. You may (within reason) use results from the text if you state them fully.*
 

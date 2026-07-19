@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Combinatorics PhD exam, September 1989</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Combinatorics PhD exam, September 1989</h1>
+    </header>
+    <div class="instructions">
+      <p>Do 7 out of 9 problems.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Define the Ramsey number \(r(m,n)\) and prove that</p>
+        <div class="display-math">\[
+r(m,n) \leq \binom{m+n-2}{m-1}.
+\]</div>
+      </li>
+      <li class="problem">
+        <p>The 12 edges of a cube are each colored one of two colors. Two such colored cubes are regarded as equivalent if one can be rotated so that it becomes identically colored to the other. Compute the number of equivalence classes of these colored cubes.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(\Sigma\) be a block design with parameters \(b,v,r,k,\lambda\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>Prove that</p>
+                <div class="display-math">\[
+MM^T=
+\begin{pmatrix}
+r &amp; \lambda &amp; \cdots &amp; \lambda\\
+\lambda &amp; r &amp; \cdots &amp; \lambda\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+\lambda &amp; \lambda &amp; \cdots &amp; r
+\end{pmatrix},
+\]</div>
+                <p>where \(M^T\) is the transpose of \(M\), an incidence matrix for \(\Sigma\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Compute the determinant of \(MM^T\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iii)</span>
+              <div class="subpart-body">
+                <p>Prove that \(b \geq v\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iv)</span>
+              <div class="subpart-body">
+                <p>If \(b=v\) is an even integer, prove that \(k-\lambda\) is the square of an integer.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Give responses to any 4 out of the 5 parts. You may use the conclusions of (ii) and (iii) in responding to parts (iv) and (v) even if you omit their proofs.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>State the Hall Multiplier Theorem for cyclic difference sets.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Assume that \(D\) is a cyclic \((v,k,\lambda)\)-difference set with a multiplier \(m\) which satisfies \((v,m-1)=1\). Prove the existence of a cyclic \((v,k,\lambda)\)-difference set \(D&#x27;\) which is fixed by \(m\); i.e., which satisfies \(D&#x27;m=D&#x27;\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iii)</span>
+              <div class="subpart-body">
+                <p>If there is a cyclic \((v,k,\lambda)\)-difference set \(D&#x27;\) fixed by a multiplier \(m\) and if \(v\) is a prime number, prove the existence of a cyclic \((v,k,\lambda)\)-difference set \(D&#x27;&#x27;\) that satisfies \(1\in D&#x27;&#x27;=D&#x27;&#x27;m\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iv)</span>
+              <div class="subpart-body">
+                <p>Prove that there is no cyclic \((67,12,2)\)-difference set.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(v)</span>
+              <div class="subpart-body">
+                <p>Find a cyclic \((73,9,1)\)-difference set.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>A \(t\)-\((v,k,\lambda)\) design \(\Sigma\) is an incidence structure consisting of a set \(S\) of \(v\) points and a collection of \(k\)-subsets of \(S\) called blocks such that every \(t\)-subset of \(S\) is contained in precisely \(\lambda\) blocks.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>If \(t\geq 1\), prove that \(\Sigma\) is also a \((t-1)\)-\((v,k,\lambda&#x27;)\) design with</p>
+                <div class="display-math">\[
+\lambda&#x27;=\frac{(v-t+1)\lambda}{k-t+1}.
+\]</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Let \(\Sigma\) be a \(4\)-\((23,7,1)\) design. Let \(\Sigma^*\) be the incidence structure defined on the point set of \(\Sigma\) by taking as blocks the complements of the blocks of \(\Sigma\). Prove that \(\Sigma^*\) is a \(4\)-\((23,16,\lambda^*)\) design, and give the value of \(\lambda^*\).</p>
+                <p>Hints: For \(0\leq s\leq 3\), \(\Sigma\) is an \(s\)-\((23,7,\lambda_s)\) design. Use the principle of inclusion and exclusion.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>State and prove Dilworth&#x27;s Theorem for a finite poset.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(\{a_n\}_{n=0}^{\infty}\) be a sequence satisfying a homogeneous linear recurrence relation. Define</p>
+        <div class="display-math">\[
+r_n=\frac{a_n}{a_{n-1}},\qquad n=1,2,3,\ldots.
+\]</div>
+        <p>Give necessary and sufficient conditions on the recurrence relation for \(r_n\) to approach a finite limit, and give a way to find the limit when it exists.</p>
+      </li>
+      <li class="problem">
+        <p>Describe a combinatorial algorithm of polynomial time efficiency to solve the following problem. Prove that your algorithm has the required efficiency using theorems from the combinatorics class.</p>
+        <p>Input: \(X\) a finite set, \(\{A_1,A_2,\ldots,A_n\}\) a collection of subsets of \(X\), and \(p:X\to\mathbb{R}\) a function.</p>
+        <p>Output: \(\{x_1,x_2,\ldots,x_n\}\) distinct elements of \(X\) which maximize</p>
+        <div class="display-math">\[
+\sum_{i=1}^n p(x_i)
+\]</div>
+        <p>subject to \(x_i\in A_i\) for all \(i\).</p>
+        <p>(Assume there exists a set of \(n\) elements satisfying the restriction \(x_i\in A_i\), \(\forall i\).)</p>
+      </li>
+      <li class="problem">
+        <p>Find the number of spanning sets in a vector space \(V\) of dimension \(n\) over \(\operatorname{GF}(q)\), the finite field with \(q\) elements. (Hint: try Möbius inversion.)</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Combinatorics PhD exams</a></li>
+        <li><a href="combinatorics-phd-1989-sep.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

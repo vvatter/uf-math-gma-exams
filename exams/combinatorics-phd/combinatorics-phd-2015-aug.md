@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2015
+# Combinatorics PhD exam, August 2015
 
 **1.** Let \(f(n)\) be the number of permutations of length \(n\) that contain no cycles of length exactly two.
 * (a) Find the exponential generating function of the sequence \(f(n)\). You can assume that \(f(0)=1\).

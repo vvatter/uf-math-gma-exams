@@ -1,4 +1,4 @@
-# Logic, PhD exam, May 2000
+# Logic PhD exam, May 2000
 
 *Answer 7 questions, including at least one from each of the four segments.*
 

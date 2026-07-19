@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 1988
+# Analysis PhD exam, May 1988
 
 *Answer seven out of the eight questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.*
 

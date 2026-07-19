@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, January 2016, Part 2
+# Numerical Analysis PhD exam, January 2016, Part 2
 
 *You must show all your work as neatly and clearly as possible and indicate the final answer clearly.*
 

@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra PhD exams</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible, .table-wrap:focus-visible {
+      outline: 3px solid #d28b18;
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      z-index: 1;
+      padding: .55rem .75rem;
+      background: #fff;
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: none; }
+    main {
+      width: 100%;
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .site-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution { margin: 0 0 .4rem; font-size: 1rem; font-weight: 700; }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.2rem; }
+    h2 {
+      margin: 2.8rem 0 .65rem;
+      padding-bottom: .3rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.45rem;
+    }
+    p { margin: 0 0 1rem; }
+    .lede { max-width: 48rem; font-size: 1.18rem; }
+    .subject-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .subject-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      border-bottom: 1px solid #d8d8d2;
+    }
+    .subject-list a {
+      padding: .7rem 0;
+      font-weight: 700;
+    }
+    .count { padding: .7rem 0; color: #555550; font-weight: 500; white-space: nowrap; }
+    .table-wrap { max-width: 100%; overflow-x: auto; }
+    table { width: 100%; min-width: 39rem; border-collapse: collapse; }
+    caption { padding: 0 0 .75rem; text-align: left; font-style: italic; }
+    th, td { padding: .65rem .75rem; border-bottom: 1px solid #d8d8d2; text-align: left; }
+    thead th { border-bottom: 2px solid #242421; font-weight: 700; }
+    tbody th { font-weight: 500; }
+    tbody tr:hover { background: #f5f5f2; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    @media (max-width: 42rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .subject-list { grid-template-columns: 1fr; }
+    }
+    @media print {
+      @page { margin: .55in; }
+      body { font-size: 10pt; line-height: 1.3; color: #000; }
+      main { max-width: none; padding: 0; }
+      .skip-link, footer { display: none; }
+      .site-header { margin-bottom: .7rem; padding-bottom: .35rem; border-bottom-width: 1px; }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; }
+      h2 { margin: .9rem 0 .35rem; font-size: 12pt; }
+      .subject-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .subject-list a, .count { padding: .25rem 0; }
+      table { min-width: 0; }
+      th, td { padding: .25rem .4rem; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content">
+    <header class="site-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra PhD exams</h1>
+    </header>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="Algebra PhD exams">
+      <table>
+        <caption>65 exams, newest first</caption>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Part</th>
+            <th scope="col">Accessible HTML</th>
+            <th scope="col">Archived PDF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><time datetime="2025-08">August 2025</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2025-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2025-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2025-05">May 2025</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2025-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2025-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2024-08">August 2024</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2024-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2024-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2024-05">May 2024</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2024-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2024-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2023-08">August 2023</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2023-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2023-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2023-05">May 2023</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2023-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2023-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2022-08">August 2022</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2022-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2022-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2022-01">January 2022</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2022-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2022-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2021-08">August 2021</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2021-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2021-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2021-05">May 2021</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2021-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2021-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2020-08">August 2020</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2020-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2020-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2020-05">May 2020</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2020-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2020-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2019-05">May 2019</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2019-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2019-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2019-01">January 2019</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2019-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2019-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2018-08">August 2018</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2018-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2018-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2018-05">May 2018</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2018-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2018-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2018-01">January 2018</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2018-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2018-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2017-05">May 2017</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2017-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2017-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2016-08">August 2016</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2016-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2016-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2016-05">May 2016</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2016-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2016-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2015-05">May 2015</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2015-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2015-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2015-01">January 2015</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2015-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2015-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2014-05">May 2014</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2014-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2014-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2014-01">January 2014</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2014-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2014-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2013-05">May 2013</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2013-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2013-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2013-01">January 2013</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2013-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2013-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2012-08">August 2012</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2012-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2012-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2012-05">May 2012</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2012-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2012-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2011-05">May 2011</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2011-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2011-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2011-01">January 2011</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2011-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2011-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2010-05">May 2010</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2010-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2010-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2009-09">September 2009</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2009-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-2009-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2009-05">May 2009</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2009-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2009-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2008-05">May 2008</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2008-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2008-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2007-05">May 2007</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2007-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2007-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2006-09">September 2006</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2006-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-2006-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2006-05">May 2006</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2006-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2006-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2005-08">August 2005</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2005-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-2005-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2005-05">May 2005</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2005-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2005-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2004-09">September 2004</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2004-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-2004-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2004-05">May 2004</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2004-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2004-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2003-09">September 2003</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2003-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-2003-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2003-01">January 2003</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2003-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2003-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2002-05">May 2002</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2002-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2002-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2001-09">September 2001</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2001-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-2001-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2001-05">May 2001</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2001-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2001-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2001-01">January 2001</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2001-jan.html">Read exam</a></td>
+            <td><a href="algebra-phd-2001-jan.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2000-09">September 2000</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2000-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-2000-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="2000-05">May 2000</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-2000-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-2000-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1999-09">September 1999</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1999-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1999-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1999-05">May 1999</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1999-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-1999-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1997-08">August 1997</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1997-aug.html">Read exam</a></td>
+            <td><a href="algebra-phd-1997-aug.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1997-07">July 1997</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1997-jul.html">Read exam</a></td>
+            <td><a href="algebra-phd-1997-jul.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1996-05">May 1996</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1996-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-1996-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1995-09">September 1995</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1995-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1995-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1995-05">May 1995</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1995-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-1995-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1994-09">September 1994</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1994-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1994-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1994-05">May 1994</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1994-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-1994-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1993-09">September 1993</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1993-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1993-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1993-05">May 1993</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1993-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-1993-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1992-09">September 1992</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1992-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1992-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1991-09">September 1991</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1991-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1991-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1990-09">September 1990</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1990-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1990-sep.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1989-05">May 1989</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1989-may.html">Read exam</a></td>
+            <td><a href="algebra-phd-1989-may.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="1988-09">September 1988</time></th>
+            <td><span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span></td>
+            <td><a href="algebra-phd-1988-sep.html">Read exam</a></td>
+            <td><a href="algebra-phd-1988-sep.pdf">View PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

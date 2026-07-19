@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, January 2022
+# Combinatorics PhD exam, January 2022
 
 **1.** Prove that if every vertex of a graph \(G\) has degree at least 3, then \(G\) has a cycle with a chord. (A chord is an edge joining two non-adjacent vertices on the cycle.)
 

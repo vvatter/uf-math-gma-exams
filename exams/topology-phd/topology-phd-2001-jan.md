@@ -1,4 +1,4 @@
-# Topology, PhD exam, January 2001
+# Topology PhD exam, January 2001
 
 *Work the following problems and show all work. Support all statements to the best of your ability.*
 

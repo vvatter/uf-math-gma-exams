@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 1988
+# Algebra PhD exam, September 1988
 
 *Do seven problems, at least two from each section.*
 

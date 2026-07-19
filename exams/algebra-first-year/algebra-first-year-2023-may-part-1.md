@@ -1,4 +1,4 @@
-# Algebra, first year exam, May 2023, Part 1
+# Algebra first year exam, May 2023, Part 1
 
 *Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.*
 

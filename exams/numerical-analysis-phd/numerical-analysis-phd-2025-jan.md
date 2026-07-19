@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, January 2025
+# Numerical Analysis PhD exam, January 2025
 
 *Do 4 (four) of the first 5 (1-5) and 4 (four) of the last 5 problems (6-10).*
 

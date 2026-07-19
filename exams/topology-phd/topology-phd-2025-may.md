@@ -1,4 +1,4 @@
-# Topology, PhD exam, May 2025
+# Topology PhD exam, May 2025
 
 *Be neat and do not write too small.*
 

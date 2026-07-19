@@ -1,4 +1,4 @@
-# Variational Analysis/Numerical Optimization, PhD exam, January 2018
+# Variational Analysis/Numerical Optimization PhD exam, January 2018
 
 *Do 8 (eight) problems.*
 

@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2014
+# Algebra PhD exam, May 2014
 
 *Do any 7 of the 11 problems, and mark clearly which problems you want graded if you try more than 7. State clearly any theorems that you use.*
 

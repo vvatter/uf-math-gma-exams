@@ -1,4 +1,4 @@
-# Analysis, first year exam, August 2016, Part 2
+# Analysis first year exam, August 2016, Part 2
 
 *Answer exactly FOUR questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

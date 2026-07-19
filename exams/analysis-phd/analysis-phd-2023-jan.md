@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 2023
+# Analysis PhD exam, January 2023
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.*
 

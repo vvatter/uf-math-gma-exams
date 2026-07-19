@@ -1,4 +1,4 @@
-# Logic, PhD exam, August 2019
+# Logic PhD exam, August 2019
 
 *Solve 5 problems of the following; at least one from each section.*
 

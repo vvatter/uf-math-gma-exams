@@ -1,4 +1,4 @@
-# Functional Analysis, PhD exam, January 2011
+# Functional Analysis PhD exam, January 2011
 
 *Do only 5 of the 8 problems.*
 

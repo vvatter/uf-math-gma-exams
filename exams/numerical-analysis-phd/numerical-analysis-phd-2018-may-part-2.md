@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2018, Part 2
+# Numerical Analysis PhD exam, May 2018, Part 2
 
 *Do all five (5) problems.*
 

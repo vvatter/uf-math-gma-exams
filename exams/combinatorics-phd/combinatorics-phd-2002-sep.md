@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, September 2002
+# Combinatorics PhD exam, September 2002
 
 *SHOW ALL WORK TO RECEIVE CREDIT!!*
 

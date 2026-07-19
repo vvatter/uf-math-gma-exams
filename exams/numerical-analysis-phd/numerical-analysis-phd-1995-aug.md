@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, August 1995
+# Numerical Analysis PhD exam, August 1995
 
 **1.** Consider the Householder matrix \(H=I-2ww^T\), where \(w^Tw=1\).
 * (a) Show that \(H\) is orthogonal.

@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2019
+# Numerical Analysis PhD exam, May 2019
 
 ## Numerical Linear Algebra
 

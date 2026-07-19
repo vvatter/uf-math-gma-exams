@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2002
+# Analysis PhD exam, May 2002
 
 ## I
 

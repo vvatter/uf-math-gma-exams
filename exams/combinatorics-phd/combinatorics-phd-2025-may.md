@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2025
+# Combinatorics PhD exam, May 2025
 
 **1.** A certain centipede has \(n\) pairs of legs. The centipede has one sock and one shoe for each of its legs. In how many orders can the centipede put on its socks and shoes assuming that, for each leg, the sock must be put on before the shoe?
 

@@ -1,4 +1,4 @@
-# Differential Geometry, PhD exam, May 1992
+# Differential Geometry PhD exam, May 1992
 
 *Answer three questions from Section I and each question in Section II.*
 

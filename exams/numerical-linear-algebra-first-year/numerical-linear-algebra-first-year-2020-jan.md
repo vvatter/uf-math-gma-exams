@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, January 2020
+# Numerical Linear Algebra first year exam, January 2020
 
 *Do 4 (four) problems.*
 

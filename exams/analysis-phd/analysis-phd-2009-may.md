@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2009
+# Analysis PhD exam, May 2009
 
 **1.** State and prove the Fubini theorems.
 

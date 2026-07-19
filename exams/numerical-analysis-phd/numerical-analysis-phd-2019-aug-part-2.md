@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, August 2019, Part 2
+# Numerical Analysis PhD exam, August 2019, Part 2
 
 *Do 4 (four) problems.*
 

@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, August 2017, Part 2
+# Numerical Analysis PhD exam, August 2017, Part 2
 
 *Do all 5 (five) problems.*
 

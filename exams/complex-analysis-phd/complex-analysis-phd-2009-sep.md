@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, September 2009
+# Complex Analysis PhD exam, September 2009
 
 **1.** A fixed point of a function \(f\) is a point \(x\) with \(f(x)=x\). Let \(G\) be an open, simply connected subset of \(\mathbb C\). If \(f\) is analytic on \(G\), \(f(G)\subset G\), and \(f\) has two fixed points, show that \(f\) is the identity map.
 

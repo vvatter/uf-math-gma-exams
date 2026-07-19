@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2016
+# Analysis PhD exam, May 2016
 
 *Do THREE problems from Part A and THREE problems from Part B. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

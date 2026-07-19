@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, August 2017
+# Numerical Analysis first year exam, August 2017
 
 *Do all 5 (five) problems.*
 

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numerical Analysis PhD exam, January 2010</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Numerical Analysis PhD exam, January 2010</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer any 8 questions.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Prove that a projector is normal if and only if it is self-adjoint.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(A \in \mathbb{R}^{N\times N}\) and \(b \in \mathbb{R}^N\). Consider the following iteration for solving \(Ax=b\), that computes \(x_{n+1}\), given \(x_n \in \mathbb{R}^N\), as follows (in \(m\) intermediate steps): Setting \(x_{n+1}^{(0)}=x_n\), for \(\ell=1,2,\ldots,m\), compute \(x_{n+1}^{(\ell)}=x_{n+1}^{(\ell-1)}+\tau_\ell(b-Ax_{n+1}^{(\ell-1)})\). Then, define \(x_{n+1}=x_{n+1}^{(m)}\). There is a linear operator \(E\) such that \(x_{n+1}-x=E(x_n-x)\). Give a formula for \(E\). Suppose \(A\) is Hermitian and positive definite with spectral condition number \(\kappa\). Prove that there are real values of the \(m\) parameters \(\tau_\ell\) such that</p>
+        <div class="display-math">\[
+\rho(E)\leq 2\left(\frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1}\right)^m.
+\]</div>
+      </li>
+      <li class="problem">
+        <p>Suppose \(A\) and \(B\) are square matrices such that \(AB\) is normal. Prove that \(\lVert AB\rVert_2\leq \lVert BA\rVert\). (We use \(\lVert\cdot\rVert_2\) to denote the spectral norm and \(\lVert\cdot\rVert\) to denote any induced matrix norm.)</p>
+      </li>
+      <li class="problem">
+        <p>Let \(A\in\mathbb{C}^{m\times m}\), and \(a_j\) be its \(j\)-th column. Prove that</p>
+        <div class="display-math">\[
+|\det A|\leq \prod_{j=1}^m\lVert a_j\rVert_2.
+\]</div>
+      </li>
+      <li class="problem">
+        <p>Suppose \(A\) is a Hermitian positive definite matrix split into \(A=C+C^*+D\) where \(D\) is also Hermitian positive definite. Show that \(B=C+\omega^{-1}D\) is invertible. Consider the iteration \(x_{n+1}=x_n+B^{-1}(b-Ax_n)\), with any initial iterate \(x_0\). Prove that \(x_n\) converges to \(x=A^{-1}b\) whenever \(0&lt;\omega&lt;2\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(x_0,x_1,\ldots,x_n\) be distinct points in a finite interval \([a,b]\) and \(f\in C^1[a,b]\). Show that for any given \(\varepsilon&gt;0\) there exists a polynomial \(p\) such that \(\lVert f-p\rVert_\infty&lt;\varepsilon\) and \(p(x_i)=f(x_i)\) for all \(i=0,1,\ldots,n\) (where \(\lVert\cdot\rVert_\infty\) denotes the \(L^\infty(a,b)\)-norm).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(p&gt;0\) and \(x=\sqrt{p+\sqrt{p+\sqrt{p+\cdots}}}\), where all the square roots are positive. Design a fixed point iteration \(x_{n+1}=F(x_n)\) that converges to \(x\). You should write down a specific \(F\). Obtain a sufficient condition on the initial iterates for (global) convergence of the iteration.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(n\) be a positive integer, \(h=1/n\), and consider the grid of points \((ih,jh)\) for \(i,j=0,1,\ldots,n\). Let \(A\) be the finite difference operator with the “5-point stencil” discretizing the Laplace operator \(-\Delta\), with zero Dirichlet boundary conditions on this grid. Describe it. Prove that the spectrum of \(A\) consists of the numbers</p>
+        <div class="display-math">\[
+\lambda_{lm}=4h^{-2}\bigl(\sin^2(l\pi h/2)+\sin^2(m\pi h/2)\bigr),
+\]</div>
+        <p>for all \(l,m=1,\ldots,n-1\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(x_m\) and \(x_{m+1}\) be two successive (complex) iterates when Newton’s method is applied to a polynomial \(p(z)\) of degree \(n\). Prove that there is a zero of \(p(z)\) in the disk \(\{z\in\mathbb{C}:|z-x_m|\leq n|x_{m+1}-x_m|\}\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(w(x)\) be a positive integrable function on \([a,b]\). Consider the quadrature</p>
+        <div class="display-math">\[
+\int_a^b f(x)w(x)\,dx\approx\sum_{k=0}^n\bigl(A_kf(x_k)+B_kf&#x27;(x_k)+C_kf&#x27;&#x27;(x_k)\bigr)
+\]</div>
+        <p>for any \(f\) with continuous first and second derivatives (\(f&#x27;\) and \(f&#x27;&#x27;\), respectively). Give conditions on \(A_k,B_k,C_k\) and \(x_k\) so that the quadrature has precision \(4n+3\).</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Numerical Analysis PhD exams</a></li>
+        <li><a href="numerical-analysis-phd-2010-jan.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

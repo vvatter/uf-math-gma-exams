@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, January 2009
+# Numerical Analysis PhD exam, January 2009
 
 *Answer any 8 questions.*
 

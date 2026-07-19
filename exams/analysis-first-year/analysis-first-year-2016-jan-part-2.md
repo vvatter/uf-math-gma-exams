@@ -1,4 +1,4 @@
-# Analysis, first year exam, January 2016, Part 2
+# Analysis first year exam, January 2016, Part 2
 
 *Do exactly two problems from Part A and two problems from part B. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

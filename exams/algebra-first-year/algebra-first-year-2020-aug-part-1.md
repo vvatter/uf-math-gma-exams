@@ -1,4 +1,4 @@
-# Algebra, first year exam, August 2020, Part 1
+# Algebra first year exam, August 2020, Part 1
 
 *Answer four problems. Write your answers clearly in complete English sentences.*
 

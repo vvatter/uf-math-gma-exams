@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from enum import Enum
 import hashlib
+from html import escape
 import json
 import os
 from pathlib import Path
@@ -740,6 +741,10 @@ def exam_markdown_path(source: SourceExam) -> Path:
     return source.pdf_path.with_suffix(".md")
 
 
+def exam_html_path(source: SourceExam) -> Path:
+    return source.pdf_path.with_suffix(".html")
+
+
 def checkpoint_path(source: SourceExam, build_root: Path) -> Path:
     return build_root / source.id / "extraction.json"
 
@@ -850,18 +855,50 @@ def render_instructions(text: str) -> list[str]:
     return lines
 
 
-def render_markdown(exam: ExamRecord) -> str:
+def exam_title(exam: ExamRecord) -> str:
     if exam.subject.startswith("First Year "):
-        title = f"{exam.subject.removeprefix('First Year ')}, first year exam"
+        title = f"{exam.subject.removeprefix('First Year ')} first year exam"
     elif exam.subject.startswith("PhD "):
-        title = f"{exam.subject.removeprefix('PhD ')}, PhD exam"
+        title = f"{exam.subject.removeprefix('PhD ')} PhD exam"
     elif exam.subject.endswith(" Qualifying Exam"):
-        title = f"{exam.subject.removesuffix(' Qualifying Exam')}, qualifying exam"
+        title = f"{exam.subject.removesuffix(' Qualifying Exam')} qualifying exam"
     else:
         title = f"{exam.subject} exam"
     title += f", {exam.month.title()} {exam.year}"
     if exam.part is not None:
         title += f", Part {exam.part}"
+    return title
+
+
+PROJECT_SOURCE_URL = "https://github.com/vvatter/uf-math-gma-exams"
+PAGE_UPDATED_ISO = "2026-07-19"
+PAGE_UPDATED_LABEL = "July 19, 2026"
+
+
+def subject_display_name(subject: str, subject_tag: str) -> str:
+    name = subject.strip()
+    if subject_tag.endswith("-qualifying") and name.endswith(" Qualifying Exam"):
+        return name.removesuffix(" Qualifying Exam")
+    if subject_tag.endswith("-first-year") and name.startswith("First Year "):
+        return name.removeprefix("First Year ")
+    if subject_tag.endswith("-phd") and name.startswith("PhD "):
+        return name.removeprefix("PhD ")
+    raise ValueError(f"subject name does not match its tag: {subject!r}, {subject_tag!r}")
+
+
+def subject_archive_title(subject: str, subject_tag: str) -> str:
+    name = subject_display_name(subject, subject_tag)
+    if subject_tag.endswith("-qualifying"):
+        return f"{name} Qualifying exams"
+    if subject_tag.endswith("-first-year"):
+        return f"{name} First-Year exams"
+    if subject_tag.endswith("-phd"):
+        return f"{name} PhD exams"
+    raise ValueError(f"subject tag has no recognized archive level: {subject_tag}")
+
+
+def render_markdown(exam: ExamRecord) -> str:
+    title = exam_title(exam)
     lines = [f"# {title}", ""]
     displayed_number = 0
     for block in exam.content:
@@ -887,6 +924,321 @@ def render_markdown(exam: ExamRecord) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+DISPLAY_MATH_BLOCK = re.compile(r"(\\\[(?:.|\n)*?\\\])")
+COMPUTER_MODERN_CSS = (
+    "https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css"
+)
+MATHJAX_SCRIPT = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+
+
+def render_html_text(text: str, indentation: int) -> list[str]:
+    """Render escaped prose and display-math blocks without interpreting TeX."""
+    prefix = " " * indentation
+    lines: list[str] = []
+    for segment in DISPLAY_MATH_BLOCK.split(text.strip()):
+        if not segment.strip():
+            continue
+        if segment.lstrip().startswith(r"\["):
+            escaped_math = escape(segment.strip())
+            lines.append(f'{prefix}<div class="display-math">{escaped_math}</div>')
+            continue
+        for paragraph in re.split(r"\n\s*\n", segment.strip()):
+            if not paragraph.strip():
+                continue
+            escaped_lines = [escape(line.strip()) for line in paragraph.splitlines()]
+            lines.append(f"{prefix}<p>{'<br>'.join(escaped_lines)}</p>")
+    return lines
+
+
+def html_problem_stem(problem: Problem) -> str:
+    if problem.text.strip():
+        return problem.text
+    if not problem.subparts:
+        return ""
+    small_numbers = (
+        "zero",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+    )
+    count = (
+        small_numbers[len(problem.subparts)]
+        if len(problem.subparts) <= 9
+        else str(len(problem.subparts))
+    )
+    noun = "part" if len(problem.subparts) == 1 else "parts"
+    return f"This problem has {count} {noun}."
+
+
+def render_html_subparts(subparts: list[Subpart], indentation: int) -> list[str]:
+    prefix = " " * indentation
+    lines = [f'{prefix}<ol class="subparts">']
+    for subpart in subparts:
+        lines.extend(
+            [
+                f"{prefix}  <li>",
+                f'{prefix}    <div class="subpart-row">',
+                f'{prefix}      <span class="subpart-label">{escape(subpart.label)}</span>',
+                f'{prefix}      <div class="subpart-body">',
+            ]
+        )
+        lines.extend(render_html_text(subpart.text, indentation + 8))
+        lines.append(f"{prefix}      </div>")
+        lines.append(f"{prefix}    </div>")
+        if subpart.subparts:
+            lines.extend(render_html_subparts(subpart.subparts, indentation + 4))
+        lines.append(f"{prefix}  </li>")
+    lines.append(f"{prefix}</ol>")
+    return lines
+
+
+def render_html_problem(problem: Problem, indentation: int) -> list[str]:
+    prefix = " " * indentation
+    lines = [f'{prefix}<li class="problem">']
+    stem = html_problem_stem(problem)
+    if stem:
+        lines.extend(render_html_text(stem, indentation + 2))
+    if problem.subparts:
+        lines.extend(render_html_subparts(problem.subparts, indentation + 2))
+    lines.append(f"{prefix}</li>")
+    return lines
+
+
+def render_html_blocks(
+    blocks: list[InstructionsBlock | ProblemBlock],
+    displayed_number: int,
+    indentation: int,
+) -> tuple[list[str], int]:
+    """Render content while grouping consecutive problems into semantic lists."""
+    prefix = " " * indentation
+    lines: list[str] = []
+    index = 0
+    while index < len(blocks):
+        block = blocks[index]
+        if isinstance(block, InstructionsBlock):
+            lines.append(f'{prefix}<div class="instructions">')
+            lines.extend(render_html_text(block.text, indentation + 2))
+            lines.append(f"{prefix}</div>")
+            index += 1
+            continue
+
+        start = displayed_number + 1
+        lines.append(f'{prefix}<ol class="problems" start="{start}">')
+        while index < len(blocks) and isinstance(blocks[index], ProblemBlock):
+            problem_block = blocks[index]
+            displayed_number += 1
+            lines.extend(render_html_problem(problem_block.problem, indentation + 2))
+            index += 1
+        lines.append(f"{prefix}</ol>")
+    return lines, displayed_number
+
+
+def render_html(exam: ExamRecord) -> str:
+    title = exam_title(exam)
+    escaped_title = escape(title)
+    lines = [
+        "<!doctype html>",
+        '<html lang="en">',
+        "<head>",
+        '  <meta charset="utf-8">',
+        '  <meta name="viewport" content="width=device-width, initial-scale=1">',
+        f"  <title>{escaped_title}</title>",
+        f'  <link rel="stylesheet" href="{COMPUTER_MODERN_CSS}">',
+        f'  <script defer src="{MATHJAX_SCRIPT}"></script>',
+        "  <style>",
+        "    * { box-sizing: border-box; }",
+        "    html { color-scheme: light; background: #fff; }",
+        "    body {",
+        "      margin: 0;",
+        "      color: #191918;",
+        '      font-family: "CMU Serif", Georgia, serif;',
+        "      font-size: 1.125rem;",
+        "      font-weight: 500;",
+        "      line-height: 1.58;",
+        "    }",
+        "    main {",
+        "      width: 100%;",
+        "      max-width: 48rem;",
+        "      margin: 0 auto;",
+        "      padding: 3.5rem 2rem 4rem;",
+        "    }",
+        "    .exam-header {",
+        "      margin-bottom: 2.25rem;",
+        "      padding-bottom: 1.1rem;",
+        "      border-bottom: 2px solid #242421;",
+        "    }",
+        "    .institution {",
+        "      margin: 0 0 .35rem;",
+        "      font-size: 1rem;",
+        "      font-weight: 700;",
+        "    }",
+        "    h1, h2 { line-height: 1.18; }",
+        "    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }",
+        "    h2 {",
+        "      margin: 2.8rem 0 1.25rem;",
+        "      padding-bottom: .35rem;",
+        "      border-bottom: 1px solid #b8b8b2;",
+        "      font-size: 1.4rem;",
+        "      font-weight: 700;",
+        "    }",
+        "    p { margin: 0 0 .8rem; }",
+        "    .instructions {",
+        "      margin: 1.4rem 0 1.8rem;",
+        "      font-style: italic;",
+        "    }",
+        "    .instructions > :last-child { margin-bottom: 0; }",
+        "    .problems { margin: 0; padding-left: 2.4rem; }",
+        "    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }",
+        "    .problem::marker { font-weight: 700; }",
+        "    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }",
+        "    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }",
+        "    .subparts .subparts { margin-left: 2.2rem; }",
+        "    .subparts > li { margin: .55rem 0; }",
+        "    .subpart-row {",
+        "      display: grid;",
+        "      grid-template-columns: max-content minmax(0, 1fr);",
+        "      gap: .5rem;",
+        "      align-items: start;",
+        "    }",
+        "    .subpart-label { font-weight: 700; }",
+        "    .subpart-body > :last-child { margin-bottom: 0; }",
+        "    .display-math {",
+        "      max-width: 100%;",
+        "      margin: .8rem 0 1rem;",
+        "      overflow-x: auto;",
+        "      overflow-y: hidden;",
+        "      font-style: normal;",
+        "    }",
+        "    mjx-container { font-style: normal; }",
+        '    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }',
+        "    footer {",
+        "      margin-top: 3.25rem;",
+        "      padding-top: 1rem;",
+        "      border-top: 1px solid #b8b8b2;",
+        "      font-size: 1rem;",
+        "    }",
+        "    footer ul {",
+        "      display: flex;",
+        "      flex-wrap: wrap;",
+        "      gap: .5rem 1.25rem;",
+        "      margin: 0;",
+        "      padding: 0;",
+        "      list-style: none;",
+        "    }",
+        "    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }",
+        "    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }",
+        "    a:hover { color: #8a321d; }",
+        "    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }",
+        "    @media (max-width: 40rem) {",
+        "      body { font-size: 1.05rem; }",
+        "      main { padding: 2rem 1.15rem 3rem; }",
+        "      h1 { font-size: 1.8rem; }",
+        "      .problems { padding-left: 2rem; }",
+        "      .subparts .subparts { margin-left: 1.25rem; }",
+        "    }",
+        "    @media print {",
+        "      @page { margin: .5in .55in; }",
+        "      body { font-size: 11pt; line-height: 1.28; color: #000; }",
+        "      main { max-width: none; padding: 0; }",
+        "      .exam-header {",
+        "        margin-bottom: .6rem;",
+        "        padding-bottom: .35rem;",
+        "        border-bottom-width: 1px;",
+        "      }",
+        "      .institution { margin-bottom: .2rem; font-size: 9pt; }",
+        "      .institution a { text-decoration: none; }",
+        "      h1 { font-size: 17pt; line-height: 1.08; }",
+        "      h2 {",
+        "        margin: .85rem 0 .4rem;",
+        "        padding-bottom: .12rem;",
+        "        font-size: 12pt;",
+        "        line-height: 1.1;",
+        "        break-after: avoid;",
+        "      }",
+        "      p { margin-bottom: .25rem; }",
+        "      .instructions { margin: .4rem 0 .55rem; }",
+        "      .problems { padding-left: 1.75rem; }",
+        "      .problem { margin-bottom: .55rem; padding-left: .1rem; }",
+        "      .subparts { margin-top: .18rem; }",
+        "      .subparts .subparts { margin-left: 1.4rem; }",
+        "      .subparts > li { margin: .12rem 0; }",
+        "      .subpart-row { gap: .3rem; break-inside: avoid; }",
+        "      .display-math { margin: .15rem 0 .25rem; overflow: visible; }",
+        '      mjx-container[display="true"] { margin: 0 !important; }',
+        "      a { color: inherit; }",
+        "      footer { display: none; }",
+        "    }",
+        "  </style>",
+        "</head>",
+        "<body>",
+        '  <main id="main-content">',
+        '    <header class="exam-header">',
+        '      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, '
+        '<a href="https://math.ufl.edu/">Department of Mathematics</a></p>',
+        f"      <h1>{escaped_title}</h1>",
+        "    </header>",
+    ]
+
+    displayed_number = 0
+    pending_blocks: list[InstructionsBlock | ProblemBlock] = []
+
+    def flush_pending() -> None:
+        nonlocal displayed_number
+        if not pending_blocks:
+            return
+        rendered, displayed_number = render_html_blocks(
+            pending_blocks, displayed_number, 4
+        )
+        lines.extend(rendered)
+        pending_blocks.clear()
+
+    section_index = 0
+    for block in exam.content:
+        if not isinstance(block, SectionBlock):
+            pending_blocks.append(block)
+            continue
+        flush_pending()
+        section_index += 1
+        heading_id = f"section-{section_index}"
+        lines.append(f'    <section aria-labelledby="{heading_id}">')
+        lines.append(f'      <h2 id="{heading_id}">{escape(block.heading.strip())}</h2>')
+        if block.numbering == NumberingMode.RESTART:
+            displayed_number = 0
+        rendered, displayed_number = render_html_blocks(
+            block.content, displayed_number, 6
+        )
+        lines.extend(rendered)
+        lines.append("    </section>")
+    flush_pending()
+
+    archive_title = subject_archive_title(exam.subject, exam.subject_tag)
+    local_pdf = f"{exam.id}.pdf"
+
+    lines.extend(
+        [
+            "    <footer>",
+            "      <ul>",
+            f'        <li><a href="{PROJECT_SOURCE_URL}">Project source</a></li>',
+            '        <li><a href="../../index.html">All exam subjects</a></li>',
+            f'        <li><a href="index.html">{escape(archive_title)}</a></li>',
+            f'        <li><a href="{escape(local_pdf, quote=True)}">Original PDF</a></li>',
+            "      </ul>",
+            f'      <p class="page-updated">Page updated <time datetime="{PAGE_UPDATED_ISO}">{PAGE_UPDATED_LABEL}</time>.</p>',
+            "    </footer>",
+            "  </main>",
+            "</body>",
+            "</html>",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
 def extract_one(
     source: SourceExam,
     build_root: Path,
@@ -901,6 +1253,7 @@ def extract_one(
         raise RuntimeError(f"source hash does not match manifest for {source.id}")
     output_path = exam_json_path(source)
     rendered_path = exam_markdown_path(source)
+    html_path = exam_html_path(source)
     saved_path = checkpoint_path(source, build_root)
     if output_path.exists() and saved_path.exists() and not force:
         checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
@@ -919,6 +1272,7 @@ def extract_one(
         if errors:
             raise RuntimeError(f"cached extraction invalid for {source.id}: {'; '.join(errors)}")
         write_text(rendered_path, render_markdown(exam))
+        write_text(html_path, render_html(exam))
         return exam, flags, True
     if saved_path.exists() and not force:
         checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
@@ -938,10 +1292,11 @@ def extract_one(
                 write_json(saved_path, checkpoint)
                 write_json(output_path, exam)
                 write_text(rendered_path, render_markdown(exam))
+                write_text(html_path, render_html(exam))
                 return exam, extraction.review_flags, True
     if force:
         archive_files(
-            [output_path, rendered_path, saved_path],
+            [output_path, rendered_path, html_path, saved_path],
             build_root / source.id / "history",
         )
 
@@ -994,6 +1349,7 @@ def extract_one(
         raise RuntimeError(f"extraction invalid for {source.id}: {'; '.join(errors)}")
     write_json(output_path, exam)
     write_text(rendered_path, render_markdown(exam))
+    write_text(html_path, render_html(exam))
     return exam, extraction.review_flags, False
 
 

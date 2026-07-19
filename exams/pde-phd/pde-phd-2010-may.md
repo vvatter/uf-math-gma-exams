@@ -1,4 +1,4 @@
-# Partial Differential Equations, PhD exam, May 2010
+# Partial Differential Equations PhD exam, May 2010
 
 **1.** Suppose \(u \in C_1^2(\mathbb{R}^n \times [0,T]) \cap C(\mathbb{R}^n \times [0,T])\) solves
 \[

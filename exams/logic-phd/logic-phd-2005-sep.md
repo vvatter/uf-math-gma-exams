@@ -1,4 +1,4 @@
-# Logic, PhD exam, September 2005
+# Logic PhD exam, September 2005
 
 *Answer six questions and at least one from each section.*
 

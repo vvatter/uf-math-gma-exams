@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2019
+# Analysis PhD exam, May 2019
 
 *Do six problems.*
 

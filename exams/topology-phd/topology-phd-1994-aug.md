@@ -1,4 +1,4 @@
-# Topology, PhD exam, August 1994
+# Topology PhD exam, August 1994
 
 ## PART I
 

@@ -1,4 +1,4 @@
-# Topology, first year exam, August 2019, Part 1
+# Topology first year exam, August 2019, Part 1
 
 *Work all problems.*
 

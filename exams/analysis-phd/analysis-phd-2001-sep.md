@@ -1,4 +1,4 @@
-# Analysis, PhD exam, September 2001
+# Analysis PhD exam, September 2001
 
 ## I.
 

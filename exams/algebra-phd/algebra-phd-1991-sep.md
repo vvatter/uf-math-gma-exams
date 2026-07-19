@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 1991
+# Algebra PhD exam, September 1991
 
 *Please read through all the questions before you begin. Your seven best solutions will count. You may quote standard results (within reason) as long as you make it clear that you are doing so and state them clearly.*
 

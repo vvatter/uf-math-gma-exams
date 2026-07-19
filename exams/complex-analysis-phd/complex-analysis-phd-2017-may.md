@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 2017
+# Complex Analysis PhD exam, May 2017
 
 *Do six of eight. Throughout, \(\mathbb{D}=\{ |z|<1\}\) and \(\mathbb{H}=\{\operatorname{Re} z>0\}\).*
 

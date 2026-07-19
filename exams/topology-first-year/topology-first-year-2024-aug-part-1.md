@@ -1,4 +1,4 @@
-# Topology, first year exam, August 2024, Part 1
+# Topology first year exam, August 2024, Part 1
 
 *For the first five problems, show all your work and support all statements.*
 

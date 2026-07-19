@@ -1,4 +1,4 @@
-# Analysis, PhD exam, October 1994
+# Analysis PhD exam, October 1994
 
 *\((X,\Sigma,\mu)\) is a finite measure space.*
 

@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2015
+# Combinatorics PhD exam, May 2015
 
 **1.** Let \(f(n)\) be the number of simple undirected graphs on vertex set \([n]\) in which each vertex has degree at most two. Find the exponential generating function of the sequence \(f(n)\). You can assume that \(f(0)=1\).
 

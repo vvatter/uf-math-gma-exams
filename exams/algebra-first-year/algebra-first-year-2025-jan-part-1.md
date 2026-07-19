@@ -1,4 +1,4 @@
-# Algebra, first year exam, January 2025, Part 1
+# Algebra first year exam, January 2025, Part 1
 
 *Answer 4 questions. You should indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly.*
 

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numerical Analysis PhD exam, May 2017, Part 2</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Numerical Analysis PhD exam, May 2017, Part 2</h1>
+    </header>
+    <div class="instructions">
+      <p>Do all five (5) problems.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>With</p>
+        <div class="display-math">\[
+\phi(w,t)=a f(w+ch,t+bh),
+\]</div>
+        <p>find the values of the parameters \(a,b,c\) so that the resulting one-step method</p>
+        <div class="display-math">\[
+w_0=\alpha
+\]</div>
+        <div class="display-math">\[
+w_{i+1}=w_i+h\phi(w_i,t_i)
+\]</div>
+        <p>has local truncation error \(O(h^2)\).</p>
+      </li>
+      <li class="problem">
+        <p>Hint: the error term in the one unit Trapezoid rule is \(-\frac{h^3}{12}f&#x27;&#x27;(\eta)\) and in the one unit Simpson’s rule is \(-\frac{h^5}{90}f^{(4)}(\eta)\).</p>
+        <p>Let \(S\) be the cubic spline given by</p>
+        <div class="display-math">\[
+S(x)=(x+1)^3 \text{ for } x\in[-1,0]
+\]</div>
+        <div class="display-math">\[
+S(x)=(1-x)^3 \text{ for } x\in[0,1].
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Estimate the error of the composite trapezoidal rule applied to \(\int_{-1}^1 S(x)\,dx\), when \([-1,1]\) is divided into \(n\) subintervals of equal length \(h=2/n\) and \(n\) is even (and so 0 is a node).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Estimate the error of the composite Simpson’s rule applied to \(\int_{-1}^1 S(x)\,dx\), when \([-1,1]\) is divided into \(n\) subintervals of equal length \(h=2/n\) and \(n\) is divisible by 4 (and so 0 is a node).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(f\in C^1[a,b]\) and \(a\leq x_0&lt;\cdots&lt;x_n\leq b\) and \(H,G\) are degree at most \(2n+1\) polynomials with \(G(x_i)=H(x_i)=f(x_i)\) and \(G&#x27;(x_i)=H&#x27;(x_i)=f&#x27;(x_i)\) for all \(i\), then \(G=H\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(\varphi_0,\varphi_1,\ldots,\varphi_n\) are polynomials with \(\varphi_i\) of degree \(i\), then the set of \(\varphi_i\) is linearly independent.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider the inner product on \(C[0,\infty)\) given by</p>
+        <div class="display-math">\[
+\langle f,g\rangle=\int_0^\infty f(x)g(x)e^{-x}\,dx.
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Starting with the basis \(\{1,t,t^2\}\) for \(\mathcal P_2[0,\infty)\), find three orthonormal polynomials \(\phi_0,\phi_1,\phi_2\) on \([0,\infty)\) with respect to the inner product and the degree of \(\phi_n\) is equal to \(n\). Hint: \(\int_0^\infty t^m e^{-t}\,dt=m!\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Find the equations satisfied by the values of \(w_1,w_2,t_1\) and \(t_2\) which yield the weighted Gaussian Quadrature formula</p>
+                <div class="display-math">\[
+\int_0^\infty f(t)e^{-t}\,dt=w_1f(t_1)+w_2f(t_2)
+\]</div>
+                <p>with degree of precision 3.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Assume \(g\in C^2[a,b]\) with \(g([a,b])\subset[a,b]\) and fixed point \(p\in(a,b)\). Assume that \(g&#x27;(p)=0\). Show that for any \(x\in[a,b]\) with \(x\ne p\),</p>
+                <div class="display-math">\[
+\frac{|g(x)-p|}{|x-p|^2}\leq M,
+\]</div>
+                <p>where \(M=\max\{|g&#x27;&#x27;(z)|:z\in[a,b]\}/2\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Let \(g(x)=x-\tan(x)\). Find a fixed point \(p\) of \(g\) with \(g&#x27;(p)=0\) and give an explicit \([a,b]\) where you prove that for all \(x\in[a,b]\), \(g^n(x)\to p\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Numerical Analysis PhD exams</a></li>
+        <li><a href="numerical-analysis-phd-2017-may-part-2.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

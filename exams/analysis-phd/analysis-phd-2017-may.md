@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2017
+# Analysis PhD exam, May 2017
 
 *Do six of eight. Problems (2) and (5) are short answer. For the remaining problems, please provide complete proofs with all details.*
 

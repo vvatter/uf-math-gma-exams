@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2019
+# Combinatorics PhD exam, May 2019
 
 **1.** A bus carrying \(n\) tourists stops at a restaurant. The tourists sit down around an unspecified number of circular tables, then each table orders red wine or white wine. In how many ways can that happen? (Two arrangements are considered identical if everyone has the same left neighbor in both of them.)
 

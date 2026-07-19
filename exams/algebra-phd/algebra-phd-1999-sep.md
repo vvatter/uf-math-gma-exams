@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 1999
+# Algebra PhD exam, September 1999
 
 *Please do 7 out of the 11 problems below.*
 

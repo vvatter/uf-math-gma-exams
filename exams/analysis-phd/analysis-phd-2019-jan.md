@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 2019
+# Analysis PhD exam, January 2019
 
 *Do three from part A and three from part B. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, May 2023
+# Numerical Analysis first year exam, May 2023
 
 *Do 4 (four) problems.*
 

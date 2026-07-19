@@ -1,4 +1,4 @@
-# Algebra, first year exam, August 2016, Part 2
+# Algebra first year exam, August 2016, Part 2
 
 *Answer four problems. (If you turn in more, the first four will be graded.) Put your answers in numerical order. Within reason, you may quote theorems as long as you state them clearly.*
 

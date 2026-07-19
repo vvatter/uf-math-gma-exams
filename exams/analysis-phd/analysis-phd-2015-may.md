@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2015
+# Analysis PhD exam, May 2015
 
 *Do six of eight. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

@@ -1,4 +1,4 @@
-# Topology, first year exam, May 2021, Part 1
+# Topology first year exam, May 2021, Part 1
 
 ## Part 1.
 

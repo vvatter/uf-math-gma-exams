@@ -1,4 +1,4 @@
-# Algebra, first year exam, August 2021, Part 2
+# Algebra first year exam, August 2021, Part 2
 
 *Answer four problems. You should indicate which problems you wish to have graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

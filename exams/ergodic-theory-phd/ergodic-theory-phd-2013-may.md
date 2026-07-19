@@ -1,4 +1,4 @@
-# Ergodic Theory, PhD exam, May 2013
+# Ergodic Theory PhD exam, May 2013
 
 **1.** Suppose that \(X\) is a compact metric space, and \(f:X\to X\) is continuous. Suppose that \(X\) is a minimal set for \(f\). Prove that every point of \(X\) is almost periodic.
 

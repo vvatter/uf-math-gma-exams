@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2009
+# Algebra PhD exam, May 2009
 
 *Answer exactly seven of the following eleven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Q\) and \(\mathbb C\) are the fields of rational numbers and complex numbers respectively.*
 

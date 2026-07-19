@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, January 2020
+# Complex Analysis PhD exam, January 2020
 
 *Answer SIX questions in detail. State carefully any results used without proof. Throughout, \(\mathbb{D}\) is the open unit disc in \(\mathbb{C}\).*
 

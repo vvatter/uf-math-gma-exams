@@ -1,4 +1,4 @@
-# Algebra, PhD exam, January 2003
+# Algebra PhD exam, January 2003
 
 *Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.*
 

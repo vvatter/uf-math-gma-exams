@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2014
+# Numerical Analysis PhD exam, May 2014
 
 *You have 2 hours to answer the following questions. You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.*
 

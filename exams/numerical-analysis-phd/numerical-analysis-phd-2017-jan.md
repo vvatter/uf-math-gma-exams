@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, January 2017
+# Numerical Analysis PhD exam, January 2017
 
 *You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.*
 

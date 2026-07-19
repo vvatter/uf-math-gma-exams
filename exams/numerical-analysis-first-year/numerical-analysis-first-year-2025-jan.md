@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, January 2025
+# Numerical Analysis first year exam, January 2025
 
 *Do 4 (four) problems.*
 

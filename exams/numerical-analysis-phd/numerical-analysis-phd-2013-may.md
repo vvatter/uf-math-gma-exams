@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2013
+# Numerical Analysis PhD exam, May 2013
 
 *Do 5 of 7*
 

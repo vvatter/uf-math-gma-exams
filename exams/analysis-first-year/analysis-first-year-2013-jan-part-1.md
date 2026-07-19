@@ -1,4 +1,4 @@
-# Analysis, first year exam, January 2013, Part 1
+# Analysis first year exam, January 2013, Part 1
 
 *Answer FOUR questions. Write in a neat and logical fashion, giving complete reasons for all steps.*
 

@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 2006
+# Algebra PhD exam, September 2006
 
 *Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

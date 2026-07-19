@@ -1,4 +1,4 @@
-# Analysis, PhD exam, September 1991
+# Analysis PhD exam, September 1991
 
 *Present all work in a neat and logical fashion.*
 

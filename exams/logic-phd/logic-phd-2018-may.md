@@ -1,4 +1,4 @@
-# Logic, PhD exam, May 2018
+# Logic PhD exam, May 2018
 
 *Answer six questions, at least one in each section.*
 

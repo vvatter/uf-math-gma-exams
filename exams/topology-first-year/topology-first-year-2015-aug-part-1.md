@@ -1,4 +1,4 @@
-# Topology, first year exam, August 2015, Part 1
+# Topology first year exam, August 2015, Part 1
 
 *Answer all questions and work all problems.*
 

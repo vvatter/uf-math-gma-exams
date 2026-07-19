@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2017
+# Algebra PhD exam, May 2017
 
 *Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
 

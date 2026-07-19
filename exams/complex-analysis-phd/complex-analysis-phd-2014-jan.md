@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, January 2014
+# Complex Analysis PhD exam, January 2014
 
 *Do any 9 problems. The notation \(f \in H(\Omega)\) means \(f\) is holomorphic in the domain \(\Omega\).*
 

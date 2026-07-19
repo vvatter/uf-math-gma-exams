@@ -1,4 +1,4 @@
-# Topology, first year exam, August 2022, Part 1
+# Topology first year exam, August 2022, Part 1
 
 *Do seven (7) and only seven of the following.*
 

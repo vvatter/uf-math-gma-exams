@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 2001
+# Algebra PhD exam, September 2001
 
 *Do seven of the following eleven problems. Please do not turn in more than seven problems. Read all the problems before starting to do any of them. The problems do not have to be attempted in the order they are listed. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.*
 

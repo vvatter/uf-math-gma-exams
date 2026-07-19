@@ -1,4 +1,4 @@
-# Analysis, PhD exam, August 2025
+# Analysis PhD exam, August 2025
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of the eight problems.*
 

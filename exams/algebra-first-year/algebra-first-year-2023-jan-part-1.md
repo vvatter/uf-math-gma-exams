@@ -1,4 +1,4 @@
-# Algebra, first year exam, January 2023, Part 1
+# Algebra first year exam, January 2023, Part 1
 
 *Answer four problems. State clearly all the results from the text that you need, and write your answers clearly in complete English sentences. In all cases, be sure to justify your answer.*
 

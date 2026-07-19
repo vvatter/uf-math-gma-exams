@@ -1,4 +1,4 @@
-# Topology, PhD exam, May 2008
+# Topology PhD exam, May 2008
 
 *Work the following problems and show all work. Support all statements to the best of your ability.*
 

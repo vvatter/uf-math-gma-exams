@@ -7,11 +7,13 @@ import unittest
 
 import pymupdf
 
+from build_indexes import build_indexes
 from extract_exams import (
     REVIEW_FILES,
     ExamRecord,
     Problem,
     ProblemBlock,
+    render_html,
     render_markdown,
     sha256_file,
 )
@@ -19,7 +21,7 @@ from validate_archive import validate_archive, validate_mathjax
 
 
 class ArchiveValidationTests(unittest.TestCase):
-    def make_archive(self, root: Path) -> tuple[Path, Path, Path]:
+    def make_archive(self, root: Path) -> tuple[Path, Path, Path, Path]:
         review_dir = root / "exams"
         subject_dir = review_dir / "algebra-phd"
         subject_dir.mkdir(parents=True)
@@ -63,6 +65,8 @@ class ArchiveValidationTests(unittest.TestCase):
         )
         markdown_path = pdf_path.with_suffix(".md")
         markdown_path.write_text(render_markdown(exam), encoding="utf-8")
+        html_path = pdf_path.with_suffix(".html")
+        html_path.write_text(render_html(exam), encoding="utf-8")
         for bucket, (filename, purpose) in REVIEW_FILES.items():
             (review_dir / filename).write_text(
                 json.dumps(
@@ -75,11 +79,12 @@ class ArchiveValidationTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
-        return manifest_path, review_dir, markdown_path
+        build_indexes(manifest_path)
+        return manifest_path, review_dir, markdown_path, html_path
 
     def test_complete_archive_passes(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            manifest, review_dir, _markdown = self.make_archive(Path(temp))
+            manifest, review_dir, _markdown, _html = self.make_archive(Path(temp))
             errors, stats = validate_archive(manifest, review_dir)
 
         self.assertEqual(errors, [])
@@ -87,11 +92,28 @@ class ArchiveValidationTests(unittest.TestCase):
 
     def test_markdown_drift_fails(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            manifest, review_dir, markdown = self.make_archive(Path(temp))
+            manifest, review_dir, markdown, _html = self.make_archive(Path(temp))
             markdown.write_text("changed\n", encoding="utf-8")
             errors, _stats = validate_archive(manifest, review_dir)
 
         self.assertTrue(any("Markdown does not match" in error for error in errors))
+
+    def test_html_drift_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            manifest, review_dir, _markdown, html = self.make_archive(Path(temp))
+            html.write_text("changed\n", encoding="utf-8")
+            errors, _stats = validate_archive(manifest, review_dir)
+
+        self.assertTrue(any("HTML does not match" in error for error in errors))
+
+    def test_subject_index_drift_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            manifest, review_dir, _markdown, _html = self.make_archive(Path(temp))
+            subject_index = review_dir / "algebra-phd" / "index.html"
+            subject_index.write_text("changed\n", encoding="utf-8")
+            errors, _stats = validate_archive(manifest, review_dir)
+
+        self.assertTrue(any("archive index does not match" in error for error in errors))
 
     def test_mathjax_catches_renderer_errors(self) -> None:
         errors = validate_mathjax(

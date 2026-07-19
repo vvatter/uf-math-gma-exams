@@ -1,4 +1,4 @@
-# Probability, PhD exam, September 1997
+# Probability PhD exam, September 1997
 
 **1.** Let \(X\) and \(Y\) be independent and uniform on \([0,1]\). Find
 * a) the distribution of \(X+Y\).

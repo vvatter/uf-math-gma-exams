@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, May 2020
+# Numerical Analysis first year exam, May 2020
 
 *Do 4 (four) problems.*
 

@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 2009
+# Algebra PhD exam, September 2009
 
 *Do seven of the following eleven problems. Do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs.*
 

@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 2009
+# Complex Analysis PhD exam, May 2009
 
 *Give complete proofs and computations. Partial credit will be given where justified. In the following, \(\mathbb{C}\) denotes the set of complex numbers and \(D=\{z\in\mathbb{C}\mid |z|<1\}\).*
 

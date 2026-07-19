@@ -1,4 +1,4 @@
-# Algebra, first year exam, May 2018, Part 1
+# Algebra first year exam, May 2018, Part 1
 
 *Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

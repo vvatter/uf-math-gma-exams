@@ -1,4 +1,4 @@
-# Topology, first year exam, May 2018, Part 2
+# Topology first year exam, May 2018, Part 2
 
 *Answer the following problems and show all your work. Support all statements to the best of your ability.*
 

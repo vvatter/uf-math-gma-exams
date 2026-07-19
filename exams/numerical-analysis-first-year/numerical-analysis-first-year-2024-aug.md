@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, August 2024
+# Numerical Analysis first year exam, August 2024
 
 *Do 4 (four) problems.*
 

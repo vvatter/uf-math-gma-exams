@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 2007
+# Complex Analysis PhD exam, May 2007
 
 **1.** Assume that \(h:\mathbb{C}\to\mathbb{R}\) is harmonic, and further that \(h(z)>0\) for all \(z\in\mathbb{C}\). Show that \(h\) is constant.
 

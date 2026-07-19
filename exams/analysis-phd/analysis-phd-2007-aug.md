@@ -1,4 +1,4 @@
-# Analysis, PhD exam, August 2007
+# Analysis PhD exam, August 2007
 
 *Attempt EIGHT questions. To receive credit be sure to state clearly the theorems used in solutions.*
 

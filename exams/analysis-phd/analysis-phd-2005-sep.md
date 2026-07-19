@@ -1,4 +1,4 @@
-# Analysis, PhD exam, September 2005
+# Analysis PhD exam, September 2005
 
 *Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true. Partial credit will be given where justified.*
 

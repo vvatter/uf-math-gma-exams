@@ -1,4 +1,4 @@
-# Topology, first year exam, January 2015, Part 1
+# Topology first year exam, January 2015, Part 1
 
 *Work the following problems and show all work. Support all statements to the best of your ability.*
 

@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, January 2018
+# Combinatorics PhD exam, January 2018
 
 **1.** Let \(D(n)\) be the number of derangements of length \(n\). Let \(F(n)\) be the number of permutations of length \(n\) that have exactly one fixed point. Determine (with proof) the number \(D(n)-F(n)\).
 

@@ -1,4 +1,4 @@
-# Probability, PhD exam, May 2008
+# Probability PhD exam, May 2008
 
 **1.** Let \(\mathcal F\) be a sigma field. Two random variables \(X\) and \(Y\) satisfy
 \[

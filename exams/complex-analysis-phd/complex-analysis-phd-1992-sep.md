@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, September 1992
+# Complex Analysis PhD exam, September 1992
 
 *Present the solutions with the necessary details, so the partial credit can be properly assessed. Do all 9 problems.*
 

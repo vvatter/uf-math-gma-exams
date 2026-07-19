@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, September 2000
+# Numerical Analysis PhD exam, September 2000
 
 *Do any 8 of the following 10 problems.*
 

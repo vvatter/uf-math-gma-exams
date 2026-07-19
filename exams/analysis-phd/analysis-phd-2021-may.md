@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2021
+# Analysis PhD exam, May 2021
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.*
 

@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, January 2002
+# Numerical Analysis PhD exam, January 2002
 
 *Do any 8 of the following 10 problems. Problems 1–5 are Part 1: Numerical Linear Algebra. Problems 6–10 are Part II: Numerical Analysis.*
 

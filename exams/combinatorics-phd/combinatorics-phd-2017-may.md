@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2017
+# Combinatorics PhD exam, May 2017
 
 **1.** Give a combinatorial proof that
 \[

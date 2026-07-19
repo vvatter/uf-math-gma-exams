@@ -1,4 +1,4 @@
-# Algebra, PhD exam, August 1997
+# Algebra PhD exam, August 1997
 
 *Answer seven out of the following ten problems. State clearly any results you need.*
 

@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, May 2018
+# Numerical Linear Algebra first year exam, May 2018
 
 *Do 4 (four) problems.*
 

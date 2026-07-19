@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 1989
+# Analysis PhD exam, January 1989
 
 *Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion.*
 

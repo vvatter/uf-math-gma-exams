@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, April 2017
+# Numerical Linear Algebra first year exam, April 2017
 
 *Do 4 (four) problems.*
 

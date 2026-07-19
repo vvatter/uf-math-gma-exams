@@ -1,4 +1,4 @@
-# Partial Differential Equations, PhD exam, January 2014
+# Partial Differential Equations PhD exam, January 2014
 
 **1.** Let \(\Omega\) be an open subset of \(\mathbb{R}^n\) and let \(u\in C^2(\Omega)\) be a harmonic function in \(\Omega\). Prove that \(u\) is analytic in \(\Omega\).
 

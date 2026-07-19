@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2011
+# Numerical Analysis PhD exam, May 2011
 
 *Answer any 8 questions.*
 

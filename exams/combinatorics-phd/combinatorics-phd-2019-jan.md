@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, January 2019
+# Combinatorics PhD exam, January 2019
 
 **1.** Let \(a_n\) be the total number of leaves in all rooted non-plane trees with vertices bijectively labeled with elements of \(\{1,2,\cdots n\}\), so \(a_1=1\), \(a_2=2\), and \(a_3=12\). Find an explicit formula for \(a_n\).
 

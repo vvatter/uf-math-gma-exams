@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, January 1996
+# Numerical Analysis PhD exam, January 1996
 
 **1.** Let \(A\) be a symmetric, positive definite matrix. Show that if \(A\) is \(LU\) factored, then the elements of \(U\) in absolute value are bounded by the largest diagonal element of \(A\).
 

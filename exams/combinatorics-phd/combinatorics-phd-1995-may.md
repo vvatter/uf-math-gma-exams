@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 1995
+# Combinatorics PhD exam, May 1995
 
 **1.** This problem has two parts.
 * (a) Let \(A_1,A_2,\ldots,A_k\) be subsets of \([n]\) such that \(A_i\cap A_j\ne\varnothing\), for all \(i,j\). Show that

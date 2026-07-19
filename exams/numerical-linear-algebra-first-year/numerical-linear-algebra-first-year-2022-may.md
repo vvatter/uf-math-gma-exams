@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, May 2022
+# Numerical Linear Algebra first year exam, May 2022
 
 *Do 4 (four) problems.*
 

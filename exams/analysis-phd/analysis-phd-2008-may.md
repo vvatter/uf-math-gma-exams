@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2008
+# Analysis PhD exam, May 2008
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

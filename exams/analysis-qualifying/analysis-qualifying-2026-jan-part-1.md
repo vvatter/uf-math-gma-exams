@@ -1,4 +1,4 @@
-# Analysis, qualifying exam, January 2026, Part 1
+# Analysis qualifying exam, January 2026, Part 1
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do three of four.*
 

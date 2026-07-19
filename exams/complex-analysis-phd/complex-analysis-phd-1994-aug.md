@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, August 1994
+# Complex Analysis PhD exam, August 1994
 
 **1.** Let \(\lambda>1\). How many solutions does the equation \(\lambda-z-e^{-z}=0\) have in the right half plane \(\{z:\operatorname{Re}z>0\}\)?
 

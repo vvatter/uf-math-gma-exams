@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2018
+# Combinatorics PhD exam, May 2018
 
 **1.** Consider the set \(T_n\) of (not rooted) trees with \(n \ge 3\) labeled leaves for which each interior (non-leaf) vertex has degree 3.
 * (a) Prove that each tree in \(T_n\) has exactly \(2n-3\) edges.

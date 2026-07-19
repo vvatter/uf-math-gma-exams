@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2000
+# Algebra PhD exam, May 2000
 
 *Please work out seven out of the following eleven exercises. Please do not hand in more than seven.*
 

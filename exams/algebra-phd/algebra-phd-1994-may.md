@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 1994
+# Algebra PhD exam, May 1994
 
 *Work 7 out of the following 11 exercises.*
 

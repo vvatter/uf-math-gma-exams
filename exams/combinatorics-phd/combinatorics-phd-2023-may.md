@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2023
+# Combinatorics PhD exam, May 2023
 
 **1.** Let \(a_1,a_2,\ldots,a_{10}\) be positive integers not exceeding \(100\). Prove that there are disjoint, nonempty subsets \(S\) and \(T\) of \([10]\) so that
 \[

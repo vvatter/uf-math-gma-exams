@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 2006
+# Complex Analysis PhD exam, May 2006
 
 *Give complete proofs and computations. Partial credit will be given where justified.*
 

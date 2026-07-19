@@ -1,4 +1,4 @@
-# Algebra, first year exam, May 2022, Part 1
+# Algebra first year exam, May 2022, Part 1
 
 *Answer 4 questions. You should indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

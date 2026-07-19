@@ -1,4 +1,4 @@
-# Algebra, first year exam, August 2019, Part 1
+# Algebra first year exam, August 2019, Part 1
 
 *Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
 

@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, May 2021
+# Combinatorics PhD exam, May 2021
 
 **1.** Let \(a_n\) be the number of ways to select a permutation of length \(n\), and then color each of its cycles red, blue, or green. Find an explicit formula for \(a_n\).
 

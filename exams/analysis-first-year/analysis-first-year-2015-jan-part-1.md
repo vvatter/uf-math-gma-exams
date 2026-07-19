@@ -1,4 +1,4 @@
-# Analysis, first year exam, January 2015, Part 1
+# Analysis first year exam, January 2015, Part 1
 
 *Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.*
 

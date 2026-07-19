@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, September 2010
+# Combinatorics PhD exam, September 2010
 
 *SHOW ALL WORK TO RECEIVE CREDIT!!*
 

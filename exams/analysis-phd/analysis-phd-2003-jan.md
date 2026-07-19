@@ -1,4 +1,4 @@
-# Analysis, PhD exam, January 2003
+# Analysis PhD exam, January 2003
 
 ## Part I
 

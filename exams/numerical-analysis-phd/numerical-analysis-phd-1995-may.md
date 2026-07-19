@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 1995
+# Numerical Analysis PhD exam, May 1995
 
 **1.** Consider the linear system \(Ax=b\).
 * (a) Suppose the columns of \(A\) are linearly independent. Derive the normal equation for the \(x\) that minimizes the 2-norm of the residual \(r=b-Ax\).

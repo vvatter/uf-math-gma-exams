@@ -1,4 +1,4 @@
-# Functional Analysis, PhD exam, September 2011
+# Functional Analysis PhD exam, September 2011
 
 *Do any SIX problems. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

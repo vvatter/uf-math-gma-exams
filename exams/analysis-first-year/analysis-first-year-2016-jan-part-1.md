@@ -1,4 +1,4 @@
-# Analysis, first year exam, January 2016, Part 1
+# Analysis first year exam, January 2016, Part 1
 
 *Do exactly four problems. Work should be presented in a logical fashion in order to receive full credit.*
 

@@ -1,4 +1,4 @@
-# Analysis, first year exam, August 2025, Part 1
+# Analysis first year exam, August 2025, Part 1
 
 *Answer FOUR questions in detail. State carefully any results used without proof.*
 

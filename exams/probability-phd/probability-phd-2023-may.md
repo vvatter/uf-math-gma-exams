@@ -1,4 +1,4 @@
-# Probability, PhD exam, May 2023
+# Probability PhD exam, May 2023
 
 *Carefully justify your answers.*
 

@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2024
+# Analysis PhD exam, May 2024
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

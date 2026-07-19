@@ -1,4 +1,4 @@
-# Probability, PhD exam, September 1989
+# Probability PhD exam, September 1989
 
 **1.** Let \(\{\overline{X}_m\}\) be a submartingale and \(T\) a stopping time such that \(E[T]<\infty\). Assume \(E[|\overline{X}_{m+1}-\overline{X}_m|\mid\mathcal F_m]\le M\) on \((T>m)\) for some constant \(M\). Show that \(\overline{X}_T\) is integrable and \(E[\overline{X}_0]\le E[\overline{X}_T]\).
 

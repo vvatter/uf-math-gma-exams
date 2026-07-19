@@ -1,4 +1,4 @@
-# Topology, qualifying exam, January 2026, Part 1
+# Topology qualifying exam, January 2026, Part 1
 
 *Be neat, do not write too small. Show your work and support your statements.*
 

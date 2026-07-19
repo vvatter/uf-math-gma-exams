@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, January 2015
+# Numerical Linear Algebra first year exam, January 2015
 
 *Do 4 (four) problems.*
 

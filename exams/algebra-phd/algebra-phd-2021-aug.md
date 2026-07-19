@@ -1,4 +1,4 @@
-# Algebra, PhD exam, August 2021
+# Algebra PhD exam, August 2021
 
 *Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.*
 

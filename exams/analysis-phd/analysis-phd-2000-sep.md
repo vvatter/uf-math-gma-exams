@@ -1,4 +1,4 @@
-# Analysis, PhD exam, September 2000
+# Analysis PhD exam, September 2000
 
 *Write all proofs in a neat and logical fashion.*
 

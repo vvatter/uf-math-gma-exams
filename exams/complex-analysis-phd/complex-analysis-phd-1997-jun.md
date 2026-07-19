@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, June 1997
+# Complex Analysis PhD exam, June 1997
 
 *Do each of the problems.*
 

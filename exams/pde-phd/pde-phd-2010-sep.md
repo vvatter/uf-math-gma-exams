@@ -1,4 +1,4 @@
-# Partial Differential Equations, PhD exam, September 2010
+# Partial Differential Equations PhD exam, September 2010
 
 **1.** Let \(U\) be either \(\mathbb R_+^n\) or the unit ball in \(\mathbb R^n\) (\(n\ge 2\)). Write the expression of the Green’s function for \(-\Delta\) with respect to the Dirichlet condition on \(\partial U\).
 

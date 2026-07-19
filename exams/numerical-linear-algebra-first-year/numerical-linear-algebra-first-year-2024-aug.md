@@ -1,4 +1,4 @@
-# Numerical Linear Algebra, first year exam, August 2024
+# Numerical Linear Algebra first year exam, August 2024
 
 *Do 4 (four) problems.*
 

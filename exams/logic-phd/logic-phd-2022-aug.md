@@ -1,4 +1,4 @@
-# Logic, PhD exam, August 2022
+# Logic PhD exam, August 2022
 
 *Solve 5 of the following problems; at least one from each section.*
 

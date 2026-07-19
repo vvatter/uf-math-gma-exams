@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, January 2024
+# Combinatorics PhD exam, January 2024
 
 **1.** Let \(B(n)\) denote the number of partitions of the \(n\)-element set, and let \(F(n)\) denote the number of partitions of the \(n\)-element set in which every block consists of at least two elements. Prove that \(B(n)=F(n)+F(n+1)\).
 

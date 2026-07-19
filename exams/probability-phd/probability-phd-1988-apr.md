@@ -1,4 +1,4 @@
-# Probability, PhD exam, April 1988
+# Probability PhD exam, April 1988
 
 *Do not omit details.*
 

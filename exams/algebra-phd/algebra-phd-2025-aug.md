@@ -1,4 +1,4 @@
-# Algebra, PhD exam, August 2025
+# Algebra PhD exam, August 2025
 
 *Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.*
 

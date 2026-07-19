@@ -1,4 +1,4 @@
-# Logic, PhD exam, May 2010
+# Logic PhD exam, May 2010
 
 *Answer six questions and at least one from each section.*
 

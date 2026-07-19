@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 1999
+# Analysis PhD exam, May 1999
 
 ## I
 

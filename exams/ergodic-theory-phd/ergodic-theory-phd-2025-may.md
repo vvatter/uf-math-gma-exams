@@ -1,4 +1,4 @@
-# Ergodic Theory, PhD exam, May 2025
+# Ergodic Theory PhD exam, May 2025
 
 *Answer 4 problems total, and at least one problem from each category.*
 

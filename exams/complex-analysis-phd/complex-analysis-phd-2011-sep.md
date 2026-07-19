@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, September 2011
+# Complex Analysis PhD exam, September 2011
 
 *Do all 9 problems. The symbol \(U\) always denotes the unit disc: \(|z|<1\); \(\mathbb{C}\), the complex plane; \(\Omega\), an open region in \(\mathbb{C}\); and \(\Re z\), the real part of \(z\).*
 

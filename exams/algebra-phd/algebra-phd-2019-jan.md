@@ -1,4 +1,4 @@
-# Algebra, PhD exam, January 2019
+# Algebra PhD exam, January 2019
 
 *Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.*
 

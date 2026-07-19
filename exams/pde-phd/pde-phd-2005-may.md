@@ -1,4 +1,4 @@
-# Partial Differential Equations, PhD exam, May 2005
+# Partial Differential Equations PhD exam, May 2005
 
 **1.** Let \(\Omega\) be a bounded smooth set in \(\mathbb{R}^n\) (\(n\ge 2\)) and let \(L:\mathbb{R}^n\times\mathbb{R}\times\overline{\Omega}\to\mathbb{R}\) be a smooth mapping. Assume in addition that \(L\) is bounded below and the mapping \(p\mapsto L(p,z,x)\) is convex for each \(z\in\mathbb{R}\), \(x\in\overline{\Omega}\subseteq\mathbb{R}^n\). Prove that \(I(w):=\int_\Omega L(Dw,w,x)\,dx\) is weakly lower semicontinuous on \(W^{1,q}(\Omega)\) (\(1<q<\infty\)).
 

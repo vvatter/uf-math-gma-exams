@@ -1,4 +1,4 @@
-# Probability, PhD exam, August 2020
+# Probability PhD exam, August 2020
 
 *Carefully justify your answers.*
 

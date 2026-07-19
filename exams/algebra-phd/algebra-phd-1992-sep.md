@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 1992
+# Algebra PhD exam, September 1992
 
 *Please read through all the questions carefully before you begin. Your five best solutions will count. You may quote theorems from the course (within reason) as long as you make it clear that you are doing so and state them clearly. All rings have 1 and all modules are unital. Different parts of the same question may or may not be related, and do not usually carry equal credit.*
 

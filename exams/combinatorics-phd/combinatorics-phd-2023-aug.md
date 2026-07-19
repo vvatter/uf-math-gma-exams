@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2023
+# Combinatorics PhD exam, August 2023
 
 **1.** Prove that for all positive integers \(n\), the identity
 \[

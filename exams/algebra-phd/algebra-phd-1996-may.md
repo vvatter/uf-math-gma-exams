@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 1996
+# Algebra PhD exam, May 1996
 
 *Answer seven out of the following ten problems. State clearly any results you need.*
 

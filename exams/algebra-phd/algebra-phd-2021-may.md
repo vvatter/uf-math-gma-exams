@@ -1,4 +1,4 @@
-# Algebra, PhD exam, May 2021
+# Algebra PhD exam, May 2021
 
 *Answer 7 questions from among the ones below. If you answer more than that, only the first seven will be graded.*
 

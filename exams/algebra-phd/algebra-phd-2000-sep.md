@@ -1,4 +1,4 @@
-# Algebra, PhD exam, September 2000
+# Algebra PhD exam, September 2000
 
 *Work exactly seven out of the following eleven exercises.*
 

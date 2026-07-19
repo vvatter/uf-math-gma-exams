@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, May 1990
+# Complex Analysis PhD exam, May 1990
 
 **1.** Show that \(u(x,y)=x^3-3xy^2+x\) is harmonic in \(\mathbb{R}^2\). Find a harmonic conjugate for \(u\).
 

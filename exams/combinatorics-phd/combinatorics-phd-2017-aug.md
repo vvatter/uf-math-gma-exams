@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2017
+# Combinatorics PhD exam, August 2017
 
 **1.** Let \(a_n\) denote the number of strings of length \(n\) of the letters A, B, C, and D such that the letter A appears an odd number of times.
 * (a) Find a closed formula for \(a_n\).

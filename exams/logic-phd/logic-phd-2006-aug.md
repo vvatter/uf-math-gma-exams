@@ -1,4 +1,4 @@
-# Logic, PhD exam, August 2006
+# Logic PhD exam, August 2006
 
 *Please complete seven problems among the following, including one from each section.*
 

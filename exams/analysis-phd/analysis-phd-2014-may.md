@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 2014
+# Analysis PhD exam, May 2014
 
 *You must answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.*
 

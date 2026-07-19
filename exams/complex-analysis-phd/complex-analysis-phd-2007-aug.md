@@ -1,4 +1,4 @@
-# Complex Analysis, PhD exam, August 2007
+# Complex Analysis PhD exam, August 2007
 
 **1.** Let \(\overline D\) be the closure of the unit disk. Assume \(f:\overline D\to\mathbb C\) is continuous with \(f\) analytic on \(D\), \(|f(z)|>3\) for \(|z|=1\), and \(f(0)=1-2i\). Must \(f\) have a zero in the unit disk? Prove your answer is correct.
 

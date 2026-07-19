@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 1995
+# Combinatorics PhD exam, August 1995
 
 **1.** Every simple planar graph has a vertex of degree at most \(5\).
 

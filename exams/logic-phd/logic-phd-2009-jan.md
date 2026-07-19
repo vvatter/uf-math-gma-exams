@@ -1,4 +1,4 @@
-# Logic, PhD exam, January 2009
+# Logic PhD exam, January 2009
 
 *Answer six questions and at least one from each section.*
 

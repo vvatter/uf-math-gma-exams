@@ -1,4 +1,4 @@
-# Combinatorics, PhD exam, August 2025
+# Combinatorics PhD exam, August 2025
 
 **1.** Find the number of sequences of length \(n \leq 26\) of letters from the alphabet, each such sequence required to be in alphabetical order with no letter repeated.
 

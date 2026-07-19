@@ -1,4 +1,4 @@
-# Numerical Analysis, first year exam, May 2018
+# Numerical Analysis first year exam, May 2018
 
 *Do all five (5) problems.*
 

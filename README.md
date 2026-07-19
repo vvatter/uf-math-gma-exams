@@ -21,7 +21,7 @@ The two collections apply to different cohorts:
 
 This Git repository also serves as the project archive. It contains the acquisition and
 extraction code, the source PDFs after lossless optimization, one canonical JSON record
-per exam, and a readable Markdown rendering of each JSON record. `manifest.json`
+per exam, and readable Markdown and accessible HTML renderings of each JSON record. `manifest.json`
 records the source URLs and preserves both the originally downloaded and current
 working-file sizes and hashes.
 
@@ -35,16 +35,30 @@ accessible presentations will be generated from that dataset. Visual dependencie
 other genuine uncertainties are sent to a small serious-review queue, while corrections
 and completed structural transformations are logged separately.
 
-Each extracted JSON file and its readable Markdown rendering are stored beside the
-source PDF in the same `exams/<subject-tag>/` directory. Matching stems make the three
+Each extracted JSON file and its Markdown and HTML renderings are stored beside the
+source PDF in the same `exams/<subject-tag>/` directory. Matching stems make the four
 files easy to compare during review. Each JSON record includes the current GMA PDF URL
 and an ordered sequence of instructions, problems, and optional named sections. Problems
 contain structured, recursively nested subparts. Math uses MathJax delimiters `\(...\)`
 and `\[...\]`.
 
 If a linked PDF contains only a notice that the exam was unavailable, that notice is
-stored as an instruction block and there are no problem blocks. The JSON and Markdown
-still document exactly what the archive provides at that URL.
+stored as an instruction block and there are no problem blocks. The JSON, Markdown, and
+HTML still document exactly what the archive provides at that URL.
+
+The HTML is static and semantic: it uses headings, ordered problem lists, nested subpart
+lists, visible keyboard focus, responsive display mathematics, and print styles. It
+loads Computer Modern webfonts and accessible MathJax from versioned CDN URLs rather
+than bundling either dependency into every page.
+
+The generated root `index.html` organizes the archive by level in the order Qualifying,
+First-year, and PhD. Within each level it links to a separate index for every subject.
+Subject indexes list their exams newest first and link to both the accessible HTML and
+the archived PDF. Each exam page links back to its subject index, making the generated
+files usable as a conventional static website as well as a repository archive.
+Generated pages do not link to the retiring GMA website. Its URLs remain in the dataset
+and manifest only as source provenance; public PDF links use the optimized copies
+committed to this repository.
 
 Problem numbers are not stored redundantly. Their order in the JSON determines their
 displayed numbers. A section records whether numbering restarts at 1 or continues from
@@ -129,7 +143,7 @@ The pilot covers scans, multipart questions, formula-heavy pages, restarted and
 continuing section numbering, noninteger source labels, instruction blocks between
 sections, and essential figures. Canonical records are written
 beside their source PDFs under `exams/<subject-tag>/`, using the same filename stem and
-`.json` and `.md` extensions. Human-review findings are collected in
+`.json`, `.md`, and `.html` extensions. Human-review findings are collected in
 `exams/review-serious.json`. Corrections and completed transformations are recorded in
 `exams/review-corrections.json` and `exams/review-transformations.json`. Model responses,
 token usage, rendered source pages, and validation failures remain under ignored
@@ -138,7 +152,8 @@ so an interrupted bulk run retains both its canonical output and its review find
 
 The command resumes valid completed records by default. Use `--force` only when a
 record should be re-extracted after a prompt or policy change. Superseded JSON,
-Markdown, and checkpoints are archived under ignored `build/extraction/<exam-id>/history/`.
+Markdown, HTML, and checkpoints are archived under ignored
+`build/extraction/<exam-id>/history/`.
 Specific manifest IDs can be supplied instead of `--pilot`:
 
 ```sh
@@ -163,8 +178,26 @@ python3 extract_exams.py --subject logic-phd --subject topology-phd
 With bulk selection, `--force` includes completed records and re-extracts them. Without
 `--force`, rerunning the same command continues with the remaining exams.
 
-Validate every local PDF hash, canonical JSON record, generated Markdown file, review
-record, and MathJax expression with:
+Generate the archive homepage and all subject indexes from `manifest.json` with:
+
+```sh
+python3 build_indexes.py
+```
+
+Check that committed index pages still match the manifest without rewriting them:
+
+```sh
+python3 build_indexes.py --check
+```
+
+Every generated page begins its footer with a link to the project source and includes a
+small semantic page-update date. Exam footers also link to the main index, their subject
+index, and the adjacent archived PDF. The shared date is maintained by
+`PAGE_UPDATED_ISO` and `PAGE_UPDATED_LABEL` in `extract_exams.py`; update both when the
+published presentation or archive contents change.
+
+Validate every local PDF hash, canonical JSON record, generated Markdown, HTML and index
+page, review record, and MathJax expression with:
 
 ```sh
 python3 validate_archive.py

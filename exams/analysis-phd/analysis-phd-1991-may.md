@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 1991
+# Analysis PhD exam, May 1991
 
 *Be sure to give complete proofs and justify your steps. Do not leave gaps.*
 

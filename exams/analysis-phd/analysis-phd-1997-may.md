@@ -1,4 +1,4 @@
-# Analysis, PhD exam, May 1997
+# Analysis PhD exam, May 1997
 
 *Be sure to write all steps in a neat and logical fashion to receive credit. Give reasons for your steps.*
 

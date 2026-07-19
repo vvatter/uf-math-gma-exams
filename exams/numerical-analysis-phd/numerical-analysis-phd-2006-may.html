@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numerical Analysis PhD exam, May 2006</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Numerical Analysis PhD exam, May 2006</h1>
+    </header>
+    <div class="instructions">
+      <p>Do any eight of the ten problems below.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \(x_0,\ldots,x_n\) be distinct real points. Let \(\{l_j(x)\}_{j=0,\ldots,n}\) be the Lagrange basis functions for these points. Prove that</p>
+        <div class="display-math">\[
+\sum_{j=0}^n l_j(x)=1
+\]</div>
+        <p>for all \(x\).</p>
+      </li>
+      <li class="problem">
+        <p>Suppose you want to solve numerically the ode</p>
+        <div class="display-math">\[
+y&#x27;=f(x,y),\qquad y(0)=y_0.
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>By applying the midpoint rule to the integral in the equation</p>
+                <div class="display-math">\[
+y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,
+\]</div>
+                <p>derive the midpoint method for odes.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Find the order of the local truncation error for this method.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Determine if this method is strongly stable, weakly stable or unstable.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Given \(x_0,x_1\) and smooth \(f(x)\), give a divided difference type formula for the cubic polynomial which satisfies:</p>
+        <div class="display-math">\[
+\begin{aligned}
+p(x_0)&amp;=f(x_0),\\
+p&#x27;(x_0)&amp;=f&#x27;(x_0),\\
+p&#x27;&#x27;(x_0)&amp;=f&#x27;&#x27;(x_0),\\
+p(x_1)&amp;=f(x_1).
+\end{aligned}
+\]</div>
+        <p>Also give a divided difference type error formula for \(f(x)-p(x)\).</p>
+      </li>
+      <li class="problem">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Find the linear least squares approximation to \(f(x)=x^2\) on the interval \([0,2]\) by optimizing the least squares error over \(a\) and \(b\) in \(r^*(x)=ax+b\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Find the first two orthonormal polynomials \(\phi_0(x),\phi_1(x)\) on \([0,2]\) (weight function \(w(x)=1\)). Use these to find the linear least squares approx to \(f(x)=x^2\), and check this result agrees with the previous problem.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider the root-finding iteration defined by</p>
+        <div class="display-math">\[
+x_{n+1}=x_n-f(x_n)\left[\frac{f(x_n)}{f(x_n+f(x_n))-f(x_n)}\right].
+\]</div>
+        <p>This is called Steffensen’s method. Show that the method converges quadratically when applied to \(f(x)=x^2-a\). (You may assume \(x_0\) is close enough to the root.)</p>
+      </li>
+      <li class="problem">
+        <p>This problem has three parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Evaluate the \(p\)-norm of a diagonal matrix, \(1\leq p\leq\infty\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Evaluate the \(p\)-norm of a rank one matrix \(\mathbf u\mathbf v^*\), \(1\leq p\leq\infty\), \(\mathbf u\in\mathbb C^m\) and \(\mathbf v\in\mathbb C^n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Suppose \(\mathbf A\in\mathbb C^{m\times n}\) can be expressed</p>
+                <div class="display-math">\[
+\mathbf A=\sum_{k=1}^r\sigma_k\mathbf u_k\mathbf v_k^*,
+\]</div>
+                <p>where the vectors \(\{\mathbf u_k:1\leq k\leq r\}\) and \(\{\mathbf v_k:1\leq k\leq r\}\) are orthonormal. What is \(\|\mathbf A\|_2\)?</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Given \(\mathbf A\in\mathbb C^{m\times n}\), show that \(\mathbf A^*\mathbf A\) is positive semidefinite and \(\mathbf A^*\mathbf A\) is positive definite if and only if the columns of \(\mathbf A\) are linearly independent.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(\mathbf A\) is a Hermitian, positive semidefinite matrix, show that the diagonal contains the largest in magnitude element of \(\mathbf A\). Hint: show that \(\lvert a_{ij}\rvert\leq\max\{\lvert a_{ii}\rvert,\lvert a_{jj}\rvert\}\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(\mathbf A\in\mathbb C^{n\times n}\) be nonsingular. Show that \(\mathbf A\) has an LU factorization if and only if for each \(k\) with \(1\leq k\leq n\), the upper-left \(k\times k\) block \(\mathbf A_{1:k,1:k}\) is nonsingular. Prove that this LU factorization is unique.</p>
+      </li>
+      <li class="problem">
+        <p>Consider the Arnoldi iteration on the Krylov spaces \(\mathcal K_k=\operatorname{span}\{\mathbf b,\mathbf A\mathbf b,\mathbf A^2\mathbf b,\ldots,\mathbf A^{k-1}\mathbf b\}\) for some \(\mathbf b\in\mathbb C^m\) and \(\mathbf A\in\mathbb C^{m\times m}\) (given at side). Suppose the algorithm proceeds without breakdown until for some \(n&lt;m\), it encounters \(h_{n+1,n}=0\).</p>
+        <p>Algorithm 1 (Arnoldi iteration)</p>
+        <p>(a) Set \(\mathbf q_1=\mathbf b/\|\mathbf b\|_2\).</p>
+        <p>(b) For \(n=1,2,3,\ldots\) do:</p>
+        <p>i. Set \(\mathbf v=\mathbf A\mathbf q_n\).</p>
+        <p>ii. For \(j=1,2,\ldots,n\) do:</p>
+        <p>A. Set \(h_{jn}=\mathbf q_j^*\mathbf v\).</p>
+        <p>B. Replace \(\mathbf v\) by \(\mathbf v-h_{jn}\mathbf q_j\).</p>
+        <p>iii. Set \(h_{n+1,n}=\|\mathbf v\|_2\).</p>
+        <p>iv. Set \(\mathbf q_{n+1}=\mathbf v/h_{n+1,n}\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Show that \(\mathcal K_n\) is an invariant subspace of \(\mathbf A\), i.e., \(\mathbf A\mathcal K_n\subseteq\mathcal K_n\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that \(\mathcal K_n=\mathcal K_{n+1}=\mathcal K_{n+2}=\cdots\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Let \(\mathbf H_n\) be the \(n\times n\) Hessenberg matrix whose \(ij\)-th entry (\(i\leq j+1\)) is the number \(h_{ij}\) computed in the algorithm. Show that each eigenvalue of \(\mathbf H_n\) is an eigenvalue of \(\mathbf A\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider an invertible linear system \(\mathbf A\mathbf x=\mathbf b\) and a perturbation \((\mathbf A+\delta\mathbf A)(\mathbf x+\delta\mathbf x)=\mathbf b\). Assuming \(\|\mathbf A^{-1}\|\|\delta\mathbf A\|&lt;1\), derive the condition estimate</p>
+        <div class="display-math">\[
+\frac{\|\delta\mathbf x\|}{\|\mathbf x\|}\leq\left(\frac{\|\mathbf A\|\|\mathbf A^{-1}\|}{1-\|\mathbf A^{-1}\|\|\delta\mathbf A\|}\right)\frac{\|\delta\mathbf A\|}{\|\mathbf A\|}.
+\]</div>
+        <p>For given \(\mathbf A\) and \(\mathbf x\) and for the 2-norm, what choice of \(\delta\mathbf A\) yields the following equality:</p>
+        <div class="display-math">\[
+\|\mathbf A^{-1}\delta\mathbf A\mathbf x\|=\|\mathbf A^{-1}\|\|\delta\mathbf A\|\|\mathbf x\|?
+\]</div>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../index.html">All exam subjects</a></li>
+        <li><a href="index.html">Numerical Analysis PhD exams</a></li>
+        <li><a href="numerical-analysis-phd-2006-may.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-19">July 19, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

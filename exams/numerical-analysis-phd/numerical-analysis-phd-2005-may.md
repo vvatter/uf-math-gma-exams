@@ -1,4 +1,4 @@
-# Numerical Analysis, PhD exam, May 2005
+# Numerical Analysis PhD exam, May 2005
 
 *Do any eight of the ten problems below.*
 

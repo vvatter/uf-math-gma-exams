@@ -1,4 +1,4 @@
-# Analysis, PhD exam, August 2023
+# Analysis PhD exam, August 2023
 
 *Write solutions in a neat and logical fashion, giving complete reasons for all steps. You must attempt SIX problems.*
 
