@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,16 +158,16 @@
       <p>Do 7 out of 9 problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Define the Ramsey number \(r(m,n)\) and prove that</p>
         <div class="display-math">\[
 r(m,n) \leq \binom{m+n-2}{m-1}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>The 12 edges of a cube are each colored one of two colors. Two such colored cubes are regarded as equivalent if one can be rotated so that it becomes identically colored to the other. Compute the number of equivalence classes of these colored cubes.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\Sigma\) be a block design with parameters \(b,v,r,k,\lambda\).</p>
         <ol class="subparts">
           <li>
@@ -208,7 +214,7 @@ r &amp; \lambda &amp; \cdots &amp; \lambda\\
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Give responses to any 4 out of the 5 parts. You may use the conclusions of (ii) and (iii) in responding to parts (iv) and (v) even if you omit their proofs.</p>
         <ol class="subparts">
           <li>
@@ -253,7 +259,7 @@ r &amp; \lambda &amp; \cdots &amp; \lambda\\
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>A \(t\)-\((v,k,\lambda)\) design \(\Sigma\) is an incidence structure consisting of a set \(S\) of \(v\) points and a collection of \(k\)-subsets of \(S\) called blocks such that every \(t\)-subset of \(S\) is contained in precisely \(\lambda\) blocks.</p>
         <ol class="subparts">
           <li>
@@ -278,17 +284,17 @@ r &amp; \lambda &amp; \cdots &amp; \lambda\\
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State and prove Dilworth&#x27;s Theorem for a finite poset.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\{a_n\}_{n=0}^{\infty}\) be a sequence satisfying a homogeneous linear recurrence relation. Define</p>
         <div class="display-math">\[
 r_n=\frac{a_n}{a_{n-1}},\qquad n=1,2,3,\ldots.
 \]</div>
         <p>Give necessary and sufficient conditions on the recurrence relation for \(r_n\) to approach a finite limit, and give a way to find the limit when it exists.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Describe a combinatorial algorithm of polynomial time efficiency to solve the following problem. Prove that your algorithm has the required efficiency using theorems from the combinatorics class.</p>
         <p>Input: \(X\) a finite set, \(\{A_1,A_2,\ldots,A_n\}\) a collection of subsets of \(X\), and \(p:X\to\mathbb{R}\) a function.</p>
         <p>Output: \(\{x_1,x_2,\ldots,x_n\}\) distinct elements of \(X\) which maximize</p>
@@ -298,7 +304,7 @@ r_n=\frac{a_n}{a_{n-1}},\qquad n=1,2,3,\ldots.
         <p>subject to \(x_i\in A_i\) for all \(i\).</p>
         <p>(Assume there exists a set of \(n\) elements satisfying the restriction \(x_i\in A_i\), \(\forall i\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Find the number of spanning sets in a vector space \(V\) of dimension \(n\) over \(\operatorname{GF}(q)\), the finite field with \(q\) elements. (Hint: try Möbius inversion.)</p>
       </li>
     </ol>

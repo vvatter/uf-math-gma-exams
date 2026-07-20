@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,16 +158,16 @@
       <p>Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that the ring \(\mathbb{Z}[\sqrt{-5}]\) is not a principal ideal domain, and give an example of a non-principal ideal in this ring.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(R=\mathbb{Z}[\sqrt{-1}]\) be the ring of Gaussian integers. Let \(M\) be a maximal ideal of \(R\). Prove that \(R/M\) is a finite field of order \(p\) or \(p^2\) where \(p\) is a (rational) prime number.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(V\) be a vector space over a field \(F\) and let \(S\) be a subset of \(V\) such that \(\operatorname{Span}(S)=V\). Prove that there is a subset \(B\) of \(S\) which is a basis for \(V\). (You may not assume that \(S\) is finite).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Which of the following polynomials are irreducible? Explain.</p>
         <ol class="subparts">
           <li>
@@ -190,10 +196,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Find representatives of all conjugacy classes of elements of order 5 in \(GL_3(\mathbb{F}_{19})\). Hint: \(x^5-1=(x-1)(x^2-4x+1)(x^2+5x+1)\) in \(\mathbb{F}_{19}[x]\), and the quadratic factors are irreducible.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(E/F\) be a field extension and let \(R\) be a subring of \(E\) which contains \(F\).</p>
         <ol class="subparts">
           <li>

@@ -45,7 +45,13 @@
             "text": "Let \\(f(z)\\) be entire of order 1 and the zero set of \\(f\\), \\(Z(f)=\\{0,\\pm1,\\pm2,\\pm3,\\ldots\\}\\). Suppose \\(f'(0)=1\\), \\(f\\!\\left(\\frac12\\right)=1\\), and \\(f\\) is bounded on the imaginary axis. Show that \\(f(z)=\\sin \\pi z\\)."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source reading is clear, but the hypotheses and conclusion are mathematically inconsistent: \\(\\sin \\pi z\\) has derivative \\(\\pi\\), not 1, at 0 and is unbounded on the imaginary axis. The intended correction is not uniquely determined, so the source text has been retained."
+          }
+        ]
       }
     },
     {

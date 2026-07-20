@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,25 +158,25 @@
       <p>Write all proofs in a neat and logical fashion.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Radon–Nikodym Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State and prove the Vitali Integral Convergence Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((X,\Sigma,\mu)\) be a finite measure space and suppose \(\Sigma=\sigma(\Sigma_0)\), where \(\Sigma_0\) is an algebra. Show that for every \(\varepsilon&gt;0\), if \(E\in\Sigma\), then there exists an \(E_0\in\Sigma_0\) such that \(\mu(E\mathbin{\triangle}E_0)&lt;\varepsilon\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(Y\) and \(Z\) be closed subspaces in the B-space \(X\). Suppose each \(x\in X\) has a unique representation in the form \(x=y+z\), with \(y\in Y\) and \(z\in Z\). Show that there exists a constant \(K\) such that \(\lVert y\rVert\leq K\lVert x\rVert\) and \(\lVert z\rVert\leq K\lVert x\rVert\), for each \(x\in X\). [Hint: First apply the Closed Graph Theorem to \(T:X\to Y\), \(T(x)=y\).]</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((X,\Sigma,\mu)\) be a measure space. Let \((f_n)\) be a sequence of integrable functions such that \(\sum_n\int |f_n|\,d\mu&lt;\infty\). Does \(\sum_n f_n\) converge a.e.? Prove.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \((\Omega,\mathcal F,P)\) be a probability space. Let \(X\) and \(Y\) be integrable random variables. Suppose \(X\) and \(Y\) are independent. Find \(E(X/Y)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \((X,\Sigma,\mu)\) be a finite measure space; let \((f_n)\) be a sequence of integrable functions such that \(\int_E f_n\,d\mu\) converges for each \(E\in\Sigma\). Assume \((f_n)\) is \(L^1\)-bounded. Show there exists an integrable function \(f\) such that \(\int_E f_n\,d\mu\to\int_E f\,d\mu\) for all \(E\in\Sigma\).</p>
       </li>
     </ol>

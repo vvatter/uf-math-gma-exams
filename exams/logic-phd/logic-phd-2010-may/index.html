@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,16 +160,16 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">Section 1</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Show that the theory of the class of infinite sets is complete and decidable, but is not finitely axiomatizable.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Sketch a proof of the Vaught test for categoricity using the Löwenheim–Skolem Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Show that if \(A\) and \(B\) are two countable atomic structures which are elementarily equivalent, then \(A \simeq_p B\).</p>
         </li>
       </ol>
@@ -171,13 +177,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">Section 2</h2>
       <ol class="problems" start="5">
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>(ZFC) For any infinite cardinal \(\kappa\), \(\kappa \times \kappa = \kappa\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Describe the constructible universe \(L\) and sketch a proof that \(L\) satisfies the Continuum Hypothesis.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>Show that for any set \(u\) and any countable set \(v\), \(FF(u,v)\) satisfies the countable (anti)-chain condition.</p>
         </li>
       </ol>
@@ -185,13 +191,13 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">Section 3</h2>
       <ol class="problems" start="8">
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic. –You may assume the Representability Hypothesis.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Construct a simple r.e. set.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Show that the following are equivalent for any infinite \(X \subseteq \omega\):</p>
           <ol class="subparts">
             <li>

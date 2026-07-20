@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -130,6 +136,9 @@ Give an example where \(L/F\) is not normal.
 Give an example of normal extensions \(L/F\), \(K/L\) where \(K/F\) is not normal.
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source says only that~\(p\) is prime, but the assertion that~\(K\) contains a quadratic extension of \(\mathbb Q\) fails when \(p=2\). A possible omitted restriction cannot be determined uniquely, so the source's mathematical scope has been retained.
+\end{problemconcern}
 Let~\(p\) be a prime and~\(K\) be the splitting field over \(\mathbb Q\) of \(X^p-1\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
@@ -138,6 +147,9 @@ Show that~\(K\) contains a unique quadratic extension of \(\mathbb Q\).
 When is this quadratic extension real? (You may assume as known the structure of the Galois group of \(K/\mathbb Q\). hint: if~\(\zeta\) is a primitive~\(p\)th root of unity, complex conjugation sends \(\zeta\mapsto\zeta^{-1}\)).
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Even after the grammatical correction, the printed assertion appears to require an additional hypothesis: a finite-dimensional semisimple~\(k\)-algebra need not be a direct sum of fields. No missing hypothesis is uniquely determined, so none has been added.
+\end{problemconcern}
 Let~\(k\) be a field and~\(R\) a finite-dimensional~\(k\)-algebra. Show that if~\(R\) is semisimple as a ring, it is a direct sum of extension fields of~\(k\).
 \item
 Classify up to isomorphism all semisimple rings with \(720\) elements.

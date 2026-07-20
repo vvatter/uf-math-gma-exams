@@ -111,6 +111,12 @@
             "text": "Prove that\n\\[\n\\frac{1}{1+\\lVert A\\rVert_p}\\leq \\lVert(I-A)^{-1}\\rVert_p\\leq \\frac{1}{1-\\lVert A\\rVert_p}.\n\\]",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Part (c) uses \\(A^{-1}\\), but the standing assumption \\(\\lVert A\\rVert_p<1\\) does not imply that \\(A\\) is invertible. The source reading has been retained because the intended correction is not uniquely determined."
+          }
         ]
       }
     },

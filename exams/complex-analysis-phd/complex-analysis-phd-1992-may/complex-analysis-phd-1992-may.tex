@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -85,6 +91,9 @@ Construct a conformal map which will take the intersection of the disks \(|z|<1\
 \item
 Evaluate \(\displaystyle \int_0^\infty \frac{\log x}{1+x^4}\,dx\) using contour integration.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source reading is clear, but the hypotheses and conclusion are mathematically inconsistent: \(\sin \pi z\) has derivative~\(\pi\), not 1, at 0 and is unbounded on the imaginary axis. The intended correction is not uniquely determined, so the source text has been retained.
+\end{problemconcern}
 Let \(f(z)\) be entire of order 1 and the zero set of~\(f\), \(Z(f)=\{0,\pm1,\pm2,\pm3,\ldots\}\). Suppose \(f'(0)=1\), \(f\!\left(\frac12\right)=1\), and~\(f\) is bounded on the imaginary axis. Show that \(f(z)=\sin \pi z\).
 \item
 Let \(P_n(z)=\displaystyle \frac{1}{n!}\frac{d^n}{dz^n}\bigl[z^n(1-z)^n\bigr]\) be the \(n^{\mathrm{th}}\)-Legendre polynomial (of degree~\(n\)). Show that \(P_n(-1)\leq (1+\sqrt{2})^{2n}\). (Hint: Write \(\displaystyle P_n(-1)=\frac{1}{2\pi i}\int_C \frac{\zeta^n(1-\zeta)^n}{(\zeta+1)^{n+1}}\,d\zeta\) over a suitable circle centered at \(-1\).)

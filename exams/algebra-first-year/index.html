@@ -54,6 +54,30 @@
     }
     p { margin: 0 0 1rem; }
     .lede { max-width: 48rem; font-size: 1.18rem; }
+    .concerns-link {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .75rem;
+      align-items: baseline;
+      margin: 3rem 0 1.5rem;
+    }
+    .concerns-link a { font-weight: 700; }
+    .concern-notice { max-width: 52rem; margin-bottom: 2rem; }
+    .concern-exam h2 { margin-bottom: .9rem; padding-bottom: 0; border-bottom: 0; }
+    .concern-list { margin: 0; padding: 0; list-style: none; }
+    .concern { margin: 0 0 1.35rem; }
+    .concern p { margin-bottom: .45rem; }
+    .concern-warning { color: #7a1f1f; }
+    .featured-resource {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .75rem;
+      align-items: baseline;
+      margin: 0 0 2rem;
+      padding: 0 0 .75rem;
+      border-bottom: 1px solid #d8d8d2;
+    }
+    .featured-resource a { font-weight: 700; }
     .subject-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -118,6 +142,9 @@
       h2 { margin: .9rem 0 .35rem; font-size: 12pt; }
       .subject-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .subject-list a, .count { padding: .25rem 0; }
+      .concerns-link { margin: 1rem 0 .55rem; }
+      .concern { margin-bottom: .55rem; break-inside: avoid; }
+      .concern-warning { color: #651818; }
       table { min-width: 0; }
       th, td { padding: .25rem .4rem; }
       a { color: inherit; }
@@ -131,12 +158,16 @@
       <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
       <h1>Algebra First-Year Exams</h1>
     </header>
+    <p class="featured-resource">
+      <a href="algebra-first-year-practice-problems/index.html">Practice Problems</a>
+      <span class="count">(113<span class="sr-only"> problems</span>)</span>
+    </p>
     <div class="table-wrap" role="region" tabindex="0" aria-label="Algebra First-Year Exams">
       <table>
-        <caption>67 exams, newest first</caption>
+        <caption>71 exams, newest first; undated practice exams last</caption>
         <thead>
           <tr>
-            <th scope="col">Date</th>
+            <th scope="col">Date or practice</th>
             <th scope="col">Part</th>
             <th scope="col">Accessible HTML</th>
             <th scope="col">Archived PDF</th>
@@ -544,6 +575,30 @@
             <td>Part 1</td>
             <td><a href="algebra-first-year-2013-jan-part-1/index.html">Read exam</a></td>
             <td><a href="algebra-first-year-2013-jan-part-1/algebra-first-year-2013-jan-part-1.source.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Practice A</th>
+            <td>Part 1</td>
+            <td><a href="algebra-first-year-practice-a-part-1/index.html">Read exam</a></td>
+            <td><a href="algebra-first-year-practice-a-part-1/algebra-first-year-practice-a-part-1.source.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Practice A</th>
+            <td>Part 2</td>
+            <td><a href="algebra-first-year-practice-a-part-2/index.html">Read exam</a></td>
+            <td><a href="algebra-first-year-practice-a-part-2/algebra-first-year-practice-a-part-2.source.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Practice B</th>
+            <td>Part 1</td>
+            <td><a href="algebra-first-year-practice-b-part-1/index.html">Read exam</a></td>
+            <td><a href="algebra-first-year-practice-b-part-1/algebra-first-year-practice-b-part-1.source.pdf">View PDF</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Practice B</th>
+            <td>Part 2</td>
+            <td><a href="algebra-first-year-practice-b-part-2/index.html">Read exam</a></td>
+            <td><a href="algebra-first-year-practice-b-part-2/algebra-first-year-practice-b-part-2.source.pdf">View PDF</a></td>
           </tr>
         </tbody>
       </table>

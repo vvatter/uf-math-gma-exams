@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Do six of eight. Write solutions in a neat and logical fashion, giving complete reasons for all steps.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X\) and \(Y\) be topological spaces. Prove, if \(f:X\to Y\) is continuous, then \(f\) is \(\mathcal{B}_X\)-\(\mathcal{B}_Y\) measurable (that is, measurable with respect to the Borel \(\sigma\)-algebras on \(X\) and \(Y\) respectively).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>(Short Answer.) Do two of three.</p>
         <ol class="subparts">
           <li>
@@ -187,25 +193,25 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((X,\mathcal{M},\mu)\) be a measure space and \((f_n)_{n=1}^\infty\) be a sequence from \(L^1(\mu)\). Prove, if there is a \(g\in L^1(\mu)\) such that \(g(x)\geq |f_n(x)|\) for all \(n\) and \(x\in X\), then</p>
         <div class="display-math">\[
 \lim_{\delta\to 0}\sup_n\int_{\{|f_n|&lt;\delta\}}|f_n|\,d\mu=0.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove, if \(E\subset\mathbb{R}\) is a Lebesgue measurable set of positive measure, then \(E-E=\{x-y:x,y\in E\}\) contains a nontrivial open interval.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((X,\mathcal{M},\mu)\) be a measure space and \(1\leq p&lt;q&lt;\infty\). Prove, \(L^q(\mu)\subset L^p(\mu)\) if and only if there is a (real) constant \(K\) such that for each \(E\in\mathcal{M}\) either \(\mu(E)\leq K\) or \(\mu(E)=\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove, if \(X\) is a Banach space and \(M\) is a finite dimensional subspace of \(X\), then there is a closed subspace \(N\) of \(X\) such that \(M\cap N=(0)\) and \(M+N=X\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose \(\|\cdot\|\) and \(\|\cdot\|_*\) are both norms on a vector space \(X\) and \(\|x\|\leq\|x\|_*\) for all \(x\in X\). Show, if both \((X,\|\cdot\|)\) and \((X,\|\cdot\|_*)\) are Banach spaces, then these norms are equivalent.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>(Short Answer. Do two of three)</p>
         <ol class="subparts">
           <li>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,23 +155,23 @@
       <h1>Complex Analysis PhD Exam, June 1994</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show, if \(a&gt;e\), then \(e^z-az^n\) has \(n\) zeros in \(|z|&lt;1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Determine all entire functions \(f\) such that \(|f|=1\) for \(|z|=1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(G\) denote the punctured disc \(0&lt;|z|&lt;\delta\) and let \(f=z\cos(1/z)\). Determine the set \(f(G)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f\) be an entire function with a finite number of zeros. Show if for each \(c&gt;0\)</p>
         <div class="display-math">\[
 \lim_{z\to\infty}\frac{|f(z)|}{e^{c|z|}}=0,
 \]</div>
         <p>then \(f\) is a polynomial.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(a_n\geq 0\) and \(f=\sum_{n=0}^{\infty}a_nz^n\) with radius of convergence \(\infty&gt;R&gt;0\). Show that \(z=R\) is a singularity of \(f\). (Suggestion: Show, if \(R&gt;r&gt;0\) and</p>
         <div class="display-math">\[
 \sum \frac{f^{(n)}(r)}{n!}(z-r)^n
@@ -176,14 +182,14 @@
 \]</div>
         <p>has radius of convergence at least \(R&#x27;\). Conclude \(f\) is analytic in \(|z|&lt;R&#x27;+r\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let</p>
         <div class="display-math">\[
 f(z)=1+\frac{1}{2^z}+\frac{1}{4^z}+\frac{1}{5^z}+\frac{1}{7^z}+\frac{1}{8^z}+\cdots.
 \]</div>
         <p>Show that \(f\) is analytic in \(\operatorname{Re}z&gt;1\). Analytically continue \(f\) beyond this half plane. Is \(f\) analytic at \(z=1\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

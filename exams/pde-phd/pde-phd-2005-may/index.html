@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,17 +155,17 @@
       <h1>Partial Differential Equations PhD Exam, May 2005</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\Omega\) be a bounded smooth set in \(\mathbb{R}^n\) (\(n\ge 2\)) and let \(L:\mathbb{R}^n\times\mathbb{R}\times\overline{\Omega}\to\mathbb{R}\) be a smooth mapping. Assume in addition that \(L\) is bounded below and the mapping \(p\mapsto L(p,z,x)\) is convex for each \(z\in\mathbb{R}\), \(x\in\overline{\Omega}\subseteq\mathbb{R}^n\). Prove that \(I(w):=\int_\Omega L(Dw,w,x)\,dx\) is weakly lower semicontinuous on \(W^{1,q}(\Omega)\) (\(1&lt;q&lt;\infty\)).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\{a_{ij}\}_{n\times n}\) (\(n\ge 2\)) be a positive definite constant matrix. Let \(B_1\) be the unit ball in \(\mathbb{R}^n\). Find the Euler–Lagrange equation for</p>
         <div class="display-math">\[
 I(w)=\int_{B_1}\sum_{i,j=1}^n\bigl(a_{ij}\partial_iw\partial_jw\bigr)\,dx,\qquad w\in H_0^1(B_1),
 \]</div>
         <p>under the constraint \(\int_{B_1}|w|^2=1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove that if \(\lambda&gt;0\) is large enough, there exists a function \(u\in H^2(B_1)\cap H_0^1(B_1)\) solving</p>
         <div class="display-math">\[
 \begin{cases}
@@ -168,7 +174,7 @@ u=0, &amp; \text{on }\partial B_1.
 \end{cases}
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\Omega\) be a bounded smooth subset of \(\mathbb{R}^n\) (\(n\ge 2\)) and let \(u\) be a classical solution of</p>
         <div class="display-math">\[
 \begin{cases}
@@ -182,7 +188,7 @@ u\ge 0, &amp; \partial\Omega,
 \]</div>
         <p>Show that either \(u&gt;0\) or \(u=0\) in \(\Omega\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(u\in C^2(B_1)\) be a solution of</p>
         <div class="display-math">\[
 \begin{cases}
@@ -210,7 +216,7 @@ u=1, &amp; \text{on }\partial B_1.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -242,7 +248,7 @@ A=\{w\in H_0^1(\Omega);\ |Dw|\le 1\ \text{a.e.}\}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(u\in W^{1,p}(B_1)\). Prove that \(u^+,u^-,|u|\in W^{1,p}(B_1)\) and for almost all points over each region \((u&gt;0,u&lt;0,u=0)\) (Recall \(u=u^+-u^-\)),</p>
         <div class="display-math">\[
 Du^+=
@@ -278,7 +284,7 @@ f_\epsilon(u)=
 =-\int_{\{u&gt;0\}}\frac{uDu}{\sqrt{u^2+\epsilon^2}}\phi\,dx.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(a_{ij}(x)\), \(b_i(x)\) (\(i,j=1,\ldots,n\)), \(c(x)\) be \(C^\infty\) functions over \(B_1\) (\(n\ge 2\)). Let \(\lambda_0,\lambda_1\) be two positive constants satisfying</p>
         <div class="display-math">\[
 0&lt;\lambda_0|\xi|^2\le a_{ij}(x)\xi_i\xi_j\le\lambda_1|\xi|^2

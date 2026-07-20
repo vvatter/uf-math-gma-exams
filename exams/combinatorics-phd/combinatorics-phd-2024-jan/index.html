@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,31 +155,31 @@
       <h1>Combinatorics PhD Exam, January 2024</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(B(n)\) denote the number of partitions of the \(n\)-element set, and let \(F(n)\) denote the number of partitions of the \(n\)-element set in which every block consists of at least two elements. Prove that \(B(n)=F(n)+F(n+1)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a simple undirected graph on \(n\ge 3\) vertices in which it holds that the sum of the degree of any two nonadjacent vertices is at least \(n\). Prove that \(G\) has a Hamiltonian cycle.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>For which positive integers \(n\) is the Catalan number \(C_n=\binom{2n}{n}/(n+1)\) an odd integer?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Nine passengers are traveling on a bus. Among any three of them, there are two who know each other. Prove that there are at least five passengers on the bus so that each of them knows at least four other passengers.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(t_n\) denote the number of plane unlabeled rooted trees on \(n\) vertices in which every non-leaf vertex has at least two children. So \(t_0=t_2=0\), while \(t_1=t_3=t_4=1\) and \(t_5=3\). Find an explicit formula for the ordinary generating function of the sequence \(\{t_n\}_{n\ge 0}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(P\) be a finite poset. Let \(\Omega_P(m)\) denote the number of order-preserving functions \(f:P\to\{1,2,\ldots,m\}\). In other words, if \(x\le_P y\), then \(f(x)\le f(y)\). Prove that \(\Omega_P(m)\) is a polynomial function of \(m\), and determine the degree of the polynomial \(\Omega_P\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>A \(t\)-design is a design in which every \(t\)-element set of vertices appears together in exactly \(\lambda\) blocks. Prove that if \(\mathcal{D}\) is a \(t\)-design with parameters \((b,v,r,k,\lambda)\), then</p>
         <div class="display-math">\[
 r\binom{k-1}{t-1}=\lambda\binom{v-1}{t-1}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(D_o(n)\) denote the number of derangements of length \(n\) that are odd permutations, and let \(D_e(n)\) denote the number of derangements of length \(n\) that are even permutations. Find a closed, explicit formula (no summation signs) for \(D_e(n)-D_o(n)\).</p>
       </li>
     </ol>

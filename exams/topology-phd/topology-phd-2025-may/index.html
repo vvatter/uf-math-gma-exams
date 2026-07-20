@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -155,19 +161,19 @@
       <p>For the first five problems, show all of your work and support all statements.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that the product of two connected spaces is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove that every metrizable space \((X,d)\) is normal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X\) be the \(\Delta\)-complex drawn below, which has two 0-simplices \(v\) and \(w\), four 1-simplices \(a,b,c,d\), and three 2-simplices \(S,T,U\). Compute the simplicial homology \(H_i(X)\) for \(i=0,1,2\).</p>
         <figure class="problem-figure">
           <img src="topology-phd-2025-may.triangular-delta-complex.png" alt="Triangular diagram illustrating edge identifications and orientations. All three corner vertices are labeled v, with an interior vertex w. Edges from w to the corners divide the triangle into regions S, T, and U. The three boundary edges are all labeled a and oriented cyclically, each with one arrowhead. The edge from the top vertex to w is labeled b and has two arrowheads. The lower-left edge to w is labeled c and has three arrowheads. The lower-right edge to w is labeled d and has four arrowheads." style="max-height: 10lh">
         </figure>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -206,7 +212,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -236,37 +242,37 @@ g(x)=\frac{f(x)-f(-x)}{\lVert f(x)-f(-x)\rVert},
       <p>Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State the Urysohn Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Give an example of a space that is path-connected but not locally path-connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Use the Seifert–van Kampen theorem to derive the fundamental group of \(M_g\), the orientable surface of genus \(g\), for \(g\ge 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that for any connected closed orientable \(n\)-manifold \(M\) there is a degree \(1\) map \(M\to S^n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Show that every map \(f:\mathbb{CP}^n\to\mathbb{CP}^n\) has a fixed point if \(n\) is even.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Show that \(S^1\vee S^1\) admits a covering space whose fundamental group is nontrivial and abelian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Let \(S^1\times D^2\) be the solid torus, and let \(A\subseteq S^1\times D^2\) be the circle shown in the figure. Prove that no retraction \(r:S^1\times D^2\to A\) exists.</p>
         <figure class="problem-figure">
           <img src="topology-phd-2025-may.coiled-circle-in-solid-torus.png" alt="Diagram of a thick, coiled ribbon forming two concentric loops inside a thin oval boundary. A vertical loop rises from the top center, and the inner coil curls inward near the bottom. At lower left, a curved arrow labeled A points to the outer boundary.">
         </figure>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Show that if \(f:X\to Y\) is a continuous bijection with \(X\) compact and \(Y\) Hausdorff, then \(f\) is a homeomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>State the Baire Category Theorem, and use it to prove that \([0,1]\) is uncountable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Does there exist a closed orientable 14-dimensional manifold \(M\) with \(H^7(M;\mathbb Z)\cong\mathbb Z\)?</p>
       </li>
     </ol>

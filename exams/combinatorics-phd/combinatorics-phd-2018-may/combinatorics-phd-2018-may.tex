@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -86,6 +92,9 @@ Prove that each tree in \(T_n\) has exactly \(2n-3\) edges.
 Prove that the number of trees in \(T_n\) is \((2n-5)!!=1\cdot 3\cdot 5\cdot 7\cdots(2n-7)\cdot(2n-5)\).
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} As printed, part (a) does not yield the Erdős–Szekeres theorem stated in part (b): setting \(r=s=n\) gives only size~\(n\), while setting \(r=s=n+1\) does not satisfy the stated threshold. The intended correction is not unique, so the source reading has been retained.
+\end{problemconcern}
 The famous Dilworth Theorem for a finite poset~\(P\) states that the minimum number of chains in any partition of~\(P\) into chains is equal to the maximum number of elements in an antichain of~\(P\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
@@ -115,6 +124,9 @@ Prove that a planar graph of girth (minimum cycle length) at least 6 has a verte
 The Four Color Theorem states that any planar graph is 4-colorable. Grötzsch proved that any triangle-free planar graph is 3-colorable. Without using his result, prove that a planar graph of girth at least 6 is 3-colorable.
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The problem does not specify the length of the strings, so the requested finite count is underdetermined. A likely missing condition is a fixed length, but the intended wording cannot be determined uniquely from the source.
+\end{problemconcern}
 How many strings can be formed using the alphabet \(\{A,B,C,D,E\}\) if
 \begin{examsubparts}
 \item[\textnormal{(a)}]

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,36 +155,36 @@
       <h1>Probability PhD Exam, September 2009</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>For each fixed \(n\), \(X_n^1, X_n^2, \ldots, X_n^n\) are independent random variables and have the same Binomial distribution, that is, \(\mathbb P(X_n^i=1)=p_n\) and \(\mathbb P(X_n^i=0)=1-p_n\) for \(i=1,2,\ldots,n\). Let \(S_n=X_n^1+X_n^2+\cdots+X_n^n\). Given the condition that \(np_n\) converges to a positive constant \(\beta\) as \(n\) goes to \(\infty\), find the limit distribution of \(S_n\) and prove it.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) and \(Y\) be two independent random variables with \(\mathbb E[Y]=0\). Show that for \(p\geq 1\), we have</p>
         <div class="display-math">\[
 \mathbb E|X+Y|^p\geq \mathbb E|X|^p.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X\) be a positive random variable with a probability density function \(f(x)\) that is continuous and \(U_n=nX-[nX]\), where \([a]\) means the largest integer which is less than \(a\). Find the limit distribution of \(U_n\) as \(n\) goes to \(\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(X_1,X_2,\ldots,X_n\) be i.i.d. random variables with probability density function \(f(x)\), and \(M=\max(X_1,X_2,\ldots,X_n)\). Find the conditional expectation \(\mathbb E[X_1\mid M]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>For a continuous function \(f(x)\) on \([0,1]\), define</p>
         <div class="display-math">\[
 P_n(x)=\sum_{k=0}^n f\left(\frac{k}{n}\right)\binom{n}{k}x^k(1-x)^{n-k}.
 \]</div>
         <p>Show that \(P_n(x)\) converges to \(f(x)\) on \([0,1]\) as \(n\) goes to infinity.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(S_n\) be a one-dimensional simple random walk, that is, \(S_n=X_1+\cdots+X_n\), where \(X_1,\ldots,X_n\) are i.i.d. random variables with \(\mathbb P(X_1=+1)=\mathbb P(X_1=-1)=1/2\), and \(S_0=0\). and let</p>
         <div class="display-math">\[
 R_n=1+\max_{0\leq k\leq n}S_k-\min_{0\leq k\leq n}S_k
 \]</div>
         <p>be the number of points visited by time \(n\). Prove that \(R_n/\sqrt n\) converges weakly to some limit (in distribution).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(B_t\) be standard Brownian motion with \(B_0=0\) and \(\tau=\inf\{t:B_t=a+bt\}\), where \(a&gt;0\) and \(b\) are two constants. Prove that</p>
         <ol class="subparts">
           <li>
@@ -203,7 +209,7 @@ R_n=1+\max_{0\leq k\leq n}S_k-\min_{0\leq k\leq n}S_k
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\{X_n,n=0,1,2,3,\ldots\}\) be a Markov chain on a countable irreducible state space \(S\). Let \(\phi\) be a nonnegative function with</p>
         <div class="display-math">\[
 \mathbb E[\phi(X_1)\mid X_0=x]\leq \phi(x)

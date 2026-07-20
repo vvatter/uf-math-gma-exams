@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Do any 7 of the 11 problems, and mark clearly which problems you want graded if you try more than 7. State clearly any theorems that you use.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(p_1,p_2,\ldots,p_r\) are distinct primes, and \(K=\mathbb{Q}(\sqrt{p_1},\ldots,\sqrt{p_r})\), find the Galois group of \(K/\mathbb{Q}\). How many fields \(F\) are there such that \(\mathbb{Q}\subseteq F\subseteq K\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -176,10 +182,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose \(K\) is an algebraic extension field of \(k\) and \(\bar{k}\) is an algebraic closure of \(k\). Show that \(K/k\) is separable if and only if the ring \(\bar{k}\otimes_k K\) has no nonzero nilpotent elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \(A\) is a commutative ring with identity and \(S\subset A\) is a multiplicative set not containing \(0\).</p>
         <ol class="subparts">
           <li>
@@ -200,16 +206,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(k\) is a field and \(A\) is a finitely generated commutative \(k\)-algebra. Let \(\bar{k}\) be an algebraic closure of \(k\). Note that the Galois group \(G=\operatorname{Gal}(\bar{k}/k)\) acts on the set \(\operatorname{Hom}_k(A,\bar{k})\) of \(k\)-algebra homomorphisms \(A\to\bar{k}\) by composition. Construct a bijection of the set of orbits of \(G\) on \(\operatorname{Hom}_k(A,\bar{k})\) with the set of maximal ideals in \(A\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \(A\) is an integral domain. Show that an ideal \(I\subseteq A\) is invertible if and only if it is projective and finitely generated.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose \(X\) is a nonempty set and \(F(X)\) is the free group on \(X\). Show that \(F(X)\) is abelian if and only if \(X\) is a singleton.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -230,13 +236,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose \(A\) is a commutative ring with identity and \(B\) is a commutative \(A\)-algebra with structure map \(f:A\to B\). Show that the forgetful functor from the category of \(B\)-modules to the category of \(A\)-modules induced by \(f\) has a left adjoint.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(p\) be a prime. Find all the isomorphism classes of noncommutative semisimple rings \(A\) of cardinality \(p^{10}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Suppose \(R\) is a finite commutative ring with identity, such that \(x^3=x\) for all \(x\in R\). Show that \(R\) is a finite direct sum of fields isomorphic to \(\mathbb{F}_2\) or \(\mathbb{F}_3\).</p>
       </li>
     </ol>

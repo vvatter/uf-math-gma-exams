@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -103,6 +109,9 @@ Give a careful proof of the singular value decomposition.
 Show how the singular value decomposition for~\(A\) naturally yields a solution to the least squares problem \(\min_x \|Ax-y\|_2\).
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source calls~\(H\) an “orthogonal projection,” but \(H=I-2ww^{\mathsf{T}}\) is generally a Householder reflection (and an orthogonal matrix), not a projection. The source wording was retained because the intended replacement is not uniquely determined.
+\end{problemconcern}
 This problem has three parts.
 \begin{examsubparts}
 \item[\textnormal{(1)}]

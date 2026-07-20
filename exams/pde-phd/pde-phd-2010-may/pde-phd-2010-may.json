@@ -89,7 +89,13 @@
             "text": "Let \\(\\{a_{ij}\\}_{n\\times n}\\) (\\(n\\geq2\\)) be a positive definite, symmetric, constant matrix, \\(b_1,\\ldots,b_n,c\\) be smooth functions on \\(B_1\\), the unit ball in \\(\\mathbb{R}^n\\). Show that the minimum of the following variational form\n\\[\nI(w)=\\int_{B_1}\\sum_{i,j=1}^n\\left(a_{ij}\\partial_iw\\partial_jw+\\sum_i b_i\\partial_iw\\,w+cw^2\\right)dx,\\qquad w\\in H_0^1(B_1)\n\\]\nunder the constraint: \\(\\int_{B_1}|w|^2=1\\) can be reached by a smooth function."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The displayed variational form places the lower-order terms inside the scope of the outer sum over \\(i,j\\), while also using an inner sum over \\(i\\). This potentially unintended summation scope has been retained because the intended correction is not uniquely determined by the immediate context."
+          }
+        ]
       }
     }
   ]

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Answer four problems. Write your answers clearly in complete English sentences.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Denote by \(Q_8\) the quaternion group. Show that if \(f:Q_8\to S_n\) is an injective homomorphism then \(n\geq 8\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a group.</p>
         <ol class="subparts">
           <li>
@@ -176,10 +182,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove the first assertion of Sylow’s theorem: if \(G\) is a group of order \(n\), \(p\) is prime and \(p^a\) is the largest power of \(p\) dividing \(n\), then \(G\) has a subgroup of order \(p^a\). State clearly any preliminary results you need.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -208,10 +214,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(G\) be a group acting on a set \(S\), and \(H\subseteq G\) a normal subgroup. Assume that for any \(x_1,x_2\in S\) there is a unique \(h\in H\) such that \(h(x_1)=x_2\). For \(x\in S\) let \(G_x\) be the stabilizer of \(x\). Show that for any \(x\in S\), \(G\) is a semi-direct product of \(G_x\) and \(H\). Do not assume that \(G\) is finite.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>In both cases, justify your answer.</p>
         <ol class="subparts">
           <li>
@@ -232,7 +238,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Show that the normalizer of a \(5\)-Sylow subgroup of \(A_5\) has order \(10\), and is a maximal subgroup of \(A_5\).</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,17 +158,17 @@
       <p>Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f_n:[a,b]\to\mathbb{R}\) be a uniformly bounded sequence of Riemann integrable functions. Prove that if \(f_n\to f\) uniformly, then \(f\) is Riemann integrable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(f:[0,1]\to\mathbb{R}\) be continuous. Suppose that</p>
         <div class="display-math">\[
 \int_0^1 f(x)x^{2019k}\,dx=0
 \]</div>
         <p>for all integers \(k\ge 0\). Must \(f\) be identically \(0\)? Prove, or give a counterexample.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f_n:[0,1]\to\mathbb{R}\) be a sequence of measurable functions and suppose there is a function \(g\in L^1[0,1]\) such that \(|f_n|\le g\) for all \(n\). Consider the functions</p>
         <div class="display-math">\[
 F_n(t)=\int_0^t f_n(x)\,dx.
@@ -187,7 +193,7 @@ F_n(t)=\int_0^t f_n(x)\,dx.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((X,\mathcal{M})\) be a measurable space and \(f_n:X\to\mathbb{R}\), \(n=1,2,3,\ldots\), a sequence of measurable functions. Prove that each of the following subsets of \(X\) is measurable:</p>
         <ol class="subparts">
           <li>
@@ -216,7 +222,7 @@ F_n(t)=\int_0^t f_n(x)\,dx.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f_1\ge f_2\ge f_3\ge\cdots\) be nonnegative measurable functions on a measure space \((X,\mathcal{M},\mu)\), and put \(f=\lim f_n\). Suppose that \(\int f_k\,d\mu&lt;\infty\) for some \(k\). Prove that</p>
         <div class="display-math">\[
 \int f\,d\mu=\lim\int f_n\,d\mu.

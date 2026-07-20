@@ -54,6 +54,12 @@
             "text": "Prove that\n\\[\n\\frac{1}{1+\\|A\\|_p}\\le \\|(I-A)^{-1}\\|_p\\le\\frac{1}{1-\\|A\\|_p}.\n\\]",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Part (c) is preserved as printed, but the stated assumptions do not ensure that \\(A^{-1}\\) exists; for example, \\(A=0\\) satisfies \\(\\|A\\|_p<1\\). The intended additional assumption or alteration is not uniquely determined."
+          }
         ]
       }
     },

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>You have 2 hours to answer the following questions. You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>The iteration</p>
         <div class="display-math">\[
 x_{n+1}=x_n-\frac{f(x_n)}{f&#x27;(x_n)-\frac{1}{2}f&#x27;&#x27;(x_n)\frac{f(x_n)}{f&#x27;(x_n)}}
@@ -177,7 +183,7 @@ x_{n+1}=x_n-\frac{f(x_n)}{f&#x27;(x_n)-\frac{1}{2}f&#x27;&#x27;(x_n)\frac{f(x_n)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Do the following parts which are unrelated.</p>
         <ol class="subparts">
           <li>
@@ -213,7 +219,7 @@ y&#x27;(0)=0.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Consider a quadrature rule of the form</p>
         <div class="display-math">\[
 \int_0^1 f(x)\,dx\approx Af(0)+Bf&#x27;(0)+Cf(\gamma)+Df(1).
@@ -237,10 +243,10 @@ y&#x27;(0)=0.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>For the function \(f(x)=\ln(x)\) for \(x\in[1,2]\), find the minimax approximation polynomial of degree one. Give the exact value of the minimax error.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has the following parts.</p>
         <ol class="subparts">
           <li>

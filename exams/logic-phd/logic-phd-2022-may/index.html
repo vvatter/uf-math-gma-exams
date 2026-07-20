@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,13 +160,13 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">A. Set Theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Sketch any proof of consistency of the Continuum Hypothesis with the axioms of ZFC.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>What is a generic extension of a transitive model of ZFC? Provide a definition.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Show that every Polish space is a continuous image of the Baire space.</p>
         </li>
       </ol>
@@ -168,16 +174,16 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">B. Computability.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Define many-one reducibility and many-one equivalence. Prove that there exist two non-computable, computably enumerable sets which are not many-one equivalent.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Prove Rice’s Theorem: If \(P\) is a nonempty proper subset of the set of all partial computable functions, then the set of all indices of functions belonging to \(P\) is not computable.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Define the Turing degrees and the Turing jump operator. State the Friedberg Jump Inversion Theorem and outline its proof.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>State and prove Kleene’s Fixed Point Theorem (a.k.a. Recursion Theorem).</p>
         </li>
       </ol>
@@ -185,16 +191,16 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">C. Model theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>State both the upward and downward Löwenheim–Skolem Theorems. Prove either one of them.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Define what an ultraproduct of structures is and state Łoś’s Theorem. Use Łoś’s Theorem to give a proof of the Compactness Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Let \(\mathcal L\) be a language consisting of one unary function symbol \(f\). Consider the class \(K\) of all finite \(\mathcal L\)-structures in which \(f\) is a bijection. Prove that \(K\) is a Fraïssé class and describe its Fraïssé limit \(M\). Prove or disprove: \(\operatorname{Th}(M)\) is \(\aleph_0\)-categorical.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Let \(\mathcal L\) be a language, let \(n\) be a number, let \(M\) be an \(\mathcal L\)-structure, and let \(A\) be a subset of \(M\). Give the definition of an \(n\)-type of \(M\) over \(A\). Define the Stone topology on the space \(S\) of complete \(n\)-types of \(M\) over \(A\) and prove that \(S\) equipped with this topology is a compact space.</p>
         </li>
       </ol>

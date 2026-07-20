@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,25 +158,25 @@
       <p>Answer all questions and work all problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose that \(X\) is a regular Lindelöf space. Show that \(X\) is normal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that there is a continuous \(f:[0,1]\to[0,1]^2\) such that \(f\) is onto.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose that \(f,g:X\to S^n\) are continuous maps such that for all \(x\in X\), \(f(x)\) and \(g(x)\) are not antipodal. Show that \(f\) and \(g\) are homotopic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the Sorgenfrey line \(R\) is regular and Lindelöf.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((X,x_0)\) be a pointed space. The trivial loop is the function \(f:[0,1]\to(X,x_0)\) such that \(f(t)\equiv x_0\) for all \(t\in[0,1]\). Let \(f:[0,1]\to(X,x_0)\) be a loop. Define \(f^{-1}\) by \(f^{-1}(t)=f(1-t)\). Show that \(f^{-1}\) is a loop. Show that \(f\circ f^{-1}\) is homotopic to the trivial loop.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Consider three loops \(f,g,h:[0,1]\to(X,x_0)\). Show that \((f\circ g)\circ h\) is homotopic to \(f\circ(g\circ h)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \((X,x_0)\) be a pointed space and let \(\pi_1(X,x_0)\) be the collection of homotopy classes of loops. Show that \(\pi_1(X,x_0)\) is a group.</p>
         <ol class="subparts">
           <li>
@@ -207,23 +213,23 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Show that \(\pi_1(S^1,1)=\mathbb{Z}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that \(\pi_1(S^n,1)=1\) for all \(n&gt;1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(n&gt;1\). Let \(P^n=S^n/D\), where \(D\) identifies \(x\) with \(-x\) for all \(x\in S^n\). Show that \(\pi_1(P^n,x_0)=\mathbb{Z}_2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Consider the matrix</p>
         <div class="display-math">\[
 M=\begin{bmatrix}1&amp;2\\2&amp;1\end{bmatrix}.
 \]</div>
         <p>This represents a group homomorphism \(M:\mathbb{Z}^2\to\mathbb{Z}^2\). Show that there is a map \(f:\mathbb{T}^2\to\mathbb{T}^2\) such that \(f_*=M\), where \(f_*:\pi_1(\mathbb{T}^2)\to\pi_1(\mathbb{T}^2)\) is the homomorphism induced by \(f\) on the fundamental group.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Let \(G=\langle a,b,c\mid a\cdot b^{-1}\cdot c\rangle\) be a finitely presented group with 3 generators and 1 relation.</p>
         <ol class="subparts">
           <li>
@@ -244,7 +250,7 @@ M=\begin{bmatrix}1&amp;2\\2&amp;1\end{bmatrix}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>State the following theorems.</p>
         <p>Seifert–van Kampen Theorem.</p>
         <p>The Urysohn Metrization Theorem</p>

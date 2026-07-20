@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,13 +160,13 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">Part A</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Let \(\sum_{n=0}^{\infty} c_nx^n\) be a power series with finite radius of convergence \(R\). Assume that the \(c_n\) and \(x\) are real valued. Let \(\epsilon&gt;0\). State and prove the theorem concerning the uniform convergence of \(\sum_{n=0}^{\infty} c_nx^n\) on \([-R+\epsilon,R-\epsilon]\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Let \(\{f_n\}\) be a pointwise bounded sequence of complex functions on a countable set \(E\). Prove that there exists a subsequence \(\{f_{n_k}\}\) of \(\{f_n\}\) such that \(\{f_{n_k}(x)\}\) converges for each \(x\in E\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Let \(\{f_n\}\) be a uniformly bounded sequence of Riemann integrable functions on \([a,b]\). Let</p>
           <div class="display-math">\[
 F_n(x)=\int_a^b f_n(t)\,dt,\qquad a\leq x\leq b.
@@ -172,13 +178,13 @@ F_n(x)=\int_a^b f_n(t)\,dt,\qquad a\leq x\leq b.
     <section aria-labelledby="section-2">
       <h2 id="section-2">Part B</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Let \(E\) be a Lebesgue measurable subset of \([0,1]\), with Lebesgue measure \(m(E)\). If \(0&lt;\alpha&lt;m(E)\), show that there exists a Lebesgue measurable subset \(F\subset E\) such that \(m(F)=\alpha\). (Hint: Examine the function \(f(x)=m(E\cap[0,x])\) on \([0,1]\).)</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Let \(E\subset\mathbb{R}\) be Lebesgue measurable and suppose \(m(E)&lt;\infty\). It is known that for each \(\epsilon&gt;0\) there is a closed set \(F_\epsilon\subset E\) such that \(m(E\setminus F_\epsilon)&lt;\epsilon\). Show that \(F_\epsilon\) can be chosen to be a compact set.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Let \((X,\Sigma,\mu)\) be a measure space and assume that \(f\) is \(\mu\)-integrable. Prove that for \(\epsilon&gt;0\) there exists a \(\delta&gt;0\) such that \(\left|\int_A f\,d\mu\right|&lt;\epsilon\), whenever \(A\in\Sigma\) and \(\mu(A)&lt;\delta\).</p>
         </li>
       </ol>

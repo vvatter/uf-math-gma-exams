@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,16 +158,16 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that the spaces \([0,1]\) and \([0,1)\) are not homeomorphic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) be a connected normal topological space having more than one point. Prove that \(X\) is uncountable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f:X\to Y\) be a continuous map to a Hausdorff space. Prove that the graph of \(f\), \(G=\{(x,f(x))\mid x\in X\}\), is a closed subset of \(X\times Y\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -182,7 +188,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Is every closed subset \(A\) of a separable space \(X\) separable itself if</p>
         <ol class="subparts">
           <li>
@@ -219,7 +225,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Does there exist a covering map \(p:\mathbb{R}^2\to\mathbb{RP}^2\) from the Euclidean plane to the projective plane?</p>
       </li>
     </ol>
@@ -227,25 +233,25 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="7">
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State the Tietze Extension Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Is the space \(\mathbb{R}^\omega\) connected in the uniform topology?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Does there exist a continuous surjective map from the 2-sphere \(S^2\) to the punctured square \(([-1,1]\times[-1,1])\setminus\{(0,0)\}\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Is every connected space path connected?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>What is a basis of a topology? What is a subbasis?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Is the unit circle \(S^1=\{x\in\mathbb{R}^2\mid \lVert x\rVert=1\}\) a</p>
         <ol class="subparts">
           <li>
@@ -290,10 +296,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>State the Brouwer fixed point theorem. Does every continuous map \(f:[0,1]\times[0,1]\to[0,1)\times[0,1)\) have a fixed point?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Can the space of irrationals in the subspace topology be presented as a countable union of nowhere dense subsets?</p>
       </li>
     </ol>

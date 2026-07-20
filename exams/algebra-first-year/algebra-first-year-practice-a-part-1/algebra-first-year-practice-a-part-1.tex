@@ -1,0 +1,129 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Practice Exam A, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Practice Exam A}, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Practice Exam A, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be a group of order \(44\). Prove that
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+a Sylow \(11\)-subgroup of~\(G\) is normal in~\(G\), and
+\item[\textnormal{(b)}]
+the centre of~\(G\) contains an element of order~\(2\).
+\end{examsubparts}
+\item
+Let \(G=A\times B\) be a finite group which is the (internal) direct product of two subgroups~\(A\) and~\(B\) which are nonabelian simple groups.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that the only proper, nontrivial normal subgroups of~\(G\) are~\(A\) and~\(B\). (Hint: If~\(N\) is a proper normal subgroup different from~\(A\) and~\(B\), consider the commutator \([N,A]\).)
+\item[\textnormal{(b)}]
+Give an example to show that (a) would be false were~\(A\) and~\(B\) allowed to be abelian.
+\end{examsubparts}
+\item
+Let \(G=\mathrm{GL}_2(\mathbb{R})\) act on \(\mathbb{R}^2\) by matrix multiplication: \(A\mathbin{\cdot}\mathbf{v}=A\mathbf{v}\) for \(A\in G\), \(\mathbf{v}\in\mathbb{R}^2\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine the stabilizer in~\(G\) of \(\mathbf{e}_2=\begin{bmatrix}0\\1\end{bmatrix}\in\mathbb{R}^2\).
+\item[\textnormal{(b)}]
+Determine the orbit of \(\mathbf{e}_2\).
+\item[\textnormal{(c)}]
+How many orbits are there for the action of~\(G\) on \(\mathbb{R}^2\)?
+\end{examsubparts}
+\item
+Let~\(G\) be a group.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the ascending central series
+\[
+Z_0(G)\leq Z_1(G)\leq Z_2(G)\leq\cdots
+\]
+ for~\(G\). (This is also known as the upper central series.)
+\item[\textnormal{(b)}]
+Prove that the groups \(Z_i(G)\) are all characteristic subgroups of~\(G\).
+\item[\textnormal{(c)}]
+Give an example of a nontrivial group~\(G\) such that the groups \(Z_i(G)\) are all trivial.
+\end{examsubparts}
+\item
+Let \(n\geq 2\) and let \(Z_n\) be a cyclic group of order~\(n\). Prove that
+\[
+\operatorname{Aut}(Z_n)\cong (\mathbb{Z}/n\mathbb{Z})^\times.
+\]
+\end{examproblems}
+\end{document}

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,36 +155,36 @@
       <h1>Complex Analysis PhD Exam, May 2007</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Assume that \(h:\mathbb{C}\to\mathbb{R}\) is harmonic, and further that \(h(z)&gt;0\) for all \(z\in\mathbb{C}\). Show that \(h\) is constant.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove the Fundamental Theorem of Algebra: if \(p(z)=a_0+a_1z+\cdots+a_nz^n\) is nonconstant, with each coefficient \(a_j\in\mathbb{C}\), then there exists a \(w\in\mathbb{C}\) with \(p(w)=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Recall that \(H(G)\) is the set of all holomorphic functions defined on the open, connected set \(G\) and that \(f_n\to f\) in \(H(G)\) exactly when \(f_n\to f\) uniformly on all compact subsets of \(G\). Assume that the family \(\{f_n\}\subset H(G)\) is locally bounded and further that \(f\in H(G)\) has the property that the set</p>
         <div class="display-math">\[
 \left\{z\in G:\lim_{n\to\infty}f_n(z)=f(z)\right\}
 \]</div>
         <p>has a limit point in \(G\). Show that \(f_n\to f\) in \(H(G)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>A fixed point of a function \(f\) is a point \(x\) with \(f(x)=x\). Let \(D=\{z\in\mathbb{C}:|z|&lt;1\}\). If \(f:D\to D\) is analytic and has two fixed points, show that \(f\) is the identity map.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>If \(a_0\geq a_1\geq\cdots\geq a_n&gt;0\), show that \(p(z)=a_0+a_1z+\cdots+a_nz^n\) has no roots in \(|z|&lt;1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>For which \(z\) does the infinite product</p>
         <div class="display-math">\[
 \prod_{n=0}^{\infty}\left(1+z^{2^n}\right)
 \]</div>
         <p>converge?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(G\) be an open, connected and bounded subset of \(\mathbb{C}\). Assume that \(f\) is continuous on the closure \(\operatorname{Cl}(G)\) of \(G\), analytic on \(G\), and further that \(|f(z)|=1\) for all \(z\in\operatorname{Fr}(G)\), where \(\operatorname{Fr}(G)\) is the topological frontier of \(G\). Show that either \(f\) has a zero in \(G\) or else there is a constant \(c\) with \(|c|=1\) and \(f(z)=c\) for all \(z\in G\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Evaluate the integral, and justify each step.</p>
         <div class="display-math">\[
 \int_{-\infty}^{\infty}\frac{x\sin x}{(x^2+1)^2}\,dx.

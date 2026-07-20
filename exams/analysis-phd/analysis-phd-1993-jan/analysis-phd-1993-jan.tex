@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -94,6 +100,9 @@ Let \((S,\Sigma)\) be a measurable space, and suppose~\(\mu\) and~\(\nu\) are po
 \frac{d\mu}{d\nu}=\frac{1}{\dfrac{d\nu}{d\mu}}\quad\text{a.e. }\nu.
 \]
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The underlying space in the opening tuple appears to be printed as \(S_\infty\), but the integral and the later pointwise-convergence statement refer to~\(S\). The intended symbol is uncertain, so the apparent source reading has been retained.
+\end{problemconcern}
 Let \((S_\infty,\Sigma,\mu)\) be a finite measure space. Let \((f_n)_{n=1}^\infty\) be a sequence of integrable function such that 
 \[
 \sum_{n=1}^\infty\int_S |f_n|\,d\mu<\infty.

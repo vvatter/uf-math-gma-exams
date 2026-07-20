@@ -1275,6 +1275,107 @@
       "year": 2013
     },
     {
+      "download_sha256": "8ec4c2eaf5b3e7b5e28ee427db0aeb37ec9979d58229a6dc6334de3db4b138f0",
+      "download_size": 24561,
+      "download_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac1a.pdf",
+      "error": null,
+      "id": "algebra-first-year-practice-a-part-1",
+      "month": null,
+      "path": "exams/algebra-first-year/algebra-first-year-practice-a-part-1/algebra-first-year-practice-a-part-1.source.pdf",
+      "practice_variant": "A",
+      "resolved_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac1a.pdf",
+      "sha256": "3390aa6fad397f8f87a802c7ccbcce2b3849983cdb25e7ab88bb760811338502",
+      "size": 22424,
+      "source_label": "Practice A, Part 1",
+      "source_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac1a.pdf",
+      "status": "downloaded",
+      "subject": "First Year Algebra",
+      "subject_tag": "algebra-first-year",
+      "subject_url": "https://math.ufl.edu/qualifying-exam-syllabi/",
+      "year": null
+    },
+    {
+      "download_sha256": "8b3d08c1a92eb8143e3d39a7980ec426d61190a578b63e01b703eeda64989ba3",
+      "download_size": 19483,
+      "download_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac1b.pdf",
+      "error": null,
+      "id": "algebra-first-year-practice-b-part-1",
+      "month": null,
+      "path": "exams/algebra-first-year/algebra-first-year-practice-b-part-1/algebra-first-year-practice-b-part-1.source.pdf",
+      "practice_variant": "B",
+      "resolved_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac1b.pdf",
+      "sha256": "43721098f38daa13e13f14f45e6cbe73a8a26776d1b9826f94e12a33cdccd160",
+      "size": 18900,
+      "source_label": "Practice B, Part 1",
+      "source_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac1b.pdf",
+      "status": "downloaded",
+      "subject": "First Year Algebra",
+      "subject_tag": "algebra-first-year",
+      "subject_url": "https://math.ufl.edu/qualifying-exam-syllabi/",
+      "year": null
+    },
+    {
+      "download_sha256": "ff796b234d94f9ce692beefdf27f036c6b076c9c787e983a28911dfec17ee4a8",
+      "download_size": 24949,
+      "download_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2a.pdf",
+      "error": null,
+      "id": "algebra-first-year-practice-a-part-2",
+      "month": null,
+      "path": "exams/algebra-first-year/algebra-first-year-practice-a-part-2/algebra-first-year-practice-a-part-2.source.pdf",
+      "practice_variant": "A",
+      "resolved_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2a.pdf",
+      "sha256": "ab6c4218c3d01b69ed610d95763058397234942f4b848a1e5ba3ee51973c7148",
+      "size": 23513,
+      "source_label": "Practice A, Part 2",
+      "source_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2a.pdf",
+      "status": "downloaded",
+      "subject": "First Year Algebra",
+      "subject_tag": "algebra-first-year",
+      "subject_url": "https://math.ufl.edu/qualifying-exam-syllabi/",
+      "year": null
+    },
+    {
+      "download_sha256": "14b703bedb0b6687372c20c28f2381dc427bb5a7e4e3907b5dd4e0721b29fe94",
+      "download_size": 22534,
+      "download_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2b.pdf",
+      "error": null,
+      "id": "algebra-first-year-practice-b-part-2",
+      "month": null,
+      "path": "exams/algebra-first-year/algebra-first-year-practice-b-part-2/algebra-first-year-practice-b-part-2.source.pdf",
+      "practice_variant": "B",
+      "resolved_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2b.pdf",
+      "sha256": "97948eed2dd34b39a50a826c64850ff064f2ddbc5459e87811d3a1aeb0a49307",
+      "size": 21688,
+      "source_label": "Practice B, Part 2",
+      "source_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2b.pdf",
+      "status": "downloaded",
+      "subject": "First Year Algebra",
+      "subject_tag": "algebra-first-year",
+      "subject_url": "https://math.ufl.edu/qualifying-exam-syllabi/",
+      "year": null
+    },
+    {
+      "document_type": "practice-problems",
+      "download_sha256": "35b2ae54f2f0774816da7f7466108d8f87700b53e8c919379e36850536041eaa",
+      "download_size": 121500,
+      "download_url": "https://math.ufl.edu/wp-content/uploads/sites/316/fypoolalg.pdf",
+      "error": null,
+      "id": "algebra-first-year-practice-problems",
+      "month": null,
+      "path": "exams/algebra-first-year/algebra-first-year-practice-problems/algebra-first-year-practice-problems.source.pdf",
+      "problem_count": 113,
+      "resolved_url": "https://math.ufl.edu/wp-content/uploads/sites/316/fypoolalg.pdf",
+      "sha256": "33dea9d1f6438b497bab9c35c25df5bab3a1b7678fc9dc99068ef29241e3b7d7",
+      "size": 89077,
+      "source_label": "Practice Problems",
+      "source_url": "https://math.ufl.edu/wp-content/uploads/sites/316/fypoolalg.pdf",
+      "status": "downloaded",
+      "subject": "First Year Algebra",
+      "subject_tag": "algebra-first-year",
+      "subject_url": "https://math.ufl.edu/qualifying-exam-syllabi/",
+      "year": null
+    },
+    {
       "download_sha256": "ba94b67f9c89e7d099dbe32dfb60af8804a42f758ae3ae13a6fb13fde36acc04",
       "download_size": 60287,
       "download_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2026_01.pdf",
@@ -10034,7 +10135,7 @@
       "year": 2026
     }
   ],
-  "generated_at": "2026-07-18T20:36:52.441127+00:00",
+  "generated_at": "2026-07-20T22:35:22+00:00",
   "index_urls": [
     "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/",
     "https://gma.math.ufl.edu/past-exams/qualifying-exams/"
@@ -10042,7 +10143,7 @@
   "local_metadata_refreshed_at": "2026-07-18T20:42:34.750932+00:00",
   "subjects": [
     {
-      "pdf_count": 67,
+      "pdf_count": 72,
       "tag": "algebra-first-year",
       "title": "First Year Algebra",
       "url": "https://gma.math.ufl.edu/past-exams/first-year-and-phd-exams/first-year-algebra/"
@@ -10175,9 +10276,9 @@
     }
   ],
   "summary": {
-    "pdfs": 528,
+    "pdfs": 533,
     "status_counts": {
-      "downloaded": 528
+      "downloaded": 533
     },
     "subjects": 22,
     "unexpected_months": [
@@ -10186,5 +10287,8 @@
       "june",
       "october"
     ]
-  }
+  },
+  "supplemental_source_pages": [
+    "https://math.ufl.edu/qualifying-exam-syllabi/"
+  ]
 }

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -153,13 +159,13 @@
       <p>Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(p\) is an odd prime and let \(K\) be the extension of \(\mathbb{Q}\) obtained by adjoining a primitive \(p\)th root of unity. Show that \(K\) has a unique subfield of degree 2 over \(\mathbb{Q}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(C\) is a commutative ring with identity, \(B \subseteq C\) is a subring, \(A \subseteq B\) is a subring and \(A\) and \(B\) have the same identity as \(C\). Show that if \(B\) is integral over \(A\) and \(C\) is integral over \(B\) then \(C\) is integral over \(A\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\mathcal{C}\) be a category and \(F:\mathcal{C}^{\mathrm{op}} \to \mathbf{Set}\) be a functor (here \(\mathbf{Set}\) is the category of sets).</p>
         <ol class="subparts">
           <li>
@@ -180,10 +186,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \(k\) is a field and \(U_n\) is the group of upper unitriangular matrices with coefficients in \(k\) (this means that the diagonal entries are equal to 1 and the entries below the diagonal are 0). Show that the group \(U_n\) is nilpotent.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be an integral domain.</p>
         <ol class="subparts">
           <li>
@@ -204,16 +210,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \(K/k\) is a finite extension and \(k^{\mathrm{alg}}\) is an algebraic closure of \(k\). Show that \(K/k\) is separable if and only if the ring \(K \otimes_k k^{\mathrm{alg}}\) has no nonzero nilpotent elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(S\) be a set and \(F(S)\) be the free group on \(S\). Show that \(F(S)\) is abelian if and only if \(|S|&lt;2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose \(k\) is a field and \(R=k[X_1,\ldots,X_n]\). Show that \(R\) is a Dedekind domain if and only if \(n&lt;2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose \(A\) is a noetherian commutative ring with identity.</p>
         <ol class="subparts">
           <li>
@@ -234,10 +240,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Suppose \(k\) is a field and \(R=k[X,Y]\). Find two distinct primary decompositions of the ideal \(I=(X^2,XY)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

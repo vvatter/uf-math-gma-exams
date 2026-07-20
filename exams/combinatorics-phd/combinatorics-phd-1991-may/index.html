@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,20 +158,20 @@
       <p>Do 9 out of 12 problems. Show all of your work.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>How many \(k\)-tuples \((A_1,A_2,\ldots,A_k)\) of nested subsets of an \(n\)-set are there, where \(A_1\subseteq A_2\subseteq\cdots\subseteq A_k\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>How many words of length \(n\) are there in the alphabet \((a,b,c)\) with no two adjacent \(a\)’s? With no two adjacent letters equal?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Find the generating function for the sequence \(\{a_n\}\) given by the recurrence</p>
         <div class="display-math">\[
 a_n=a_{n-1}+6a_{n-2}+2^n
 \]</div>
         <p>where \(a_0=1\) and \(a_1=3\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Bipartite graphs:</p>
         <ol class="subparts">
           <li>
@@ -212,34 +218,34 @@ a_n=a_{n-1}+6a_{n-2}+2^n
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that</p>
         <div class="display-math">\[
 \sum_{k=1}^{n} S(n,k)x(x-1)\cdots(x-k+1)=x^n.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Use Möbius inversion to find the number of integers between \(1\) and \(n\) and coprime to \(n\), given the prime factorization of \(n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove or disprove: There is a matching from \(V\) to \(W\) in a bipartite graph if, for some fixed \(k\), there are \(k\) or more edges incident with each vertex of \(V\) and \(k\) or fewer edges incident with each vertex of \(W\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(A_{m,n}\) be the collection of all sets \(X=\{N_1,N_2,\ldots,N_k\}\), where \(k\) is a non-negative integer, and for each \(i\leq k\), \(N_i\) is a positive integer divisor of \(N=2^m3^n\), and where \(N_i\mid N_j\) only if \(i=j\). Define a partial order on \(A_{m,n}\), where \(X=\{N_1,N_2,\ldots,N_k\}\), \(X&#x27;=\{N&#x27;_1,N&#x27;_2,\ldots,N&#x27;_l\}\), by \(X\preceq X&#x27;\) if and only if \(N_i\in X\Rightarrow\) there exists \(N&#x27;_j\in X&#x27;\) with \(N_i\mid N&#x27;_j\). Prove that \(A_{m,n}\) is a distributive lattice, and determine its poset of join-irreducible elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(I\) be a collection of subsets of \(E\), where \(E\) is finite, and suppose that \(I\neq\varnothing\) and that \(Y\in I,\ X\subseteq Y\Rightarrow X\in I\). Let \(c:E\to\mathbb{R}^+\) assign a positive real number to each element of \(E\). Consider the optimization problem:</p>
         <p>Find \(\max_{X\in I}\sum_{x\in X}c(x)\)</p>
         <p>Prove that the greedy algorithm solves this problem if and only if \(I\) is the collection of independent sets of some matroid on \(E\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>State the MacWilliams identity, and use it to compute the weight polynomial of the \((15,11)\) Hamming binary code.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>A \((v,k,\lambda)\)-design \(\Sigma\) is an incidence structure consisting of a set \(S\) of \(v\) points and a collection of \(k\)-subsets of \(S\) called blocks, such that every pair of points of \(S\) is contained in precisely \(\lambda\) blocks.</p>
         <p>Prove that, in the range \(30\leq v\leq45\), a \((v,6,1)\)-design exists if and only if \(v=31\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Use the Hall Multiplier Theorem</p>
         <ol class="subparts">
           <li>

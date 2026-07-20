@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -119,6 +125,9 @@ u=g, & \mathbb R^n\times\{t=0\},
 \]
  where \(c\in\mathbb R\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source is internally inconsistent: it states “where \(g,h\) are smooth functions,” but~\(g\) does not occur in the displayed problem, while~\(f\) does. The stated data may also omit an initial-displacement condition. The intended correction is not uniquely determined, so the source reading has been retained.
+\end{problemconcern}
 Let \(U\subset\mathbb R^n\) be an open, bounded subset of \(\mathbb R^n\) with smooth boundary. Set \(U_T=U\times[0,T]\), \(\Gamma_T=\overline{U_T}\setminus U_T\), where \(T>0\). Prove that there exists at most one solution \(u\in C^2(\overline{U_T})\) of 
 \[
 \begin{cases}

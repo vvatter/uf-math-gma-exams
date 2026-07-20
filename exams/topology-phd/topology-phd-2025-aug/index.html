@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -155,13 +161,13 @@
       <p>For the first five problems, show all of your work and support all statements.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c&lt;1\) with \(d(f(x),f(y))\le c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Pick a CW complex structure on the Klein bottle \(K\), and then use cellular homology to compute \(H_i(K;\mathbb{Z})\) for \(i=0,1,2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -182,10 +188,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(M\) be a compact orientable \(n\)-manifold without boundary. Prove that if \(n\) is odd, then the Euler characteristic \(\chi(M)\) is zero.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(M_1\) and \(M_2\) be closed connected \(n\)-manifolds, and let \(M_1\#M_2\) be their connected sum obtained by removing a ball from each and gluing along the resulting boundary spheres. Show that there are isomorphisms \(H_i(M_1\#M_2;\mathbb{Z})\cong H_i(M_1;\mathbb{Z})\oplus H_i(M_2;\mathbb{Z})\) for \(0&lt;i&lt;n\), with one exception: If both \(M_1\) and \(M_2\) are nonorientable, then \(H_{n-1}(M_1\#M_2;\mathbb{Z})\) is obtained from \(H_{n-1}(M_1;\mathbb{Z})\oplus H_{n-1}(M_2;\mathbb{Z})\) by replacing one of the two \(\mathbb{Z}_2\) summands by a \(\mathbb{Z}\) summand.</p>
       </li>
     </ol>
@@ -193,34 +199,34 @@
       <p>Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Show that if \(g:S^2\to S^2\) is continuous and \(g(x)\ne g(-x)\) for all \(x\in S^2\), then \(g\) is surjective.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State the Tychonoff Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(N_g\) be the nonorientable surface of genus \(g\), i.e., the \(g\)-fold connected sum of projective planes. Use the Seifert–van Kampen theorem to derive the fundamental group of \(N_g\) for \(g\ge 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(X\) be two unlinked circles in \(\mathbb{R}^3\) and let \(Y\) be two simply linked circles. Show that the complements \(\mathbb{R}^3\setminus X\) and \(\mathbb{R}^3\setminus Y\) are not homotopy equivalent.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Show that if \(n\) is even, then every map \(f:\mathbb{RP}^n\to\mathbb{RP}^n\) has a fixed point.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Let \(p_1:(\widetilde{X}_1,\widetilde{x}_1)\to(X,x_0)\) and \(p_2:(\widetilde{X}_2,\widetilde{x}_2)\to(X,x_0)\) be covering space maps, where all of the involved spaces are path-connected and locally path-connected. An isomorphism of covering spaces \(f:(\widetilde{X}_1,\widetilde{x}_1)\to(\widetilde{X}_2,\widetilde{x}_2)\) is a homeomorphism satisfying \(p_1=p_2f\). Prove the covering spaces \(p_1\) and \(p_2\) are isomorphic if and only if \(p_{1*}(\pi_1(\widetilde{X}_1,\widetilde{x}_1))=p_{2*}(\pi_1(\widetilde{X}_2,\widetilde{x}_2))\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Define what it means for a subspace \(A\subseteq X\) to be a retract. Give an example of a retract \(A\subseteq X\) that is not a deformation retract.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Use the Tietze extension theorem to prove Urysohn’s lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>What are the cohomology groups and cup product structure in \(H^*((S^2\times S^8)\#(S^4\times S^6);\mathbb{Z})\), where \(\#\) denotes the connected sum of the manifolds? You do not need to prove your answer.</p>
       </li>
     </ol>

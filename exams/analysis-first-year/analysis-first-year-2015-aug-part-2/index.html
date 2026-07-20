@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,7 +160,7 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">Part A</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>For \(n \ge 1\) and \(0&lt;t&lt;1\), let \(f_n(t)=t^n\). Prove that:</p>
           <ol class="subparts">
             <li>
@@ -175,14 +181,14 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Suppose \(\mathcal F\) is an equicontinuous family of real-valued functions on \([0,1]\), such that</p>
           <div class="display-math">\[
 \sup_{f\in\mathcal F}|f(0)|=M&lt;+\infty.
 \]</div>
           <p>Prove that \(\mathcal F\) is uniformly bounded (that is, that \(\sup_{f\in\mathcal F}\sup_{x\in[0,1]}|f(x)|&lt;+\infty\)).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Prove that every monotone function \(f:[a,b]\to\mathbb R\) is Riemann integrable.</p>
         </li>
       </ol>
@@ -190,10 +196,10 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">Part B</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>State Fatou’s lemma and use it to prove the Dominated Convergence Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Let \((f_n)\) be a sequence of real-valued measurable functions on a measurable space \((X,\mathcal M)\). Prove that each of the following subsets of \(X\) is measurable:</p>
           <ol class="subparts">
             <li>
@@ -214,7 +220,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Let \(g:[0,1]\times[0,1]\to\mathbb R\) be a function with the following properties. Prove that the function \(h\) defined by</p>
           <div class="display-math">\[
 h(x)=\int_0^1 g(x,t)\,dt

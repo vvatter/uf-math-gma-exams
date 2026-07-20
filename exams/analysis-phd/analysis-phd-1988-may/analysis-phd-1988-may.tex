@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -105,6 +111,9 @@ Let~\(\mu\) be a measure on \(([0,\infty),\mathcal B([0,\infty)))\) defined by
 \]
  Let \(T:[0,\infty)\to[0,\infty)\) be given by \(T(x)=e^x-1\). Define a new measure~\(\pi\) on \(([0,\infty),\mathcal B([0,\infty)))\) by setting \(\pi(A)=\mu(T^{-1}(A))\). Compute \(d\pi/d\mu\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source visibly defines \(\mu(A)=\int_A x\,dx\) while calling~\(\mu\) a measure on the sigma-algebra of symmetric Borel sets. For sets such as \(\mathbb R\), this signed Lebesgue integral is not defined, so the intended integrand may contain an unprinted or unclear modification. No correction is uniquely determined, and the source reading has been retained.
+\end{problemconcern}
 Let~\(\lambda\) be Lebesgue measure on \((\mathbb R,\mathcal B(\mathbb R))\). If \(A\in\mathcal B(\mathbb R)\), define the set \(-A=\{x:-x\in A\}\). Define \(\mathcal C=\{A\in\mathcal B(\mathbb R):A=-A\}\).
 \begin{examsubparts}
 \item[\textnormal{Part (a)}]

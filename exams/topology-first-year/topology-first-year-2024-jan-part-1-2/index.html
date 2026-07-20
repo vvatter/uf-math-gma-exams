@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>For the first five problems, show all your work and support all statements.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show there is no surjective function \(f:X\to\mathcal{P}(X)\), where \(\mathcal{P}(X)\) is the power set of \(X\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that if \(X\) is a compact Hausdorff space, then \(X\) is a normal space.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((X,d)\) be a complete metric space. Let \(f:X\to X\) and suppose there is some \(c&lt;1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(A\) be a proper subset of \(X\), and let \(B\) be a proper subset of \(Y\). If \(X\) and \(Y\) are connected, show that \((X\times Y)-(A\times B)\) is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((X,d)\) be a metric space. Suppose there exists some \(\varepsilon&gt;0\) such that for all \(x\in X\), the closure \(\overline{B_\varepsilon(x)}\) of the \(\varepsilon\)-ball about \(x\) is compact. Prove that \(X\) is complete.</p>
       </li>
     </ol>
@@ -172,34 +178,34 @@
       <p>Answer the following problems with complete definitions, complete statements, an example, or a short proof.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\{A_n\}_{n\in\mathbb{Z}_+}\) be a countable collection of countable sets. Prove that the union \(\bigcup_{n\in\mathbb{Z}_+}A_n\) is countable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Give an example of a topological space that is path-connected but not locally path-connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\{X_\alpha\}_{\alpha\in A}\) be a collection of topological spaces. What is the product topology on \(\prod_{\alpha\in A}X_\alpha\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that \(f:\mathbb{R}\to\mathbb{R}^\omega\) defined by \(f(x)=(x,x,x,\ldots)\) is not continuous if \(\mathbb{R}^\omega\) has the box topology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>If \(f:X\to Y\) is a continuous bijection with \(X\) compact and \(Y\) Hausdorff, then show that \(f^{-1}\) is continuous.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Give the definition of a quotient map.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Show that \([0,1]\) and \((0,1)\) are not homeomorphic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Using the fact that there exists a continuous surjective function \([0,1]\to[0,1]^2\), show there is a continuous surjective function \([0,1]\to[0,1]^3\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Let \(X\) be a locally compact Hausdorff space. Define the topology on \(Y=X\cup\{\infty\}\) that makes \(Y\) the one-point compactification of \(X\).</p>
       </li>
     </ol>

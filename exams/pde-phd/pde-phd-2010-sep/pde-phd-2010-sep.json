@@ -89,7 +89,13 @@
             "text": "Let \\(U\\subset\\mathbb R^n\\) be an open, bounded subset of \\(\\mathbb R^n\\) with smooth boundary. Set \\(U_T=U\\times[0,T]\\), \\(\\Gamma_T=\\overline{U_T}\\setminus U_T\\), where \\(T>0\\). Prove that there exists at most one solution \\(u\\in C^2(\\overline{U_T})\\) of\n\\[\n\\begin{cases}\nu_{tt}-\\Delta u=f, & U_T,\\\\\nu=0, & \\Gamma_T,\\\\\nu_t=h, & U\\times\\{t=0\\},\n\\end{cases}\n\\]\nwhere \\(g,h\\) are smooth functions."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source is internally inconsistent: it states “where \\(g,h\\) are smooth functions,” but \\(g\\) does not occur in the displayed problem, while \\(f\\) does. The stated data may also omit an initial-displacement condition. The intended correction is not uniquely determined, so the source reading has been retained."
+          }
+        ]
       }
     }
   ]

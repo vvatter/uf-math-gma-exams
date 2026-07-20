@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,28 +158,28 @@
       <p>Present all work in a neat and logical fashion.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Lebesgue Monotone Convergence Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove that \(L^1(S,\Sigma,\mu)\) is complete, where \(\mu\) is a nonnegative measure.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Give the construction of the product measure \(\mu\times\nu\) on \(\mathcal S\times\mathcal W\), where \((X,\mathcal S,\mu)\) and \((Y,\mathcal W,\nu)\) are \(\sigma\)-finite nonnegative measure spaces.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f\) be Lebesgue integrable on \(\mathbb R\). Suppose \(\int_0^x f\,dm=0\) for all real \(x\). What can you say about \(f\)? Prove your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon&gt;0\). Is it possible to find an interval \(I\) such that whenever \(E\) is a measurable set such that \(E\cap I=\phi\), then \(\left|\int_E f\,dm\right|&lt;\epsilon\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(X\) be a metric space. Let \(\{P_n\}\) be a sequence of regular probability measures on \(\mathcal B(X)\), the Borel subsets of \(X\). Let \(P=\sum_{n=1}^{\infty}\left(\frac{1}{2^n}\right)P_n\). Show that \(P\) is regular on \(\mathcal B(X)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mu(dx)=x^2\,dx\) on \([0,1]\). Let \(T:[0,1]\to[0,1]\) be defined by \(T(x)=x^4\). Compute the Radon–Nikodym derivative of the image measure \(T\mu\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \((\Omega,\mathcal F,\mu)\) be a measure space with \(\mu(\Omega)=1\). Let \(\mathcal A\) and \(\mathcal B\) be sub \(\sigma\)-algebras of \(\mathcal F\). Suppose \(\mu(A\cap B)=\mu(A)\mu(B)\) for all \(A\in\mathcal A\) and \(B\in\mathcal B\). Prove that \(\int fg\,d\mu=\left(\int f\,d\mu\right)\left(\int g\,d\mu\right)\) for all \(\mathcal A\)-measurable positive functions \(f\) and all \(\mathcal B\)-measurable positive functions \(g\).</p>
       </li>
     </ol>

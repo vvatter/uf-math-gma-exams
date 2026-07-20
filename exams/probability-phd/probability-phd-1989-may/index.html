@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Probability PhD Exam, May 1989</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X_n\) be independent identically distributed random variables and \(S_n=\sum_{i=1}^n X_i\). Suppose</p>
         <div class="display-math">\[
 \mathrm E\left[\sup_n\left|\frac{S_n}{n}\right|\right]&lt;\infty.
@@ -175,11 +181,11 @@
 \sum_{n=1}^{\infty}\frac1n\int_{\{T=n\}}|S_{n-1}|\,dp&lt;\infty.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X_n\) be independent Poisson variables. Suppose \(\sum_{n=1}^{\infty}X_n&lt;\infty\) a.s. Show that \(\sum_{n=1}^{\infty}\mathrm E[X_n]&lt;\infty\).</p>
         <p>Hint. Borel–Cantelli.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -206,7 +212,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> Part (b) is retained as printed, but its conclusion can fail for a nonconstant symmetric characteristic function when the sequence alternates in sign. Any intended additional restriction or alternative conclusion is not uniquely determined.</p>
+        </div>
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -236,7 +245,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(X_t\) be a standard Brownian motion.</p>
         <ol class="subparts">
           <li>
@@ -257,10 +266,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State and sketch the proof of the martingale convergence theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Using the martingale convergence theorem prove the following:</p>
         <p>Let \(F_n\) be an increasing sequence of \(\sigma\)-fields, \(X_n\) a sequence of random variables dominated by an integrable random variable \(Y\): \(|X_n|\leq Y\). Suppose \(X_n\to X\) a.s. Then</p>
         <div class="display-math">\[

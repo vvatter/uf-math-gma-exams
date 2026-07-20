@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,32 +155,32 @@
       <h1>Combinatorics PhD Exam, May 2021</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(a_n\) be the number of ways to select a permutation of length \(n\), and then color each of its cycles red, blue, or green. Find an explicit formula for \(a_n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(A\) be the graph obtained from \(K_n\) by deleting an edge. Find a closed formula (so no summation signs) for the number of spanning trees of \(A\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove bijectively that the number of graphs with vertex set \([n]\) for which all vertices have even degree is \(2^{\binom{n-1}{2}}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that for every \(n\), there is a tournament \(T\) on \(n\) vertices with at least \(n!/2^{n-1}\) Hamiltonian paths.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(\mathbb{P}=\{1,2,\ldots\}\) and \((\mathbb{P},\mid)\) be the division poset (so \(m\mid n\) if \(n/m\in\mathbb{P}\)). Find a formula for the Möbius function \(\mu\) and prove that it is correct. (Hint: decompose intervals in \((\mathbb{P},\mid)\) as products of chains.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\mathcal{A}\) be the class of compositions into odd parts, where the size of \(\alpha=(a_1,\ldots,a_n)\in\mathcal{A}\) is \(|\alpha|=a_1+\cdots+a_n\). Find the associated ordinary generating function \(A(x)=\sum_{n\geq 0}a_nx^n\) and compute its growth rate \(\limsup a_n^{1/n}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mathcal{P}\) be the class of integer partitions. Give a bijective proof of the Cauchy identity</p>
         <div class="display-math">\[
 \prod_{i,j\geq 1}(1-x_i y_j)^{-1}=\sum_{\lambda\in\mathcal{P}}s_\lambda(x_1,x_2,\ldots)s_\lambda(y_1,y_2,\ldots)
 \]</div>
         <p>where \(s_\lambda\) is the Schur function of shape \(\lambda\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\mathcal{A}\) and \(\mathcal{B}\) be labeled combinatorial classes with size functions \(|\cdot|_{\mathcal{A}}\) and \(|\cdot|_{\mathcal{B}}\), respectively. Define an admissible construction \(\star\) so that \(\mathcal{C}=\mathcal{A}\star\mathcal{B}\) satisfies the exponential generating function identity \(C_E(x)=A_E(x)\cdot B_E(x)\).</p>
       </li>
     </ol>

@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -107,6 +113,9 @@ Show that \(\lVert x\rVert_\infty\) is equivalent to \(\lVert x\rVert_2\) for al
 Show that \(\lVert QA\rVert_2=\lVert A\rVert_2\) if~\(Q\) is a unitary matrix.
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Part (c) uses \(A^{-1}\), but the standing assumption \(\lVert A\rVert_p<1\) does not imply that~\(A\) is invertible. The source reading has been retained because the intended correction is not uniquely determined.
+\end{problemconcern}
 Assume that \(A\in\mathbb{C}^{n\times n}\) and there exists \(p\geq 1\) such that \(\lVert A\rVert_p<1\), where \(\lVert\cdot\rVert_p\) is a vector-induced matrix norm.
 \begin{examsubparts}
 \item[\textnormal{(a)}]

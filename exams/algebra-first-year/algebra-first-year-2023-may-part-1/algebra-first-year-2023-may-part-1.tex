@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -85,6 +91,9 @@ Let \(P \subset S_7\) be a Sylow~\(7\)-subgroup. Show that the normalizer~\(N\) 
 \item
 It is known that \(A_7\) has a simple subgroup of order \(168\). Show that this subgroup is maximal.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source clearly states that one should deduce that every group of order 315 is abelian, but this conclusion appears mathematically false; nonabelian groups of order 315 exist. The intended statement is not uniquely determined, so the source reading has been retained.
+\end{problemconcern}
 Suppose~\(G\) is a group of order \(315\).
 \begin{examsubparts}
 \item[\textnormal{(i)}]

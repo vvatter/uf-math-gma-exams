@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,13 +158,13 @@
       <p>SHOW ALL WORK TO RECEIVE CREDIT!!</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>All \(n\) soldiers of a military squadron stand in a line. The officer in charge splits the line at several places, forming smaller (nonempty) units. Then he chooses a (possibly empty) subset of the newly formed units for night duty. In how many different ways can he do this?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>All \(n\) soldiers of a military squadron stand in a line. The officer in charge splits the line at several places, forming smaller (nonempty) units. Then he names one person in each unit to be the commander of that unit. Let \(h_n\) be the number of ways he can do this, and let \(H(x)\) be the ordinary generating function of the numbers \(h_n\). Find \(H(x)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(G\) be a simple graph, and let \(A\) be the adjacency matrix of \(G\). Decide whether the following statements are true or false.</p>
         <ol class="subparts">
           <li>
@@ -187,25 +193,28 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that the number of ways to partition a convex \(n+1\)-gon into triangles and one quadrilateral by noncrossing diagonals is \(\binom{2n-3}{n-3}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Decide whether \(B_n\), \(\Pi_n\), and \(NC_n\) are distributive lattices. (The Boolean algebra, the partition lattice, and the lattice of noncrossing partitions).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(f_k(n)\) be the number of permutations of length \(n\) having \(k\) valleys. Is it true that \(f_k(n)\) is a \(p\)-recursive function of \(n\), no matter what \(k\) is?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>How many permutations of length \(8\) have descent set \(\{1,4,6\}\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(p=p_1p_2\cdots p_n\) be an \(n\)-permutation, and assume \(n\ge 3\). We say that \(i\) is an excedance of \(p\) if \(p_i&gt;i\). Find the number of \(n\)-permutations whose set of excedances is \(\{n-2,n-1\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(D\) be the partially ordered set of positive integers ordered by divisibility. Find a formula for \(\mu(1,x)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The recurrence is stated only for \(n\ge 1\), while the sole initial condition is \(a_0=0\); these conditions do not determine \(a_1\) and hence do not uniquely determine the sequence. The intended lower bound or initial condition is unclear, so the source reading has been retained.</p>
+        </div>
         <p>Find an explicit formula for the numbers \(a_n\), if \(a_{n+1}=(n+1)a_n+2(n+1)!\) if \(n\ge 1\), and \(a_0=0\).</p>
       </li>
     </ol>

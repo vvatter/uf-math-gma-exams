@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,40 +158,40 @@
       <p>Do any 9 problems. The notation \(f \in H(\Omega)\) means \(f\) is holomorphic in the domain \(\Omega\).</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove the fundamental theorem of algebra.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\Omega\) be a domain on the complex plane and \(M\) be a finite positive constant. Suppose \(F\) is a family of holomorphic functions on \(\Omega\). If \(|f(z)| \leq M\) for all \(z \in \Omega\) and all \(f \in F\), prove that \(F\) is equi-continuous on \(\Omega\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f_n \in H(\Omega)\), \(n=1,2,3,\ldots\), be one to one in \(\Omega\). If \(f_n \to f\) uniformly on compact subsets in \(\Omega\), prove that \(f\) is either one to one or constant. Show with examples that both conclusions can occur.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f \in H(\Omega)\). If \(f\) has no zeros in \(\Omega\), prove that \(\ln |f|\) is harmonic in \(\Omega\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Evaluate the integral</p>
         <div class="display-math">\[
 \int_0^\infty \frac{\ln x}{(x^2+b^2)^2}, \quad b&gt;0.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\mathbb{C}\) be the complex plane. Suppose \(f:\mathbb{C}\to\mathbb{C}\) is continuous and \(f\) is holomorphic except in \([-1,1]\). Prove that \(f\) is entire.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove that a doubly periodic entire function is constant.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(P\) be a polynomial and \(C\) the circle \(|z-a|=R\). Evaluate the integral \(\int_C P(z)\,d\overline{z}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(f,F \in H(U)\), where \(U=\{z:|z|&lt;1\}\), and let \(R_f=\{f(z):z\in U\}\) and \(R_F=\{F(z):z\in U\}\). Suppose \(F\) is one to one in \(U\), \(f(0)=F(0)\), and \(R_f\) is contained in \(R_F\). Prove that there exists an \(\omega \in H(U)\) such that \(f(z)=F(\omega(z))\) and \(|\omega(z)|\leq |z|\). Also show that the equality holds if and only if \(R_f=R_F\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Suppose \(f \in H(\Pi^+)\), where \(\Pi^+\) is the upper half plane and \(|f|\leq 1\). How large can \(|f&#x27;(i)|\) be? Find the extremal functions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Find all entire functions \(f\) such that \(|f(z)|=1\) whenever \(|z|=1\).</p>
       </li>
     </ol>

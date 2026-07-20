@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Solve five of the following problems. Please explain your work in a careful and logical way. You can use any theorem, identity, functional equation proved in class during Fall 2020 and Spring 2021. Please make sure to state precisely any result or theorem you are using in your solutions. Failing to do so may result in a lower grade.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\Gamma(z)\) be the Euler gamma function. Recall this is a meromorphic function over \(\mathbb C\) we defined via the infinite product</p>
         <div class="display-math">\[
 \Gamma(z)=\frac{e^{-\gamma z}}{z}\prod_{k=1}^{\infty}\left(1+\frac{z}{k}\right)^{-1}e^{z/k},
@@ -163,33 +169,33 @@
 \]</div>
         <p>where \(C_{5/2}(0)\) is the circle of radius \(5/2\) centered at the origin oriented counterclockwise.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that the polynomial \(z^7-4z^3+z-1\) has three zeros inside the unit circle (counted with multiplicities).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(U\) be a simply connected open subset of \(\mathbb C\) such that \(U\ne\mathbb C\). Show that the group of analytic automorphisms of \(U\), say \(\operatorname{Aut}(U)\), acts transitively on \(U\). What happens if \(U=\mathbb C\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Find all entire functions \(f:\mathbb C\to\mathbb C\) such that</p>
         <div class="display-math">\[
 f(f(z))=z,
 \]</div>
         <p>for all \(z\in\mathbb C\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that if \(f:\mathbb C\to\mathbb C\) is a continuous function such that \(f\) is holomorphic on \(\mathbb C\setminus[-1,1]\) (the open set obtained by removing the closed interval \([-1,1]\) from the complex plane), then \(f\) is necessarily analytic everywhere.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(P(z)\) be a polynomial with complex coefficients. Show that if the degree of \(P(z)\) is at least two then the sum of residues of \(1/P(z)\) (over all zeros of \(P(z)\)) is zero. What happens if \(P(z)\) has degree one?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Consider the open subset of \(\mathbb C\)</p>
         <div class="display-math">\[
 E:=\{z\in\mathbb C\mid |z|&gt;1\}.
 \]</div>
         <p>Does there exist an analytic isomorphism between \(E\) and \(\mathbb C^*:=\mathbb C\setminus\{0\}\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(P_n(z)\) be a polynomial of order \(n\) such that</p>
         <div class="display-math">\[
 |P_n(z)|\le M,\qquad M&gt;0,
@@ -200,7 +206,7 @@ E:=\{z\in\mathbb C\mid |z|&gt;1\}.
 \]</div>
         <p>for \(|z|\ge 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that there is no meromorphic function over \(\mathbb C\) such that</p>
         <div class="display-math">\[
 f(z+1)=f(z),\qquad f(z+i)=f(z)

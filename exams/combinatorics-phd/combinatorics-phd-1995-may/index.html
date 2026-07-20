@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Combinatorics PhD Exam, May 1995</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -174,10 +180,10 @@ k\le 2^{n-1}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Use inclusion–exclusion to determine the number of monic polynomials of degree \(n\) with no roots in \(\mathbb{Z}_p[x]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -198,25 +204,25 @@ k\le 2^{n-1}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that the number of \(k\)-dimensional subspaces of the \(n\) dimensional vector space over \(\mathbb{F}_q\) is</p>
         <div class="display-math">\[
 \binom{n}{k}_q=\frac{(q^n-1)\cdots(q^{n-k+1}-1)}{(q^k-1)\cdots(q-1)}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that \(K_{33}\) is not planar.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove that every regular bipartite graph has a perfect matching. Show that this is not true in general for regular graphs of even order.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove that in a binary self dual code, either all the vectors have weight divisible by 4 or half have even weight not divisible by 4 and half have weight divisible by 4.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(H\) be a parity check matrix for a binary \((n,k,d)\)-code \(C\) with \(n\ge 4\). If the columns of \(H\) are distinct and all have odd weight, then \(d\ge 4\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>This problem has four parts.</p>
         <ol class="subparts">
           <li>
@@ -253,7 +259,7 @@ k\le 2^{n-1}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(A\) be an affine plane of order \(n\). Write \(B_1\sim B_2\) if lines \(B_1\) and \(B_2\) are the same or have no points in common. Show that \(\sim\) is an equivalence relation. Show that there exists a projective plane \(\pi\) such that \(A\) is obtained from \(\pi\) by deleting one line and all the points on that line.</p>
       </li>
     </ol>

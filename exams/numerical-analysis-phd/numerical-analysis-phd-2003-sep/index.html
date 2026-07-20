@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do any 8 of the following 10 problems:</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -199,14 +205,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(A\in\mathbb C^{m\times m}\), and let \(E\in\mathbb C^{m\times m}\) be of rank \(k&lt;m\). Suppose the matrix \(M=A+E\) is invertible. Consider GMRES applied to the preconditioned system</p>
         <div class="display-math">\[
 M^{-1}Ax=M^{-1}b.
 \]</div>
         <p>Give a tight bound, independent of the starting guess, on the number of GMRES iterations needed to compute the exact solution \(x\) (ignoring roundoff). Your answer should be less than \(m\). Give clear reasons.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(U\) be the upper triangular matrix obtained by applying Gaussian elimination with partial pivoting (the “\(PA=LU\)” factorization) to a matrix \(A\in\mathbb C^{m\times m}\). Show that the growth factor</p>
         <div class="display-math">\[
 \rho=\frac{\max_{i,j}|U_{ij}|}{\max_{i,j}|A_{ij}|}
@@ -217,7 +223,7 @@ M^{-1}Ax=M^{-1}b.
 \]</div>
         <p>Exhibit a matrix \(A\) for which the growth factor is \(2^{m-1}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -238,7 +244,7 @@ M^{-1}Ax=M^{-1}b.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Given \(\mathbf v\) and \(\mathbf w\in\mathbb R^n\), show that</p>
         <div class="display-math">\[
 \mathbf v\mathbf w^{\mathsf T}+\mathbf w\mathbf v^{\mathsf T}
@@ -265,14 +271,14 @@ M^{-1}Ax=M^{-1}b.
 \]</div>
         <p>What is \(\mathbf a^{\mathsf T}\mathbf b\)? What are the eigenvalues of \(\mathbf v\mathbf w^{\mathsf T}+\mathbf w\mathbf v^{\mathsf T}\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Show that \(x=1+\tan^{-1}(x)\) has a solution \(\alpha\). Find an interval \([a,b]\) containing \(\alpha\) such that for every \(x_0\in[a,b]\) the iteration</p>
         <div class="display-math">\[
 x_{n+1}=1+\tan^{-1}(x_n)
 \]</div>
         <p>will converge to \(\alpha\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(x_0,\ldots,x_n\) be distinct real points. Let</p>
         <div class="display-math">\[
 \{l_j(x)\}_{j=0,\ldots,n}
@@ -283,7 +289,7 @@ x_{n+1}=1+\tan^{-1}(x_n)
 \]</div>
         <p>for all \(x\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose you want to solve numerically the ode</p>
         <div class="display-math">\[
 y&#x27;=f(x,y),\qquad y(0)=y_0.
@@ -327,7 +333,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -348,7 +354,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Derive the one point Gaussian quadrature formula for</p>
         <div class="display-math">\[
 I=\int_0^1 xf(x)\,dx\approx\sum_{j=1}^n w_jf(x_j)

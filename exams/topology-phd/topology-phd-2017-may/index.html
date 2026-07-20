@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that a compact Hausdorff space is regular.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove that if \(n&gt;0\), every map \(S^n\to S^n\) is homotopic to a map with a fixed point.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>The oriented surface \(M_g\) of genus \(g\), embedded in \(\mathbb{R}^3\) in the standard way, bounds a compact region \(R\). Two copies of \(R\), glued together by the identity map between their boundary surfaces \(M_g\), form a closed 3-manifold \(X\). Compute the homology groups of \(X\) using the Mayer–Vietoris sequence.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f:S^1\to\mathbb{R}\) be a continuous map. Prove that there exists a point \(x\in S^1\) with \(f(x)=f(-x)\). (Note: do not simply state the Borsuk–Ulam Theorem; give a direct proof.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(M\) be a closed simply-connected orientable 3-manifold. Compute the integral homology and cohomology of \(M\). What can you say about \(\pi_i(M)\), \(i\leq 3\)?</p>
       </li>
     </ol>
@@ -172,35 +178,35 @@
       <p>Answer the following with complete definitions, statements, or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove that for a finite CW-complex \(X\), \(H^1(X;\mathbb{Z})\) is torsion-free.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Compute \(\chi(\mathbb{CP}^3\times\mathbb{RP}^2\times S^2)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Give an example of a space that is path-connected but not locally path-connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>State the Urysohn Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Prove that if \(m\neq n\), then \(\mathbb{R}^m\) is not homeomorphic to \(\mathbb{R}^n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Does the function \(f:\mathbb{R}\to\mathbb{R}\) defined by \(f(x)=\arctan x\) admit a continuous extension \(\bar f:\beta\mathbb{R}\to\mathbb{R}\) to the Stone–Čech compactification? What about the function \(g(x)=e^x\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>State the Lefschetz Fixed Point Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Describe all the connected covering spaces \(E\to S^1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample.</p>
         <div class="display-math">\[0\to\mathbb{Z}\to A\to B\to 0\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Compute the integral homology of the space \(\mathbb{RP}^4\times\mathbb{CP}^2\).</p>
       </li>
     </ol>

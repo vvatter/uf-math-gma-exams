@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,25 +158,25 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that there is no continuous function \(f:[0,1]\to[0,1)\) which is onto.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that there is no continuous function \(f:\mathbb{R}\to\{0,1\}\) which is onto.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X\) be a metric space and let \(f:X\to X\) be a continuous function. Suppose that there is a point \(x_0\in X\) such that \(f^n(x_0)\to z\) as \(n\to\infty\). Show that \(f(z)=z\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that if \(A\subset\mathbb{R}\) is connected, then \(A\) is an interval.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that if \(X\) is compact Hausdorff, then \(X\) is a normal space.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State and prove the Contraction Mapping Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose that \(X\) is a complete metric space that is countably infinite. Show that \(X\) has an isolated point.</p>
       </li>
     </ol>
@@ -178,28 +184,28 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="8">
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Intermediate Value Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>State the Urysohn Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>State the Tietze Extension Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Give an example of a connected space \(X\) that is not path connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Let \(n\ge 2\). Suppose that \(A\) is a countable subset of \(\mathbb{R}^n\). Let \(X=\mathbb{R}^n\setminus A\). Is \(X\) arcwise connected?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Suppose that \(r&gt;0\) and that \(B_r(x)\) is a ball of radius \(r\) centered at \(x\) in \(\mathbb{R}^n\). Show that \(B_r(x)\) is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Show that \([0,1]\) is uncountable.</p>
       </li>
     </ol>

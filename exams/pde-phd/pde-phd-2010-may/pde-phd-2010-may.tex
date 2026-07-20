@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -141,6 +147,9 @@ u=0, & \text{on }\partial B_1.
 \item
 Let \(\{u_m\}\) be a sequence of smooth functions satisfying \(u_m(x)\leq C\) and \(|\Delta u_m|\leq C\) for some constant~\(C\) uniformly over \(B_1\), the unit ball. Prove that over \(B_{1/2}\), along a subsequence, either \(u_m\) converges to \(-\infty\) uniformly, or \(u_m\) converges to a function~\(u\) in \(C^2\) norm.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The displayed variational form places the lower-order terms inside the scope of the outer sum over \(i,j\), while also using an inner sum over~\(i\). This potentially unintended summation scope has been retained because the intended correction is not uniquely determined by the immediate context.
+\end{problemconcern}
 Let \(\{a_{ij}\}_{n\times n}\) (\(n\geq2\)) be a positive definite, symmetric, constant matrix, \(b_1,\ldots,b_n,c\) be smooth functions on \(B_1\), the unit ball in \(\mathbb{R}^n\). Show that the minimum of the following variational form 
 \[
 I(w)=\int_{B_1}\sum_{i,j=1}^n\left(a_{ij}\partial_iw\partial_jw+\sum_i b_i\partial_iw\,w+cw^2\right)dx,\qquad w\in H_0^1(B_1)

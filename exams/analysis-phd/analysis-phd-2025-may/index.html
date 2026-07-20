@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of the eight problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>For any two of the following, either give an example or explain why no example exists.</p>
         <ol class="subparts">
           <li>
@@ -181,22 +187,22 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(X,Y\) are metric spaces. Show, if \(f:X\to Y\) is continuous, then \(f\) is Borel measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(I=(-1,1)\) and let \(m^*\) denote Lebesgue outer measure. Show, if \(A\subseteq I\) and \(m^*(A)+m^*(I\setminus A)=2\), then \(A\) is Lebesgue measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>State the Radon–Nikodym Theorem and give an example that shows the \(\sigma\)-finite hypothesis is needed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(\mathcal X\) is a Banach space and \(\mathcal M\) and \(\mathcal N\) are (closed) subspaces of \(\mathcal X\). Show, if each \(x\in\mathcal X\) has a unique representation as \(x=m+n\) for some \(m\in\mathcal M\) and \(n\in\mathcal N\), then the mapping \(\mathcal X\to\mathcal M\) sending \(x=m+n\) to \(m\) is linear and bounded.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove, if \(\mathcal X\) is a Banach space and \(\mathcal X^*\) is separable, then \(\mathcal X\) is separable. Is \(\ell^1\) isomorphic, as a Banach space, to \((\ell^\infty)^*\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Short answer. Do two.</p>
         <ol class="subparts">
           <li>
@@ -225,7 +231,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Do two providing short justifications for your answers. Here \(\widehat{\phantom{f}}\) denotes the Fourier transform of an \(L^1\) function and \(\mathcal Ff\) denotes the Fourier transform of an \(L^2(\mathbb R)\) function \(f\).</p>
         <ol class="subparts">
           <li>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -155,13 +161,13 @@
       <p>Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(K\) is a field of characteristic different from \(2\), \(a \in K\) is not a square and \(b \in K\) is not a square in \(K(\sqrt{a})\). Compute the degree of \(L=K(\sqrt{a},\sqrt{b})\) over \(K\) and determine all subfields of \(L\) containing \(K\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(A\) is an integral domain with fraction field \(K\), \(L/K\) is a field extension and \(x \in L\). Show that \(x\) is integral over \(A\) if and only if there is a finitely generated \(A\)-module \(M \subseteq L\) such that \(xM \subseteq M\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose \(C\) is a category and \(X\) and \(Y\) are objects of \(C\).</p>
         <ol class="subparts">
           <li>
@@ -182,10 +188,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \(G\) is a finite nilpotent group. Show that if \(H\) is a proper subgroup of \(G\), it is a proper subgroup of its normalizer in \(G\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a integral domain.</p>
         <ol class="subparts">
           <li>
@@ -206,7 +212,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \(R\) is a ring with identity (not necessarily commutative), \(M\) is a right \(R\)-module and</p>
         <div class="display-math">\[
 N&#x27; \to N \to N&#x27;&#x27; \to 0
@@ -217,13 +223,13 @@ M \otimes_R N&#x27; \to M \otimes_R N \to M \otimes_R N&#x27;&#x27; \to 0
 \]</div>
         <p>is an exact sequence of abelian groups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose \(F\) is a free group on a set \(S\), \(T\) is a subset of \(S\) and \(H \subseteq F\) is the smallest normal subgroup of \(F\) containing \(T\). Show that \(F/H\) is a free group on the set \(S \setminus T\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose \(R\) is a commutative ring with identity and \(I\) is an ideal contained in the Jacobson radical of \(R\). Prove Nakayama’s lemma: if \(M\) is a finitely generated \(R\)-module such that \(IM=M\) then \(M=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose \(A\) is a Noetherian commutative ring with identity.</p>
         <ol class="subparts">
           <li>
@@ -244,7 +250,7 @@ M \otimes_R N&#x27; \to M \otimes_R N \to M \otimes_R N&#x27;&#x27; \to 0
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Suppose \(R\) is a nontrivial commutative ring with identity and \(S \subset R\) is a multiplicative system not containing \(0\) (see the previous problem for the definition).</p>
         <ol class="subparts">
           <li>
@@ -265,7 +271,7 @@ M \otimes_R N&#x27; \to M \otimes_R N \to M \otimes_R N&#x27;&#x27; \to 0
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

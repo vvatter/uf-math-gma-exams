@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Assume without proof that if \((a_n)\) and \((b_n)\) are bounded real sequences then</p>
         <div class="display-math">\[
 \limsup(a_n+b_n)\leq \limsup a_n+\limsup b_n.
@@ -176,23 +182,23 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(A\) be a subset of the metric space \(M\). Assume that \(A\) satisfies the following condition:</p>
         <div class="display-math">\[
 \forall X\subseteq M\ \bigl(A\cap X=\varnothing\Rightarrow A\cap\overline{X}=\varnothing\bigr).
 \]</div>
         <p>Does it follow that \(A\) is open? Proof or counterexample.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\) and \(B\) be nonempty compact subsets of the metric space \(M\). Prove that there exist \(a\in A\) and \(b\in B\) such that</p>
         <div class="display-math">\[
 d(a,b)=\inf\{d(x,y):x\in A,y\in B\}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Does there exist a one-to-one continuous function from the unit square \(\square=[0,1]\times[0,1]\) to \(\mathbb{R}\)? If so, exhibit one; if no, prove not.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable and let \(b\in\mathbb{R}\). Prove that if \(f&#x27;(t)\to b\) as \(t\to\infty\) then \(f(t)/t\to b\) as \(t\to\infty\). [It might help to choose and fix \(a&gt;0\).]</p>
       </li>
     </ol>

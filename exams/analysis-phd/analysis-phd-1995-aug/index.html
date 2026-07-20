@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -155,28 +161,28 @@
       <p>\((X,\Sigma,\mu)\) will always denote a measure space (possibly infinite).</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that \(L^1(X,\Sigma,\mu)\) is complete.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(f\) be Lebesgue integrable on \(\mathbb R\). Suppose \(\int_0^x f\,dm=0\) for all real \(x\), where \(m\) is Lebesgue measure. What can you say about \(f\)? Prove your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((f_n)\) be a sequence of integrable functions such that \(\sum_{n=1}^{\infty}\int |f_n|\,d\mu&lt;\infty\). What can you prove about the a.e. \(\mu\) convergence of \(\sum f_n\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon&gt;0\). Is it possible to find a bounded interval \(I\) such that whenever \(E\) is a measurable set such that \(E\cap I=\phi\), then \(\left|\int_E f\,m\right|&lt;\epsilon\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>State and prove the Lebesgue Monotone Convergence Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Present the steps in the construction of the product measure of two finite measure spaces. Sketch the proof of the countable additivity of the product measure.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(X=Y=\) any uncountable set. Let \(\mathcal S=\mathcal T=\) the class of all countable subsets of \(X\) and \(Y\), respectively. Note that \(\mathcal S\) and \(\mathcal T\) are \(\sigma\)-rings. Let \(D=\{(x,y):x=y\}\) be the diagonal in \(X\times Y\). Show that \(D\) is NOT \(\mathcal S\times\mathcal T\) measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \((X,\Sigma,\mu)\) be a finite measure space and \(\mathcal G\) is a sub \(\sigma\)-algebra of \(\Sigma\). Define the closed subspace \(V\) of \(L^\infty(X,\Sigma,\mu)\) as the collection of all \(g\in L^\infty(X,\Sigma,\mu)\) such that \(\int fg\,\mu=0\) for all \(f\in L^1(X,\mathcal G,\mu)\). Prove that if \(k\in L^1(X,\Sigma,\mu)\) and \(\int kg\,d\mu=0\) for all \(g\in V\), then \(k\) is \(\mathcal G\)-measurable. (Hint: Use the representation for the dual of \(L^1(X,\Sigma,\mu)\) and a corollary of the Hahn–Banach theorem applied to the closed subspace \(L^1(X,\mathcal G,\mu)\) of \(L^1(X,\Sigma,\mu)\).)</p>
       </li>
     </ol>

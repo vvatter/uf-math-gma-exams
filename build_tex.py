@@ -16,6 +16,7 @@ import tempfile
 from typing import Iterable
 
 from extract_exams import (
+    ConcernStatus,
     ExamRecord,
     InstructionsBlock,
     NumberingMode,
@@ -31,6 +32,7 @@ from extract_exams import (
     exam_pdf_path,
     exam_tex_path,
     exam_title,
+    iter_problems,
     iter_tikz_blocks,
     load_sources,
     write_text,
@@ -172,6 +174,19 @@ def render_subparts(subparts: list[Subpart], depth: int = 0) -> list[str]:
 
 def render_problem(problem: Problem) -> list[str]:
     lines = [r"\item"]
+    for concern in problem.concerns:
+        status = (
+            "Suspected error."
+            if concern.status == ConcernStatus.SUSPECTED
+            else "Confirmed error."
+        )
+        lines.extend(
+            [
+                r"\begin{problemconcern}",
+                rf"\textbf{{Warning: {status}}} {render_text(concern.explanation)}",
+                r"\end{problemconcern}",
+            ]
+        )
     for body_block in problem.body:
         if isinstance(body_block, ProblemTextBlock):
             lines.append(render_text(body_block.text))
@@ -273,6 +288,19 @@ def render_tex(exam: ExamRecord) -> str:
     tikz_libraries = sorted(
         {library for figure in iter_tikz_blocks(exam) for library in figure.libraries}
     )
+    has_concerns = any(problem.concerns for problem in iter_problems(exam))
+    concern_definitions = (
+        [
+            r"\definecolor{ProblemConcern}{HTML}{7A1F1F}",
+            r"\newenvironment{problemconcern}{%",
+            r"  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}",
+            r"}{%",
+            r"  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}",
+            r"}",
+        ]
+        if has_concerns
+        else []
+    )
     lines = [
         r"\DocumentMetadata{",
         r"  pdfversion=2.0,",
@@ -306,6 +334,7 @@ def render_tex(exam: ExamRecord) -> str:
         r"\pagestyle{empty}",
         r"\raggedbottom",
         r"\allowdisplaybreaks",
+        *concern_definitions,
         r"\newenvironment{examproblems}[1]{%",
         r"  \begin{enumerate}%",
         r"  \setcounter{enumi}{#1}%",

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,31 +155,31 @@
       <h1>Combinatorics PhD Exam, May 2025</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>A certain centipede has \(n\) pairs of legs. The centipede has one sock and one shoe for each of its legs. In how many orders can the centipede put on its socks and shoes assuming that, for each leg, the sock must be put on before the shoe?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Find a (not necessarily closed) formula for the number of permutations of the multiset \(\{1,1,2,2,3,3,\ldots,n,n\}\) such that no two consecutive elements are equal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(T\) be a rooted tree with vertex set \(V\) and root \(r\in V\). Define a partial order on \(V\) by \(x\leq y\) if the unique path in \(T\) from \(r\) to \(y\) passes through \(x\). Evaluate the Möbius function \(\mu(x,y)\) for all \(x,y\in V\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(d_1,d_2,\ldots,d_n\) be positive integers. Prove that there exists a tree with \(n\) vertices of degrees \(d_1,d_2,\ldots,d_n\) if and only if</p>
         <div class="display-math">\[
 d_1+d_2+\cdots+d_n=2n-2.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove (without invoking the 4-color theorem) that the faces of a plane graph (a planar graph drawn in the plane with no edges crossing) with a Hamiltonian cycle can be properly 4-colored.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose that each vertex of a simple graph \(G\) has degree \(k\). Prove that \(G\) contains a cycle of length at least \(k+1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(a_n\) denote the number of compositions (ordered partitions) of the integer \(n\) into parts equal to 1, 3, or 5, in which each part is colored either red or blue, but there are never two red parts in a row. Find the generating function for the sequence \(\{a_n\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Find, with proof, a function \(f(k)\) such that every sequence of \(f(k)\) real numbers contains a subsequence of length \(k\) that is either constant, strictly increasing, or strictly decreasing. You may appeal, without proof, to any standard theorem about subsequences of real numbers.</p>
       </li>
     </ol>

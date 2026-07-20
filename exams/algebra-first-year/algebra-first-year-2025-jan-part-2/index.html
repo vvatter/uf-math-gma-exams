@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that if the ring \(R\) is a Euclidean domain, then \(R\) is a principal ideal domain.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose that \(F\) is a field and \(G\) is a finite multiplicative subgroup of \(F\setminus\{0\}\). Prove that \(G\) is cyclic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose that \(F\) is a field whose characteristic is not \(2\). Assume that \(d_1,d_2\in F\) are not squares in \(F\). Prove that \(F(\sqrt{d_1},\sqrt{d_2})\) is of dimension \(4\) over \(F\) if \(d_1d_2\) is not a square in \(F\) and of dimension \(2\) otherwise.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(GL_4(\mathbb{Z}/3\mathbb{Z})\) denote the group of all invertible \(4\) by \(4\) matrices with entries in \(\mathbb{Z}/3\mathbb{Z}\), the field of three elements. Use rational canonical forms to determine the number of conjugacy classes of elements of order \(4\). Give the rational canonical form for each class.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be an integral domain, and \(M\) be an \(R\)-module.</p>
         <ol class="subparts">
           <li>
@@ -185,7 +191,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(F\) be a field.</p>
         <ol class="subparts">
           <li>

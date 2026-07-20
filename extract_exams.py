@@ -16,6 +16,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import unicodedata
 from typing import Iterator, Literal
 
 from openai import OpenAI
@@ -24,7 +25,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 DEFAULT_MODEL = "gpt-5.6-sol"
-PROMPT_VERSION = "exam-extraction-v16"
+PROMPT_VERSION = "exam-extraction-v17"
 NATIVE_EVIDENCE_VERSION = "native-text-c0-sanitized-v1"
 VISION_ONLY_EVIDENCE_VERSION = "page-images-only-v1"
 PILOT_IDS = [
@@ -73,6 +74,18 @@ class ReviewCategory(str, Enum):
 
 class StrictModel(BaseModel):
     model_config = ConfigDict(extra="forbid")
+
+
+class ConcernStatus(str, Enum):
+    SUSPECTED = "suspected"
+    CONFIRMED = "confirmed"
+
+
+class ProblemConcern(StrictModel):
+    status: ConcernStatus
+    explanation: str = Field(
+        description="Cautious editorial explanation using MathJax TeX delimiters"
+    )
 
 
 class Subpart(StrictModel):
@@ -124,6 +137,10 @@ class Problem(StrictModel):
     subparts: list[Subpart] = Field(
         description="Labeled parts in source order; empty when there are none"
     )
+    concerns: list[ProblemConcern] = Field(
+        default_factory=list,
+        description="Known or suspected mathematical problems in the source question",
+    )
 
 
 class ReviewFlag(BaseModel):
@@ -141,6 +158,11 @@ class ReviewFlag(BaseModel):
 class NumberingMode(str, Enum):
     RESTART = "restart"
     CONTINUE = "continue"
+
+
+class DocumentType(str, Enum):
+    EXAM = "exam"
+    PRACTICE_PROBLEMS = "practice-problems"
 
 
 class InstructionsBlock(StrictModel):
@@ -176,11 +198,14 @@ class ExamRecord(StrictModel):
     id: str
     subject: str
     subject_tag: str
-    year: int
-    month: str
+    year: int | None
+    month: str | None
     part: int | None
     pdf_url: str
     content: list[ExamContentBlock]
+    practice_variant: Literal["A", "B"] | None = None
+    document_type: DocumentType = DocumentType.EXAM
+    problem_count: int | None = None
 
 
 class LegacyProblem(StrictModel):
@@ -207,13 +232,16 @@ class SourceExam:
     id: str
     subject: str
     subject_tag: str
-    year: int
-    month: str
+    year: int | None
+    month: str | None
     part: int | None
     pdf_url: str
     pdf_path: Path
     sha256: str
     download_sha256: str
+    practice_variant: Literal["A", "B"] | None = None
+    document_type: DocumentType = DocumentType.EXAM
+    problem_count: int | None = None
 
 
 @dataclass(frozen=True)
@@ -278,6 +306,15 @@ figures added after extraction. Use an empty body when a problem immediately beg
 Put each labeled part in the subparts array, preserve its label exactly in label, and do not repeat
 that label in text. Recurse for nested labeled parts. Use an empty subparts array when none exist.
 
+MATHEMATICAL CONCERNS
+When the source is legible but a problem appears mathematically false, underdetermined, internally
+inconsistent, or missing a necessary definition or hypothesis, preserve the source wording and add
+a suspected concern to that problem. Explain the issue precisely and cautiously without solving or
+rewriting the problem. Use MathJax delimiters in the explanation. Never mark a concern confirmed;
+only a person may confirm one. Use an empty concerns array when no mathematical concern is present.
+Do not use a concern for text or notation that cannot be read reliably; preserve the best-supported
+reading and add a transcription review flag instead.
+
 NUMBERING
 Preserve ordinary integer top-level problem numbering through block order, including sequences that
 restart inside a section. Set a section's numbering to "restart" when its first output problem starts
@@ -317,7 +354,9 @@ CORRECTIONS
 Preserve the source reading unless the intended correction is uniquely determined by the immediate
 mathematical context. Every correction, however obvious, requires a correction review flag with the
 original text, corrected text, immediate context, problem index, and source page. If a correction is
-not uniquely determined, retain the source reading and add a transcription review flag.
+not uniquely determined, retain the source reading. Add a problem concern when the legible source
+has a mathematical defect; add a transcription review flag when the source reading itself is
+uncertain.
 
 SERIOUS REVIEW
 If a figure, diagram, graph, or table carries information that cannot be transcribed completely and
@@ -328,7 +367,8 @@ notation or material in an instruction block at its source position; flag it onl
 remains genuinely unclear. Do not flag a clear cross-problem reference merely because it exists;
 flag one only when its target or meaning is broken or ambiguous. Flag uncertain words or math,
 unclear numbering, and instructions that may no longer agree with numbering. Findings do not stop
-extraction. Return null for correction-only fields when they do not apply."""
+extraction. A legible mathematical issue belongs in the problem's concerns rather than the serious
+review queue. Return null for correction-only fields when they do not apply."""
 
 
 def sha256_file(path: Path) -> str:
@@ -386,13 +426,16 @@ def load_sources(manifest_path: Path) -> dict[str, SourceExam]:
             id=exam_id,
             subject=item["subject"],
             subject_tag=item["subject_tag"],
-            year=item["year"],
-            month=item["month"],
+            year=item.get("year"),
+            month=item.get("month"),
             part=part_from_manifest(item),
             pdf_url=item["download_url"],
             pdf_path=pdf_path,
             sha256=item["sha256"],
             download_sha256=item.get("download_sha256", item["sha256"]),
+            practice_variant=item.get("practice_variant"),
+            document_type=DocumentType(item.get("document_type", "exam")),
+            problem_count=item.get("problem_count"),
         )
         if exam_id in sources:
             raise RuntimeError(f"duplicate exam identifier in manifest: {exam_id}")
@@ -403,9 +446,12 @@ def load_sources(manifest_path: Path) -> dict[str, SourceExam]:
 def source_sort_key(source: SourceExam) -> tuple[object, ...]:
     return (
         source.subject_tag,
-        source.year,
-        MONTH_ORDER.get(source.month, 13),
-        source.month,
+        source.year is None,
+        source.year or 0,
+        MONTH_ORDER.get(source.month or "", 13),
+        source.month or "",
+        source.practice_variant or "",
+        source.document_type.value,
         source.part or 0,
         source.id,
     )
@@ -453,12 +499,23 @@ def select_exam_ids(
         requested = [
             source.id
             for source in sorted(sources.values(), key=source_sort_key)
-            if all_exams or source.subject_tag in requested_subjects
+            if source.document_type == DocumentType.EXAM
+            and (all_exams or source.subject_tag in requested_subjects)
         ]
 
     missing = [exam_id for exam_id in requested if exam_id not in sources]
     if missing:
         raise ValueError("exam IDs not found in manifest: " + ", ".join(missing))
+    unsupported = [
+        exam_id
+        for exam_id in requested
+        if sources[exam_id].document_type != DocumentType.EXAM
+    ]
+    if unsupported:
+        raise ValueError(
+            "practice-problem collections require extract_practice_problems.py: "
+            + ", ".join(unsupported)
+        )
 
     skipped_completed = 0
     if bulk_selection and not force:
@@ -532,11 +589,17 @@ def extraction_prompt(
     else:
         native = "Native PDF text is intentionally omitted. Use the page images only."
     part_text = str(source.part) if source.part is not None else "none"
+    date_text = (
+        f"{source.month.title()} {source.year}"
+        if source.year is not None and source.month is not None
+        else "undated practice exam"
+    )
+    practice_text = source.practice_variant or "none"
     return f"""CATALOG METADATA (authoritative; do not infer from PDF):
 Subject: {source.subject}
 Subject tag: {source.subject_tag}
-Year: {source.year}
-Month: {source.month}
+Date: {date_text}
+Practice variant: {practice_text}
 Part: {part_text}
 Current PDF URL: {source.pdf_url}
 Source pages: {len(pages)}
@@ -667,6 +730,16 @@ def iter_tikz_blocks(exam: ExamRecord) -> Iterator[TikzBlock]:
 
 def iter_numbered_problems(exam: ExamRecord) -> Iterator[tuple[int, int, Problem]]:
     """Yield absolute index, displayed number, and problem in reading order."""
+    for problem_index, displayed_number, _section_heading, problem in iter_problem_locations(
+        exam
+    ):
+        yield problem_index, displayed_number, problem
+
+
+def iter_problem_locations(
+    exam: ExamRecord,
+) -> Iterator[tuple[int, int, str | None, Problem]]:
+    """Yield stable index, displayed number, section heading, and problem."""
     problem_index = 0
     displayed_number = 0
     for block in exam.content:
@@ -675,7 +748,7 @@ def iter_numbered_problems(exam: ExamRecord) -> Iterator[tuple[int, int, Problem
         if isinstance(block, ProblemBlock):
             problem_index += 1
             displayed_number += 1
-            yield problem_index, displayed_number, block.problem
+            yield problem_index, displayed_number, None, block.problem
             continue
         if block.numbering == NumberingMode.RESTART:
             displayed_number = 0
@@ -683,7 +756,7 @@ def iter_numbered_problems(exam: ExamRecord) -> Iterator[tuple[int, int, Problem
             if isinstance(item, ProblemBlock):
                 problem_index += 1
                 displayed_number += 1
-                yield problem_index, displayed_number, item.problem
+                yield problem_index, displayed_number, block.heading.strip(), item.problem
 
 
 def all_content(exam: ExamRecord) -> Iterator[str]:
@@ -694,8 +767,27 @@ def all_content(exam: ExamRecord) -> Iterator[str]:
         for body_block in block.problem.body:
             if isinstance(body_block, ProblemTextBlock):
                 yield body_block.text
+        for concern in block.problem.concerns:
+            yield concern.explanation
         for subpart in walk_subparts(block.problem.subparts):
             yield subpart.text
+
+
+MATHJAX_EXPRESSION = re.compile(r"\\\((?:.|\n)*?\\\)|\\\[(?:.|\n)*?\\\]")
+
+
+def unwrapped_unicode_math(text: str) -> set[str]:
+    """Find Unicode math glyphs that should be represented by TeX."""
+    prose = MATHJAX_EXPRESSION.sub("", text)
+    return {
+        character
+        for character in prose
+        if unicodedata.category(character) == "Sm"
+        or "\u0370" <= character <= "\u03ff"
+        or "\u1d2c" <= character <= "\u1d6a"
+        or "\u2070" <= character <= "\u209f"
+        or "\U0001d400" <= character <= "\U0001d7ff"
+    }
 
 
 def migrate_legacy_exam(legacy: LegacyExamRecord) -> ExamRecord:
@@ -729,11 +821,44 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
         errors.append("identifier does not match source")
     if exam.subject != source.subject or exam.subject_tag != source.subject_tag:
         errors.append("subject metadata does not match source")
-    if (exam.year, exam.month, exam.part) != (source.year, source.month, source.part):
-        errors.append("date or part metadata does not match source")
+    if (
+        exam.year,
+        exam.month,
+        exam.part,
+        exam.practice_variant,
+        exam.document_type,
+        exam.problem_count,
+    ) != (
+        source.year,
+        source.month,
+        source.part,
+        source.practice_variant,
+        source.document_type,
+        source.problem_count,
+    ):
+        errors.append("document, date, practice variant, or part metadata does not match source")
+    has_date = exam.year is not None or exam.month is not None
+    if has_date and (exam.year is None or exam.month is None):
+        errors.append("year and month must either both be present or both be absent")
+    if exam.document_type == DocumentType.PRACTICE_PROBLEMS:
+        if has_date or exam.part is not None or exam.practice_variant is not None:
+            errors.append("practice-problem collections cannot have a date, part, or variant")
+        if exam.problem_count is None or exam.problem_count < 1:
+            errors.append("practice-problem collections require a positive problem count")
+    else:
+        if exam.problem_count is not None:
+            errors.append("ordinary exams cannot declare a practice-problem count")
+        if exam.practice_variant is not None and has_date:
+            errors.append("practice exams cannot have a year or month")
+        if exam.practice_variant is None and not has_date:
+            errors.append("a record without a date must be a practice exam")
     if exam.pdf_url != source.pdf_url:
         errors.append("PDF URL does not match current manifest URL")
     problems = list(iter_problems(exam))
+    if exam.problem_count is not None and len(problems) != exam.problem_count:
+        errors.append(
+            f"record declares {exam.problem_count} problems but contains {len(problems)}"
+        )
     instructions = [
         block.text for block in iter_content_blocks(exam) if isinstance(block, InstructionsBlock)
     ]
@@ -783,6 +908,18 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
                 errors.append(f"problem index {problem_index} has an empty subpart label")
             if not subpart.text.strip() and not subpart.subparts:
                 errors.append(f"problem index {problem_index} has an empty subpart")
+        explanations = [concern.explanation.strip() for concern in problem.concerns]
+        if any(not explanation for explanation in explanations):
+            errors.append(f"problem index {problem_index} has an empty concern")
+        if len(explanations) != len(set(explanations)):
+            errors.append(f"problem index {problem_index} has duplicate concerns")
+        for concern_index, explanation in enumerate(explanations, start=1):
+            if characters := unwrapped_unicode_math(explanation):
+                displayed = " ".join(sorted(characters))
+                errors.append(
+                    f"problem index {problem_index} concern {concern_index} contains "
+                    f"Unicode math outside MathJax delimiters: {displayed}"
+                )
     figure_ids = [figure.id for figure in iter_tikz_blocks(exam)]
     if len(figure_ids) != len(set(figure_ids)):
         errors.append("TikZ figure IDs are not unique within the exam")
@@ -858,6 +995,9 @@ def build_exam(source: SourceExam, extraction: ModelExtraction) -> ExamRecord:
         part=source.part,
         pdf_url=source.pdf_url,
         content=extraction.content,
+        practice_variant=source.practice_variant,
+        document_type=source.document_type,
+        problem_count=source.problem_count,
     )
 
 
@@ -865,7 +1005,9 @@ def figure_png_filename(exam_id: str, figure: TikzBlock) -> str:
     return f"{exam_id}.{figure.id}.png"
 
 
-def exam_title(exam: ExamRecord) -> str:
+def exam_title(exam: ExamRecord | SourceExam) -> str:
+    if exam.document_type == DocumentType.PRACTICE_PROBLEMS:
+        return "Algebra First-Year Exam, Practice Problems"
     if exam.subject.startswith("First Year "):
         title = f"{exam.subject.removeprefix('First Year ')} First-Year Exam"
     elif exam.subject.startswith("PhD "):
@@ -874,7 +1016,12 @@ def exam_title(exam: ExamRecord) -> str:
         title = f"{exam.subject.removesuffix(' Qualifying Exam')} Qualifying Exam"
     else:
         title = f"{exam.subject} Exam"
-    title += f", {exam.month.title()} {exam.year}"
+    if exam.practice_variant is not None:
+        title = title.removesuffix(" Exam") + f" Practice Exam {exam.practice_variant}"
+    elif exam.year is not None and exam.month is not None:
+        title += f", {exam.month.title()} {exam.year}"
+    else:
+        raise ValueError(f"exam has neither a date nor a practice variant: {exam.id}")
     if exam.part is not None:
         title += f", Part {exam.part}"
     return title
@@ -979,9 +1126,33 @@ def render_html_subparts(subparts: list[Subpart], indentation: int) -> list[str]
     return lines
 
 
-def render_html_problem(problem: Problem, indentation: int, exam_id: str) -> list[str]:
+def render_html_concern(concern: ProblemConcern, indentation: int) -> list[str]:
     prefix = " " * indentation
-    lines = [f'{prefix}<li class="problem">']
+    status = (
+        "Suspected error."
+        if concern.status == ConcernStatus.SUSPECTED
+        else "Confirmed error."
+    )
+    content = render_html_text(concern.explanation, indentation + 2)
+    label = f"<strong>Warning: {status}</strong>"
+    if content and content[0].lstrip().startswith("<p>"):
+        content[0] = content[0].replace("<p>", f"<p>{label} ", 1)
+    else:
+        content.insert(0, f"{prefix}  <p>{label}</p>")
+    return [
+        f'{prefix}<div class="problem-concern" role="note">',
+        *content,
+        f"{prefix}</div>",
+    ]
+
+
+def render_html_problem(
+    problem: Problem, indentation: int, exam_id: str, problem_index: int
+) -> list[str]:
+    prefix = " " * indentation
+    lines = [f'{prefix}<li class="problem" id="problem-{problem_index}">']
+    for concern in problem.concerns:
+        lines.extend(render_html_concern(concern, indentation + 2))
     fallback = html_problem_fallback(problem)
     if fallback:
         lines.extend(render_html_text(fallback, indentation + 2))
@@ -1012,9 +1183,10 @@ def render_html_problem(problem: Problem, indentation: int, exam_id: str) -> lis
 def render_html_blocks(
     blocks: list[InstructionsBlock | ProblemBlock],
     displayed_number: int,
+    problem_index: int,
     indentation: int,
     exam_id: str,
-) -> tuple[list[str], int]:
+) -> tuple[list[str], int, int]:
     """Render content while grouping consecutive problems into semantic lists."""
     prefix = " " * indentation
     lines: list[str] = []
@@ -1033,12 +1205,18 @@ def render_html_blocks(
         while index < len(blocks) and isinstance(blocks[index], ProblemBlock):
             problem_block = blocks[index]
             displayed_number += 1
+            problem_index += 1
             lines.extend(
-                render_html_problem(problem_block.problem, indentation + 2, exam_id)
+                render_html_problem(
+                    problem_block.problem,
+                    indentation + 2,
+                    exam_id,
+                    problem_index,
+                )
             )
             index += 1
         lines.append(f"{prefix}</ol>")
-    return lines, displayed_number
+    return lines, displayed_number, problem_index
 
 
 def render_html(exam: ExamRecord) -> str:
@@ -1098,6 +1276,11 @@ def render_html(exam: ExamRecord) -> str:
         "    .problems { margin: 0; padding-left: 2.4rem; }",
         "    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }",
         "    .problem::marker { font-weight: 700; }",
+        "    .problem-concern {",
+        "      margin: 0 0 .8rem;",
+        "      color: #7a1f1f;",
+        "    }",
+        "    .problem-concern > :last-child { margin-bottom: 0; }",
         "    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }",
         "    .problem-figure { margin: 1rem 0; }",
         "    .problem-figure img {",
@@ -1177,6 +1360,7 @@ def render_html(exam: ExamRecord) -> str:
         "      .instructions { margin: .4rem 0 .55rem; }",
         "      .problems { padding-left: 1.75rem; }",
         "      .problem { margin-bottom: .55rem; padding-left: .1rem; }",
+        "      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }",
         "      .problem-figure { margin: .3rem 0; break-inside: avoid; }",
         "      .subparts { margin-top: .18rem; }",
         "      .subparts .subparts { margin-left: 1.4rem; }",
@@ -1199,14 +1383,15 @@ def render_html(exam: ExamRecord) -> str:
     ]
 
     displayed_number = 0
+    problem_index = 0
     pending_blocks: list[InstructionsBlock | ProblemBlock] = []
 
     def flush_pending() -> None:
-        nonlocal displayed_number
+        nonlocal displayed_number, problem_index
         if not pending_blocks:
             return
-        rendered, displayed_number = render_html_blocks(
-            pending_blocks, displayed_number, 4, exam.id
+        rendered, displayed_number, problem_index = render_html_blocks(
+            pending_blocks, displayed_number, problem_index, 4, exam.id
         )
         lines.extend(rendered)
         pending_blocks.clear()
@@ -1223,8 +1408,8 @@ def render_html(exam: ExamRecord) -> str:
         lines.append(f'      <h2 id="{heading_id}">{escape(block.heading.strip())}</h2>')
         if block.numbering == NumberingMode.RESTART:
             displayed_number = 0
-        rendered, displayed_number = render_html_blocks(
-            block.content, displayed_number, 6, exam.id
+        rendered, displayed_number, problem_index = render_html_blocks(
+            block.content, displayed_number, problem_index, 6, exam.id
         )
         lines.extend(rendered)
         lines.append("    </section>")

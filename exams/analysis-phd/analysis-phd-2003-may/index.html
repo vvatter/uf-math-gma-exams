@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,31 +158,31 @@
       <p>Do All Nine.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(X,Y\) are topological vector spaces, \(\Lambda:X\to Y\) is linear, and \(N\) is a closed subspace of \(X\). Let \(\pi:X\to X/N\) denote the quotient map. Show, if \(\Lambda(x)=0\) for each \(x\in N\), then there is a unique \(f:X/N\to Y\) satisfying \(\Lambda=f\circ\pi\). Show further, \(f\) is linear and \(\Lambda\) is continuous if and only if \(f\) is continuous.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show, if \(X\) is an infinite dimensional \(F\)-space (a topological vector space whose topology is induced by a complete invariant metric), then \(X\) does not have a countable Hamel basis. A Hamel basis is a basis in the sense of linear algebra.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Is every weakly convergent sequence in \(\ell^1\) strongly convergent? Are the weak and strong topologies on \(\ell^1\) the same?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\delta\) denote the distribution defined by \(\delta(\phi)=\phi(0)\) for \(\phi\in\mathcal D(\mathbb R)\). Find the support of \(\delta&#x27;\). For which \(f\in C^\infty(\mathbb R)\) is \(f\delta&#x27;=0\). Is it possible that an \(f\in C^\infty(\mathbb R)\) can vanish on the support of an \(A\in\mathcal D&#x27;(\mathbb R)\) and yet \(fA\ne0\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Construct a sequence in \(\mathcal D(\mathbb R)\) which converges to \(0\) in the topology of \(\mathcal S_1\) (tempered distributions), but not in the topology of \(\mathcal D(\mathbb R)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove, if \(A\) is a finite dimensional Banach algebra with unit \(e\), if \(x,y\in A\), and if \(xy=e\), then \(yx=e\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Show, if \(X\) is a compact Hausdorff space, then there is a natural one-one correspondence between closed subsets of \(X\) and closed ideals in \(C(X)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\mathbb T=\{\gamma\in\mathbb C:|\gamma|=1\}\) denote the unit circle. Let \(U\) denote the bilateral shift, viewed as the operator \(Uf(\gamma)=\gamma f(\gamma)\) on \(L^2(\mathbb T)\) (with respect to arclength measure). Given \(\omega\) a measurable subset of \(\mathbb T\), let \(P_\omega\) denote the projection onto the subspace of functions which are supported in \(\omega\). Does \(P_\omega\) commute with \(U\)? Find the spectral decomposition of \(U\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(A\) denote the commutative Banach algebra of functions of the form</p>
         <div class="display-math">\[
 f(x)=\sum_{n\in\mathbb Z}f_n\exp(inx),\quad\text{with }\sum |f_n|&lt;\infty

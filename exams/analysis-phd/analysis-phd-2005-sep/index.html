@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,36 +158,36 @@
       <p>Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true. Partial credit will be given where justified.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\Omega\subset\mathbb R^n\) be open. Prove that \(A\subset\mathcal D(\Omega)\) is bounded if and only if</p>
         <div class="display-math">\[
 \sup\{|\Lambda(\varphi)|\mid \varphi\in A\}&lt;\infty,
 \]</div>
         <p>for every \(\Lambda\in\mathcal D&#x27;(\Omega)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\mu\) be Lebesgue measure on \(\mathbb R\) and \(f\) be \(\mu\)-integrable on \([0,1]\). Suppose \(\int_0^r f\,d\mu=0\), for every rational \(r\in[0,1]\). Give a complete characterization of \(f\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\mathcal H\) be a Hilbert space and suppose \(A\) is a bounded operator on \(\mathcal H\) such that the range of \(A\) is finite dimensional. Let \(\{y_1,\ldots,y_n\}\) be an orthonormal basis for the range of \(A\). Prove that there exist \(x_1,\ldots,x_n\in\mathcal H\) such that</p>
         <div class="display-math">\[
 Ax=\sum_{j=1}^n[x,x_j]y_j,
 \]</div>
         <p>for all \(x\in\mathcal H\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(A\) be a bounded operator on a Hilbert space \(\mathcal H\) such that \(A(B_1)=\{Ax\mid x\in B_1\}\) is compact, where \(B_1\) is the closed unit ball of \(\mathcal H\). Prove that, as a map from \(B_1\) with the weak vector topology to \(\mathcal H\) with the norm topology, \(A\) is continuous. (Hint: show that the weak and norm topologies on \(A(B_1)\) must coincide under the given hypothesis.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(\mu\) be a positive Radon measure on \(\mathbb R^N\) and \(f\) be \(\mu\)-integrable. Show that for each \(\epsilon&gt;0\) there exist an upper semi-continuous function \(u_\epsilon\) and a lower semi-continuous function \(v_\epsilon\) such that \(u_\epsilon\leq f\leq v_\epsilon\) and \(\int(v_\epsilon-u_\epsilon)\,d\mu&lt;\epsilon\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\mu\) be a finite positive Radon measure on \(\mathbb R^N\) and \(\{f_n\}_{n\in\mathbb N}\subset L^2(\mu)\) with \(\|f_n\|_2\leq1\). Suppose \(\{f_n\}_{n\in\mathbb N}\) converges \(\mu\)-a.e. to \(f\). Show that \(\int|f_n-f|\,d\mu\to0\), as \(n\to\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(E\) be a topological vector space. Prove that if \(A\) and \(B\) are compact subsets of \(E\), then so is \(A+B\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Consider \(X\in\mathcal D(\mathbb R^2)^*\) defined by</p>
         <div class="display-math">\[
 \mathcal D(\mathbb R^2)\ni\phi\mapsto X(\phi)=\int_{\mathbb R}\phi(x,-x)\,dx.

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 4 (four) problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Consider the function \(g(x)=e^{-x}\).</p>
         <ol class="subparts">
           <li>
@@ -181,10 +187,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Based on \(u_1(x)=1,u_2(x)=x,u_3(x)=x^2\), use Gram–Schmidt orthogonalization process to compute the three polynomials \(w_1(x),w_2(x),w_3(x)\) which are orthonormal on the interval \([0,1]\) with respect to the inner product \((f,g)=\int_0^1 f(x)g(x)\,dx\). Using these polynomials, find the best approximation in \(P^2[0,1]\) for \(f(x)=x^{\frac12}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Consider the finite difference formula</p>
         <div class="display-math">\[
 f&#x27;(t_j)=\frac{1}{12h}\left[f(t_j-2h)-8f(t_j-h)+8f(t_j+h)-f(t_j+2h)\right]+O(h^4).
@@ -208,14 +214,14 @@ f&#x27;(t_j)=\frac{1}{12h}\left[f(t_j-2h)-8f(t_j-h)+8f(t_j+h)-f(t_j+2h)\right]+O
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Assume the numerical quadrature for \(\hat f(\hat x)\) on \([0,1]\) is</p>
         <div class="display-math">\[
 \hat J(\hat f)=\int_0^1 \hat f(\hat x)\,d\hat x\approx \hat Q(\hat f)=\sum_{j=0}^m \hat\alpha_j\hat f(\hat x_j).
 \]</div>
         <p>Derive the numerical quadrature of \(J(f)=\int_a^b f(x)\,dx\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Consider numerically solving the initial value problem</p>
         <div class="display-math">\[
 y&#x27;(t)=f(t,y),\quad 0&lt;t\leq t_f,\qquad \text{with }y(0)=\eta.

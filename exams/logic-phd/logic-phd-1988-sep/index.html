@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,34 +158,34 @@
       <p>Do any 8 problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Use truth tables to demonstrate the Cut Rule: \(\{P \lor Q, \neg P \lor R \vDash Q \lor R\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State Gödel’s Completeness Theorem for Propositional Logic and sketch the proof for a countable theory. (You may assume the Deduction Lemma.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State and prove the Compactness Theorem for Predicate Logic. (You may assume the Completeness Theorem.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Explain why the Theory of Dense Linear Orderings without Endpoints is complete. State the main results needed for the proof.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that every primitive recursive function is representable in formal arithmetic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Define the ultraproduct \(\prod_{i\in I} M_i/U\) and state Łoś’ Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Explain why there is no Enumeration Theorem for the Primitive Recursive Functions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Well-Ordering Principle and the Axiom of Choice and prove that the Well-Ordering Principle implies the Axiom of Choice.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Prove that \(\omega^{&lt;\omega}\) is countable, where \(\omega^{&lt;\omega}\) is the set of finite strings of natural numbers.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Suppose \(2 \leq \kappa \leq \lambda\) and \(\lambda\) is infinite. Show that \(2^\lambda = \kappa^\lambda\).</p>
       </li>
     </ol>

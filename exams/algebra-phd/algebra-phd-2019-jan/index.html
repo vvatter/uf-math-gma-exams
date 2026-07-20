@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,11 +158,11 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Determine the Galois group of the polynomial</p>
         <div class="display-math">\[f(x)=x^4-14x^2+9\in\mathbb{Q}[x].\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -185,7 +191,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>A pointed set is a pair \((S,x)\) with \(S\) a set and \(x\in S\). A morphism of pointed sets \((S,x)\to(S&#x27;,x&#x27;)\) is a function \(f:S\to S&#x27;\) such that \(f(x)=x&#x27;\).</p>
         <ol class="subparts">
           <li>
@@ -206,7 +212,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(F\) be the free group on \(n\) generators, \(n\geq 1\).</p>
         <ol class="subparts">
           <li>
@@ -227,17 +233,17 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Define the term injective module for a ring \(R\) with 1. Prove Baer’s criterion: A unitary left module \(J\) is injective if and only if for every left ideal \(L\) of \(R\), any \(R\)-module homomorphism \(L\to J\) can be extended to an \(R\)-module homomorphism \(R\to J\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(R\) be a ring and suppose that we have a short exact sequence</p>
         <div class="display-math">\[0\to A\xrightarrow{f}B\xrightarrow{g}C\to 0\]</div>
         <p>of left \(R\)-modules. Let \(M\) be a right \(R\)-module. Show that the induced sequence</p>
         <div class="display-math">\[M\otimes_R A\xrightarrow{1\otimes f}M\otimes_R B\xrightarrow{1\otimes g}M\otimes_R C\to 0\]</div>
         <p>is exact.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be a commutative ring with \(1\neq 0\) and let \(S\) be a multiplicative set containing 1.</p>
         <ol class="subparts">
           <li>
@@ -258,7 +264,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove the following properties of \(R=\mathbb{Z}[\sqrt{10}]\).</p>
         <ol class="subparts">
           <li>
@@ -287,13 +293,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(J\) be an ideal in a commutative ring \(R\) with 1. Assume that \(J\) is contained in every maximal ideal. Prove that if \(A\) is an \(R\)-module that satisfies the ascending chain condition on submodules, then \(\bigcap_{n=1}^{\infty}J^nA=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Prove the Noether Normalization Lemma: Let \(R\) be an integral domain that is a finitely generated extension ring of a field \(K\). Let \(F\) be the field of quotients of \(R\) and let \(r\) be the transcendence degree of \(F\) over \(K\). Then there exist a subset of \(r\) elements \(t_1,\ldots,t_r\) which are algebraically independent over \(K\) and such that \(R\) is integral over \(K[t_1,\ldots,t_r]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

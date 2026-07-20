@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -181,10 +187,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(R\) be a non-zero commutative ring with identity. Prove that \(R\) has a maximal ideal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(R\) and \(S\) be integral domains and let \(\phi\colon R\to S\) be a unital ring homomorphism. Let \(\psi\colon R[x]\to S[x]\) be the corresponding ring homomorphism, i.e., \(\psi\) applied to a polynomial is the result of applying \(\phi\) to each of its coefficients.</p>
         <ol class="subparts">
           <li>
@@ -205,13 +211,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be an integral domain and \(M\) a (unital) \(R\)-module. Suppose that \(M\) is finitely generated, and, for each \(m\in M\), there exists some \(r\in R\) such that \(r\neq 0\) and \(rm=0\). Prove that, there exists some \(a\in R\) such that \(a\neq 0\) and, for all \(m\in M\), \(am=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R=\mathbb{Z}[i]\) be the ring of Gaussian integers. Prove that \(R\) is a unique factorization domain. (You may assume standard results about different types of rings, but nothing, other than the definition and the fact that they form an integral domain, about Gaussian integers.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(n\geq 1\) and \(F=\mathbb{Q}(\sqrt{1},\sqrt{2},\ldots,\sqrt{n})\). Prove that \(2^{1/3}\notin F\).</p>
       </li>
     </ol>

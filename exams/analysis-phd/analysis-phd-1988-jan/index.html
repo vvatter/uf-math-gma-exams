@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,20 +158,20 @@
       <p>Answer all six questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Radon–Nikodym Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State and prove the Hahn–Banach Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\Omega\) be a topological space, \(\mathcal B(\Omega)\) the Borel subsets of \(\Omega\). Suppose that for each \(n\), \(\mu_n\) is a countably additive positive finite regular measure defined on \(\mathcal B(\Omega)\). Let</p>
         <div class="display-math">\[
 \mu(\mathord\cdot)=\sum_{n=1}^{\infty}\frac{\mu_n(\mathord\cdot)}{2^n\bigl(1+\mu_n(\Omega)\bigr)}.
 \]</div>
         <p>Show that \(\mu\) is also a regular countably additive measure.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\{f_n:n\geq 0\}\) and \(\{g_n:n\geq -1\}\) be two sequences of real-valued measurable functions on a measurable space \((\Omega,\mathcal F)\). Let \(B\subset\mathbb R^1\) be a Borel set on \(\mathbb R^1\). Define</p>
         <div class="display-math">\[
 T(w)=
@@ -194,10 +200,13 @@ T(w)=
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(T:(-\pi/2,\pi/2)\to\mathbb R\) be given by \(T(x)=\tan x\). Let \(\lambda\) be Lebesgue measure on \((-\pi/2,\pi/2)\) and define a measure \(\mu\) on \((\mathbb R,\mathcal B(\mathbb R))\) by setting \(\mu(A)=\lambda(T^{-1}(A))\). Compute \(\dfrac{d\mu}{dx}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> Problem 6 uses \(q\) without defining it. Also, the retained Hint 2, \(g=|f|^{p-1}\in L^q\), does not account for the sign of a general \(f\), and the endpoint \(p=1\) requires separate treatment. The intended correction is not uniquely determined from the immediate context.</p>
+        </div>
         <p>Fix \(1\leq p&lt;\infty\), and let \(f\in L^p(X,\mathcal A,\mu)\). Show that</p>
         <div class="display-math">\[
 \lVert f\rVert_p=\sup\left\{\int fg\,d\mu:\lVert g\rVert_q\leq 1\right\}.

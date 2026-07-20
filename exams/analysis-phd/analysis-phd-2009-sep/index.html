@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,25 +158,25 @@
       <p>Do 6 out of the 7 problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Fubini Theorems.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State and prove the Vitali integral convergence theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\mu\) be a signed measure on the \(\sigma\)-algebra \(\mathcal S\). Define positive and negative set for \(\mu\). Prove that if \(E\in\mathcal S\), then \(\mu^+(E)=\sup\{\mu(F):F\subset E,\ F\in\mathcal S\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(Y\) be an orthogonal set in a Hilbert space. Prove that \(\sum_{y\in Y}y\) converges if and only if \(\sum_{y\in Y}\lVert y\rVert^2&lt;\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(X\) be a Banach space, \(A\subset X\). Suppose that \(\sup_{a\in A}|x^*a|&lt;\infty\), for each \(x^*\in X^*\). Prove \(\sup_{a\in A}\lVert a\rVert&lt;\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\mu\) and \(\nu\) be finite measures such that each is absolutely continuous with respect to the other. Prove \(\frac{d\mu}{d\nu}=\frac{1}{\left(\frac{d\nu}{d\mu}\right)}\) a.e. \(\mu\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(X,Y,Z\) be Banach spaces and let \(\mathcal F\) be a total family of continuous linear maps on \(X\) to \(Y\). Let \(T:Z\to X\) be a linear map such that \(fT\) is continuous for every \(f\in\mathcal F\). Prove \(T\) is continuous. [Hint: Use the closed graph theorem.] Note: \(\mathcal F\) total means if \(f(x)=0\) for all \(f\in\mathcal F\), then \(x=0\).</p>
       </li>
     </ol>

@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -99,6 +105,9 @@ Let~\(X\) and~\(Y\) be disjoint, nonempty subsets of \(\mathbb{R}^n\), with~\(X\
 \]
  Prove that there exist points \(x_0\in X\), \(y_0\in Y\) with \(\lVert x_0-y_0\rVert=\operatorname{dist}(X,Y)\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The problem is preserved as printed, but its conclusion generally fails without an additional condition such as \(f(0)=0\), or without replacing \(f(x)/x\) by \((f(x)-f(0))/x\). The intended repair is not uniquely determined.
+\end{problemconcern}
 Let \(f:[0,a)\to\mathbb{R}\) be differentiable, and suppose that \(f'\) is strictly increasing on \([0,a)\). Prove that the function 
 \[
 g(x)=

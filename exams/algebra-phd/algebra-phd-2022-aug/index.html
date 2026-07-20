@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -202,14 +208,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(m,n\) be positive integers. Find \(r\) such that there is an isomorphism of \(\mathbb Z\)-modules</p>
         <div class="display-math">\[
 (\mathbb Z/m\mathbb Z)\otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z)\cong \mathbb Z/r\mathbb Z.
 \]</div>
         <p>Justify your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be a ring. Prove that the following are equivalent:</p>
         <ol class="subparts">
           <li>
@@ -238,10 +244,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(G\) be a group, let \(F\) be a field, and let \(\chi_1,\ldots,\chi_n\) be distinct homomorphisms from \(G\) into \(F^\times\). Prove that \(\chi_1,\ldots,\chi_n\) are linearly independent over \(F\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -262,7 +268,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be a commutative Noetherian ring with \(1\).</p>
         <ol class="subparts">
           <li>
@@ -291,13 +297,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(S\) be a commutative ring with \(1\), let \(R\) be a subring of \(S\) which contains \(1\), and let \(x\in S\). Suppose there is a subring \(T\subset S\) such that \(T\supset R[x]\) and \(T\) is finitely generated as an \(R\)-module. Prove that \(x\) is a root of some monic polynomial with coefficients in \(R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a Noetherian integral domain with a unique nonzero prime ideal \(P\). Assume that \(R\) is integrally closed in its fraction field \(F\). Prove that \(P\) is a principal ideal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Determine which of the following are Dedekind domains. Give a brief explanation in each case.</p>
         <ol class="subparts">
           <li>
@@ -334,7 +340,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(D\) be a finite division ring. Prove that \(D\) is a field.</p>
       </li>
     </ol>

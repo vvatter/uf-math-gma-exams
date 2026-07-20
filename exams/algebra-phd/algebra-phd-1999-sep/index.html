@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Please do 7 out of the 11 problems below.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Here \(\mathbb{Z}_n\) denotes the cyclic group of order \(n\).</p>
         <ol class="subparts">
           <li>
@@ -181,7 +187,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -202,7 +208,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -231,10 +237,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) and \(S\) be rings and \(A_R, {}_R B_S, C_S\) (bi)-modules. Demonstrate an isomorphism of abelian groups between \(\operatorname{Hom}_S(A\otimes_R B,C)\) and \(\operatorname{Hom}_R(A,\operatorname{Hom}_S(B,C))\). (You should state very clearly what must be checked.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a ring, let</p>
         <div class="display-math">\[
 0\longrightarrow A\xrightarrow{f}B\xrightarrow{g}C\longrightarrow 0
@@ -271,7 +277,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(A\) be a commutative ring with 1 such that every element \(x\in A\) satisfies \(x^n=x\) for some \(n&gt;1\), depending on \(x\). Prove that</p>
         <ol class="subparts">
           <li>
@@ -292,7 +298,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(C\) and \(D\) be categories, and let \(S\) and \(T\) be covariant functors from \(C\) to \(D\).</p>
         <ol class="subparts">
           <li>
@@ -316,7 +322,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -341,7 +347,7 @@ A=(y)\cap(x+cy,y^2)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -362,10 +368,10 @@ A=(y)\cap(x+cy,y^2)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(p\) be a prime and \(n\geq 1\) an integer. Show that \(F\) is a finite field with \(p^n\) elements if and only if \(F\) is a splitting field of \((x^{p^n}-x)\) over the field \(\mathbb{Z}_p\) of \(p\) elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

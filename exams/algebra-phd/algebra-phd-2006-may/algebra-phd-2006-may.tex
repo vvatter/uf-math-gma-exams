@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -95,6 +101,9 @@ Prove that for each prime~\(p\) and each \(n\geq 1\) there is a field with \(p^n
 \item
 Let \(E\subset\mathbb{C}\) be the splitting field of \(X^8-1\) over~\(\mathbb{Q}\). Determine the Galois group \(G=\operatorname{Gal}(E/\mathbb{Q})\). For each subgroup \(H\leq G\) determine the fixed field \(E^H\) of~\(H\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The displayed indexing condition has been retained as printed, but its scope is mathematically ambiguous because the relation \(yx_iy^{-1}=x_{i+1}\) does not involve~\(j\).
+\end{problemconcern}
 Let~\(F\) be the free group on two letters. Prove that the commutator subgroup \([F,F]\) is not finitely generated. Hint: For each \(n\geq 1\) consider the group 
 \[
 G_n=\langle x_1,\ldots,x_n,y:x_ix_j=x_jx_i,\;yx_iy^{-1}=x_{i+1}\text{ for }1\leq i<j\leq n,\;yx_ny^{-1}=x_1\rangle.

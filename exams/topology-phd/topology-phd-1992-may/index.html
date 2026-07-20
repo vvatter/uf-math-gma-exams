@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer the following questions without giving proofs.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Define what it means for a space \(X\) to be</p>
         <ol class="subparts">
           <li>
@@ -181,13 +187,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(K\) be a finite simplicial complex. Define \(\chi(K)\), the Euler characteristic of \(K\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Define the degree of a map \(f:S^n\to S^n\). (You may assume that \(f\) is smooth.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(K=K_1\cup K_2\), where \(K\) is a simplicial complex and \(K_1\), \(K_2\), and \(A=K_1\cap K_2\) are subcomplexes of \(K\). State the Mayer–Vietoris sequence (in either homology or cohomology) for \((K,K_1,K_2,A)\).</p>
       </li>
     </ol>
@@ -195,22 +201,22 @@
       <p>Answer the following questions, giving proofs and examples.</p>
     </div>
     <ol class="problems" start="5">
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Must a continuous map \(f:S^4\to S^4\) of non-negative degree have a fixed point?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Compute the fundamental group of a closed, non-orientable surface \(X\) of genus 2.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State and prove the Brouwer fixed point theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(U\) be an open subset of \(\mathbb{R}^n\). Show that \(U\) is connected if and only if \(U\) is arcwise connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that no covering space for the two-torus, \(T^2=S^1\times S^1\), has the homotopy type of the figure-8, \(S^1\vee S^1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Compute the homology groups of the closed unit disk \(D^n=\{x\in\mathbb{R}^n:\lVert x\rVert\leq 1\}\) and the unit sphere \(S^n=\{u\in\mathbb{R}^{n+1}:\lVert u\rVert=1\}\), for all \(n\geq 0\). (Note that \(D^0=\{0\}\) and that \(S^0=\{-1,1\}\).)</p>
       </li>
     </ol>

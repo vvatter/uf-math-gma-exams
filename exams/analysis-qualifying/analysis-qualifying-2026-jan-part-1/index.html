@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do three of four.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Do two of three.</p>
         <ol class="subparts">
           <li>
@@ -184,7 +190,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(f:[0,1]\times[0,1]\to\mathbb{R}\). Show, if (a)–(c), then \(F:[0,1]\to\mathbb{R}\) defined by</p>
         <div class="display-math">\[
 F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
@@ -217,10 +223,10 @@ F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((X,\mathcal{M})\) denote a measurable space and let \(P(X)\) denote the power set of \(X\). Prove, if \(\mathcal{M}\ne P(X)\) and \(\{x\}\in\mathcal{M}\) for each \(x\in X\), then there exists an \(A\notin\mathcal{M}\otimes\mathcal{M}\) such that \([A]_x,[A]^y\in\mathcal{M}\) for all \(x\in X\). Suggestion: First show \(\delta:X\to X\times X\) defined by \(\delta(x)=(x,x)\) is measurable from \((X,\mathcal{M})\) to \((X\times X,\mathcal{M}\otimes\mathcal{M})\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \((X,\mathcal{M},\mu)\) is a measure space and \(f,g:X\to[0,\infty)\) are measurable. Show</p>
         <ol class="subparts">
           <li>

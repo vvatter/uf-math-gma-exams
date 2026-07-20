@@ -70,6 +70,12 @@
             "text": "Let \\(\\phi(t)=\\frac18[1+7e^{it}]\\). Show that \\(\\phi\\) is a characteristic function but that \\(|\\phi|\\) is not.\n\nHint. \\(|\\phi|^2\\) is the characteristic function of a measure concentrated on \\(\\{-1,0,1\\}\\). If \\(|\\phi|\\) is the characteristic function of a measure \\(m\\), then \\(|\\phi|^2\\) is the characteristic function of \\(m*m\\).",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Part (b) is retained as printed, but its conclusion can fail for a nonconstant symmetric characteristic function when the sequence alternates in sign. Any intended additional restriction or alternative conclusion is not uniquely determined."
+          }
         ]
       }
     },

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,31 +155,31 @@
       <h1>Combinatorics PhD Exam, August 2018</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Find a generating function for the number of positive integer solutions to \(x_1+2x_2+3x_3+4x_4+5x_5=n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Tickets numbered \(\{1,2,\ldots,n\}\) are drawn from an urn at random one after the other without replacement. What is the probability that the number \(r\) is drawn on the \(k^{th}\) drawing?</p>
         <p>Among a population of \(n+1\) people, a rumor is spread at random. One person tells the rumor to a second, who in turn repeats it to a third person, etc. What is the probability that the rumor will be told \(k\) times without being repeated to any person?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove that there exists no simple, bipartite, planar graph with minimum degree at least \(4\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\mu\) be the largest eigenvalue of the adjacency matrix of a graph \(G\) and \(\Delta\) the maximum degree of \(G\). Prove that \(\mu\leq\Delta\).</p>
         <p>(Hint: Consider the largest, in absolute value, coordinate of a corresponding eigenvector.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that a \(k\)-regular graph of girth \(4\) has at least \(2k\) vertices, and a \(k\)-regular graph of girth \(5\) has at least \(k^2+1\) vertices. Draw a \(3\)-regular graph of girth \(4\) with \(2\cdot 3=6\) vertices and a \(3\)-regular graph of girth \(5\) with \(3^2+1=10\) vertices.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(f_n\) be the number of all compositions of the integer \(n\) into odd parts. Find the exponential order of the numbers \(f_n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Recall that a permutation is called even if it has an even number of even cycles, and it is called odd if it has an odd number of even cycles. Also recall that a derangement is a permutation with no \(1\)-cycles.</p>
         <p>Let \(A_n\) be the number of all even derangements of length \(n\), and let \(B_n\) be the number of all odd derangements of length \(n\). Find an exact formula for \(A_n-B_n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

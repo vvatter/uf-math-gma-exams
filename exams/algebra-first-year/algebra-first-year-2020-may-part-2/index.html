@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do four out of the six problems below. If you hand in more than four problems, only the first four will be graded. You may (within reason) use results from the text if you state them fully.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(R\) is a ring with identity, and recall that a nonzero unital (left) \(R\)-module \(M\) is simple if its only submodules are \(0\) and \(M\). Suppose that \(M\) is a simple \(R\)-module.</p>
         <ol class="subparts">
           <li>
@@ -181,7 +187,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Which of the following polynomials are irreducible in the given ring? Explain briefly, and if the polynomial is not irreducible, give an irreducible factorization.</p>
         <ol class="subparts">
           <li>
@@ -210,7 +216,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(R\) be the ring</p>
         <div class="display-math">\[
 R=\{a+b\sqrt{-13}\in\mathbb{C}\mid a,b\in\mathbb{Z}\}.
@@ -250,16 +256,16 @@ R=\{a+b\sqrt{-13}\in\mathbb{C}\mid a,b\in\mathbb{Z}\}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(K\) be a field. Suppose \(V\) is a \(K\)-vector space of finite dimension and that \(W_1,W_2\subseteq V\) are subspaces. Show that</p>
         <div class="display-math">\[
 \dim_K(W_1+W_2)=\dim_K(W_1)+\dim_K(W_2)-\dim_K(W_1\cap W_2).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Find representatives in rational canonical form for all conjugacy classes of order \(5\) or \(7\) in \(GL_4(\mathbb{F}_2)\) (first find irreducible factorizations of \(X^5-1\) and \(X^7-1\) in \(\mathbb{F}_2[X]\)).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \(p\) and \(q\) are distinct primes in \(\mathbb{Z}\) and let \(\alpha=\sqrt{p}+\sqrt{q}\). Show that \(\mathbb{Q}(\alpha)=\mathbb{Q}(\sqrt{p},\sqrt{q})\) and use this to compute the degree of the extension \(\mathbb{Q}(\alpha)/\mathbb{Q}\). Find also the minimal polynomial of \(\alpha\) over \(\mathbb{Q}\).</p>
       </li>
     </ol>

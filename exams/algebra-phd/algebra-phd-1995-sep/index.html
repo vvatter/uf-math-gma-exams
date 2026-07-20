@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -173,10 +179,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>A proper subgroup \(M\) of a group \(G\) is maximal if whenever \(M&lt;H\leq G\), we have \(H=M\) or \(H=G\). Suppose that \(G\) is a finite group has only one maximal subgroup. Prove that \(G\) is cyclic of prime power order.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\) be a commutative Artinian ring with identity. Prove the following statements.</p>
         <ol class="subparts">
           <li>
@@ -205,7 +211,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>A module \(F\) over a commutative ring with identity is called flat if for any short exact sequence \(0\longrightarrow E&#x27;\longrightarrow E\longrightarrow E&#x27;&#x27;\longrightarrow 0\), the sequence \(0\longrightarrow F\otimes E&#x27;\longrightarrow F\otimes E\longrightarrow F\otimes E&#x27;&#x27;\longrightarrow 0\) is exact.</p>
         <ol class="subparts">
           <li>
@@ -226,7 +232,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -247,7 +253,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(A\) be a commutative ring with identity, let \(M\) be an \(A\)-module, and let \(N\) be a submodule of \(M\).</p>
         <ol class="subparts">
           <li>
@@ -276,7 +282,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(A\) be a commutative ring with identity. Let \(M\) be a \(A\)-module.</p>
         <ol class="subparts">
           <li>
@@ -297,7 +303,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(p\) be a prime and let \(U_p\) be the subgroup of the group of complex roots of unity consisting of those roots of unity whose order is a power of \(p\).</p>
         <ol class="subparts">
           <li>
@@ -326,7 +332,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Consider the polynomial over the field \(F_2\) with two elements:</p>
         <div class="display-math">\[g(x)=x^4+x^3+x^2+x+1\]</div>
         <ol class="subparts">
@@ -364,7 +370,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(K/k\) be a cyclic extension of fields with finite Galois group \(\langle\sigma\rangle\).</p>
         <ol class="subparts">
           <li>
@@ -385,7 +391,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(G=\langle g\rangle\) be a finite cyclic group and regard \(\mathbb{Z}\) (the integers) as a trivial module of \(G\) (i.e., \(\mathbb{Z}[G]\)-module). Compute for \(n\geq 1\), \(H^n(G,\mathbb{Z})\). Justify your answer.</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -181,7 +187,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -210,7 +216,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(L/K\) be an algebraic field extension. Let \(S\) denote the set of elements of \(L\) which are separable over \(K\).</p>
         <ol class="subparts">
           <li>
@@ -231,10 +237,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Give an example of a polynomial \(f(X)\in\mathbb{Q}[X]\) whose Galois group is isomorphic to \(S_5\). Prove that this is the case.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -263,19 +269,19 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove that an abelian group is divisible if and only if it is an injective \(\mathbb{Z}\)-module.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be a commutative ring with 1, let \(M\) be a finitely generated \(R\)-module, and let \(I\) be an ideal of \(R\) which is contained in every maximal ideal of \(R\). Prove that if \(IM=M\) then \(M=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be a commutative Noetherian ring with 1. Let \(0=Q_1\cap\cdots\cap Q_n\) be a reduced primary decomposition of the zero ideal in \(R\) and set \(P_i=\sqrt{Q_i}\) for \(1\leq i\leq n\). Prove that \(P_1\cup\cdots\cup P_n\) is the set of zero divisors of \(R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a UFD. Prove that \(R\) is integrally closed in its field of fractions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -296,7 +302,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(K\) be a field and let \(A\) be a central simple algebra over \(K\) such that \(\dim_K(A)=n\) is finite. Prove that \(A\otimes_K A^{\mathrm{op}}\cong M_{n\times n}(K)\).</p>
       </li>
     </ol>

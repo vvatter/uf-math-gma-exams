@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,25 +155,25 @@
       <h1>Complex Analysis PhD Exam, August 2007</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\overline D\) be the closure of the unit disk. Assume \(f:\overline D\to\mathbb C\) is continuous with \(f\) analytic on \(D\), \(|f(z)|&gt;3\) for \(|z|=1\), and \(f(0)=1-2i\). Must \(f\) have a zero in the unit disk? Prove your answer is correct.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a simply connected region. A function \(f:G\to G\) is said to be biholomorphic if \(f\) is bijective, analytic, and \(f^{-1}\) is also analytic. If \(z_1,z_2\) are distinct elements of \(G\) and \(f_1,f_2:G\to G\) are biholomorphisms with \(f_1(z_1)=f_2(z_1)\) and \(f_1(z_2)=f_2(z_2)\), prove that \(f_1=f_2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Assume that \(f\) is entire, \(f(0)=3+4i\), and \(|f(z)|\leq 5\) when \(|z|&lt;1\). What is \(f&#x27;(0)\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\mathcal F\) be the collection of analytic mappings of open unit disk \(D\) into \(\{\operatorname{Re}(z)&gt;0\}\) such that \(f(0)=1\). Show that \(\mathcal F\) is a normal family.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(h_n\) be a sequence of harmonic functions on the connected open set \(G\) and assume that \(h_n\to h\) uniformly on compact subsets of \(G\). Show that \(h\) is harmonic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Assume that \(f\) and \(g\) are entire and for all \(z\in\mathbb C\), \(|f(z)|\leq |g(z)|\). Show that for some constant \(c\) with \(|c|\leq 1\), \(f=cg\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Assume that \(f\) is a meromorphic function on \(\mathbb C\). A complex number \(w\) is called a period of \(f\) if \(f(z+w)=f(z)\) for all \(z\in\mathbb C\).</p>
         <ol class="subparts">
           <li>
@@ -188,7 +194,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(p\) be the polynomial \(p(z)=a_0+a_1z+\cdots+a_nz^n\). Show that for each \(j=0,1,\ldots,n\),</p>
         <div class="display-math">\[
 |a_j|\leq\max\{|p(z)|:|z|=1\}. \tag{1}

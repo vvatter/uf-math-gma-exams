@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that the circle \(S^1\) is not homeomorphic to the closed 2-disk \(B^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(A\subset \mathbb{R}^2\) be an infinite countable subspace.</p>
         <ol class="subparts">
           <li>
@@ -176,7 +182,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f:X\to\mathbb{R}^2\) be continuous injective map. Is \(f\) an embedding if</p>
         <ol class="subparts">
           <li>
@@ -205,10 +211,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that a continuous injective map \(f:(0,1)\to\mathbb{R}\) is an embedding.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that every compact Hausdorff space is normal.</p>
       </li>
     </ol>
@@ -216,13 +222,13 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Describe all connected subsets of the real line \(\mathbb{R}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State the Contraction Mapping Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\mathbb{R}_\ell\) denote the reals with the lower limit topology, i.e. topology defined by the basis \(\{[a,b)\mid a,b\in\mathbb{R}\}\). Is \(\mathbb{R}_\ell\)</p>
         <ol class="subparts">
           <li>
@@ -243,25 +249,25 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Show that a connected metric space cannot be infinite countable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>State the Urysohn Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Give definition of a quotient map.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Are the spaces \((0,1)\times[0,1)\) and \([0,1)\times[0,1)\) homeomorphic?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Describe the one-point compactification of \(X=(0,1)\cup(2,3)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Let \(X\) be a locally connected space. Is every component of \(X\) closed?</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f:[a,b]\to\mathbb{R}\) be Riemann integrable, let \(g\) be a real-valued function on \([a,b]\), and let \(D=\{t\in[a,b]:f(t)\ne g(t)\}\).</p>
         <ol class="subparts">
           <li>
@@ -173,22 +179,22 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove Dini’s theorem that, if the sequence \((f_n)_{n=0}^{\infty}\) of continuous real-valued functions on a compact space decreases pointwise to zero, then the convergence is uniform. Show by example that uniform convergence can fail if decreases pointwise is replaced by converges pointwise.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State the Weierstrass approximation theorem. Determine exactly which continuous functions \(f:[-1,1]\to\mathbb{R}\) satisfy the requirement that for each strictly positive integer \(n\),</p>
         <div class="display-math">\[
 \int_{-1}^{1}f(t)t^n\,dt=0.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((\Omega,\mathcal{A},\mu)\) be a measure space and let \((A_n)_{n=1}^{\infty}\) be a sequence in \(\mathcal{A}\). For each positive integer \(N\), let \(B_N\) be the set containing exactly those \(\omega\in\Omega\) that lie in \(A_n\) for at least \(N\) values of \(n\). By considering the series \(\sum_{n=1}^{\infty}\mathbf{1}_{A_n}\) of indicator functions, prove that</p>
         <div class="display-math">\[
 N\mu(B_N)\leq\sum_{n=1}^{\infty}\mu(A_n).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let the non-negative function \(f:\mathbb{R}\to\mathbb{R}\) be integrable with respect to Lebesgue measure \(\lambda\) and for each real \(t\) define</p>
         <div class="display-math">\[
 F(t)=\int_0^t f\,d\lambda.

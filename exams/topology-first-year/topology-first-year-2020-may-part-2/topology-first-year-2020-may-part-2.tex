@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -96,6 +102,9 @@ Answer the following with complete definitions or statements or proofs.
 \end{examinstructions}
 \begin{examproblems}{5}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The displayed definition is mathematically inconsistent over the stated real domain: \(\sqrt{x}\) is not real-valued for negative~\(x\). The intended correction to the domain or formula is not uniquely determined, so the source reading has been retained.
+\end{problemconcern}
 Does the sequence \(f_n:\mathbb R\to\mathbb R\), \(f_n(x)=\sqrt{x}/n\), converge in
 \begin{examsubparts}
 \item[\textnormal{(a)}]

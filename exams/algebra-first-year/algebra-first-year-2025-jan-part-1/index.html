@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,16 +158,16 @@
       <p>Answer 4 questions. You should indicate which 4 problems you wish to be graded. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>In \(S_8\), write down a representative of each conjugacy class of elements of order \(4\) and compute the order of its centralizer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a group of order \(124=2^2\cdot 31\). Prove that \(G\) has a cyclic subgroup of order \(62\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove that there exists a nonabelian group of order \(2025=3^4\cdot 5^2\). (You do not have to determine its multiplication explicitly.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -190,7 +196,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(G\) be a finite group and \(p\) a prime. Let \(K\) be the intersection of all the Sylow \(p\)-subgroups of \(G\).</p>
         <ol class="subparts">
           <li>
@@ -211,7 +217,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(G\) be a group, and let \(Z(G)\) denote its center.</p>
         <ol class="subparts">
           <li>

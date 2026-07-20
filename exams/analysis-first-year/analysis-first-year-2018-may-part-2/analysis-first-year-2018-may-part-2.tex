@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -99,6 +105,9 @@ the set~\(A\) comprising all points~\(\omega\) for which the sequence of values 
 the set~\(B\) comprising all points~\(\omega\) for which the sequence of values \(f_n(\omega)\) changes sign infinitely often.
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source clearly says “Lebesgue-measurable functions,” but measurability and uniform convergence alone do not ensure the stated integrability conclusion, even when the measure is finite. A missing integrability hypothesis may have been intended, but the correction is not uniquely determined, so the source wording has been retained.
+\end{problemconcern}
 \((\Omega,\mathcal{F},\mu)\) is a measure space on which \((f_n:n\geq 0)\) is a sequence of Lebesgue-measurable functions converging uniformly to~\(f\). Prove that if \(\mu(\Omega)<\infty\) then it follows that~\(f\) is integrable and \(\int_\Omega f_n\,d\mu\to\int_\Omega f\,d\mu\). Show by example that if \(\mu(\Omega)=\infty\) then the same conclusion may not follow.
 \item
 Let \((f_n:n\geq 0)\) be a uniformly-bounded sequence of Riemann-integrable functions on \([a,b]\). If \(f_n\to 0\) pointwise, does it follow that \(\int_a^b f_n\to 0\)? Proof or counterexample required.

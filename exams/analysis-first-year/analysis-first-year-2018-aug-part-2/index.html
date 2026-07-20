@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let the sequence \((s_n)_{n=1}^{\infty}\) in \([0,1]\) be uniformly distributed in the sense that if \(0 \le a \le b \le 1\) then</p>
         <div class="display-math">\[
 \lim_{n\to\infty}\frac{\#\{k\le n:s_k\in[a,b]\}}{n}=b-a.
@@ -181,7 +187,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Fix \(a\in\mathbb{R}\) and for each integer \(n&gt;0\) write \(f_n(t)=n^a t(1-t^2)^n\) whenever \(0\le t\le 1\).</p>
         <ol class="subparts">
           <li>
@@ -210,10 +216,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f:[1,\infty)\to\mathbb{R}\) be continuous and satisfy \(\lim_{t\to\infty}f(t)=A\in\mathbb{R}\). Prove that there is a sequence \((p_n)_{n=0}^{\infty}\) of polynomials such that \(p_n(1/t)\) converges to \(f(t)\) uniformly for \(t\ge 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((f_n)_{n=1}^{\infty}\) be a sequence of real-valued measurable functions. Prove that each of the following sets is measurable:</p>
         <ol class="subparts">
           <li>
@@ -242,7 +248,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>State the Monotone Convergence Theorem. Use it to prove the following: let \((f_n)_{n=1}^{\infty}\) be a sequence of non-negative integrable functions with pointwise limit \(f\); if \(\int f_n\,d\mu\le M&lt;\infty\) for each \(n\) then \(f\) is integrable and \(\int f\,d\mu\le M\).</p>
       </li>
     </ol>

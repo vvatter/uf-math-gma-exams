@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>\(A\) and \(B\) are nonempty sets of real numbers such that: (i) \(A \cup B = \mathbb{R}\) and (ii) \(a &lt; b\) whenever \(a \in A\) and \(b \in B\). Prove that there exists a unique \(s \in \mathbb{R}\) such that \((−\infty,s) \subseteq A\) and \((s,\infty) \subseteq B\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) be a metric space, of which \(A\) and \(B\) are compact subsets; define \(\delta := \inf\{d(a,b):a \in A,b \in B\}\). Prove that there exist \(a_0 \in A\) and \(b_0 \in B\) such that \(d(a_0,b_0)=\delta\). Must \(a_0\) and \(b_0\) be unique? Proof or counterexample, as appropriate.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f\) be a surjective map from the precompact metric space \(X\) onto the metric space \(Y\). Prove that if \(f\) is uniformly continuous then \(Y\) is also precompact. Show by example that if uniformly is dropped then \(Y\) can fail to be precompact.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f:\mathbb{R}\to\mathbb{R}\) be continuous. Can it be the case that for each \(t \in \mathbb{R}\), the value \(f(t)\) is irrational iff \(t\) itself is rational? If yes, give an example; if no, give a proof.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable and assume that \(f(t)\to\ell \in \mathbb{R}\) as \(t\to\infty\). Prove that if \(f&#x27;(t)\to L \in \mathbb{R}\) as \(t\to\infty\) then \(L=0\).</p>
       </li>
     </ol>

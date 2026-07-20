@@ -9,11 +9,14 @@ import unittest
 import pymupdf
 
 from extract_exams import (
+    ConcernStatus,
+    DocumentType,
     ExamRecord,
     InstructionsBlock,
     NumberingMode,
     PROMPT_VERSION,
     Problem,
+    ProblemConcern,
     ProblemTextBlock,
     ProblemBlock,
     ReviewCategory,
@@ -28,6 +31,7 @@ from extract_exams import (
     exam_json_path,
     exam_pdf_path,
     exam_tex_path,
+    exam_title,
     extract_one,
     has_ascii_control_characters,
     part_from_manifest,
@@ -70,14 +74,73 @@ def exam_for(item: SourceExam, problems: list[Problem]) -> ExamRecord:
         part=item.part,
         pdf_url=item.pdf_url,
         content=[ProblemBlock(problem=problem) for problem in problems],
+        practice_variant=item.practice_variant,
+        document_type=item.document_type,
+        problem_count=item.problem_count,
     )
 
 
 class ExtractionSchemaTests(unittest.TestCase):
+    def test_practice_problem_collection_title_and_count(self) -> None:
+        item = replace(
+            source(),
+            id="algebra-first-year-practice-problems",
+            year=None,
+            month=None,
+            part=None,
+            document_type=DocumentType.PRACTICE_PROBLEMS,
+            problem_count=2,
+        )
+        problems = [make_problem("First.", []), make_problem("Second.", [])]
+        exam = exam_for(item, problems)
+
+        self.assertEqual(exam_title(item), "Algebra First-Year Exam, Practice Problems")
+        self.assertEqual(validate_exam(exam, item, []), [])
+        exam.problem_count = 3
+        self.assertIn(
+            "document, date, practice variant, or part metadata does not match source",
+            validate_exam(exam, item, []),
+        )
+
+    def test_undated_practice_exam_title(self) -> None:
+        item = replace(
+            source(),
+            id="algebra-first-year-practice-a-part-1",
+            year=None,
+            month=None,
+            practice_variant="A",
+        )
+
+        self.assertEqual(
+            exam_title(item),
+            "Algebra First-Year Practice Exam A, Part 1",
+        )
+
+    def test_only_practice_exams_may_be_undated(self) -> None:
+        practice = replace(
+            source(),
+            id="algebra-first-year-practice-a-part-1",
+            year=None,
+            month=None,
+            practice_variant="A",
+        )
+        problem = make_problem("Prove it.", [])
+        self.assertEqual(validate_exam(exam_for(practice, [problem]), practice, []), [])
+
+        undated = replace(practice, practice_variant=None)
+        errors = validate_exam(exam_for(undated, [problem]), undated, [])
+        self.assertIn("a record without a date must be a practice exam", errors)
+
+        dated_practice = replace(source(), practice_variant="A")
+        errors = validate_exam(
+            exam_for(dated_practice, [problem]), dated_practice, []
+        )
+        self.assertIn("practice exams cannot have a year or month", errors)
+
     def test_prompt_normalizes_mathematician_names_and_eponyms(self) -> None:
         normalized_prompt = " ".join(SYSTEM_PROMPT.split())
 
-        self.assertEqual(PROMPT_VERSION, "exam-extraction-v16")
+        self.assertEqual(PROMPT_VERSION, "exam-extraction-v17")
         self.assertIn("Gödel rather than Goedel", normalized_prompt)
         self.assertIn("Hahn–Banach", SYSTEM_PROMPT)
         self.assertIn("Preserve a hyphen that is actually part", SYSTEM_PROMPT)
@@ -89,6 +152,8 @@ class ExtractionSchemaTests(unittest.TestCase):
             "Do not flag a clear cross-problem reference merely because it exists",
             normalized_prompt,
         )
+        self.assertIn("MATHEMATICAL CONCERNS", SYSTEM_PROMPT)
+        self.assertIn("Never mark a concern confirmed", normalized_prompt)
 
     def test_outputs_use_canonical_exam_directory_names(self) -> None:
         item = source()
@@ -158,6 +223,43 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertEqual(selection.deferred_by_limit, 1)
         self.assertEqual(forced_selection.ids, tuple(item.id for item in items))
         self.assertEqual(forced_selection.skipped_completed, 0)
+
+    def test_bulk_selection_omits_practice_problem_collections(self) -> None:
+        dated = source()
+        collection = replace(
+            source(),
+            id="algebra-first-year-practice-problems",
+            year=None,
+            month=None,
+            part=None,
+            document_type=DocumentType.PRACTICE_PROBLEMS,
+            problem_count=113,
+        )
+        sources = {item.id: item for item in (dated, collection)}
+
+        selection = select_exam_ids(
+            sources,
+            [],
+            pilot=False,
+            all_exams=True,
+            subject_tags=None,
+            limit=None,
+            force=True,
+        )
+
+        self.assertEqual(selection.ids, (dated.id,))
+        with self.assertRaisesRegex(
+            ValueError, "require extract_practice_problems.py"
+        ):
+            select_exam_ids(
+                sources,
+                [collection.id],
+                pilot=False,
+                all_exams=False,
+                subject_tags=None,
+                limit=None,
+                force=True,
+            )
 
     def test_subject_selection_is_repeatable_and_validated(self) -> None:
         analysis = replace(
@@ -498,6 +600,58 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertIn("body { font-size: 11pt; line-height: 1.28;", rendered)
         self.assertIn(".institution { margin-bottom: .2rem; font-size: 9pt; }", rendered)
         self.assertIn('.institution a { text-decoration: none; }', rendered)
+
+    def test_html_places_problem_concern_before_source_text(self) -> None:
+        item = source()
+        problem = make_problem(
+            text=r"Let \(p\) be prime and prove the assertion.", subparts=[]
+        )
+        problem.concerns = [
+            ProblemConcern(
+                status=ConcernStatus.SUSPECTED,
+                explanation=r"The assertion appears to fail when \(p=2\).",
+            )
+        ]
+
+        rendered = render_html(exam_for(item, [problem]))
+
+        self.assertIn('<li class="problem" id="problem-1">', rendered)
+        self.assertIn('<div class="problem-concern" role="note">', rendered)
+        self.assertIn("<strong>Warning: Suspected error.</strong>", rendered)
+        self.assertIn("color: #7a1f1f", rendered)
+        self.assertLess(
+            rendered.index("Warning: Suspected error."),
+            rendered.index(r"Let \(p\) be prime"),
+        )
+
+    def test_problem_concerns_must_be_nonempty_and_unique(self) -> None:
+        item = source()
+        problem = make_problem(text="Prove it.", subparts=[])
+        problem.concerns = [
+            ProblemConcern(status=ConcernStatus.SUSPECTED, explanation=" "),
+            ProblemConcern(status=ConcernStatus.SUSPECTED, explanation=" "),
+        ]
+
+        errors = validate_exam(exam_for(item, [problem]), item, [])
+
+        self.assertIn("problem index 1 has an empty concern", errors)
+        self.assertIn("problem index 1 has duplicate concerns", errors)
+
+    def test_problem_concern_rejects_unwrapped_unicode_math(self) -> None:
+        item = source()
+        problem = make_problem(text="Prove it.", subparts=[])
+        problem.concerns = [
+            ProblemConcern(
+                status=ConcernStatus.SUSPECTED,
+                explanation="The source asserts σ_n ≥ 0.",
+            )
+        ]
+
+        errors = validate_exam(exam_for(item, [problem]), item, [])
+
+        self.assertTrue(
+            any("Unicode math outside MathJax delimiters" in error for error in errors)
+        )
 
     def test_html_preserves_section_numbering_and_instruction_math(self) -> None:
         item = source()

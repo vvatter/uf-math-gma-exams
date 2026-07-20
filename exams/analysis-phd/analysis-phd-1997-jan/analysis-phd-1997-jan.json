@@ -248,6 +248,12 @@
                 "text": "Let \\(f\\in L^2(\\mu)\\). Find a function \\(g_1\\) which is \\(\\mathcal F_1\\)-measurable and satisfies \\[\\int_A g_1\\,d\\mu=\\int_A f\\,d\\mu\\quad\\text{for }A\\in\\mathcal F_1.\\] That is, find \\(g_1=E(f\\mid\\mathcal F_1)\\). Find \\(g_2=E(f\\mid\\mathcal F_2)\\).",
                 "subparts": []
               }
+            ],
+            "concerns": [
+              {
+                "status": "suspected",
+                "explanation": "The source legibly uses \\((0,1)\\) for the measure space but \\((0,1]\\) for the binary-expansion domain; whether this endpoint difference is intentional is unclear."
+              }
             ]
           }
         }

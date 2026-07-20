@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,7 +160,7 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">I. Group Theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Let \(G\) be the group of all \(3\times 3\) non-singular matrices of determinant \(1\) with coefficients in the field of \(3\) elements.</p>
           <ol class="subparts">
             <li>
@@ -183,7 +189,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Let \(G\) be a finite group acting transitively on a set \(X\), \(x\in X\), and \(P\) be a Sylow \(p\)-subgroup of \(G_x\) for some prime \(p\). Consider the set \(\operatorname{Fix}(P)=\{y\in X\mid y^P=y\}\), the set of fixed points of \(P\).</p>
           <ol class="subparts">
             <li>
@@ -204,7 +210,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Two permutation representations \(G\xrightarrow{\pi_i}\Sigma(X_i)\), (the symmetric group on \(X_i\) are equivalent if there exists \(\alpha:X_1\to X_2\) such that for all \(g\in G\), \(x\in X_1\), we have \(x(g\pi_1)\alpha=(x\alpha)(g\pi_2)\). Prove that the following two permutation representations of \(S_4\) of degree \(12\) are not equivalent:</p>
           <ol class="subparts">
             <li>
@@ -225,7 +231,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Let \(G\) be a finite group and \(A\leq \operatorname{Aut}(G)\) such that \(G=[G,A]\). Suppose \(N\leq G\) satisfying \([N,A]=1\). Use the 3-subgroup lemma to prove \(N\leq Z(G)\), the center of \(G\). (Recall the 3-subgroups lemma: For three subgroups \(X,Y,Z\) of a group \(M\), if \([X,Y,Z]=1\) and \([Y,Z,X]=1\), then \([Z,X,Y]=1\).)</p>
         </li>
       </ol>
@@ -233,7 +239,7 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">II. Homological algebra.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Let \(R\) be a ring and consider the following commutative diagram of \(R\)-modules and \(R\)-module homomorphisms such that each row is a short exact sequence.</p>
           <div class="display-math">\[
 \require{amscd}
@@ -245,7 +251,7 @@
 \]</div>
           <p>Prove that if \(\alpha\) and \(\gamma\) are isomorphisms then \(\beta\) is also an isomorphism.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Prove the \(\mathbb Z\)-module isomorphisms, where \(c=(m,n)\) is the greatest common divisor.</p>
           <ol class="subparts">
             <li>
@@ -266,7 +272,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>A module \(P\) over a ring \(R\) is said to be projective if, given any diagram of \(R\)-module homomorphisms with \(g\) surjective</p>
           <div class="display-math">\[
 \begin{array}{ccc}
@@ -308,7 +314,7 @@ A &amp; \xrightarrow{g} &amp; B
     <section aria-labelledby="section-3">
       <h2 id="section-3">III. Commutative algebra.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>A non-empty subset \(S\) of a ring \(R\) with identity is called multiplicative if \(ab\in S\) whenever \(a,b\in S\).</p>
           <ol class="subparts">
             <li>
@@ -329,7 +335,7 @@ A &amp; \xrightarrow{g} &amp; B
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Find a reduced primary decomposition for the following ideals. Also give the prime ideals to which the primary ideals belong.</p>
           <ol class="subparts">
             <li>
@@ -358,7 +364,7 @@ A &amp; \xrightarrow{g} &amp; B
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Let \(R\) be a unique factorization domain and \(K\) its field of fractions.</p>
           <ol class="subparts">
             <li>
@@ -379,7 +385,7 @@ A &amp; \xrightarrow{g} &amp; B
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Determine, up to isomorphism, all semisimple rings of order \(1008=2^5\cdot 3^2\cdot 7\).</p>
         </li>
       </ol>

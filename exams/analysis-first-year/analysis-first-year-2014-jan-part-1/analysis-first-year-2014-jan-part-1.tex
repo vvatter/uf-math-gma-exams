@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -101,6 +107,9 @@ Show that if~\(f\) is NOT uniformly continuous on~\(X\), then for some \(\vareps
 Assume that~\(X\) is compact. Show, using (a), that~\(f\) is uniformly continuous on~\(X\).
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Part (b) is not valid if the sequence \(\{x_n\}\) contains repeated values: the jump at \(x_n\) would include every \(c_k\) for which \(x_k=x_n\). The intended repair is not unique; the source reading has therefore been retained.
+\end{problemconcern}
 Let \(\{x_n\}\) be a sequence of points in \((a,b)\) and let \(\{c_n\}\) be a sequence of positive numbers such that \(\sum c_n\) converges. Define 
 \[
 f(x)=\sum_{n:x_n<x}c_n,\qquad a<x<b,

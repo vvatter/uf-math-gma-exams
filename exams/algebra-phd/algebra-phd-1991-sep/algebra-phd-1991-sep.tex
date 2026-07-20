@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -85,6 +91,9 @@ Prove that, if~\(F\) is a field, the group of upper triangular~\(n\) by~\(n\) ma
 \item
 Calculate in detail the Galois group of the polynomial \(x^3+2\) over the field of rational numbers.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source clearly appears to say “upper triangular 2 by 2 matrices with integer coefficients,” but as written these matrices do not specify the standard free nilpotent class 2 group on two generators. A possible intended formulation involving upper unitriangular 3 by 3 integer matrices is not uniquely determined from the source, so the source reading has been retained.
+\end{problemconcern}
 Prove that the group~\(G\) of upper triangular 2 by 2 matrices with integer coefficients is a free nilpotent class 2 group on two generators.
 \item
 Suppose~\(R\) is a finite commutative ring with identity in which \(r^3=r\) for all \(r\in R\). Prove that~\(R\) is a finite direct sum of fields, each of which is isomorphic to \(\mathbb Z_2\) or \(\mathbb Z_3\).

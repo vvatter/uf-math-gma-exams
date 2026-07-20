@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,13 +158,13 @@
       <p>For the first five problems, show all your work and support all statements.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that \(\{0,1\}^{\omega}\) is not countable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Assume that \(f:X\to Y\) is continuous and surjective.</p>
         <ol class="subparts">
           <li>
@@ -179,10 +185,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c&lt;1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((Y,d)\) be a complete metric space. Let \(J\) be a set. Suppose \(d(y,y&#x27;)\leq 1\) for all \(y,y&#x27;\in Y\), meaning a simpler definition for the uniform metric \(\bar{\rho}\) on \(Y^J\) is</p>
         <div class="display-math">\[
 \bar{\rho}(f,g)=\sup_{\alpha\in J}\{d(f(\alpha),g(\alpha))\}
@@ -194,34 +200,34 @@
       <p>Answer the following problems with complete definitions, complete statements, an example, or a short proof.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Define what it means for a topological space \(X\) to be regular.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Show that a closed subspace \(C\) of a compact space \(X\) is compact.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>A function \(f:\mathbb{Z}_+\to\{0,1\}\) is eventually zero if there is a positive integer \(N\) such that \(f(n)=0\) for all \(n\geq N\). Prove that the set of all functions \(f:\mathbb{Z}_+\to\{0,1\}\) that are eventually zero is countable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that \([0,\infty)\) and \(\mathbb{R}\) are not homeomorphic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(x=(x_1,x_2,\ldots)\in\mathbb{R}^{\omega}\). Let \(\{x^{(n)}\}_{n\in\mathbb{Z}_+}\) be a sequence of points in \(\mathbb{R}^{\omega}\) such that for each coordinate \(i\in\mathbb{Z}_+\), the sequence \(\{x_i^{(n)}\}_{n\in\mathbb{Z}_+}\) converges to \(x_i\) in \(\mathbb{R}\). Show that \(\{x^{(n)}\}_{n\in\mathbb{Z}_+}\) converges to \(x\) if \(\mathbb{R}^{\omega}\) has the product topology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Give an example of a topological space that is connected but not path-connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Define what it means for a topological space \(X\) to be a Baire space.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Show that if a topological space \(X\) is Hausdorff, then a sequence in \(X\) can converge to at most one point in \(X\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Show that the function \(f:[0,2\pi)\to\{(x,y)\in\mathbb{R}^2\mid x^2+y^2=1\}\) from the half-open interval to the circle defined by \(f(t)=(\cos(t),\sin(t))\) is not a homeomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Let \(X\) be a locally compact Hausdorff space. Define the topology on \(Y=X\cup\{\infty\}\) that makes \(Y\) the one-point compactification of \(X\).</p>
       </li>
     </ol>

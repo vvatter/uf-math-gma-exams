@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Combinatorics PhD Exam, August 2015</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f(n)\) be the number of permutations of length \(n\) that contain no cycles of length exactly two.</p>
         <ol class="subparts">
           <li>
@@ -170,25 +176,25 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>We select an odd number of people from a group of \(n\) people to form a committee. Then we select an even number of people from this committee to serve on a subcommittee. (Zero is an even number.) In how many ways can we do this?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(T\) be a tree in which no path is longer than \(k\). Is it true that there is a vertex \(v\in T\) that is contained in all paths of length \(k\) in \(T\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(X_n(S)\) be the size of the subset \(S\) of \([n]\) selected uniformly, that is, each element of \([n]\) has fifty percent chance to be selected. Compute \(\mathrm{VAR}(X_n)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f_n\) be the number of all parts of all compositions of \(n\). So \(f_1=1\), \(f_2=3\), and \(f_3=8\). Find and prove an explicit formula for \(f_n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(m_n\) be the number of ways to have a group of \(n\) people split into nonempty subsets, to have each subset sit down around a circular table, then to arrange the tables in a circle. Find the exponential growth rate of the sequence \(m_n/n!\). Two arrangements are considered identical if each person has the same left neighbor in them, and each table has the same left neighbor in them.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove that every convex polyhedron has two faces that have the same number of vertices.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(p\) be a permutation that can be decomposed into the disjoint union of \(k\) increasing subsequences, but not into the disjoint union of \(k-1\) or fewer increasing subsequences. What can be said about the length of the longest decreasing subsequence of \(p\)?</p>
       </li>
     </ol>

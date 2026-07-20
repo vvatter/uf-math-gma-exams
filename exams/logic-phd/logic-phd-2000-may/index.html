@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,16 +160,16 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">1. General Logic</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>State Gödel’s incompleteness theorem, and explain the role of Gödel numbering in its proof.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Prove that there is no finite set \(\Gamma\) of sentences in the language of groups such that a group \(G\) satisfies all the sentences in \(\Gamma\) if and only if \(G\) is not torsion free. [The group \(G\) is torsion free if \(g^n \ne e\) for all \(g \ne e\) in \(G\).]</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Show that any complete, finitely axiomatizable first-order theory is decidable.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Give an example of two models which are elementarily equivalent, but not isomorphic.</p>
         </li>
       </ol>
@@ -171,13 +177,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">2. Model Theory</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>State and sketch a proof of the downward Löwenheim–Skolem theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>State the omitting types theorem, and use it to prove that any \(\omega\)-complete theory for arithmetic has an \(\omega\)-model.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>State and sketch a proof of the Łoś theorem about ultraproducts of models.</p>
         </li>
       </ol>
@@ -185,13 +191,13 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">3. Set Theory</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Prove that a countable union of countable sets is countable.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Sketch the proof that \(L \models \mathrm{GCH}\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Prove that if \(\kappa\) is a regular, uncountable cardinal then any diagonal intersection of closed and unbounded subsets of \(\kappa\) is closed and unbounded.</p>
         </li>
       </ol>
@@ -199,13 +205,13 @@
     <section aria-labelledby="section-4">
       <h2 id="section-4">4. Recursion Theory</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Show that a function \(h: \omega \to \omega\) is (partial) recursive if and only if its graph is recursively enumerable; and that if \(h\) is total then its graph is recursive.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>State the halting problem, and prove that it is undecidable.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>Explain why, for any \(A \subset \omega\), there are at most countably many sets \(B\) such that \(B &lt;_T A\).</p>
         </li>
       </ol>

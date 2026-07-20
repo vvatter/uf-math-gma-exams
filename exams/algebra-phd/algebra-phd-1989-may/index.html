@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 7 out of the following questions.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has four parts.</p>
         <ol class="subparts">
           <li>
@@ -189,7 +195,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Two permutation representations \(\phi_i:G\to\Sigma(X_i)\), (the symmetric group on \(X_i\)), are equivalent if there exists \(\alpha:X_1\to X_2\) such that for all \(g\in G\), \(x\in X_1\), we have \(x(g\phi_1)\alpha=x(\alpha)(g\phi_2)\). Prove or disprove that the following two permutation representations of \(S_4\) of degree 6 are equivalent:</p>
         <ol class="subparts">
           <li>
@@ -210,16 +216,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(F_n\) be the free group on \(n\) generators \(x_1,\ldots,x_n\). Let \(F_n&#x27;\) denote the commutator subgroup. Prove that \(F_n/F_n&#x27;\) is the free abelian group on \(\{x_1,\ldots,x_n\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>In each of the following groups decide whether it is a semi-direct product of two of its proper subgroups: \(D_4\) (the dihedral group of order 8); \(Q_8\) (the quaternion group of order 8). Justify your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(A\) be a commutative ring with identity. Suppose that for each prime ideal \(P\), the local ring \(A_P\) has no nilpotent element \(\ne 0\). Show that \(A\) has no nilpotent element \(\ne 0\). If each \(A_P\) is an integral domain, is \(A\) necessarily an integral domain? Justify your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(A\) be a commutative ring with identity, \(a\) an ideal, \(M\) an \(A\)-module.</p>
         <ol class="subparts">
           <li>
@@ -240,10 +246,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(A\subseteq B\) be integral domains, \(B\) integral over \(A\). Prove that \(B\) is a field if and only if \(A\) is a field.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Find a minimal primary decomposition for the following ideals. Also give the prime ideals to which the primary ideals belong.</p>
         <ol class="subparts">
           <li>
@@ -264,7 +270,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>State the following theorems.</p>
         <ol class="subparts">
           <li>

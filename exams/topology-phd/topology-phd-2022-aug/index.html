@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(M\) is a compact 5-manifold with \(H_0(M;\mathbb{Z})=\mathbb{Z}\), \(H_1(M;\mathbb{Z})=\mathbb{Z}_3\), and \(H_2(M;\mathbb{Z})=\mathbb{Z}\). Is \(M\) orientable? What are \(H_3(M;\mathbb{Z})\), \(H_4(M;\mathbb{Z})\), and \(H_5(M;\mathbb{Z})\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(M\) be a compact, connected, nonorientable 3-manifold. Prove that \(H_1(M;\mathbb{Z})\) is infinite.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X\) be a connected metric space with metric \(d\) and let \(p\in X\). Prove that if \(X\setminus\{p\}\ne\varnothing\), then \(X\setminus\{p\}\) is not compact.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\Sigma_g\) denote the closed surface of genus \(g\), and let \(\Sigma_{g,r}\) denote the surface of genus \(g\) with \(r\) boundary components (i.e., \(\Sigma_g\) with \(r\) discs removed). Which of the surfaces \(\Sigma_{g,r}\) can admit a map \(f:\Sigma_{g,r}\to\Sigma_{g,r}\) homotopic to the identity that does not have a fixed point?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(X\) be the space obtained by filling in two discs in the torus, as shown (the discs lie inside the surface of the torus). Compute \(H_\bullet(X;\mathbb{Z})\).</p>
         <figure class="problem-figure">
           <img src="topology-phd-2022-aug.filled-torus.png" alt="Diagram of a torus shown as a flattened oval with a small central opening. Two black-outlined, diagonally hatched disks fill openings on the left and right sides of the torus.">
@@ -175,35 +181,35 @@
       <p>Answer the following with complete definitions, statements, or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove or give a counterexample: If \(A\subset X\) is path-connected, then the closure \(\overline{A}\) is path-connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Compute \(\chi(\mathbb{R}P^2\times\mathbb{C}P^3\times S^4)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Give the definition of a normal topological space. Show that a smooth manifold is a normal space.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Prove that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Prove that if \(m\ne n\), then \(\mathbb{R}^m\) is not homeomorphic to \(\mathbb{R}^n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Prove that the torus \(T^2=S^1\times S^1\) is not homotopy equivalent to \(S^1\vee S^1\vee S^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>State the Tietze Extension Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Describe all the connected covering spaces \(E\to\mathbb{R}P^2\vee\mathbb{R}P^3\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample.</p>
         <div class="display-math">\[0\to\mathbb{Z}_2\to A\to\mathbb{Z}_2\to 0\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Compute the integral homology of the space \(\mathbb{C}P^2\times\mathbb{R}P^2\).</p>
       </li>
     </ol>

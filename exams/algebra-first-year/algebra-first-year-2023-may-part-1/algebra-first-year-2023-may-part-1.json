@@ -56,6 +56,12 @@
             "text": "Deduce from this that \\(G\\) is abelian.",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source clearly states that one should deduce that every group of order 315 is abelian, but this conclusion appears mathematically false; nonabelian groups of order 315 exist. The intended statement is not uniquely determined, so the source reading has been retained."
+          }
         ]
       }
     },

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,40 +160,40 @@
         <p>State the following theorems:</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>The Uniform Boundedness theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>The Hahn–Banach theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>The Fatou Lemma.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>The Lebesgue dominated convergence theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>The Vitali theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>The Radon–Nikodym theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>The Egorov theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>The Fubini theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>The dual of \(L^p\) \((1 \leq p &lt; \infty)\)</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>The Lusin theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>The Riesz representation theorem in locally compact spaces</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>The Lebesgue decomposition theorem</p>
         </li>
       </ol>
@@ -207,22 +213,22 @@
         <p>\((X,\Sigma,\mu)\) is a measure space. \(E\) is a Banach space.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>Let \((f_n)\) be a sequence of \(L_E^1(\mu)\) such that \(\int \lVert f_n\rVert\,d\mu &lt; \frac{1}{n^2}\) for every \(n\). Prove or disprove the pointwise convergence and the convergence in the mean of the series \(\sum f_n\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-14">
           <p>Assume \(\mu\) is finite and let \(R\) be a ring generating \(\Sigma\). Define \(\rho(A,B)=\mu(A\mathbin{\triangle}B)\) for \(A,B\in\Sigma\). Prove that \(\rho\) is a semi-distance and that \(R\) is dense in \(\Sigma\) for \(\rho\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-15">
           <p>Let \(X=\mathbb{R}\) and \(\mu\) the Lebesgue measure. Let \(f\in L_{\mathbb{C}}^1(\mu)\) such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb{R}\) (if \(x&lt;0\), \(\int_0^x=-\int_x^0\)). Prove that \(f=0\), \(\mu\)-a.e.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-16">
           <p>Let \(\mu,\nu\) be finite, \(\sigma\)-additive measures on \(\Sigma\), such that \(\mu\ll\nu\) and \(\nu\ll\mu\). What can be said about the relationship of the Radon–Nikodym densities of one measure with respect to the other.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-17">
           <p>Let \((x_n)\) be a sequence in the Banach space \(E\). Assume \(x_n\to x\) weakly in \(E\). Show that \(x\) is the only weak limit of the sequence \((x_n)\) and that \(\sup_n\lVert x_n\rVert&lt;\infty\). (Hint: Consider the \(x_n\) as elements of the bidual \(E^{**}\).)</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-18">
           <p>Let \(X=\mathbb{R}\) and \(\mu\) the Lebesgue measure. Let \(f\in L^1(\mu)\) and for each \(t\in\mathbb{R}\) define \(f_t(x)=f(x-t)\). Show that the mapping \(t\mapsto f_t\) is a continuous map from \(\mathbb{R}\) into \(L^1(\mu)\). (Hint: prove it first for continuous functions with compact support).</p>
         </li>
       </ol>

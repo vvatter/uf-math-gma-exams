@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Brouwer Fixed Point Theorem. You may assume some homology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State and prove the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Give the Mayer–Vietoris sequence for homology. Use this to compute the homology groups for the \(n\)-sphere \(S^n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose that \(f,g:X\to P\) are two maps and that \(P\) is a compact connected polyhedron. Show that there is an \(\epsilon&gt;0\) such that if \(d(f(x),g(x))&lt;\epsilon\) for all \(x\in X\), then \(f\) and \(g\) are homotopic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that \(\pi_1(S^1)\cong Z\), where \(Z\) is the group of integers and \(S^1\) is the circle.</p>
       </li>
     </ol>
@@ -172,34 +178,34 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Define retraction and deformation retraction.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State Urysohn’s Lemma. State the Tietze Extension Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Five Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Define the cone of a space \(X\). Define the suspension of \(X\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>State the exact homology sequence for a pair of spaces.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>State the Jordan Curve Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Let \(A\) be a countable subset of \(R^2\). Show that \(R^2\setminus A\) is arcwise connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Show that the Cantor set less its endpoints is homeomorphic to the irrationals in the unit interval. [Hint: Use the Cantor Ternary Function.]</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Let \(V\) be a complete metric space such that no point is isolated. Can \(V\) be a countably infinite set?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Let \(0\to G\xrightarrow{g}H\xrightarrow{h}J\to 0\) be an exact sequence. What does this say about \(g\) and \(h\)? Prove your claims.</p>
       </li>
     </ol>

@@ -162,6 +162,12 @@
             "text": "When is this quadratic extension real? (You may assume as known the structure of the Galois group of \\(K/\\mathbb Q\\). hint: if \\(\\zeta\\) is a primitive \\(p\\)th root of unity, complex conjugation sends \\(\\zeta\\mapsto\\zeta^{-1}\\)).",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source says only that \\(p\\) is prime, but the assertion that \\(K\\) contains a quadratic extension of \\(\\mathbb Q\\) fails when \\(p=2\\). A possible omitted restriction cannot be determined uniquely, so the source's mathematical scope has been retained."
+          }
         ]
       }
     },
@@ -174,7 +180,13 @@
             "text": "Let \\(k\\) be a field and \\(R\\) a finite-dimensional \\(k\\)-algebra. Show that if \\(R\\) is semisimple as a ring, it is a direct sum of extension fields of \\(k\\)."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Even after the grammatical correction, the printed assertion appears to require an additional hypothesis: a finite-dimensional semisimple \\(k\\)-algebra need not be a direct sum of fields. No missing hypothesis is uniquely determined, so none has been added."
+          }
+        ]
       }
     },
     {

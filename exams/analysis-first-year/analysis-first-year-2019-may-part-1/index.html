@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,13 +158,13 @@
       <p>Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \((a_n)\) and \((b_n)\) be bounded real sequences, with \(\lim a_n=a\). Prove that</p>
         <div class="display-math">\[
 \limsup(a_n+b_n)=a+\limsup b_n.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \((X,d)\) be a metric space and \(E\subseteq X\) a nonempty subset. Consider the function \(d_E:X\to[0,+\infty)\) defined by</p>
         <div class="display-math">\[
 d_E(x)=\inf_{y\in E}d(x,y).
@@ -182,13 +188,13 @@ d_E(x)=\inf_{y\in E}d(x,y).
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X\) be a compact metric space. Let \(\{F_\alpha\}_{\alpha\in A}\) be a (nonempty) collection of nonempty closed subsets of \(X\), and suppose that \(\{F_\alpha\}\) is totally ordered by inclusion (this means that for every \(\alpha,\beta\in A\), either \(F_\alpha\subseteq F_\beta\) or \(F_\beta\subseteq F_\alpha\)). Prove that the intersection \(\bigcap_{\alpha\in A}F_\alpha\) is nonempty.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\{U_\alpha\}_{\alpha\in A}\) be a family of connected subsets of a metric space \(X\). Suppose that \(U_\alpha\cap U_\beta\ne\varnothing\) for each pair \(\alpha,\beta\in A\). Prove that \(\bigcup_{\alpha\in A}U_\alpha\) is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f:\mathbb{R}\to\mathbb{R}\) be a differentiable function, and suppose that \(f&#x27;\) is monotone. Must \(f&#x27;\) be continuous? Prove, or give a counterexample.</p>
       </li>
     </ol>

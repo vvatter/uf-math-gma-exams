@@ -49,7 +49,13 @@
             "text": "Let \\(P\\in\\mathbb{C}^{m\\times n}\\) be a projector. Show that \\(\\lVert P\\rVert_2=1\\) if and only if \\(P\\) is an orthogonal projector."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source specifies a potentially rectangular matrix as a projector, although projectors and orthogonal projectors ordinarily require a square matrix. In addition, the stated equivalence has the zero orthogonal projector as a possible exception unless nonzero projectors are assumed. The intended dimensions and convention are not uniquely determined, so the source wording has been retained."
+          }
+        ]
       }
     },
     {
@@ -94,6 +100,12 @@
             "label": "(b)",
             "text": "Suppose \\(A\\) is full rank and \\(x\\neq 0\\). Let \\(\\sigma_i\\), \\(i=1,\\ldots,n\\), be the singular values of \\(A\\). Show\n\\[\n\\sigma_1\\geq\\frac{\\lVert Ax\\rVert_2}{\\lVert x\\rVert_2}\\geq\\sigma_n>0.\n\\]\nIf you want to use the property that \\(\\lVert A\\rVert_2=\\sigma_1\\), then you must prove that.",
             "subparts": []
+          }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Part (b) refers to \\(n\\) singular values and asserts \\(\\sigma_n>0\\), which requires full column rank and hence \\(m\\geq n\\). The condition \\(n<m\\) appears only in part (a), so it is unclear whether it is intended to continue into part (b). The source wording has been retained."
           }
         ]
       }

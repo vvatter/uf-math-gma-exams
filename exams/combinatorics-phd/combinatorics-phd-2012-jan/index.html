@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,28 +155,28 @@
       <h1>Combinatorics PhD Exam, January 2012</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that there exists a simple \(k\)-regular graph on \(n\) vertices if and only if \(nk\) is even, and \(n \geq k+1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Find a closed formula (no summation signs) for the generating function \(\sum_{n\geq 0} g(n)x^n/n!\), where \(g(n)\) is the number of permutations of length \(n\) with all cycle lengths even.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Show that a planar graph in which every face has an even number of vertices must be bipartite.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f(n)\) be the number of simple graphs on vertex set \(\{1,2,\ldots,n\}\) in which each connected component is a cycle. Find a closed form for the generating function \(\sum_{n\geq 0} f(n)x^n/n!\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>How many Hamiltonian cycles does the graph \(K_{n,n}\) have?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(h(n)\) be the number of compositions of the integer \(n\) into odd parts. Find the generating function \(H(x)=\sum_{n\geq 1}h(n)x^n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Find a formula for the number of partitions of the set \(\{1,2,\ldots,n\}\) in which each block contains more than one element. Your answer can contain the symbol \(B(i)\) for the number of all partitions of \([i]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(d\geq 2\) be an integer, and let \(P\) be the poset of all vectors of length \(d\) with non-negative integer coordinates in which \(\mathbf{x}\leq\mathbf{y}\) if \(x_i\leq y_i\) for all \(i\).</p>
         <ol class="subparts">
           <li>

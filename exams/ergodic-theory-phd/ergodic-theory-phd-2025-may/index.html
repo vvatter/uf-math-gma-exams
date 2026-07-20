@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,13 +160,13 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">General ergodic Theory</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Equip the circle \(\mathbb{R}/\mathbb{Z}\) with the usual Lebesgue measure. Let \(\alpha\in\mathbb{R}\) be irrational and let \(T:\mathbb{R}/\mathbb{Z}\to\mathbb{R}/\mathbb{Z}\) be rotation by \(\alpha\), i.e., \(T(x)=x+\alpha\pmod{\mathbb{Z}}\). Prove that \(T\) is ergodic.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Let \(T:X\to X\) be an invertible measure preserving transformation on a probability space \((X,\mathcal{B},\mu)\). State and prove the Poincaré recurrence theorem for \(T\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Let \(\Gamma\) be a countable group acting by measure preserving transformations on standard probability spaces \((X,\mathcal{B}_X,\mu)\), and \((Y,\mathcal{B}_Y,\nu)\) and \((Z,\mathcal{B}_Z,\eta)\). Suppose that \(\pi_Y:X\to Y\) and \(\pi_Z:X\to Z\) are measure preserving \(\Gamma\)-equivariant maps from \(X\) to \(Y\) and \(Z\) respectively, and that</p>
           <p>Prove that the pushforward of \(\mu\) under the map \(\pi_Y\times\pi_Z:X\to Y\times Z\), \(x\mapsto(\pi_Y(x),\pi_Z(x))\) is exactly the product measure \(\nu\times\eta\).</p>
           <ol class="subparts">
@@ -187,13 +193,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">Ergodicity and Mixing Properties</h2>
       <ol class="problems" start="4">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Let \(\Gamma\) be a countable group acting by measure preserving transformations on a standard probability space \((X,\mathcal{B},\mu)\). Define what it means for the action to be weakly mixing, and define what it means for the action to be compact (for both properties there are many equivalent definitions, you just need to provide one definition for each). Prove that if the action is both weakly mixing and compact then \(\mu\) is a point mass.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Let \(T:X\to X\) be an invertible measure preserving transformation on a standard probability space \((X,\mathcal{B},\mu)\). Define what it means for \(T\) to be mixing. Give an example of a nontrivial mixing transformation, and prove that it is mixing.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Let \(T:X\to X\) be an invertible measure preserving transformation on a probability space \((X,\mathcal{B},\mu)\), and let \(h:X\to\mathbb{C}\) be a function in \(L^2(X,\mathcal{B},\mu)\). Prove that the sequence \(\frac{1}{n}\sum_{i=0}^{n-1}h\circ T^i\) converges in \(L^2(X,\mathcal{B},\mu)\) to \(P_T(h)\), where \(P_T\) denotes the orthogonal projection onto the subspace of \(T\)-invariant functions.</p>
         </li>
       </ol>
@@ -201,10 +207,10 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">Topological Dynamics.</h2>
       <ol class="problems" start="7">
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>Let \(X\) be a compact Hausdorff space, and let \(G\) be a (discrete) group acting by homeomorphisms on \(X\). Define what it means for the action to be topologically transitive. Prove that if \(X\) is metrizable then the action of \(G\) on \(X\) is topologically transitive if and only if there exists a point in \(X\) whose \(G\)-orbit is dense.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Let \(X\) be a compact Hausdorff space, and let \(G\) be a (discrete) group acting by homeomorphisms on \(X\). Let \(x_0\in X\) and assume that the \(G\)-orbit of \(x_0\) is dense in \(X\). Prove that the action of \(G\) on \(X\) is minimal if and only if for every open neighborhood \(U\) of \(x_0\), the set \(A_{U,x_0}=\{g\in G:g\mathbin{\cdot}x_0\in U\}\) is syndetic in \(G\). [A subset \(A\) of \(G\) is called syndetic in \(G\) if there is a finite subset \(F\) of \(G\) with \(FA=G\).]</p>
         </li>
       </ol>

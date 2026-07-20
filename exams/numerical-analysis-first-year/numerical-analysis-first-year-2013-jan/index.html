@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,14 +158,14 @@
       <p>Answer any 4 questions.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose that \(A \in \mathbb{C}^{n\times n}\) is Hermitian with \(\lambda_1\) and \(\lambda_n\) the smallest and largest eigenvalues of \(A\) respectively. Show that</p>
         <div class="display-math">\[
 \lambda_1\lVert x\rVert^2 \leq x^*Ax \leq \lambda_n\lVert x\rVert^2
 \]</div>
         <p>for all \(x \in \mathbb{C}^n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -195,7 +201,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -216,10 +222,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the element of largest magnitude in a Hermitian, positive definite matrix lies on the diagonal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose that \(A \in \mathbb{C}^{n\times n}\) is an invertible matrix, \(u \in \mathbb{C}^n\), and \(v \in \mathbb{C}^n\).</p>
         <ol class="subparts">
           <li>

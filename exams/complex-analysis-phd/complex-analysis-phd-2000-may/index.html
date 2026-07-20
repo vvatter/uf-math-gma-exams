@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -153,14 +159,14 @@
       <p>A square \(S\subset\mathbb C\) is a set of the form \([a,a+L]\times[b,b+L]\), where \(L\) is positive. Use “\(s:=\mathrm{Foo}\)” to mean that Foo is the definition of the new symbol \(s\).</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Find complex numbers \(a,b,c,d\), with \(ad-bc\ne0\), so that the Möbius transformation</p>
         <div class="display-math">\[
 \mu(z):=\frac{az+b}{cz+d}
 \]</div>
         <p>carries the imaginary axis to the circle whose radius is \(2\) and whose center is \(3=3+0i\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>With \(B\) the open unit ball \(|z|&lt;1\), consider a non-constant analytic function \(h:B\to\mathbb C\).</p>
         <ol class="subparts">
           <li>
@@ -184,7 +190,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose that \(P()\) is a monic polynomial with degree \(N\ge1\). Let \(\alpha_1,\ldots,\alpha_N\) be an enumeration (with multiplicity) of the zeros of \(P()\).</p>
         <ol class="subparts">
           <li>
@@ -221,7 +227,7 @@ P(z):=\frac{z}{z^2+1},
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Use the Residue Calculus to compute</p>
         <div class="display-math">\[
 I:=\int_0^{+\infty}\frac{1}{[x^4+4]\cdot[x^2+9]^9}\,dx.
@@ -232,7 +238,7 @@ I=[h_1(P_1)+\cdots+h_L(P_L)]\cdot\text{Constant}.
 \]</div>
         <p>(Do not bother to perform the function-evaluation.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -257,7 +263,7 @@ I=[h_1(P_1)+\cdots+h_L(P_L)]\cdot\text{Constant}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -290,10 +296,10 @@ f^3+g^3=1.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Fix a real \(b&gt;0\). Write down an entire function, \(f\), that vanishes precisely on the sequence \((z_n)_{n=1}^{\infty}\), where \(z_n:=n^b\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Show that all roots of polynomial \(P(z):=z^5+15z+1\) lie in the ball \(|z|&lt;2\), but that only one root satisfies \(|z|&lt;\frac32\).</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,14 +158,14 @@
       <p>Do any eight of the ten problems below.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(x_0,\ldots,x_n\) be distinct real points. Let \(\{l_j(x)\}_{j=0,\ldots,n}\) be the Lagrange basis functions for these points. Prove that</p>
         <div class="display-math">\[
 \sum_{j=0}^n l_j(x)=1
 \]</div>
         <p>for all \(x\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose you want to solve numerically the ode</p>
         <div class="display-math">\[
 y&#x27;=f(x,y),\qquad y(0)=y_0.
@@ -195,7 +201,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Given \(x_0,x_1\) and smooth \(f(x)\), give a divided difference type formula for the cubic polynomial which satisfies:</p>
         <div class="display-math">\[
 \begin{aligned}
@@ -207,7 +213,7 @@ p(x_1)&amp;=f(x_1).
 \]</div>
         <p>Also give a divided difference type error formula for \(f(x)-p(x)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -228,14 +234,14 @@ p(x_1)&amp;=f(x_1).
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Consider the root-finding iteration defined by</p>
         <div class="display-math">\[
 x_{n+1}=x_n-f(x_n)\left[\frac{f(x_n)}{f(x_n+f(x_n))-f(x_n)}\right].
 \]</div>
         <p>This is called Steffensen’s method. Show that the method converges quadratically when applied to \(f(x)=x^2-a\). (You may assume \(x_0\) is close enough to the root.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -268,7 +274,7 @@ x_{n+1}=x_n-f(x_n)\left[\frac{f(x_n)}{f(x_n+f(x_n))-f(x_n)}\right].
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -289,10 +295,10 @@ x_{n+1}=x_n-f(x_n)\left[\frac{f(x_n)}{f(x_n+f(x_n))-f(x_n)}\right].
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\mathbf A\in\mathbb C^{n\times n}\) be nonsingular. Show that \(\mathbf A\) has an LU factorization if and only if for each \(k\) with \(1\leq k\leq n\), the upper-left \(k\times k\) block \(\mathbf A_{1:k,1:k}\) is nonsingular. Prove that this LU factorization is unique.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Consider the Arnoldi iteration on the Krylov spaces \(\mathcal K_k=\operatorname{span}\{\mathbf b,\mathbf A\mathbf b,\mathbf A^2\mathbf b,\ldots,\mathbf A^{k-1}\mathbf b\}\) for some \(\mathbf b\in\mathbb C^m\) and \(\mathbf A\in\mathbb C^{m\times m}\) (given at side). Suppose the algorithm proceeds without breakdown until for some \(n&lt;m\), it encounters \(h_{n+1,n}=0\).</p>
         <p>Algorithm 1 (Arnoldi iteration)</p>
         <p>(a) Set \(\mathbf q_1=\mathbf b/\|\mathbf b\|_2\).</p>
@@ -330,7 +336,7 @@ x_{n+1}=x_n-f(x_n)\left[\frac{f(x_n)}{f(x_n+f(x_n))-f(x_n)}\right].
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Consider an invertible linear system \(\mathbf A\mathbf x=\mathbf b\) and a perturbation \((\mathbf A+\delta\mathbf A)(\mathbf x+\delta\mathbf x)=\mathbf b\). Assuming \(\|\mathbf A^{-1}\|\|\delta\mathbf A\|&lt;1\), derive the condition estimate</p>
         <div class="display-math">\[
 \frac{\|\delta\mathbf x\|}{\|\mathbf x\|}\leq\left(\frac{\|\mathbf A\|\|\mathbf A^{-1}\|}{1-\|\mathbf A^{-1}\|\|\delta\mathbf A\|}\right)\frac{\|\delta\mathbf A\|}{\|\mathbf A\|}.

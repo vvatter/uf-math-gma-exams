@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Probability PhD Exam, May 2005</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X_1, X_2\) be two independent random variables with the same uniform distribution on \((\theta-1/2,\theta+1/2)\), and let \(Y_1=\min(X_1,X_2)\), \(Y_2=\max(X_1,X_2)\),</p>
         <ol class="subparts">
           <li>
@@ -170,7 +176,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\phi(t)\) be a characteristic function, prove that</p>
         <ol class="subparts">
           <li>
@@ -191,7 +197,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\{X_n,n\geq 1\}\) be a sequence of i.i.d. nonnegative random variables. let \(S_0=0\), and \(S_n=X_1+\cdots+X_n\). For \(t&gt;0\), we define</p>
         <div class="display-math">\[
 \{\omega\mid N_t(\omega)=n\}=\{\omega\mid S_n(\omega)\leq t&lt;S_{n+1}(\omega)\}
@@ -201,7 +207,7 @@
 \mathbb{E}(N_t(\omega))=\sum_{n=1}^{\infty}\mathbb{P}(S_n(\omega)\leq t).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(X_1,X_2,\ldots\) be a sequence of strictly positive random variables such that</p>
         <div class="display-math">\[
 \mathbb{E}(X_{n+1}\mid\mathcal{F}_n)=f_n(X_n).
@@ -229,32 +235,32 @@ M_n=\frac{X_1X_2\cdots X_n}{f_1(X_1)f_2(X_2)\cdots f_{n-1}(X_{n-1})}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(\{M_n,n\geq 0\}\) be a sequence of integrable random variables adapted to a filtration \(\mathcal{F}_n\). Assume that for each bounded stopping time \(T\), \(\mathbb{E}(M_T)=\mathbb{E}(M_0)\), show that \(\{M_n,n\geq 0\}\) is a martingale.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(X\) and \(Y\) be random variables such that \(\mathbb{E}(X^2)&lt;\infty\) and \(\mathbb{E}(Y^2)&lt;\infty\), \(\mathbb{E}(X\mid Y)=Y\) and \(\mathbb{E}(Y\mid X)=X\). Show that \(X=Y\) a.s.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(X,Y\) be two independent random variables with \(\mathbb{E}[Y]=0\). Show that for \(p\geq 1\)</p>
         <div class="display-math">\[
 \mathbb{E}[|X|^p]\leq\mathbb{E}[|X+Y|^p].
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \((X,Y)\) be a random point on a unit circle with uniform distribution, that is</p>
         <div class="display-math">\[
 \mathbb{P}((X,Y)\in A)=\frac{\operatorname{length}(A)}{2\pi}
 \]</div>
         <p>for any Borel subset \(A\) of \(C_2=\{(x,y)\mid x^2+y^2=1\}\). Find the marginal distribution of \(X\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(\mathcal{F}_n\) be a filtration, \(|X_n|\leq Y\), \(Y\) integrable. Suppose that \(X_n\longrightarrow X\) a.e. Using the martingale convergence theorem to prove that</p>
         <div class="display-math">\[
 \mathbb{E}[X_n\mid\mathcal{F}_n]\longrightarrow\mathbb{E}[X\mid\mathcal{F}_\infty]\qquad\text{a.e.}
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(Y\in L^p\), \(|X_n|\leq Y\) and \(X_n\longrightarrow X\) in distribution. Show that \(X_n\) converges to \(X\) in \(L^p\).</p>
       </li>
     </ol>

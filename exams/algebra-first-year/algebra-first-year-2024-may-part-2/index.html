@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove the following version of the Chinese remainder theorem: Let \(R\) be a commutative ring with \(1\) and let \(I, J\) be ideals of \(R\) such that \(I+J=R\). Then \(IJ=I\cap J\) and there is a ring isomorphism \(R/IJ\to (R/I)\times(R/J)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(R\) be a commutative ring and let \(M\) be a maximal ideal of \(R\).</p>
         <ol class="subparts">
           <li>
@@ -176,7 +182,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(R\) be a commutative ring with identity \(1\) different from \(0\).</p>
         <ol class="subparts">
           <li>
@@ -205,13 +211,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain with respect to the norm defined by \(N(a+b\sqrt{-2})=a^2+2b^2\) for all \(a,b\in\mathbb{Z}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Determine the conjugacy classes of elements of order \(8\) in \(GL(5,\mathbb{Q})\), and, for each conjugacy class, give a representative matrix. (You may use the fact that \(x^4+1\) is irreducible in \(\mathbb{Q}[x]\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(F=\mathbb{Q}(\sqrt[4]{2},\sqrt{-1})\). Calculate the degree of the extension \(F/\mathbb{Q}\), and justify each of the steps of your calculation.</p>
       </li>
     </ol>

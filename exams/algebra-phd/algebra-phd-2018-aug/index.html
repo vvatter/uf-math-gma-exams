@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,16 +158,16 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Determine the Galois group of the polynomial</p>
         <div class="display-math">\[
 f=x^5-2\in\mathbb{Q}[x].
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(F\) be a field of characteristic zero and \(E\) a finite extension field of \(F\). Prove that \(E\) is a simple extension of \(F\), i.e. there exists \(\alpha\in E\) such that \(E=F(\alpha)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(R\) be a ring with 1. Prove the equivalence of the following conditions.</p>
         <ol class="subparts">
           <li>
@@ -190,10 +196,10 @@ f=x^5-2\in\mathbb{Q}[x].
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that the additive group of the field of rational numbers is not a projective \(\mathbb{Z}\)-module.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) and \(S\) be rings, \(A\) a right \(R\)-module, \(B\) an \((R,S)\)-bimodule and \(C\) a left \(S\)-module.</p>
         <ol class="subparts">
           <li>
@@ -217,10 +223,10 @@ A\otimes_R(B\otimes_S C)\cong(A\otimes_R B)\otimes_S C.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(R\) be an integral domain and for each maximal ideal \(M\), regard the localization \(R_M\) as a subring of the field of fractions \(F\) of \(R\). Show that \(\bigcap_M R_M=R\). (Hint: for \(x\in F\), consider the ideal \(D=\{a\in R\mid ax\in R\}\). If \(x\in R_M\) what does it say about \(D\)?)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be a Dedekind domain and \(I\) a nonzero ideal of \(R\).</p>
         <ol class="subparts">
           <li>
@@ -241,7 +247,7 @@ A\otimes_R(B\otimes_S C)\cong(A\otimes_R B)\otimes_S C.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(F[[X]]\) denote the ring of formal power series over the field \(F\).</p>
         <ol class="subparts">
           <li>
@@ -262,13 +268,13 @@ A\otimes_R(B\otimes_S C)\cong(A\otimes_R B)\otimes_S C.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) and \(S\) be commutative rings with 1. Prove the Lying-Over Theorem: Let \(S\) be an integral extension of \(R\) and \(P\) a prime ideal of \(R\). Then there exists a prime ideal \(Q\) of \(S\) such that \(Q\cap R=P\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Prove that the ring of \(n\times n\) matrices with entries in a field \(F\) is a simple ring when \(n\ge1\). Describe explicitly one of its minimal left ideals.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(\mathcal C\) be a category and let \(\Lambda\) be a set. Suppose that for each \(\lambda\in\Lambda\) we are given an object \(X_\lambda\) in \(\mathcal C\).</p>
         <ol class="subparts">
           <li>

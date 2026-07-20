@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Do all problems 1–4. Choose one problem of 5 and 6 and one problem of 7 and 8.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(B\) be the unit ball in \(\mathbb{R}^3\). For which values of \(\alpha\) does the function \(|x|^\alpha\) belong to \(H^1(B)\)? Justify your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(U\subset\mathbb{R}^n\) be open and bounded. Let \(u_m\) and \(v_m\) be bounded sequences in \(H^1(U)\). Show that there exist subsequences \(u_{m_j}\) of \(u_m\) and \(v_{m_j}\) of \(v_m\), and functions \(u,v\in H^1(U)\), such that</p>
         <div class="display-math">\[
 \int_U u_{m_j}v_{m_j}\,dx\to\int_U uv\,dx,
@@ -166,7 +172,7 @@
 \]</div>
         <p>as \(j\to\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let \(u(x,t)\) be a smooth solution to the IBV problem:</p>
         <div class="display-math">\[
 u_t=\Delta u,\qquad (x,t)\in U_T,
@@ -202,7 +208,7 @@ u(x,0)=f(x),\qquad x\in U.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let \(L\) be a uniformly elliptic differential operator of the form</p>
         <div class="display-math">\[
 Lu=-\sum_{i,j=1}^n a_{ij}u_{x_i x_j}.
@@ -219,7 +225,7 @@ u(x)=0,\qquad v(x)\geq0,\qquad x\in\partial U.
 |Du(x_0)|\leq C\left|\frac{\partial v}{\partial n}(x_0)\right|.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\). We say that a function \(u\in H_0^2(U)\) is a weak solution of the biharmonic equation</p>
         <div class="display-math">\[
 \Delta^2u=f,\qquad x\in U, \tag{5.1}
@@ -251,7 +257,7 @@ u=0,\qquad \frac{\partial u}{\partial n}=0,\qquad x\in\partial U, \tag{5.2}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(U\subset\mathbb{R}^n\) be open and bounded. Show that \(u\in H_0^1(U)\) is a weak solution to the boundary value problem</p>
         <div class="display-math">\[
 -\Delta u+u=1,\qquad x\in U,
@@ -265,7 +271,7 @@ E(v)=\int_U\bigl(|\nabla v|^2+v^2-2v\bigr)\,dx
 \]</div>
         <p>over \(v\in H_0^1(U)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(U\subset\mathbb{R}^n\) be open and bounded. We say \(v\in C^2(\overline U)\) is subharmonic if \(-\Delta v\leq0\) for all \(x\in U\).</p>
         <ol class="subparts">
           <li>
@@ -289,7 +295,7 @@ v(x)\leq\frac{1}{|B(x,r)|}\int_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subs
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\).</p>
         <ol class="subparts">
           <li>

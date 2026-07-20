@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(C\) be a category.</p>
         <ol class="subparts">
           <li>
@@ -181,28 +187,31 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove that for each prime \(p\) and each \(n\geq 1\) there is a field with \(p^n\) elements which is determined uniquely up to isomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(E\subset\mathbb{C}\) be the splitting field of \(X^8-1\) over \(\mathbb{Q}\). Determine the Galois group \(G=\operatorname{Gal}(E/\mathbb{Q})\). For each subgroup \(H\leq G\) determine the fixed field \(E^H\) of \(H\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The displayed indexing condition has been retained as printed, but its scope is mathematically ambiguous because the relation \(yx_iy^{-1}=x_{i+1}\) does not involve \(j\).</p>
+        </div>
         <p>Let \(F\) be the free group on two letters. Prove that the commutator subgroup \([F,F]\) is not finitely generated. Hint: For each \(n\geq 1\) consider the group</p>
         <div class="display-math">\[
 G_n=\langle x_1,\ldots,x_n,y:x_ix_j=x_jx_i,\;yx_iy^{-1}=x_{i+1}\text{ for }1\leq i&lt;j\leq n,\;yx_ny^{-1}=x_1\rangle.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be an integral domain, let \(F\) be the field of fractions of \(R\), and let \(M,N\) be \(F\)-modules. Prove that \(M\otimes_R N\simeq M\otimes_F N\) (as \(R\)-modules).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(R\) be a commutative Noetherian ring with 1 and let \(\phi:R\to R\) be an onto ring homomorphism. Prove that \(\phi\) is one-to-one.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(S\) be a commutative ring with 1, let \(R\) be a subring of \(S\) which contains 1, and let \(x\in S\). Suppose there is a subring \(T\subset S\) such that \(T\supset R[x]\) and \(T\) is finitely generated as an \(R\)-module. Prove that \(x\) is integral over \(R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be a ring and let \(J(R)\) be the Jacobson radical of \(R\).</p>
         <ol class="subparts">
           <li>
@@ -231,13 +240,13 @@ G_n=\langle x_1,\ldots,x_n,y:x_ix_j=x_jx_i,\;yx_iy^{-1}=x_{i+1}\text{ for }1\leq
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(F\) be a field, let \(A\) be a central simple algebra over \(F\), and let \(B\) be a simple \(F\)-algebra with 1. Prove that \(A\otimes_F B\) is simple.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Determine up to isomorphism all semisimple noncommutative rings with \(512=2^9\) elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Give an example of a projective module which is not free. Prove that your example has the desired properties.</p>
       </li>
     </ol>

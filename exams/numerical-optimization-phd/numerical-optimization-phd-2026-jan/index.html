@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 8 problems, 4 from problems 1–5 and 4 from problems 6–10.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Recall that \(f:\mathbb{R}^n\to\mathbb{R}\) is convex if and only if</p>
         <div class="display-math">\[
 f[(1-\alpha)\mathbf{x}+\alpha\mathbf{y}]\leq (1-\alpha)f(\mathbf{x})+\alpha f(\mathbf{y})
@@ -181,7 +187,7 @@ f(\mathbf{y})\geq f(\mathbf{x})+\nabla f(\mathbf{x})(\mathbf{y}-\mathbf{x})
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Given \(\mathbf{x}_0\in\mathbb{R}^n\), let \(0&lt;\sigma&lt;\mu&lt;1\) be Wolfe line search parameters. In a Wolfe line search for minimizing \(f:\mathbb{R}^n\to\mathbb{R}\), \(\mathbf{x}_{k+1}=\mathbf{x}_k-s_k\mathbf{g}_k\), where \(\mathbf{g}_k=\nabla f(\mathbf{x}_k)^T\), and the stepsize \(s_k\) at step \(k\) is chosen so that the following two conditions hold:</p>
         <p>W1. \(F(s_k)\leq F_L(s_k)\), where \(F(s)=f(\mathbf{x}_k-s\mathbf{g}_k)\) and \(F_L(s)=f(\mathbf{x}_k)-\sigma s\lVert\mathbf{g}_k\rVert^2\).</p>
         <p>W2. \(F&#x27;(s_k)\geq\mu F&#x27;(0)=-\mu\lVert\mathbf{g}_k\rVert^2\).</p>
@@ -191,7 +197,7 @@ L=\{\mathbf{x}\in\mathbb{R}^n:f(\mathbf{x})\leq f(\mathbf{x}_0)\},
 \]</div>
         <p>and the largest eigenvalue of \(\nabla^2f\) is bounded by \(M&lt;\infty\) over \(L\), then prove that the gradient \(\mathbf{g}_k\) converges to zero.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose \(f:\mathcal{K}\to\mathbb{R}\), where \(\mathcal{K}\subset\mathbb{R}^n\) is a convex set.</p>
         <ol class="subparts">
           <li>
@@ -230,14 +236,14 @@ L=\{\mathbf{x}\in\mathbb{R}^n:f(\mathbf{x})\leq f(\mathbf{x}_0)\},
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove the arithmetic-geometric mean inequality:</p>
         <div class="display-math">\[
 \left(\prod_{i=1}^n x_i\right)^{1/n}\leq \frac{1}{n}\sum_{i=1}^n x_i
 \]</div>
         <p>where \(\mathbf{x}\geq 0\). Hint: change variables to \(\mathbf{y}=c\mathbf{x}\), where \(c\) is a scalar chosen so that the components of \(\mathbf{y}\) sum to 1. Note that maximizing the product of the \(y_i\) is equivalent to maximizing the log of the product since \(\log(t)\) is a monotone increasing function of \(t\) on \((0,\infty)\). Using duality, the max of the log of the product can be determined explicitly.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Consider the quadratic program</p>
         <div class="display-math">\[
 \min \frac{1}{2}\mathbf{x}^T\mathbf{A}\mathbf{x}-\mathbf{b}^T\mathbf{x}\qquad\text{subject to }\mathbf{a}^T\mathbf{x}=c, \tag{2}
@@ -248,7 +254,7 @@ L=\{\mathbf{x}\in\mathbb{R}^n:f(\mathbf{x})\leq f(\mathbf{x}_0)\},
 \]</div>
         <p>where \(p&gt;0\) is the penalty parameter. Use the first-order optimality conditions for both (2) and (3) to obtain a bound for the distance between the solution of (2) and the solution of (3).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let us consider the minimization problem</p>
         <div class="display-math">\[
 \min I(y):=\int_0^1 f(y&#x27;(x),y(x),x)\,dx\qquad\text{subject to }y\in C_0^1, \tag{4}
@@ -290,7 +296,7 @@ f(y&#x27;(x),y(x),x)=\frac{1}{2}y&#x27;(x)^2-\varphi(x)y(x)^2,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose that \(P\) and \(Q\) are real-valued functions defined on the interval \([0,1]\), with \(P\) continuously differentiable and \(Q\) continuous. It is assumed that there exists \(\alpha&gt;0\) such that \(P(x)\geq\alpha\) for all \(x\in[0,1]\). Define</p>
         <div class="display-math">\[
 \text{[missing functional symbol]}(h):=\int_0^1 P(x)h&#x27;(x)^2+Q(x)h(x)^2\,dx.
@@ -306,7 +312,7 @@ f(y&#x27;(x),y(x),x)=\frac{1}{2}y&#x27;(x)^2-\varphi(x)y(x)^2,
 \]</div>
         <p>where \(a\in(0,1)\) is given, then \(u\) vanishes on the entire interval \([0,a]\). Hint: extend \(u\) from \([0,a]\) to \([0,1]\) by setting \(u(x)=0\) for \(x\in[a,1]\). Then integrate by parts to show that \(\text{[missing functional symbol]}(u)=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Consider the variational problem</p>
         <div class="display-math">\[
 \min \int_0^1\left(\frac{1}{2}u&#x27;(x)^2+e^{u(x)}\right)dx\qquad\text{subject to }u\in H_0^1. \tag{7}
@@ -330,7 +336,7 @@ f(y&#x27;(x),y(x),x)=\frac{1}{2}y&#x27;(x)^2-\varphi(x)y(x)^2,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Consider the initial-value problem</p>
         <div class="display-math">\[
 \dot{\mathbf{x}}(t)=\mathbf{A}(t)\mathbf{x}(t)+\mathbf{u}(t),\qquad \mathbf{x}(0)=0,
@@ -341,7 +347,7 @@ x(t)\leq\alpha(t)+L\int_0^t x(s)\,ds\text{ on }[0,a]\quad\Rightarrow\quad x(t)\l
 \]</div>
         <p>where \(\alpha\) is monotone nondecreasing.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Consider the following control problem:</p>
         <div class="display-math">\[
 \min \int_0^1\left(\frac{1}{2}u^2(x)+y(x)\right)dx\qquad\text{subject to }y&#x27;(x)=u(x),\quad y(0)=0,\quad u(x)\geq\ell(x),

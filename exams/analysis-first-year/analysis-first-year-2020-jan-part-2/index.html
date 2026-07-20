@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f\) and \(f_n\) (\(n&gt;0\)) be real-valued functions on \((0,1)\) with \(f_n\to f\). Decide (with proof) the truth/falsity of each of the following statements when the convergence of \(f_n\) to \(f\) is (a) pointwise (b) uniform:</p>
         <ol class="subparts">
           <li>
@@ -173,20 +179,20 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(f:[0,1]\times[0,1]\to\mathbb{R}\) be a continuous function and let \(\epsilon&gt;0\). Prove that there exist finitely many continuous functions \(g_1,\ldots,g_n:[0,1]\to\mathbb{R}\) and \(h_1,\ldots,h_n:[0,1]\to\mathbb{R}\) such that</p>
         <div class="display-math">\[
 \left|f(x,y)-\sum_{j=1}^{n}g_j(x)h_j(y)\right|&lt;\epsilon \quad\text{for all }(x,y)\in[0,1]\times[0,1].
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f_n\) be a sequence of nonnegative measurable functions and suppose there is an \(L^1\) function \(g\) such that \(f_n\leq g\) for all \(n\). Prove that</p>
         <div class="display-math">\[
 \limsup_{n\to\infty}\int f_n\leq\int\limsup_{n\to\infty}f_n.
 \]</div>
         <p>Give an example to show the conclusion can fail if the hypothesis \(f_n\leq g\) is removed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((X,\mathcal{M})\) be a measurable space and \(f_n:X\to\mathbb{R}\), \(n=1,2,3,\ldots\) a sequence of measurable functions. Prove that each of the following subsets of \(X\) is measurable:</p>
         <ol class="subparts">
           <li>
@@ -215,7 +221,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(E\subset[0,1]\) be a Lebesgue measurable set with \(m(E)&gt;0\). Prove that there exists a point \(0&lt;c&lt;1\) such that</p>
         <div class="display-math">\[
 m(E\cap[0,c])=\frac{1}{2}m(E).

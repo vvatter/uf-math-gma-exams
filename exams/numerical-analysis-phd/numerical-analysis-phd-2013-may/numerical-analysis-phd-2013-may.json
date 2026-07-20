@@ -57,6 +57,12 @@
             "text": "State Newton’s method for \\(f(x)=0\\) if \\(f:\\mathbb{R}^n\\to\\mathbb{R}^n\\).",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Part (v) asks for quadratic convergence under continuous differentiability and \\(g'(\\alpha)=0\\). Those assumptions generally imply superlinear, but not necessarily quadratic, convergence; a stronger regularity assumption may be missing, but the intended correction is not uniquely determined."
+          }
         ]
       }
     },

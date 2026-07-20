@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,34 +158,37 @@
       <p>Answer seven out of the eight questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that \(L^1(S,\mathcal A,\mu)\) is a complete space.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State and prove the Hahn–Banach theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State and prove Fubini’s theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that there exists no sequence \((c_n)_{n=1}^{\infty}\) of real numbers such that an infinite series \(\sum a_n\) of real numbers converges if and only if \((c_n a_n)_{n=1}^{\infty}\) is a bounded sequence.</p>
         <p>[Hint: Without loss of generality, assume such a sequence exists, with \(c_n\ne 0\) for all \(n\). Consider the mapping \(T:\ell_\infty\to\ell_1\) given by \(T((x_n))=\frac{x_n}{c_n}\) and use the open mapping theorem.]</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that there exists no Banach space of algebraic dimension \(\aleph_0\).</p>
         <p>[Hint: show that a finite dimensional subspace is closed and then use the Baire category theorem.]</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(f:\mathbb R\to\mathbb R\) be a Lebesgue measurable function. Show that there exists a Borel measurable function \(g\) such that \(f=g\) a.e. (a.e. with respect to Lebesgue measure).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mu\) be a measure on \(([0,\infty),\mathcal B([0,\infty)))\) defined by</p>
         <div class="display-math">\[
 \mu(A)=\int_A x\,dx.
 \]</div>
         <p>Let \(T:[0,\infty)\to[0,\infty)\) be given by \(T(x)=e^x-1\). Define a new measure \(\pi\) on \(([0,\infty),\mathcal B([0,\infty)))\) by setting \(\pi(A)=\mu(T^{-1}(A))\). Compute \(d\pi/d\mu\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The source visibly defines \(\mu(A)=\int_A x\,dx\) while calling \(\mu\) a measure on the sigma-algebra of symmetric Borel sets. For sets such as \(\mathbb R\), this signed Lebesgue integral is not defined, so the intended integrand may contain an unprinted or unclear modification. No correction is uniquely determined, and the source reading has been retained.</p>
+        </div>
         <p>Let \(\lambda\) be Lebesgue measure on \((\mathbb R,\mathcal B(\mathbb R))\). If \(A\in\mathcal B(\mathbb R)\), define the set \(-A=\{x:-x\in A\}\). Define \(\mathcal C=\{A\in\mathcal B(\mathbb R):A=-A\}\).</p>
         <ol class="subparts">
           <li>

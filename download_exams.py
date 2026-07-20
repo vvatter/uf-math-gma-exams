@@ -26,6 +26,16 @@ FIRST_YEAR_PHD_INDEX_URL = (
 QUALIFYING_INDEX_URL = "https://gma.math.ufl.edu/past-exams/qualifying-exams/"
 DEFAULT_INDEX_URLS = (FIRST_YEAR_PHD_INDEX_URL, QUALIFYING_INDEX_URL)
 ALLOWED_HOST = "gma.math.ufl.edu"
+PRACTICE_SOURCE_PAGE_URL = "https://math.ufl.edu/qualifying-exam-syllabi/"
+PRACTICE_PDF_ROOT = "https://math.ufl.edu/wp-content/uploads/sites/316"
+PRACTICE_EXAM_SPECS = (
+    ("A", 1, "prac1a.pdf"),
+    ("B", 1, "prac1b.pdf"),
+    ("A", 2, "prac2a.pdf"),
+    ("B", 2, "prac2b.pdf"),
+)
+PRACTICE_PROBLEMS_FILENAME = "fypoolalg.pdf"
+PRACTICE_PROBLEMS_COUNT = 113
 USER_AGENT = "Mozilla/5.0 (compatible; GMAExamArchiveHelper/1.0)"
 EXPECTED_MONTHS = {"january", "may", "august", "september"}
 MONTH_ABBREVIATIONS = {
@@ -73,12 +83,15 @@ class Exam:
     subject: str
     subject_tag: str
     subject_url: str
-    year: int
-    month: str
+    year: int | None
+    month: str | None
     source_label: str
     source_url: str
     download_url: str
     path: str
+    practice_variant: str | None = None
+    document_type: str = "exam"
+    problem_count: int | None = None
     status: str = "pending"
     resolved_url: str | None = None
     size: int | None = None
@@ -395,6 +408,54 @@ def discover_exams(subject: Subject, output_root: Path) -> list[Exam]:
     return exams
 
 
+def practice_exams(output_root: Path) -> list[Exam]:
+    subject = "First Year Algebra"
+    subject_tag_value = "algebra-first-year"
+    exams: list[Exam] = []
+    for variant, part, filename in PRACTICE_EXAM_SPECS:
+        exam_id = f"{subject_tag_value}-practice-{variant.lower()}-part-{part}"
+        url = f"{PRACTICE_PDF_ROOT}/{filename}"
+        destination = output_root / subject_tag_value / exam_id / f"{exam_id}.source.pdf"
+        exams.append(
+            Exam(
+                id=exam_id,
+                subject=subject,
+                subject_tag=subject_tag_value,
+                subject_url=PRACTICE_SOURCE_PAGE_URL,
+                year=None,
+                month=None,
+                source_label=f"Practice {variant}, Part {part}",
+                source_url=url,
+                download_url=url,
+                path=str(destination),
+                practice_variant=variant,
+            )
+        )
+    return exams
+
+
+def practice_problem_collection(output_root: Path) -> Exam:
+    subject = "First Year Algebra"
+    subject_tag_value = "algebra-first-year"
+    exam_id = f"{subject_tag_value}-practice-problems"
+    url = f"{PRACTICE_PDF_ROOT}/{PRACTICE_PROBLEMS_FILENAME}"
+    destination = output_root / subject_tag_value / exam_id / f"{exam_id}.source.pdf"
+    return Exam(
+        id=exam_id,
+        subject=subject,
+        subject_tag=subject_tag_value,
+        subject_url=PRACTICE_SOURCE_PAGE_URL,
+        year=None,
+        month=None,
+        source_label="Practice Problems",
+        source_url=url,
+        download_url=url,
+        path=str(destination),
+        document_type="practice-problems",
+        problem_count=PRACTICE_PROBLEMS_COUNT,
+    )
+
+
 def discover_catalog(
     index_urls: list[str], output_root: Path
 ) -> tuple[list[Subject], list[Exam]]:
@@ -417,6 +478,9 @@ def discover_catalog(
         for subject in subjects
         for exam in discover_exams(subject, output_root)
     ]
+    if any(subject.tag == "algebra-first-year" for subject in subjects):
+        exams.extend(practice_exams(output_root))
+        exams.append(practice_problem_collection(output_root))
     return subjects, exams
 
 
@@ -503,10 +567,17 @@ def manifest_data(
     counts: dict[str, int] = {}
     for exam in exams:
         counts[exam.status] = counts.get(exam.status, 0) + 1
-    unexpected = sorted({exam.month for exam in exams if exam.month not in EXPECTED_MONTHS})
+    unexpected = sorted(
+        {
+            exam.month
+            for exam in exams
+            if exam.month is not None and exam.month not in EXPECTED_MONTHS
+        }
+    )
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "index_urls": index_urls,
+        "supplemental_source_pages": [PRACTICE_SOURCE_PAGE_URL],
         "dry_run": dry_run,
         "summary": {
             "subjects": len(subjects),
@@ -625,7 +696,13 @@ def main() -> int:
                 exam.status = str(status)
 
     print(f"Discovered {len(exams)} PDFs across {len(subjects)} subjects.")
-    unexpected = sorted({exam.month for exam in exams if exam.month not in EXPECTED_MONTHS})
+    unexpected = sorted(
+        {
+            exam.month
+            for exam in exams
+            if exam.month is not None and exam.month not in EXPECTED_MONTHS
+        }
+    )
     if unexpected:
         print("Unexpected source-table months preserved: " + ", ".join(unexpected))
 

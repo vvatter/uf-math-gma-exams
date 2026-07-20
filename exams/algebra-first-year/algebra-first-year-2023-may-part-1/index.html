@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,13 +158,16 @@
       <p>Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(P \subset S_7\) be a Sylow \(7\)-subgroup. Show that the normalizer \(N\) of \(P\) is a semidirect product \(\mathbb{Z}/7\mathbb{Z} \rtimes \mathbb{Z}/6\mathbb{Z}\), where the homomorphism \(\mathbb{Z}/6\mathbb{Z} \to \operatorname{Aut}(\mathbb{Z}/7\mathbb{Z})\) is injective.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>It is known that \(A_7\) has a simple subgroup of order \(168\). Show that this subgroup is maximal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The source clearly states that one should deduce that every group of order 315 is abelian, but this conclusion appears mathematically false; nonabelian groups of order 315 exist. The intended statement is not uniquely determined, so the source reading has been retained.</p>
+        </div>
         <p>Suppose \(G\) is a group of order \(315\).</p>
         <ol class="subparts">
           <li>
@@ -179,7 +188,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \(\sigma \in A_8\) has order \(15\).</p>
         <ol class="subparts">
           <li>
@@ -200,7 +209,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(A\) is an abelian group of order \(p^4\), where \(p\) is a prime.</p>
         <ol class="subparts">
           <li>
@@ -221,7 +230,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \(G\) is a group and \(M,N\) are normal subgroups of \(G\) such that \(G=MN\). Show that \(G/(M \cap N) \simeq G/M \times G/N\).</p>
       </li>
     </ol>

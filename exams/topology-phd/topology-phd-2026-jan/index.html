@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -155,22 +161,22 @@
       <p>For the first five problems, show all of your work and support all statements.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that every metrizable space \((X,d)\) is normal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c&lt;1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Consider the \(\Delta\)-complex \(X\) drawn below. (Note the orientation of the three edges carefully.) Compute the simplicial homology \(H_i(X)\) for \(i=0,1,2\).</p>
         <figure class="problem-figure">
           <img src="topology-phd-2026-jan.oriented-triangle-delta-complex.png" alt="A gray triangular face labeled T, with all three vertices labeled v. Each edge is labeled a and carries a centered arrow: the top edge points right, the left edge points downward toward the bottom vertex, and the right edge points upward toward the top-right vertex.">
         </figure>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>For \(M\) a compact orientable odd-dimensional manifold without boundary, show that the Euler characteristic \(\chi(M)\) is zero.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -196,34 +202,34 @@
       <p>Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State the Tietze Extension Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(M_g\) be the orientable surface of genus \(g\), i.e., the \(g\)-fold connected sum of tori. Use the Seifert–van Kampen theorem to derive the fundamental group of \(M_g\) for \(g\geq 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Show that if \(g:S^n\to S^n\) is continuous and \(g(x)\neq g(-x)\) for all \(x\in S^n\), then \(g\) is surjective.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Prove that if \(f:S^n\to S^n\) has no fixed points, then \(\deg(f)=(-1)^{n+1}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>State the Five-Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Show that every map \(f:\mathbb{CP}^n\to\mathbb{CP}^n\) has a fixed point if \(n\) is even.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Let \(p:Y\to X\) and \(q:Z\to X\) be basepoint-preserving covering space maps, where \(X,Y,Z\) are path-connected and locally path-connected. Prove that if \(p_*(\pi_1(Y))=q_*(\pi_1(Z))\), then the covering spaces \(p\) and \(q\) are isomorphic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Does there exist a closed orientable \(18\)-dimensional manifold \(M\) with \(H^9(M;\mathbb{Z})\cong\mathbb{Z}\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Prove that if \(X\) is the Möbius band and \(A\) is its boundary circle, then there is no retraction \(r:X\to A\).</p>
       </li>
     </ol>

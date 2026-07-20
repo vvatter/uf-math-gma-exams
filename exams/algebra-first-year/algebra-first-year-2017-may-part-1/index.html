@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer four problems. If you turn in more than four, only the first four will be graded. Unless otherwise indicated you may use theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(p\) be a prime and \(G\) be a finite group whose order is a power of \(p\) greater than 1.</p>
         <ol class="subparts">
           <li>
@@ -173,17 +179,17 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that a group of order \(132=2^2\cdot 3\cdot 11\) has a normal Sylow subgroup.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(G\) be the group</p>
         <div class="display-math">\[
 G=\left\{\left.\begin{pmatrix}a&amp;b\\0&amp;c\end{pmatrix}\ \right|\ a,b,c\in\mathbb{R},\ ac\ne 0\right\}
 \]</div>
         <p>and let \(H\) (resp. \(N\)) be the subgroup of \(G\) consisting of elements in which \(b=0\) (resp. \(a=c=1\)). Show that \(G\) is isomorphic to a semidirect product of \(H\) and \(N\), and identify the relevant map \(\phi\) from one to the automorphism group of the other.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(G\) be a group of permutations of a set \(A\), and for \(a\in A\) let \(G_a\) be the stabilizer of \(a\).</p>
         <ol class="subparts">
           <li>
@@ -215,10 +221,10 @@ G=\left\{\left.\begin{pmatrix}a&amp;b\\0&amp;c\end{pmatrix}\ \right|\ a,b,c\in\m
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(p\) and \(q\) be distinct primes. List all abelian groups of order \(p^3q^2\). For each such group, how many elements are there of order \(p\)? \(pq\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

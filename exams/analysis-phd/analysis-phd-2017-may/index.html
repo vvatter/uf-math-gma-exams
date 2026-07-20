@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Do six of eight. Problems (2) and (5) are short answer. For the remaining problems, please provide complete proofs with all details.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that if \(X,Y\) are topological spaces and \(f:X\to Y\) is continuous, then \(f\) is Borel measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Do three of four.</p>
         <ol class="subparts">
           <li>
@@ -195,20 +201,20 @@ a_n=\int_1^{\infty}\frac{\cos^2(\pi t)}{t^n}\,dt.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose \((X,\mathcal M,\mu)\) is a \(\sigma\)-finite measure space and \(\mathcal N\subset\mathcal M\) is a (sub) \(\sigma\)-algebra. Let \(\nu=\mu|_{\mathcal N}\). Show, if \((X,\mathcal N,\nu)\) is a \(\sigma\)-finite measure space and \(f\in L^1(\mu)\), then there exists a \(g\in L^1(\nu)\) such that, for all \(E\in\mathcal N\),</p>
         <div class="display-math">\[
 \int_E g\,d\nu=\int_E f\,d\mu.
 \]</div>
         <p>Is the \(\sigma\)-finiteness hypothesis on \(\nu\) necessary?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Given \(f\in L^1([0,1])\), let \(g(x)=\int_x^1\frac{f(t)}{t}\,dt\). Show \(g\in L^1([0,1])\) and</p>
         <div class="display-math">\[
 \int_0^1 g=\int_0^1 f.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Do three of four.</p>
         <ol class="subparts">
           <li>
@@ -249,17 +255,17 @@ c_{00}=\{f:\mathbb N\to\mathbb C:\text{ there exists an }N\text{ such that }f(n)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Show, if \(E\subset\mathbb R\) is a Lebesgue measurable set of positive measure, then \(E-E=\{x-y:x,y\in E\}\) contains an open interval.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose \(\mathcal X\) is a Banach space and \(\mathcal M\) and \(\mathcal N\) are closed subspaces. Show, if for each \(x\in\mathcal X\) there exist unique \(m\in\mathcal M\) and \(n\in\mathcal N\) such that</p>
         <div class="display-math">\[
 x=m+n,
 \]</div>
         <p>then the mapping \(P:\mathcal X\to\mathcal M\) defined by \(Px=m\) is bounded.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose \((X,\mathcal M,\mu)\) is a \(\sigma\)-finite measure space and \(1\le q&lt;p&lt;\infty\). Show, \(L^q\subset L^p\) if and only if there exists a \(\delta&gt;0\) such that if \(E\in\mathcal M\) then either \(\mu(E)=0\) or \(\mu(E)\ge\delta\).</p>
       </li>
     </ol>

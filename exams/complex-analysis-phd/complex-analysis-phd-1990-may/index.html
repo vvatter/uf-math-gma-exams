@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,25 +155,25 @@
       <h1>Complex Analysis PhD Exam, May 1990</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that \(u(x,y)=x^3-3xy^2+x\) is harmonic in \(\mathbb{R}^2\). Find a harmonic conjugate for \(u\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be the region which is the intersection of the disks \(|z|&lt;1\) and \(|z-1|&lt;1\). Find a function which maps \(G\) conformally onto the unit disk.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Evaluate \(\displaystyle \int_0^\infty \frac{\cos x}{(1+x^4)^2}\,dx\) using contour integration.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that \(\displaystyle f(s)=\sum_{n=1}^\infty \frac{(-1)^{n-1}}{n^s}\) is analytic in \(\operatorname{Re}s=\sigma&gt;1\). Prove that \(f\) can be analytically continued to all of \(\mathbb{C}\) as an entire function. (Hint: Write \(f(s)\) in terms of \(\zeta(s)\) in \(\sigma&gt;1\). Use properties of \(\zeta(s)\) to show that \(f\) can be made entire.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(\displaystyle f(z)=\sum_{n=1}^\infty \frac{z^n}{n^2}\). What is the radius of convergence \(R\) of this series? Is the series convergent at all points \(|z|=R\)? At what points of \(|z|=R\) is \(f\) analytic? (Hint: Think of \(f\) as the primitive of \(-\log(1-z)/z\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Find all entire functions \(f\) such that \(|f(z)|=1\) whenever \(|z|=1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>We say that \(z_0\) is a fixed point of \(f\) if \(f(z_0)=z_0\). Suppose \(f\) is analytic in a region \(D\) containing the closed unit disk.</p>
         <ol class="subparts">
           <li>
@@ -188,13 +194,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose \(f\) is an entire function and \(\operatorname{Re}f(z)\leq A+B|z|^k\) for all \(z\), where \(A,B\) and \(k\) are positive numbers. Prove that \(f\) must be a polynomial. Describe the polynomial as detail as possible when \(A=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose that \(f\) is a conformal map of unit disk onto a square with center at \(0\) and \(f(0)=0\). Prove that \(f(iz)=if(z)\). If \(\displaystyle f(z)=\sum^\infty c_nz^n\), prove that \(c_n=0\) unless \(n-1\) is a multiple of \(4\). (Hint: Show that \(if(z)\) is also a conformal map of the unit disk onto the same square.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Deduce from the identity</p>
         <div class="display-math">\[
 \sin \pi z=\pi z\prod_{n=1}^\infty\left(1-\frac{z^2}{n^2}\right)

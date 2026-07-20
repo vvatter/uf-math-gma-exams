@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,19 +160,19 @@
         <p>State the following theorems.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>The Egorov theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>The Lebesgue theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>The dual of \(L^p(\mu)\), \(1\leq p&lt;\infty\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>The Fubini theorem for \(\mu\times\nu\)-integrable functions.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>The Riesz representation theorem (of linear continuous functionals on the space \(C(K)\) of continuous functions on a compact space \(K\)).</p>
         </li>
       </ol>
@@ -177,10 +183,10 @@
         <p>State and prove one of the following 2 theorems.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>The representation of the dual of \(L^1(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>The Fubini theorem for \(\mathcal S\times\mathcal T\)-measurable functions.</p>
         </li>
       </ol>
@@ -194,19 +200,19 @@
         <p>Let \((X,\Sigma,\mu)\) be a measure space and \(E\) a Banach space.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Assume \(\mu\) is finite. Let \(\mathcal F\subset\Sigma\) be a sub-\(\sigma\)-algebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal F)\) for functions \(f\in L_E^1(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Let \(\mathcal R\subset\Sigma\) be an algebra generating \(\Sigma\) and \(f\in L_E^1(\mu)\). Prove that there is a sequence \((f_n)\) of \(\mathcal R\)-step functions converging to \(f\), \(\mu\)-a.e., and in the mean.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Let \(\mathcal R\subset\Sigma\) be an algebra generating \(\Sigma\) and \(f\in L_E^1(\mu)\). Prove that if \(\int_A f\,d\mu=0\) for every \(A\in\mathcal R\), then \(f=0\), \(\mu\)-a.e.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Assume \(\mu\) is finite and let \(f_n\in L_E^1(\mu)\), \(n=1,2,\ldots\). Prove that if \(f_n\to f\) uniformly, then \(f\in L_E^1(\mu)\) and \(f_n\to f\) in the mean.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>Let \((X,\mathcal S)\), \((Y,\mathcal T)\) be measurable spaces, and let \(\mu:\mathcal S\to\mathbb R\) and \(\nu:\mathcal T\to\mathbb R\) be \(\sigma\)-additive measures. Prove the existence of the product measure \(\mu\times\nu\) and the equality \(\lvert\mu\times\nu\rvert=\lvert\mu\rvert\times\lvert\nu\rvert\).</p>
         </li>
       </ol>

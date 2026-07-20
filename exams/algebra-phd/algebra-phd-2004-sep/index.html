@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has four parts.</p>
         <ol class="subparts">
           <li>
@@ -189,31 +195,31 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(F\) be a field, let \(A\) be a central simple algebra over \(F\), and let \(B\) be a simple \(F\)-algebra with 1. Prove that \(A\otimes_F B\) is simple.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Use the Wedderburn–Artin Theorem to determine all isomorphism classes of semisimple rings of order \(720=2^4\cdot 3^2\cdot 5\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\zeta=e^{2\pi i/16}\) be a primitive 16th root of unity and let \(F=\mathbb{Q}(\zeta)\). Determine the Galois group \(G=\operatorname{Gal}(F/\mathbb{Q})\), and for each subgroup \(H\leq G\) determine the fixed field \(F^H\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(p\) be prime and let \(n\) be a positive integer. Prove that there is a field \(\mathbb{F}_{p^n}\) with \(p^n\) elements, and that this field is uniquely determined up to isomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(G=\langle x,y:x^3=y^2,\ y^4=1\rangle\). Prove that \(G\) is infinite and non-abelian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Give an example of a projective module which is not free. Justify your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be an Artinian commutative ring with 1. Prove that \(R\) has only finitely many prime ideals, all of which are maximal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a commutative ring with 1 and let \(S\) be a multiplicative subset of \(R\) which contains no zero divisors. Prove that there is a one-to-one correspondence between prime ideals of \(S^{-1}R\) and prime ideals \(P\) of \(R\) such that \(P\cap S=\varnothing\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(R\) be a commutative ring with 1.</p>
         <ol class="subparts">
           <li>
@@ -234,7 +240,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(R\subset S\) be commutative rings with \(1_R=1_S\) such that \(S\) is integral over \(R\). Let \(C\) be an algebraically closed field and let \(\phi:R\to C\) be a unitary ring homomorphism. Prove that there is a ring homomorphism \(\widetilde{\phi}:S\to C\) such that \(\widetilde{\phi}|_R=\phi\).</p>
       </li>
     </ol>

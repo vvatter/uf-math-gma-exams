@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,17 +158,17 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f:[0,1]\to[0,1)\) be continuous. Decide whether it follows that</p>
         <div class="display-math">\[
 \int_0^1 \frac{1}{1-f(t)}\,dt=\sum_{n=0}^{\infty}\int_0^1 f(t)^n\,dt,
 \]</div>
         <p>giving proof or counterexample as appropriate. [Note the intervals carefully.]</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(f:\mathbb{R}\to\mathbb{R}\) be nonconstant; for each positive integer \(n\) and each real \(t\) define \(f_n(t)=f(nt)\). Prove that there exists no \(\varepsilon&gt;0\) such that \((f_n)_{n=1}^{\infty}\) is equicontinuous on the interval \((-\varepsilon,\varepsilon)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f:\mathbb{R}\to\mathbb{R}\) be continuous. Either</p>
         <ol class="subparts">
           <li>
@@ -183,7 +189,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((f_n)_{n=1}^{\infty}\) be a sequence of measurable real-valued functions. Prove that each of the following sets is measurable:</p>
         <ol class="subparts">
           <li>
@@ -212,7 +218,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f:[0,\infty)\to\mathbb{R}\) be locally Lebesgue integrable and assume that \(f(t)\to1\) as \(t\to\infty\). Prove that for each positive integer \(n\) we may define</p>
         <div class="display-math">\[
 a_n=\frac{1}{n}\int_0^{\infty}e^{-t/n}f(t)\,dt\in\mathbb{R}

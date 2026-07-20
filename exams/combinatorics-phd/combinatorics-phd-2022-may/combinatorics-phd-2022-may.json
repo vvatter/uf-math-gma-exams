@@ -77,7 +77,13 @@
             "text": "Let \\(P\\) be a finite poset with unique minimal element \\(0\\) and Möbius function \\(\\mu\\). Let \\(y\\in P\\) so that there is only one \\(x\\) covered by \\(y\\). Show \\(\\mu(0,y)=0\\)."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The statement as printed is false when the unique element covered by \\(y\\) is the minimal element \\(0\\). A condition such as \\(x\\ne0\\) may be missing, but the intended correction is not uniquely determined, so the source reading has been retained."
+          }
+        ]
       }
     },
     {

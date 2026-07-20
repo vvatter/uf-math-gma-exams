@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,17 +158,17 @@
       <p>Present the solutions with the necessary details, so the partial credit can be properly assessed. Do all 9 problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Construct a conformal map which maps the vertical strip \(0&lt;\operatorname{Re} z&lt;1\) onto the upper half-plane.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>The function</p>
         <div class="display-math">\[
 f(z)=\sum_{n=1}^{\infty}\frac{z^n}{n^2}
 \]</div>
         <p>is analytic in the unit circle \(|z|&lt;1\). Can it be continued analytically beyond the circle \(|z|=1\)? Discuss the nature of the singularities (if any) on \(|z|=1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -187,7 +193,7 @@ f(z)=\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^z}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f(z)\) be analytic in the disc \(|z|\leq 1\). If</p>
         <div class="display-math">\[
 |f(z)|\leq 1 \quad\text{for }|z|\leq 1,
@@ -197,20 +203,20 @@ f(z)=\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^z}
 \frac{|f&#x27;(z)|}{1-|f(z)|^2}\leq\frac{1}{1-|z|^2}\quad\text{for }|z|\leq 1.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(F(z)\) be an entire function with the property that \(\operatorname{Re}F(z)\) is bounded from above. Prove that \(F(z)\) is constant.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\Omega\) be an open connected subset of \(\mathbb{C}\). Let \(\{f_n\}\) be a sequence of one-to-one analytic functions on \(\Omega\), and assume that \(\{f_n\}\) converges uniformly on any compact subset of \(\Omega\) to a function \(f\). Show that \(f\) is either one-to-one or a constant, and show that both possibilities can occur.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose that \(f\) is entire, of order \(\rho\). Let \(n(r)\) be the number of zeros (counting the multiplicity) of \(f\) in the disk \(\{z:|z|\leq r\}\). Prove that</p>
         <div class="display-math">\[
 \limsup_{r\to\infty}\frac{\log n(r)}{\log r}\leq\rho,
 \]</div>
         <p>and show, by examples, that equality can happen.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>The expression</p>
         <div class="display-math">\[
 \{f,z\}=\frac{f&#x27;&#x27;&#x27;(z)}{f&#x27;(z)}-\frac{3}{2}\left\{\frac{f&#x27;&#x27;(z)}{f&#x27;(z)}\right\}^2
@@ -246,7 +252,7 @@ f(z)=\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^z}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

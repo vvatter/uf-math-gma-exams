@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,25 +158,25 @@
       <p>You must answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \((X,\mathcal{M},\mu)\) be a measure space and \(f\in L^1(\mu)\). Prove that for every \(\epsilon&gt;0\), there exists a \(\delta&gt;0\) such that if \(\mu(E)&lt;\delta\), then \(\int_E |f|\,d\mu&lt;\epsilon\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State the Hahn decomposition theorem for signed measures. Prove that if \(\rho\) is a signed measure on a measurable space \((X,\mathcal{M})\), then there exist unique positive measures \(\rho_+,\rho_-\) such that \(\rho_+\perp\rho_-\) and \(\rho=\rho_+-\rho_-\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State the Fubini–Tonelli theorem and give a sketch of its proof.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(C^1[0,1]\) denote the set of all continuous (real-valued) functions \(f\) on \([0,1]\) such that \(f\) is differentiable in \((0,1)\) and \(f&#x27;\) extends continuously to \([0,1]\). Prove that \(C^1[0,1]\) is a Banach space under the norm</p>
         <div class="display-math">\[
 \|f\|=\|f\|_\infty+\|f&#x27;\|_\infty.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(\mathcal{X}\) be a normed vector space (over \(\mathbb{C}\)) and \(\mathcal{M}\subset\mathcal{X}\) a closed subspace. Prove that if \(x\in\mathcal{X}\setminus\mathcal{M}\), then \(\mathcal{M}+\mathbb{C}x\) is closed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -191,10 +197,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mathcal{X}\) be a Banach space and \(\mathcal{Y}\) a normed vector space. Suppose that \(T_n\) is a sequence of bounded linear operators from \(\mathcal{X}\) to \(\mathcal{Y}\). Prove that if \(\lim T_nx\) exists for each \(x\in\mathcal{X}\), then the mapping \(Tx=\lim T_nx\) defines a bounded linear operator from \(\mathcal{X}\) to \(\mathcal{Y}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \((X,\mathcal{M},\mu)\) be a \(\sigma\)-finite measure space. Prove that the simple functions that belong to \(L^2(\mu)\) are dense in \(L^2(\mu)\).</p>
       </li>
     </ol>

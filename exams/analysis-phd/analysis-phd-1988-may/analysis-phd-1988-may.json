@@ -116,6 +116,12 @@
             "text": "Define two new measures \\(\\mu\\) and \\(\\nu\\) on the measurable space \\((\\mathbb R,\\mathcal C)\\) by setting\n\\[\n\\mu(A)=\\int_A x\\,dx \\qquad\\text{whenever }A\\in\\mathcal C,\n\\]\n\\[\n\\nu(A)=\\int_{A\\cap[0,\\infty)}x\\,dx \\qquad\\text{whenever }A\\in\\mathcal C.\n\\]\nSince \\(\\lambda\\) may also be considered as a measure on \\((\\mathbb R,\\mathcal C)\\), we can find two \\(\\mathcal C\\)-measurable functions \\(d\\mu/d\\lambda\\) and \\(d\\nu/d\\lambda\\) so that\n\\[\n\\mu(A)=\\int_A \\frac{d\\mu}{d\\lambda}\\,dx \\qquad\\text{whenever }A\\in\\mathcal C,\n\\]\n\\[\n\\nu(A)=\\int_A \\frac{d\\nu}{d\\lambda}\\,dx \\qquad\\text{whenever }A\\in\\mathcal C.\n\\]\nCompute these two functions.",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source visibly defines \\(\\mu(A)=\\int_A x\\,dx\\) while calling \\(\\mu\\) a measure on the sigma-algebra of symmetric Borel sets. For sets such as \\(\\mathbb R\\), this signed Lebesgue integral is not defined, so the intended integrand may contain an unprinted or unclear modification. No correction is uniquely determined, and the source reading has been retained."
+          }
         ]
       }
     }

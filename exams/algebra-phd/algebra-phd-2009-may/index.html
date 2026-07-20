@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer exactly seven of the following eleven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Q\) and \(\mathbb C\) are the fields of rational numbers and complex numbers respectively.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\mathcal C\) be a category, and denote by \(\mathrm{Set}\) the category of sets.</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(R\) be a ring with identity. Show that the following are equivalent:</p>
         <ol class="subparts">
           <li>
@@ -202,19 +208,19 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>If \(G\) is a group, denote by \(G^{ab}\) the abelianization of \(G\), and if \(X\) is a set, denote by \(F(X)\) and \(F^{ab}(X)\) the free group on \(X\) and the free abelian group on \(X\) respectively. Show that \(F(X)^{ab}\simeq F^{ab}(X)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(K\) be a field, \(L=K(\alpha)\) a simple extension of \(K\), and \(\overline K\) an algebraic closure of \(K\). Show that \(\alpha\) is separable over \(K\) if and only if the ring \(L\otimes_K\overline K\) has no nonzero nilpotent elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that if \(R\) is a Noetherian commutative ring with identity, then \(R[X]\) is also Noetherian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State and prove Artin’s theorem on the linear independence of characters. and use it to prove the multiplicative form of Hilbert’s Theorem 90.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(p(x)=x^7-3\in\mathbb Q[x]\), \(\zeta\in\mathbb C\) a primitive \(7\)-th root of \(1\), and \(K\) the splitting field of \(p(x)\).</p>
         <ol class="subparts">
           <li>
@@ -235,7 +241,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -256,7 +262,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a Dedekind domain, and let \(I\) be a non-zero ideal of \(R\).</p>
         <ol class="subparts">
           <li>
@@ -277,10 +283,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Show that if \(L/K\) is any extension of fields, there is an algebraically independent set \(\{\alpha_i\}_{i\in I}\) of elements of \(L\) such that \(L\) is algebraic over \(K(\alpha_i,i\in I)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(k\) be a field. A \(k\)-algebra \(R\) is central if the image of the structure map \(k\to R\) is in the center of \(R\).</p>
         <ol class="subparts">
           <li>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do any seven problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Consider Lebesgue measure on the real line \(\mathbb{R}\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \(f_n\) in \(L^1(\mathbb{R})\) converging to an \(f\) in \(L^1(\mathbb{R})\)... Which of these answers change if we replace \(\mathbb{R}\) by the interval \([0,1]\)?</p>
         <ol class="subparts">
           <li>
@@ -189,10 +195,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Define the Hardy–Littlewood maximal function. State and prove the Hardy–Littlewood maximal theorem. (Begin by proving an appropriate covering lemma.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -220,14 +226,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\mathcal{X},\mathcal{Y}\) be Banach spaces. Suppose that \((T_n)\) is a sequence of bounded linear operators from \(\mathcal{X}\) to \(\mathcal{Y}\) such that \(\lim_{n\to\infty}T_nx\) exists for every \(x\in\mathcal{X}\). Prove that</p>
         <div class="display-math">\[
 Tx:=\lim_{n\to\infty}T_nx
 \]</div>
         <p>defines a bounded linear operator from \(\mathcal{X}\) to \(\mathcal{Y}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -248,13 +254,13 @@ Tx:=\lim_{n\to\infty}T_nx
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(X\) be a normed vector space. Given \(x\in X\), define a linear functional \(\hat{x}:X^*\to\mathbb{C}\) by \(\hat{x}(f)=f(x)\). Prove that the map \(x\to\hat{x}\) is an isometry from \(X\) into \(X^{**}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mathcal{H}\) be a Hilbert space and suppose \(\mathcal{M},\mathcal{N}\) are closed subspaces with \(\mathcal{M}\perp\mathcal{N}\). Prove that \(\mathcal{M}+\mathcal{N}\) is closed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose \((k_n)_{n=1}^{\infty}\) is a sequence of functions in \(L^1(\mathbb{R})\) satisfying the following. Prove that</p>
         <div class="display-math">\[
 \lim_{n\to\infty}\|f-f*k_n\|_1=0

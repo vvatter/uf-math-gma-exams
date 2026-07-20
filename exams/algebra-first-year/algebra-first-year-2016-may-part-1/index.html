@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Give an example of each of the following, with some explanation.</p>
         <ol class="subparts">
           <li>
@@ -181,19 +187,19 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a finite group and suppose \(G\) acts transitively on a set \(\Omega\). Prove that \(|\Omega|\) (the number of elements in \(\Omega\)) is finite and that \(|\Omega|\) divides \(|G|\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(G\) be a group, and let \(A\) and \(B\) be normal subgroups of \(G\) such that \(A \cap B = 1\). Prove that every element of \(A\) commutes with every element of \(B\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(G\) be a group of order \(14\) and let \(H\) be a (multiplicative) cyclic group of order \(4\). Suppose that \(\phi:G\to H\) is a group homomorphism. Let \(g\in G\). Prove that there exists some \(h\in H\) such that \(\phi(g)=h^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(a=(1\ 2\ 3\ 4)(5\ 6)(7\ 8)\) and let \(b=(7\ 2\ 8\ 4)(1\ 6)(3\ 5)\) be elements of the symmetric group \(S_8\). Is there an element \(\sigma\in S_8\) such that \(\sigma a\sigma^{-1}=b\)? If so find one.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Prove that if \(G\) is a group of order \(56\), then \(G\) has a normal Sylow \(2\)-subgroup or a normal Sylow \(7\)-subgroup.</p>
       </li>
     </ol>

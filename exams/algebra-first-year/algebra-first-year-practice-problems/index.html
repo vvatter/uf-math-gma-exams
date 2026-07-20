@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra First-Year Exam, Practice Problems</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra First-Year Exam, Practice Problems</h1>
+    </header>
+    <ol class="problems" start="1">
+      <li class="problem" id="problem-1">
+        <p>State and prove Cayley’s Theorem about finite groups.</p>
+      </li>
+      <li class="problem" id="problem-2">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Compute the order of the general linear group \(GL_n(\mathbb{Z}_p)\), with \(p\) a prime number.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Calculate the order of the subgroup \(SL_n(\mathbb{Z}_p)\) of matrices which have determinant 1.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-3">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that two elements of the symmetric group \(S_n\) are conjugate if and only if their cycle types are the same.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Is this true for the alternating groups? Justify your answer.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-4">
+        <p>Prove that if \(|G|=12\) and \(G\) has 4 Sylow 3-subgroups, then \(G\cong A_4\). (Hint: let \(G\) act by conjugation on the 4 Sylow 3-subgroups.)</p>
+      </li>
+      <li class="problem" id="problem-5">
+        <p>Let \(p\) and \(q\) be prime numbers, and suppose that \(p&lt;q\). If \(G\) is a group of order \(pq\) and \(p\) does not divide \(q-1\), show that \(G\) must be cyclic.</p>
+      </li>
+      <li class="problem" id="problem-6">
+        <p>Recall that a group \(G\) is called a \(p\)-group (\(p\) a prime number) if for each \(g\in G\), \(g^{p^i}=1\), for some positive integer \(i\).</p>
+        <p>Prove that if \(G\) is a finite \(p\)-group, then its center is not trivial. Then use this fact to prove that every finite \(p\)-group is nilpotent.</p>
+      </li>
+      <li class="problem" id="problem-7">
+        <p>Suppose that \(\phi:G\longrightarrow H\) and \(\theta:G\longrightarrow K\) are homomorphisms between groups. Assume that \(\phi\) is surjective. Show that if \(\operatorname{Ker}(\phi)\) is contained in \(\operatorname{Ker}(\theta)\) then there is a unique homomorphism \(\theta^*:H\longrightarrow K\) such that \(\theta^*\cdot\phi=\theta\).</p>
+      </li>
+      <li class="problem" id="problem-8">
+        <p>Prove that if \(G\) is a finite group then any subgroup of index 2 is normal.</p>
+      </li>
+      <li class="problem" id="problem-9">
+        <p>Prove that any subgroup of a cyclic group is cyclic.</p>
+      </li>
+      <li class="problem" id="problem-10">
+        <p>Find all the automorphisms of order 3 of \(\mathbb{Z}_{91}\). (Hint: How can \(\mathbb{Z}_3\) act nontrivially on \(\mathbb{Z}_{91}\)?) Does \(\mathbb{Z}_{91}\) have any automorphisms of order 5? Explain.</p>
+      </li>
+      <li class="problem" id="problem-11">
+        <p>Suppose that \(G\) is a nonabelian group of order 21. Prove:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(Z(G)=\{e\}\);</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>\(G\) has an automorphism which is not inner.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-12">
+        <p>Let \(GL_2(\mathbb{Z}_3)\) act on the four one-dimensional subspaces of \(\mathbb{Z}_3^2\) by \(g(\operatorname{Span}\{v\})=\operatorname{Span}\{gv\}\), where \(g\in GL_2(\mathbb{Z}_3)\) and \(v\in\mathbb{Z}_3^2\). Prove that this action induces a surjective homomorphism of \(GL_2(\mathbb{Z}_3)\) onto \(S_4\) whose kernel is the subgroup of all scalar matrices.</p>
+      </li>
+      <li class="problem" id="problem-13">
+        <p>Let \(p\) be a prime number and \(n\) be a positive integer. Prove that the general linear group \(GL_n(\mathbb{Z}_p)\) is isomorphic to the automorphism group of \(\mathbb{Z}_p\times\cdots\times\mathbb{Z}_p\) (\(n\) times).</p>
+      </li>
+      <li class="problem" id="problem-14">
+        <p>Suppose that \(\phi:G\longrightarrow H\) is a surjective homomorphism of groups. Prove the following about the assignment \(\phi^*:N\mapsto\phi^{-1}(N)\). Assume that it maps subgroups to subgroups.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(\phi^*\) is a bijection between the lattice of subgroups of \(H\) and the set of subgroups of \(G\) that contain \(\operatorname{Ker}(\phi)\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>\(N_1\subseteq N_2\) if and only if \(\phi^*(N_1)\subseteq\phi^*(N_2)\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>\(\phi^*(N)\) is normal in \(G\) if and only if \(N\) is normal in \(H\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-15">
+        <p>Let \(G\) be a finite group acting on the set \(S\). Suppose that \(H\) is a normal subgroup of \(G\) so that for any \(s_1,s_2\in S\) there is a unique \(h\in H\) so that \(hs_1=s_2\). For each \(s\in S\), let \(G_s=\{g\in G:gs=s\}\). Prove</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(G=G_sH\), and \(G_s\cap H=\{e\}\);</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>if \(H\) is contained in the center of \(G\), then \(G_s\) is normal and \(G\) is (isomorphic to) a direct product of \(G_s\) and \(H\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-16">
+        <p>Suppose that \(G\) is a group and \(H\) is a proper subgroup of index \(k\). Show that</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(g*(xH)=gxH\) defines a group action of \(G\) on the set \(\Omega=(G/H)_l\) of left cosets of \(H\);</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>the kernel of the induced homomorphism into the permutation group on \(\Omega\) is the intersection of all the conjugates of \(H\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Now suppose that \(G\) is simple and that \(k&gt;1\) is the index of \(H\). Then show that \(G\) is isomorphic to a subgroup of \(S_k\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-17">
+        <p>Prove that a group of order \(30\) must have a normal subgroup of order \(15\).</p>
+      </li>
+      <li class="problem" id="problem-18">
+        <p>Classify the groups of order \(70\).</p>
+      </li>
+      <li class="problem" id="problem-19">
+        <p>Show that if \(G\) is a subgroup of \(S_n\) (\(n\) a natural number) containing an odd permutation, then half the elements of \(G\) are odd and half are even.</p>
+      </li>
+      <li class="problem" id="problem-20">
+        <p>Use 19 to prove that if \(G\) is a group of order \(2m\), with \(m\) odd, then \(G\) cannot be simple, and, indeed, contains a subgroup of index \(2\).</p>
+      </li>
+      <li class="problem" id="problem-21">
+        <p>Classify the groups of order \(4p\), where \(p\geq 5\) is prime.</p>
+      </li>
+      <li class="problem" id="problem-22">
+        <p>Let \(p\) be an odd prime number.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that in \(\mathrm{GL}_2(\mathbb{Z}_p)\) every element \(A\) of order \(2\), \(A\neq -I\), is conjugate to the diagonal matrix \(U\), for which \(U_{11}=-1\) and \(U_{22}=1\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Now classify the groups of order \(2p^2\), for which the Sylow \(p\)-subgroups are not cyclic.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-23">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that there are exactly four homomorphisms from \(\mathbb{Z}_2\) into \(\operatorname{Aut}(\mathbb{Z}_8)\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that these yield four pairwise nonisomorphic semidirect products.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-24">
+        <p>Prove that \(S_4\) contains no non–abelian simple groups.</p>
+      </li>
+      <li class="problem" id="problem-25">
+        <p>Use the result of 24 to prove that if \(G\) is a nonabelian simple group, then every proper subgroup of \(G\) has index at least \(5\).</p>
+      </li>
+      <li class="problem" id="problem-26">
+        <p>Prove that \(D_{2n}\) is nilpotent if and only if \(n\) is a power of \(2\). (Hint: Use the ascending central chain; recall that if there is an even number of vertices \(n\), then \(Z(D_{2n})\neq\{e\}\).)</p>
+      </li>
+      <li class="problem" id="problem-27">
+        <p>Let \(G\) be the group of all \(3\) by \(3\) upper triangular matrices, with entries in \(\mathbb{Z}\), and diagonal entries equal to \(1\). Prove that the commutator of \(G\) is its center.</p>
+      </li>
+      <li class="problem" id="problem-28">
+        <p>Let \(P\) be a Sylow \(p\)-subgroup of \(H\) and \(H\leq K\). If \(P\) is normal in \(H\) and \(H\) is normal in \(K\), prove that \(P\) is normal in \(K\). Deduce that if \(P\in \mathrm{Syl}_p(G)\) then \(N_G(P)\) is selfnormalizing.</p>
+      </li>
+      <li class="problem" id="problem-29">
+        <p>Prove that if \(G\) is a finite group, and each Sylow \(p\)-subgroup is normal in \(G\), then \(G\) is a direct product of its Sylow subgroups.</p>
+      </li>
+      <li class="problem" id="problem-30">
+        <p>Classify the abelian groups of order \(2^5\cdot 5^2\cdot 17^3\).</p>
+      </li>
+      <li class="problem" id="problem-31">
+        <p>Prove that \((\mathbb{Q},+)\), the additive group of rational numbers is not cyclic.</p>
+      </li>
+      <li class="problem" id="problem-32">
+        <p>Prove that \(\operatorname{Aut}(\mathbb{Z}_k)\) is isomorphic to the group \(U(k)\) of integers \(i\), with \(1\leq i&lt;k\), which are relatively prime to \(k\), under multiplication modulo \(k\).</p>
+      </li>
+      <li class="problem" id="problem-33">
+        <p>Give examples of each of the following, with a brief explanation in each case:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>A solvable group with trivial center.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>An abelian \(p\)-group which is isomorphic to one of its proper subgroups and also one of its proper homomorphic images.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>An abelian group having no maximal subgroups.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(d)</span>
+              <div class="subpart-body">
+                <p>A direct product of nilpotent groups which is not nilpotent.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(e)</span>
+              <div class="subpart-body">
+                <p>A semidirect product of abelian groups which is not nilpotent.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(f)</span>
+              <div class="subpart-body">
+                <p>A finite nonabelian group in which every proper subgroup is cyclic.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-34">
+        <p>Each three-cycle in \(S_n\) has \(\frac{1}{3}n(n-1)(n-2)\) conjugates. Prove this and conclude from it that \(A_4\) is the only subgroup of \(S_4\) of order \(12\).</p>
+      </li>
+      <li class="problem" id="problem-35">
+        <p>Prove that \(A_5\) is a simple group.</p>
+      </li>
+      <li class="problem" id="problem-36">
+        <p>For \(n\geq 5\), prove that \(A_n\) is the only proper, nontrivial normal subgroup of \(S_n\).</p>
+      </li>
+      <li class="problem" id="problem-37">
+        <p>Let \(G\) be a finite group. Call \(x\in G\) a non-generator if for each subset \(Y\subseteq G\), if \(G=\langle Y\cup\{x\}\rangle\) then \(G=\langle Y\rangle\). Prove:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>The subset \(\Phi(G)\) of all non-generators of \(G\) form a subgroup of \(G\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>\(\Phi(G)\) is the intersection of all maximal subgroups of \(G\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Conclude from (b) that \(\Phi(G)\) is normal.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(d)</span>
+              <div class="subpart-body">
+                <p>What is the Frattini subgroup of \(S_n\)? Explain. (Consider the stabilizers of a single letter.)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-38">
+        <p>State and prove the Orbit-Stabilizer Theorem.</p>
+      </li>
+      <li class="problem" id="problem-39">
+        <p>Show that if \(G\) is a simple abelian group then it is cyclic of prime order.</p>
+      </li>
+      <li class="problem" id="problem-40">
+        <p>For the additive group of rational numbers \((\mathbb{Q},+)\), show that the intersection of any two nontrivial subgroups is nontrivial.</p>
+      </li>
+      <li class="problem" id="problem-41">
+        <p>Show that the group \((\mathbb{Q},+)\) of additive rational numbers has no maximal subgroups. (Hint: Use the lattice isomorphism theorem (Exercise 14) and Exercise 39.)</p>
+      </li>
+      <li class="problem" id="problem-42">
+        <p>The commutator subgroup \(G&#x27;\) of a group \(G\) is defined as the subgroup generated by the set</p>
+        <div class="display-math">\[
+\{x^{-1}y^{-1}xy:x,y\in G\}.
+\]</div>
+        <p>Prove that:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Show that \(G&#x27;\) is a normal subgroup of \(G\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Show that \(G/G&#x27;\) is abelian.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Show that if \(\phi:G\longrightarrow H\) is a homomorphism into the abelian group \(H\), then there exists a unique homomorphism \(\widehat{\phi}:G/G&#x27;\longrightarrow H\) such that \(\widehat{\phi}(G&#x27;x)=\phi(x)\), for each \(x\in G\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-43">
+        <p>Suppose that \(G\) is a group and \(H\) is a normal subgroup. Prove that \(G/C_G(H)\) is isomorphic to a subgroup of \(\operatorname{Aut}(H)\). (Hint: let \(G\) act on \(H\) by conjugation.)</p>
+      </li>
+      <li class="problem" id="problem-44">
+        <p>Let \(G\) be a group of \(385\) elements. Prove that the Sylow \(11\)-subgroups are normal, and that any Sylow \(7\)-subgroup lies in the center.</p>
+      </li>
+      <li class="problem" id="problem-45">
+        <p>Describe all the groups of \(44\) elements, up to isomorphism. (Hint: use semidirect products.)</p>
+      </li>
+      <li class="problem" id="problem-46">
+        <p>Suppose that \(|G|=105\). If \(G\) has a normal Sylow \(3\)-subgroup, prove that it must lie in the center of \(G\).</p>
+      </li>
+      <li class="problem" id="problem-47">
+        <p>Let \(G\) and \(H\) be the cyclic groups of orders \(n\) and \(k\), respectively. Prove that the number of homomorphisms from \(G\) to \(H\) is the sum of all \(\phi(d)\), where \(d\) runs over all common divisors of \(n\) and \(k\), and \(\phi\) denotes the Euler \(\phi\)-function.</p>
+      </li>
+      <li class="problem" id="problem-48">
+        <p>Let \(R\) be the ring of all \(n\) by \(n\) matrices with integer entries. Prove that the matrix \(a\in R\) is invertible if and only if its determinant is \(\pm1\). (Would you believe: Cramer’s Rule?)</p>
+      </li>
+      <li class="problem" id="problem-49">
+        <p>Using Zorn’s Lemma, prove that each non-zero commutative ring with an identity has maximal ideals.</p>
+      </li>
+      <li class="problem" id="problem-50">
+        <p>Using Zorn’s Lemma, prove that in each non-zero commutative ring with identity minimal prime ideals exist.</p>
+      </li>
+      <li class="problem" id="problem-51">
+        <p>Consider \(A=\mathbb{R}^{\mathbb{N}}\), the ring of all real valued sequences, under pointwise operations. Prove:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>for each \(n\in\mathbb{N}\), \(M_n=\{f\in A:f(n)=0\}\) is a maximal ideal of \(A\);</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>there exist maximal ideals besides the \(M_n\) \((n\in\mathbb{N})\). (Zorn’s Lemma)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-52">
+        <p>Suppose that \(A\) is a commutative ring with identity. Suppose that \(a\in A\) is not nilpotent. Prove that there is a prime ideal that fails to contain \(a\). Use this to show that the set of all nilpotent elements of \(A\) is the intersection of all the prime ideals of \(A\).</p>
+      </li>
+      <li class="problem" id="problem-53">
+        <p>Let \(F\) be a field, and \(A=F[[X]]\) denote the ring of formal power series in one variable. Prove the following:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>The units of \(A\) are precisely the power series whose constant term is nonzero.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Suppose that \(k\geq 1\) is an integer. Let \(I_k\) denote the set of all power series \(\sum_{n=0}^{\infty}a_nX^n\) for which \(a_0,\ldots,a_{k-1}\) are all zero. Each \(I_k\) is an ideal of \(A\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>If \(J\) is a nonzero proper ideal of \(A\), then \(J=I_m\), for some \(m\geq 1\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-54">
+        <p>Prove the Division Algorithm for the ring \(\mathbb{Z}[i]\) of Gaussian integers.</p>
+      </li>
+      <li class="problem" id="problem-55">
+        <p>Let \(D\) be an integer which is not a square in \(\mathbb{Z}\). Consider the subring \(\mathbb{Z}[\sqrt{D}]=\{a+b\sqrt{D}:a,b\in\mathbb{Z}\}\); (do not prove it is a subring.) Define \(N(a+b\sqrt{D})=a^2-Db^2\). Assume that \(N(xy)=N(x)N(y)\), for all \(x,y\in\mathbb{Z}[\sqrt{D}]\). Prove that</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(a+b\sqrt{D}\) is a unit of \(\mathbb{Z}[\sqrt{D}]\) if and only if \(N(a+b\sqrt{D})=\pm1\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(D&lt;-1\), prove that the units of \(\mathbb{Z}[\sqrt{D}]\) are precisely \(\pm1\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-56">
+        <p>A ring \(R\) is boolean if it has an identity and \(x^2=x\), for each \(x\in R\). Prove:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Every boolean ring has characteristic 2 and is commutative.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Assume \(R\) is a boolean ring. Prove that every prime ideal is maximal.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-57">
+        <p>A ring \(R\) is boolean if it has an identity and \(x^2=x\), for each \(x\in R\). Assume the preceding exercise. Use the Chinese Remainder Theorem to prove that every finite boolean ring has \(2^n\) elements, for a suitable non-negative integer \(n\).</p>
+      </li>
+      <li class="problem" id="problem-58">
+        <p>Suppose that \(A\) is a non-zero commutative ring with identity. Let \(n(A)\) denote the set of nilpotent elements of \(A\); you may assume here that it is an ideal. Prove the equivalence of the following three statements:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Every nonunit of \(A\) is nilpotent.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>\(A/n(A)\) is a field.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>\(A\) has exactly one prime ideal.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-59">
+        <p>Prove the Chinese Remainder Theorem: if \(A\) is a commutative ring with identity, and \(I\) and \(J\) are comaximal ideals of \(A\), then \(IJ=I\cap J\), and the homomorphism \(\phi:A\to A/I\times A/J\), by \(\phi(a)=(a+I,a+J)\) is surjective.</p>
+      </li>
+      <li class="problem" id="problem-60">
+        <p>Let \(D\) be an integral domain. Prove that the ring \(D[T]\) of polynomials over \(D\) in one indeterminate is a principal ideal domain if and only if \(D\) is a field.</p>
+      </li>
+      <li class="problem" id="problem-61">
+        <p>Let \(A\) be a commutative ring with 1. Suppose that \(I\) and \(J\) are ideals of \(A\). Prove that</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that \(IJ\subseteq I\cap J\), and give an example where equality does not hold.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Suppose that \(A\) is the (ring) direct product of two fields. Show that \(IJ=I\cap J\), for any two ideals \(I\) and \(J\) of \(A\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-62">
+        <p>Suppose that \(D\) is an integral domain. A polynomial \(f(X)\) over \(D\) is primitive if the greatest common divisor of its coefficients is 1.</p>
+        <p>Prove the following form of Gauss’ Lemma: If \(D\) is a unique factorization domain, then the product of any two primitive polynomials over \(D\) is primitive.</p>
+      </li>
+      <li class="problem" id="problem-63">
+        <p>Let \(A\) be an integral domain, and \(P\) be a prime ideal of \(A\). Define \(A_P\) to be the subset of the quotient field \(K\) of \(A\), consisting of all fractions whose denominator is not in \(P\). Prove that</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(A_P\) is a subring of \(K\);</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>\(A_P\) has exactly one maximal ideal; identify it.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-64">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Define Euclidean domain and principal ideal domain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Prove that any Euclidean domain is a principal ideal domain.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-65">
+        <p>Convince that the polynomial rings \(\mathbb{Z}[X]\) and \(\mathbb{Q}[X]\) have the same field of fractions, but the power series rings \(\mathbb{Z}[[X]]\) and \(\mathbb{Q}[[X]]\) do not.</p>
+      </li>
+      <li class="problem" id="problem-66">
+        <p>Consider the polynomial \(X^2+1\) over the field \(\mathbb{Z}_7\). Prove that \(E=\mathbb{Z}_7[X]/(X^2+1)\) is a field of 49 elements.</p>
+      </li>
+      <li class="problem" id="problem-67">
+        <p>Let \(n\) be a natural number; prove that the polynomial</p>
+        <div class="display-math">\[
+\Phi_n(X)=\frac{X^n-1}{X-1}
+\]</div>
+        <p>is irreducible over the ring \(\mathbb{Z}\) precisely when \(n\) is prime.</p>
+      </li>
+      <li class="problem" id="problem-68">
+        <p>Prove that \(X^2+Y^2-1\) is irreducible in \(\mathbb{Q}[X,Y]\).</p>
+      </li>
+      <li class="problem" id="problem-69">
+        <p>Give examples of the following, and justify your choices:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>A unique factorization domain which is not a principal ideal domain.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>A local integral domain with a nonzero prime ideal that is not maximal.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>An integral domain in which the uniqueness provision of “unique factorization” fails.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-70">
+        <p>Suppose that \(F\) is a field and \(G\) is a finite multiplicative subgroup of \(F\setminus\{0\}\). Prove that \(G\) is cyclic.</p>
+      </li>
+      <li class="problem" id="problem-71">
+        <p>Suppose that \(F\) is a field and \(q(X)=a_0+a_1X+\cdots+a_{n-1}X^{n-1}+X^n\) is an irreducible polynomial in \(F[X]\). Prove that \(E=F[X]/(q(X))\) is a field which is an \(n\) dimensional vector space over \(F\).</p>
+      </li>
+      <li class="problem" id="problem-72">
+        <p>Let \(R\) be a ring with identity and \(M\) be an \(R\)-module. An element \(x\in M\) is called a torsion element if \(rx=0\), for some nonzero \(r\in R\). Let \(T(M)\) denote the subset of all torsion elements of \(M\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(R\) is an integral domain show that \(T(M)\) is a submodule of \(M\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Give an example to show that \(T(M)\), in general, is not a submodule of \(M\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-73">
+        <p>Suppose that \(A\) is a commutative ring with identity, and \(I\) is an ideal of \(A\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>For each positive integer \(n\), prove that</p>
+                <div class="display-math">\[
+A^n/IA^n\cong A/I\times\cdots\times A/I;
+\]</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Use (a) to prove that if \(A^m\cong A^n\), where \(m\) and \(n\) are positive integers, then \(m=n\). (You may use the corresponding fact for fields.)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-74">
+        <p>Prove that \(\mathbb{Q}\), the additive group of the rationals, is not a free abelian group. (Hint: The rank of \(\mathbb{Q}\) is one.)</p>
+      </li>
+      <li class="problem" id="problem-75">
+        <p>Suppose that \(G\) is an abelian group, generated by \(x_1,x_2,x_3,x_4\), and subject to the relations:</p>
+        <div class="display-math">\[
+4x_1-2x_2-2x_3=0;\quad 8x_1-12x_3+20x_4=0;\quad 6x_1+4x_2-16x_4=0.
+\]</div>
+        <p>Write \(G\) as a direct product of cyclic groups.</p>
+      </li>
+      <li class="problem" id="problem-76">
+        <p>Let \(R\) be a commutative ring with identity. If \(F\) is a free \(R\)-module of rank \(n&lt;\infty\), then show that \(\operatorname{Hom}_R(F,M)\cong M^n\), for each \(R\)-module \(M\).</p>
+      </li>
+      <li class="problem" id="problem-77">
+        <p>Let \(V\) be a vector space over the field \(F\). Suppose that \(U_1\) and \(U_2\) are finite dimensional subspaces of \(V\). Prove that \(\dim(U_1)+\dim(U_2)=\dim(U_1\cap U_2)+\dim(U_1+U_2)\).</p>
+      </li>
+      <li class="problem" id="problem-78">
+        <p>Suppose that \(T:V\longrightarrow W\) is a linear transformation between vector spaces over the same field \(F\). Prove that \(T\) is one to one precisely when it maps linearly independent sets to linearly independent sets.</p>
+      </li>
+      <li class="problem" id="problem-79">
+        <p>Suppose that \(T:V\longrightarrow V\) is a linear transformation on the vector space \(V\). Call \(T\) a projection if \(T^2=T\). Prove that if \(T\) is a projection then \(V=\operatorname{Ker}(T)\oplus\operatorname{Im}(T)\). Give an example to show that the converse of the above proposition is false.</p>
+      </li>
+      <li class="problem" id="problem-80">
+        <p>Suppose that \(V\) is a finite dimensional vector space over the field \(F\) and that \(T:V\longrightarrow W\) is a linear transformation into a vector space \(W\) over \(F\). Prove that \(\dim(V)=\dim(\operatorname{Ker}(T))+\dim(\operatorname{Im}(T))\). (Caution: The finite dimensionality of \(\operatorname{Im}(T)\) must be established.)</p>
+      </li>
+      <li class="problem" id="problem-81">
+        <p>Obtain a formula for the number of one dimensional subspaces of an \(n\) dimensional vector space over the field \(\mathbb{Z}_p\) of \(p\) elements (\(p\) is a prime number). Justify your choice.</p>
+      </li>
+      <li class="problem" id="problem-82">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Define: Irreducible module over a ring \(R\) with identity 1.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Now assume that \(R\) is commutative as well. Prove that the \(R\)-module \(M\) is irreducible if and only if \(M\cong R/I\), where \(I\) is a maximal ideal of \(R\). Use this to classify the irreducible \(\mathbb{Z}\)-modules.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-83">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Define: Irreducible module over a ring \(R\) with identity 1.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Prove Schur’s Lemma: Suppose that \(M\) is an irreducible module; then every nonzero endomorphism of \(M\) is an automorphism. Show how one concludes from this that \(\operatorname{End}(M)\) is a division ring, when \(M\) is irreducible.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-84">
+        <p>Let \(R\) be a ring with identity. Suppose that \(\phi:M\longrightarrow F\) is a surjective \(R\)-homomorphism and that \(F\) is a free \(R\)-module. Prove that \(M=\operatorname{Ker}(\phi)\oplus N\), where \(N\cong F\).</p>
+      </li>
+      <li class="problem" id="problem-85">
+        <p>Let \(R\) be a principal ideal domain and \(M\) be a torsion \(R\)-module. Define primary module and prove that \(M\) is isomorphic to a direct sum of primary \(R\)-modules.</p>
+      </li>
+      <li class="problem" id="problem-86">
+        <p>Suppose that \(V\) is a finite dimensional vector space over the field \(F\) and that \(T\) is a linear transformation on \(V\), so that the induced module action of \(F[X]\) on \(V\) defines a cyclic module with cyclic vector \(w\). Prove:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>The set \(\{w,Tw,T^2w,\ldots,T^kw\}\) is a basis for a suitable \(k\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Compute the matrix of \(T\) relative to this basis, pointing out the relationship which the entries of this matrix and \(k\) have to the monic polynomial in \(F[X]\) that generates the annihilator of \(w\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Compute the characteristic polynomial of the matrix in (b).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-87">
+        <p>Suppose that \(T\) is a linear transformation on a finite dimensional vector space \(V\), over the field \(F\). Prove that \(T\) is diagonalizable if and only if \(m_T(X)\), the minimum polynomial of \(T\), can be factored as</p>
+        <div class="display-math">\[
+m_T(X)=(X-\lambda_1)(X-\lambda_2)\cdots(X-\lambda_k),
+\]</div>
+        <p>where the \(\lambda_i\in F\) (\(i=1,\ldots,k\)) are distinct.</p>
+      </li>
+      <li class="problem" id="problem-88">
+        <p>Suppose that \(A\) is a nilpotent \(6\times6\) matrix, with entries in a field. Find all possible Jordan forms of \(A\), justifying your arguments.</p>
+      </li>
+      <li class="problem" id="problem-89">
+        <p>Prove that in \(\mathrm{GL}_2(\mathbb{Q})\) all the elements of order four are conjugate. (Hint: Consider the rational canonical form of such an element.)</p>
+      </li>
+      <li class="problem" id="problem-90">
+        <p>Suppose that \(V\) is a vector space of dimension 7 over the field of real numbers \(\mathbb{R}\), and \(T\) is a linear transformation on \(V\) which satisfies \(T^4=I\). Compute the following:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>the possible minimum polynomials of \(T\), and the characteristic polynomial that goes with each choice;</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>the possible Rational Canonical Forms of \(T\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-91">
+        <p>Suppose that \(V\) is a finite dimensional vector space over \(\mathbb{Q}\), and \(T\) is an invertible linear transformation on \(V\) for which \(T^{-1}=T^2+T\). Prove:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>The dimension of \(V\) is a multiple of 3.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If the dimension is 3, prove that all such transformations are similar.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-92">
+        <p>Consider: All \(3\times 3\) matrices \(A\ne I\) with real entries, such that \(A^3=I\) are similar over \(\mathbb{R}\). Prove or disprove by example.</p>
+      </li>
+      <li class="problem" id="problem-93">
+        <p>Prove, over any field \(F\), that if two \(2\times 2\) matrices or two \(3\times 3\) matrices have the same minimum and characteristic polynomials then they are similar matrices.</p>
+        <p>Give an example which shows that this is false for matrices of greater dimension.</p>
+      </li>
+      <li class="problem" id="problem-94">
+        <p>On a vector space \(V\) of dimension 8 over the field \(\mathbb{Q}\), \(T\) is a linear transformation for which the minimum polynomial is</p>
+        <div class="display-math">\[
+m_T(X)=(X^2+1)^2(X-3).
+\]</div>
+        <p>Determine all possible Rational Canonical Forms. Justify your answer.</p>
+      </li>
+      <li class="problem" id="problem-95">
+        <p>A projection is a linear transformation \(P:V\to V\) on a vector space \(V\) for which \(P^2=P\). Assume that \(V\) has finite dimension and prove the following:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Any projection is diagonalizable.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Two projections have the same diagonal form if and only if their kernels have the same dimension.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-96">
+        <p>Prove that there are exactly two conjugacy classes of \(5\times 5\) matrices with entries in \(\mathbb{Q}\) for which \(T^8=I\) and \(T^4\ne I\).</p>
+      </li>
+      <li class="problem" id="problem-97">
+        <p>\(T\) is a linear transformation on the \(n\) dimensional space \(V\), with \(n\geq 2\), over the field \(F\), and there is a basis \(\{v_1,\ldots,v_n\}\) for \(V\) for which \(Tv_i=v_{i+1}\), for \(i=1,2,\ldots,n-1\), and \(Tv_n=v_1\). As a module over \(F[X]\) with the action induced by \(T\), show that</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>\(V\) is a cyclic module but not irreducible.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(F=\mathbb{Q}\) and \(n\) is a prime number prove that \(V\) is the direct sum of two irreducible \(F[X]\)-submodules, of dimensions 1 and \(n-1\), respectively, over \(\mathbb{Q}\). (Hint: Find the minimum polynomial of \(T\).)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-98">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Define the terms eigenvector and eigenvalue of a linear transformation \(T\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Prove that a set of eigenvectors of \(T\) for which the corresponding eigenvalues are distinct must be linearly independent.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-99">
+        <p>Find one representative of each conjugacy class of elements of order 2 in the group \(\operatorname{GL}_5(\mathbb{Z}_2)\) of invertible \(5 \times 5\) matrices with entries in the field of integers mod 2.</p>
+      </li>
+      <li class="problem" id="problem-100">
+        <p>Let \(\operatorname{GL}_4(\mathbb{Z}_3)\) denote the group of all invertible 4 by 4 matrices with entries in \(\mathbb{Z}_3\), the field of three elements. Use rational canonical forms to determine the number of conjugacy classes of elements of order 4. Give the rational canonical form for each class.</p>
+      </li>
+      <li class="problem" id="problem-101">
+        <p>Over \(\mathbb{Q}\), compute the Jordan canonical form \(J\) of</p>
+        <div class="display-math">\[
+A=\begin{pmatrix}
+1&amp;1&amp;1&amp;1\\
+0&amp;1&amp;0&amp;-1\\
+0&amp;0&amp;1&amp;1\\
+0&amp;0&amp;0&amp;1
+\end{pmatrix}.
+\]</div>
+        <p>Then find a matrix \(S\) such that \(J=SAS^{-1}\).</p>
+      </li>
+      <li class="problem" id="problem-102">
+        <p>Over \(\mathbb{Q}\), consider the following matrix:</p>
+        <div class="display-math">\[
+A=\begin{pmatrix}
+0&amp;1&amp;0&amp;1\\
+1&amp;0&amp;1&amp;0\\
+0&amp;1&amp;0&amp;1\\
+1&amp;0&amp;1&amp;0
+\end{pmatrix}.
+\]</div>
+        <p>Answer the following:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Prove that \(A\) is diagonalizable.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Is the \(\mathbb{Q}[T]\)-module structure on \(\mathbb{Q}^4\) by \(A\), via \(f(T)v=f(A)v\) cyclic? Explain.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem" id="problem-103">
+        <p>Let \(\mathbb{C}\) be the field of complex numbers. Prove that each irreducible \(\mathbb{C}[T]\)-module is isomorphic to \(\mathbb{C}\).</p>
+      </li>
+      <li class="problem" id="problem-104">
+        <p>Prove that if \(F\) is a finite field, then there is a prime number \(p\) and a natural number \(n\), so that \(F\) has \(p^n\) elements.</p>
+      </li>
+      <li class="problem" id="problem-105">
+        <p>Suppose that \(F\) is a subfield of \(K\) and \(K\) a subfield of \(L\), so that the dimensions \([K:F]\) and \([L:K]\) are finite. Prove that \([L:F]\) is also finite and that</p>
+        <div class="display-math">\[
+[L:F]=[L:K][K:F].
+\]</div>
+      </li>
+      <li class="problem" id="problem-106">
+        <p>Determine the dimension over \(\mathbb{Q}\) of the extension \(\mathbb{Q}(\sqrt{3+2\sqrt{2}})\). Justify your arguments.</p>
+      </li>
+      <li class="problem" id="problem-107">
+        <p>Prove that \(\mathbb{Q}(\sqrt{3},\sqrt{5})=\mathbb{Q}(\sqrt{3}+\sqrt{5})\). Conclude that \([\mathbb{Q}(\sqrt{3},\sqrt{5}):\mathbb{Q}]=4\), and find a monic irreducible polynomial over \(\mathbb{Q}\) satisfied by \(\sqrt{3}+\sqrt{5}\).</p>
+      </li>
+      <li class="problem" id="problem-108">
+        <p>Suppose that \(F\) is a field whose characteristic is not 2. Assume that \(d_1,d_2\in F\) are not squares in \(F\). Prove that \(F(\sqrt{d_1},\sqrt{d_2})\) is of dimension 4 over \(F\) if \(d_1d_2\) is not a square in \(F\) and of dimension 2 otherwise.</p>
+      </li>
+      <li class="problem" id="problem-109">
+        <p>Suppose that \([F(u):F]\) is odd; prove that \(F(u)=F(u^2)\).</p>
+      </li>
+      <li class="problem" id="problem-110">
+        <p>Let \(L\) be a field extension of \(F\). Prove that the subset \(E\) of all elements of \(L\) which are algebraic over \(F\) is a subfield of \(L\) containing \(F\).</p>
+      </li>
+      <li class="problem" id="problem-111">
+        <p>Determine the splitting field of \(X^4-2\) over \(\mathbb{Q}\). It suffices to describe it as the subfield of \(\mathbb{C}\), the field of complex numbers, generated by certain well-identified elements. Justify your choices.</p>
+      </li>
+      <li class="problem" id="problem-112">
+        <p>Suppose that \(F\) is a field. For \(f(X)=a_nX^n+\cdots+a_1X+a_0\in F[X]\), define the derivative \(D_Xf(X)\) by</p>
+        <div class="display-math">\[
+D_Xf(X)=na_nX^{n-1}+\cdots+2a_2X+a_1.
+\]</div>
+        <p>Prove the following: In a splitting field of \(f(X)\), \(u\) is a multiple root of \(f(X)\) if and only if \(u\) is a root of both \(f(X)\) and its derivative.</p>
+      </li>
+      <li class="problem" id="problem-113">
+        <p>Assume the existence and uniqueness, up to isomorphism, of the splitting field of a polynomial over an arbitrary base field. Let \(p\) be a prime number. Now consider the polynomial \(X^{p^n}-X\) over the field \(\mathbb{Z}_p\) of \(p\) elements. Let \(K_{p^n}\) be its splitting field. Prove that \(K_{p^n}\) has \(p^n\) elements. (Hint: Consider the set of all roots of \(X^{p^n}-X\).)</p>
+        <p>Now consider any field \(F\) having \(p^n\) elements. Prove that \(F\cong K_{p^n}\). (Hint: Use the fact that the multiplicative group of nonzero elements of \(F\) is cyclic.)</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Algebra First-Year Exams</a></li>
+        <li><a href="algebra-first-year-practice-problems.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

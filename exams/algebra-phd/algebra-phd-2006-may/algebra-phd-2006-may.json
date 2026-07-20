@@ -73,7 +73,13 @@
             "text": "Let \\(F\\) be the free group on two letters. Prove that the commutator subgroup \\([F,F]\\) is not finitely generated. Hint: For each \\(n\\geq 1\\) consider the group\n\\[\nG_n=\\langle x_1,\\ldots,x_n,y:x_ix_j=x_jx_i,\\;yx_iy^{-1}=x_{i+1}\\text{ for }1\\leq i<j\\leq n,\\;yx_ny^{-1}=x_1\\rangle.\n\\]"
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The displayed indexing condition has been retained as printed, but its scope is mathematically ambiguous because the relation \\(yx_iy^{-1}=x_{i+1}\\) does not involve \\(j\\)."
+          }
+        ]
       }
     },
     {

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(K\) be a finite field, and let \(F\) be a subfield of \(K\). Prove that the extension \(K/F\) is Galois.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -184,10 +190,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\) and \(B\) be abelian groups, and \(T=A\otimes_{\mathbb{Z}}B\). Let \(\phi:A\to A\) be a group homomorphism. Prove that there is a group homomorphism \(\psi:T\to T\) such that, for all \(a\in A\) and \(b\in B\), we have \(\psi(a\otimes_{\mathbb{Z}}b)=\phi(a)\otimes_{\mathbb{Z}}b\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -208,7 +214,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a ring.</p>
         <ol class="subparts">
           <li>
@@ -229,19 +235,19 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(F\) be a free group on a set \(S\). Prove that \(F\) is abelian if and only if \(|S|\leq 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State and prove Hilbert’s Basis Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be a commutative ring with identity. Let \(S\) be a non-empty subset of \(R\) which is closed under multiplication and is such that \(0\notin S\). Prove that there exists a prime ideal \(P\) of \(R\) such that \(P\cap S=\varnothing\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a Dedekind domain, and let \(I\) be a non-zero ideal of \(R\). Prove that \(R/I\) is Artinian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -270,7 +276,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(R\) and \(S\) be non-commutative semisimple rings with \(|R|=|S|=2^2\cdot 3^4\cdot 5\). Does it follow that \(R\) is isomorphic to \(S\)? Justify your answer.</p>
       </li>
     </ol>

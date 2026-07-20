@@ -5,10 +5,12 @@
 The Graduate Mathematics Association exam archives maintained by the University of
 Florida Department of Mathematics contain decades of First Year and PhD examination
 material for students who entered before Fall 2025, plus Qualifying Exams for students
-who entered in Fall 2025 or later. The project will extract the information contained
-in every exam into a clean, consistent dataset so it can be presented in more
-accessible forms. Those presentations may be WordPress posts, newly generated PDFs, or
-both.
+who entered in Fall 2025 or later. Four undated Algebra First-Year practice exams and a
+113-question Algebra First-Year practice-problem collection from the department's
+qualifying-exam syllabi page are included as well. The project will
+extract the information contained in every exam into a clean, consistent dataset so it
+can be presented in more accessible forms. Those presentations may be WordPress posts,
+newly generated PDFs, or both.
 
 This is not archival transcription and not PDF remediation. We aim to preserve the
 questions, mathematical meaning, and instructions while discarding document furniture
@@ -24,8 +26,9 @@ checkpoints, TeX auxiliary files, and other build artifacts remain outside Git.
 
 ## Unit of Work
 
-Every linked PDF is one exam record and produces one JSON file plus an HTML view
-generated from that JSON. A PDF labeled Part 1 and a PDF labeled Part 2
+Every linked exam PDF is one exam record and produces one JSON file plus an HTML view
+generated from that JSON. The separate practice-problem PDF is one collection record
+with 113 ordered problem blocks. A PDF labeled Part 1 and a PDF labeled Part 2
 are separate exams for this purpose. If a part was never published, no placeholder or
 synthetic record is created.
 
@@ -59,6 +62,29 @@ exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug/
 
 The directory name and manifest `id` field are the stable exam identifier.
 
+Undated practice records replace the date component with a stable A/B variant:
+
+```text
+exams/algebra-first-year/algebra-first-year-practice-a-part-1/
+  algebra-first-year-practice-a-part-1.source.pdf
+  algebra-first-year-practice-a-part-1.json
+  index.html
+  algebra-first-year-practice-a-part-1.tex
+  algebra-first-year-practice-a-part-1.pdf
+```
+
+The practice-problem collection is also undated but is distinguished by document type
+and declared problem count rather than by an invented variant:
+
+```text
+exams/algebra-first-year/algebra-first-year-practice-problems/
+  algebra-first-year-practice-problems.source.pdf
+  algebra-first-year-practice-problems.json
+  index.html
+  algebra-first-year-practice-problems.tex
+  algebra-first-year-practice-problems.pdf
+```
+
 ## Canonical Metadata
 
 The catalog link determines:
@@ -68,14 +94,27 @@ The catalog link determines:
 - month;
 - year;
 - part, when present;
-- the current canonical URL of the PDF on the GMA website.
+- the current official URL of the PDF.
 
 This metadata is authoritative. The extractor must not obtain or revise the date from
 the PDF contents. A full date printed in a PDF is discarded, and an internal date that
 conflicts with the linked date is ignored.
 
-The title displayed later can be generated from the subject, month, year, and part. It
-does not need to be transcribed or stored separately.
+The department's supplemental practice page instead determines the A/B variant and
+Part 1 or Part 2. Those records intentionally store `null` for both `year` and `month`;
+the extractor must not infer a date from the PDF or filesystem metadata. No other record
+may omit its date, and a dated record may not have a practice variant.
+The source filenames encode these dimensions independently: `prac1a` and `prac1b` are
+Part 1, while `prac2a` and `prac2b` are Part 2; the final `a` or `b` is the practice
+variant.
+
+The same page identifies the practice-problem collection. Its canonical and manifest
+records use `document_type: "practice-problems"`, `problem_count: 113`, null date and
+part fields, and no practice variant. Validation requires the ordered content to contain
+exactly the declared number of problems.
+
+The title displayed later can be generated from the document type, subject, date or
+practice variant, and part. It does not need to be transcribed or stored separately.
 
 ## Core JSON
 
@@ -111,6 +150,7 @@ problem an ordered body of text and manually verified TikZ figure blocks:
                 "text": "Let \\(\\sum_{n=0}^{\\infty}c_nx^n\\) be a power series."
               }
             ],
+            "concerns": [],
             "subparts": []
           }
         }
@@ -120,8 +160,11 @@ problem an ordered body of text and manually verified TikZ figure blocks:
 }
 ```
 
-`part` is `null` when the linked exam is not a separately cataloged part. The `content`
-array may contain `instructions`, `problem`, and `section` blocks. A section preserves
+`part` is `null` when the linked exam is not a separately cataloged part. `year` and
+`month` are normally required together. They are both `null` only for an undated
+practice record or practice-problem collection. An undated practice exam has
+`practice_variant` set to `"A"` or `"B"`. The `content` array may contain `instructions`,
+`problem`, and `section` blocks. A section preserves
 its displayed heading and normally contains instruction and problem blocks in source
 order; sections are not nested. A labeled group that only directs the reader back to
 previously listed problems is represented as an instruction-only section with the
@@ -130,6 +173,17 @@ source-appropriate restart/continue policy.
 A rare linked PDF may contain only a notice that the exam was not provided. Such a
 record contains one instruction block and no problem blocks. This is a valid
 representation of the archive item, not an extraction failure or a synthetic exam.
+
+The practice-problem collection adds `document_type: "practice-problems"` and
+`problem_count: 113`; ordinary exams use the default document type and do not declare a
+problem count. Its top-level problem numbers are still derived from content order rather
+than stored in the canonical problem objects.
+
+A problem's optional `concerns` array records a legible source question that appears to
+contain a mathematical error, missing hypothesis, undefined object, or other substantive
+problem. Each record has a `status` of `suspected` or `confirmed` and a concise
+`explanation`. Model extraction may create only `suspected` concerns; `confirmed` is
+reserved for an explicit human decision.
 
 There is deliberately no field for:
 
@@ -142,7 +196,7 @@ There is deliberately no field for:
 - the original title;
 - layout coordinates.
 
-`pdf_url` is the current canonical HTTPS URL used by the downloader, not necessarily
+`pdf_url` is the current official HTTPS URL used by the downloader, not necessarily
 the literal legacy URL found in the page markup. The acquisition manifest remains the
 source for local paths, hashes, redirects, and other download provenance.
 
@@ -356,6 +410,23 @@ includes the original text, corrected text, immediate context, and problem index
 more than one correction is plausible, the source reading remains in the dataset and
 the uncertainty is placed in `exams/review-serious.json` instead.
 
+## Mathematical Concerns
+
+When the source is legible but its mathematics appears false, underdetermined,
+internally inconsistent, or dependent on a missing definition or hypothesis, the source
+wording remains unchanged and the problem receives a canonical concern. The explanation
+states the issue cautiously and does not propose a repair unless the immediate
+mathematical context uniquely determines one. A transcription uncertainty remains a
+serious-review item instead; it is not converted into a mathematical concern merely
+because one possible reading would be false.
+
+Concerns are publication data rather than unresolved extraction tasks. HTML and LaTeX
+place a dark-red, boldly labeled warning before the affected problem, so the warning is
+encountered before a reader attempts the question and does not depend on color alone.
+The root `concerns.html` page collects every concern, groups them under linked exam
+titles, and prefixes each warning with its displayed problem number. The same content is
+included in accessible PDFs and their reading order.
+
 ## Vision-First Extraction
 
 The source collection includes scans, broken encodings, and difficult mathematical
@@ -376,6 +447,17 @@ and MathJax delimiters. Both response IDs and usage records remain in the checkp
 The normal path performs one Sol extraction per exam; it does not send every result
 through a second model pass. Raw responses and page evidence are retained as build
 checkpoints; only schema-valid canonical exam JSON enters the dataset.
+
+The large practice-problem collection uses nine independently resumable calls rather
+than one oversized request. Pages 3 and 4 are one chunk because Problem 42 begins on
+page 3 and ends on page 4; every other source page is its own chunk. Temporary source
+numbers are allowed only in chunk responses so ordinary code can require the exact
+ranges 1–14, 15–29, 30–55, 56–66, 67–77, 78–88, 89–98, 99–110, and 111–113. The merge
+then removes those temporary numbers and creates the canonical ordered problem blocks.
+An experiment that extracted pages 3 and 4 both jointly and separately found the same
+30–55 sequence and no mathematical disagreements, but the page-3-only response wrongly
+treated the incomplete Problem 42 as complete. The joint chunk is therefore the
+authoritative configuration.
 
 ## Corpus-Wide Iteration
 
@@ -453,8 +535,10 @@ transformation categories are:
 Transformation records have `status: logged`. They document what the extractor did and
 do not by themselves require intervention.
 
-`review-serious.json` contains unresolved cases that actually require a person before
-publication. A typical record is:
+`review-serious.json` contains unresolved source, transcription, visual, or structural
+cases that actually require a person before publication. Apparent mathematical flaws in
+otherwise legible questions are canonical concerns, not serious-review records. A
+typical serious-review record is:
 
 ```json
 {
@@ -491,7 +575,8 @@ can resolve the intended scope.
 
 Serious items have `status: open`. They do not stop corpus extraction, but they prevent
 the affected exam from being treated as ready for accessible publication. Logged
-corrections and transformations do not block publication.
+corrections, transformations, and clearly disclosed mathematical concerns do not block
+publication.
 
 ## Content Removed
 
@@ -511,8 +596,10 @@ The dataset normally omits:
 Before an exam JSON is accepted, ordinary code checks that:
 
 1. The file matches the versioned JSON schema.
-2. Its identifier, directory, subject metadata, date, and part agree with the catalog
-   manifest and exam directory name.
+2. Its identifier, directory, subject metadata, document type, date or practice variant,
+   and part agree
+   with the catalog manifest and exam directory name. Year and month must occur together;
+   only an explicitly labeled practice exam or practice-problem collection may omit both.
 3. It contains at least one nonempty problem, or a nonempty notice when the linked PDF
    contains no exam questions.
 4. Every section has a nonempty heading, a restart/continue policy, and at least one
@@ -523,14 +610,17 @@ Before an exam JSON is accepted, ordinary code checks that:
 6. Every problem has a `body` and `subparts` array; text blocks are nonempty; TikZ blocks
    have unique IDs, nonempty alt text and code, and no document or environment wrappers;
    every subpart has a nonempty original `label` field.
-7. Every canonical TikZ block has a readable generated PNG beside its exam outputs.
-8. ASCII control characters and dollar-sign math delimiters are absent, MathJax
+7. Every concern has a valid status and a nonempty, nonduplicated explanation; Unicode
+   mathematical symbols cannot appear outside MathJax delimiters.
+8. Every canonical TikZ block has a readable generated PNG beside its exam outputs.
+9. ASCII control characters and dollar-sign math delimiters are absent, MathJax
    delimiters are balanced, and every expression completes real MathJax TeX-to-CHTML
    rendering without an error.
-9. Every model-reported correction, transformation, or uncertainty appears in its
+10. Every model-reported correction, transformation, or uncertainty appears in its
    corresponding review file.
-10. Every source PDF has either one dataset JSON or an explicit extraction failure.
-11. No exam with an open serious-review item is marked ready for publication.
+11. Every source PDF has either one dataset JSON or an explicit extraction failure; a
+    practice-problem collection also contains exactly its declared problem count.
+12. No exam with an open serious-review item is marked ready for publication.
 
 Initial extraction results remain provisional until the later verification phase. The
 archive validator additionally checks every PDF hash, JSON, HTML, and site-index
@@ -543,7 +633,9 @@ focused validation run and no IDs for the complete archive.
 The dataset is the source of truth for generated outputs. The extraction command creates
 an HTML view of each accepted JSON record. Its title contains the subject,
 followed by “First-Year Exam,” “PhD Exam,” or “Qualifying Exam,” month, year, and part
-when present.
+when present. An undated practice title instead includes “Practice Exam A” or “Practice
+Exam B” and its part, without a fabricated date. The collection title is “Algebra
+First-Year Exam, Practice Problems.”
 Instructions are italicized, problem numbers are bold, and labeled subparts are compact
 nested lists. Restored figures use PNG assets and carry the canonical alt text.
 Section headings and displayed problem numbers are derived from ordered
@@ -560,13 +652,22 @@ nested subpart lists, keyboard-visible links, responsive equations, accessible M
 output, and print styles. It uses a narrow reading column and Computer Modern webfonts.
 The source-PDF and subject-index links are omitted when the page is printed.
 
+Canonical concerns render immediately before their problems as semantic notes with a
+bold warning label. The warning's dark-red color is supplementary rather than its only
+identifying feature.
+
 A second deterministic renderer creates a root archive index and one index inside every
-subject directory. The root page orders levels as Qualifying, First-Year, and PhD, then
-orders subjects alphabetically within each level. Subject tables order exams from newest
-to oldest and link to the accessible HTML and archived PDF. The index pages use semantic
-navigation, scoped table headings, visible keyboard focus, responsive overflow, and the
-same institutional identity and typography as the exam pages. The complete archive
-validator compares every generated index against `manifest.json`.
+subject directory, plus a root concerns index. The root page orders levels as
+Qualifying, First-Year, and PhD, then orders subjects alphabetically within each level.
+Subject tables order dated exams from newest to oldest, put undated practice exams at
+the bottom, and link to the accessible HTML and archived PDF. The Algebra First-Year
+index features the 113-question collection above that table rather than counting it as
+another exam. `concerns.html` orders subjects alphabetically, orders exams newest first
+within each subject, and groups numbered warnings under a single linked exam title. The
+index pages use semantic navigation, scoped table headings, visible keyboard
+focus, responsive overflow, and the same institutional identity and typography as the
+exam pages. The complete archive validator compares every generated index against
+`manifest.json` and the canonical concern records.
 
 Website navigation is self-contained. Generated pages do not link to the retiring GMA
 website; source URLs remain in canonical data only as provenance. Every page footer puts

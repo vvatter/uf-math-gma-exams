@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Please read through all the questions carefully before you begin. Your five best solutions will count. You may quote theorems from the course (within reason) as long as you make it clear that you are doing so and state them clearly. All rings have 1 and all modules are unital. Different parts of the same question may or may not be related, and do not usually carry equal credit.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(G\) be a finite group and \(p\) a prime. The normalizer of a subgroup \(K\leq G\) is defined to be the set of all elements \(x\in G\) such that \(x^{-1}Kx=K\).</p>
         <ol class="subparts">
           <li>
@@ -177,7 +183,7 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -198,13 +204,13 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(k\) be an algebraically closed field and \(I\) a radical ideal of \(k[X_1,\ldots,X_n]\). Show that the set \(V(I)\) of simultaneous zeroes of \(I\) in \(k^n\) is irreducible in the Zariski topology (i.e., is not the union of two proper subsets which are algebraic sets) if and only if \(k[X_1,\ldots,X_n]/I\) is an integral domain. Give an example to show that if \(I\) is not radical, then \(V(I)\) may be irreducible without \(k[X_1,\ldots,X_n]/I\) being an integral domain.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that all simple groups of order \(60\) are isomorphic to the alternating group on five letters.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>In this question \(R\) is a ring with left modules \(A,B\) and \(C\) and a right module \(M\). For each of the following statements give a proof or furnish a counterexample.</p>
         <ol class="subparts">
           <li>
@@ -249,7 +255,7 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(G\) be a finite group and \(\mathbb CG\) the complex group algebra. Let \(M\) be a finite dimensional (left) \(\mathbb CG\)-module. An Hermitian form \((\ ,\ )\) on \(M\) is said to be \(G\)-invariant if</p>
         <div class="display-math">\[
 (gm,gn)=(m,n),\qquad \text{for all }g\in G,\ m,n\in M.
@@ -273,7 +279,7 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be the ring of lower triangular \(n\times n\) complex matrices.</p>
         <ol class="subparts">
           <li>
@@ -294,7 +300,7 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove or give a counterexample in each case.</p>
         <ol class="subparts">
           <li>
@@ -323,7 +329,7 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(K\) be a subfield of the real numbers and \(f\in K[X]\) an irreducible cubic with three real roots.</p>
         <ol class="subparts">
           <li>
@@ -360,7 +366,7 @@ g=hn,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(R\) be a semisimple artinian ring.</p>
         <ol class="subparts">
           <li>

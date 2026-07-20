@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of the eight problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Do two. Short answer, you do not need to give a detailed proof, just a brief explanation.</p>
         <ol class="subparts">
           <li>
@@ -184,13 +190,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \((X,\mathcal{M})\) is a measurable space. Show, if \(E\in\mathcal{M}\otimes\mathcal{M}\), then</p>
         <div class="display-math">\[
 \{x\in X:(x,x)\in E\}\in\mathcal{M}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -215,27 +221,27 @@ c_n=\int_1^\infty e^{inx}f_n(x)\,dx
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \(X\) is a Banach space, \(Y,Z\subseteq X\) are (closed) subspaces and \(Y\cap Z=\{0\}\). Prove or disprove: there is a \(C&gt;0\) such that</p>
         <div class="display-math">\[
 C(\lVert y\rVert+\lVert z\rVert)\leq\lVert y+z\rVert
 \]</div>
         <p>for all \(y\in Y\) and \(z\in Z\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Highlighting the key points, outline a proof of the following statement. If a sequence of functions converges in \(L^1\), then it has a subsequence that converges pointwise almost everywhere.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \((X,\mathcal{M},\mu)\) is a measure space, \(1\leq p,q\leq\infty\) and \(h:X\to\mathbb{C}\) is measurable. Show, if \(hf\in L^q(\mu)\) for each \(f\in L^p(\mu)\), then the map</p>
         <div class="display-math">\[
 L^p(\mu)\ni f\mapsto hf\in L^q(\mu)
 \]</div>
         <p>is continuous.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Define the Hardy–Littlewood maximal function of a Lebesgue measurable function \(f:\mathbb{R}\to\mathbb{R}\). State the Hardy–Littlewood maximal inequality. Show, if \(f\in L^1(\mathbb{R})\), then \(f^*\) (the Hardy–Littlewood maximal function of \(f\)) is finite almost everywhere.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Do two. Short answer, you do not need to give a detailed proof, just a brief explanation.</p>
         <ol class="subparts">
           <li>

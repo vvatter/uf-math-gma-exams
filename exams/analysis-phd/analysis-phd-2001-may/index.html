@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,34 +160,34 @@
         <p>State the following theorems:</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>The Hahn–Banach theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>The monotone class theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>The monotone convergence theorem in \(L^1(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>The Lebesgue dominated convergence theorem in \(L^p(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>The density of step functions in \(L^p(\mu)\), \(1\leq p&lt;\infty\), and \(L^\infty(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>The computation of the seminorm \(\lVert f\rVert_p\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>The integrability with respect to a measure defined by density.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>The Fubini theorem for \(\mu\times\nu\)-integrable functions.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>The Lusin theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>The Riesz representation theorem.</p>
         </li>
       </ol>
@@ -192,10 +198,10 @@
         <p>State and prove the following theorems:</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>The Egorov theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>The integral representation of the dual of \(L^1(\mu)\), \(\mu\) finite.</p>
         </li>
       </ol>
@@ -206,19 +212,19 @@
         <p>Solve the following problems:</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>Prove that if \(X\) is a normed space and \(Y\) is a Banach space, then \(L(X,Y)\) is a Banach space.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-14">
           <p>Prove the existence of the conditional expectation for functions \(f\in L^1(\mu)\) and for functions \(f\in L_{\mathcal F}^1(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-15">
           <p>Prove that the set of step functions is dense in \(L^\infty(\mu)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-16">
           <p>Let \((X,\Sigma,\mu)\) be a measure space and \(\mathcal R\) a ring generating the σ-algebra \(\Sigma\). Let \(g:X\to\mathbb R\) be a \(\mu\)-measurable function. Prove that if \(\int_A g\,d\mu=0\) for every \(A\in\mathcal R\), then \(g=0\), \(\mu\)-a.e. Is this true for \(g:X\to F\), where \(F\) is a Banach space?</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-17">
           <p>Let \((X,\Sigma)\) be a measurable space and \((\mu_n)\) a sequence of real valued measures on \(\Sigma\). Define \(\lambda:\Sigma\to\mathbb R_+\) by</p>
           <div class="display-math">\[
 \lambda(A)=\sum_{n=1}^{\infty}\frac{1}{2^n}\frac{|\mu_n|(A)}{1+|\mu_n|(X)},\qquad A\in\Sigma.

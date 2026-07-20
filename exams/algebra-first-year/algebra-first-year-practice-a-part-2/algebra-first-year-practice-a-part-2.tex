@@ -1,0 +1,98 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Practice Exam A, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Practice Exam A}, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Practice Exam A, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(V\) be a finite-dimensional vector space over a field~\(F\) and \(T \in \operatorname{End}_F(V)\) a linear transformation. Prove that there is a unique monic polynomial \(m(x)\) in \(F[x]\) with the property that \(m(x)\) has the minimum degree among nonzero polynomials \(f(x)\) such that \(f(T)\) is the zero transformation.
+\item
+Let \(n \geq 1\) and let \(K=\mathbb{Q}(\sqrt{1},\sqrt{2},\ldots,\sqrt{n})\). Prove that \(2^{1/3}\notin K\).
+\item
+Let~\(R\) be a commutative ring with \(1\neq 0\). Prove that~\(R\) has a minimal prime ideal. (In other words, show that~\(R\) contains a prime ideal~\(P\) such that if \(Q\subseteq P\) is a prime ideal of~\(R\), then \(Q=P\).) You may assume that~\(R\) contains a maximal ideal.
+\item
+Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain with respect to the norm \(N(a+b\sqrt{-2})=a^2+2b^2\).
+\item
+Say that an~\(R\)-module~\(M\) is torsion if for every \(x\in M\) there is \(r\in R\) such that \(r\neq 0\) and \(rx=0\). The annihilator of~\(M\) is defined to be
+\[
+\operatorname{Ann}(M)=\{s\in R:sx=0\text{ for all }x\in M\}.
+\]
+ Prove that if~\(M\) is a finitely generated torsion module over an integral domain~\(R\), then \(\operatorname{Ann}(M)\neq\{0\}\). Give an example of a torsion~\(R\)-module~\(M\) over an integral domain~\(R\) such that \(\operatorname{Ann}(M)=\{0\}\).
+\end{examproblems}
+\end{document}

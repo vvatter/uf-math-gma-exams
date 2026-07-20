@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f\) be a Borel-measurable function defined on \([0,1]\) with \(\infty&gt;f(x)\ge 0\).</p>
         <ol class="subparts">
           <li>
@@ -177,7 +183,7 @@ m\{x:f^*(x)\ge\lambda\}=m\{x:f(x)\ge\lambda\}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \((X,\mathcal F,\mu)\) be a finite measure space, and let \(f\) and \(g\) be two measurable functions such that</p>
         <div class="display-math">\[
 \mu(f\in A,\ g\in B)=\mu(f\in A)\mu(g\in B)
@@ -188,7 +194,7 @@ m\{x:f^*(x)\ge\lambda\}=m\{x:f(x)\ge\lambda\}
 \]</div>
         <p>for every positive \(\mathcal B(\mathbb R^2)\)-measurable function \(H\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Consider \(\ell^\infty=\{(a_n)_{n=1}^\infty:\sup_n|a_n|&lt;\infty\}\). This space becomes a Banach space when equipped with the norm \(\|(a_n)_{n=1}^\infty\|=\sup\{|a_n|:n\ge 1\}\).</p>
         <ol class="subparts">
           <li>
@@ -216,20 +222,20 @@ S[(a_n)_{n=1}^\infty]=\lim_{n\to\infty}n^{-1}\sum_{k\le n}a_k.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>State and prove the Radon–Nikodym theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>State and prove Fubini’s theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\mu\) be a measure on \(((0,\infty),\mathcal B(0,\infty))\) defined by</p>
         <div class="display-math">\[
 \mu(A)=\int_A |x|^{-1/2}\,dx.
 \]</div>
         <p>Let \(T:(0,\infty)\to(0,\infty)\) be given by \(T(x)=x^{-1}\). Define a new measure \(\pi\) on \((0,\infty)\) by setting \(\pi(A)=\mu(T^{-1}(A))\). Compute \(d\pi/d\mu\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(c(t)\) be a function defined on \([0,\infty)\) with the following properties: \(c(t)\) is strictly increasing and continuous, \(c(0)=0\), and \(c(\infty)=\infty\). Let \(\tau_t=\inf\{s:c(s)&gt;t\}\). Prove that</p>
         <div class="display-math">\[
 \int_0^\infty f(t)\,c(dt)=\int_0^\infty f(\tau_t)\,dt

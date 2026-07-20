@@ -1,0 +1,115 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-practice-b-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": null,
+  "month": null,
+  "part": 2,
+  "pdf_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2b.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that a prime \\(p \\in \\mathbb{N}\\) such that \\(p \\equiv 3 \\pmod 4\\) is prime when considered as an element in the ring of Gaussian integers \\(\\mathbb{Z}[i]\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that a prime \\(p \\in \\mathbb{N}\\) such that \\(p \\equiv 1 \\pmod 4\\) is a product of two non-associate primes in \\(\\mathbb{Z}[i]\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Give a factorization of \\(30\\) as the product of a unit and powers of non-associate primes in \\(\\mathbb{Z}[i]\\).",
+            "subparts": []
+          }
+        ],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be the ring of \\(n \\times n\\) matrices over a field \\(F\\), where \\(n \\geq 2\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(R\\) has no ideals other than \\(0\\) and \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Exhibit a nonzero proper left ideal of \\(R\\).",
+            "subparts": []
+          }
+        ],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Find one representative of each conjugacy class of elements of order \\(4\\) in the group \\(GL(6,\\mathbb{Q})\\)."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(F\\) be a field."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "What does it mean to say that a field extension of \\(F\\) is algebraic?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(F \\subset K \\subset L\\) be three fields. Prove that if \\(K\\) is algebraic over \\(F\\) and \\(L\\) is algebraic over \\(K\\), then \\(L\\) is algebraic over \\(F\\).",
+            "subparts": []
+          }
+        ],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "A commutative ring \\(R\\) with \\(1\\) is called a local ring if and only if it has a unique maximal ideal. Suppose that \\(R\\) is a ring with a proper ideal \\(M\\). Show that \\(R\\) is local, with maximal ideal \\(M\\), if and only if every element of \\(R \\setminus M\\) (set difference) is a unit."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    }
+  ],
+  "practice_variant": "B"
+}

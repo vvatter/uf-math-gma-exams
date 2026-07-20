@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Can a compact space contain a discrete infinite subspace?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove that the product of two connected spaces is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Give an example of a space which is path connected but not locally connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the Klein bottle with a deleted closed disk \(K \setminus D\) is not a retract of \(K\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that the group \(SO(n)\) is connected in the matrix topology.</p>
       </li>
     </ol>
@@ -172,22 +178,22 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State the Lefschetz fixed point theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Construct a map \(f:S^3 \to S^3\) of degree 3.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Simplicial Approximation theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Prove that for a path connected topological group \(G\) the Euler characteristic \(\chi(G)\) is zero.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Does every function \(f:\mathbb{N} \to \mathbb{R}\) admit a continuous extension \(\bar f:\beta\mathbb{N} \to \mathbb{R}\) to the Stone–Čech compactification?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>What can you say about the \(k\)-homology groups of a closed orientable \(n\)-manifold for</p>
         <ol class="subparts">
           <li>
@@ -208,16 +214,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Give a definition of the compact-open topology for the space of functions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Let \(j:S^1 \subset S^4\) be an embedding. Can \(\pi_1(S^4 \setminus j(S^1))\) be trivial? If it is not trivial, can the fundamental group \(\pi_1(S^4 \setminus j(S^1))\) be abelian?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Give a definition of the wedge of a family of topological spaces. Prove that an infinite wedge of circles is not metrizable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>State the Contraction Mapping Theorem.</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 8 problems, 4 from problems 1–5 and 4 from problems 6–10.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Recall that \(f:\mathbb R^n\to\mathbb R\) is convex with modulus \(\theta\geq 0\) if and only if</p>
         <div class="display-math">\[
 f[(1-\alpha)\mathbf x+\alpha\mathbf y]\leq (1-\alpha)f(\mathbf x)+\alpha f(\mathbf y)+\frac{\theta\alpha(\alpha-1)}{2}\|\mathbf y-\mathbf x\|^2
@@ -181,7 +187,7 @@ f(\mathbf y)\geq f(\mathbf x)+\nabla f(\mathbf x)(\mathbf y-\mathbf x)+\frac{\th
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(f:\mathcal K\to\mathbb R\) where \(\mathcal K\subset\mathbb R^n\) is a convex set.</p>
         <ol class="subparts">
           <li>
@@ -220,7 +226,7 @@ f(\mathbf y)\geq f(\mathbf x)+\nabla f(\mathbf x)(\mathbf y-\mathbf x)+\frac{\th
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\mathbf U\) and \(\mathbf V\in\mathbb R^{n\times m}\) and \(\mathbf M\in\mathbb R^{n\times n}\) with \(\mathbf M\) invertible.</p>
         <ol class="subparts">
           <li>
@@ -252,7 +258,7 @@ f(\mathbf y)\geq f(\mathbf x)+\nabla f(\mathbf x)(\mathbf y-\mathbf x)+\frac{\th
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Consider the primal optimization problem</p>
         <div class="display-math">\[
 \inf_{\mathbf x\in\mathcal K}\{f(\mathbf x):\mathbf h(\mathbf x)=0,\quad \mathbf g(\mathbf x)\leq 0\}, \tag{P}
@@ -282,7 +288,7 @@ L(\boldsymbol\lambda,\boldsymbol\mu):=\inf_{\mathbf x\in\mathcal K}f(\mathbf x)+
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Consider the following primal quadratic program:</p>
         <div class="display-math">\[
 \min q(\mathbf x):=\frac12\mathbf x^{\mathsf T}\mathbf x-\mathbf b^{\mathsf T}\mathbf x
@@ -328,7 +334,7 @@ L(\boldsymbol\lambda,\boldsymbol\mu):=\inf_{\mathbf x\in\mathcal K}f(\mathbf x)+
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let us consider the minimization problem</p>
         <div class="display-math">\[
 \min I(y):=\int_0^1 f(y&#x27;(x),y(x),x)\,dx\qquad\text{subject to }y\in C_0^1, \tag{3}
@@ -370,14 +376,14 @@ f(y&#x27;(x),y(x),x)=\frac12y&#x27;(x)^2-\phi(x)y(x)^2,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Consider the equation</p>
         <div class="display-math">\[
 (P(x)u&#x27;(x))&#x27;=Q(x)u(x),\qquad x\in[0,1], \tag{E}
 \]</div>
         <p>where \(Q\) is continuous and \(P\) is continuously differentiable and strictly positive on \([0,1]\). Suppose (E) has the property that whenever \(u\) is a solution of (E) with \(u(0)=u(a)=0\) for some \(0&lt;a\leq 1\), \(u\) is identically zero on \([0,a]\). Show that the solution of the initial-value problem for (E), with the initial conditions \(u(0)=0\) and \(u&#x27;(0)=1\), is strictly positive on \((0,1]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Consider the variational problem</p>
         <div class="display-math">\[
 \min \int_0^1\left[\frac12u&#x27;(x)^2+e^{u(x)}\right]dx\qquad\text{subject to }u\in\mathcal H_0^1.
@@ -409,7 +415,7 @@ f(y&#x27;(x),y(x),x)=\frac12y&#x27;(x)^2-\phi(x)y(x)^2,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Consider the initial-value problem</p>
         <div class="display-math">\[
 \dot{\mathbf x}(t)=\mathbf A(t)\mathbf x(t)+\mathbf u(t),\qquad \mathbf x(0)=0,
@@ -442,7 +448,7 @@ f(y&#x27;(x),y(x),x)=\frac12y&#x27;(x)^2-\phi(x)y(x)^2,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Consider the following control problem:</p>
         <div class="display-math">\[
 \min \int_0^1\left[\frac12u^2(x)+y(x)\right]dx

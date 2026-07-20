@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X\) be a locally connected space. Show that each component of \(X\) is closed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Is \(\mathbb{R}_\ell\) a Baire space? Here \(\mathbb{R}_\ell\) denotes the reals with the lower limit topology, i.e. the topology defined by the basis \(\{[a,b) \mid a,b \in \mathbb{R}\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X=\mathbb{Z}\times[0,1]\subset\mathbb{R}^2\). Let \(Y=\mathbb{Z}\times(0,1]\) and \(A=\mathbb{Z}\times\{0\}\) be subspaces of \(X\). Is the one point compactification of \(Y\) homeomorphic to the quotient space \(X/A\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the ordered square \(I_O^2\) is not path connected. Here \(I_O\) is the square \([0,1]\times[0,1]\) given the lexicographic order topology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that the power set \(\mathcal{P}(X)\) has strictly greater cardinality than \(X\).</p>
       </li>
     </ol>
@@ -172,34 +178,34 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Show that the circle \(S^1\) is not homeomorphic to the 2-sphere \(S^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Show that the 2-sphere \(S^2\) is not homeomorphic to the plane \(\mathbb{R}^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Is \(\mathbb{R}_\ell\) regular?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Show that a connected metric space cannot be infinite countable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>State the Intermediate Value Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Give definition of a quotient map.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Are the spaces \(\mathbb{R}\times[0,\infty)\) and \([0,\infty)\times[0,\infty)\) homeomorphic?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Is every compact Hausdorff space completely regular?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Is every continuous injective map \(f:\mathbb{R}\to\mathbb{R}^2\) an embedding?</p>
       </li>
     </ol>

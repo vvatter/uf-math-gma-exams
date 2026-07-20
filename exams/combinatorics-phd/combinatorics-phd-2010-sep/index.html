@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,30 +158,30 @@
       <p>SHOW ALL WORK TO RECEIVE CREDIT!!</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Find an explicit formula for \(a_k\) if \(a_0=1\), and \(a_{k+1}=3a_k+2\) for all \(k\ge 0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>We have \(n\) distinct cards. We want to split their set into nonempty subsets so that each of them contains an even number of cards. Then we want to order the cards within each subgroup. Finally, we want to order these subgroups into a line. Find an explicit formula for the number of ways \(g_n\) we can do this.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>How many trees are there on vertex set \(\{1,2,\ldots,n\}\) in which the vertex 1 is not a leaf?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Four friends, \(A\), \(B\), \(C\), and \(D\) organize a long jump competition every day until the final order of the four of them will be the same on two different days. At most how long will they have to wait for that to happen? (Each jump is measured in centimeters, so all kinds of ties, twofold, threefold, fourfold, are possible).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that a balanced, uniform, incomplete design is regular. (Recall that a design is called uniform if all of its blocks consist of the same number of vertices, and that a design is called balanced if any pair of vertices occur together in the same number of blocks. Finally, a design is regular if each of its vertices occurs in the same number of blocks.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(P\) be a finite poset. Let \(k\) be the smallest integer so that there exist antichains \(A_1,A_2,\ldots,A_k\) in \(P\) so that</p>
         <div class="display-math">\[P=A_1\cup A_2\cup\cdots\cup A_k.\]</div>
         <p>Prove that then \(k\) is equal to the number of elements in a chain of maximum length in \(P\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove there exists a family \(F\) of 6600 simple graphs so that each graph in \(F\) has vertex set \(\{1,2,\ldots,8\}\) and that no two graphs in \(F\) are isomorphic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Each vertex of a simple graph \(G\) has degree \(k\). Prove that \(G\) contains a cycle of length at least \(k+1\).</p>
       </li>
     </ol>

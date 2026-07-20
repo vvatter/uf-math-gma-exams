@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,10 +155,10 @@
       <h1>Combinatorics PhD Exam, May 2019</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>A bus carrying \(n\) tourists stops at a restaurant. The tourists sit down around an unspecified number of circular tables, then each table orders red wine or white wine. In how many ways can that happen? (Two arrangements are considered identical if everyone has the same left neighbor in both of them.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a simple graph of order \(n\) such that each vertex has degree at least \((n-1)/2\).</p>
         <ol class="subparts">
           <li>
@@ -181,7 +187,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(D(z)\) denote the generating function for Dyck paths (where the coefficient of \(z^n\), \([z^n]D(z)\), is the number of Dyck paths on \(2n\) steps).</p>
         <ol class="subparts">
           <li>
@@ -214,7 +220,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>A player pays a fixed amount of \(n\) dollars to a casino for the right to participate in the following game. A fair coin is tossed several times until a tail is obtained. If the first tail is obtained as the result of the \(i\)th coin toss, then the player receives a payout of \(2^i\) dollars, and the game ends.</p>
         <ol class="subparts">
           <li>
@@ -243,10 +249,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that every pentagon with two parallel sides and every hexagon with three pairs of equal parallel sides is the prototile of a monohedral tiling of the plane.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Recall that for a prime power \(q\), the Gaussian or \(q\)-binomial coefficient \(\genfrac{[}{]}{0pt}{}{n}{k}_q\) is defined to be the number of \(k\) dimensional subspaces of an \(n\)-dimensional vector space over \(\operatorname{GF}(q)\). Equivalently, we can think of \(\genfrac{[}{]}{0pt}{}{n}{k}_q\) as counting \(k\times n\) matrices over \(\operatorname{GF}(q)\) which are in reduced row echelon form and have no all-zero rows. Using either of these interpretations, prove that</p>
         <div class="display-math">\[
 \genfrac{[}{]}{0pt}{}{n}{k}_q
@@ -256,10 +262,10 @@
 \]</div>
         <p>for all \(n,k\ge 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Imagine writing all \(n!\) permutations of length \(n\) in cycle notation on a (large) piece of paper and then randomly selecting one cycle, with each cycle having the same chance to be selected. On average, what will be the length of the selected cycle?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Sperner’s Theorem states that if \(A\) is an antichain (a family of pairwise incomparable elements) in \(2^{[n]}\) (the power set of \([n]\) ordered by containment), then</p>
         <div class="display-math">\[
 |A|\le \binom{n}{\lfloor n/2\rfloor}.

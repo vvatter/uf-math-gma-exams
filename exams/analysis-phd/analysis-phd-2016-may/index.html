@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,7 +160,7 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">Part A</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Consider Lebesgue measure on the real line \(\mathbb{R}\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \((f_n)\) in \(L^1(\mathbb{R})\) converging to an \(f\) in \(L^1(\mathbb{R})\)...</p>
           <ol class="subparts">
             <li>
@@ -191,7 +197,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Let \(\nu\) be a signed measure on \((X,\mathcal{M})\).</p>
           <ol class="subparts">
             <li>
@@ -212,14 +218,14 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Let \(\mu\) be a finite, regular Borel measure on \([0,1]\). Suppose that</p>
           <div class="display-math">\[
 \int_0^1 x^n\,d\mu=0 \quad \text{for } n=0,1,2,\ldots
 \]</div>
           <p>Prove that \(\mu=0\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Let \((X,\mathcal{M},\mu)\) be a \(\sigma\)-finite measure space. Let \(\mathcal{N}\) be a sub-\(\sigma\) algebra of \(\mathcal{M}\) and let \(\nu\) be the restriction of \(\mu\) to \(\mathcal{N}\). Prove that for each \(f\in L^1(\mu)\), there exists a \(g\in L^1(\nu)\) such that</p>
           <div class="display-math">\[
 \int_E f\,d\mu=\int_E g\,d\nu
@@ -231,13 +237,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">Part B</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Let \(\mathcal{X}\) be a normed vector space. Say a sequence \((x_n)\) from \(\mathcal{X}\) converges weakly to \(x\in\mathcal{X}\) if \(f(x_n)\to f(x)\) for all \(f\in\mathcal{X}^*\). Prove that if \(\mathcal{M}\) is a norm closed subspace of \(\mathcal{X}\), and \((x_n)\) is a sequence in \(\mathcal{M}\) converging weakly to \(x\in\mathcal{X}\), then \(x\in\mathcal{M}\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Let \(\mathcal{H}\) be a Hilbert space and \(\mathcal{M},\mathcal{N}\) closed subspaces of \(\mathcal{H}\). Prove that if \(\mathcal{M}\perp\mathcal{N}\), then \(\mathcal{M}+\mathcal{N}\) is closed.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>Fix \(1&lt;p&lt;\infty\), let \(\mu\) be a \(\sigma\)-finite measure, and let \((f_n)\) be a sequence in \(L^p(\mu)\). Suppose that there exists a function \(f\in L^p(\mu)\) such that</p>
           <div class="display-math">\[
 \int f_ng\,d\mu\to\int fg\,d\mu
@@ -262,7 +268,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Let \((\varphi_n)\) be a sequence in \(L^1(\mathbb{R})\) with the following properties:</p>
           <p>Prove that for every \(f\in L^1(\mathbb{R})\), \(f*\varphi_n\to f\) in \(L^1(\mathbb{R})\).</p>
           <ol class="subparts">

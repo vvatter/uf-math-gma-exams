@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,24 +158,24 @@
       <p>Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that the ring</p>
         <div class="display-math">\[
 \mathbb{Z}[\omega]=\{a+b\omega\in\mathbb{C}\mid a,b\in\mathbb{Z}\},\qquad \omega=\frac{1+i\sqrt{3}}{2}
 \]</div>
         <p>is a Euclidean domain.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(R\) be a commutative ring with identity. A subset \(S\subseteq R\) is multiplicative if it is nonempty and is closed under multiplication. Show that if \(S\) is a multiplicative subset of \(R\) not containing \(0\), there is a prime ideal \(\mathfrak{p}\subset R\) such that \(\mathfrak{p}\cap S=\varnothing\). (First show using Zorn’s lemma that the set of ideals \(I\subset R\) such that \(I\cap S=\varnothing\) has a maximal element. Then show, using an argument by contradiction that any such maximal element is prime).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove the following form of Eisenstein’s criterion: Let \(R\) be an integral domain and \(P\subset R\) a prime ideal. Suppose</p>
         <div class="display-math">\[
 f(X)=X^d+a_{d-1}X^{d-1}+\cdots+a_1X+a_0\in R[X]
 \]</div>
         <p>is a monic polynomial such that \(a_i\in P\) for \(i&lt;d\) and \(a_0\notin P^2\). Then \(f(X)\) is irreducible in \(R[X]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be an integral domain.</p>
         <ol class="subparts">
           <li>
@@ -198,7 +204,7 @@ f(X)=X^d+a_{d-1}X^{d-1}+\cdots+a_1X+a_0\in R[X]
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(R\) is a commutative ring with identity, \(M\) and \(N\) are \(R\)-modules and \(f:M\to N\) is an \(R\)-module homomorphism. Let \(I\subset R\) be an ideal.</p>
         <ol class="subparts">
           <li>
@@ -223,7 +229,7 @@ f(X)=X^d+a_{d-1}X^{d-1}+\cdots+a_1X+a_0\in R[X]
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Find representatives of every similarity class of \(6\times 6\) matrices with rational coefficients whose minimal polynomial is \((x+1)^2(x-1)\).</p>
       </li>
     </ol>

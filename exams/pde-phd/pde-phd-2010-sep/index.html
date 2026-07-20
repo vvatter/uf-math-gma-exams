@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,24 +155,24 @@
       <h1>Partial Differential Equations PhD Exam, September 2010</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(U\) be either \(\mathbb R_+^n\) or the unit ball in \(\mathbb R^n\) (\(n\ge 2\)). Write the expression of the Green’s function for \(-\Delta\) with respect to the Dirichlet condition on \(\partial U\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(U\subset\mathbb R^n\) be a bounded open set with smooth boundary \(\partial U\), \(A=(a_{ij})_{n\times n}\) be a symmetric, positive definite constant matrix. For the following variational form:</p>
         <div class="display-math">\[
 I(w):=\frac12\int_U\sum_{i,j=1}^n a_{ij}\partial_iw\partial_jw\,dx;\qquad w\in H_g^1:=\{w\in H^1(U);\ w=g\text{ on }\partial U\},
 \]</div>
         <p>where \(g\) is a smooth function on \(\partial U\), prove that the minimizer \(u\) exists and is smooth.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A=(a_{ij})_{n\times n}\) be a symmetric and positive definite constant matrix. Suppose \(u\) satisfies</p>
         <div class="display-math">\[
 \sum_{i,j=1}^n a_{ij}\partial_{ij}u=0,\qquad \text{in }\mathbb R^n,
 \]</div>
         <p>and \(u\ge -1\) in \(\mathbb R^n\). Show that \(u\equiv\text{constant}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\phi(x)=\dfrac{1}{n(n-2)\alpha(n)}|x|^{2-n}\) be the fundamental solution for the Laplace operator in \(\mathbb R^n\) (\(n\ge 3\)). Here \(\alpha(n)\) is the volume of the unit ball \(B_1\). Suppose \(f(x)\in C^2(\mathbb R^n)\) and satisfies</p>
         <div class="display-math">\[
 |D^jf(x)|\le C(1+|x|)^{-2-\epsilon-j},\qquad \forall x\in\mathbb R^n,\quad j=0,1,2,
@@ -180,13 +186,13 @@ u(x)=\int_{\mathbb R^n}\phi(x-y)f(y)\,dy
 -\Delta u(x)=f(x)\qquad \mathbb R^n.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(u\in W^{1,p}(\mathbb R^n)\), where \(p&gt;n\). Show that</p>
         <div class="display-math">\[
 \frac{1}{r^n}\int_{B(x,r)}|u(x)-u(y)|\,dy\le C(n)\int_{B(x,r)}\frac{|Du(y)|}{|x-y|^{n-1}}\,dy.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Write down an explicit formula for a solution of</p>
         <div class="display-math">\[
 \begin{cases}
@@ -196,7 +202,10 @@ u=g, &amp; \mathbb R^n\times\{t=0\},
 \]</div>
         <p>where \(c\in\mathbb R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The source is internally inconsistent: it states “where \(g,h\) are smooth functions,” but \(g\) does not occur in the displayed problem, while \(f\) does. The stated data may also omit an initial-displacement condition. The intended correction is not uniquely determined, so the source reading has been retained.</p>
+        </div>
         <p>Let \(U\subset\mathbb R^n\) be an open, bounded subset of \(\mathbb R^n\) with smooth boundary. Set \(U_T=U\times[0,T]\), \(\Gamma_T=\overline{U_T}\setminus U_T\), where \(T&gt;0\). Prove that there exists at most one solution \(u\in C^2(\overline{U_T})\) of</p>
         <div class="display-math">\[
 \begin{cases}

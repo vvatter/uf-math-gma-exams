@@ -93,7 +93,13 @@
             "text": "Assume each \\(g_n\\) is entire and \\(g_n\\to g\\) uniformly on compact sets in \\(\\mathbb C\\) (i.e. \\(g_n\\to g\\) in \\(H(\\mathbb C)\\)). If each \\(g_n\\) has only real zeros, show that \\(g\\) has only real zeroes."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The statement is preserved as printed, but it overlooks the possible case \\(g\\equiv0\\), for example when \\(g_n\\equiv1/n\\). The intended correction is not uniquely determined: one could assume \\(g\\not\\equiv0\\) or conclude that \\(g\\) is identically zero or has only real zeros."
+          }
+        ]
       }
     },
     {

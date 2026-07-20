@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Combinatorics PhD Exam, August 2017</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(a_n\) denote the number of strings of length \(n\) of the letters A, B, C, and D such that the letter A appears an odd number of times.</p>
         <ol class="subparts">
           <li>
@@ -170,11 +176,11 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>The set \([n] \times [n]\) is partially ordered by the relation \((a,b) \preceq (c,d)\) which holds when \(a \leq c\) and \(b \leq d\). Find, with proof, the length of a maximum chain and the length of a maximum antichain.</p>
         <p>What is the size of a minimum chain decomposition of this poset. (Recall that a chain decomposition of a poset is a partition of its elements into disjoint chains.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -195,7 +201,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>A parity check matrix \(H\) of a binary linear code \(C\) can be defined as a generator matrix of the dual code \(C^\perp\).</p>
         <p>Show that \(C\) is the null space of the transpose \(H^T\), where multiplication by \(H^T\) is on the right, i.e., \(cH^T\).</p>
         <p>Show that the minimum distance of the code equals the cardinality of a minimum dependent set of columns of \(H\).</p>
@@ -216,16 +222,16 @@ c_1+c_5&amp;=0.
 \]</div>
         <p>What is the minimum distance of this code?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(g(n)\) be the number of permutations of length \(n\) in which each cycle is of even length. Find the exponential generating function of the sequence \(g(n)\), where \(n=0,1,2,\ldots\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(t_n\) be the total number of cycles of all permutations of length \(n\). So \(t_1=1\), \(t_2=3\), and \(t_3=11\). Find an explicit formula for the numbers \(t_n\). Your answer can contain one summation sign.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove that the language \(\{a^{n^2}:n\in\mathbb{N}\}\) is not regular.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\beta\) be a permutation of length \(k\). Prove that there are precisely \(k^2+1\) permutations of length \(k+1\) containing \(\beta\).</p>
       </li>
     </ol>

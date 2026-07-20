@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,14 +158,14 @@
       <p>Do 4 (four) problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\alpha&gt;0\). For (i) \(p=2\); (ii) \(p=\infty\), find the constant \(c_p\) that minimizes</p>
         <div class="display-math">\[
 E_p(c)=\lVert t^\alpha-c\rVert_p=\left(\int_0^1 |t^\alpha-c|^p\,dt\right)^{1/p},
 \]</div>
         <p>and find \(E_p(c_p)\), for each of those values of \(p\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\{\phi_k\}_{k=0}^{m+1}\) be the set of monic orthogonal polynomials with respect to inner product \((u,v)=\int_a^b u(x)v(x)w(x)\,dx\). Let \(\phi_{-1}=0\) and \(\phi_0=1\).</p>
         <ol class="subparts">
           <li>
@@ -183,7 +189,7 @@ E_p(c)=\lVert t^\alpha-c\rVert_p=\left(\int_0^1 |t^\alpha-c|^p\,dt\right)^{1/p},
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Consider finding a zero of function \(f:D\subseteq\mathbb{R}^n\to\mathbb{R}^n\) that can be written as the sum of a linear and nonlinear part</p>
         <div class="display-math">\[
 f(x)=Bx+G(x),
@@ -211,7 +217,7 @@ M_k(x_k)=f(x_k)\quad\text{and}\quad M_k&#x27;(x_k)=B.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f\in C^\infty(a,b)\). Let \(x_0&lt;x_1&lt;x_2\) be three points in \([a,b]\) that are not necessarily equally spaced.</p>
         <ol class="subparts">
           <li>
@@ -232,7 +238,7 @@ M_k(x_k)=f(x_k)\quad\text{and}\quad M_k&#x27;(x_k)=B.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,13 +160,13 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">I. General Logic</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>State and prove the Löwenheim–Skolem Theorem for countable languages.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>State and prove Herbrand’s Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Suppose that \(\mathcal{N}\) is a submodel of \(\mathcal{M}\). Prove that if \(A\) is a quantifier-free sentence, then</p>
           <div class="display-math">\[\mathcal{N} \models A \quad\Longleftrightarrow\quad \mathcal{M} \models A.\]</div>
         </li>
@@ -169,13 +175,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">II. Set Theory</h2>
       <ol class="problems" start="4">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Prove the Mostowski Collapsing Lemma: If \((M,E)\) is a well-founded model of extensionality, then there is a transitive set \(X\) and an isomorphism \(\phi:(M,E)\cong(X,\in)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Sketch a proof of \(\operatorname{Con}(ZFC)\Longrightarrow \operatorname{Con}(ZFC+\neg CH+\omega_1=\omega_1^L)\). You may assume general theorems about forcing, eg. the Truth Lemma.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Define the constructible universe \(L\) and prove that for all \(\alpha\), \(L_\alpha\) is transitive.</p>
         </li>
       </ol>
@@ -183,13 +189,13 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">III. Recursion Theory</h2>
       <ol class="problems" start="7">
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>Suppose that \(A\) is infinite. Prove that \(A\) is recursive if and only if there is a strictly increasing onto \(f:\mathbb{N}\to A\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Prove that there exist recursively enumerable, recursively inseparable sets.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Prove that there is no primitive recursive function \(F(e,n)\) such that for every primitive recursive function \(f(n)\) there is an \(e\) such that \(F(e,n)=f(n)\) for all \(n\).</p>
         </li>
       </ol>

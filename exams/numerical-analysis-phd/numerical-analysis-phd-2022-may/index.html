@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 4 (four) of the first 5 (1-5) and 4 (four) of the last 5 problems (6-10).</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove or provide a counterexample to each of the following.</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -197,7 +203,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column \(j\) of \(U\).</p>
         <ol class="subparts">
           <li>
@@ -222,7 +228,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\{a_1,\ldots,a_n\}\) be a linearly independent set of vectors. Consider the Gram–Schmidt and modified Gram–Schmidt algorithms for computing an orthonormal basis \(\{q_1,\ldots,q_n\}\) so that \(\operatorname{span}\{q_1,\ldots q_k\}=\operatorname{span}\{a_1,\ldots a_k\}\), for each \(k=1,\ldots,n\).</p>
         <p>Suppose in computing \(q_2\), an orthogonalization error is committed so that \(q_2^*q_1=\epsilon\).</p>
         <ol class="subparts">
@@ -244,7 +250,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Compute the Cholesky decomposition of the following matrix, or explain why it does not exist.</p>
         <div class="display-math">\[
 A=\begin{pmatrix}
@@ -255,7 +261,7 @@ A=\begin{pmatrix}
 \end{pmatrix}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -284,7 +290,7 @@ g(x)=x-af(x)-b(f(x))^2-c(f(x))^3,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Consider \(f(t)=\sin(t)\).</p>
         <ol class="subparts">
           <li>
@@ -313,21 +319,21 @@ g(x)=x-af(x)-b(f(x))^2-c(f(x))^3,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Given a differentiable function \(f(x)\), consider the problem of finding a polynomial \(p(x)\in\mathbb{P}^n\) such that</p>
         <div class="display-math">\[
 p(x_0)=f(x_0),\qquad p&#x27;(x_i)=f&#x27;(x_i),\qquad i=1,2,\ldots,n,
 \]</div>
         <p>where \(x_i\), \(i=1,2,\ldots,n\), are distinct nodes. (It is not excluded that \(x_1=x_0\).) Show that the problem has a unique solution and describe how it can be obtained.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(Q_m(f)\) denote the \(m\)-point Gaussian quadrature rule over the interval \([a,b]\) and with continuous weight function \(\rho(x)\geq0\), that is,</p>
         <div class="display-math">\[
 Q_m(f)=\sum_{i=1}^m\alpha_i f(x_i)\approx J(f)=\int_a^b\rho(x)f(x)\,dx.
 \]</div>
         <p>Show that, if \(a\) and \(b\) are finite and \(f\) is continuous, then \(Q_m(f)\to J(f)\) as \(m\to\infty\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Consider numerically solving the initial value problem</p>
         <div class="display-math">\[
 y&#x27;(t)=f(t,y),\quad 0&lt;t\leq t_f,\qquad\text{with }y(0)=\eta.

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that the function \(f:[a,b]\to\mathbb{R}\) is Riemann integrable iff for each \(\varepsilon&gt;0\) there exist Riemann integrable functions \(\ell,u:[a,b]\to\mathbb{R}\) such that \(\ell\leq f\leq u\) pointwise on \([a,b]\) and \(\int_a^b(u-\ell)&lt;\varepsilon\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>For each positive integer \(n\) let \(f_n:[0,1]\to[0,1]\) be a Riemann integrable function. Which (if any) of the following conditions is sufficient to ensure that \(\int_0^1 f_n(t)\,dt\to0\) as \(n\to\infty\)?</p>
         <ol class="subparts">
           <li>
@@ -176,14 +182,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>To each continuous function \(f:[0,1]\to\mathbb{R}\) associate the sequence \((a(f)_n)_{n=0}^{\infty}\) defined by</p>
         <div class="display-math">\[
 a(f)_n=\int_0^1 f(t)t^n\,dt.
 \]</div>
         <p>Prove that the map \(f\mapsto a(f)\) is injective.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let the bounded set \(X\subseteq\mathbb{R}\) be Lebesgue measurable. Prove that:</p>
         <ol class="subparts">
           <li>
@@ -204,7 +210,7 @@ a(f)_n=\int_0^1 f(t)t^n\,dt.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((f_n)_{n=0}^{\infty}\) be a sequence of functions on the measurable space \((X,\mathcal{A})\) with values in \([0,\infty)\). Prove that each of the following subsets of \(X\) is measurable:</p>
         <ol class="subparts">
           <li>

@@ -12,7 +12,10 @@ Association's collections of [First Year and PhD Exams](https://gma.math.ufl.edu
 and [Qualifying Exams](https://gma.math.ufl.edu/past-exams/qualifying-exams/). The
 purpose of this project is to extract the information contained in every exam in those
 archives so the questions, mathematical notation, and instructions can be presented in
-more accessible forms.
+more accessible forms. The archive also includes four undated Algebra First-Year
+practice exams and a 113-question Algebra First-Year practice-problem collection
+published on the department's
+[qualifying-exam syllabi page](https://math.ufl.edu/qualifying-exam-syllabi/).
 
 The two collections apply to different cohorts:
 
@@ -21,7 +24,8 @@ The two collections apply to different cohorts:
 
 This Git repository also serves as the project archive. It contains the acquisition and
 extraction code, the source PDFs after lossless optimization, one canonical JSON record
-per exam, and accessible HTML, TeX, and accessible PDF renderings of each JSON record.
+per exam or practice-problem collection, and accessible HTML, TeX, and accessible PDF
+renderings of each JSON record.
 Manually reconstructed figures are stored as canonical TikZ blocks;
 their generated PNG assets live beside the other exam files.
 Each exam has its own directory so newly typeset TeX and PDF presentations can live
@@ -36,21 +40,25 @@ and current working-file sizes and hashes.
 The project does not repair, tag, or otherwise remediate the archived source PDFs. It
 may rewrite them with lossless PDF optimization to reduce storage, but it does not
 intentionally change their visible content. Instead, it extracts the questions,
-mathematical notation, and meaningful instructions into one JSON file per exam. New
+mathematical notation, and meaningful instructions into one JSON file per exam or
+practice-problem collection. New
 accessible presentations will be generated from that dataset. Visual dependencies and
-other genuine uncertainties are sent to a small serious-review queue, while corrections
-and completed structural transformations are logged separately.
+other genuine source uncertainties are sent to a small serious-review queue. Legible
+questions with known or suspected mathematical problems retain their source wording and
+carry a warning in the canonical record and generated presentations. Corrections and
+completed structural transformations are logged separately.
 
-Each exam is stored under `exams/<subject-tag>/<exam-id>/`. The archived original is
+Each document is stored under `exams/<subject-tag>/<document-id>/`. The archived original is
 `<exam-id>.source.pdf`; the JSON uses the exam ID as its filename; and the accessible
 HTML is `index.html`. The same directory reserves `<exam-id>.tex` and
 `<exam-id>.pdf` for the newly typeset source and accessible PDF. This makes every version
 easy to compare during review without allowing the source and generated PDFs to share a
 name. Each JSON
-record includes the current GMA PDF URL and an ordered sequence of instructions,
+record includes its current official PDF URL and an ordered sequence of instructions,
 problems, and optional named sections. A problem body is an ordered sequence of text and
-manually verified TikZ figures, followed by structured, recursively nested subparts.
-Math uses MathJax delimiters `\(...\)` and `\[...\]`.
+manually verified TikZ figures, followed by structured, recursively nested subparts. A
+problem may also carry one or more known or suspected mathematical concerns. Math uses
+MathJax delimiters `\(...\)` and `\[...\]`.
 
 If a linked PDF contains only a notice that the exam was unavailable, that notice is
 stored as an instruction block and there are no problem blocks. The JSON and HTML still
@@ -63,9 +71,13 @@ MathJax from versioned CDN URLs rather than bundling either dependency into ever
 
 The generated root `index.html` organizes the archive by level in the order Qualifying,
 First-Year, and PhD. Within each level it links to a separate index for every subject.
-Subject indexes list their exams newest first and link to both the accessible HTML and
-the archived source PDF. Each exam page links back to its subject index, making the generated
+Subject indexes list dated exams newest first, place undated practice exams last, and
+link to both the accessible HTML and the archived source PDF. Each exam page links back
+to its subject index, making the generated
 files usable as a conventional static website as well as a repository archive.
+The root also links to `concerns.html`, a consolidated list of known or suspected
+mathematical errors grouped by exam. Exam titles link to the corresponding accessible
+HTML, and each warning begins with its displayed problem number.
 Generated pages do not link to the retiring GMA website. Its URLs remain in the dataset
 and manifest only as source provenance; public PDF links use the optimized copies
 committed to this repository.
@@ -117,11 +129,13 @@ python3 download_exams.py
 ```
 
 The script discovers the current subject pages and their exam tables from both GMA
-indexes on every run. It stores each downloaded PDF as
+indexes on every run and adds the department's four undated Algebra practice PDFs and
+the 113-question practice-problem collection. It
+stores each downloaded PDF as
 `exams/<subject-tag>/<exam-id>/<exam-id>.source.pdf` and writes `manifest.json` with the exam ID, source URL,
-subject, date, local path, original download size and SHA-256, current working size and
-SHA-256, and download status for every PDF. Valid files already on disk are checked and
-skipped, so rerunning the command is safe.
+subject, date or practice variant, local path, original download size and SHA-256,
+current working size and SHA-256, and download status for every PDF. Valid files already
+on disk are checked and skipped, so rerunning the command is safe.
 
 After losslessly optimizing local PDFs, refresh their working sizes and hashes without
 using the network:
@@ -169,6 +183,25 @@ Human-review findings are collected in
 token usage, rendered source pages, and validation failures remain under ignored
 `build/extraction/` checkpoints. Review records are merged after each completed exam,
 so an interrupted bulk run retains both its canonical output and its review findings.
+Mathematical concerns in legible source questions are stored directly on the affected
+problem rather than in `review-serious.json`; the generated HTML, TeX, PDF, and
+`concerns.html` all expose the same warning.
+
+The 113-question Algebra collection has a dedicated resumable extractor because a
+single model request would be unnecessarily large:
+
+```sh
+python3 extract_practice_problems.py
+```
+
+It makes nine Sol calls at 200 DPI. Pages 1, 2, and 5–10 are processed individually;
+pages 3 and 4 are processed together because Problem 42 crosses that page boundary.
+Every chunk must return its exact configured problem-number range, and the deterministic
+merge must contain Problems 1–113 exactly once before canonical JSON or HTML is written.
+Successful chunk checkpoints remain under
+`build/extraction/algebra-first-year-practice-problems/chunks/`, so interrupted runs
+resume without repeating completed calls. Use `--force` only to replace every saved
+chunk with a fresh extraction.
 
 The command resumes valid completed records by default. Use `--force` only when a
 record should be re-extracted after a prompt or policy change. Superseded JSON,
@@ -330,6 +363,29 @@ Generated TeX and accessible PDF filenames retain the stable exam ID, for exampl
 `algebra-first-year-2025-aug-part-1.tex` and
 `algebra-first-year-2025-aug-part-1.pdf`, within that exam directory.
 
+Undated practice exams use an explicit A/B variant instead of inventing a year or month:
+
+```text
+exams/algebra-first-year/algebra-first-year-practice-a-part-1/
+exams/algebra-first-year/algebra-first-year-practice-a-part-2/
+exams/algebra-first-year/algebra-first-year-practice-b-part-1/
+exams/algebra-first-year/algebra-first-year-practice-b-part-2/
+```
+
+They are titled “Algebra First-Year Practice Exam A” or “Practice Exam B,” with the part
+appended, and appear after all dated exams in the Algebra First-Year subject index.
+In the department filenames, the digit identifies the part (`prac1*` is Part 1 and
+`prac2*` is Part 2), while the trailing letter identifies Practice A or B.
+
+The undated problem collection uses its own stable directory:
+
+```text
+exams/algebra-first-year/algebra-first-year-practice-problems/
+```
+
+It is titled “Algebra First-Year Exam, Practice Problems” and appears as the featured
+“Practice Problems (113)” link above the dated and A/B practice-exam table.
+
 First Year and PhD are normally appended to the subject tag. Two subject names have
 explicit overrides:
 
@@ -342,7 +398,9 @@ Qualifying subjects use tags such as `algebra-qualifying`,
 
 January, May, August, and September are the expected exam months. If the source table
 contains another valid month, the script preserves it, reports it in the manifest, and
-uses its ordinary three-letter abbreviation rather than guessing a replacement.
+uses its ordinary three-letter abbreviation rather than guessing a replacement. The
+four practice exams and the practice-problem collection intentionally have neither a
+month nor a year.
 
 ## Download Options
 
@@ -375,3 +433,7 @@ uses its ordinary three-letter abbreviation rather than guessing a replacement.
 --vision-only       Omit native PDF text and use rendered page images only
 --skip-current      With --affected, skip current-prompt successful checkpoints
 ```
+
+The dedicated practice-problem extractor accepts the same model, reasoning, DPI,
+worker, manifest, review-directory, and build-root controls. Its optional positional ID
+defaults to `algebra-first-year-practice-problems`; `--force` discards chunk reuse.

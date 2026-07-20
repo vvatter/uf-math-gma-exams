@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,13 +160,13 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">A. Set Theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Let \(X\) be an uncountable set and let \(F:X\to X\) be a function. Show that there are distinct elements \(x,y\in X\) such that \(x\ne F(y)\) and \(y\ne F(x)\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Let \(P\) be a forcing. Show that there is an uncountable cardinal \(\kappa\) such that \(P\Vdash \check{\kappa}\) is a cardinal.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Provide an example of a subset of a Polish space which is analytic and not Borel. Provide a proof of these two properties of your set.</p>
         </li>
       </ol>
@@ -168,13 +174,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">B. Computability.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Give an example of a subset of \(\mathbb N\) that is \(\Pi^0_1\) and not \(\Sigma^0_1\) (and prove that your set has these two properties).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Prove that there exist incomparable Turing degrees.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>Prove that there exist disjoint computably enumerable sets \(A,B\subseteq\mathbb N\) such that there is no computable set \(C\) which contains \(A\) and is disjoint from \(B\).</p>
         </li>
       </ol>
@@ -182,7 +188,7 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">C. Model Theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>Let \(\mathcal L\) be a language comprised of a single binary relation symbol. Give an example of a countably infinite \(\mathcal L\)-structure \(\mathcal M\) such that. Make sure to prove both statements (i) and (ii).</p>
           <ol class="subparts">
             <li>
@@ -203,7 +209,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>Let \(\mathcal L\) be a language comprised of two unary relation symbols \(G\) and \(B\), and a binary relation symbol \(R\). Let \(\mathcal K\) be the class of all finite graphs with a bipartition, i.e., \(\mathcal K\) consists of all finite \(\mathcal L\)-structures \(\mathcal M=(M,G^{\mathcal M},B^{\mathcal M},R^{\mathcal M})\) such that. Prove or disprove: \(\mathcal K\) is a Fraïssé class.</p>
           <ol class="subparts">
             <li>
@@ -232,7 +238,7 @@
             </li>
           </ol>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Let \(\mathcal L=\{R\}\) be the language of graphs (i.e., \(R\) is a binary relation symbol). Let \(\mathcal K_0\) be the class of all connected graphs, and let \(\mathcal K_1\) be the class of all disconnected graphs. Prove or disprove each of the following:</p>
           <ol class="subparts">
             <li>

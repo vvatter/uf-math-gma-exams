@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -121,6 +127,9 @@ A=\begin{pmatrix}-6&17\\18&-1\end{pmatrix}.
 \]
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source clearly asks for the projection of~\(A\) onto its own column space, but the intended object is mathematically ambiguous; it may have intended the orthogonal projection matrix onto the column space. The source wording has been retained.
+\end{problemconcern}
 Let 
 \[
 A=\begin{pmatrix}1&2\\0&1\\1&0\end{pmatrix}.
@@ -132,6 +141,9 @@ Determine the orthogonal projection of~\(A\) onto the column space of~\(A\).
 Compute the \(QR\) factorization of~\(A\).
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The displayed dimensions make the product \(BA\) undefined in general. The source reading has been retained because it is unclear whether the dimensions or the product order should be corrected.
+\end{problemconcern}
 This problem has five parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]

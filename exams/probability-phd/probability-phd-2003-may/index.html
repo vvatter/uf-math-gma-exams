@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Write clearly. State precisely results you use. Do not omit steps.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \((\overline X_m)_{m=1}^{\infty}\) be an i.i.d. sequence of real valued variables on \((\Omega,\mathcal F,P)\). Let \(\mathcal F_m=\sigma(\overline X_1,\ldots,\overline X_m)\). Put \(S_m=\overline X_1+\cdots+\overline X_m\), for \(m\geq1\), and put \(S_0=0\). Which of the following sequences are martingales relative to \(\mathcal F_m\)? For those which are not martingales with respect to this filtration, what conditions have to be added to make them martingales?</p>
         <ol class="subparts">
           <li>
@@ -189,7 +195,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\{\alpha_m\}_{m=1,2,\ldots}\) be a sequence of probability measures on \(\mathbb R\). Show the following are equivalent:</p>
         <ol class="subparts">
           <li>
@@ -210,10 +216,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\{\alpha_m\}_{m=1,2,\ldots}\) be a sequence of probability measures on \(\mathbb R\), and let \(\{\varphi_m(t)\}_{m=1,2,\ldots}\) be the corresponding characteristic functions. Assume that \(\lim_{m\to\infty}\varphi_m(t)=\varphi(t)\) for all \(t\in\mathbb R\), and \(\varphi(t)\) is continuous at \(t=0\). Prove that \(\varphi(t)\) is the characteristic function of some probability measure and that the conditions of Problem 2 hold.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>If \(\overline X\) is a real valued random variable, show that for \(0&lt;\varepsilon&lt;1\),</p>
         <div class="display-math">\[
 E\left[\frac{|\overline X|}{1+|\overline X|}\right]\leq \varepsilon+P[|\overline X|&gt;\varepsilon]
@@ -228,7 +234,7 @@ d(\overline X,\overline Y)=E\left[\frac{|\overline X-\overline Y|}{1+|\overline 
 \]</div>
         <p>and that convergence in this metric space corresponds to convergence in probability.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -261,7 +267,7 @@ E[\overline Y_\infty]=1\quad\Longleftrightarrow\quad P[\overline Y_\infty&gt;0]=
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\overline X_m\), \(m=1,2,\ldots\), be a supermartingale such that</p>
         <div class="display-math">\[
 E[|\overline X_{m+1}-\overline X_m|\mid\mathcal F_m]&lt;M\quad\text{a.s.}

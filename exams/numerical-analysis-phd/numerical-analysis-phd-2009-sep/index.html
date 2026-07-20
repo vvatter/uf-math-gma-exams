@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer any 8 questions.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -180,27 +186,27 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>If \(A=QR\) is the \(QR\) factorization of \(A\), show that \(r_{ii}\) is the distance from the \(i\)-th column of \(A\) to the space spanned by the first \(i-1\) columns of \(A\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\|\cdot\|_p\) for \(1\leq p\leq\infty\) denote the norm on \(m\times n\) matrices induced by the \(\ell^p\)-norm. For any positive \(p\) and \(q\) with \(p^{-1}+q^{-1}=1\), show that</p>
         <div class="display-math">\[
 \|A\|_2^2\leq \|A\|_p\,\|A\|_q,\qquad\text{for all }A\in\mathbb C^{m\times n}.
 \]</div>
         <p>Hint: Recall that for a Hermitian matrix \(H\), \(\|H\|_2\) is the absolute largest eigenvalue. As a result, \(\|H\|_2\leq\|H\|\) for any matrix norm induced by a vector norm.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove Gershgorin’s theorem: If \(A\in\mathbb C^{n\times n}\), then each eigenvalue of \(A\) lies in the union of the disks</p>
         <div class="display-math">\[
 D_i=\left\{\lambda\in\mathbb C:|\lambda-a_{ii}|\leq\sum_{j\ne i}|a_{ij}|\right\}.
 \]</div>
         <p>Moreover, if \(m\) disks form a connected domain that is disjoint from the other \(n-m\) disks, then there are precisely \(m\) eigenvalues of \(A\) within this domain.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(P\) and \(Q\) be two \(m\times m\) orthogonal projectors. Prove that \(\|P-Q\|_2\leq 1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Assume that \(g(x)\) is continuously differentiable on \([a,b]\), that \(g([a,b])\subseteq[a,b]\), and that</p>
         <div class="display-math">\[
 \lambda=\operatorname{Max}_{a\leq x\leq b}|g&#x27;(x)|&lt;1.
@@ -235,7 +241,7 @@ D_i=\left\{\lambda\in\mathbb C:|\lambda-a_{ii}|\leq\sum_{j\ne i}|a_{ij}|\right\}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Assume that \(f(x)\), \(f&#x27;(x)\), and \(f&#x27;&#x27;(x)\) are continuous in \([a,b]\), and that for some \(\alpha\in(a,b)\), we have \(f(\alpha)=0\) and \(f&#x27;(\alpha)\ne 0\). Show that if \(x_0\) is chosen close enough to \(\alpha\), the iterates</p>
         <div class="display-math">\[
 x_{n+1}=x_n-\frac{f(x_n)}{f&#x27;(x_n)}
@@ -245,17 +251,17 @@ x_{n+1}=x_n-\frac{f(x_n)}{f&#x27;(x_n)}
 \lim_{n\to\infty}\frac{\alpha-x_{n+1}}{(\alpha-x_n)^2}=-\frac{f&#x27;&#x27;(\alpha)}{2f&#x27;(\alpha)}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(x_0,x_1,x_2,\ldots,x_n\) be distinct real numbers and let \(f\) be a given real-valued function with \(n+1\) continuous derivatives. Let \(I\) be an interval containing all of the \(x_k\), and \(t\). Show that there is a \(\xi\in I\) such that</p>
         <div class="display-math">\[
 f(t)-\sum_{k=0}^n f(x_k)l_k(t)=\frac{(t-x_0)(t-x_1)\cdots(t-x_n)}{(n+1)!}f^{(n+1)}(\xi),
 \]</div>
         <p>where \(l_k\) is the Lagrange interpolating polynomial which is 1 at \(x_k\) and 0 at the other \(x_j\), \(j\ne k\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(I_n(f)=\sum_{j=0}^n w_{j,n}f(x_{j,n})\) be a sequence of approximations to \(I(f)=\int_a^b f(x)\,dx\). Let \(F\) be a family of functions which is dense in \(C[a,b]\), and suppose that (a) \(I_n(f)\to I(f)\) for all \(f\in F\), and (b) \(B=\sup_n\sum_{j=0}^n|w_{j,n}|&lt;\infty\). Show that \(I_n(f)\to I(f)\) for all \(f\in C[a,b]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Consider the differential equation \(y&#x27;=f(t,y)\), \(y(0)=y_0\), where \(|f(t,y_1)-f(t,y_2)|\leq K|y_1-y_2|\) for all \(y_1\) and \(y_2\in\mathbb R\). Show that a multistep method</p>
         <div class="display-math">\[
 y_{n+1}=\sum_{j=0}^p a_jy_{n-j}+h\sum_{j=-1}^p b_jf(x_{n-j},y_{n-j})

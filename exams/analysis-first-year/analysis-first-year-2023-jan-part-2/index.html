@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f\) be a real-valued function on \([0,1]\) and consider the statements below. Prove that (ii) implies (i); and show by example that (i) \(\Rightarrow\) (ii) can fail.</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) be a metric space on which \((f_n)\) and \((g_n)\) are uniformly convergent sequences of continuous real-valued functions.</p>
         <ol class="subparts">
           <li>
@@ -194,16 +200,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f:[0,1]\times[0,1]\to\mathbb R\) be continuous. By first considering polynomials in two variables, prove that</p>
         <div class="display-math">\[
 \int_0^1\left(\int_0^1 f(x,y)\,dx\right)dy=\int_0^1\left(\int_0^1 f(x,y)\,dy\right)dx.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that if \((f_n)\) is a sequence of measurable functions such that \(f_n\to f\) on some measure space, then \(f\) is measurable. Hence, or otherwise, show that if \(f:\mathbb R\to\mathbb R\) is differentiable then its derivative \(f&#x27;\) is Borel measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>In each of the following cases, give (if possible and with justification) a sequence \((f_n)\) of Lebesgue integrable functions from \(\mathbb R\) to \(\mathbb R\) such that, where \(\lambda\) denotes Lebesgue measure:</p>
         <ol class="subparts">
           <li>

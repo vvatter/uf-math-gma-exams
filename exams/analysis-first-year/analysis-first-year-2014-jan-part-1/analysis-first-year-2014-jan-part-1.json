@@ -97,6 +97,12 @@
             "text": "Show \\(f(x_n+)-f(x_n-)=c_n\\), for each \\(n\\).",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "Part (b) is not valid if the sequence \\(\\{x_n\\}\\) contains repeated values: the jump at \\(x_n\\) would include every \\(c_k\\) for which \\(x_k=x_n\\). The intended repair is not unique; the source reading has therefore been retained."
+          }
         ]
       }
     },

@@ -193,7 +193,13 @@
             "text": "Describe a space \\(X\\) with \\(\\pi(X)\\cong\\mathbb{Z}/3\\mathbb{Z}\\)."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source clearly displays \\(\\pi(X)\\), though \\(\\pi_1(X)\\) may have been intended; the source notation has been retained."
+          }
+        ]
       }
     },
     {

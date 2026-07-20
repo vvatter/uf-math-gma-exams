@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,13 +160,13 @@
     <section aria-labelledby="section-1">
       <h2 id="section-1">A. Set Theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Sketch the proof that the constructible universe satisfies the Continuum Hypothesis.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>State Martin’s Axiom for a cardinal \(\kappa\). Show that it proves that the continuum has cardinality larger than \(\kappa\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Given a Polish space \(X\), explain how the hyperspace \(K(X)\) of all compact subsets of \(X\) is topologized. Sketch the proof that Vietoris topology is Polish.</p>
         </li>
       </ol>
@@ -168,13 +174,13 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">B. Computability.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>What are Turing degrees? Sketch the proof that for a Turing degree \(t\), the jump \(t&#x27;\) is of strictly larger Turing degree.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Provide at least two conceptually different definitions of the class of computable functions and show that they are equivalent.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>What is Post’s problem? Provide the answer to the Post’s problem and an outline of the proof.</p>
         </li>
       </ol>
@@ -182,13 +188,13 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">C. Model theory.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>What is a Fraïssé class? State the Fraïssé theorem regarding the existence of a limit model for such a class.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>What is quantifier elimination? Provide an example of a theory which has infinite models and quantifier elimination. Sketch a proof that the theory has quantifier elimination.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Find a complete theory with more than one countable model up to isomorphism. Provide two nonisomorphic countable models of the theory.</p>
         </li>
       </ol>

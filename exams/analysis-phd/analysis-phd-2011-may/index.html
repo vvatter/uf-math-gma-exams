@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -173,32 +179,32 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove that the spaces \(c\) (of all convergent scalar sequences) and \(c_0\) (of all null scalar sequences) are not isometrically isomorphic when equipped with the sup norm.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State the Closed Graph Theorem and the Banach Isomorphism Theorem; deduce one of these from the other.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let the sequence \((T_n)_{n=1}^\infty \subset L(X,Y)\) be bounded in operator norm and assume \(Y\) complete. Prove that</p>
         <div class="display-math">\[
 Z=\{z\in X:(T_nz)_{n=1}^\infty\text{ converges}\}
 \]</div>
         <p>is a closed subspace of \(X\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(X\) and \(Y\) be closed subspaces of a Hilbert space. Prove that if \(X\perp Y\), then \(X+Y\) is closed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \((\Omega,\mathcal F,\mu)\) be a measure space. Define \(\overline{\mathcal F}\) to comprise all those \(A\subseteq\Omega\) for which there exist \(L,U\in\mathcal F\) such that \(L\subseteq A\subseteq U\) and \(\mu(U\setminus L)=0\) and then define \(\overline\mu(A)\) to be the common value \(\mu(L)=\mu(U)\). Show that \((\Omega,\overline{\mathcal F},\overline\mu)\) is a measure space that is complete in the sense that each subset of a null set is null.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \((\Omega,\mathcal F,\mu)\) be an arbitrary measure space; let \(p,q,r&gt;1\) satisfy \(\frac1p+\frac1q=\frac1r\). Prove that if \(f\in L_p(\mu)\) and \(g\in L_q(\mu)\) then \(fg\in L_r(\mu)\) with</p>
         <div class="display-math">\[
 \lVert fg\rVert_r\leq \lVert f\rVert_p\lVert g\rVert_q.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(1\leq p&lt;q&lt;\infty\). Show that \(L_p(\mu)\nsubseteq L_q(\mu)\) iff \((\Omega,\mathcal F,\mu)\) contains measurable sets of arbitrarily small positive measure.</p>
       </li>
     </ol>

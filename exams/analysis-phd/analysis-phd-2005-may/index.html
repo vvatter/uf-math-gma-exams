@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,13 +158,13 @@
       <p>Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\mu\) be a positive Radon measure on a locally compact Hausdorff space \(T\). Let \(f_n:T\to\overline{\mathbb R}\) be \(\mu\)-measurable for all \(n\in\mathbb N\). Prove that \(\sup\{f_n\mid n\in\mathbb N\}\) is \(\mu\)-measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(E\) be a complex Banach space. Suppose \(\{x_n\}_{n\in\mathbb N}\subset E\) converges in the weakened topology \(\sigma(E,E&#x27;)\) to \(x\in E\), i.e. \(\lvert\langle x_n-x,y\rangle\rvert\to0\) for all \(y\in E&#x27;\) as \(n\to\infty\). Prove that \(x\) is contained in the closure of the linear span of the set \(\{x_n\}_{n\in\mathbb N}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(E\) be a topological vector space. Prove the following:</p>
         <ol class="subparts">
           <li>
@@ -187,7 +193,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\delta\in\mathcal D&#x27;(\mathbb R)\) denote the distribution given by \(\delta(\phi)=\phi(0)\), for all \(\phi\in\mathcal D(\mathbb R)\). Prove your answers are correct.</p>
         <ol class="subparts">
           <li>
@@ -216,20 +222,20 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(K:[0,1]\times[0,1]\to\mathbb R\) be continuous and \(f:[0,1]\times\mathbb R\to\mathbb R\) be continuous and bounded. Show that the Hammerstein equation</p>
         <div class="display-math">\[
 u(s)=\int_0^1 K(s,t)f(t,u(t))\,dt,\qquad s\in[0,1],
 \]</div>
         <p>has a solution in \(E=\{x:[0,1]\to\mathbb R\mid x\text{ continuous}\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(1\in\mathcal D&#x27;(\mathbb R)\) be given by \(1(\phi)=\int_{\mathbb R}\phi\,dx\), for all \(\phi\in\mathcal D(\mathbb R)\). Compute \((1*\delta&#x27;)(\phi)\) for all \(\phi\in\mathcal D(\mathbb R)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mu\) be a \(\sigma\)-finite positive Radon measure on a locally compact Hausdorff space \(T\). Let \(\{f_n\}_{n\in\mathbb N}\subset L^p(T,\mu)\) for some \(p\in[1,\infty)\). Suppose that \(\lim_{n\to\infty}f_n(t)=f(t)\) \(\mu\)-a.e., that \(f\in L^p(T,\mu)\), and that \(\lim_{n\to\infty}\int\lvert f_n\rvert^p\,d\mu=\int\lvert f\rvert^p\,d\mu\). Prove that \(\lim_{n\to\infty}\int\lvert f_n-f\rvert^p\,d\mu=0\). Hint: Bring the Lebesgue Dominated Convergence Theorem and the \(\sigma\)-finiteness of the measure into play.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(\mathcal H\) be a Hilbert space with inner product \((\cdot,\cdot)\), and let \(\{y_\alpha\}_{\alpha\in A}\subset\mathcal H\) be an orthonormal family. Let \(x\in\mathcal H\).</p>
         <ol class="subparts">
           <li>

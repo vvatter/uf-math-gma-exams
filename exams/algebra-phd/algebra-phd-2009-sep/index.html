@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -153,10 +159,10 @@
       <p>In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Jordan–Hölder theorem for finite groups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -177,10 +183,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>A category \(C\) is small if its class of objects is a set, and skeletal if for all \(X\) and \(Y\) in \(C\), \(X\simeq Y\) implies \(X=Y\). Show that any small category is equivalent to a skeletal one (choose an object from each isomorphism class).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be a commutative ring.</p>
         <ol class="subparts">
           <li>
@@ -201,17 +207,17 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that if \(R\) is a commutative ring with identity and every prime ideal of \(R\) is finitely generated, then \(R\) is Noetherian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Show that for any extension \(A\to B\) of commutative rings, any \(A\)-module \(M\) and any \(B\)-module \(N\), there is an isomorphism</p>
         <div class="display-math">\[
 \operatorname{Hom}_B(M\otimes_A B,N)\simeq \operatorname{Hom}_A(M,N_A)
 \]</div>
         <p>functorial in \(M\) and \(N\) (here \(N_A\) denotes \(N\) considered as an \(A\)-module by means of the ring homomorphism \(A\to B\)).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -232,7 +238,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -261,7 +267,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The source says only that \(p\) is prime, but the assertion that \(K\) contains a quadratic extension of \(\mathbb Q\) fails when \(p=2\). A possible omitted restriction cannot be determined uniquely, so the source&#x27;s mathematical scope has been retained.</p>
+        </div>
         <p>Let \(p\) be a prime and \(K\) be the splitting field over \(\mathbb Q\) of \(X^p-1\).</p>
         <ol class="subparts">
           <li>
@@ -282,10 +291,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> Even after the grammatical correction, the printed assertion appears to require an additional hypothesis: a finite-dimensional semisimple \(k\)-algebra need not be a direct sum of fields. No missing hypothesis is uniquely determined, so none has been added.</p>
+        </div>
         <p>Let \(k\) be a field and \(R\) a finite-dimensional \(k\)-algebra. Show that if \(R\) is semisimple as a ring, it is a direct sum of extension fields of \(k\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Classify up to isomorphism all semisimple rings with \(720\) elements.</p>
       </li>
     </ol>

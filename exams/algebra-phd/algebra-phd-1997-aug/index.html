@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Answer seven out of the following ten problems. State clearly any results you need.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(A\) be a commutative Noetherian ring with identity. Show that if \(A\) is Noetherian, then so is the power series ring \(A[[X]]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose that \(A\) is a commutative ring with identity, \(B\) is an \(A\)-algebra integral over \(A\), and \(f:A\to K\) is a homomorphism from \(A\) to an algebraically closed field \(K\). Show that \(f\) can be extended to a homomorphism \(g:B\to K\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Show that any automorphism of the field \(\mathbb R\) of real numbers is the identity.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(p\) be a prime, \(n&gt;1\) an integer, and \(G=\operatorname{GL}(n,\mathbb F_p)\). Compute the order of \(G\), and find a \(p\)-Sylow subgroup of \(G\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(p\) be a prime,</p>
         <ol class="subparts">
           <li>
@@ -185,7 +191,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(M_n(F)\) denote the algebra of \(n\times n\) matrices over the field \(F\). Fix \(p\) with \(1&lt;p&lt;n\) and let \(R\) be the subalgebra consisting of those matrices in “block form”</p>
         <div class="display-math">\[
 \begin{pmatrix}A&amp;B\\0&amp;C\end{pmatrix},
@@ -218,16 +224,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>If \((m,n)=1\), then compute \((\mathbb Z/m\mathbb Z)\otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z)\). Explain.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose that \(A\) is a commutative ring with identity. If \(A^m\cong A^n\) as \(A\)-modules, show that \(m=n\) (\(A^m\) denotes the direct sum of \(m\) copies of \(A\) as an \(A\)-module, and similarly for \(A^n\)).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(A\) be a Noetherian ring and \(M\) a finitely generated \(A\)-module. Denote by \(\operatorname{Supp}(M)\) the set of prime ideals \(p\) of \(A\) such that \(M_p\ne0\), where \(M_p\) is the localization of \(M\) at \(p\). Show that if \(M_p=0\) for all \(p\), then \(M=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -117,6 +123,9 @@ Find \(\displaystyle \lim_{n\to\infty}\int_0^1 n x^n\,dx\). (Hint: use the monot
 \item
 Let~\(\mu\) be the Lebesgue measure on~\(\mathbb{R}\) and~\(f\) a Lebesgue-integrable function on~\(\mathbb{R}\), such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb{R}\). What can you say about~\(f\)?
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source statement was retained, but on a general finite measure space the displayed hypotheses do not imply the stated lower bound. An additional normalization such as \(\mu(X)=1\), or a different lower bound, may have been intended; the correction is not uniquely determined.
+\end{problemconcern}
 Let \(f\geq 0\) be~\(\mu\)-integrable such that \(\int f\,d\mu\leq 1\). Prove that \(\int \frac{1}{f}\,d\mu\geq 1\). (Hint, use the Schwarz inequality for \(\sqrt f\) and \(\frac{1}{\sqrt f}\).)
 \item
 Let~\(R\) be a ring of subsets of~\(X\), \(E\) a Banach space and \(\mu:R\to E\) be a finitely additive measure. Prove that~\(\mu\) is~\(\sigma\)-additive iff for any decreasing sequence \((A_n)\) from~\(R\) with \(\bigcap_n A_n=\phi\) we have \(\lim \mu(A_n)=0\).

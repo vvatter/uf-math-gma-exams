@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 4 (four) of the first 5 (1-5) and 4 (four) of the last 5 problems (6-10).</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Assume \(A\in\mathbb{C}^{m\times m}\).</p>
         <ol class="subparts">
           <li>
@@ -173,10 +179,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>If \(q_1,\ldots,q_n\) is an orthonormal basis for the subspace \(V\subset\mathbb{C}^m\) with \(m&gt;n\), prove that the orthogonal projector onto \(V\) is \(QQ^*\), where \(Q\) is the matrix whose columns are the \(q_j\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\in\mathbb{C}^{m\times n}\), with \(m\geq n\) and \(\operatorname{rank}(A)=n\geq 3\). Let \(a_1,a_2,\ldots\) denote the columns of \(A\).</p>
         <ol class="subparts">
           <li>
@@ -197,7 +203,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\lVert\cdot\rVert\) be a subordinate (induced) matrix norm.</p>
         <ol class="subparts">
           <li>
@@ -220,7 +226,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column \(j\) of \(U\).</p>
         <ol class="subparts">
           <li>
@@ -243,24 +249,24 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>\(g(x)=\frac{x}{2}+\frac{a}{2x}\) has \(x=\sqrt{a}\) as a fixed point where \(a&gt;0\). Suppose we use the fixed point method with a starting point \(x_0&gt;\sqrt{a}\). Use the theory of the fixed point method to determine the condition on \(x_0\) which guarantees</p>
         <div class="display-math">\[|x_{k+1}-\sqrt{a}|\leq\frac{1}{2}|x_k-\sqrt{a}|,\qquad k\geq 1.\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(f\in C[0,1]\) and let \(\sum_{i=1}^n w_i f(x_i)\) (\(n\geq 1\)) be an approximation to \(\int_0^1 f(x)\,dx\). Assume that \(0\leq w_i\leq 1\), \(0\leq x_i\leq 1\) (\(i=1,2,\ldots,n\)). Let</p>
         <div class="display-math">\[E_n(f)=\int_0^1 f(x)\,dx-\sum_{i=1}^n w_i f(x_i)\]</div>
         <p>be the error in the approximation. Assume that \(E_n(p_n)=0\) for \(p_n\), which denotes any polynomial of degree \(\leq n\). Use the Weierstrass approximation theorem to prove that, given \(\epsilon&gt;0\), there is an \(N&gt;0\) such that \(|E_n(f)|&lt;\epsilon\) when \(n&gt;N\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Given a differentiable function \(f(x)\), consider the problem of finding a polynomial \(p(x)\in\mathbb{P}^n\) such that</p>
         <div class="display-math">\[p(x_0)=f(x_0),\qquad p&#x27;(x_i)=f&#x27;(x_i),\qquad i=1,2,\ldots,n,\]</div>
         <p>where \(x_i\), \(i=1,2,\ldots,n\), are distinct nodes. (It is not excluded that \(x_1=x_0\).) Show that the problem has a unique solution and describe how it can be obtained.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(\{p_i(x)\}_{i=0}^{\infty}\) be the sequence of orthogonal polynomials obtained from the Gram–Schmidt orthogonalization process of \(\{x^i\}_{i=0}^{\infty}\). Consider the quadrature formula \(Q(f)=\sum_{j=0}^m\alpha_j f(x_j)\) for \(J(f)=\int_a^b f(x)\rho(x)\,dx\). Prove that \(Q(f)\) is exact for polynomials of degree \(\leq 2m+1\) if and only if the quadrature nodes \(x_j\) (\(j=0,1,\ldots,m\)) are the roots of \(p_{m+1}(x)\) and the quadrature weights \(\alpha_j=\int_a^b l_j(x)\rho(x)\,dx\), (\(j=0,1,\ldots,m\)).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Consider numerically solving the initial value problem</p>
         <div class="display-math">\[y&#x27;(t)=f(t,y),\qquad 0&lt;t\leq t_f,\qquad\text{with }y(0)=\eta.\]</div>
         <p>Assume \(f\) is sufficiently differentiable and let \(h\) denote the step size. Show that the method</p>

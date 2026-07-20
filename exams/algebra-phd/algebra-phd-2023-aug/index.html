@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Briefly explain your answers to the following, freely using standard results.</p>
         <ol class="subparts">
           <li>
@@ -181,10 +187,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(f(x)\in\mathbb{Q}[x]\) be an irreducible polynomial of degree 5 with exactly three real roots. State and prove a result about the Galois group of the splitting field of \(f(x)\) over \(\mathbb{Q}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(K=\mathbb{Q}(\zeta_{101})\), where \(\zeta_{101}\) is a primitive 101th root of unity.</p>
         <ol class="subparts">
           <li>
@@ -205,7 +211,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Recall that the Abelianization of a group \(G\) is \(G^{\mathrm{ab}}:=G/[G,G]\).</p>
         <ol class="subparts">
           <li>
@@ -226,14 +232,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(K\) be a field and \(V\) a \(K\)-vector space. Recall that an alternating bilinear map \(f:V\times V\to W\) is a function which is \(K\)-linear in each coordinate (i.e. \(K\)-multilinear) and such that \(f(v,v)=0\) for all \(v\in V\). Show that the functor \(\operatorname{Alt}_V^2:\operatorname{Vec}_K\to\operatorname{Sets}\) defined by</p>
         <div class="display-math">\[
 \operatorname{Alt}_V^2(W)=\{f:V\times V\to W:f\text{ is alternating bilinear}\}
 \]</div>
         <p>is a representable functor. (The representing object, usually denoted \(\Lambda^2(V)\), is an exterior power of \(V\).) Suggestion: A quotient of \(V\otimes_K V\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Give examples of the following, and briefly explain your answers.</p>
         <ol class="subparts">
           <li>
@@ -266,7 +272,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be a ring and \(M\) and \(N\) be \(R\)-modules. Let \(P_\bullet\) and \(P&#x27;_\bullet\) be projective resolutions of \(M\) and \(N\). Given a morphism of \(R\)-modules \(f:M\to N\), show that there exists a morphism of resolutions \(f:P_\bullet\to P&#x27;_\bullet\) extending \(f\). In other words, show there exists \(f_0,f_1,f_2,\ldots\) making the following diagram commute:</p>
         <div class="display-math">\[
 \require{amscd}
@@ -277,17 +283,17 @@
 \end{CD}
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>What are the dimensions of \(\mathbb{Q}[x]/(x^5)\otimes_{\mathbb{Q}}\mathbb{Q}[x]/(x^6)\) and of \(\mathbb{Q}[x]/(x^5)\otimes_{\mathbb{Q}[x]}\mathbb{Q}[x]/(x^6)\) as \(\mathbb{Q}\)-vector spaces?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(F\) be a field. Prove that the power series ring</p>
         <div class="display-math">\[
 F[\![x]\!]=\left\{\sum_{n=0}^{\infty}a_nx^n:a_n\in F\right\}
 \]</div>
         <p>is a Noetherian ring.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(B=\mathbb{Q}[x,y]/(xy)\) and \(A=\mathbb{Q}[t]\). Note that both have Krull dimension 1. A homomorphism \(f:A\to B\) of rings turns \(B\) into an \(A\)-module: for \(a\in A\) and \(b\in B\), \(a.b=f(a)b\).</p>
         <ol class="subparts">
           <li>
@@ -316,7 +322,7 @@ F[\![x]\!]=\left\{\sum_{n=0}^{\infty}a_nx^n:a_n\in F\right\}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(K\) be a field and consider the function \(v:K(x)\to\mathbb{Z}\cup\{\infty\}\) given by</p>
         <div class="display-math">\[
 v(f/g)=\deg(g)-\deg(f),\qquad v(0)=\infty.

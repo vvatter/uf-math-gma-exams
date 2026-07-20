@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,10 @@
       <p>Do 5 of 7</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> Part (v) asks for quadratic convergence under continuous differentiability and \(g&#x27;(\alpha)=0\). Those assumptions generally imply superlinear, but not necessarily quadratic, convergence; a stronger regularity assumption may be missing, but the intended correction is not uniquely determined.</p>
+        </div>
         <p>(General Fixed Point Theory) Assume that \(g(x)\) is continuously differentiable on \([a,b]\), that \(g([a,b])\subseteq [a,b]\), and that</p>
         <div class="display-math">\[
 \lambda=\max_{a\leq x\leq b}|g&#x27;(x)|&lt;1.
@@ -223,16 +232,16 @@ x_{n+1}=x_n-\frac{f(x_n)}{f&#x27;(x_n)}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Theorem: (Lagrange Error Formula) Let \(x_0,x_1,x_2,\ldots,x_n\) be distinct real numbers, \(l_j(x)\) be the corresponding Lagrange polynomials and suppose that \(f\) is a given real-valued function with \(n+1\) continuous derivatives. Let \(I\) be an interval containing all of the \(x_k\), and \(t\). Then there is a \(\xi\in I\) such that</p>
         <div class="display-math">\[
 f(t)-\sum_{j=0}^{n}f(x_j)l_j(t)=\frac{(t-x_0)(t-x_1)\cdots(t-x_n)}{(n+1)!}f^{(n+1)}(\xi).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\{p_n\}\) be an orthogonal family on \([a,b]\) constructed by using the Gram–Schmidt process on \(1,t,t^2,t^3,\ldots\). Prove that all of the zeros of \(p_n(t)\) are contained in \([a,b]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Given Simpson’s rule for numerical integration, i.e.</p>
         <div class="display-math">\[
 \int_{t_n}^{t_{n+2}}f(x)\,dx\approx\frac{2h}{6}\bigl(f(t_n)+4f(t_{n+1})+f(t_{n+2})\bigr),\qquad t_n=t_0+nh,
@@ -264,17 +273,17 @@ f(t)-\sum_{j=0}^{n}f(x_j)l_j(t)=\frac{(t-x_0)(t-x_1)\cdots(t-x_n)}{(n+1)!}f^{(n+
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Gaussian Quadrature: Show that you can find \(n\) points on an interval \([a,b]\) (tell us which points), and a formula which uses only the value of the function \(f(x)\) at these points, and weights \(w_k\) such that the approximation formula</p>
         <div class="display-math">\[
 \int_a^b f(x)\,dx\approx I_n(f)\equiv\sum_{k=1}^{n}w_kf(x_k)
 \]</div>
         <p>is exact for polynomials of order \(2n-1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Assume that you are solving the initial value problem \(y&#x27;(t)=f(t,y)\), with \(y(0)\) given. Assume further that \(f(t,y)\) satisfies the Lipschitz condition \(|f(t,y_1)-f(t,y_2)|\leq K|y_1-y_2|\) for all \(t\in[a,b]\). Explain Euler’s method and derive a cumulative error formula, not just a local error formula.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>(General Multistep Methods) Assume that you are solving the initial value problem \(y&#x27;(t)=f(t,y)\), with \(y(0)\) given. Consider a general formula of the type</p>
         <div class="display-math">\[
 y_{n+1}=\sum_{j=0}^{p}a_jy_{n-j}+h\sum_{j=-1}^{p}b_jf(t_{n-j},y_{n-j}).

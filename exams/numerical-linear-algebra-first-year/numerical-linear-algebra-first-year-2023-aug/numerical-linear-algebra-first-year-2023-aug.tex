@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -91,6 +97,9 @@ Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
 Prove that~\(A\) has a Cholesky decomposition.
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source specifies a potentially rectangular matrix as a projector, although projectors and orthogonal projectors ordinarily require a square matrix. In addition, the stated equivalence has the zero orthogonal projector as a possible exception unless nonzero projectors are assumed. The intended dimensions and convention are not uniquely determined, so the source wording has been retained.
+\end{problemconcern}
 Let \(P\in\mathbb{C}^{m\times n}\) be a projector. Show that \(\lVert P\rVert_2=1\) if and only if~\(P\) is an orthogonal projector.
 \item
 Let \(A\in\mathbb{C}^{m\times n}\), with \(m\geq n\) and \(\operatorname{rank}(A)=p=n\geq 3\). Let \(a_1,a_2,\ldots\) denote the columns of~\(A\).
@@ -101,6 +110,9 @@ Using the modified Gram–Schmidt process, write out expressions for \(q_1,q_2,q
 Show the vector \(q_3\) found in part (a) is orthogonal to both \(q_1\) and \(q_2\).
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Part (b) refers to~\(n\) singular values and asserts \(\sigma_n>0\), which requires full column rank and hence \(m\geq n\). The condition \(n<m\) appears only in part (a), so it is unclear whether it is intended to continue into part (b). The source wording has been retained.
+\end{problemconcern}
 Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column~\(j\) of~\(U\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]

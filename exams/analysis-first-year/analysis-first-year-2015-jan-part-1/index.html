@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,20 +158,20 @@
       <p>Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \((X,d_X)\), \((Y,d_Y)\) be metric spaces. On the Cartesian product \(X\times Y:=\{(x,y):x\in X,y\in Y\}\) define the function</p>
         <div class="display-math">\[
 d_{X\times Y}((x_1,y_1),(x_2,y_2))=d_X(x_1,x_2)+d_Y(y_1,y_2).
 \]</div>
         <p>It is known that \(d_{X\times Y}\) is a metric on \(X\times Y\). If \(X\) and \(Y\) are complete, must \(X\times Y\) be complete? Prove or give a counterexample.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) be a metric space and suppose it has the following property: whenever \(\mathcal C\) is a collection of closed subsets of \(X\), and \(\bigcap_{C\in F}C\) is nonempty for every finite \(F\subset\mathcal C\), then \(\bigcap_{C\in\mathcal C}C\) is nonempty. Prove that \(X\) is compact.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(X\) be a metric space and \(A,B\) connected subsets of \(X\). Prove that if \(A\cap B\) is nonempty, then \(A\cup B\) is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -186,10 +192,10 @@ d_{X\times Y}((x_1,y_1),(x_2,y_2))=d_X(x_1,x_2)+d_Y(y_1,y_2).
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f:X\to Y\) be a continuous bijection. Prove that if \(X\) is compact, then \(f^{-1}\) is continuous. Give an example to show that the conclusion can fail if \(X\) is not assumed compact.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(f:(a,b)\to\mathbb R\) be differentiable and suppose that \(f&#x27;\) is monotonically increasing. Prove that \(f&#x27;\) is continuous.</p>
       </li>
     </ol>

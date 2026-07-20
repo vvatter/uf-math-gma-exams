@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(G\) be a group and let \(A\) be a set.</p>
         <ol class="subparts">
           <li>
@@ -181,7 +187,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a finite group of order \(n\) and let \(k\in\mathbb{Z}\) be such that \(\gcd(k,n)=1\). Define \(\phi:G\to G\) by \(\phi(x)=x^k\) for all \(x\in G\).</p>
         <ol class="subparts">
           <li>
@@ -202,16 +208,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(G,H,K\) be groups and let \(\phi:G\to H\), \(\psi:G\to K\) be homomorphisms such that \(\phi\) is onto and \(\ker\phi\subset\ker\psi\). Prove that there is a unique homomorphism \(\alpha:H\to K\) such that \(\alpha\circ\phi=\psi\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(G\) be a group of order \(105=3\cdot5\cdot7\) with a normal Sylow \(3\)-subgroup. Prove that \(G\) is cyclic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Determine all groups of order \(76=2^2\cdot19\) up to isomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Determine all abelian groups of order \(800=2^5\cdot5^2\) which have at least one element of order \(40\).</p>
       </li>
     </ol>

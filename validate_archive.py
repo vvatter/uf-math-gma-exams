@@ -28,6 +28,7 @@ from extract_exams import (
     exam_figure_png_path,
     exam_json_path,
     load_sources,
+    iter_problems,
     iter_tikz_blocks,
     render_html,
     review_bucket,
@@ -78,6 +79,8 @@ def located_text(exam: ExamRecord) -> Iterator[tuple[str, str]]:
             displayed_number += 1
             problem = item.problem
             location = f"{prefix}problem {displayed_number} (index {problem_index})"
+            for concern_index, concern in enumerate(problem.concerns, start=1):
+                yield f"{location} concern {concern_index}", concern.explanation
             for body_index, body_block in enumerate(problem.body, start=1):
                 if isinstance(body_block, ProblemTextBlock):
                     yield f"{location} text block {body_index}", body_block.text
@@ -156,6 +159,7 @@ def validate_archive(
     }
     flags_by_exam: dict[str, list[ReviewFlag]] = {}
     review_counts: dict[str, int] = {}
+    concern_count = 0
     expressions: list[dict[str, object]] = []
     index_pages: dict[Path, str] = {}
 
@@ -243,6 +247,7 @@ def validate_archive(
             if any(page < 1 or page > page_count for page in flag.source_pages):
                 errors.append(prefix + "review flag refers to an unknown source page")
         errors.extend(prefix + error for error in validate_exam(exam, source, flags))
+        concern_count += sum(len(problem.concerns) for problem in iter_problems(exam))
         for figure in iter_tikz_blocks(exam):
             figure_path = exam_figure_png_path(source, figure)
             if not figure_path.is_file():
@@ -285,6 +290,7 @@ def validate_archive(
         "corrections": review_counts.get("corrections", 0),
         "transformations": review_counts.get("transformations", 0),
         "serious": review_counts.get("serious", 0),
+        "concerns": concern_count,
         "math_expressions": len(expressions),
         "indexes": len(index_pages),
     }
@@ -311,7 +317,8 @@ def main() -> int:
     print(
         f"valid: exams={stats['exams']} corrections={stats['corrections']} "
         f"transformations={stats['transformations']} serious={stats['serious']} "
-        f"math_expressions={stats['math_expressions']} indexes={stats['indexes']}"
+        f"concerns={stats['concerns']} math_expressions={stats['math_expressions']} "
+        f"indexes={stats['indexes']}"
     )
     return 0
 

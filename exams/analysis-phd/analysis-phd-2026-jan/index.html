@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of eight.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Do two of three.</p>
         <ol class="subparts">
           <li>
@@ -184,7 +190,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(f:[0,1]\times[0,1]\to\mathbb R\). Show that if the following conditions hold, then \(F:[0,1]\to\mathbb R\) defined by</p>
         <div class="display-math">\[
 F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
@@ -217,10 +223,10 @@ F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((X,\mathcal M)\) denote a measurable space and let \(P(X)\) denote the power set of \(X\). Prove, if \(\mathcal M\ne P(X)\) and \(\{x\}\in\mathcal M\) for each \(x\in X\), then there exists an \(A\notin\mathcal M\otimes\mathcal M\) such that \([A]_x,[A]^y\in\mathcal M\) for all \(x,y\in X\). Suggestion: First show \(\delta:X\to X\times X\) defined by \(\delta(x)=(x,x)\) is measurable from \((X,\mathcal M)\) to \((X\times X,\mathcal M\otimes\mathcal M)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \((X,\mathcal M,\mu)\) is a measure space and \(f,g:X\to[0,\infty)\) are measurable. Show:</p>
         <ol class="subparts">
           <li>
@@ -241,7 +247,7 @@ F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Do two of three. Short answer: you do not need to give a detailed proof, just a brief explanation.</p>
         <ol class="subparts">
           <li>
@@ -273,13 +279,13 @@ F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\mathbb C[x]\) denote the complex vector space of polynomials in \(x\). Does there exist a norm \(\|\cdot\|\) on \(\mathbb C[x]\) such that \((\mathbb C[x],\|\cdot\|)\) is a Banach space. Provide a proof for your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Suppose \(\phi,\psi\) are bounded linear functionals on a Hilbert space \(V\). Show, if \(\|\phi+\psi\|=\|\phi\|+\|\psi\|\), then one of \(\phi,\psi\) is a multiple of the other. Is the result still true if \(V\) is only assumed to be a Banach space?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Show if \(f\in L^1(\mathbb R)\) and \(g\in L^\infty(\mathbb R)\), then the convolution \(f*g\) is continuous. Let \(E\subseteq[0,1]\) be a Lebesgue measurable set of positive measure and let</p>
         <div class="display-math">\[
 -E=\{-x:x\in E\}.

@@ -101,6 +101,12 @@
             "text": "Compute the \\(QR\\) factorization of \\(A\\).",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source clearly asks for the projection of \\(A\\) onto its own column space, but the intended object is mathematically ambiguous; it may have intended the orthogonal projection matrix onto the column space. The source wording has been retained."
+          }
         ]
       }
     },
@@ -133,6 +139,12 @@
             "label": "(e)",
             "text": "Prove: If \\(A\\in\\mathbb R^{n\\times n}\\) is invertible, \\(b\\) and \\(\\Delta b\\) are vectors in \\(\\mathbb R^n\\), \\(x\\) and \\(\\Delta x\\) are vectors in \\(\\mathbb R^n\\) and are solutions to \\(Ax=b\\) and \\(A\\Delta x=\\Delta b\\), respectively, then\n\\[\n\\frac{\\lVert\\Delta x\\rVert_2}{\\lVert x\\rVert_2}\\leq\\kappa_2(A)\\frac{\\lVert\\Delta b\\rVert_2}{\\lVert b\\rVert_2}.\n\\]",
             "subparts": []
+          }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The displayed dimensions make the product \\(BA\\) undefined in general. The source reading has been retained because it is unclear whether the dimensions or the product order should be corrected."
           }
         ]
       }

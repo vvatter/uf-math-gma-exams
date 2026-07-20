@@ -83,7 +83,13 @@
             "text": "Prove that\n\\[\n\\sum_{i=0}^{m} \\binom{s}{i}\\binom{t}{k-i}=\\binom{s+t}{k}.\n\\]"
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The summation upper limit is clearly printed as \\(m\\), but \\(m\\) is otherwise undefined and no conditions are given under which the displayed identity holds. The source reading has been preserved because the intended correction is not uniquely determined."
+          }
+        ]
       }
     },
     {

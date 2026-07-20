@@ -4,6 +4,7 @@ __pycache__/
 *.egg-info/
 *.part
 build/
+TEMPNEWPRACTICE/
 node_modules/
 TMPLOOK/
 missing-figures/

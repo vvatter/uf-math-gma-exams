@@ -83,6 +83,12 @@
             "text": "Given an arbitrary matrix \\(A \\in \\mathbb{R}^{m \\times n}\\), construct an orthogonal matrix \\(Q \\in \\mathbb{R}^{m \\times m}\\) and an upper triangular matrix \\(R \\in \\mathbb{R}^{m \\times n}\\) such that \\(A=QR\\).",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source calls \\(H\\) an “orthogonal projection,” but \\(H=I-2ww^{\\mathsf{T}}\\) is generally a Householder reflection (and an orthogonal matrix), not a projection. The source wording was retained because the intended replacement is not uniquely determined."
+          }
         ]
       }
     },

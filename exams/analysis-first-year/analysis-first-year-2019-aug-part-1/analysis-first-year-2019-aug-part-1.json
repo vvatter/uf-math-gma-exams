@@ -75,7 +75,13 @@
             "text": "Let \\(f:[0,a)\\to\\mathbb{R}\\) be differentiable, and suppose that \\(f'\\) is strictly increasing on \\([0,a)\\). Prove that the function\n\\[\ng(x)=\n\\begin{cases}\nf'(0), & x=0,\\\\\n\\dfrac{f(x)}{x}, & 0<x<a\n\\end{cases}\n\\]\nis continuous and strictly increasing on \\([0,a)\\)."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The problem is preserved as printed, but its conclusion generally fails without an additional condition such as \\(f(0)=0\\), or without replacing \\(f(x)/x\\) by \\((f(x)-f(0))/x\\). The intended repair is not uniquely determined."
+          }
+        ]
       }
     }
   ]

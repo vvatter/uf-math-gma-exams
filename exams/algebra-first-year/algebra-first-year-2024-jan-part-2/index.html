@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Suppose \(k\) is a field.</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Which of the following polynomials are irreducible? Explain.</p>
         <ol class="subparts">
           <li>
@@ -202,10 +208,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose \(R\) is a ring with identity and \(M\) is a nonzero left \(R\)-module. Let \(\operatorname{End}_R(M)\) be the ring of \(R\)-linear maps \(M\to M\). Show that if \(0\) and \(M\) are the only \(R\)-submodules of \(M\), then \(\operatorname{End}_R(M)\) is a division ring.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be an integral domain.</p>
         <ol class="subparts">
           <li>
@@ -226,13 +232,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(F\) is a field, \(V\) and \(W\) are \(F\)-vector spaces of finite dimension and \(f:V\to W\) is a surjective linear map, and let \(U=\operatorname{Ker}(f)\). Show using the definitions that \(\dim_F(V)=\dim_F(W)+\dim_F(U)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose \(L/K\) is an extension of fields. Show that \(\alpha\in L\) is algebraic over \(K\) if and only if there is a nonzero sub-\(K\)-vector space \(V\subseteq L\) of finite dimension such that \(\alpha V\subseteq V\) (for “if,” pick a nonzero \(v\in V\) and consider \(\alpha^n v\) for \(n\in\mathbb{N}\)).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Find representatives of each conjugacy class of \(GL_4(\mathbb{F}_2)\) of order \(3\) or \(5\) (the order of a conjugacy class is the order of any element of it).</p>
       </li>
     </ol>

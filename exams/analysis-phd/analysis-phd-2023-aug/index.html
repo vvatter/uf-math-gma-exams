@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Write solutions in a neat and logical fashion, giving complete reasons for all steps. You must attempt SIX problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State Tonelli’s theorem, and give an example to show that the \(\sigma\)-finiteness hypothesis is necessary.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Give an example of each of the following, if possible. (If not possible, give a brief explanation of why.) When giving examples, be clear about what measure space you are working in.</p>
         <ol class="subparts">
           <li>
@@ -184,13 +190,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \((X,\mathcal{M},\mu)\) be a measure space. Prove that \(L^2(\mu)\) is complete (in the \(L^2\) norm).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\mathcal{X}\) be a Banach space. Prove that every finite-dimensional subspace \(\mathcal{M}\subset\mathcal{X}\) is closed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -211,13 +217,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \((X,\mathcal{M},\mu)\) be a \(\sigma\)-finite measure space, let \(1\leq q&lt;p&lt;\infty\) and suppose that \(L^q(\mu)\subseteq L^p(\mu)\). Prove that there exists a constant \(c&gt;0\) such that, for every \(E\in\mathcal{M}\), either \(\mu(E)=0\) or \(\mu(E)\geq c\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\mathcal{H}\) be a Hilbert space and let \(A:\mathcal{H}\to\mathcal{H}\) be a linear map (not assumed bounded). Suppose there exists another linear map \(B:\mathcal{H}\to\mathcal{H}\) (not assumed bounded) so that \(\langle Ax,y\rangle=\langle x,By\rangle\) for all \(x,y\in\mathcal{H}\). Prove that \(A\) and \(B\) are bounded.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

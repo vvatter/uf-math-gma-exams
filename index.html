@@ -54,6 +54,30 @@
     }
     p { margin: 0 0 1rem; }
     .lede { max-width: 48rem; font-size: 1.18rem; }
+    .concerns-link {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .75rem;
+      align-items: baseline;
+      margin: 3rem 0 1.5rem;
+    }
+    .concerns-link a { font-weight: 700; }
+    .concern-notice { max-width: 52rem; margin-bottom: 2rem; }
+    .concern-exam h2 { margin-bottom: .9rem; padding-bottom: 0; border-bottom: 0; }
+    .concern-list { margin: 0; padding: 0; list-style: none; }
+    .concern { margin: 0 0 1.35rem; }
+    .concern p { margin-bottom: .45rem; }
+    .concern-warning { color: #7a1f1f; }
+    .featured-resource {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .75rem;
+      align-items: baseline;
+      margin: 0 0 2rem;
+      padding: 0 0 .75rem;
+      border-bottom: 1px solid #d8d8d2;
+    }
+    .featured-resource a { font-weight: 700; }
     .subject-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -118,6 +142,9 @@
       h2 { margin: .9rem 0 .35rem; font-size: 12pt; }
       .subject-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .subject-list a, .count { padding: .25rem 0; }
+      .concerns-link { margin: 1rem 0 .55rem; }
+      .concern { margin-bottom: .55rem; break-inside: avoid; }
+      .concern-warning { color: #651818; }
       table { min-width: 0; }
       th, td { padding: .25rem .4rem; }
       a { color: inherit; }
@@ -130,7 +157,7 @@
     <header class="site-header">
       <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
       <h1>Graduate Mathematics Exam Archive</h1>
-      <p class="lede">Browse accessible HTML versions of 528 archived examinations by level and subject.</p>
+      <p class="lede">Browse accessible HTML versions of 532 archived examinations and 1 practice-problem collection by level and subject.</p>
     </header>
     <nav aria-label="Exam archive">
       <section aria-labelledby="level-1">
@@ -159,7 +186,7 @@
         <ul class="subject-list">
           <li>
             <a href="exams/algebra-first-year/index.html">Algebra</a>
-            <span class="count">67 exams</span>
+            <span class="count">71 exams</span>
           </li>
           <li>
             <a href="exams/analysis-first-year/index.html">Analysis</a>
@@ -237,6 +264,10 @@
         </ul>
       </section>
     </nav>
+    <p class="concerns-link">
+      <a href="concerns.html">Known or suspected errors</a>
+      <span class="count">36 concerns across 32 exams</span>
+    </p>
     <footer>
       <ul>
         <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>

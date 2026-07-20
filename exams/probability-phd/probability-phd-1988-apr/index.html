@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,37 +158,37 @@
       <p>Do not omit details.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(\theta\) be uniformly distributed on \([0,1]\). If \(F\) is a distribution function, let</p>
         <div class="display-math">\[
 G(y)=\sup\{x:F(x)\leq y\},\qquad 0\leq y\leq 1.
 \]</div>
         <p>Show that \(G(\theta)\) has the distribution \(F\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) and \(Y\) be independent random variables. Suppose for some \(p&gt;0\),</p>
         <div class="display-math">\[
 E[|X+Y|^p]&lt;\infty.
 \]</div>
         <p>Then \(E[|X|^p]\) and \(E[|Y|^p]\) are finite. Prove this.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State the weak and strong laws of large numbers. Prove the weak law. All these for i.i.d. random variables. Also state the law of the iterated logarithm and deduce the strong law.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(S\) be exponentially distributed with parameter \(1\). Compute</p>
         <div class="display-math">\[
 E[S\mid S\wedge t]\quad\text{and}\quad E[S\mid S\vee t]
 \]</div>
         <p>for each \(t&gt;0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>State and prove the optional sampling theorem for super martingales. Deduce that every positive super martingale converges.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Define what is meant by an infinitely divisible distribution. State the Lévy–Khintchine formula.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>(Bonus) Show using the martingale convergence theorem that a non-negative harmonic function in \(\mathbb{R}^n\) is a constant.</p>
       </li>
     </ol>

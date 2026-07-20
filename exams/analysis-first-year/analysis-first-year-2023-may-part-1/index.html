@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,24 +158,24 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let the continuous function \(f:(0,\infty)\to\mathbb{R}\) satisfy</p>
         <div class="display-math">\[
 \liminf f(n)&lt;0&lt;\limsup f(n).
 \]</div>
         <p>Prove that \(f\) has infinitely many zeros.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Fix any metric space \(T\) with exactly two points. Prove that the metric space \(X\) is connected if and only if each continuous function \(f\) from \(X\) to \(T\) is constant.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(B(X)\) be the set of all bounded real-valued functions on the set \(X\). Prove that the formula</p>
         <div class="display-math">\[
 d(f,g)=\sup\{|f(x)-g(x)|:x\in X\}
 \]</div>
         <p>defines a metric \(d\) on \(B(X)\) that makes \(B(X)\) into a complete metric space.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(A_1\supseteq A_2\supseteq\cdots\) be a decreasing sequence of nonempty subsets of \(\mathbb{R}^N\) (with its standard Euclidean metric).</p>
         <ol class="subparts">
           <li>
@@ -190,7 +196,7 @@ d(f,g)=\sup\{|f(x)-g(x)|:x\in X\}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f:(a,b)\to\mathbb{R}\) be differentiable, with bounded derivative. Prove the existence of the real limits</p>
         <div class="display-math">\[
 \lim_{x\to a+}f(x)\quad\text{and}\quad\lim_{x\to b-}f(x).

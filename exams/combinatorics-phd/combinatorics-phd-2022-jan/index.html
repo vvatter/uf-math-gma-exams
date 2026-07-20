@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,38 +155,38 @@
       <h1>Combinatorics PhD Exam, January 2022</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Prove that if every vertex of a graph \(G\) has degree at least 3, then \(G\) has a cycle with a chord. (A chord is an edge joining two non-adjacent vertices on the cycle.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(T\) be the set of (not rooted) trees with labeled leaves for which each vertex has degree 1 or 3, and let \(T_n \subseteq T\) be the subset with exactly \(n\) leaves. Show that \(T \in T_n\) has exactly \(2n-3\) edges and that \(|T_n|=(2n-5)!!=1\cdot 3\cdot 5\cdots(2n-5)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\Pi_n\) be the set of permutations of \([n]\) such that \(\pi(i+1)\leq \pi(i)+1\) for \(i\in[n-1]\). Find \(|\Pi_n|\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Recall that Kőnig’s theorem states that in a bipartite graph \(G\), the maximum size of a matching is equal to the minimum size of a vertex cover. Prove Kőnig’s theorem from Hall’s marriage theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((L,\leq)\) be a finite distributive lattice and \(\operatorname{Irr}(L)\) be the set of join-irreducibles in \(L\). For \(t\in L\), define \(K_t=\{p\in\operatorname{Irr}(L):p\leq t\}\). Show</p>
         <div class="display-math">\[
 t=\bigvee_{p\in K_t}p.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(B\) be the set of words in the alphabet \(\{a,b,c\}\) so that the number of \(a\)’s is even and the number of \(c\)’s is odd. If \(b_n\) is the number of words in \(B\) with \(n\) letters, find</p>
         <div class="display-math">\[
 B(x)=\sum_{n\geq 0}b_nx^n.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\Lambda\) be the set of integer partitions. Prove the Cauchy identity</p>
         <div class="display-math">\[
 \prod_{i,j\geq 1}(1-x_i y_j)^{-1}=\sum_{\lambda\in\Lambda}m_\lambda(x)h_\lambda(y)
 \]</div>
         <p>where \(m_\lambda(x)\) is the monomial symmetric function in the variables \(x_1,x_2,\ldots\) and \(h_\lambda(y)\) is the complete homogeneous symmetric function in the variables \(y_1,y_2,\ldots\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove that every permutation of size \(n&gt;r\cdot s\) contains either an increasing subsequence of length \(r\) or a decreasing subsequence of length \(s\).</p>
       </li>
     </ol>

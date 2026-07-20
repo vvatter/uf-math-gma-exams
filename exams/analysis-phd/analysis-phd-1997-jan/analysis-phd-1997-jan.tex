@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -129,6 +135,9 @@ Let~\(\mu\) be the Lebesgue measure on \(\mathbb R\), and let~\(f\) be a Lebesgu
 \item
 Let~\(\mu\) be the Lebesgue measure on \(\mathbb R\), and let \(f_n=-\varphi_{(n,\infty)}\), \(n=1,2,\ldots\). Show that \((f_n)\) is increasing but that the conclusion of the monotone convergence theorem is not true. Explain why.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source legibly uses \((0,1)\) for the measure space but \((0,1]\) for the binary-expansion domain; whether this endpoint difference is intentional is unclear.
+\end{problemconcern}
 Let~\(\mu\) be the Lebesgue measure on \((0,1)\). Each point \(x\in(0,1]\) has a binary expansion 
 \[
 x=\sum_{i=1}^{\infty}\frac{x_i}{2^i},

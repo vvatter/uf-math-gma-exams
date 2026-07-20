@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,28 +160,28 @@
         <p>State the following theorems.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>The monotone convergence theorem for nets in \(L^p\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>The Hahn decomposition theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>The Egorov theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>The Vitali convergence theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>The Radon–Nikodym theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>The Fubini theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>The representation of the dual of \(L^p\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>The Lebesgue dominated convergence theorem.</p>
         </li>
       </ol>
@@ -195,30 +201,33 @@
         <p>In what follows, \((X,\Sigma,\mu)\) is a measure space.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Let \((f_n)\) be a sequence of real-valued measurable functions on \(X\), and let \(f\) be a real measurable function on \(X\). Prove that \((f_n)\) converges to \(f\) in \(\mu\)-measure, \(f_n\xrightarrow{\mu}f\), iff every subsequence \((f_{n_i})\) contains a further subsequence \((f_{n_{i_j}})\) converging to \(f\), \(\mu\)-a.e.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Let \((f_n)\) be a sequence of positive, \(\mu\)-integrable functions such that \(\sum_n\int f_n\,d\mu&lt;\infty\). For each \(x\in X\), denote</p>
           <div class="display-math">\[L(x)=\sup\{n:f_n(x)&gt;1\}.\]</div>
           <p>Prove that \(L(x)&lt;\infty\), \(\mu\)-a.e.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Let \(f:\mathbb R\to\mathbb R\) be a Lebesgue integrable function. Prove that for every \(\varepsilon&gt;0\), there is a bounded interval \(I\) such that \(\left|\int_E f\,dx\right|&lt;\varepsilon\) for every measurable set \(E\) with \(E\cap I=\varnothing\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>Let \(F\) be a Banach space and \(\mathcal F\subseteq\Sigma\) a sub-σ-algebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal F)\) for every \(\mu\)-integrable function \(f:X\to F\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>Let \((X,\mathcal S,\mu)\) and \((Y,\mathcal T,\nu)\) be two real measure spaces. Prove the existence of the product measure \(\mu\times\nu\) and that \(|\mu\times\nu|=|\mu|\times|\nu|\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-14">
           <p>Let \(\mu\) be the Lebesgue measure on \(\mathbb R\), and let \(f\) be a Lebesgue integrable function on \(\mathbb R\) such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb R\) (if \(x&lt;0\), \(\int_0^x=-\int_x^0\)). What can you say about \(f\)?</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-15">
           <p>Let \(\mu\) be the Lebesgue measure on \(\mathbb R\), and let \(f_n=-\varphi_{(n,\infty)}\), \(n=1,2,\ldots\). Show that \((f_n)\) is increasing but that the conclusion of the monotone convergence theorem is not true. Explain why.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-16">
+          <div class="problem-concern" role="note">
+            <p><strong>Warning: Suspected error.</strong> The source legibly uses \((0,1)\) for the measure space but \((0,1]\) for the binary-expansion domain; whether this endpoint difference is intentional is unclear.</p>
+          </div>
           <p>Let \(\mu\) be the Lebesgue measure on \((0,1)\). Each point \(x\in(0,1]\) has a binary expansion</p>
           <div class="display-math">\[x=\sum_{i=1}^{\infty}\frac{x_i}{2^i},\]</div>
           <p>where \(x_i=0\) or \(1\). (The expansion is unique except on a countable set, which we can throw out of the space.)</p>

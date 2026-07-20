@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(K\) be a field and let \(f(x) \in K[x]\) be a non-zero polynomial.</p>
         <ol class="subparts">
           <li>
@@ -173,13 +179,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(F=\mathbb{Q}(\sqrt{3},\sqrt{5})\) be the smallest subfield of \(\mathbb{C}\) which contains \(\sqrt{3}\) and \(\sqrt{5}\). How many subfields does \(F\) have?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\) and \(B\) be finite abelian groups and suppose that \(|A|\) and \(|B|\) are relatively prime. Let \(T=A\otimes_{\mathbb{Z}}B\). Show that \(|T|=1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(C\) be a category and let \((A_i)_{i\in I}\) be a family of objects of \(C\).</p>
         <ol class="subparts">
           <li>
@@ -200,7 +206,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a ring.</p>
         <ol class="subparts">
           <li>
@@ -225,22 +231,22 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(F\) be a free group with free generators \(a\) and \(b\). Let \(N\) be the smallest normal subgroup of \(F\) such that \(a^2\in N\) and \(b^2\in N\). Prove that \(F/N\) is infinite.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State and prove the Lying-Over Theorem on prime ideals and ring extensions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove the following version of Nakayama’s Lemma. Let \(A\) be a commutative ring with identity, let \(M\) be a finitely generated \(A\)-module, and let \(I\) be an ideal contained in the intersection of all the maximal ideals of \(A\). Show that if \(IM=M\) then \(M=\{0\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>An invertible ideal in an integral domain that is a local ring is principal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(\overline{\mathbb{Q}}\) be an algebraic closure of \(\mathbb{Q}\) and \(v\in\overline{\mathbb{Q}}\) with \(v\notin\mathbb{Q}\). Let \(E\) be a subfield of \(\overline{\mathbb{Q}}\) maximal with respect to the condition that \(v\notin E\). Prove that every finite-dimensional extension of \(E\) is cyclic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Classify (up to ring isomorphism) all semisimple rings of order \(720\).</p>
       </li>
     </ol>

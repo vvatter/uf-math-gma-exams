@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-practice-a-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": null,
+  "month": null,
+  "part": 2,
+  "pdf_url": "https://math.ufl.edu/wp-content/uploads/sites/316/prac2a.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(V\\) be a finite-dimensional vector space over a field \\(F\\) and \\(T \\in \\operatorname{End}_F(V)\\) a linear transformation. Prove that there is a unique monic polynomial \\(m(x)\\) in \\(F[x]\\) with the property that \\(m(x)\\) has the minimum degree among nonzero polynomials \\(f(x)\\) such that \\(f(T)\\) is the zero transformation."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(n \\geq 1\\) and let \\(K=\\mathbb{Q}(\\sqrt{1},\\sqrt{2},\\ldots,\\sqrt{n})\\). Prove that \\(2^{1/3}\\notin K\\)."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a commutative ring with \\(1\\neq 0\\). Prove that \\(R\\) has a minimal prime ideal. (In other words, show that \\(R\\) contains a prime ideal \\(P\\) such that if \\(Q\\subseteq P\\) is a prime ideal of \\(R\\), then \\(Q=P\\).) You may assume that \\(R\\) contains a maximal ideal."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that the ring \\(\\mathbb{Z}[\\sqrt{-2}]=\\{a+b\\sqrt{-2}:a,b\\in\\mathbb{Z}\\}\\) is a Euclidean domain with respect to the norm \\(N(a+b\\sqrt{-2})=a^2+2b^2\\)."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Say that an \\(R\\)-module \\(M\\) is torsion if for every \\(x\\in M\\) there is \\(r\\in R\\) such that \\(r\\neq 0\\) and \\(rx=0\\). The annihilator of \\(M\\) is defined to be\n\\[\n\\operatorname{Ann}(M)=\\{s\\in R:sx=0\\text{ for all }x\\in M\\}.\n\\]\nProve that if \\(M\\) is a finitely generated torsion module over an integral domain \\(R\\), then \\(\\operatorname{Ann}(M)\\neq\\{0\\}\\). Give an example of a torsion \\(R\\)-module \\(M\\) over an integral domain \\(R\\) such that \\(\\operatorname{Ann}(M)=\\{0\\}\\)."
+          }
+        ],
+        "subparts": [],
+        "concerns": []
+      }
+    }
+  ],
+  "practice_variant": "A"
+}

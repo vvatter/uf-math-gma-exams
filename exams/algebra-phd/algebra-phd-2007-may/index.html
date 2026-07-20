@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,16 +158,16 @@
       <p>Answer seven problems. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Give the definition of a normal algebraic field extension. Let \(E\) be a normal algebraic extension of the field \(F\) and \(g(x)\in F[X]\) an irreducible polynomial. Prove that the irreducible factors of \(g(x)\) in \(E[X]\) all have the same degree.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Determine the Galois group of the polynomial \(x^5-2\in \mathbb{Q}[X]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Define the terms natural transformation and natural isomorphism between functors \(F\) and \(G\) from a category \(C\) to a category \(D\). Show, giving full details, that \(M\mapsto R\otimes_R M\) defines a functor from the category of left \(R\)-modules to itself, which is naturally isomorphic with the identity functor.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be a ring with 1 and</p>
         <div class="display-math">\[
 0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0
@@ -172,7 +178,7 @@
 \]</div>
         <p>is an exact sequence of abelian groups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that the following conditions on a ring \(R\) with 1 are equivalent:</p>
         <ol class="subparts">
           <li>
@@ -201,19 +207,19 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(R\) be a commutative ring with 1 and \(I\) the intersection of all prime ideals of \(R\). Prove that for each \(a\in I\) there exists a natural number \(n\) such that \(a^n=0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove that the ring \(R\) of \(n\times n\) matrices over a division ring is simple. Exhibit a minimal left ideal of \(R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Define a primitive ring and state and prove the Jacobson Density Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a Noetherian commutative ring with 1. Prove that \(R[X]\) is Noetherian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Give examples of the following. Explain your examples, stating clearly any results you use, but you do not need to prove all details.</p>
         <ol class="subparts">
           <li>

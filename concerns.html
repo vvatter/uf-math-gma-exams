@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Known or Suspected Errors</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible, .table-wrap:focus-visible {
+      outline: 3px solid #d28b18;
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      z-index: 1;
+      padding: .55rem .75rem;
+      background: #fff;
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: none; }
+    main {
+      width: 100%;
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .site-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution { margin: 0 0 .4rem; font-size: 1rem; font-weight: 700; }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.2rem; }
+    h2 {
+      margin: 2.8rem 0 .65rem;
+      padding-bottom: .3rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.45rem;
+    }
+    p { margin: 0 0 1rem; }
+    .lede { max-width: 48rem; font-size: 1.18rem; }
+    .concerns-link {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .75rem;
+      align-items: baseline;
+      margin: 3rem 0 1.5rem;
+    }
+    .concerns-link a { font-weight: 700; }
+    .concern-notice { max-width: 52rem; margin-bottom: 2rem; }
+    .concern-exam h2 { margin-bottom: .9rem; padding-bottom: 0; border-bottom: 0; }
+    .concern-list { margin: 0; padding: 0; list-style: none; }
+    .concern { margin: 0 0 1.35rem; }
+    .concern p { margin-bottom: .45rem; }
+    .concern-warning { color: #7a1f1f; }
+    .featured-resource {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .75rem;
+      align-items: baseline;
+      margin: 0 0 2rem;
+      padding: 0 0 .75rem;
+      border-bottom: 1px solid #d8d8d2;
+    }
+    .featured-resource a { font-weight: 700; }
+    .subject-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .subject-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      border-bottom: 1px solid #d8d8d2;
+    }
+    .subject-list a {
+      padding: .7rem 0;
+      font-weight: 700;
+    }
+    .count { padding: .7rem 0; color: #555550; font-weight: 500; white-space: nowrap; }
+    .table-wrap { max-width: 100%; overflow-x: auto; }
+    table { width: 100%; min-width: 39rem; border-collapse: collapse; }
+    caption { padding: 0 0 .75rem; text-align: left; font-style: italic; }
+    th, td { padding: .65rem .75rem; border-bottom: 1px solid #d8d8d2; text-align: left; }
+    thead th { border-bottom: 2px solid #242421; font-weight: 700; }
+    tbody th { font-weight: 500; }
+    tbody tr:hover { background: #f5f5f2; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    @media (max-width: 42rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .subject-list { grid-template-columns: 1fr; }
+    }
+    @media print {
+      @page { margin: .55in; }
+      body { font-size: 10pt; line-height: 1.3; color: #000; }
+      main { max-width: none; padding: 0; }
+      .skip-link, footer { display: none; }
+      .site-header { margin-bottom: .7rem; padding-bottom: .35rem; border-bottom-width: 1px; }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; }
+      h2 { margin: .9rem 0 .35rem; font-size: 12pt; }
+      .subject-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .subject-list a, .count { padding: .25rem 0; }
+      .concerns-link { margin: 1rem 0 .55rem; }
+      .concern { margin-bottom: .55rem; break-inside: avoid; }
+      .concern-warning { color: #651818; }
+      table { min-width: 0; }
+      th, td { padding: .25rem .4rem; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content">
+    <header class="site-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Known or Suspected Errors</h1>
+      <p class="lede">These notices identify possible mathematical problems in archived source exams.</p>
+    </header>
+    <div class="concern-notice">
+      <p>The source questions remain unchanged. These concerns were identified during AI-assisted extraction and have not been reviewed by a human.</p>
+    </div>
+    <section class="concern-exam" aria-labelledby="concern-exam-1">
+      <h2 id="concern-exam-1"><a href="exams/algebra-first-year/algebra-first-year-2023-may-part-1/index.html">Algebra First-Year Exam, May 2023, Part 1</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">3.</strong> <strong>Warning: Suspected error.</strong> The source clearly states that one should deduce that every group of order 315 is abelian, but this conclusion appears mathematically false; nonabelian groups of order 315 exist. The intended statement is not uniquely determined, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-2">
+      <h2 id="concern-exam-2"><a href="exams/algebra-phd/algebra-phd-2009-sep/index.html">Algebra PhD Exam, September 2009</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">9.</strong> <strong>Warning: Suspected error.</strong> The source says only that \(p\) is prime, but the assertion that \(K\) contains a quadratic extension of \(\mathbb Q\) fails when \(p=2\). A possible omitted restriction cannot be determined uniquely, so the source&#x27;s mathematical scope has been retained.</p>
+          </div>
+        </li>
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">10.</strong> <strong>Warning: Suspected error.</strong> Even after the grammatical correction, the printed assertion appears to require an additional hypothesis: a finite-dimensional semisimple \(k\)-algebra need not be a direct sum of fields. No missing hypothesis is uniquely determined, so none has been added.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-3">
+      <h2 id="concern-exam-3"><a href="exams/algebra-phd/algebra-phd-2006-may/index.html">Algebra PhD Exam, May 2006</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">4.</strong> <strong>Warning: Suspected error.</strong> The displayed indexing condition has been retained as printed, but its scope is mathematically ambiguous because the relation \(yx_iy^{-1}=x_{i+1}\) does not involve \(j\).</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-4">
+      <h2 id="concern-exam-4"><a href="exams/algebra-phd/algebra-phd-1991-sep/index.html">Algebra PhD Exam, September 1991</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">3.</strong> <strong>Warning: Suspected error.</strong> The source clearly appears to say “upper triangular 2 by 2 matrices with integer coefficients,” but as written these matrices do not specify the standard free nilpotent class 2 group on two generators. A possible intended formulation involving upper unitriangular 3 by 3 integer matrices is not uniquely determined from the source, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-5">
+      <h2 id="concern-exam-5"><a href="exams/analysis-first-year/analysis-first-year-2019-aug-part-1/index.html">Analysis First-Year Exam, August 2019, Part 1</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">5.</strong> <strong>Warning: Suspected error.</strong> The problem is preserved as printed, but its conclusion generally fails without an additional condition such as \(f(0)=0\), or without replacing \(f(x)/x\) by \((f(x)-f(0))/x\). The intended repair is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-6">
+      <h2 id="concern-exam-6"><a href="exams/analysis-first-year/analysis-first-year-2018-may-part-2/index.html">Analysis First-Year Exam, May 2018, Part 2</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">4.</strong> <strong>Warning: Suspected error.</strong> The source clearly says “Lebesgue-measurable functions,” but measurability and uniform convergence alone do not ensure the stated integrability conclusion, even when the measure is finite. A missing integrability hypothesis may have been intended, but the correction is not uniquely determined, so the source wording has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-7">
+      <h2 id="concern-exam-7"><a href="exams/analysis-phd/analysis-phd-2018-may/index.html">Analysis PhD Exam, May 2018</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">3.</strong> <strong>Warning: Suspected error.</strong> The source assigns \(\rho\) the codomain \([0,\infty)\), although for an arbitrary \(f\in L^1(\mu)\), the values \(\int_E f\,d\mu\) need not be nonnegative. The intended repair is not uniquely determined: the codomain may be misstated, or a nonnegativity assumption on \(f\) may be missing. The source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-8">
+      <h2 id="concern-exam-8"><a href="exams/analysis-first-year/analysis-first-year-2014-jan-part-1/index.html">Analysis First-Year Exam, January 2014, Part 1</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">5.</strong> <strong>Warning: Suspected error.</strong> Part (b) is not valid if the sequence \(\{x_n\}\) contains repeated values: the jump at \(x_n\) would include every \(c_k\) for which \(x_k=x_n\). The intended repair is not unique; the source reading has therefore been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-9">
+      <h2 id="concern-exam-9"><a href="exams/analysis-phd/analysis-phd-1997-jan/index.html">Analysis PhD Exam, January 1997</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">8.</strong> <strong>Warning: Suspected error.</strong> The source legibly uses \((0,1)\) for the measure space but \((0,1]\) for the binary-expansion domain; whether this endpoint difference is intentional is unclear.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-10">
+      <h2 id="concern-exam-10"><a href="exams/analysis-phd/analysis-phd-1994-oct/index.html">Analysis PhD Exam, October 1994</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">3.</strong> <strong>Warning: Suspected error.</strong> The source statement was retained, but on a general finite measure space the displayed hypotheses do not imply the stated lower bound. An additional normalization such as \(\mu(X)=1\), or a different lower bound, may have been intended; the correction is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-11">
+      <h2 id="concern-exam-11"><a href="exams/analysis-phd/analysis-phd-1993-jan/index.html">Analysis PhD Exam, January 1993</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> The underlying space in the opening tuple appears to be printed as \(S_\infty\), but the integral and the later pointwise-convergence statement refer to \(S\). The intended symbol is uncertain, so the apparent source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-12">
+      <h2 id="concern-exam-12"><a href="exams/analysis-phd/analysis-phd-1988-may/index.html">Analysis PhD Exam, May 1988</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">8.</strong> <strong>Warning: Suspected error.</strong> The source visibly defines \(\mu(A)=\int_A x\,dx\) while calling \(\mu\) a measure on the sigma-algebra of symmetric Borel sets. For sets such as \(\mathbb R\), this signed Lebesgue integral is not defined, so the intended integrand may contain an unprinted or unclear modification. No correction is uniquely determined, and the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-13">
+      <h2 id="concern-exam-13"><a href="exams/analysis-phd/analysis-phd-1988-jan/index.html">Analysis PhD Exam, January 1988</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> Problem 6 uses \(q\) without defining it. Also, the retained Hint 2, \(g=|f|^{p-1}\in L^q\), does not account for the sign of a general \(f\), and the endpoint \(p=1\) requires separate treatment. The intended correction is not uniquely determined from the immediate context.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-14">
+      <h2 id="concern-exam-14"><a href="exams/combinatorics-phd/combinatorics-phd-2022-may/index.html">Combinatorics PhD Exam, May 2022</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> The statement as printed is false when the unique element covered by \(y\) is the minimal element \(0\). A condition such as \(x\ne0\) may be missing, but the intended correction is not uniquely determined, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-15">
+      <h2 id="concern-exam-15"><a href="exams/combinatorics-phd/combinatorics-phd-2018-may/index.html">Combinatorics PhD Exam, May 2018</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">2.</strong> <strong>Warning: Suspected error.</strong> As printed, part (a) does not yield the Erdős–Szekeres theorem stated in part (b): setting \(r=s=n\) gives only size \(n\), while setting \(r=s=n+1\) does not satisfy the stated threshold. The intended correction is not unique, so the source reading has been retained.</p>
+          </div>
+        </li>
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">5.</strong> <strong>Warning: Suspected error.</strong> The problem does not specify the length of the strings, so the requested finite count is underdetermined. A likely missing condition is a fixed length, but the intended wording cannot be determined uniquely from the source.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-16">
+      <h2 id="concern-exam-16"><a href="exams/combinatorics-phd/combinatorics-phd-2002-sep/index.html">Combinatorics PhD Exam, September 2002</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">10.</strong> <strong>Warning: Suspected error.</strong> The recurrence is stated only for \(n\ge 1\), while the sole initial condition is \(a_0=0\); these conditions do not determine \(a_1\) and hence do not uniquely determine the sequence. The intended lower bound or initial condition is unclear, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-17">
+      <h2 id="concern-exam-17"><a href="exams/combinatorics-phd/combinatorics-phd-1995-aug/index.html">Combinatorics PhD Exam, August 1995</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> The summation upper limit is clearly printed as \(m\), but \(m\) is otherwise undefined and no conditions are given under which the displayed identity holds. The source reading has been preserved because the intended correction is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-18">
+      <h2 id="concern-exam-18"><a href="exams/complex-analysis-phd/complex-analysis-phd-2009-sep/index.html">Complex Analysis PhD Exam, September 2009</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> The statement is preserved as printed, but it overlooks the possible case \(g\equiv0\), for example when \(g_n\equiv1/n\). The intended correction is not uniquely determined: one could assume \(g\not\equiv0\) or conclude that \(g\) is identically zero or has only real zeros.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-19">
+      <h2 id="concern-exam-19"><a href="exams/complex-analysis-phd/complex-analysis-phd-1992-may/index.html">Complex Analysis PhD Exam, May 1992</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">3.</strong> <strong>Warning: Suspected error.</strong> The source reading is clear, but the hypotheses and conclusion are mathematically inconsistent: \(\sin \pi z\) has derivative \(\pi\), not 1, at 0 and is unbounded on the imaginary axis. The intended correction is not uniquely determined, so the source text has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-20">
+      <h2 id="concern-exam-20"><a href="exams/differential-geometry-phd/differential-geometry-phd-2007-may/index.html">Differential Geometry PhD Exam, May 2007</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> The displayed tangent-map formula is type-inconsistent with the definitions that follow it. The maps \(\lambda^a\) and \(\rho^b\) are defined as maps into \(G\times G\), so their tangent vectors lie in \(T_{(a,b)}(G\times G)\), while \(p_*(\xi,\eta)\) lies in \(T_{p(a,b)}G\). More than one repair is possible, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-21">
+      <h2 id="concern-exam-21"><a href="exams/numerical-analysis-phd/numerical-analysis-phd-2025-may/index.html">Numerical Analysis PhD Exam, May 2025</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">4.</strong> <strong>Warning: Suspected error.</strong> Part (c) uses \(A^{-1}\), but the standing assumption \(\lVert A\rVert_p&lt;1\) does not imply that \(A\) is invertible. The source reading has been retained because the intended correction is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-22">
+      <h2 id="concern-exam-22"><a href="exams/numerical-analysis-phd/numerical-analysis-phd-2013-may/index.html">Numerical Analysis PhD Exam, May 2013</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">1.</strong> <strong>Warning: Suspected error.</strong> Part (v) asks for quadratic convergence under continuous differentiability and \(g&#x27;(\alpha)=0\). Those assumptions generally imply superlinear, but not necessarily quadratic, convergence; a stronger regularity assumption may be missing, but the intended correction is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-23">
+      <h2 id="concern-exam-23"><a href="exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan/index.html">Numerical Analysis PhD Exam, January 2002</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">4.</strong> <strong>Warning: Suspected error.</strong> The source clearly asks for the projection of \(A\) onto its own column space, but the intended object is mathematically ambiguous; it may have intended the orthogonal projection matrix onto the column space. The source wording has been retained.</p>
+          </div>
+        </li>
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">5.</strong> <strong>Warning: Suspected error.</strong> The displayed dimensions make the product \(BA\) undefined in general. The source reading has been retained because it is unclear whether the dimensions or the product order should be corrected.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-24">
+      <h2 id="concern-exam-24"><a href="exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan/index.html">Numerical Analysis PhD Exam, January 2000</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">3.</strong> <strong>Warning: Suspected error.</strong> The source calls \(H\) an “orthogonal projection,” but \(H=I-2ww^{\mathsf{T}}\) is generally a Householder reflection (and an orthogonal matrix), not a projection. The source wording was retained because the intended replacement is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-25">
+      <h2 id="concern-exam-25"><a href="exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug/index.html">Numerical Linear Algebra First-Year Exam, August 2024</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">2.</strong> <strong>Warning: Suspected error.</strong> Part (c) is preserved as printed, but the stated assumptions do not ensure that \(A^{-1}\) exists; for example, \(A=0\) satisfies \(\|A\|_p&lt;1\). The intended additional assumption or alteration is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-26">
+      <h2 id="concern-exam-26"><a href="exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug/index.html">Numerical Linear Algebra First-Year Exam, August 2023</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">2.</strong> <strong>Warning: Suspected error.</strong> The source specifies a potentially rectangular matrix as a projector, although projectors and orthogonal projectors ordinarily require a square matrix. In addition, the stated equivalence has the zero orthogonal projector as a possible exception unless nonzero projectors are assumed. The intended dimensions and convention are not uniquely determined, so the source wording has been retained.</p>
+          </div>
+        </li>
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">4.</strong> <strong>Warning: Suspected error.</strong> Part (b) refers to \(n\) singular values and asserts \(\sigma_n&gt;0\), which requires full column rank and hence \(m\geq n\). The condition \(n&lt;m\) appears only in part (a), so it is unclear whether it is intended to continue into part (b). The source wording has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-27">
+      <h2 id="concern-exam-27"><a href="exams/pde-phd/pde-phd-2010-sep/index.html">Partial Differential Equations PhD Exam, September 2010</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">7.</strong> <strong>Warning: Suspected error.</strong> The source is internally inconsistent: it states “where \(g,h\) are smooth functions,” but \(g\) does not occur in the displayed problem, while \(f\) does. The stated data may also omit an initial-displacement condition. The intended correction is not uniquely determined, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-28">
+      <h2 id="concern-exam-28"><a href="exams/pde-phd/pde-phd-2010-may/index.html">Partial Differential Equations PhD Exam, May 2010</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">7.</strong> <strong>Warning: Suspected error.</strong> The displayed variational form places the lower-order terms inside the scope of the outer sum over \(i,j\), while also using an inner sum over \(i\). This potentially unintended summation scope has been retained because the intended correction is not uniquely determined by the immediate context.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-29">
+      <h2 id="concern-exam-29"><a href="exams/probability-phd/probability-phd-1989-may/index.html">Probability PhD Exam, May 1989</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">4.</strong> <strong>Warning: Suspected error.</strong> Part (b) is retained as printed, but its conclusion can fail for a nonconstant symmetric characteristic function when the sequence alternates in sign. Any intended additional restriction or alternative conclusion is not uniquely determined.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-30">
+      <h2 id="concern-exam-30"><a href="exams/topology-first-year/topology-first-year-2025-aug-part-2/index.html">Topology First-Year Exam, August 2025, Part 2</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">14.</strong> <strong>Warning: Suspected error.</strong> The source clearly displays \(\pi(X)\), though \(\pi_1(X)\) may have been intended; the source notation has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-31">
+      <h2 id="concern-exam-31"><a href="exams/topology-first-year/topology-first-year-2020-may-part-2/index.html">Topology First-Year Exam, May 2020, Part 2</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">6.</strong> <strong>Warning: Suspected error.</strong> The displayed definition is mathematically inconsistent over the stated real domain: \(\sqrt{x}\) is not real-valued for negative \(x\). The intended correction to the domain or formula is not uniquely determined, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="concern-exam" aria-labelledby="concern-exam-32">
+      <h2 id="concern-exam-32"><a href="exams/topology-first-year/topology-first-year-2013-jan-part-1/index.html">Topology First-Year Exam, January 2013, Part 1</a></h2>
+      <ul class="concern-list">
+        <li class="concern">
+          <div class="concern-warning" role="note">
+          <p><strong class="concern-number">11.</strong> <strong>Warning: Suspected error.</strong> The displayed family of half-open intervals uses \([b,c)\), while its conditions include the otherwise unused variable \(d\). The intended endpoints or inequalities are not uniquely determined, so the source reading has been retained.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="index.html">All exam subjects</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

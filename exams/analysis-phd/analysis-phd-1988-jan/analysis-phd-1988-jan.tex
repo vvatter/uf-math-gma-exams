@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -109,6 +115,9 @@ Define \(h(w)=g_{T(w)}(w)\); prove~\(h\) is \(\mathcal F\)-measurable.
 \item
 Let \(T:(-\pi/2,\pi/2)\to\mathbb R\) be given by \(T(x)=\tan x\). Let~\(\lambda\) be Lebesgue measure on \((-\pi/2,\pi/2)\) and define a measure~\(\mu\) on \((\mathbb R,\mathcal B(\mathbb R))\) by setting \(\mu(A)=\lambda(T^{-1}(A))\). Compute \(\dfrac{d\mu}{dx}\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Problem 6 uses~\(q\) without defining it. Also, the retained Hint 2, \(g=|f|^{p-1}\in L^q\), does not account for the sign of a general~\(f\), and the endpoint \(p=1\) requires separate treatment. The intended correction is not uniquely determined from the immediate context.
+\end{problemconcern}
 Fix \(1\leq p<\infty\), and let \(f\in L^p(X,\mathcal A,\mu)\). Show that 
 \[
 \lVert f\rVert_p=\sup\left\{\int fg\,d\mu:\lVert g\rVert_q\leq 1\right\}.

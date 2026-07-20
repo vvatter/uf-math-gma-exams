@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -153,19 +159,19 @@
       <p>Below, ring means associative ring with identity, and module means unital module unless otherwise specified.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(q&gt;1\) be a power of a prime \(p\). Prove that there exists some field \(F\) with \(|F|=q\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(F\) be the splitting field of \(p(x)=x^3+5x+5\) over \(\mathbb{Q}\). Prove that there is a unique intermediate field \(K\) such that \(K\ne\mathbb{Q}\), \(K\ne F\), and \(K/\mathbb{Q}\) is Galois.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\) be a commutative ring with identity. Suppose that \(P\) and \(Q\) are projective \(A\)-modules. Prove that \(P\otimes_A Q\) is a projective \(A\)-module.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\mathcal{C}\) be a concrete category. Define what is meant by a free object in \(\mathcal{C}\). Let \(\mathcal{G}\) be the category of all finite groups. Prove that the free objects in \(\mathcal{G}\) are exactly the trivial groups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a ring. Prove that the following two conditions are equivalent for a left \(R\)-module \(P\). (You may not assume any properties of projective modules.)</p>
         <ol class="subparts">
           <li>
@@ -190,13 +196,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Give an example of a polynomial \(f(X)\in\mathbb{Q}[X]\) whose Galois group is isomorphic to \(S_5\). Prove that this is the case.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove: if a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: prove first that each prime ideal is principal, use the Chinese Remainder Theorem.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be an integral domain with field of fractions \(K\). For \(a\in K\), let \(D(a)=\{r\in R\mid ra\in R\}\).</p>
         <ol class="subparts">
           <li>
@@ -225,7 +231,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>For this question you may not quote Nakayama’s Lemma. Let \(R\) be a commutative local ring with \(1\) and \(J\) its unique maximal ideal.</p>
         <ol class="subparts">
           <li>
@@ -246,7 +252,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(R\) be a ring (possibly non-commutative, and possibly without identity). Let \(M\) be an irreducible left \(R\)-module. Let \(D=\operatorname{End}_R(M)\).</p>
         <ol class="subparts">
           <li>
@@ -267,7 +273,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Classify (up to ring isomorphism) all semisimple rings of order \(720\).</p>
       </li>
     </ol>

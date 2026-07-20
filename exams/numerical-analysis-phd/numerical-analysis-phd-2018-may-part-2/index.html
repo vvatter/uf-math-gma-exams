@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do all five (5) problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Consider</p>
         <div class="display-math">\[
 y&#x27; = 4ty, \qquad t \in [0,1], \qquad y(0)=2, \tag{1}
@@ -177,7 +183,7 @@ y&#x27; = 4ty, \qquad t \in [0,1], \qquad y(0)=2, \tag{1}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(g\in C^2([a,b])\) and \(p\in(a,b)\) with \(g(p)=p\), \(g&#x27;(p)=0\), \(g&#x27;&#x27;(p)\neq 0\).</p>
         <ol class="subparts">
           <li>
@@ -198,13 +204,13 @@ y&#x27; = 4ty, \qquad t \in [0,1], \qquad y(0)=2, \tag{1}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Find the second order (i.e. quadratic) least squares approximation to the function \(f(x)=x^4\) on the interval \([-1,1]\) with respect to the weight \(w(x)\equiv 1\) using the fact that the first three orthonormal polynomials on \([-1,1]\) with respect to this weight are</p>
         <div class="display-math">\[
 \varphi_0(x)=\sqrt{1/2},\qquad \varphi_1(x)=\sqrt{3/2}\,x,\qquad \text{and}\qquad \varphi_2(x)=\sqrt{5/8}(3x^2-1).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -233,7 +239,7 @@ f&#x27;(x_0)=\frac{1}{h}\bigl(f(x_0+h)-f(x_0)\bigr)-\frac{h}{2}f&#x27;&#x27;(x_0
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Find \(a,b,c\) so that the quadrature formula</p>
         <div class="display-math">\[
 \int_0^2 f(x)\,dx=af(0)+bf(1)+cf(2)

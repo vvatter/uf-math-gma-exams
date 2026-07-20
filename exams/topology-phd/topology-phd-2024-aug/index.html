@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X=\mathbb{R}/\mathbb{Z}\) be the quotient space obtained from the real line \(\mathbb{R}\) by collapsing the set of integers to a point.</p>
         <ol class="subparts">
           <li>
@@ -189,7 +195,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -218,7 +224,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\subset\mathbb{R}^2\) be an infinite countable subspace.</p>
         <ol class="subparts">
           <li>
@@ -239,7 +245,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Does there exist a closed orientable \(n\)-manifold \(M\) with</p>
         <ol class="subparts">
           <li>
@@ -268,7 +274,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove that the fundamental group of a topological group is abelian.</p>
       </li>
     </ol>
@@ -276,22 +282,22 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Compute the Euler characteristic of the manifold \(M=\mathbb{H}P^3\times\mathbb{C}P^4\times\mathbb{R}P^5\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State the Lefschetz Fixed Point Theorem. Derive the Brouwer Fixed Point Theorem from the Lefschetz Fixed Point Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose that \(A\) is a retract of \(X\). Show that \(H_i(A)\) is a direct summand of \(H_i(X)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Give the definition of the mapping cylinder. Is the Möbius band a mapping cylinder?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Is the 2-sphere \(S^2\) with \(k\) points removed homeomorphic to a topological group for</p>
         <ol class="subparts">
           <li>
@@ -320,10 +326,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Give the definition of the mapping cone. Is there a map \(f:X\to Y\) with the mapping cone \(C_f\) homeomorphic to \(\mathbb{R}P^3\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Which of the following spaces are topological groups?</p>
         <ol class="subparts">
           <li>
@@ -352,10 +358,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Is \(\mathbb{R}^{\omega}\) connected in the uniform topology?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>State the Five Lemma.</p>
       </li>
     </ol>

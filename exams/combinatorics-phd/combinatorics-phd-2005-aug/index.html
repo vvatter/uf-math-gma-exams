@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Show your work.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -176,10 +182,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Each of \(n\) people is to be mailed an envelope containing a letter and a bill. How many ways \(Q_n\) are there of placing the \(n\) letters and \(n\) bills into \(n\) addressed envelopes so that no envelope contains both the correct letter and bill?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(P_n\) be the total number of \(k\)-permutations of \(n\) for various \(k\), that is,</p>
         <div class="display-math">\[
 P_n=\sum_{k=0}^{n}(n)_k,\qquad n=0,1,\ldots
@@ -193,16 +199,16 @@ P(t)=\sum_{n=0}^{\infty}P_n\frac{t^n}{n!}=(1-t)^{-1}e^t
 P_n=nP_{n-1}+1,\qquad n=1,2,\ldots,\quad P_0=1.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Define the binary Hamming code \(H(r)\) of length \(2^r-1\). Show that \(H(r)\) is an exactly single error correcting code and that \(H(r)\) is a perfect code. Determine the number of codewords of weight 3 in \(H(r)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that the number of partitions of a number \(n\) into exactly \(m\) parts is equal to the number of partitions of \(n-m\) into no more than \(m\) parts.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>An order on the set of ordered pairs of non-negative integers is defined by \((a_1,a_2)\leq(b_1,b_2)\) if \(a_i\leq b_i\) for \(i=1,2\). Find the Möbius function of this poset.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Determine for which values of \(m\) and \(n\) the complete bipartite graph \(K_{mn}\) is. Answer the same three questions for the \(n\)-cube. (Recall that the n-cube \(Q_n\) is defined as the graph whose vertices are the set of all binary sequences of length \(n\), where two vertices are adjacent if the corresponding sequences differ by exactly one digit.)</p>
         <ol class="subparts">
           <li>
@@ -231,7 +237,7 @@ P_n=nP_{n-1}+1,\qquad n=1,2,\ldots,\quad P_0=1.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(G\) be a triangle-free graph with \(n\) vertices, minimum degree \(k\) and girth \(g\). Prove that \(g\leq 2n/k\).</p>
         <p>Hint: For an appropriate cycle \(C\) count the number of edges from \(C\) to \(G\mathbin{\backslash}C\) in two ways.</p>
       </li>

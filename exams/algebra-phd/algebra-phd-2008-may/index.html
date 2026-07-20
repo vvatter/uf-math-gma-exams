@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,31 +158,31 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(n&gt;2\) and let \(\zeta\) be a primitive \(n\)-th root of unity over \(\mathbb Q\) (the field of rational numbers). Prove that</p>
         <div class="display-math">\[
 [\mathbb Q(\zeta+\zeta^{-1}):\mathbb Q]=\phi(n)/2.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Calculate the Galois group of \(x^5-9x+3\) over \(\mathbb Q\), the field of rational numbers. Justify your answer carefully.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove that the group defined by generators \(a\) and \(b\) and relations \(a^2=b^3=1\), \(abab=1\) is isomorphic to \(S_3\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(A\) be a torsion abelian group. Calculate \(A\otimes_{\mathbb Z}\mathbb Q\), where \(\mathbb Q\) denotes the additive group of the rational numbers.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Define projective module. Prove from your definition that a module is projective if and only if it is a direct summand of a free module.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State and prove Hilbert’s Nullstellensatz.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be an integral domain. Define what it means for a fractional ideal to be invertible. Prove, from your definition, that if \(I\) is an invertible fractional ideal of \(R\), then \(I\) is finitely generated.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove the following version of the Short Five Lemma. Let \(R\) be a ring and let the following diagram of left \(R\)-modules</p>
         <div class="display-math">\[
 \require{amscd}
@@ -188,13 +194,13 @@
 \]</div>
         <p>be a commutative diagram whose rows are short exact sequences. Suppose that both \(\alpha\) and \(\gamma\) are isomorphisms. Prove that \(\beta\) is an isomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(R\) be a commutative ring with \(1_R\). Prove that \(R\) is a local ring if and only if for all \(r,s\in R\) such that \(r+s=1_R\), either \(r\) or \(s\) is a unit.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Determine up to isomorphism all semisimple noncommutative rings with \(512=2^9\) elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(K\) be a field and let \(A\) be a central simple algebra over \(K\) such that \(\dim_K(A)=n\) is finite. Prove that \(A\otimes_K A^{\mathrm{op}}\cong \mathrm{M}_{n\times n}(K)\).</p>
       </li>
     </ol>

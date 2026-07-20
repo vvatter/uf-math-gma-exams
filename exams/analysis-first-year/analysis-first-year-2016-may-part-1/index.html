@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,21 +158,21 @@
       <p>Do exactly four problems. Work should be presented in a logical fashion in order to receive full credit.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f\) be a continuous function on \([0,1]\). Prove that \(f\) is uniformly continuous.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(\{G_n\}_{n=1}^{\infty}\) be a family of open sets in \(\mathbb{R}^n\) and \(\{F_n\}_{n=1}^{\infty}\) a family of closed sets. Prove that \(\bigcup_{n=1}^{\infty}G_n\) is open and \(\bigcup_{n=1}^{N}F_n\) is closed for any finite \(N\). Give an example such that \(\bigcup_{n=1}^{\infty}F_n\) is not closed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose \(\sum_{n=1}^{\infty}a_n\) is an absolutely convergent real series. Let \(b_n\) be a re-arrangement of \(a_n\). Prove that \(\sum_{n=1}^{\infty}b_n=\sum_{n=1}^{\infty}a_n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let</p>
         <div class="display-math">\[f(x,y)=\begin{cases}\dfrac{xy}{x^2+y^2},&amp;\text{if }(x,y)\ne(0,0),\\0,&amp;\text{if }x=y=0.\end{cases}\]</div>
         <p>Prove that \(f\) is not continuous at \((0,0)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(f&#x27;(x)&gt;0\) for \(x\in(0,1)\) and let \(g\) be the inverse function of \(f\). Prove that for \(x_0\in(0,1)\), \(g&#x27;(f(x_0))=1/f&#x27;(x_0)\).</p>
       </li>
     </ol>

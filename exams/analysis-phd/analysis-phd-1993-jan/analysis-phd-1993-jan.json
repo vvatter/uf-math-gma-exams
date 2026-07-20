@@ -81,7 +81,13 @@
             "text": "Let \\((S_\\infty,\\Sigma,\\mu)\\) be a finite measure space. Let \\((f_n)_{n=1}^\\infty\\) be a sequence of integrable function such that \\[\\sum_{n=1}^\\infty\\int_S |f_n|\\,d\\mu<\\infty.\\] Does it follow that \\(\\sum f_n\\) converges pointwise on \\(S\\) a.e. \\(\\mu\\)? Show all details."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The underlying space in the opening tuple appears to be printed as \\(S_\\infty\\), but the integral and the later pointwise-convergence statement refer to \\(S\\). The intended symbol is uncertain, so the apparent source reading has been retained."
+          }
+        ]
       }
     },
     {

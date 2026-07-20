@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,10 +155,10 @@
       <h1>Complex Analysis PhD Exam, September 2009</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>A fixed point of a function \(f\) is a point \(x\) with \(f(x)=x\). Let \(G\) be an open, simply connected subset of \(\mathbb C\). If \(f\) is analytic on \(G\), \(f(G)\subset G\), and \(f\) has two fixed points, show that \(f\) is the identity map.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be an open, connected subset of \(\mathbb C\) and \(f\) be analytic on \(G\). Note that we are not assuming that \(G\) is simply connected.</p>
         <ol class="subparts">
           <li>
@@ -181,23 +187,26 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Give an explicit biholomorphism from the “wedge” \(\{z:0&lt;\arg(z)&lt;\pi/2\}\) onto the open unit disk.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Evaluate the integral, and justify each step.</p>
         <div class="display-math">\[\int_{-\infty}^{\infty}\frac{x\sin x}{(x^2+1)^2}\,dx.\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f\) be an entire function of finite order. Prove that if the order is not an integer, then \(f\) must have infinitely many zeros. Does there exist an entire function of infinite order with finitely many zeros? Explain.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The statement is preserved as printed, but it overlooks the possible case \(g\equiv0\), for example when \(g_n\equiv1/n\). The intended correction is not uniquely determined: one could assume \(g\not\equiv0\) or conclude that \(g\) is identically zero or has only real zeros.</p>
+        </div>
         <p>Assume each \(g_n\) is entire and \(g_n\to g\) uniformly on compact sets in \(\mathbb C\) (i.e. \(g_n\to g\) in \(H(\mathbb C)\)). If each \(g_n\) has only real zeros, show that \(g\) has only real zeroes.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Assume that \(f\) and \(g\) are analytic and nonvanishing on \(\{z\in\mathbb C:|z|&lt;2\}\) and that \(|f(z)|=|g(z)|\) when \(|z|=1\). Show that there is a constant \(\lambda\in\mathbb C\) with \(|\lambda|=1\) and \(f(z)=\lambda g(z)\) for all \(z\in B_2(0)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Assume that \(f\) is entire, and for some integer \(n&gt;0\),</p>
         <div class="display-math">\[\lim_{z\to\infty}\frac{f(z)}{z^n}=c,\]</div>
         <p>for some finite, nonzero complex number \(c\). What can you say about \(f\)?</p>

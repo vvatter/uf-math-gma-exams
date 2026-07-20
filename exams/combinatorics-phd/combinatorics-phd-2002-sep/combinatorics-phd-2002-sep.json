@@ -145,7 +145,13 @@
             "text": "Find an explicit formula for the numbers \\(a_n\\), if \\(a_{n+1}=(n+1)a_n+2(n+1)!\\) if \\(n\\ge 1\\), and \\(a_0=0\\)."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The recurrence is stated only for \\(n\\ge 1\\), while the sole initial condition is \\(a_0=0\\); these conditions do not determine \\(a_1\\) and hence do not uniquely determine the sequence. The intended lower bound or initial condition is unclear, so the source reading has been retained."
+          }
+        ]
       }
     }
   ]

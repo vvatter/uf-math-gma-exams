@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -107,6 +113,9 @@ Let \(p=p_1p_2\cdots p_n\) be an~\(n\)-permutation, and assume \(n\ge 3\). We sa
 \item
 Let~\(D\) be the partially ordered set of positive integers ordered by divisibility. Find a formula for \(\mu(1,x)\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The recurrence is stated only for \(n\ge 1\), while the sole initial condition is \(a_0=0\); these conditions do not determine \(a_1\) and hence do not uniquely determine the sequence. The intended lower bound or initial condition is unclear, so the source reading has been retained.
+\end{problemconcern}
 Find an explicit formula for the numbers \(a_n\), if \(a_{n+1}=(n+1)a_n+2(n+1)!\) if \(n\ge 1\), and \(a_0=0\).
 \end{examproblems}
 \end{document}

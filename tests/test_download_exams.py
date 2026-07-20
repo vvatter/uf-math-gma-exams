@@ -16,6 +16,8 @@ from download_exams import (
     label_suffix,
     normalize_pdf_url,
     parse_date,
+    practice_exams,
+    practice_problem_collection,
     previous_download_metadata,
     refresh_local_metadata,
     subject_tag,
@@ -76,6 +78,40 @@ class NamingTests(unittest.TestCase):
         self.assertEqual(
             exam_stem("algebra-first-year", 2025, "august", "part-1"),
             "algebra-first-year-2025-aug-part-1",
+        )
+
+    def test_practice_exams_are_undated_and_have_stable_variants(self) -> None:
+        exams = practice_exams(Path("exams"))
+
+        self.assertEqual(
+            [exam.id for exam in exams],
+            [
+                "algebra-first-year-practice-a-part-1",
+                "algebra-first-year-practice-b-part-1",
+                "algebra-first-year-practice-a-part-2",
+                "algebra-first-year-practice-b-part-2",
+            ],
+        )
+        self.assertTrue(all(exam.year is None and exam.month is None for exam in exams))
+        self.assertEqual([exam.practice_variant for exam in exams], ["A", "B", "A", "B"])
+        self.assertEqual(
+            [Path(exam.download_url).name for exam in exams],
+            ["prac1a.pdf", "prac1b.pdf", "prac2a.pdf", "prac2b.pdf"],
+        )
+
+    def test_practice_problem_collection_has_stable_archive_metadata(self) -> None:
+        collection = practice_problem_collection(Path("exams"))
+
+        self.assertEqual(collection.id, "algebra-first-year-practice-problems")
+        self.assertEqual(collection.document_type, "practice-problems")
+        self.assertEqual(collection.problem_count, 113)
+        self.assertIsNone(collection.year)
+        self.assertIsNone(collection.month)
+        self.assertEqual(Path(collection.download_url).name, "fypoolalg.pdf")
+        self.assertEqual(
+            collection.path,
+            "exams/algebra-first-year/algebra-first-year-practice-problems/"
+            "algebra-first-year-practice-problems.source.pdf",
         )
 
     def test_legacy_pdf_urls_prefer_the_modern_https_path(self) -> None:

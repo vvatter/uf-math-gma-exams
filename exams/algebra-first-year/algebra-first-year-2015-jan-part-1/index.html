@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,17 +158,17 @@
       <p>Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Describe the subgroup</p>
         <div class="display-math">\[
 \left\{\begin{pmatrix}a&amp;b\\0&amp;c\end{pmatrix}\;\middle|\;ac\ne 0\right\}\subseteq GL_2(\mathbb{R})
 \]</div>
         <p>as a semidirect product \(A\rtimes_\phi B\) with nontrivial \(A,B\). Specify the groups \(A,B\) and the homomorphism \(\phi:B\to\operatorname{Aut}(A)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(G\) be a \(p\)-group and \(S\) a finite set on which \(G\) acts. Denote by \(S^G\subseteq S\) the subset of fixed elements (i.e. \(g(x)=x\) for all \(g\in G\), \(x\in S\)). Show that \(|S|\equiv|S^G|\pmod p\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(G\) be a group of order \(3^2\cdot 11\cdot 41\).</p>
         <ol class="subparts">
           <li>
@@ -191,7 +197,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose \(p\) is an odd prime.</p>
         <ol class="subparts">
           <li>
@@ -212,7 +218,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(G\) is a \(p\)-group and \(M\le G\) is a maximal subgroup.</p>
         <ol class="subparts">
           <li>
@@ -233,7 +239,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(G\) be a finite group and \(H\mathrel{\triangleleft}G\) a normal subgroup. Show that \(G\) is solvable if and only if \(H\) and \(G/H\) are solvable.</p>
       </li>
     </ol>

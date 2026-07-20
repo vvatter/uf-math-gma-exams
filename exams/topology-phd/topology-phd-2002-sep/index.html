@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Use the Mayer–Vietoris sequence for reduced singular homology to compute \(H_*(S^n)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that there is no retraction of the Möbius band onto its boundary.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Does there exist a covering space of the figure eight with nontrivial abelian fundamental group?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the 2-dimensional sphere with three points deleted cannot be a topological group.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(M\) be a 4-dimensional closed simply connected manifold. Show that every continuous map \(f:M\to M\) which is homotopic to the identity has a fixed point.</p>
       </li>
     </ol>
@@ -172,22 +178,22 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State the Seifert–van Kampen Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State the Lefschetz Fixed Point Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Jordan Curve Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>State the Arzelà–Ascoli Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(X\) be a finite complex. Find \(\chi(X\times S^n)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(S_r(x,y)\) denote a circle of radius \(r\) centered at \((x,y)\in\mathbb{R}^2\). Let \(\Sigma R\) be the suspension over Hawaiian ring \(R=\bigcup_{n=1}^{\infty}S_{1/n}(1/n,0)\). Is \(\Sigma R\)</p>
         <ol class="subparts">
           <li>
@@ -216,16 +222,16 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>State the Poincaré Duality Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Define retraction and deformation retraction.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>State the Universal Coefficient formula for homology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Let \(X\) be a complete metric space such that no point is isolated. Can \(X\) be countable?</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(L\) be a splitting field over \(\mathbb{Q}\) for the polynomial \(f(X)=X^3-7\).</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(p\) be prime and let \(n\geq 1\).</p>
         <ol class="subparts">
           <li>
@@ -194,7 +200,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -223,20 +229,20 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that the group \(G\) defined by the generators and relations</p>
         <div class="display-math">\[
 G=\langle x,y\mid xyx=y\rangle
 \]</div>
         <p>is infinite and nonabelian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a commutative ring with \(1\) and let \(I,J\) be ideals in \(R\). Prove that there is an isomorphism of \(R\)-modules</p>
         <div class="display-math">\[
 (R/I)\otimes_R(R/J)\cong R/(I+J).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(R\) be a commutative ring with \(1\).</p>
         <ol class="subparts">
           <li>
@@ -257,10 +263,10 @@ G=\langle x,y\mid xyx=y\rangle
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\subset S\) be integral domains such that \(S\) is integral over \(R\). Prove that \(R\) is a field if and only if \(S\) is a field.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be a commutative ring with \(1\).</p>
         <ol class="subparts">
           <li>
@@ -281,7 +287,7 @@ G=\langle x,y\mid xyx=y\rangle
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Determine which of the following rings are Dedekind domains, with some explanation in each case.</p>
         <ol class="subparts">
           <li>
@@ -318,10 +324,10 @@ G=\langle x,y\mid xyx=y\rangle
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(G\) be a finite group and let \(K\) be a field of characteristic \(0\). Let \(V\) be a \(K[G]\)-module which is a finite-dimensional vector space over \(K\) and let \(W\) be a \(K[G]\)-submodule of \(V\). Prove there is a \(K[G]\)-submodule \(W&#x27;\) of \(V\) such that \(V=W\oplus W&#x27;\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Determine the number of isomorphism classes of semisimple rings with \(4000\) elements. You don’t have to list the rings, but you do need to justify your computations.</p>
       </li>
     </ol>

@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -83,6 +89,9 @@ Do 4 (four) problems.
 \item
 Let~\(A\) be an \(m\times n\) matrix (\(m\ge n\)) and let \(A=\widehat Q\widehat R\) be a reduced \(QR\) factorization of~\(A\). Prove that~\(A\) has full rank if and only if the diagonal entries of \(\widehat R\) are nonzero.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Part (c) is preserved as printed, but the stated assumptions do not ensure that \(A^{-1}\) exists; for example, \(A=0\) satisfies \(\|A\|_p<1\). The intended additional assumption or alteration is not uniquely determined.
+\end{problemconcern}
 Assume that \(A\in\mathbb C^{n\times n}\) and there exists \(p\ge 1\) such that \(\|A\|_p<1\), where \(\|\cdot\|_p\) is a vector-induced matrix norm.
 \begin{examsubparts}
 \item[\textnormal{(a)}]

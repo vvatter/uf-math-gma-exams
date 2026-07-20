@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -112,6 +118,9 @@ State the Cantor–Schröder–Bernstein Theorem.
 \item
 Is every connected space path connected?
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The displayed family of half-open intervals uses \([b,c)\), while its conditions include the otherwise unused variable~\(d\). The intended endpoints or inequalities are not uniquely determined, so the source reading has been retained.
+\end{problemconcern}
 What is a basis of a topology? Does the set of all half-open intervals \(\{(a,b], [b,c) \mid a<b, c<d\}\) form a basis of a topology on~\(\mathbb{R}\)?
 \item
 State the Extreme Value Theorem.

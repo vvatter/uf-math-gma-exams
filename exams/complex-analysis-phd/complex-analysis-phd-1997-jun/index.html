@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,27 +158,27 @@
       <p>Do each of the problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Evaluate the integral \(\displaystyle \int_0^\infty \frac{x^{a-1}}{1+x}\,dx\), \(0&lt;a&lt;1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Suppose \(\Omega=\{z:-1&lt;\operatorname{Re}z&lt;1\}\). Find an explicit formula for the 1-1 conformal mapping \(f\) of \(\Omega\) onto \(\{z:|z|&lt;1\}\) for which \(f(0)=0\) and \(f&#x27;(0)&gt;0\). Compute \(f&#x27;(0)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(F\) be the class of all analytic functions \(f\) in \(\mathbb D=\{z:|z|&lt;1\}\) for which</p>
         <div class="display-math">\[
 \iint_{\mathbb D}|f(z)|^2\,dx\,dy\leq 1.
 \]</div>
         <p>Is this a normal family? Justify your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(g\) be a polynomial. Show that</p>
         <div class="display-math">\[
 2\iint_{\mathbb D}(1-|z|^2)|g&#x27;(z)|^2\,dx\,dy\leq \int_0^{2\pi}|g(e^{i\theta})|^2\,d\theta,
 \]</div>
         <p>where \(\mathbb D=\{z:|z|&lt;1\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -201,20 +207,20 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Construct an entire function whose zero set is the set of Gaussian integers \(a+bi\), where \(a,b\in\mathbb Z\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>For \(|z|&lt;1\), define \(f(z)\) by</p>
         <div class="display-math">\[
 f(z)=z+\frac{z^3}{3}+\frac{z^5}{5}+\frac{z^7}{7}+\cdots.
 \]</div>
         <p>Extend \(f(z)\) analytically in a suitable way so that it can be defined at \(z=i\). Using your analytic continuation, determine the radius of convergence of the Taylor series of \(f\) with \(z=i\) as center.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Show \(ze^z=1\) has infinitely many solutions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Define the order and genus of an entire function. What is the relation between the order and genus? Find the order of \(\sin z\).</p>
       </li>
     </ol>

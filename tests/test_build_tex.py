@@ -12,10 +12,12 @@ from build_tex import (
     render_text,
 )
 from extract_exams import (
+    ConcernStatus,
     ExamRecord,
     InstructionsBlock,
     NumberingMode,
     Problem,
+    ProblemConcern,
     ProblemTextBlock,
     ProblemBlock,
     SectionBlock,
@@ -122,6 +124,24 @@ class TexRenderingTests(unittest.TestCase):
         self.assertIn(r"math/mathml/structelem=false", rendered)
         self.assertNotIn(r"\require{amscd}", rendered)
 
+    def test_renderer_titles_undated_practice_exams_without_a_date(self) -> None:
+        exam = self.exam().model_copy(
+            update={
+                "id": "algebra-first-year-practice-b-part-2",
+                "subject": "First Year Algebra",
+                "subject_tag": "algebra-first-year",
+                "year": None,
+                "month": None,
+                "part": 2,
+                "practice_variant": "B",
+            }
+        )
+
+        rendered = render_tex(exam)
+
+        self.assertIn(r"\title{Algebra First-Year Practice Exam B, Part 2}", rendered)
+        self.assertNotIn("None", rendered)
+
     def test_empty_problem_stem_gets_presentation_only_summary(self) -> None:
         exam = self.exam()
         exam.content = [
@@ -137,6 +157,27 @@ class TexRenderingTests(unittest.TestCase):
         ]
 
         self.assertIn("This problem has two parts.", render_tex(exam))
+
+    def test_problem_concern_is_tagged_colored_and_precedes_source_text(self) -> None:
+        exam = self.exam()
+        problem = make_problem(text=r"Prove the claim for \(p\).", subparts=[])
+        problem.concerns = [
+            ProblemConcern(
+                status=ConcernStatus.SUSPECTED,
+                explanation=r"The claim appears to fail when \(p=2\).",
+            )
+        ]
+        exam.content = [ProblemBlock(problem=problem)]
+
+        rendered = render_tex(exam)
+
+        self.assertIn(r"\definecolor{ProblemConcern}{HTML}{7A1F1F}", rendered)
+        self.assertIn(r"\tagstructbegin{tag=Aside}", rendered)
+        self.assertIn(r"\textbf{Warning: Suspected error.}", rendered)
+        self.assertLess(
+            rendered.index("Warning: Suspected error."),
+            rendered.index("Prove the claim"),
+        )
 
     def test_tikz_figure_is_vector_tagged_and_has_standalone_png_source(self) -> None:
         exam = self.exam()

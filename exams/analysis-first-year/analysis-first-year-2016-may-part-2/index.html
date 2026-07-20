@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,22 +158,22 @@
       <p>Do exactly four problems. Work should be presented in a logical fashion in order to receive full credit.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f(x)=\sum_{n=0}^{\infty}c_nx^n\) be convergent at \(x=2\) where the \(c_n\) are real. Prove that</p>
         <div class="display-math">\[
 f&#x27;(x)=\sum_{n=1}^{\infty}nc_nx^{n-1},\qquad |x|&lt;2.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(f\) be a real-valued Riemann integrable function on \([0,1]\) and let \(F(x)=\int_0^x f(t)\,dt\). Prove \(F&#x27;(x)=f(x)\) for almost all \(x\in[0,1]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f\) be real and continuous on \([0,1]\). Prove, if \(\int_0^1 f(x)x^n\,dx=0\) for all \(n=0,1,2,\ldots\), then \(f\equiv0\) on \([0,1]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(f_n\) be a sequence of functions defined on \([0,1]\). Suppose there exists an \(\alpha\in(0,1)\) and positive number \(M\) such that \(|f_n(0)|\le M\) and \(|f_n(x)-f_n(y)|\le |x-y|^\alpha\) for all \(n\) and \(x,y\in[0,1]\). Prove there is a subsequence \(f_{n_k}\) of \(f_n\) converging (uniformly on \([0,1]\)) to a function \(f\) that satisfies \(|f(x)-f(y)|\le |x-y|^\alpha\) for all \(x,y\in[0,1]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>State Fatou’s Theorem and give an example to show the statement can be false if the functions in the sequence are not assumed non-negative.</p>
       </li>
     </ol>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,24 +158,24 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>The sequence \((f_n)_{n=0}^{\infty}\) of real-valued functions on \([0,1]\) is uniformly bounded and converges to \(0\) pointwise. If each \(f_n\) is (i) continuous, (ii) Riemann integrable, (iii) Lebesgue integrable, does it follow that \(\int_0^1 f_n(t)\,dt \to 0\)? In each of the three cases, a proof or counterexample should be given.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \((f_n)_{n=0}^{\infty}\) be a sequence of continuous non-negative functions on \([0,1]\) converging pointwise to \(0\). Prove that if the extra condition</p>
         <div class="display-math">\[
 \forall t\in[0,1]\quad f_0(t)\geq f_1(t)\geq\cdots\geq f_n(t)\geq\cdots
 \]</div>
         <p>is satisfied then \(f_n\to 0\) uniformly on \([0,1]\). Show that this conclusion can fail if the extra condition is removed.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let the continuous real-valued function \(f\) on \([0,1]\) satisfy</p>
         <div class="display-math">\[
 \forall n\in\mathbb N\quad \int_0^1 f(t)(1-t)^n\,dt=0.
 \]</div>
         <p>Deduce as much as possible about \(f\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((\Omega,\mathcal A,\mu)\) be a measure space. Let \((A_n)\) be a sequence in \(\mathcal A\) and define</p>
         <div class="display-math">\[
 \liminf A_n=\bigcup_N\bigcap_{n\geq N}A_n.
@@ -179,7 +185,7 @@
 \mu(\liminf A_n)\leq\liminf\mu(A_n).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(f(x)=\sin x/x\) for \(x&gt;0\). Show that if \(n\) is a positive integer then</p>
         <div class="display-math">\[
 \int_{2n\pi}^{(2n+1)\pi}\frac{\sin x}{x}\,dx\geq\frac{2}{(2n+1)\pi}.

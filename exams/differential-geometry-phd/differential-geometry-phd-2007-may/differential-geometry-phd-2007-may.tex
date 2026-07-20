@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -123,6 +129,9 @@ L_1=q_2p_3-q_3p_2,\qquad L_2=q_3p_1-q_1p_3,\qquad L_3=q_1p_2-q_2p_1.
 \]
  Explaining the terms, prove that if \(L_1\) and \(L_2\) are constants of the motion for a given Hamiltonian function on \((\mathbb{R}^6,\omega)\) then so is \(L_3\).
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The displayed tangent-map formula is type-inconsistent with the definitions that follow it. The maps \(\lambda^a\) and \(\rho^b\) are defined as maps into \(G\times G\), so their tangent vectors lie in \(T_{(a,b)}(G\times G)\), while \(p_*(\xi,\eta)\) lies in \(T_{p(a,b)}G\). More than one repair is possible, so the source reading has been retained.
+\end{problemconcern}
 Let~\(G\) be both a group and a smooth manifold; suppose that the group operation \(p:G\times G\to G\) is smooth. By considering the function 
 \[
 f:G\times G\to G\times G:(x,y)\mapsto(x,p(x,y))

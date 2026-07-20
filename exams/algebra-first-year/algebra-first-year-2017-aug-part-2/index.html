@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Show that the ring \(\mathbb{Z}[\sqrt{-5}]\) is not a principal ideal domain, and give an example of a non-principal ideal in this ring.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(R\) be a commutative ring with identity. Show that an element \(a \in R\) is contained in every maximal ideal if and only if \(1+ab\) is a unit in \(R\) for all \(b \in R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Show that if \(p\) is an odd prime then the polynomial \(\frac{(x+2)^p-2^p}{x}\) is irreducible in \(\mathbb{Q}[X]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(K\) be a field. Show that any \(K\)-vector space \(V\) has a basis (do not assume that \(V\) has finite dimension).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(R\) is a principal ideal domain and \(M\) is a finitely generated \(R\)-module. For any prime \(p \in R\), let \(M_p\) be the set of \(m \in M\) such that \(p^n m=0\) for some \(n\).</p>
         <ol class="subparts">
           <li>
@@ -185,7 +191,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Find representatives of all conjugacy classes of elements of order \(5\) in \(GL_2(\mathbb{F}_{19})\). Hint:</p>
         <div class="display-math">\[
 x^5-1=(x-1)(x^2-4x+1)(x^2+5x+1)

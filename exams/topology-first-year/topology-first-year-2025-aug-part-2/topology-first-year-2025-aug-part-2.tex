@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -124,6 +130,9 @@ State the Borsuk–Ulam Theorem for \(S^2\).
 \item
 State the Tychonoff theorem.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The source clearly displays \(\pi(X)\), though \(\pi_1(X)\) may have been intended; the source notation has been retained.
+\end{problemconcern}
 Describe a space~\(X\) with \(\pi(X)\cong\mathbb{Z}/3\mathbb{Z}\).
 \item
 Define Stone–Čech compactification.

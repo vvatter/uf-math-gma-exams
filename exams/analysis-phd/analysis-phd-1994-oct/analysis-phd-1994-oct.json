@@ -200,7 +200,13 @@
                 "text": "Let \\(f\\geq 0\\) be \\(\\mu\\)-integrable such that \\(\\int f\\,d\\mu\\leq 1\\). Prove that \\(\\int \\frac{1}{f}\\,d\\mu\\geq 1\\). (Hint, use the Schwarz inequality for \\(\\sqrt f\\) and \\(\\frac{1}{\\sqrt f}\\).)"
               }
             ],
-            "subparts": []
+            "subparts": [],
+            "concerns": [
+              {
+                "status": "suspected",
+                "explanation": "The source statement was retained, but on a general finite measure space the displayed hypotheses do not imply the stated lower bound. An additional normalization such as \\(\\mu(X)=1\\), or a different lower bound, may have been intended; the correction is not uniquely determined."
+              }
+            ]
           }
         },
         {

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,30 +155,30 @@
       <h1>Combinatorics PhD Exam, January 2018</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(D(n)\) be the number of derangements of length \(n\). Let \(F(n)\) be the number of permutations of length \(n\) that have exactly one fixed point. Determine (with proof) the number \(D(n)-F(n)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Prove: If \(n\) and \(m\) are the number of vertices and edges in a simple planar graph and \(n \ge 3\), then \(m \le 3n-6\).</p>
         <p>Prove: For a simple graph \(G\) with \(n \ge 11\), at most one of \(G\) or its complement \(\overline{G}\) is planar. (Recall that \(\overline{G}\) has the same vertex set as \(G\) and, for all vertices \(u,v\), we have that \(\{u,v\}\) is an edge of \(\overline{G}\) if and only if \(\{u,v\}\) is not an edge of \(G\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>How many ways are there to seat \(n\) married couples at a straight table (only one side of the table) so that no woman sits next to her husband?</p>
         <p>How many ways are there to seat \(n\) married couples at a straight table so that men and women alternate and no woman sits next to her husband?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(B\) be a rectangular 3-dimensional box for which the width is equal to the length, but the depth is not equal to the length. How many ways are there to color the vertices of \(B\) using colors red and blue, where two colorings are considered the same if one can be obtained from the other by an orientation preserving symmetry of \(B\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Consider a directed graph obtained by putting a direction on each edge of the complete graph. Such a digraph is called a tournament. Prove that a tournament has a Hamiltonian path. Is it true that every tournament has a Hamiltonian cycle? Explain?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(n \ge 3\). Let \(h_n\) be the number of permutations of length \(n\) in which the number of inversions is divisible by three. Find an explicit formula for \(h_n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove that the language \(\mathcal{L}=\{ww : w \in \{a,b\}^*\}\) is not regular.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Suppose \(\mathcal{C}\) and \(\mathcal{D}\) are permutation classes. Prove that \(\mathcal{C}\cup\mathcal{D}\) is a permutation class, and describe (with an algorithm, perhaps) how to compute its basis.</p>
       </li>
     </ol>

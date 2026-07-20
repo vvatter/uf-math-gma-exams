@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,22 @@
       <p>Do all problems. Show all the necessary details so partial credit can be properly assessed.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Construct a conformal map which will take the intersection of the disks \(|z|&lt;1\) and \(|z-1|&lt;1\) to the unit disk.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Evaluate \(\displaystyle \int_0^\infty \frac{\log x}{1+x^4}\,dx\) using contour integration.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The source reading is clear, but the hypotheses and conclusion are mathematically inconsistent: \(\sin \pi z\) has derivative \(\pi\), not 1, at 0 and is unbounded on the imaginary axis. The intended correction is not uniquely determined, so the source text has been retained.</p>
+        </div>
         <p>Let \(f(z)\) be entire of order 1 and the zero set of \(f\), \(Z(f)=\{0,\pm1,\pm2,\pm3,\ldots\}\). Suppose \(f&#x27;(0)=1\), \(f\!\left(\frac12\right)=1\), and \(f\) is bounded on the imaginary axis. Show that \(f(z)=\sin \pi z\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(P_n(z)=\displaystyle \frac{1}{n!}\frac{d^n}{dz^n}\bigl[z^n(1-z)^n\bigr]\) be the \(n^{\mathrm{th}}\)-Legendre polynomial (of degree \(n\)). Show that \(P_n(-1)\leq (1+\sqrt{2})^{2n}\). (Hint: Write \(\displaystyle P_n(-1)=\frac{1}{2\pi i}\int_C \frac{\zeta^n(1-\zeta)^n}{(\zeta+1)^{n+1}}\,d\zeta\) over a suitable circle centered at \(-1\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -185,17 +194,17 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(f(z)\) be analytic in a domain \(D\) and on its boundary \(C\). If \(|f(z)|\) is constant on \(C\), show that unless \(f(z)\) reduces to a constant there must be at least one zero of \(f(z)\) in \(D\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Show that the sum of the series</p>
         <div class="display-math">\[
 \frac{1}{1-z}-\frac{z}{1-z^2}-\frac{z^2}{1-z^4}-\frac{z^4}{1-z^8}-\frac{z^8}{1-z^{16}}-\cdots
 \]</div>
         <p>is 1 when \(|z|&lt;1\), but is 0 when \(|z|&gt;1\). This seems to contradict analytic continuation. How is this possible?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>If \(f(z)\) is analytic for \(|z|&lt;1\) and \(\displaystyle |f(z)|&lt;\frac{1}{1-|z|}\) \((|z|&lt;1)\), show that the coefficients \(a_n\) in the expansion</p>
         <div class="display-math">\[
 f(z)=\sum_{n=0}^{\infty}a_nz^n
@@ -205,7 +214,7 @@ f(z)=\sum_{n=0}^{\infty}a_nz^n
 |a_n|\leq(n+1)\left(1+\frac1n\right)^n&lt;e(n+1).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

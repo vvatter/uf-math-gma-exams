@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -157,19 +163,19 @@
         <p>In this section state and prove each theorem. The proofs should be complete without being tedious.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Let \(X\) be a metric space and suppose that \(A_\lambda \subset X\) is connected for all \(\lambda \in \Lambda\). Suppose that there is an \(x_0 \in X\) such that \(x_0 \in A_\lambda\) for all \(\lambda\). Show that \(\bigcup_{\lambda \in \Lambda} A_\lambda\) is connected.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>State and prove the Contraction Mapping Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Let \(X\) be a Hausdorff space. Show that if \(A \subset X\) is compact, then \(A\) is closed.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Let \(X\) be a topological space. Suppose that \(f:X \to Y\) is continuous. Show that if \(A \subset X\) is connected, then \(f(A) \subset Y\) is connected.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>Suppose that \(X\) and \(Y\) are metric spaces and that \(X\) is compact. Show that if \(f:X \to Y\) is continuous, then \(f\) is uniformly continuous.</p>
         </li>
       </ol>
@@ -180,34 +186,34 @@
         <p>In this section, give brief examples, counterexamples, or quick proofs.</p>
       </div>
       <ol class="problems" start="6">
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>State Urysohn’s Lemma.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>Is it possible for there to be a continuous function \(f:[0,1] \to \{0,1\}\) which is onto?</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>State the Bolzano–Weierstrass Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>Define a continuous function \(f:C \to [0,1]\) which is onto where \(C\) is the Cantor set and \([0,1]\) is the unit interval.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Give an example of a space \(X\) which is \(T_1\) but not Hausdorff.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>State the Tietze Extension Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>Define a quotient map.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>State the Baire Category Theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-14">
           <p>What does it mean for a topological space \(X\) to be Hausdorff? Regular? Normal?</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-15">
           <p>What does it mean for a space \(X\) to be first countable? Show that every metric space is first-countable.</p>
         </li>
       </ol>

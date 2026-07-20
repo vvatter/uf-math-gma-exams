@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(F\) be a field, let \(n \geq 2\), and let \(R\) be the ring of \(n \times n\) matrices over \(F\).</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Give an example of each of the following, with some explanation.</p>
         <ol class="subparts">
           <li>
@@ -202,10 +208,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove that the ideal \((X,Y)\) in the ring \(\mathbb{Q}[X,Y]\) is not a principal ideal.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(R\) be a ring and let \(M\) be an \(R\)-module. Define</p>
         <div class="display-math">\[
 \operatorname{Tor}(M)=\{x\in M:rx=0\text{ for some }r\in R\setminus\{0\}\}.
@@ -229,10 +235,10 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Find a representative for each conjugacy class in \(\operatorname{GL}_2(\mathbb{Z}/3\mathbb{Z})\) consisting of elements whose order divides \(8\). (Note that we have \(X^4+1=(X^2-X-1)(X^2+X-1)\) in \((\mathbb{Z}/3\mathbb{Z})[X]\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(L/K\) be an algebraic field extension and let \(R\) be a subring of \(L\) that contains \(K\). Prove that \(R\) is a field.</p>
       </li>
     </ol>

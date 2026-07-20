@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,13 +158,13 @@
       <p>Carefully justify your answers.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X,Y:(\Omega,\mathcal{F},\mathbb{P})\to(\mathbb{R},\mathcal{B}(\mathbb{R}))\) be random variables. Prove that</p>
         <div class="display-math">\[
 \mathbb{P}(X+Y\ge 0)\le \mathbb{P}(X\ge 0)+\mathbb{P}(Y\ge 0).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -217,7 +223,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. continuous random variables having a uniform distribution on \([0,1]\). Define, for \(n\ge 1\),</p>
         <div class="display-math">\[
 Y_n=\max(X_1,\ldots,X_n).
@@ -249,7 +255,7 @@ Y_n=\max(X_1,\ldots,X_n).
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. random variables with a Poisson distribution of parameter \(\lambda\).</p>
         <ol class="subparts">
           <li>
@@ -281,7 +287,7 @@ Y_n=\max(X_1,\ldots,X_n).
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -310,10 +316,10 @@ Y_n=\max(X_1,\ldots,X_n).
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(\{M_n\}_{n\ge 0}\) be a sequence of integrable random variables adapted to a filtration \(\{\mathcal{F}_n\}\). Assume that for each bounded stopping time \(T\), \(\mathbb{E}[M_T]=\mathbb{E}[M_0]\). Show that \(\{M_n\}_{n\ge 0}\) is a martingale.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\{B_t\}\) be a standard Brownian motion. Define, for \(x\in\mathbb{R}\),</p>
         <div class="display-math">\[
 T_x=\min\{t\ge 0:B_t=x\}.

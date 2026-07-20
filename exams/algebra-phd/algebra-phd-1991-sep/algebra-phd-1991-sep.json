@@ -45,7 +45,13 @@
             "text": "Prove that the group \\(G\\) of upper triangular 2 by 2 matrices with integer coefficients is a free nilpotent class 2 group on two generators."
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The source clearly appears to say “upper triangular 2 by 2 matrices with integer coefficients,” but as written these matrices do not specify the standard free nilpotent class 2 group on two generators. A possible intended formulation involving upper unitriangular 3 by 3 integer matrices is not uniquely determined from the source, so the source reading has been retained."
+          }
+        ]
       }
     },
     {

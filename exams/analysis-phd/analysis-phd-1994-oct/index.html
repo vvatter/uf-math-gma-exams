@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -157,34 +163,34 @@
         <p>State the following theorems:</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>Lebesgue dominated convergence theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>Fatou Lemma</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>Vitali theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>Monotone convergence theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>The Radon–Nikodym theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>The Egorov theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>The Fubini theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>The Lebesgue decomposition theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>The Uniform boundedness theorem</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>The Hahn–Banach theorem</p>
         </li>
       </ol>
@@ -192,7 +198,7 @@
     <section aria-labelledby="section-2">
       <h2 id="section-2">II.</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Prove the \((L^1)^*=L^\infty\)</p>
         </li>
       </ol>
@@ -200,16 +206,19 @@
     <section aria-labelledby="section-3">
       <h2 id="section-3">III. Problems</h2>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>Find \(\displaystyle \lim_{n\to\infty}\int_0^1 n x^n\,dx\). (Hint: use the monotone convergence theorem)</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>Let \(\mu\) be the Lebesgue measure on \(\mathbb{R}\) and \(f\) a Lebesgue-integrable function on \(\mathbb{R}\), such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb{R}\). What can you say about \(f\)?</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-14">
+          <div class="problem-concern" role="note">
+            <p><strong>Warning: Suspected error.</strong> The source statement was retained, but on a general finite measure space the displayed hypotheses do not imply the stated lower bound. An additional normalization such as \(\mu(X)=1\), or a different lower bound, may have been intended; the correction is not uniquely determined.</p>
+          </div>
           <p>Let \(f\geq 0\) be \(\mu\)-integrable such that \(\int f\,d\mu\leq 1\). Prove that \(\int \frac{1}{f}\,d\mu\geq 1\). (Hint, use the Schwarz inequality for \(\sqrt f\) and \(\frac{1}{\sqrt f}\).)</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-15">
           <p>Let \(R\) be a ring of subsets of \(X\), \(E\) a Banach space and \(\mu:R\to E\) be a finitely additive measure. Prove that \(\mu\) is \(\sigma\)-additive iff for any decreasing sequence \((A_n)\) from \(R\) with \(\bigcap_n A_n=\phi\) we have \(\lim \mu(A_n)=0\).</p>
         </li>
       </ol>

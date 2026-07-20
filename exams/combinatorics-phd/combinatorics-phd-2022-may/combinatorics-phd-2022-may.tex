@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -88,6 +94,9 @@ Determine the number of binary strings of length~\(n\) beginning with~\(0\), end
 \item
 Show that the number of partitions of~\(n\) with no part divisible by~\(k\) is equal to the number of partitions of~\(n\) with each part appearing at most \(k-1\) times.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The statement as printed is false when the unique element covered by~\(y\) is the minimal element~\(0\). A condition such as \(x\ne0\) may be missing, but the intended correction is not uniquely determined, so the source reading has been retained.
+\end{problemconcern}
 Let~\(P\) be a finite poset with unique minimal element~\(0\) and Möbius function~\(\mu\). Let \(y\in P\) so that there is only one~\(x\) covered by~\(y\). Show \(\mu(0,y)=0\).
 \item
 Let \(e_k(x_1,\ldots,x_n)\) be the elementary symmetric function in~\(n\) variables and \(c(n,k)\) be the (signless) Stirling number of the first kind. Prove that 

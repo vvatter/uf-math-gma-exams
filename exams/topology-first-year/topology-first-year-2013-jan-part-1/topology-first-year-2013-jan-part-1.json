@@ -156,7 +156,13 @@
             "text": "What is a basis of a topology? Does the set of all half-open intervals \\(\\{(a,b], [b,c) \\mid a<b, c<d\\}\\) form a basis of a topology on \\(\\mathbb{R}\\)?"
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The displayed family of half-open intervals uses \\([b,c)\\), while its conditions include the otherwise unused variable \\(d\\). The intended endpoints or inequalities are not uniquely determined, so the source reading has been retained."
+          }
+        ]
       }
     },
     {

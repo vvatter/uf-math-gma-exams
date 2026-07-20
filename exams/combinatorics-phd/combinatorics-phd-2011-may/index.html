@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Combinatorics PhD Exam, May 2011</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(f(n)\) be the number of permutations of length \(n\) that have no cycle that is shorter than three.</p>
         <ol class="subparts">
           <li>
@@ -170,25 +176,25 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>We divide a group of \(n\) people into subgroups \(A\), \(B\), and \(C\), and ask each subgroup to form a line. We also require that \(A\) have an odd number of people, and that \(B\) have an even number of people. How many ways are there to do this?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(A\) be the graph obtained from \(K_n\) by deleting an edge. Find a formula for the number of spanning trees of \(A\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(X_n(p)\) be the number of cycles of the \(n\)-permutation \(p\). Compute \(\operatorname{VAR}(X_n)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Show that a planar graph for which every face has an even number of edges must be bipartite.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Recall that a tournament is a complete directed graph. Prove that there exists a tournament on eight vertices that contains at least 316 Hamiltonian paths.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>For which values of \(m\) and \(n\) is the complete bipartite graph \(K_{m,n}\) planar, for which values of \(m\) and \(n\) is it Hamiltonian, and for which values of \(m\) and \(n\) is it Eulerian?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove in a finite poset \(P\), the number of elements in the longest chain is equal to the smallest number \(k\) so that \(P\) can be decomposed into the union of \(k\) antichains.</p>
       </li>
     </ol>

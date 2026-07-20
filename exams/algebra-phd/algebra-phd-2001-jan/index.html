@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Time allowed: 240 minutes. Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb{Z}\), resp. \(\mathbb{Q}\), \(\mathbb{C}\), is the set of all integers, resp. of all rational numbers, of all complex numbers.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(G\) be a finite simple (abelian or non-abelian) group of order \(n\). Find the number of normal subgroups of \(G \times G\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that there is no simple group of order \(112\). (Caution: You are not allowed to use Burnside’s \(p^a q^b\)-Theorem.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(N\) be a minimal normal subgroup of a finite group \(G\). Assume \(N\) is solvable. Show that \(N\) is an elementary abelian \(p\)-group for some prime \(p\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(A, B\) be two matrices over a field \(F\). Suppose that \(\begin{pmatrix} A &amp; 0 \\ 0 &amp; A \end{pmatrix}\) is similar to \(\begin{pmatrix} B &amp; 0 \\ 0 &amp; B \end{pmatrix}\). Prove that \(A\) is similar to \(B\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Determine the Galois group over \(\mathbb{Q}\) of</p>
         <ol class="subparts">
           <li>
@@ -185,19 +191,19 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Is there any integer \(d\) such that: for any separable extension \(F\) of degree \(5\) of a field \(K\), if an extension \(E\) of \(K\) is a normal closure of \(F/K\) then \([E:K] \leq d\)? If yes, prove your bound. If not, justify why.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\xi \in \mathbb{C}\) be such that \(\xi^{2000}=3\). Show that \(-3\) is not a sum of squares in \(\mathbb{Q}(\xi)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove the Hilbert Basis Theorem: If \(R\) is a commutative Noetherian ring with identity, then so is \(R[x_1,x_2,\ldots,x_n]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(A\) be a finite dimensional (not necessarily commutative) \(\mathbb{C}\)-algebra with no zero divisors, but with identity. Show that \(\dim_{\mathbb{C}} A=1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -218,7 +224,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Suppose that \(R\) is a ring with identity.</p>
         <ol class="subparts">
           <li>

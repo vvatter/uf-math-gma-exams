@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -122,6 +128,9 @@ Suppose \(X,Y\) are random variables such that \(\mathrm E(X^2),\mathrm E(Y^2)<\
  Show that \(X=Y\) a.s.
 \end{examsubparts}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Part (b) is retained as printed, but its conclusion can fail for a nonconstant symmetric characteristic function when the sequence alternates in sign. Any intended additional restriction or alternative conclusion is not uniquely determined.
+\end{problemconcern}
 This problem has three parts.
 \begin{examsubparts}
 \item[\textnormal{a)}]

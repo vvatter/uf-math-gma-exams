@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do any 8 of the following 10 problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has four parts.</p>
         <ol class="subparts">
           <li>
@@ -189,7 +195,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -218,10 +224,10 @@ A=\begin{pmatrix}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose it is known that every eigenvalue of a matrix \(A\) is real. Suppose the power method with shifts is to be used to approximate the largest eigenvalue of \(A\). Explain how Gershgorin’s method can be used to aid in the choice of reasonable shifts.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -257,7 +263,7 @@ A=\begin{pmatrix}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -286,7 +292,7 @@ A=\begin{pmatrix}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>This problem has four parts.</p>
         <ol class="subparts">
           <li>
@@ -323,7 +329,7 @@ A=\begin{pmatrix}
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(f(x)\) be a real valued function on \(\mathbb{R}\) with a continuous 3rd derivative at each point. Assume also that \(f(x)\) has a simple root at \(x=p\).</p>
         <ol class="subparts">
           <li>
@@ -359,7 +365,7 @@ e^{-x_1x_2}+20x_3+9&amp;=0.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Consider the method \(y_{k+1}=y_{k-1}+\frac{h}{2}(3f_k+f_{k-1})\) for solving the initial value equation \(y&#x27;=f(x,y)\), \(y(0)=\alpha\).</p>
         <ol class="subparts">
           <li>
@@ -380,7 +386,7 @@ e^{-x_1x_2}+20x_3+9&amp;=0.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>This problem has three parts.</p>
         <ol class="subparts">
           <li>
@@ -409,7 +415,7 @@ e^{-x_1x_2}+20x_3+9&amp;=0.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

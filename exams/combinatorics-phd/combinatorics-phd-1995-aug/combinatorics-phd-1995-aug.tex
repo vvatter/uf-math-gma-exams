@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -97,6 +103,9 @@ State and prove Dilworth’s Theorem for a finite poset.
 \item
 Each of~\(n\) gentlemen checks both his hat and his umbrella at a restaurant. Both the hats and the umbrellas are returned randomly. What is the probability that no man gets back both his hat and his umbrella?
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The summation upper limit is clearly printed as~\(m\), but~\(m\) is otherwise undefined and no conditions are given under which the displayed identity holds. The source reading has been preserved because the intended correction is not uniquely determined.
+\end{problemconcern}
 Prove that 
 \[
 \sum_{i=0}^{m} \binom{s}{i}\binom{t}{k-i}=\binom{s+t}{k}.

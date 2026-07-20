@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(A \in \mathbb{C}^{m\times n}\) and \(B \in \mathbb{C}^{n\times p}\). Prove or provide a counterexample to the following statements. Justify each nontrivial step.</p>
         <ol class="subparts">
           <li>
@@ -173,7 +179,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Define the matrices \(A\) and \(B\) by</p>
         <div class="display-math">\[
 A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{pmatrix},\qquad B=\begin{pmatrix}1&amp;1&amp;0\\0&amp;1&amp;3\\0&amp;1&amp;3\\2&amp;0&amp;0\end{pmatrix}.
@@ -197,7 +203,7 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(\lVert\cdot\rVert\) be a subordinate (induced) matrix norm.</p>
         <ol class="subparts">
           <li>
@@ -224,10 +230,10 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(P\in\mathbb{C}^{m\times m}\) be a projector. Show that \(\lVert P\rVert_2=1\) if and only if \(P\) is an orthogonal projector.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose \(A\) is Hermitian positive definite.</p>
         <ol class="subparts">
           <li>
@@ -256,7 +262,7 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Consider \(I=\int_{-1}^{1}|x|\,dx=1\). Let \(T(h)\) be the composite trapezoidal rule approximation to \(I\), for \(h=2/n\), \(n\in\mathbb{N}\).</p>
         <ol class="subparts">
           <li>
@@ -277,7 +283,7 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -298,7 +304,7 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -323,7 +329,7 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \(x_0,x_1,\ldots,x_n\) be \(n+1\) distinct numbers. Let \(l_j(x)\) be the associated Lagrange basis polynomials, \(j=0,\ldots,n\).</p>
         <ol class="subparts">
           <li>
@@ -347,7 +353,7 @@ A=\begin{pmatrix}1&amp;2&amp;3\\2&amp;4&amp;6\\1&amp;2&amp;3\\2&amp;4&amp;6\end{
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>The Littlewood–Salem–Izumi constant \(\alpha_0\) is the unique solution \(\alpha_0\in(0,1)\) of</p>
         <div class="display-math">\[
 \int_0^{3\pi/2}\frac{\cos(t)}{t^\alpha}\,dt=0.

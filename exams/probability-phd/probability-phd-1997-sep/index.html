@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,7 +155,7 @@
       <h1>Probability PhD Exam, September 1997</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X\) and \(Y\) be independent and uniform on \([0,1]\). Find</p>
         <ol class="subparts">
           <li>
@@ -170,14 +176,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X_0,X_1,\ldots,X_n,\ldots\) be i.i.d. with mean \(m\). Let \(N\) be Poisson with mean \(\lambda\), independent of the \(X\)’s. Define</p>
         <div class="display-math">\[
 Y=X_0+\cdots+X_N.
 \]</div>
         <p>Prove that \(Y\) is integrable. Find \(E(Y)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>State precisely (all for i.i.d.):</p>
         <ol class="subparts">
           <li>
@@ -206,13 +212,13 @@ Y=X_0+\cdots+X_N.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Define a martingale relative to a filtration \(\{\mathcal F_n\}\), \(n=0,1,2,\ldots\). Define a stopping time relative to this filtration. State the optional sampling theorem. State and prove the martingale convergence theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>What is an infinitely divisible distribution on \(\mathbb R^1\)? Prove that a non-trivial infinitely divisible distribution cannot have compact support.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Define a standard Brownian Motion \(W\) starting at 0. Define new processes \(W_1,W_2,W_3\) by:</p>
         <div class="display-math">\[
 W_1(t)=cW\!\left(\frac{t}{c^2}\right),\qquad t\ge 0,\quad c\text{ real}\ne0,
@@ -229,7 +235,7 @@ W(t),&amp;\text{otherwise}.
 \]</div>
         <p>Show that \(W_1,W_2,W_3\) are the standard Brownian motions.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(\varphi(t)=\int e^{itx}\,\mu(dx)\) be a characteristic function where \(\mu\) is a probability measure on \(\mathbb R^1\).</p>
         <ol class="subparts">
           <li>
@@ -253,7 +259,7 @@ W(t),&amp;\text{otherwise}.
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(S_n=(U_n,V_n)\) denote the position after \(n\) steps of a random walk on \(\mathbb Z^2\), starting from \((0,0)\). Suppose that</p>
         <div class="display-math">\[
 U_{n+1}=U_n\pm1,
@@ -326,13 +332,13 @@ n!\approx\sqrt{2\pi n}\left(\frac ne\right)^n e^S
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Let \((P_t)_{t&gt;0}\) be a Markov semigroup. Assume \(P_t(x,dy)=p_t(x,y)\,dy\) with \(p_t(x,y)=p_t(y,x)\) and \(p_t(x,y)\le M(t)\), where \(M(t)\) is a constant depending on \(t\). If \(\mu\) is a finite signed measure, show that</p>
         <div class="display-math">\[
 \int p_t(x,y)\,\mu(dx)\mu(dy)\ge0.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>An urn at \(t=0\) contains \(R_0\) (\(\ge1\)) red balls and \(B_0\) (\(\ge1\)) black balls, and “random sampling with double replacement” is called out as follows:</p>
         <p>(i) Choose a ball at random (meaning that each ball in the urn has the same probability to be drawn), and note its color;</p>
         <p>(ii) Replace this ball in the urn together with an extra ball of the same color;</p>
@@ -359,7 +365,7 @@ P(M_\infty=M_0)&lt;1.
       <p>NOTE. You may quote without proof any martingale theorems you need, but should state them carefully.</p>
     </div>
     <ol class="problems" start="11">
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(X_n\) be independent and all distributed according to standard normal distribution. Find constants \(C_n\) such that</p>
         <div class="display-math">\[
 \limsup \frac{X_n}{C_n}=1\qquad\text{a.s.}

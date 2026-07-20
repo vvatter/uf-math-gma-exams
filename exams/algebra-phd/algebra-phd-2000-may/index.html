@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,14 +158,14 @@
       <p>Please work out seven out of the following eleven exercises. Please do not hand in more than seven.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(F\) denote the free group on the set \(X\). Prove that \(F/[F,F]\) is the free abelian group on the set \(X\). (Note: \([F,F]\) denotes the commutator subgroup of \(F\).)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Recall that a subgroup \(H\) of a product of groups \(G=\prod_{i\in I}G_i\) is said to be a subdirect product if, for each \(i\in I\), the restriction of the projection \(\pi_i:G\longrightarrow G_i\) to \(H\) is surjective.</p>
         <p>Let \(\mathcal V\) be a class of groups which is closed under the formation of subdirect products and homomorphic images. Prove that \(\mathcal V\) is also closed under formation of subgroups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(R\) be a ring with identity, and \(M\) be a left \(R\)-module. A projective basis for \(M\) is a subset \(\{a_i:i\in I\}\) of \(M\) together with \(R\)-homomorphisms \(f_i:M\longrightarrow R\) such that the following conditions hold. Prove that \(M\) is a projective module if and only if it has a projective basis.</p>
         <ol class="subparts">
           <li>
@@ -180,7 +186,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Suppose that \(G\) is a finite group and \(K\) is a field. Prove:</p>
         <ol class="subparts">
           <li>
@@ -201,7 +207,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(A\) be a commutative ring with identity, and suppose that \(M\) is an \(A\)-module, and \(I\) is an ideal of \(A\).</p>
         <ol class="subparts">
           <li>
@@ -226,13 +232,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Suppose that \(A\) is a commutative ring with identity. If every prime ideal of \(A\) is finitely generated, show that \(A\) is Noetherian.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State and prove the Hilbert Basis Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(K\) be a field.</p>
         <ol class="subparts">
           <li>
@@ -257,13 +263,13 @@ p\text{ and }q\text{ irreducible}\implies p=uq,
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Prove that the lattice of all ideals of a Dedekind domain is distributive. (Hint: Localize!)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Use the notion of formal derivatives to show that, if \(f(T)\) is an irreducible polynomial over the field \(F\), then it has repeated roots in the splitting field if and only if the characteristic of \(F\) is \(p&gt;0\), and \(f(T)=g(T^p)\), for some \(g(T)\in F[T]\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(p\) be a prime number.</p>
         <ol class="subparts">
           <li>

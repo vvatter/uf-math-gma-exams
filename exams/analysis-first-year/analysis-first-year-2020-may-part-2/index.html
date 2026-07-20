@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Answer FOUR questions in detail. State carefully any results used without proof.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(a&lt;b\) and let \(f:[a,b]\to\mathbb{R}\) be Riemann integrable. Prove that if \(\int_a^b f=0\), then for each positive integer \(n\) there exist \(c&lt;d\) in \([a,b]\) such that \(\sup\{f(t):c\leq t\leq d\}&lt;1/n\). Hence, or otherwise, prove that if \(f&gt;0\) throughout \([a,b]\), then \(\int_a^b f&gt;0\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \((x_n:n\geq 0)\) converge in the metric space \(X\) and let \((f_n:n\geq 0)\) be a sequence of continuous real-valued functions on \(X\).</p>
         <ol class="subparts">
           <li>
@@ -176,14 +182,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(f:[0,1]\to\mathbb{R}\) be continuous and assume that</p>
         <div class="display-math">\[
 \int_0^1 f(t)t^n\,dt=1/(n+1)
 \]</div>
         <p>for each integer \(n&gt;1\). Deduce as much as is possible about \(f\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((f_n:n\geq 0)\) be a sequence of measurable real-valued functions on some measurable space. Prove that each of the following sets is measurable:</p>
         <div class="display-math">\[
 A=\{\omega:f_n(\omega)\in[0,1]\text{ for finitely many }n\}
@@ -195,7 +201,7 @@ B=\{\omega:f_n(\omega)\in[0,1]\text{ for infinitely many }n\}
 C=\left\{\omega:\text{the series }\sum_{n=0}^{\infty}f_n(\omega)\text{ is absolutely convergent}\right\}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>For each positive integer \(n\), let \(f_n:[0,1]\to[0,1]\) be continuous; assume that \(f_n\to 0\) pointwise as \(n\to\infty\). Does it follow that</p>
         <div class="display-math">\[
 \int_0^1 f_n(t)\,dt\to 0\quad\text{as }n\to\infty?

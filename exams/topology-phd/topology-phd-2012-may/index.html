@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,19 +158,19 @@
       <p>Work the following problems and show all work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Does there exist a compact space that contains a discrete infinite subspace?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(X\) and \(Y\) be connected spaces and \(X,Y\) is not the one-point space. Show that \(X \times Y \setminus \{z\}\) is connected for any \(z \in X \times Y\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Prove that \((0,1)\) and \([0,1)\) are not homeomorphic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the 2-sphere \(S^2\) is not a retract of the projective plane, as well as the projective plane is not a retract of \(S^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(GL(n)\) be the space of all invertible real \(n \times n\)-matrices. IS \(GL_n\) is compact? connected?</p>
       </li>
     </ol>
@@ -172,34 +178,34 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Explain why every map \(S^n \to S^1\), \(n&gt;1\) is null-homotopic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>State the Lefschetz Fixed Point Theorem. Explain that every continuous map \(D^n \to D^n\) has a fixed point.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>State the Mayer–Vietoris sequence for homology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Show that the spaces \(S^2 \times S^2\) and \(S^2 \vee S^2 \vee S^4\) are not homotopy equivalent.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Does every function \(f:\mathbb{N}\to\mathbb{R}\) admits a continuous extension \(\bar f:\beta\mathbb{N}\to\mathbb{R}\) of the Stone–Čech compactification?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Formulate the Invariance of Domain Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Let \(M\) be a closed 4-dimensional simply connected manifold. What can you say about \(H_3(M)\)?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Does there exist a cover space of the figure eight that has the non-trivial abelian fundamental group?</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>Let \(X\) be a compact Hausdorff topological space. Describe all compact subsets of the space \(C(X,\mathbb{R})\) of continuous functions \(X\to\mathbb{R}\) in uniform topology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>State the Universal Coefficient Theorem for Cohomology.</p>
       </li>
     </ol>

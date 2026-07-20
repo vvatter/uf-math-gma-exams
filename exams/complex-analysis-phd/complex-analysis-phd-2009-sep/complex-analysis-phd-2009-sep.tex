@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -99,6 +105,9 @@ Evaluate the integral, and justify each step.
 \item
 Let~\(f\) be an entire function of finite order. Prove that if the order is not an integer, then~\(f\) must have infinitely many zeros. Does there exist an entire function of infinite order with finitely many zeros? Explain.
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} The statement is preserved as printed, but it overlooks the possible case \(g\equiv0\), for example when \(g_n\equiv1/n\). The intended correction is not uniquely determined: one could assume \(g\not\equiv0\) or conclude that~\(g\) is identically zero or has only real zeros.
+\end{problemconcern}
 Assume each \(g_n\) is entire and \(g_n\to g\) uniformly on compact sets in \(\mathbb C\) (i.e. \(g_n\to g\) in \(H(\mathbb C)\)). If each \(g_n\) has only real zeros, show that~\(g\) has only real zeroes.
 \item
 Assume that~\(f\) and~\(g\) are analytic and nonvanishing on \(\{z\in\mathbb C:|z|<2\}\) and that \(|f(z)|=|g(z)|\) when \(|z|=1\). Show that there is a constant \(\lambda\in\mathbb C\) with \(|\lambda|=1\) and \(f(z)=\lambda g(z)\) for all \(z\in B_2(0)\).

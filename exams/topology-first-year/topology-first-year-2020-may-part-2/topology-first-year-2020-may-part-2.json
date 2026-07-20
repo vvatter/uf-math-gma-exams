@@ -101,6 +101,12 @@
             "text": "compact open topology?",
             "subparts": []
           }
+        ],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The displayed definition is mathematically inconsistent over the stated real domain: \\(\\sqrt{x}\\) is not real-valued for negative \\(x\\). The intended correction to the domain or formula is not uniquely determined, so the source reading has been retained."
+          }
         ]
       }
     },

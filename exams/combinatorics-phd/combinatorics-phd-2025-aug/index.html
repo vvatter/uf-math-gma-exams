@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -149,26 +155,26 @@
       <h1>Combinatorics PhD Exam, August 2025</h1>
     </header>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Find the number of sequences of length \(n \leq 26\) of letters from the alphabet, each such sequence required to be in alphabetical order with no letter repeated.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(n \geq 3\) be an odd number. Prove that the sequence</p>
         <div class="display-math">\[
 \binom{n}{1},\binom{n}{2},\ldots,\binom{n}{\frac{n-1}{2}}
 \]</div>
         <p>contains an odd number of odd numbers.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Find a second order linear recurrence for the number of ways to properly 3-color an \(n\)-cycle. (No two adjacent vertices receive the same color.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>In a tournament, each player plays every other player exactly once, except in the process 3 players dropped out after playing exactly 2 games each. If 50 games were played, how many games were played just among the 3 players who dropped out? Explain your answer.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Suppose a convex polyhedron has 6 vertices and 12 edges. Prove that each facet is a triangle.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(A(n)\) be the number of set partitions of \([n]\) such that \(i\) and \(i+1\) never occur in the same block for any \(i=1,2,\ldots,n-1\). Show that</p>
         <div class="display-math">\[
 A(n)=\sum_{i=0}^{n-1}(-1)^i\binom{n-1}{i}B(n-i),
@@ -178,7 +184,7 @@ A(n)=\sum_{i=0}^{n-1}(-1)^i\binom{n-1}{i}B(n-i),
 A(n)=B(n-1).
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(P\) be a finite poset with a bottom element \(0\). Show that if \(x\) covers exactly one element of \(P\), then</p>
         <div class="display-math">\[
 \mu(x,0)=
@@ -189,7 +195,7 @@ A(n)=B(n-1).
 \]</div>
         <p>For any \(n\in\mathbb{Z}\), construct a poset containing an element \(x\) with \(\mu(x)=n\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Prove that a simple \(k\)-regular graph with girth \(k\) has order at least \(2k\).</p>
       </li>
     </ol>

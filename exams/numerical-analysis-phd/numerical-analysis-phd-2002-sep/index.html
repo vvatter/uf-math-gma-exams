@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do any 8 of the following 10 problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Consider a function \(f(x)\in C^2(\mathbb R)\) that satisfies the following properties:</p>
         <p>Using \(x_0=5/2\), do we know that Newton’s method will converge? If so, how many iterations are required to ensure \(10^{-4}\) accuracy?</p>
         <ol class="subparts">
@@ -174,7 +180,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \(x_0,\ldots,x_n\) be distinct real points. Let</p>
         <div class="display-math">\[
 P_n(x)=\sum_{j=0}^n c_j e^{jx}.
@@ -185,7 +191,7 @@ P_n(x_i)=y_i.
 \]</div>
         <p>(Hint: Reduce to an ordinary interpolation problem)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Suppose you want to solve numerically the ode</p>
         <div class="display-math">\[
 y&#x27;=f(x,y),\qquad y(0)=y_0.
@@ -221,7 +227,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,\qquad x_n=nh,\quad 
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -242,7 +248,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,\qquad x_n=nh,\quad 
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -266,7 +272,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,\qquad x_n=nh,\quad 
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(p\) and \(q\) be positive real numbers such that \(1/p+1/q=1\), and let \(\|\cdot\|_p\) for \(1\leq p\leq\infty\) denote the norm on \(m\times n\) matrices induced by the \(\ell^p\)-norm on vectors in \(\mathbb C^m\) and \(\mathbb C^n\).</p>
         <ol class="subparts">
           <li>
@@ -298,7 +304,7 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,\qquad x_n=nh,\quad 
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -319,16 +325,16 @@ y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,\qquad x_n=nh,\quad 
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>If \(\mathbf A\) is a square matrix, then \(e^{\mathbf A}\) is the matrix obtained by forming the Taylor expansion of \(e^x\) and replacing \(x\) by \(\mathbf A\). For any square matrix, show that \(\det e^{\mathbf A}\) is the product of the exponential of each eigenvalue of \(\mathbf A\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>If \(\mathbf A\) and \(\mathbf B\) are square invertible matrices and \(\mathbf u\) and \(\mathbf v\) are vectors with \(\mathbf A=\mathbf B-\mathbf u\mathbf v^{\mathsf T}\), obtain a formula for the scalar \(\alpha\) in the following identity relating the inverses of \(\mathbf A\) and \(\mathbf B\):</p>
         <div class="display-math">\[
 \mathbf A^{-1}=\mathbf B^{-1}+\alpha\mathbf B^{-1}\mathbf u\mathbf v^{\mathsf T}\mathbf B^{-1}.
 \]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(\mathbf A\) be an \(n\times n\) Hermitian positive definite matrix. Define</p>
         <div class="display-math">\[
 \|\mathbf y\|_{\mathbf A}=(\mathbf y^*\mathbf A\mathbf y)^{1/2},\qquad \text{for all }\mathbf y\in\mathbb C^n.

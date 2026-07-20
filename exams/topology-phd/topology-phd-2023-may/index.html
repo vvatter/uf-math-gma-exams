@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,10 +158,10 @@
       <p>Work the following problems and show all your work. Support all statements to the best of your ability.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(X\) be a set. A filter base at \(x\in X\) is a nonempty collection \(\mathcal{U}_x\) of subsets of \(X\) containing \(x\) such that whenever \(U,V\in\mathcal{U}_x\) there exists \(W\in\mathcal{U}_x\) with \(W\subset U\cap V\). Assume that \(X\) has a filter base at each \(x\in X\) and that if \(U\in\mathcal{U}_x\) and \(y\in U\) then \(U\in\mathcal{U}_y\). Prove that \(\mathcal{B}=\bigcup_{x\in X}\mathcal{U}_x\) is a base for a topology.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Consider the torus \(T=S^1\times S^1\) with the following \(\Delta\)-complex structure.</p>
         <figure class="problem-figure">
           <img src="topology-phd-2023-may.torus-delta-complex.png" alt="A square with vertices at its four corners and center. The center is joined to each corner, dividing the square into four triangular regions labeled T1 at the bottom, T2 at the right, T3 at the top, and T4 at the left. The four interior edges are labeled e1 through e4 and are directed outward from the center toward the corners. The top and bottom boundary edges are labeled a and point right; the left and right boundary edges are labeled b and point upward.">
@@ -187,13 +193,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{RP}^2\), as well as that \(\mathbb{RP}^2\) is not a retract of \(S^2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Assume \(n&gt;m\). Show that there are no maps from \(\mathbb{CP}^n\) to \(\mathbb{CP}^m\) that induces a nontrivial map \(H^2(\mathbb{CP}^m)\to H^2(\mathbb{CP}^n)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>A map \(i:A\to X\) has the homotopy extension property (HEP) for the space \(Y\) if for each homotopy \(h:A\times I\to Y\) and each map \(f:X\to Y\) with \(f(i(a))=h(a,0)\) there exists a homotopy \(H:X\times I\to Y\) with \(H(x,0)=f(x)\) for all \(x\in X\) and \(H(i(a),t)=h(a,t)\) for all \(a\in A\) and all \(t\in I\). We call \(H\) an extension of \(h\) with initial condition \(f\). The map \(i:A\to X\) is a cofibration if it has the HEP for all spaces.</p>
         <p>The mapping cylinder of \(i\), denoted \(Z(i)\), is the pushout of \(i:A\to X\) and the inclusion \(A\to A\times I\) given by \(a\mapsto(a,0)\).</p>
         <p>Prove that the following three statements about \(i\) are equivalent:</p>
@@ -229,34 +235,34 @@
       <p>Answer the following with complete definitions or statements or short proofs.</p>
     </div>
     <ol class="problems" start="6">
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Give the definition of a pushout and prove that if it exists then it is unique up to isomorphism.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>The Klein bottle, \(K\), may be obtained by taking two Möbius bands, \(M\), and identifying their boundary, \(K=M\cup_{\partial M}M\). Apply the Seifert–van Kampen theorem to give a presentation of the fundamental group of \(K\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Describe all of the two-fold coverings of \(S^1\vee S^1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Prove that for a finite CW-complex \(X\), \(H^1(X;\mathbb{Z})\) is torsion-free.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Compute the Euler characteristic of the manifold \(M=S^4\times\mathbb{RP}^2\times\mathbb{CP}^3\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>State the Baire Category Theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Prove that for \(n\ne m\), \(\mathbb{R}^n\) is not homeomorphic to \(\mathbb{R}^m\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>Give an example of a space that is connected but not path connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-14">
         <p>State the Urysohn Lemma.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-15">
         <p>Is \(\mathbb{R}^{\omega}\) connected in the uniform topology?</p>
       </li>
     </ol>

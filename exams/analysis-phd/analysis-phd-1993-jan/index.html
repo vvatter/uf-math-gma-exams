@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,33 +158,36 @@
       <p>Be sure to present all work in a neat and logical fashion in order to receive credit.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>State and prove the Radon–Nikodym theorem.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Let \((S,\Sigma,\mu)\) be a positive finite measure space. Prove that \(\left(L^1(S,\Sigma,\mu)\right)^*=L^\infty(S,\Sigma,\mu)\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Give the construction of the product measure \(\mu\times\nu\) on \(\mathcal S\otimes\mathcal W\), where \((X,\mathcal S,\mu)\) and \((Y,\mathcal W,\nu)\) are finite non negative measure spaces. (Be sure to prove that \(\mu\times\nu\) is countably additive.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \((S,\Sigma,\mu)\) be a positive measure space with \(\mu(S)=1\). Let \(\mathcal A\) and \(\mathcal B\) be a sub \(\sigma\)-algebras of \(\Sigma\). Suppose \(\mu(A\cap B)=\mu(A)\mu(B)\) for every \(A\in\mathcal A\) and \(B\in\mathcal B\). Show that \(\int fg\,d\mu=(\int f\,d\mu)(\int g\,d\mu)\), for \(f\geq 0\), \(g\geq 0\), where \(f\) is \(\mathcal A\)-measurable and \(g\) is \(\mathcal B\)-measurable.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \((S,\Sigma)\) be a measurable space, and suppose \(\mu\) and \(\nu\) are positive finite measures on \(\Sigma\). Suppose \(\mu\ll\nu\) and \(\nu\ll\mu\). Show that</p>
         <div class="display-math">\[\frac{d\mu}{d\nu}=\frac{1}{\dfrac{d\nu}{d\mu}}\quad\text{a.e. }\nu.\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
+        <div class="problem-concern" role="note">
+          <p><strong>Warning: Suspected error.</strong> The underlying space in the opening tuple appears to be printed as \(S_\infty\), but the integral and the later pointwise-convergence statement refer to \(S\). The intended symbol is uncertain, so the apparent source reading has been retained.</p>
+        </div>
         <p>Let \((S_\infty,\Sigma,\mu)\) be a finite measure space. Let \((f_n)_{n=1}^\infty\) be a sequence of integrable function such that</p>
         <div class="display-math">\[\sum_{n=1}^\infty\int_S |f_n|\,d\mu&lt;\infty.\]</div>
         <p>Does it follow that \(\sum f_n\) converges pointwise on \(S\) a.e. \(\mu\)? Show all details.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon&gt;0\). Is it possible to find a bounded interval \(I\) such that whenever \(E\) is a measurable set such that \(E\cap I=\varnothing\), then</p>
         <div class="display-math">\[\left|\int_E f\,dm\right|&lt;\epsilon?\]</div>
         <p>Show all work.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(f\) be Lebesgue integrable on \([0,1]\). Suppose that \(\int_0^x f\,dm=0\), for every \(x\in[0,1]\). What can you conclude about \(f\)? Prove your answer?</p>
       </li>
     </ol>

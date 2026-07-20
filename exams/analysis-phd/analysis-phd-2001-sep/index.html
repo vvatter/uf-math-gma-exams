@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -154,34 +160,34 @@
         <p>State the following theorems:</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-1">
           <p>The monotone class theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-2">
           <p>The Hahn decomposition theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-3">
           <p>The Egorov theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-4">
           <p>The Vitali convergence theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-5">
           <p>The Lebesgue convergence theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-6">
           <p>The Radon–Nikodym theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-7">
           <p>The Fubini theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-8">
           <p>The dual of \(L^p\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-9">
           <p>The Hahn–Banach theorem.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-10">
           <p>Integrability with respect to the measure \(g\mu\) defined by \(g\mu(A)=\int_A g\,d\mu\).</p>
         </li>
       </ol>
@@ -198,22 +204,22 @@
         <p>Solve the following problems. Let \((X,\Sigma,\mu)\) be a measure space.</p>
       </div>
       <ol class="problems" start="1">
-        <li class="problem">
+        <li class="problem" id="problem-11">
           <p>Let \(X,Y\) be normed spaces. Prove that if \(Y\) is complete, then \(L(X,Y)\) is complete.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-12">
           <p>Prove that if \(f:X\to\overline{\mathbb R}_+\) is \(\mu\)-measurable and \(\int f\,d\mu&lt;\infty\), then \(f&lt;\infty\), \(\mu\)-a.e.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-13">
           <p>If \(\mu(X)&lt;\infty\), \(f_n\in L^1(\mu)\), and \(f_n\to f\) uniformly, then \(f\in L^1(\mu)\) and \(f_n\to f\) in the mean.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-14">
           <p>Prove the existence of the conditional expectation \(E(f/\mathcal F)\) for functions \(f\in L^1(\mu)\), with respect to a \(\sigma\)-algebra \(\mathcal F\subset\Sigma\).</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-15">
           <p>Prove that if \(f\in L^1\) and \(\int_A f\,d\mu=0\) for \(A\) in a ring \(R\) generating the \(\sigma\)-algebra \(\Sigma\), then \(f=0\), \(\mu\)-a.e.</p>
         </li>
-        <li class="problem">
+        <li class="problem" id="problem-16">
           <p>Prove the existence of the product \(\mu\times\nu\) of two real valued measures.</p>
         </li>
       </ol>

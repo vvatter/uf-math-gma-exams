@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,7 +158,7 @@
       <p>Do seven of the following questions (the exam committee will NOT select your best seven answers if you answer more than seven). You may quote standard results (within reason) as long as you make it clear that you are doing so and you state them clearly.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>
@@ -173,13 +179,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>State and prove P. Hall’s Theorem that generalizes Sylow’s for finite solvable groups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(q\) be any positive integer. Prove that there exists a field with \(q\) elements if and only if \(q\) is a power of a prime. Show furthermore that if \(q\) is a power of a prime then there is, up to isomorphism, only one field with \(q\) elements.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Let \(p\) be a prime number, and \(G=T(n,p)\) be the group of all invertible \(n\times n\) matrices which are lower triangular, over the field \(\mathbb{F}_p\) with \(p\) elements.</p>
         <ol class="subparts">
           <li>
@@ -200,29 +206,29 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Prove: if a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: prove first that each prime is principal, use the Chinese Remainder Theorem).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>State and prove Hilbert’s Nullstellensatz. (You may use without proof the following Lemma: If \(F\) is an algebraically closed field extension of a field \(K\) and \(I\) is a proper ideal of \(K[x_1,\ldots,x_n]\), then the affine variety \(V(I)\) defined by \(I\) in \(F^n\) is nonempty.)</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(R\) be a commutative ring with 1. Prove that the set of all nilpotent elements is the intersection of all the prime ideals of \(R\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be a semisimple ring with 1. Prove that if \(R\) is Artinian it is also Noetherian. Give a counterexample to show that the converse is false.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Give an example of a ring \(R\) with 1 and a free \(R\)-module \(F\) possessing a submodule which is not free.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Let \(p(x)\) be a non-zero polynomial of degree \(n&gt;0\) in \(\mathbb{Q}[x]\), and let \(r_1,\ldots,r_n\) be its roots. Assume that all the roots are distinct. Consider the Galois group \(G\) of \(p(x)\) to be a permutation group on the roots, i.e. a subgroup of the symmetric group \(S_n\). Let</p>
         <div class="display-math">\[
 \Delta=\prod_{i&lt;j}(r_i-r_j).
 \]</div>
         <p>Prove that \(\Delta^2\in\mathbb{Q}\). Further prove that \(G\) is contained in the alternating group \(A_n\) if and only if \(\Delta^2\) is a square in \(\mathbb{Q}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(R\) be an associative ring.</p>
         <ol class="subparts">
           <li>

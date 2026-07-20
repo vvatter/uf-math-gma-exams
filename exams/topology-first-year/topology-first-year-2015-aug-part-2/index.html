@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -152,43 +158,43 @@
       <p>Answer all questions and work all problems.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(n&gt;1\). Suppose that \(f,g:X\to S^n\) are continuous such that \(f(x)\) and \(g(x)\) are not antipodal for all \(x\in X\). Show that \(f\) and \(g\) are homotopic.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Show that \(\pi_1(S^n,1)=0\) for all \(n&gt;1\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Show that \(\pi_1(S^1,1)=\mathbb{Z}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Show that the disk, \(D^2=\{z\in\mathbb{C}\mid \lVert z\rVert\leq 1\}\) has the fixed point property.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Consider the matrix \(M=\begin{bmatrix}2&amp;3\\1&amp;1\end{bmatrix}\). This represents a group homomorphism \(M:\mathbb{Z}^2\to\mathbb{Z}^2\). Show that there is a map \(f:\mathbb{T}^2\to\mathbb{T}^2\) such that \(f_*=M\), where \(f_*:\pi_1(\mathbb{T}^2)\to\pi_1(\mathbb{T}^2)\) is the homomorphism induced by \(f\) on the fundamental group.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Consider three loops \(f,g,h:[0,1]\to(X,x_0)\). Show that \((f\circ g)\circ h\) is homotopic to \(f\circ(g\circ h)\), where \(\circ\) denotes concatenation of loops.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Let \(n&gt;1\). Let \(P^n=S^n/D\), where \(D\) identifies \(x\) with its antipode for all \(x\in S^n\). Show that \(\pi_1(P^n,x_0)\cong\mathbb{Z}_2\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Describe a CW-complex \(X\) such that \(\pi_1(X,x_0)\cong\mathbb{Z}_3\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose that \(\pi_1(X,x_0)\cong\mathbb{Z}_2\) and that \(\pi_1(Y,y_0)\cong\mathbb{Z}_5\). Show that \(\pi_1(X\times Y,(x_0,y_0))\cong\mathbb{Z}_{10}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Suppose that \(X\) and \(Y\) are connected. Show that \(X\times Y\) is connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>Let \(n&gt;1\). Let \(A\subset\mathbb{R}^n\) be a countable set. Show that \(\mathbb{R}^n\setminus A\) is arcwise connected.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-12">
         <p>Let \(X=S^1\vee S^1\). Show that \(\pi_1(X)\cong\mathbb{Z}*\mathbb{Z}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-13">
         <p>State the following theorems.</p>
         <p>Seifert–van Kampen Theorem.</p>
         <p>The Urysohn Metrization Theorem</p>

@@ -51,6 +51,11 @@
     .problems { margin: 0; padding-left: 2.4rem; }
     .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
     .problem::marker { font-weight: 700; }
+    .problem-concern {
+      margin: 0 0 .8rem;
+      color: #7a1f1f;
+    }
+    .problem-concern > :last-child { margin-bottom: 0; }
     .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
     .problem-figure { margin: 1rem 0; }
     .problem-figure img {
@@ -130,6 +135,7 @@
       .instructions { margin: .4rem 0 .55rem; }
       .problems { padding-left: 1.75rem; }
       .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-concern { margin: 0 0 .3rem; color: #651818; break-after: avoid; }
       .problem-figure { margin: .3rem 0; break-inside: avoid; }
       .subparts { margin-top: .18rem; }
       .subparts .subparts { margin-left: 1.4rem; }
@@ -155,20 +161,20 @@
       <p>Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.</p>
     </div>
     <ol class="problems" start="1">
-      <li class="problem">
+      <li class="problem" id="problem-1">
         <p>Let \(q&gt;1\) be a power of a prime \(p\). Prove that there exists some field \(F\) with \(|F|=q\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-2">
         <p>Determine the Galois group of \(x^4-5\) over \(\mathbb{Q}\), over \(\mathbb{Q}(\sqrt{5})\), and over \(\mathbb{Q}(\sqrt{5}\,i)\). Justify your answers.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-3">
         <p>Let \(R\) be an integral domain, let \(D\) be a divisible \(R\)-module, and let \(T\) be a torsion \(R\)-module. Prove that \(D\otimes_R T=\{0\}\).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-4">
         <p>Prove that the group \(G\) which is described below using generators and relations is not solvable.</p>
         <div class="display-math">\[G=\langle x,y\mid x^6=y^2=1\rangle\]</div>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-5">
         <p>Let \(R\) be a ring with identity.</p>
         <ol class="subparts">
           <li>
@@ -197,13 +203,13 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-6">
         <p>Let \(K\) be a field. Show that any vector space over \(K\) has a basis (do not assume the vector space has finite dimension).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-7">
         <p>Prove: If a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: Prove first that each prime ideal is principal, use the Chinese Remainder Theorem).</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-8">
         <p>Let \(R\) be a integral domain.</p>
         <ol class="subparts">
           <li>
@@ -224,7 +230,7 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-9">
         <p>Suppose \(R\subseteq S\) are integral domains and let \(s\in S\). Prove that the following are equivalent:</p>
         <ol class="subparts">
           <li>
@@ -253,14 +259,14 @@
           </li>
         </ol>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-10">
         <p>Suppose \(R\) is a ring with identity (not necessarily commutative), \(M\) is a right \(R\)-module and</p>
         <div class="display-math">\[N&#x27;\longrightarrow N\longrightarrow N&#x27;&#x27;\longrightarrow 0\]</div>
         <p>is an exact sequence of left \(R\)-modules. Show that</p>
         <div class="display-math">\[M\otimes_R N&#x27;\longrightarrow M\otimes_R N\longrightarrow M\otimes_R N&#x27;&#x27;\longrightarrow 0\]</div>
         <p>is an exact sequence of abelian groups.</p>
       </li>
-      <li class="problem">
+      <li class="problem" id="problem-11">
         <p>This problem has two parts.</p>
         <ol class="subparts">
           <li>

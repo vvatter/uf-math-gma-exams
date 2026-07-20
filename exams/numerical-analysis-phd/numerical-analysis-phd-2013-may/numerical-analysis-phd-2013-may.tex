@@ -30,6 +30,12 @@
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
+\definecolor{ProblemConcern}{HTML}{7A1F1F}
+\newenvironment{problemconcern}{%
+  \par\tagstructbegin{tag=Aside}\begingroup\color{ProblemConcern}
+}{%
+  \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
+}
 \newenvironment{examproblems}[1]{%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
@@ -81,6 +87,9 @@ Do 5 of 7
 \end{examinstructions}
 \begin{examproblems}{0}
 \item
+\begin{problemconcern}
+\textbf{Warning: Suspected error.} Part (v) asks for quadratic convergence under continuous differentiability and \(g'(\alpha)=0\). Those assumptions generally imply superlinear, but not necessarily quadratic, convergence; a stronger regularity assumption may be missing, but the intended correction is not uniquely determined.
+\end{problemconcern}
 (General Fixed Point Theory) Assume that \(g(x)\) is continuously differentiable on \([a,b]\), that \(g([a,b])\subseteq [a,b]\), and that 
 \[
 \lambda=\max_{a\leq x\leq b}|g'(x)|<1.

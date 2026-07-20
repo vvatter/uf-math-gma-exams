@@ -119,7 +119,13 @@
             "text": "Let \\(G\\) be both a group and a smooth manifold; suppose that the group operation \\(p:G\\times G\\to G\\) is smooth. By considering the function\n\\[\nf:G\\times G\\to G\\times G:(x,y)\\mapsto(x,p(x,y))\n\\]\nor otherwise, prove that the inversion map \\(G\\to G:g\\mapsto g^{-1}\\) is smooth. [It may be assumed that the tangent map of \\(p\\) at \\((a,b)\\) is given by\n\\[\n\\xi\\in T_aG,\\ \\eta\\in T_bG\\Rightarrow p_*(\\xi,\\eta)=\\lambda_*^a\\eta+\\rho_*^b\\xi,\n\\]\nwhere \\(\\lambda^a:G\\to G\\times G:y\\mapsto(a,y)\\) and \\(\\rho^b:G\\to G\\times G:x\\mapsto(x,b)\\).]"
           }
         ],
-        "subparts": []
+        "subparts": [],
+        "concerns": [
+          {
+            "status": "suspected",
+            "explanation": "The displayed tangent-map formula is type-inconsistent with the definitions that follow it. The maps \\(\\lambda^a\\) and \\(\\rho^b\\) are defined as maps into \\(G\\times G\\), so their tangent vectors lie in \\(T_{(a,b)}(G\\times G)\\), while \\(p_*(\\xi,\\eta)\\) lies in \\(T_{p(a,b)}G\\). More than one repair is possible, so the source reading has been retained."
+          }
+        ]
       }
     },
     {
