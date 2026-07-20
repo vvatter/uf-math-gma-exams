@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Logic PhD Exam, May 2006},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2006\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Logic PhD Exam, May 2006}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Please complete seven problems among the following, including one from each section.
+\end{examinstructions}
+\section{1. General logic}
+\begin{examproblems}{0}
+\item
+State the incompleteness theorem and explain the role of Gödel numbering in its proof.
+\item
+Sketch the proof of the completeness theorem for first order logic.
+\item
+Sketch the proof of Tarski’s undefinability of truth.
+\end{examproblems}
+\section{2. Model theory}
+\begin{examproblems}{3}
+\item
+Prove that the theory of dense linear orders without endpoints is complete.
+\item
+Find two models which are elementarily equivalent but not isomorphic.
+\item
+State and prove Tarski’s criterion for elementary submodels.
+\end{examproblems}
+\section{3. Set theory}
+\begin{examproblems}{6}
+\item
+Sketch the proof of~\(L\) satisfying CH.
+\item
+Prove from Martin’s Axiom that every set of reals of size \(\aleph_1\) has Lebesgue measure zero.
+\item
+Prove that every stationary subset of \(\omega_1\) can be split into \(\aleph_1\) many pairwise disjoint stationary subsets.
+\end{examproblems}
+\section{4. Computability}
+\begin{examproblems}{9}
+\item
+Show how to construct a simple recursively enumerable set~\(A\) (meaning that \(\omega-A\) has no infinite r.e. subset).
+\item
+Define the recursively enumerable set \(K=\{a:\{a\}(a)\mathord{\downarrow}\}\). Use the \(S_1^1\) function to show that~\(K\) is many-one complete.
+\item
+Prove that the following are equivalent, for any nonempty \(A\subset\omega\):
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(A\) is the domain of some partial recursive function~\(\phi\).
+\item[\textnormal{(b)}]
+\(A\) is the range of some (total) recursive function~\(f\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,221 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-1999-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 1999,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_1999_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Please do 7 out of the 11 problems below."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "An algebraic extension field \\(F\\) of \\(K\\) is said to be normal over \\(K\\) if every irreducible polynomial in \\(K[x]\\) that has a root in \\(F\\) actually splits in \\(F[x]\\). Prove that an algebraic extension \\(F\\) of \\(K\\) is normal over \\(K\\) if and only if for every irreducible \\(f\\in K[x]\\), \\(f\\) factors in \\(F[x]\\) as a product of irreducible factors all of which have the same degree."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Show that the additive group of rationals \\(\\mathbb Q\\) is not free.",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "Show that the group \\(\\mathbb Q^+\\) of all positive rationals (under multiplication) is free abelian with basis \\(\\{p:p\\text{ is prime in }\\mathbb Z\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that any simple group \\(G\\) of order 60 is isomorphic to \\(A_5\\). (If you want, you may use the fact that for each \\(n\\geq 2\\), \\(A_n\\) is the only subgroup of \\(S_n\\) of index 2.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain and for each maximal ideal \\(M\\), consider the localization \\(R_M\\) as a subring of the quotient field of \\(R\\). Show that \\(\\bigcap R_M=R\\), where the intersection is taken over all maximal ideals \\(M\\) of \\(R\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Define solvable group.",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "Prove that any group of order 48 is solvable (without using Burnside’s \\((p,q)\\)-Theorem).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring. Show that the following conditions on an \\(R\\)-module \\(P\\) are equivalent."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i).",
+            "text": "\\(P\\) is projective.",
+            "subparts": []
+          },
+          {
+            "label": "(ii).",
+            "text": "Every short exact sequence\n\\[\n0\\to A\\xrightarrow{f}B\\xrightarrow{g}P\\to 0\n\\]\nis split exact.",
+            "subparts": []
+          },
+          {
+            "label": "(iii).",
+            "text": "There is a free module \\(F\\) and an \\(R\\)-module \\(K\\) such that \\(F\\cong K\\oplus P\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(C\\) and \\(D\\) be categories, and let \\(S\\) and \\(T\\) be covariant functors from \\(C\\) to \\(D\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Define a natural isomorphism \\(\\alpha:S\\to T\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "If \\(B\\) is a unitary left module over a ring \\(R\\) with identity, show that there is a “natural” isomorphism of modules\n\\[\n\\alpha_B:R\\otimes_R B\\cong B.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a commutative ring with identity."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Let \\(\\mathcal A\\) be an ideal in \\(R\\), and assume that \\(M\\) is a finitely generated \\(R\\)-module such that \\(\\mathcal A.M=M\\). Show that there is some \\(a\\in\\mathcal A\\) satisfying \\((1+a)M=0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "Let \\(M\\) be a finitely-generated \\(R\\)-module. Show that \\(J(R).M=M\\) implies \\(M=\\{0\\}\\). (Here, \\(J(R)\\) denotes the Jacobson radical of \\(R\\).)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Show that if \\(R\\) is a unique factorization domain, then \\(R\\) is integrally closed.",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "Find the integral closure of \\(\\mathbb C[x^5,x^7]\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Show that \\(\\mathbb C[x,y]/(xy-1)\\) (quotient of polynomial ring in 2 variables) is not isomorphic to \\(\\mathbb C[t]\\) (polynomial ring in 1 variable).",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "Show that the set\n\\[\n\\{(m,n):m,n\\in\\mathbb Z\\}\n\\]\nis not an algebraic variety in \\(\\mathbb C^2\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a).",
+            "text": "Find the Galois group of \\(K:\\mathbb Q\\), where \\(K\\) is a splitting field over \\(\\mathbb Q\\) for \\(t^4+t^2-6\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b).",
+            "text": "Write down the subgroups of the Galois group.",
+            "subparts": []
+          },
+          {
+            "label": "(c).",
+            "text": "Write down the corresponding fixed fields.",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2017-jan-part-2",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2017,
+  "month": "january",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Algebra-Part_2-2017_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a nonzero commutative ring with identity. Show that \\(R\\) has a minimal prime ideal, i.e. a prime ideal not containing any other prime ideal."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Which of the following polynomials are irreducible? Explain."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(X^3+X+1\\) in \\(\\mathbb{F}_2[X]\\);",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(X^3+X+1\\) in \\(\\mathbb{Q}[X]\\);",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(X^5+6X^2+9X+3\\) in \\(\\mathbb{Q}[X]\\);",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that a nonzero ring \\(R\\) with identity (not necessarily commutative) is a division ring if and only if its only left ideals are \\(0\\) and \\(R\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Define what it means for an element of \\(R\\) to be irreducible.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Define what it means for an element of \\(R\\) to be prime.",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Show that a prime element is irreducible.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(F\\) is a field and \\(V\\) is an \\(F\\)-vector space. Denote by \\(V'\\) the dual of \\(V\\), i.e. the \\(F\\)-vector space of linear maps \\(V\\to F\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(\\dim_F V<\\infty\\), then \\(V\\simeq V'\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\(V\\) has infinite dimension, then \\(V\\not\\simeq V'\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that if \\(L/K\\) and \\(E/L\\) are algebraic extensions of fields, then so is \\(E/K\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that \\(GL_3(\\mathbb{F}_2)\\) has two conjugacy classes of elements of order \\(7\\), and find representatives of each."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

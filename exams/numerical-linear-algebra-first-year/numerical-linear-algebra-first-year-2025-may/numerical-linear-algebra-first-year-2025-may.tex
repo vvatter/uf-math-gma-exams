@@ -1,0 +1,139 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Linear Algebra First-Year Exam, May 2025},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, May 2025\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Linear Algebra First-Year Exam, May 2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Assume \(A \in \mathbb{C}^{m\times m}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that~\(A\) has a Schur decomposition.
+\item[\textnormal{(b)}]
+If~\(A\) is normal, show that~\(A\) is diagonalizable.
+\end{examsubparts}
+\item
+Suppose~\(A\) is Hermitian positive definite.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that each principal submatrix of~\(A\) is Hermitian positive definite.
+\item[\textnormal{(b)}]
+Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
+\item[\textnormal{(c)}]
+Prove that~\(A\) has a Cholesky decomposition.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(\lVert x\rVert_\infty\) is equivalent to \(\lVert x\rVert_2\) for all \(x\in\mathbb{R}^n\). That is to find~\(C\) and~\(c\) such that \(c\lVert x\rVert_\infty\leq \lVert x\rVert_2\leq C\lVert x\rVert_\infty\), for all \(x\in\mathbb{R}^n\). Note that the constants should be determined so that the equalities hold for some nonzero \(x\in\mathbb{R}^n\).
+\item[\textnormal{(b)}]
+Show that \(\lVert QA\rVert_2=\lVert A\rVert_2\) if~\(Q\) is a unitary matrix.
+\end{examsubparts}
+\item
+Assume that \(A\in\mathbb{C}^{n\times n}\) and there exists \(p\geq 1\) such that \(\lVert A\rVert_p<1\), where \(\lVert\cdot\rVert_p\) is a vector-induced matrix norm.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(I-A\) is invertible.
+\item[\textnormal{(b)}]
+Prove that 
+\[
+(I-A)^{-1}=\sum_{k=0}^{\infty}A^k.
+\]
+\item[\textnormal{(c)}]
+Prove that \(\lVert A\rVert_q\lVert A^{-1}\rVert_q\geq 1\), \(\forall\,1\leq q\leq\infty\).
+\item[\textnormal{(d)}]
+Prove that 
+\[
+\frac{1}{1+\lVert A\rVert_p}\leq \lVert(I-A)^{-1}\rVert_p\leq\frac{1}{1-\lVert A\rVert_p}.
+\]
+\end{examsubparts}
+\item
+Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column~\(j\) of~\(U\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose \(\operatorname{rank}(A)=p<n<m\). Show \(\{u_1,u_2,\ldots,u_p\}\) is a basis for \(\operatorname{Col}(A)\) and \(\{u_{p+1},u_{p+2},\ldots,u_m\}\) is a basis for \(\operatorname{Null}(A^*)\).
+\item[\textnormal{(b)}]
+Suppose~\(A\) is full rank and \(x\neq 0\). Let \(\sigma_i\), \(i=1,\ldots,n\), be the singular values of~\(A\). Show 
+\[
+\sigma_1\geq\frac{\lVert Ax\rVert_2}{\lVert x\rVert_2}\geq\sigma_n>0.
+\]
+ If you want to use the property that \(\lVert A\rVert_2=\sigma_1\), then you must prove that it holds.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

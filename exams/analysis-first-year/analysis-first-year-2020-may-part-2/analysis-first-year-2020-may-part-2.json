@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2020-may-part-2",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2020,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5312-May_2020.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(a<b\\) and let \\(f:[a,b]\\to\\mathbb{R}\\) be Riemann integrable. Prove that if \\(\\int_a^b f=0\\), then for each positive integer \\(n\\) there exist \\(c<d\\) in \\([a,b]\\) such that \\(\\sup\\{f(t):c\\leq t\\leq d\\}<1/n\\). Hence, or otherwise, prove that if \\(f>0\\) throughout \\([a,b]\\), then \\(\\int_a^b f>0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((x_n:n\\geq 0)\\) converge in the metric space \\(X\\) and let \\((f_n:n\\geq 0)\\) be a sequence of continuous real-valued functions on \\(X\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that if the sequence of functions is uniformly convergent, then \\((f_n(x_n):n\\geq 0)\\) is convergent.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show by example that if uniformly is replaced by pointwise, then \\((f_n(x_n):n\\geq 0)\\) may not converge.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:[0,1]\\to\\mathbb{R}\\) be continuous and assume that\n\\[\n\\int_0^1 f(t)t^n\\,dt=1/(n+1)\n\\]\nfor each integer \\(n>1\\). Deduce as much as is possible about \\(f\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((f_n:n\\geq 0)\\) be a sequence of measurable real-valued functions on some measurable space. Prove that each of the following sets is measurable:\n\\[\nA=\\{\\omega:f_n(\\omega)\\in[0,1]\\text{ for finitely many }n\\}\n\\]\n\\[\nB=\\{\\omega:f_n(\\omega)\\in[0,1]\\text{ for infinitely many }n\\}\n\\]\n\\[\nC=\\left\\{\\omega:\\text{the series }\\sum_{n=0}^{\\infty}f_n(\\omega)\\text{ is absolutely convergent}\\right\\}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "For each positive integer \\(n\\), let \\(f_n:[0,1]\\to[0,1]\\) be continuous; assume that \\(f_n\\to 0\\) pointwise as \\(n\\to\\infty\\). Does it follow that\n\\[\n\\int_0^1 f_n(t)\\,dt\\to 0\\quad\\text{as }n\\to\\infty?\n\\]\nDoes your answer change if continuous is replaced by Riemann integrable?"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

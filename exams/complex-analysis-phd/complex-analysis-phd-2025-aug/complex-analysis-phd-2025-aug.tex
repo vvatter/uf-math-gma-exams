@@ -1,0 +1,102 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, August 2025},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, August 2025\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, August 2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer SIX of the following eight questions. Explain your work in a precise and logical way. Any standard result may be used without proof but must be stated clearly and correctly. Throughout the exam, \(\mathbb{D}\) is the open unit disk in~\(\mathbb{C}\).
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(f\) be an analytic function on some open connected domain~\(G\) and suppose that there exists an \(a\in\mathbb{C}\) such that \(f(z)=a\) has uncountably many solutions in~\(G\). What can be said about~\(f\)?
+\item
+State Morera’s theorem and use it to prove that if \(\{f_n\}\subset H(\mathbb{D})\) is a sequence of analytic functions that converges locally uniformly on~\(\mathbb{D}\) to a function~\(f\), then~\(f\) is analytic.
+\item
+Determine all entire functions~\(f\) that satisfy \(f(f(z))=z\).
+\item
+Let \(p(z)=z^4+3z^3-1\). Is \(1/p(z)\) analytic on the annulus \(1<|z|<4\)?
+\item
+Evaluate the following improper integral: 
+\[
+\int_0^\infty \frac{1}{1+x^4}\,dx
+\]
+\item
+Let~\(f\) be a nonconstant entire function that is periodic with nonzero period \(0\ne T\in\mathbb{C}\). Prove that \(f(z)-z=0\) has infinitely many solutions.
+\item
+Determine an explicit analytic bijection from \(\mathbb{D}\cap\{z:\operatorname{im}(z)>0\}\) to~\(\mathbb{D}\).
+\item
+Let~\(G\) be an open domain and let \(\{f_n\}\subset H(G)\). Also let~\(f\) be a nonconstant function such that \(f_n\to f\) in \(H(G)\). Let \(a\in G\) and set \(\alpha=f(a)\). Show that there is a sequence \(\{a_n\}\subset G\) such that \(a_n\to a\) and \(f_n(a_n)=\alpha\) for all~\(n\) sufficiently large.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "id": "logic-phd-2023-jan",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2023,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Logic-2023_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Solve 5 problems of the following; at least one from each section."
+    },
+    {
+      "type": "section",
+      "heading": "A. Set Theory.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(X\\) be an uncountable set. Let \\(f:X\\to[X]^{<\\aleph_0}\\) be a function. Show that there are distinct points \\(x_0,x_1\\in X\\) such that \\(x_0\\notin f(x_1)\\) and \\(x_1\\notin f(x_0)\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(P\\) be a forcing and \\(\\kappa\\) be a regular cardinal larger than \\(|P|\\). Show that \\(P\\Vdash\\check{\\kappa}\\) is a cardinal."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "What is the perfect set theorem in descriptive set theory? State it and prove it."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "B. Computability.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Choose one of the standard definitions of a recursive function, and show that the increasing enumeration of the Fibonacci numbers (defined by \\(f(0)=0\\), \\(f(1)=1\\) and \\(f(n+2)=f(n)+f(n+1)\\)) is a recursive function."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Provide an example of sets \\(A,B\\subseteq\\mathbb{N}\\) such that \\(A\\) is Turing reducible to \\(B\\) but not many-one reducible to the complement of \\(B\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that a simple c.e. set exists, where a set \\(A\\subseteq\\mathbb{N}\\) is simple if the complement of \\(A\\) has no infinite c.e. subset."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "C. Model theory.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(\\mathcal{L}\\) be a language containing two binary relational symbols \\(E_0,E_1\\). Let \\(T\\) be the theory stating that \\(E_0,E_1\\) are equivalence relations and \\(E_0\\subseteq E_1\\). Let \\(\\mathcal{F}\\) be the class of finite models of \\(T\\). Show that \\(\\mathcal{F}\\) is a Fraïssé class and provide a simple description of its limit."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State the Łoś theorem and prove it."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Find a complete theory with more than one countably infinite model up to isomorphism. Provide two nonisomorphic countable models of the theory."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    }
+  ]
+}

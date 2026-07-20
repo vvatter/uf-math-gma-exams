@@ -1,0 +1,118 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, January 2022, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2022, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, January 2022, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that the torus~\(T\) is not homeomorphic to the surface of genus 2, \(M_2=T\mathbin{\#}T\).
+\item
+Prove that the set of irrational numbers \(\mathcal I\subset\mathbb R\) cannot be presented as a countable union of closed sets each of which has empty interior in \(\mathcal I\).
+\item
+Prove that \(\pi_1(S^1)=\mathbb Z\).
+\item
+Let \(CX\) denote the cone over the~\(n\)-point space \(X=\{1,\ldots,n\}\). Show that every continuous map \(f:CX\to CX\) has a fixed point.
+\item
+Show that the fundamental group of \(M=K\mathbin{\#}T\) is not abelian where~\(K\) is the Klein bottle.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Show that every map \(f:S^2\to\prod_{\alpha\in J}S^1\) of the 2-sphere to the product of circles is null-homotopic.
+\item
+Show that for a retraction \(r:X\to A\) the induced map \(r_\#\) on fundamental groups is surjective.
+\item
+Which of the following spaces taken with the product topology are locally compact? separable? Here \(I=[0,1]\) and \(\mathbb N\) is the set of natural numbers.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\mathbb N^{\mathbb N}\);
+\item[\textnormal{(b)}]
+\(I^{\mathbb N}\);
+\item[\textnormal{(c)}]
+\(\mathbb N^I\);
+\item[\textnormal{(d)}]
+\(I^I\).
+\end{examsubparts}
+\item
+State the Seifert–van Kampen Theorem. Can it be used to compute the fundamental group of \(S^1\)?
+\item
+Show that \(S^2\) is not homeomorphic to \(S^4\).
+\end{examproblems}
+\end{document}

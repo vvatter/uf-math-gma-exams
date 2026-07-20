@@ -1,0 +1,100 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, September 1989},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, September 1989\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, September 1989}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+State the exact homology sequence of a pair.
+\item
+Describe all coverings of the torus \(T^2=S^1\times S^1\).
+\item
+State the Lefschetz fixed point theorem for compact simplicial complexes.
+\item
+State Tietze’s extension theorem for normal spaces.
+\item
+Let \(K=K_1\cup K_2\) be a simplicial complex with \(K_1\) and \(K_2\) subcomplexes, and let \(A=K_1\cap K_2\). State the Mayer–Vietoris sequence for this.
+\item
+Let~\(X\) be the set of points in the plane which is the closure of the set \(S=\{(x,\sin(1/x))\mid 0<x\leq 1\}\). Show that there is no continuous mapping \(f:[0,1]\to X\) which is onto.
+\item
+Prove that a compact Hausdorff space is normal.
+\item
+Let \(f,g:X\to S^n\) be any continuous mappings. Suppose that for all \(x\in X\), \(f(x)\) and \(g(x)\) are not antipodal. Show that~\(f\) and~\(g\) are homotopic.
+\item
+Use the van Kampen theorem to compute the fundamental group of the surface of genus 2.
+\item
+Give an example of a space~\(X\) for which \(\pi_1(X,x_0)\) is not finitely generated.
+\end{examproblems}
+\end{document}

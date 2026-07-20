@@ -1,0 +1,125 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Linear Algebra First-Year Exam, January 2018},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, January 2018\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Linear Algebra First-Year Exam, January 2018}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Assume \(A \in \mathbb{R}^{m,n}\) with \(m \geq n\), \(\operatorname{rank}(A)=n\), and \(b \in \mathbb{R}^m\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the least squares solution to \(Ax=b\).
+\item[\textnormal{(b)}]
+Derive the normal equations for the least squares problem.
+\item[\textnormal{(c)}]
+Prove that \(A^T A\) is invertible.
+\item[\textnormal{(d)}]
+Prove that the unique solution to the least squares problem is \((A^T A)^{-1}A^T b\).
+\item[\textnormal{(e)}]
+Describe how to solve the least squares problem using the QR decomposition of~\(A\).
+\end{examsubparts}
+\item
+Define a normal matrix and prove that the following are equivalent.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(A\) is normal.
+\item[\textnormal{(b)}]
+\(\lVert Ax\rVert_2=\lVert A^*x\rVert_2\) for every~\(x\).
+\item[\textnormal{(c)}]
+\(A\) is unitarily diagonalizable.
+\end{examsubparts}
+\item
+Assume \(A \in \mathbb{R}^{m,m}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(\langle x,y\rangle_A=x^*Ay\) is an inner product on \(\mathbb{R}^m\) if and only if~\(A\) is symmetric and positive definite.
+\item[\textnormal{(b)}]
+Assume now that~\(A\) is symmetric and positive definite. If \(x_*\) is the solution to \(Ax=b\) and \(\{p_1,\ldots,p_m\}\) is an orthonormal basis for \(\mathbb{R}^m\) with respect to \(\langle\ ,\ \rangle_A\) and \(x_*=\sum c_i p_i\), give a formula for the \(c_i\).
+\end{examsubparts}
+\item
+If \(q_1,\ldots,q_n\) is an orthonormal basis for the subspace \(V \subset \mathbb{C}^m\) with \(m>n\), prove that the orthogonal projector onto~\(V\) is \(QQ^*\), where~\(Q\) is the matrix whose columns are the \(q_j\).
+\item
+Assume \(A \in \mathbb{C}^{m,m}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that~\(A\) has a Schur decomposition.
+\item[\textnormal{(b)}]
+If~\(A\) has a collection of~\(m\) linearly independent eigenvectors, show that~\(A\) is diagonalizable.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

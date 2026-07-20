@@ -1,0 +1,257 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Variational Analysis/Numerical Optimization PhD Exam, August 2025},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-optimization-phd/}{Variational Analysis/Numerical Optimization PhD Exam}, August 2025\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Variational Analysis/Numerical Optimization PhD Exam, August 2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 8 problems, 4 from problems 1–5 and 4 from problems 6–10.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Recall that \(f:\mathbb R^n\to\mathbb R\) is convex with modulus \(\theta\geq 0\) if and only if 
+\[
+f[(1-\alpha)\mathbf x+\alpha\mathbf y]\leq (1-\alpha)f(\mathbf x)+\alpha f(\mathbf y)+\frac{\theta\alpha(\alpha-1)}{2}\|\mathbf y-\mathbf x\|^2
+\]
+ for all \(\mathbf x,\mathbf y\in\mathbb R^n\) and \(\alpha\in[0,1]\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(f\) is continuously differentiable, then show that~\(f\) is convex with modulus \(\theta\geq 0\) if and only if 
+\[
+f(\mathbf y)\geq f(\mathbf x)+\nabla f(\mathbf x)(\mathbf y-\mathbf x)+\frac{\theta}{2}\|\mathbf y-\mathbf x\|^2
+\]
+ for all \(\mathbf x,\mathbf y\in\mathbb R^n\).
+\item[\textnormal{(b)}]
+If~\(f\) is twice continuously differentiable, then show that~\(f\) is convex with modulus \(\theta\geq 0\) if and only if the smallest eigenvalue of \(\nabla^2f\) is \(\geq\theta\).
+\end{examsubparts}
+\item
+Suppose \(f:\mathcal K\to\mathbb R\) where \(\mathcal K\subset\mathbb R^n\) is a convex set.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(\mathbf x^*\) is a local minimizer of~\(f\), then show that 
+\[
+\nabla f(\mathbf x^*)(\mathbf x-\mathbf x^*)\geq 0\qquad\text{for all }\mathbf x\in\mathcal K. \tag{1}
+\]
+\item[\textnormal{(b)}]
+If~\(f\) is convex and differentiable at some point \(\mathbf x^*\in\mathcal K\) where (1) holds, then show that \(\mathbf x^*\) is a global minimizer for~\(f\) over \(\mathcal K\). Moreover, if the modulus of convexity of~\(f\) is strictly greater than 0, then \(\mathbf x^*\) is the unique global minimizer of~\(f\) over \(\mathcal K\).
+\item[\textnormal{(c)}]
+Consider the quadratic programming problem 
+\[
+\min \frac12\mathbf x^{\mathsf T}\mathbf A\mathbf x-\mathbf b^{\mathsf T}\mathbf x\qquad\text{subject to }\mathbf x\in\mathcal K,
+\]
+ where \(\mathcal K\subset\mathbb R^n\) is a closed convex set and \(\mathbf A\in\mathbb R^{n\times n}\) is positive definite with smallest eigenvalue \(\alpha>0\). Show that the solutions \(\mathbf u_i\), \(i=1,2\), associated with \(\mathbf b=\mathbf b_i\), \(i=1,2\), respectively, satisfy 
+\[
+\|\mathbf u_1-\mathbf u_2\|\leq \|\mathbf b_1-\mathbf b_2\|/\alpha.
+\]
+\end{examsubparts}
+\item
+Let \(\mathbf U\) and \(\mathbf V\in\mathbb R^{n\times m}\) and \(\mathbf M\in\mathbb R^{n\times n}\) with \(\mathbf M\) invertible.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(\mathbf I+\mathbf V^{\mathsf T}\mathbf M^{-1}\mathbf U\) is invertible, then show that \(\mathbf M+\mathbf U\mathbf V^{\mathsf T}\) is invertible with 
+\[
+(\mathbf M+\mathbf U\mathbf V^{\mathsf T})^{-1}=\mathbf M^{-1}-\mathbf M^{-1}\mathbf U(\mathbf I+\mathbf V^{\mathsf T}\mathbf M^{-1}\mathbf U)^{-1}\mathbf V^{\mathsf T}\mathbf M^{-1}.
+\]
+\item[\textnormal{(b)}]
+Consider the quadratic program 
+\[
+\min \frac12\mathbf x^{\mathsf T}\mathbf A\mathbf x-\mathbf b^{\mathsf T}\mathbf x\qquad\text{subject to }\mathbf a^{\mathsf T}\mathbf x=c, \tag{2}
+\]
+ where \(\mathbf A\) is a symmetric, positive definite matrix. The penalty approximation to (2) is 
+\[
+\min \frac12\mathbf x^{\mathsf T}\mathbf A\mathbf x-\mathbf b^{\mathsf T}\mathbf x+\frac p2(\mathbf a^{\mathsf T}\mathbf x-c)^2,
+\]
+ where \(p>0\) is the penalty parameter. Use the formula from (a) to obtain an explicit solution to the penalized problem in terms of \(\mathbf A^{-1}\), and the parameters of the quadratic program.
+\end{examsubparts}
+\item
+Consider the primal optimization problem 
+\[
+\inf_{\mathbf x\in\mathcal K}\{f(\mathbf x):\mathbf h(\mathbf x)=0,\quad \mathbf g(\mathbf x)\leq 0\}, \tag{P}
+\]
+ where \(\mathcal K\subset\mathbb R^n\), \(\mathbf h:\mathbb R^n\to\mathbb R^m\), and \(\mathbf g:\mathbb R^n\to\mathbb R^l\). The dual of (P) is 
+\[
+\sup_{\substack{\boldsymbol\mu\geq 0\\\boldsymbol\lambda\in\mathbb R^m}}L(\boldsymbol\lambda,\boldsymbol\mu),
+\qquad\text{where}\qquad
+L(\boldsymbol\lambda,\boldsymbol\mu):=\inf_{\mathbf x\in\mathcal K}f(\mathbf x)+\boldsymbol\lambda^{\mathsf T}\mathbf h(\mathbf x)+\boldsymbol\mu^{\mathsf T}\mathbf g(\mathbf x). \tag{D}
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that the dual objective~\(L\) is a concave function.
+\item[\textnormal{(b)}]
+Suppose that \(\mathcal K=\mathbb R^n\), \(\mathbf h(\mathbf x)=\mathbf A\mathbf x-\mathbf b\) where \(\mathbf A\in\mathbb R^{m\times n}\), each component of \(\mathbf g\) is convex, and there exists a solution \(\mathbf x^*\) to (P) where the first-order optimality conditions are satisfied. Show that there is no duality gap. That is, show that the infimum in (P) is equal to the supremum in (D).
+\end{examsubparts}
+\item
+Consider the following primal quadratic program: 
+\[
+\min q(\mathbf x):=\frac12\mathbf x^{\mathsf T}\mathbf x-\mathbf b^{\mathsf T}\mathbf x
+\qquad\text{subject to }\mathbf a^{\mathsf T}\mathbf x=c,\ \mathbf x\geq 0, \tag{QP}
+\]
+ where \(\mathbf b\) and \(\mathbf a\in\mathbb R^n\), \(\mathbf a>0\), and \(c>0\) is a scalar. An associated dual program is 
+\[
+\max_{\lambda}L(\lambda):=\min_{\mathbf x\geq 0}q(\mathbf x)+\lambda(\mathbf a^{\mathsf T}\mathbf x-c). \tag{QD}
+\]
+ Since~\(\lambda\) is a scalar, the dual problem (QD) is much easier to solve than the primal problem (QP).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+The minimization over \(\mathbf x\geq 0\) in the dual function~\(L\) uncouples into~\(n\) independent minimizations over each component \(x_i\). Give a formula for \(x_i(\lambda)\), the minimizer over \(x_i\geq 0\) of the dual function at~\(\lambda\).
+\item[\textnormal{(b)}]
+The points where \(\lambda=b_i/a_i\), \(1\leq i\leq n\), are known as the break points of the dual function. Give a formula for the value of the dual function and its derivative at any point~\(\lambda\) which is not a break point. Show that \(L'(\lambda)=\mathbf a^{\mathsf T}\mathbf x(\lambda)-c\).
+\item[\textnormal{(c)}]
+Show that \(L'\) is a decreasing function of~\(\lambda\) (recall that~\(L\) is concave), and \(L'(\lambda)\) is linear in~\(\lambda\) between the break points. Based on these observations, give an algorithm for maximizing~\(L\).
+\item[\textnormal{(d)}]
+Given a solution \(\lambda^*\) of the dual problem, show that \(\mathbf x(\lambda^*)\) is the solution of the primal problem.
+\end{examsubparts}
+\item
+Let us consider the minimization problem 
+\[
+\min I(y):=\int_0^1 f(y'(x),y(x),x)\,dx\qquad\text{subject to }y\in C_0^1, \tag{3}
+\]
+ where~\(f\) is a given continuously differentiable function. If \(y^*\) is a local minimizer of this problem, \(s\) is a scalar, \(h\in C_0^1\), then setting to zero the derivative of \(I(y^*+sh)\) evaluated at \(s=0\) yields the following first-order optimality condition: 
+\[
+\int_0^1\left[\left(\frac{\partial f}{\partial y'}\right)^*(x)h'(x)+\left(\frac{\partial f}{\partial y}\right)^*(x)h(x)\right]dx=0 \tag{4}
+\]
+ for all \(h\in C_0^1\), where 
+\[
+\left(\frac{\partial f}{\partial y'}\right)^*(x):=\left(\frac{\partial f}{\partial y'}\right)^*(y^{*'}(x),y^*(x),x)
+\quad\text{and}\quad
+\left(\frac{\partial f}{\partial y}\right)^*(x):=\left(\frac{\partial f}{\partial y}\right)^*(y^{*'}(x),y^*(x),x).
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+As a consequence of (4), show that 
+\[
+\left(\frac{\partial f}{\partial y'}\right)^*\in C^1 \tag{5}
+\]
+ and the Euler equation is satisfied. Note that it is only assumed that~\(f\) is continuously differentiable; you should show that at a local minimizer of (3), the partial derivative in (5) is continuously differentiable.
+\item[\textnormal{(b)}]
+For the special case 
+\[
+f(y'(x),y(x),x)=\frac12y'(x)^2-\phi(x)y(x)^2,
+\]
+ where \(\phi\in C^k\) for some integer \(k\geq 0\), what does the observation in (a) imply concerning the smoothness of a minimizer \(y^*\) for (3).
+\end{examsubparts}
+\item
+Consider the equation 
+\[
+(P(x)u'(x))'=Q(x)u(x),\qquad x\in[0,1], \tag{E}
+\]
+ where~\(Q\) is continuous and~\(P\) is continuously differentiable and strictly positive on \([0,1]\). Suppose (E) has the property that whenever~\(u\) is a solution of (E) with \(u(0)=u(a)=0\) for some \(0<a\leq 1\), \(u\) is identically zero on \([0,a]\). Show that the solution of the initial-value problem for (E), with the initial conditions \(u(0)=0\) and \(u'(0)=1\), is strictly positive on \((0,1]\).
+\item
+Consider the variational problem 
+\[
+\min \int_0^1\left[\frac12u'(x)^2+e^{u(x)}\right]dx\qquad\text{subject to }u\in\mathcal H_0^1.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+What is the first-order necessary optimality condition (Euler equation) for this variational problem?
+\item[\textnormal{(b)}]
+Consider a uniform mesh \(x_k=kh\) where \(h=1/N\); let \(u_k\) denote the approximation to \(u(x_k)\). Of course, \(u_0=u_N=0\). Give a finite difference approximation in terms of \(u_1,\ldots,u_{N-1}\) to the solution of the Euler equation.
+\item[\textnormal{(c)}]
+Let \(\mathbf F(\mathbf u)=0\) denote the finite difference system where \(\mathbf u=(u_1,u_2,\ldots,u_{N-1})^{\mathsf T}\in\mathbb R^{N-1}\), and let \(\mathbf u^*\) denote the vector formed by evaluating the solution of the Euler equation at the mesh points \(x_1,x_2,\ldots,x_{N-1}\). Obtain a bound for the components of \(\mathbf F(\mathbf u^*)\) in terms of the mesh spacing~\(h\).
+\end{examsubparts}
+\item
+Consider the initial-value problem 
+\[
+\dot{\mathbf x}(t)=\mathbf A(t)\mathbf x(t)+\mathbf u(t),\qquad \mathbf x(0)=0,
+\]
+ where \(\mathbf x:[0,1]\to\mathbb R^n\) and \(\mathbf A\in L^\infty([0,1];\mathbb R^{n\times n})\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Assuming \(\mathbf u\in L^2\), obtain a bound for the sup-norm of \(\mathbf x\) in terms of the \(L^2\) norm of \(\mathbf u\).
+\item[\textnormal{(b)}]
+Let \(\Omega:\mathcal H_0^1\to\mathbb R\) be defined by 
+\[
+\Omega(h)=\frac12\int_0^1r^2(x)\,dx\qquad\text{where }r(x)=h'(x)+w(x)h(x),
+\]
+ where~\(w\) is uniformly bounded on \([0,1]\). Show that there exists \(\beta>0\) such that 
+\[
+\Omega(h)\geq\beta(\|h\|^2+\|h'\|^2)\qquad\text{for all }h\in\mathcal H_0^1,
+\]
+ where \(\|\cdot\|\) is the \(L^2\) norm.
+\end{examsubparts}
+\item
+Consider the following control problem: 
+\[
+\min \int_0^1\left[\frac12u^2(x)+y(x)\right]dx
+\qquad\text{subject to }y'(x)=u(x),\ y(0)=0,\ u(x)\geq\ell(x),
+\]
+ where \(\ell(x)\) is a given lower bound for the control \(u(x)\) at each \(x\in[0,1]\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+What is the first-order optimality condition (Pontryagin minimum principle) for this problem?
+\item[\textnormal{(b)}]
+What is the solution of the control problem?
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,124 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 2006},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2006\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 2006}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Can a compact space contain a discrete infinite subspace?
+\item
+Prove that the product of two connected spaces is connected.
+\item
+Give an example of a space which is path connected but not locally connected.
+\item
+Show that the Klein bottle with a deleted closed disk \(K \setminus D\) is not a retract of~\(K\).
+\item
+Prove that the group \(SO(n)\) is connected in the matrix topology.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Lefschetz fixed point theorem.
+\item
+Construct a map \(f:S^3 \to S^3\) of degree 3.
+\item
+State the Simplicial Approximation theorem.
+\item
+Prove that for a path connected topological group~\(G\) the Euler characteristic \(\chi(G)\) is zero.
+\item
+Does every function \(f:\mathbb{N} \to \mathbb{R}\) admit a continuous extension \(\bar f:\beta\mathbb{N} \to \mathbb{R}\) to the Stone–Čech compactification?
+\item
+What can you say about the~\(k\)-homology groups of a closed orientable~\(n\)-manifold for
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(k=n\)?
+\item[\textnormal{(b)}]
+\(k=n-1\)?
+\end{examsubparts}
+\item
+Give a definition of the compact-open topology for the space of functions.
+\item
+Let \(j:S^1 \subset S^4\) be an embedding. Can \(\pi_1(S^4 \setminus j(S^1))\) be trivial? If it is not trivial, can the fundamental group \(\pi_1(S^4 \setminus j(S^1))\) be abelian?
+\item
+Give a definition of the wedge of a family of topological spaces. Prove that an infinite wedge of circles is not metrizable.
+\item
+State the Contraction Mapping Theorem.
+\end{examproblems}
+\end{document}

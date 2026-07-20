@@ -1,0 +1,167 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2017},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2017\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2017}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Give a combinatorial proof that 
+\[
+k\binom{n}{k}=n\binom{n-1}{k-1}.
+\]
+\item
+You can use results from your course to prove:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If a finite partially ordered set has \(mn+1\) elements, then there is either a chain of size \(m+1\) or an antichain of size \(n+1\).
+\item[\textnormal{(b)}]
+If~\(G\) is a regular bipartite graph of degree at least 2, then~\(G\) has a spanning subgraph that is the union of vertex disjoint cycles.
+\end{examsubparts}
+\item
+Let \(a(n)\) be the number of ways to tile a \(2\times n\) rectangle with \(1\times 1\) squares and \(2\times k\) rectangles for any integer \(k\geq 1\), where a \(2\times 1\) rectangle must be vertical (i.e. no \(1\times 2\) rectangle). For instance, \(a(2)=5\), given by
+\par\smallskip
+\begin{center}
+\begin{adjustbox}{max width=.8\linewidth,max totalheight=6\baselineskip}
+\begin{tikzpicture}[
+  alt={Five tilings of a 2x2 rectangle, shown left to right: four 1x1 squares; two 1x1 squares on the left with one vertical 2x1 rectangle on the right; one vertical 2x1 rectangle on the left with two 1x1 squares on the right; two vertical 2x1 rectangles; and one 2x2 rectangle.},
+  line width=0.8pt,
+  line cap=round,
+  line join=round
+]
+% 1. Four 1-by-1 squares
+\begin{scope}[xshift=0cm]
+    \draw (0,0) rectangle (2,2);
+    \draw (1,0) -- (1,2);
+    \draw (0,1) -- (2,1);
+\end{scope}
+
+% 2. Two 1-by-1 squares on the left and one vertical 2-by-1 tile
+\begin{scope}[xshift=3.2cm]
+    \draw (0,0) rectangle (2,2);
+    \draw (1,0) -- (1,2);
+    \draw (0,1) -- (1,1);
+\end{scope}
+
+% 3. One vertical 2-by-1 tile and two 1-by-1 squares on the right
+\begin{scope}[xshift=6.4cm]
+    \draw (0,0) rectangle (2,2);
+    \draw (1,0) -- (1,2);
+    \draw (1,1) -- (2,1);
+\end{scope}
+
+% 4. Two vertical 2-by-1 tiles
+\begin{scope}[xshift=9.6cm]
+    \draw (0,0) rectangle (2,2);
+    \draw (1,0) -- (1,2);
+\end{scope}
+
+% 5. One 2-by-2 tile
+\begin{scope}[xshift=12.8cm]
+    \draw (0,0) rectangle (2,2);
+\end{scope}
+\end{tikzpicture}
+\end{adjustbox}
+\end{center}
+\smallskip
+Set \(a(0)=1\), and find a simple expression for the generating function 
+\[
+A(x)=\sum_{n\geq 0}a(n)x^n.
+\]
+\item
+Let~\(C\) be a linear binary error correcting code. Prove that either every word in~\(C\) has even weight or exactly half the words in~\(C\) have even weight.
+
+\par
+Is a similar statement true for ternary codes?
+\item
+Let~\(\mathcal{L}\) be a regular language. Prove that the language 
+\[
+\mathcal{L}_2=\{w:ww\in\mathcal{L}\}
+\]
+ is regular.
+\item
+Prove that the number of \(k\cdots 21\)-avoiding permutations is at most \((k-1)^{2n}\).
+\item
+Let \(c(n,k)\) be the number of permutations of length~\(n\) with~\(k\) cycles. Let \(a_n\) be the total number of cycles in all permutations of length~\(n\). Prove that 
+\[
+c(n+1,2)=a_n.
+\]
+\item
+Let \(b_n\) be the number of permutations of length~\(n\) whose first ascent is in an even position. (For the decreasing permutation of length~\(n\), we say that its first ascent is in position~\(n\).)
+
+\par
+Find an explicit formula for \(b_n\). Your formula can contain one summation sign.
+\end{examproblems}
+\end{document}

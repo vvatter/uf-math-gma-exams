@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numerical Analysis PhD Exam, January 2009</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Numerical Analysis PhD Exam, January 2009</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer any 8 questions.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \(M=\begin{bmatrix}A &amp; B^t\\ B &amp; C\end{bmatrix}\) be real symmetric and positive definite matrix. Let \(S=C-BA^{-1}B^t\) be the Schur complement. Prove that \(S\) is symmetric and positive definite.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(\lVert\cdot\rVert_p\) for \(1\le p\le\infty\) denote the norm on \(m\times n\) matrices induced by the \(\ell^p\)-norm on vectors in \(\mathbb{C}^m\) and \(\mathbb{C}^n\). Prove that</p>
+        <div class="display-math">\[
+\lVert A\rVert_2\le \sqrt{\lVert A\rVert_1\lVert A\rVert_\infty},\qquad\text{for all }A\in\mathbb{C}^{m\times n}.
+\]</div>
+      </li>
+      <li class="problem">
+        <p>Show that if \(P\) and \(Q\) be Hermitian positive definite matrices satisfying \(x^*Px\le x^*Qx\), for all \(x\in\mathbb{C}^n\), then \(\lVert P\rVert_F\le\lVert Q\rVert_F\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(T\) be any square matrix and let \(\lVert\cdot\rVert\) denote any induced norm. Prove that \(\displaystyle\lim_{n\to\infty}\lVert T^n\rVert^{1/n}\) exists and equals \(\displaystyle\inf_{n=1,2,\ldots}\lVert T^n\rVert^{1/n}\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(P\) and \(Q\) be two \(m\times m\) orthogonal projectors. Prove that \(\lVert P-Q\rVert_2\le 1\).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(x_0,x_1,\ldots,x_n\) be distinct points in a finite interval \([a,b]\) and \(f\in C^1[a,b]\). Show that for any given \(\varepsilon&gt;0\) there exists a polynomial \(p\) such that \(\lVert f-p\rVert_\infty&lt;\varepsilon\) and \(p(x_i)=f(x_i)\) for all \(i=0,1,\ldots,n\) (where \(\lVert\cdot\rVert_\infty\) denotes the \(L^\infty(a,b)\)-norm).</p>
+      </li>
+      <li class="problem">
+        <p>Let \(\hat f(s)\) be the continuous Fourier transform of \(f(t)\in L^2[-\infty,\infty]\). Suppose further that \(\hat f(s)=0\) for \(|s|&gt;\pi\). Derive the interpolation formula</p>
+        <div class="display-math">\[
+f(t)=\sum_{k=-\infty}^{\infty}f(k)\frac{\sin(\pi(t-k))}{\pi(t-k)}.
+\]</div>
+      </li>
+      <li class="problem">
+        <p>Let \(L_n(f)\) be the Lagrange polynomial interpolating a function \(f\) at nodes \(a=x_0&lt;x_1&lt;\cdots&lt;x_n=b\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Give the formula for \(L_n(f)\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Prove that there is a unique polynomial of degree at most \(n\) interpolating \(f\) at the nodes.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>State and prove the formula for the error \(f(x)-L_n(f)(x)\) when \(f(x)\in C^{n+1}[a,b]\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Assume that \(g\) is continuously differentiable real-valued function and \(a\le g(x)\le b\) on \([a,b]\). Show the following:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>There is an \(\alpha\in[a,b]\) such that \(g(\alpha)=\alpha\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(|g&#x27;(x)|&lt;1\) on \([a,b]\), then there is only one fixed point on the interval \([a,b]\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>If we generate iterates using the recurrence \(x_{n+1}=g(x_n)\) starting from some \(x_0\in[a,b]\), then we have</p>
+                <div class="display-math">\[
+|\alpha-x_n|\le \frac{\lambda^n}{1-\lambda}|x_1-x_0|\qquad\text{where}\qquad \lambda=\max_{x\in[a,b]}|g&#x27;(x)|.
+\]</div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(\{\phi_n(x):n\ge 0\}\) be an orthogonal family of polynomials on the interval \((a,b)\) with weight function \(w(x)\ge 0\) for all \(x\in[a,b]\). Show that the polynomial \(\phi_n(x)\) has exactly \(n\) distinct real roots in the open interval \((a,b)\).</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Numerical Analysis PhD Exams</a></li>
+        <li><a href="numerical-analysis-phd-2009-jan.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

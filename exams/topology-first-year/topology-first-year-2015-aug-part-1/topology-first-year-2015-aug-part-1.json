@@ -1,0 +1,176 @@
+{
+  "schema_version": 3,
+  "id": "topology-first-year-2015-aug-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2015,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Topology-1_2015_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer all questions and work all problems."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(f:X\\to Y\\) is continuous and onto. Show that if \\(X\\) is compact, then \\(Y\\) is also compact."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(A\\subset X\\) is connected. Show that the closure of \\(A\\), \\(\\overline{A}\\), is also connected."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Banach Fixed-Point Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(X\\) is a compact metric space. Show that if \\(\\{x_i\\}\\) is a sequence of points in \\(X\\), then there is a point \\(z\\in X\\) and a subsequence, \\(\\{x_{i_j}\\}\\), such that \\(x_{i_j}\\to z\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give an example of a sequence of functions \\(f_i:[0,1]\\to[0,1]\\) such that \\(f_i(x)\\to g(x)\\) for all \\(x\\in[0,1]\\), but such that \\(g:[0,1]\\to[0,1]\\) is not continuous."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(X\\) is a set and that \\(f:X\\to 2^X\\). Show that \\(f\\) cannot be onto."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(X\\) is a complete metric space that is countably infinite. Show that \\(X\\) has an isolated point, i.e., there is a point \\(x\\in X\\) such that \\(\\{x\\}\\) is open in \\(X\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State The Urysohn Lemma."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that \\([0,1)\\) is not compact."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Tietze Extension Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Tychonoff Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Alexander Subbase Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give an example of a Hausdorff space that is not normal."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

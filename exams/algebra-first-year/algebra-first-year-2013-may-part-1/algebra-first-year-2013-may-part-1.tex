@@ -1,0 +1,122 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2013, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2013, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2013, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(G\) be a group which has \(28\) cyclic subgroups of order~\(4\). Prove that~\(G\) has \(56\) elements of order~\(4\).
+\item[\textnormal{(b)}]
+Let \(n,k\) be positive integers and let~\(G\) be a group which has~\(k\) cyclic subgroups of order~\(n\). Determine with proof the number of elements of order~\(n\) in~\(G\).
+\end{examsubparts}
+\item
+Let~\(G\) be a group and let \(H,K\) be subgroups of~\(G\). Recall that \(HK=\{xy:x\in H,\ y\in K\}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(HK\) is a subgroup of~\(G\) if and only if \(HK=KH\).
+\item[\textnormal{(b)}]
+Give an example of \(G,H,K\) as above such that \(HK\) is not a subgroup of~\(G\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(\sigma,\tau\) be elements of the symmetric group \(S_n\). Prove that~\(\sigma\) and~\(\tau\) are conjugate in \(S_n\) if and only if they have the same cycle type.
+\item[\textnormal{(b)}]
+Give an example of elements~\(\sigma\) and~\(\tau\) in the alternating group \(A_n\) for some \(n\geq 4\) which have the same cycle type but are not conjugate in \(A_n\).
+\end{examsubparts}
+\item
+Let~\(G\) be a group of order \(2013=3\cdot 11\cdot 61\). Prove that the center of~\(G\) contains an element of order \(11\).
+\item
+Determine a representative for each isomorphism class of abelian groups of order \(400\).
+\item
+Let \(H=\langle x\rangle\) be a cyclic group of order~\(7\) and let \(K=\langle y\rangle\) be a cyclic group of order~\(3\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine all homomorphisms \(\phi:K\to\operatorname{Aut}(H)\).
+\item[\textnormal{(b)}]
+For each homomorphism~\(\phi\) from (a) describe the corresponding semidirect product \(H\rtimes_\phi K\).
+\item[\textnormal{(c)}]
+Determine with justification which semidirect products from (b) are isomorphic to each other.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

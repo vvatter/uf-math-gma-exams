@@ -1,0 +1,125 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2023, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2023, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2023, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stating clearly any theorems you wish to apply.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(x^3-x^2+x+5\).
+\item[\textnormal{(b)}]
+\(x^6-300\).
+\item[\textnormal{(c)}]
+\(x^4-4x^3+2x^2+21x-7\).
+\end{examsubparts}
+\item
+Show that the ring \(\mathbb{Z}[\sqrt{-2}]\) is a Euclidean domain with respect to the norm \(N(a+b\sqrt{-2})=a^2+2b^2\). (You may regard this ring as a subring of the field of complex numbers, with \(\sqrt{-2}=i\sqrt{2}\).)
+\item
+Let~\(R\) and~\(S\) be commutative rings with 1 and \(\phi:R\to S\) a ring homomorphism with \(\phi(1)=1\). Let~\(I\) be an ideal of~\(S\) and \(\phi^{-1}(I)=\{r\in R\mid \phi(r)\in I\}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(\phi^{-1}(I)\) is an ideal of~\(R\).
+\item[\textnormal{(b)}]
+Show that if~\(I\) is a prime ideal then so is \(\phi^{-1}(I)\).
+\item[\textnormal{(c)}]
+If~\(I\) is maximal, is \(\phi^{-1}(I)\) necessarily maximal? Give a proof or counterexample.
+\end{examsubparts}
+\item
+Let~\(R\) be a ring with 1 and~\(M\) a (unital) left~\(R\)-module.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State what it means for~\(M\) to satisfy the Ascending Chain Condition (i.e. for~\(M\) to be Noetherian).
+\item[\textnormal{(b)}]
+Prove that if~\(M\) satisfies the ACC then~\(M\) is finitely generated.
+\item[\textnormal{(c)}]
+Give an example of a finitely generated~\(R\)-module~\(M\) that does not satisfy the ACC.
+\end{examsubparts}
+\item
+Use the rational canonical form to find one representative of each conjugacy class of elements of order 6 in \(\mathrm{GL}(4,\mathbb{Q})\).
+\item
+Let \(K\subset F\subset E\) be fields.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(|F:K|=n\) and \(|E:F|=m\), where~\(m\) and~\(n\) are finite, show that \(|E:K|=nm\).
+\item[\textnormal{(b)}]
+Prove that if \(|E:K|\) is finite, then \(|F:K|\) and \(|E:F|\) are both finite.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

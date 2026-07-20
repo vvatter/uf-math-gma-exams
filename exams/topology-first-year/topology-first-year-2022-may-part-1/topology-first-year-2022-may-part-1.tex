@@ -1,0 +1,119 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, May 2022, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2022, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, May 2022, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do seven 7 and only seven of the following.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(X\) be a set, and let \(\mathcal T\) be the collection of all subsets~\(A\) of~\(X\) such that \(X-A\) is either finite or all of~\(X\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \((X,\mathcal T)\) is topological space.
+\item[\textnormal{(b)}]
+Now let \(X=\mathbb R\), the real line.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Determine if the sequence \(x_n=7n+8\) converges and if so, to which point or points.
+\item[\textnormal{(ii)}]
+Show that every infinite set is connected.
+\item[\textnormal{(iii)}]
+What is \(\overline{\{5\}}\)?
+\end{examsubparts}
+\end{examsubparts}
+\item
+Let~\(X\) be a topological space. Let \(D=\{(x,y)\in X\times X:x=y\}\). Prove that~\(X\) is a Hausdorff space if and only if~\(D\) is a closed subset of \(X\times X\), where \(X\times X\) has the product topology.
+\item
+Show that \(\mathbb R^{\mathbb Z_+}\) with the uniform topology is not connected.
+\item
+A chain of subsets is a collection \(A_n\) for \(n\in\mathbb Z_+\) with the property that for all~\(i\), \(A_i\cap A_{i+1}\ne\varnothing\). If each \(A_n\) in a chain is connected, show that \(\bigcup_{n\in\mathbb Z_+}A_n\) is also connected.
+\item
+If~\(A\) is a countable set, show that \(\mathbb R^2-A\) is path connected.
+\item
+A space is called locally Baire if every point has an open neighborhood that is a Baire space. Prove that locally Baire implies Baire.
+\item
+Show that the Tietze Extension Theorem implies Urysohn’s Lemma.
+\item
+Assume that \((X,d)\) is metric. Show the following
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(X\) is normal
+\item[\textnormal{(b)}]
+If~\(X\) is compact then it is second countable
+\end{examsubparts}
+\end{examproblems}
+\end{document}

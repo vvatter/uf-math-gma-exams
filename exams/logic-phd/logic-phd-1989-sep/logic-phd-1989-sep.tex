@@ -1,0 +1,111 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Logic PhD Exam, September 1989},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, September 1989\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Logic PhD Exam, September 1989}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 2 from each section.
+\end{examinstructions}
+\section{I. General Logic}
+\begin{examproblems}{0}
+\item
+State and prove the Löwenheim–Skolem Theorem for countable languages.
+\item
+State and prove Herbrand’s Theorem.
+\item
+Suppose that~\(\mathcal{N}\) is a submodel of~\(\mathcal{M}\). Prove that if~\(A\) is a quantifier-free sentence, then 
+\[
+\mathcal{N} \models A \quad\Longleftrightarrow\quad \mathcal{M} \models A.
+\]
+\end{examproblems}
+\section{II. Set Theory}
+\begin{examproblems}{3}
+\item
+Prove the Mostowski Collapsing Lemma: If \((M,E)\) is a well-founded model of extensionality, then there is a transitive set~\(X\) and an isomorphism \(\phi:(M,E)\cong(X,\in)\).
+\item
+Sketch a proof of \(\operatorname{Con}(ZFC)\Longrightarrow \operatorname{Con}(ZFC+\neg CH+\omega_1=\omega_1^L)\). You may assume general theorems about forcing, eg. the Truth Lemma.
+\item
+Define the constructible universe~\(L\) and prove that for all~\(\alpha\), \(L_\alpha\) is transitive.
+\end{examproblems}
+\section{III. Recursion Theory}
+\begin{examproblems}{6}
+\item
+Suppose that~\(A\) is infinite. Prove that~\(A\) is recursive if and only if there is a strictly increasing onto \(f:\mathbb{N}\to A\).
+\item
+Prove that there exist recursively enumerable, recursively inseparable sets.
+\item
+Prove that there is no primitive recursive function \(F(e,n)\) such that for every primitive recursive function \(f(n)\) there is an~\(e\) such that \(F(e,n)=f(n)\) for all~\(n\).
+\end{examproblems}
+\end{document}

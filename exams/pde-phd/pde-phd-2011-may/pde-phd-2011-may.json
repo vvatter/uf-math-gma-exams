@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "id": "pde-phd-2011-may",
+  "subject": "PhD Partial Differential Equations",
+  "subject_tag": "pde-phd",
+  "year": 2011,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_PartialDifferentialEquations_2011_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "This exam was not provided to the GMA. From Prof. Lei Zhang: This exam is very similar to the others."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2017},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2017\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2017}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examinstructions}
+Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(F\) and~\(K\) be fields and let~\(S\) be a set of field homomorphisms from~\(F\) to~\(K\). Prove that~\(S\) is linearly independent over~\(K\) in the vector space of functions from~\(F\) to~\(K\).
+\item
+Let \(f(x)=x^3-10\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Calculate the Galois group of \(f(x)\) over~\(\mathbb{Q}\).
+\item[\textnormal{(b)}]
+Calculate the Galois group of \(f(x)\) over \(\mathbb{Q}(\sqrt{2})\).
+\end{examsubparts}
+\item
+Let \(\mathbb{Q}[x]\) be the algebra over~\(\mathbb{Q}\) of all polynomials in one variable over~\(\mathbb{Q}\), and similarly let \(\mathbb{Q}[x,y]\) be the algebra of polynomials in two variables. Prove that 
+\[
+\mathbb{Q}[x]\otimes_{\mathbb{Q}}\mathbb{Q}[x]\simeq\mathbb{Q}[x,y]
+\]
+ as algebras over~\(\mathbb{Q}\).
+\item
+A group~\(G\) is said to be nilpotent of class at most 2 if \([[G,G],G]=1\), where \([H,K]\) denotes the commutator group of the two subgroups~\(H\) and~\(K\) of~\(G\). Let~\(C\) be the concrete category whose objects are the nilpotent groups of class at most 2 and whose morphisms are all the group homomorphisms between them.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that, for every set~\(S\), there is a free object in~\(C\) with free generator set~\(S\).
+\item[\textnormal{(b)}]
+Prove that if \(S\ne\varnothing\), then the free object in~\(C\) with free generator set~\(S\) is infinite.
+\end{examsubparts}
+\item
+Let~\(R\) be a ring. Prove that the following two conditions are equivalent for a left~\(R\)-module~\(P\). (You may not assume any properties of projective modules.)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Every short exact sequence of~\(R\)-modules 
+\[
+0\to A\to B\to P\to 0
+\]
+ splits;
+\item[\textnormal{(b)}]
+There is a free~\(R\)-module~\(F\) and an~\(R\)-module~\(K\) such that \(F\simeq K\oplus P\).
+\end{examsubparts}
+\item
+Let~\(R\) be the ring of all rational numbers with odd denominators. Prove that the Jacobson radical \(J(R)\) of~\(R\) consists of all fractions whose denominator is odd and whose numerator is even.
+\item
+Let~\(R\) be an integral domain, and let~\(I\) be an invertible ideal of~\(R\). Prove that~\(I\) is finitely generated.
+\item
+Let~\(R\) be a commutative ring with identity, let~\(M\) be a maximal ideal of~\(R\), and let~\(n\) be a positive integer. Prove \(R/M^n\) has a unique prime ideal, so that, in particular, \(R/M^n\) is a local ring.
+\item
+Prove the following version of Nakayama’s Lemma. Let~\(A\) be a commutative ring with identity, let~\(M\) be a finitely generated~\(A\)-module, and let~\(I\) be an ideal contained in the intersection of all the maximal ideals of~\(A\). Show that if \(IM=M\) then \(M=\{0\}\).
+\item
+Let~\(R\) be a ring (possibly non-commutative, and possibly without identity). Let~\(M\) be an irreducible left~\(R\)-module. Let \(D=\operatorname{End}_R(M)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove \(D=\operatorname{End}_R(M)\) is a division ring. (You may NOT assume Schur’s Lemma for this.)
+\item[\textnormal{(b)}]
+Give an example of a ring~\(R\) and an irreducible module~\(M\) such that~\(D\) is not commutative.
+\end{examsubparts}
+\item
+Classify (up to ring isomorphism) all semisimple rings of order \(720\).
+\end{examproblems}
+\end{document}

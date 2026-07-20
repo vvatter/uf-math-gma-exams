@@ -1,0 +1,115 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2020-jan-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2020,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAS-5311-January-2020.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. If you turn in more than four, only the first four will be graded. Unless otherwise indicated you may use theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(G\\) is a \\(p\\)-group."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(S\\) be a finite set on which \\(G\\) acts and denote by \\(S^G\\) the set of elements of \\(S\\) fixed by every element of \\(G\\). Show that \\(\\lvert S^G\\rvert \\equiv \\lvert S\\rvert \\pmod p\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Use part (a) to show that if \\(H\\) is a nontrivial normal subgroup of \\(G\\), then \\(H\\cap Z(G)\\ne 1\\) (consider the action of \\(G\\) on \\(H\\) by conjugation).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(G\\) is a group of order \\(231=3\\cdot 7\\cdot 11\\). Show that \\(G\\) has a normal Sylow \\(7\\)-subgroup and is isomorphic to the product of \\(\\mathbb{Z}/11\\mathbb{Z}\\) and a solvable group of order \\(21\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Construct three nonisomorphic groups of order \\(56\\) whose Sylow \\(2\\)-subgroup is isomorphic to \\(D_8\\). (Use appropriate semidirect products, and observe that two semidirect products \\(K\\rtimes_\\phi H\\), \\(K\\rtimes_\\psi H\\) are nonisomorphic if \\(\\operatorname{Ker}(\\phi)\\) and \\(\\operatorname{Ker}(\\psi)\\) are not isomorphic.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that if \\(G\\) is a finite nilpotent group and \\(H\\) is a proper subgroup of \\(G\\), then \\(H\\) is a proper subgroup of its normalizer \\(N_G(H)\\). (Argue by induction on \\(\\lvert G\\rvert\\), and distinguish the cases \\(Z(G)\\subseteq H\\), \\(Z(G)\\nsubseteq H\\).)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "List up to isomorphism"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "the abelian groups of order \\(p^4\\),",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "the number of elements of order \\(p\\) in each, and",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "the number of elements of order \\(p^2\\) in each.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(k\\) and \\(n\\) are positive integers such that \\(k<n\\). If \\(\\sigma\\in S_n\\) is a \\(k\\)-cycle, show that \\(C_{S_n}(\\sigma)\\) is isomorphic to \\((\\mathbb{Z}/k\\mathbb{Z})\\times S_{n-k}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

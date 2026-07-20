@@ -1,0 +1,126 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 1999},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 1999\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 1999}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{I}
+\begin{examinstructions}
+State the following theorems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Hahn–Banach.
+\item
+The Egorov theorem.
+\item
+The Vitali convergence theorem.
+\item
+The Radon–Nikodym theorem.
+\item
+The Fubini theorem.
+\item
+The monotone convergence theorem.
+\item
+The completeness theorem for \(L_F^p(\mu)\).
+\item
+The equality \(|g\mu|=|g|\,|\mu|\).
+\end{examproblems}
+\section{II}
+\begin{examinstructions}
+Prove one of the theorems 3 or 7.
+\end{examinstructions}
+\section{III}
+\begin{examinstructions}
+Solve the following problems, where \((X,\Sigma,\mu)\) is a measure space and~\(F\) is a Banach space.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+If \(f_n\to f\) in \(L_F^p(\mu)\) and \(f_n\to g\), \(\mu\)-a.e., then \(f=g\), \(\mu\)-a.e.
+\item
+Let \(\mathcal F\subset\Sigma\) be a~\(\sigma\)-algebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal F)\) for \(f\in L_F^p(\mu)\).
+\item
+Let \(\mathcal R\) be a ring generating~\(\Sigma\) and \(f\in L_F^1(\mu)\). Prove that if \(\int_A f\,d\mu=0\) for every \(A\in\mathcal R\), then \(f=0\), \(\mu\)-a.e.
+\item
+Let \((X,\mathcal F)\) and \((Y,\mathcal T)\) be measurable spaces, and let \(\mu:\mathcal F\to\mathbb R\) and \(\nu:\mathcal T\to\mathbb R\) be~\(\sigma\)-additive measures. Prove the existence of the product measure \(\mu\times\nu:\mathcal F\times\mathcal T\to\mathbb R\) satisfying \((\mu\times\nu)(A\times B)=\mu(A)\nu(B)\) for \(A\times B\in\mathcal F\times\mathcal T\), and \(|\mu\times\nu|=|\mu|\times|\nu|\).
+\item
+If \(f\in L_F^1(\mu)\), there is a sequence \((f_n)\) of \(\mathcal R\)-step functions
+\end{examproblems}
+\begin{examinstructions}
+The remainder of this problem was cut off in the archived source.
+\end{examinstructions}
+\begin{examinstructions}
+Note. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences.
+\end{examinstructions}
+\end{document}

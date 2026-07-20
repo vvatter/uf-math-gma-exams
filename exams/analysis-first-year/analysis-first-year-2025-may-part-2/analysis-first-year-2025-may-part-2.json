@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2025-may-part-2",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2025,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-2_2025_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "The sequence \\((f_n)_{n=0}^{\\infty}\\) of real-valued functions on \\([0,1]\\) is uniformly bounded and converges to \\(0\\) pointwise. If each \\(f_n\\) is (i) continuous, (ii) Riemann integrable, (iii) Lebesgue integrable, does it follow that \\(\\int_0^1 f_n(t)\\,dt \\to 0\\)? In each of the three cases, a proof or counterexample should be given."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((f_n)_{n=0}^{\\infty}\\) be a sequence of continuous non-negative functions on \\([0,1]\\) converging pointwise to \\(0\\). Prove that if the extra condition\n\\[\n\\forall t\\in[0,1]\\quad f_0(t)\\geq f_1(t)\\geq\\cdots\\geq f_n(t)\\geq\\cdots\n\\]\nis satisfied then \\(f_n\\to 0\\) uniformly on \\([0,1]\\). Show that this conclusion can fail if the extra condition is removed."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the continuous real-valued function \\(f\\) on \\([0,1]\\) satisfy\n\\[\n\\forall n\\in\\mathbb N\\quad \\int_0^1 f(t)(1-t)^n\\,dt=0.\n\\]\nDeduce as much as possible about \\(f\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\Omega,\\mathcal A,\\mu)\\) be a measure space. Let \\((A_n)\\) be a sequence in \\(\\mathcal A\\) and define\n\\[\n\\liminf A_n=\\bigcup_N\\bigcap_{n\\geq N}A_n.\n\\]\nProve that\n\\[\n\\mu(\\liminf A_n)\\leq\\liminf\\mu(A_n).\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f(x)=\\sin x/x\\) for \\(x>0\\). Show that if \\(n\\) is a positive integer then\n\\[\n\\int_{2n\\pi}^{(2n+1)\\pi}\\frac{\\sin x}{x}\\,dx\\geq\\frac{2}{(2n+1)\\pi}.\n\\]\nHence explain why \\(f\\) is not Lebesgue integrable on \\((a,\\infty)\\) for any \\(a>0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

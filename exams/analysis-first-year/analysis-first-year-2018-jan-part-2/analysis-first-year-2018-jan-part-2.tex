@@ -1,0 +1,107 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, January 2018, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2018, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, January 2018, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f:[0,1]\to\mathbb{R}\) be Riemann-integrable. Prove that if the Riemann integral \(\int_0^1 f\) is nonzero then there exist \(\delta>0\) and a nonempty open interval \(I\subseteq[0,1]\) such that \(|f|\geq\delta\) throughout~\(I\).
+\item
+Let \(f_n(t)=t^n(1-t)^n\) whenever \(0\leq t\leq 1\) and~\(n\) is a positive integer. Does the sequence \((f_n:n>0)\) converge on \([0,1]\) pointwise? Uniformly? Justify.
+\item
+Let \(f:[0,1]\to\mathbb{R}\) be continuous. Assume that \(\int_0^1 f(t)e^{-nt}\,dt=0\) whenever~\(n\) is a non-negative integer. Does it follow that~\(f\) is identically zero? Does the answer change if the exponent \(-nt\) is replaced by \(+nt\)? By \(2nt\)? Justify.
+\item
+Given that \((f_n:n\geq 0)\) is a sequence of measurable real-valued functions, explain why each of the following sets is (or is not) measurable:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(X=\{\omega:f_n(\omega)\to\infty\text{ as }n\to\infty\}\);
+\item[\textnormal{(ii)}]
+\(Y=\{\omega:f_n(\omega)^2<f_n(\omega)\text{ for each }n\geq 0\}\);
+\item[\textnormal{(iii)}]
+\(Z=\left\{\omega:\sum_{n=0}^{\infty}f_n(\omega)\text{ converges absolutely}\right\}\).
+\end{examsubparts}
+\item
+Let \((f_n:n\geq 1)\) be a sequence of continuous functions from \([0,1]\) to \([0,1]\) and assume that this sequence converges to~\(f\) pointwise. True or false (proof or counterexample)?
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(f\) is Riemann-integrable and (Riemann integrals) \(\int_0^1 f_n\to\int_0^1 f\);
+\item[\textnormal{(ii)}]
+\(f\) is Lebesgue-integrable and (Lebesgue integrals) \(\int_0^1 f_n\to\int_0^1 f\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

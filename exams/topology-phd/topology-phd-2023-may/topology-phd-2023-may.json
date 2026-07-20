@@ -1,0 +1,250 @@
+{
+  "schema_version": 3,
+  "id": "topology-phd-2023-may",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2023,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Topology-2023_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Work the following problems and show all your work. Support all statements to the best of your ability."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a set. A filter base at \\(x\\in X\\) is a nonempty collection \\(\\mathcal{U}_x\\) of subsets of \\(X\\) containing \\(x\\) such that whenever \\(U,V\\in\\mathcal{U}_x\\) there exists \\(W\\in\\mathcal{U}_x\\) with \\(W\\subset U\\cap V\\). Assume that \\(X\\) has a filter base at each \\(x\\in X\\) and that if \\(U\\in\\mathcal{U}_x\\) and \\(y\\in U\\) then \\(U\\in\\mathcal{U}_y\\). Prove that \\(\\mathcal{B}=\\bigcup_{x\\in X}\\mathcal{U}_x\\) is a base for a topology."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider the torus \\(T=S^1\\times S^1\\) with the following \\(\\Delta\\)-complex structure."
+          },
+          {
+            "type": "tikz",
+            "id": "torus-delta-complex",
+            "alt": "A square with vertices at its four corners and center. The center is joined to each corner, dividing the square into four triangular regions labeled T1 at the bottom, T2 at the right, T3 at the top, and T4 at the left. The four interior edges are labeled e1 through e4 and are directed outward from the center toward the corners. The top and bottom boundary edges are labeled a and point right; the left and right boundary edges are labeled b and point upward.",
+            "libraries": [
+              "arrows.meta",
+              "decorations.markings"
+            ],
+            "options": [
+              "scale=0.55",
+              "line width=1pt",
+              "line cap=round",
+              "line join=round",
+              "mid stealth/.style={\n        postaction={\n            decorate,\n            decoration={\n                markings,\n                mark=at position 0.5 with {\n                    \\arrow{Stealth[length=3.2mm,width=3mm]}\n                }\n            }\n        }\n    }",
+              "vertex/.style={\n        circle,\n        fill=black,\n        inner sep=0pt,\n        minimum size=2.5mm\n    }"
+            ],
+            "code": "% Vertices\n\\coordinate (BL) at (0,0);\n\\coordinate (BR) at (5,0);\n\\coordinate (TR) at (5,5);\n\\coordinate (TL) at (0,5);\n\\coordinate (O)  at (2.5,2.5);\n\n% Boundary edges\n\\draw[mid stealth]\n    (TL) -- node[midway,above=4pt] {$a$} (TR);\n\n\\draw[mid stealth]\n    (BL) -- node[midway,below=4pt] {$a$} (BR);\n\n\\draw[mid stealth]\n    (BL) -- node[midway,left=4pt] {$b$} (TL);\n\n\\draw[mid stealth]\n    (BR) -- node[midway,right=4pt] {$b$} (TR);\n\n% Interior edges and labels, directed outward from the center\n\\draw[mid stealth]\n    (O) -- node[pos=0.5,below right=-3pt] {$e_1$} (BL);\n\\draw[mid stealth]\n    (O) -- node[pos=0.5,above right=-3pt] {$e_2$} (BR);\n\\draw[mid stealth]\n    (O) -- node[pos=0.5,above left=-3pt] {$e_3$} (TR);\n\\draw[mid stealth]\n    (O) -- node[pos=0.5,below left=-3pt] {$e_4$} (TL);\n\n% Region labels\n\\node at (2.5,1.5) {$T_1$};\n\\node at (3.5,2.5) {$T_2$};\n\\node at (2.5,3.5) {$T_3$};\n\\node at (1.5,2.5) {$T_4$};\n\n% Black vertices\n\\node[vertex] at (BL) {};\n\\node[vertex] at (BR) {};\n\\node[vertex] at (TR) {};\n\\node[vertex] at (TL) {};\n\\node[vertex] at (O)  {};"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define a 2-chain that you can show is a cycle and which generates \\(H_2(T)\\). The resulting homology class is called a fundamental class of \\(T\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Define 1-cochains that you can show are cocycles and which generate \\(H^1(T)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Compute a cup product which produces a cohomology class (Kronecker) dual to a fundamental class.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that the 2-sphere \\(S^2\\) is not a retract of the real projective plane \\(\\mathbb{RP}^2\\), as well as that \\(\\mathbb{RP}^2\\) is not a retract of \\(S^2\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Assume \\(n>m\\). Show that there are no maps from \\(\\mathbb{CP}^n\\) to \\(\\mathbb{CP}^m\\) that induces a nontrivial map \\(H^2(\\mathbb{CP}^m)\\to H^2(\\mathbb{CP}^n)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "A map \\(i:A\\to X\\) has the homotopy extension property (HEP) for the space \\(Y\\) if for each homotopy \\(h:A\\times I\\to Y\\) and each map \\(f:X\\to Y\\) with \\(f(i(a))=h(a,0)\\) there exists a homotopy \\(H:X\\times I\\to Y\\) with \\(H(x,0)=f(x)\\) for all \\(x\\in X\\) and \\(H(i(a),t)=h(a,t)\\) for all \\(a\\in A\\) and all \\(t\\in I\\). We call \\(H\\) an extension of \\(h\\) with initial condition \\(f\\). The map \\(i:A\\to X\\) is a cofibration if it has the HEP for all spaces.\n\nThe mapping cylinder of \\(i\\), denoted \\(Z(i)\\), is the pushout of \\(i:A\\to X\\) and the inclusion \\(A\\to A\\times I\\) given by \\(a\\mapsto(a,0)\\).\n\nProve that the following three statements about \\(i\\) are equivalent:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(i\\) is a cofibration.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(i\\) has the HEP for the mapping cylinder \\(Z(i)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(Z(i)\\) is a retract of \\(X\\times I\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give the definition of a pushout and prove that if it exists then it is unique up to isomorphism."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "The Klein bottle, \\(K\\), may be obtained by taking two Möbius bands, \\(M\\), and identifying their boundary, \\(K=M\\cup_{\\partial M}M\\). Apply the Seifert–van Kampen theorem to give a presentation of the fundamental group of \\(K\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Describe all of the two-fold coverings of \\(S^1\\vee S^1\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that for a finite CW-complex \\(X\\), \\(H^1(X;\\mathbb{Z})\\) is torsion-free."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Compute the Euler characteristic of the manifold \\(M=S^4\\times\\mathbb{RP}^2\\times\\mathbb{CP}^3\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Baire Category Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that for \\(n\\ne m\\), \\(\\mathbb{R}^n\\) is not homeomorphic to \\(\\mathbb{R}^m\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give an example of a space that is connected but not path connected."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Urysohn Lemma."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Is \\(\\mathbb{R}^{\\omega}\\) connected in the uniform topology?"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

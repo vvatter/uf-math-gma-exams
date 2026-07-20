@@ -1,0 +1,127 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, January 2013},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2013\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, January 2013}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(K\) be a field and let \(f(x) \in K[x]\) be a non-zero polynomial.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what is a splitting field for \(f(x)\) over~\(K\).
+\item[\textnormal{(b)}]
+If \(F_1\) and \(F_2\) are splitting fields for \(f(x)\) over~\(K\) prove, from your definition, that \(F_1\) and \(F_2\) are isomorphic fields.
+\end{examsubparts}
+\item
+Let \(F=\mathbb{Q}(\sqrt{3},\sqrt{5})\) be the smallest subfield of~\(\mathbb{C}\) which contains \(\sqrt{3}\) and \(\sqrt{5}\). How many subfields does~\(F\) have?
+\item
+Let~\(A\) and~\(B\) be finite abelian groups and suppose that \(|A|\) and \(|B|\) are relatively prime. Let \(T=A\otimes_{\mathbb{Z}}B\). Show that \(|T|=1\).
+\item
+Let~\(C\) be a category and let \((A_i)_{i\in I}\) be a family of objects of~\(C\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what is a coproduct of \((A_i)_{i\in I}\) in~\(C\).
+\item[\textnormal{(b)}]
+Prove that any two coproducts of \((A_i)_{i\in I}\) in~\(C\) are equivalent (some texts would say isomorphic) in~\(C\).
+\end{examsubparts}
+\item
+Let~\(R\) be a ring.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for an~\(R\)-module~\(M\) to be projective.
+\item[\textnormal{(b)}]
+Prove that if 
+\[
+0\to A\to B\to P\to 0
+\]
+ is an exact sequence of~\(R\)-modules and~\(P\) is projective then the exact sequence splits.
+\end{examsubparts}
+\item
+Let~\(F\) be a free group with free generators~\(a\) and~\(b\). Let~\(N\) be the smallest normal subgroup of~\(F\) such that \(a^2\in N\) and \(b^2\in N\). Prove that \(F/N\) is infinite.
+\item
+State and prove the Lying-Over Theorem on prime ideals and ring extensions.
+\item
+Prove the following version of Nakayama’s Lemma. Let~\(A\) be a commutative ring with identity, let~\(M\) be a finitely generated~\(A\)-module, and let~\(I\) be an ideal contained in the intersection of all the maximal ideals of~\(A\). Show that if \(IM=M\) then \(M=\{0\}\).
+\item
+An invertible ideal in an integral domain that is a local ring is principal.
+\item
+Let \(\overline{\mathbb{Q}}\) be an algebraic closure of~\(\mathbb{Q}\) and \(v\in\overline{\mathbb{Q}}\) with \(v\notin\mathbb{Q}\). Let~\(E\) be a subfield of \(\overline{\mathbb{Q}}\) maximal with respect to the condition that \(v\notin E\). Prove that every finite-dimensional extension of~\(E\) is cyclic.
+\item
+Classify (up to ring isomorphism) all semisimple rings of order \(720\).
+\end{examproblems}
+\end{document}

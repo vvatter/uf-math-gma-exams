@@ -30,7 +30,7 @@ def source(
         month=month,
         part=part,
         pdf_url=f"https://example.edu/{exam_id}.pdf",
-        pdf_path=Path("exams") / subject_tag / f"{exam_id}.pdf",
+        pdf_path=Path("exams") / subject_tag / exam_id / f"{exam_id}.source.pdf",
         sha256="abc",
         download_sha256="abc",
     )
@@ -51,7 +51,7 @@ class IndexRenderingTests(unittest.TestCase):
 
         self.assertEqual(archive_level(qualifying.subject_tag).key, "qualifying")
         self.assertEqual(subject_name(first_year), "Numerical Analysis")
-        self.assertEqual(subject_heading(phd), "Logic PhD exams")
+        self.assertEqual(subject_heading(phd), "Logic PhD Exams")
 
     def test_root_index_orders_levels_then_subjects(self) -> None:
         exams = [
@@ -69,10 +69,10 @@ class IndexRenderingTests(unittest.TestCase):
 
         self.assertLess(
             rendered.index('id="level-1">Qualifying'),
-            rendered.index('id="level-2">First-year'),
+            rendered.index('id="level-2">First-Year'),
         )
         self.assertLess(
-            rendered.index('id="level-2">First-year'),
+            rendered.index('id="level-2">First-Year'),
             rendered.index('id="level-3">PhD'),
         )
         self.assertLess(
@@ -89,8 +89,8 @@ class IndexRenderingTests(unittest.TestCase):
         self.assertIn('href="#main-content">Skip to main content</a>', rendered)
         self.assertNotIn("gma.math.ufl.edu", rendered)
         self.assertIn(
-            '<p class="page-updated">Page updated <time datetime="2026-07-19">'
-            "July 19, 2026</time>.</p>",
+            '<p class="page-updated">Page updated <time datetime="2026-07-20">'
+            "July 20, 2026</time>.</p>",
             rendered,
         )
 
@@ -103,20 +103,23 @@ class IndexRenderingTests(unittest.TestCase):
 
         rendered = render_subject_index("algebra-phd", exams)
 
-        self.assertIn("<h1>Algebra PhD exams</h1>", rendered)
+        self.assertIn("<h1>Algebra PhD Exams</h1>", rendered)
         self.assertIn('<div class="table-wrap" role="region" tabindex="0"', rendered)
         self.assertIn('<th scope="col">Date</th>', rendered)
         self.assertIn('<th scope="row"><time datetime="2025-01">', rendered)
         self.assertLess(
-            rendered.index("algebra-phd-2025-jan.html"),
-            rendered.index("algebra-phd-2024-aug-part-1.html"),
+            rendered.index("algebra-phd-2025-jan/index.html"),
+            rendered.index("algebra-phd-2024-aug-part-1/index.html"),
         )
         self.assertLess(
-            rendered.index("algebra-phd-2024-aug-part-1.html"),
-            rendered.index("algebra-phd-2024-aug-part-2.html"),
+            rendered.index("algebra-phd-2024-aug-part-1/index.html"),
+            rendered.index("algebra-phd-2024-aug-part-2/index.html"),
         )
         self.assertIn('href="../../index.html">All exam subjects</a>', rendered)
-        self.assertIn('href="algebra-phd-2025-jan.pdf">View PDF</a>', rendered)
+        self.assertIn(
+            'href="algebra-phd-2025-jan/algebra-phd-2025-jan.source.pdf">View PDF</a>',
+            rendered,
+        )
         self.assertIn(".institution a { text-decoration: none; }", rendered)
         self.assertNotIn('class="breadcrumb"', rendered)
         self.assertNotIn("gma.math.ufl.edu", rendered)

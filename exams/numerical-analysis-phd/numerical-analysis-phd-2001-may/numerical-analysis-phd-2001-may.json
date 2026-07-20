@@ -1,0 +1,249 @@
+{
+  "schema_version": 3,
+  "id": "numerical-analysis-phd-2001-may",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2001,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2001_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do any 8 of the following 10 problems."
+    },
+    {
+      "type": "section",
+      "heading": "Part 1: Numerical Linear Algebra",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "Under what conditions does a real \\(n\\) by \\(n\\) matrix \\(A\\) have a Schur decomposition \\(A=U^{\\mathrm T}TU\\), where \\(U\\) and \\(T\\) are real \\(n\\) by \\(n\\) matrices with \\(U\\) orthogonal and \\(T\\) upper triangular?",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Under what conditions on \\(A\\) is \\(T\\) diagonal?",
+                "subparts": []
+              },
+              {
+                "label": "(c)",
+                "text": "Does the matrix\n\\[\nA=\\begin{pmatrix}1&0&1\\\\1&-1&0\\\\0&1&1\\end{pmatrix}\n\\]\nhave an orthogonal set of eigenvectors?",
+                "subparts": []
+              },
+              {
+                "label": "(d)",
+                "text": "Give a careful statement of the singular value decomposition of a real \\(m\\) by \\(n\\) matrix.",
+                "subparts": []
+              },
+              {
+                "label": "(e)",
+                "text": "Under what conditions does the singular value decomposition exist?",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Consider the linear system \\(Ax=b\\)."
+              }
+            ],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "If the rows of \\(A\\) are linearly independent, derive a formula for the solution of minimal 2-norm.",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "If the columns of \\(A\\) are linearly independent, derive a formula for the \\(x\\) that minimizes the 2-norm of the residual \\(r=b-Ax\\).",
+                "subparts": []
+              },
+              {
+                "label": "(c)",
+                "text": "Use the singular value decomposition of \\(A\\) to give a formula for the \\(x\\) that minimizes the 2-norm of the residual, and among all the \\(x\\)’s which minimize the 2-norm, it has minimal norm.",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "Given a vector \\(x\\in\\mathbb R^n\\) and a natural number \\(k<n\\), give a formula for a unit vector \\(w\\) for which the vector \\(y=(I-2ww^{\\mathrm T})x\\) satisfies the following conditions: \\(y_i=x_i\\) for \\(i<k\\) and \\(y_i=0\\) for \\(i>k\\).",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Using these Householder transformations, write a pseudo code (or a matlab code) for reducing a real symmetric matrix to tridiagonal form using Householder similarity transformations.",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "State and prove the Gershgorin Circle Theorem.",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Let\n\\[\nA=\\begin{pmatrix}5&1&3\\\\2&4&1\\\\3&-1&4\\end{pmatrix}.\n\\]\nWhat can you say about the location of the eigenvalues of \\(A\\)?",
+                "subparts": []
+              },
+              {
+                "label": "(c)",
+                "text": "Use the Gershgorin Circle Theorem to estimate the size of the largest root of the polynomial \\(p(x)=x^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\\cdots+a_1x+a_0\\).",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "Find the ellipse or hyperbola, of the form \\(ax^2+by^2=1\\), that best fits \\(n\\) data points \\((x_1,y_1),(x_2,y_2),\\ldots,(x_n,y_n)\\) in the plane by computing the least squares solution to the \\(n\\) linear equations gotten by substituting each of the data points into the quadratic equation.",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Test your method with the dataset \\((1,1),(2,4),(3,9),(4,16)\\).",
+                "subparts": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Part II: Numerical Analysis",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "State Newton’s method (the algorithm) for solving \\(f(x)=0\\) where \\(f:\\mathbb R\\to\\mathbb R\\).",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Assuming \\(f\\) is smooth and we have an initial guess sufficiently close to a root \\(p\\), state sufficient condition(s) for the method to converge quadratically.",
+                "subparts": []
+              },
+              {
+                "label": "(c)",
+                "text": "Show that Newton’s method applied to \\(x^5=2\\) converges quadratically to the root \\(2^{1/5}\\) from any starting guess \\(x>0\\).",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "Given a function \\(f\\) with \\(n+1\\) continuous derivatives on the interval \\(I=[-1,1]\\), show that, given \\(n+1\\) points \\(\\{x_0,x_1,\\ldots,x_n\\}\\) in \\(I\\), there exists a unique polynomial \\(P_n(x)\\) of degree \\(\\le n\\) such that\n\\[\nP_n(x_i)=f(x_i)\\qquad\\text{for }i=0,\\ldots,n.\n\\]",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Prove that, given \\(t\\in I\\), there exists \\(\\eta\\in I\\) such that\n\\[\nf(t)-P_n(t)=\\frac{(t-x_0)\\cdots(t-x_n)}{(n+1)!}f^{(n+1)}(\\eta).\n\\]",
+                "subparts": []
+              },
+              {
+                "label": "(c)",
+                "text": "From the above we get that (all norms are on the interval \\(I\\))\n\\[\n\\lVert f-P_n\\rVert_\\infty\\le \\max_{t\\in I}\\left|(t-x_0)(t-x_1)\\cdots(t-x_n)\\right|\\frac{\\lVert f^{(n+1)}\\rVert_\\infty}{(n+1)!}.\n\\]\nWhat choice for the points \\(x_0,\\ldots,x_n\\) minimizes the right hand side of this error bound?",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "Find a function \\(q(x)\\) which has a continuous first derivative for each \\(x\\in(-\\infty,\\infty)\\) with the properties:\n\\[\nq(x)=\\begin{cases}\n1,&\\text{if }x=0,\\\\\n0,&\\text{for all }|x|\\ge 2,\\\\\na_0+a_1x+a_2x^2,&\\text{for all }x\\in[-2,-1],\\\\\nb_0+b_1x+b_2x^2,&\\text{for all }x\\in[-1,1],\\\\\nc_0+c_1x+c_2x^2,&\\text{for all }x\\in[1,2].\n\\end{cases}\n\\]",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Use the function \\(q(x)\\) defined in part a to interpolate a set of equally spaced points \\((x_0,y_0),(x_1,y_1),\\ldots,(x_n,y_n)\\), where \\(h=x_{k+1}-x_k\\) for all \\(k\\). In particular, describe how to find constants \\(c_k\\) so that the function\n\\[\nQ(x)=\\sum_{k=0}^n c_k q\\!\\left(\\frac{x-x_k}{h}\\right)\n\\]\nhas the property that \\(Q(x_k)=y_k\\) for all \\(k\\).",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(P_2(x)\\) be a quadratic polynomial interpolating \\(g(x)\\) at \\(x=0,h,2h\\)."
+              }
+            ],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "Use this to derive a numerical integration formula \\(I_h\\) for\n\\[\nI=\\int_0^{3h}g(x)\\,dx.\n\\]",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "Use a Taylor series expansion of \\(g(x)\\) to show\n\\[\nI-I_h=\\frac{3}{8}h^4g^{(3)}(0)+O(h^5).\n\\]",
+                "subparts": []
+              }
+            ]
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Triple Recursion Formula. If \\(\\{\\phi_n(x)\\}\\) is an orthogonal family of polynomials on \\([a,b]\\), with respect to the weight function \\(w(x)\\ge 0\\), and \\(n\\ge 1\\), then show that\n\\[\n\\phi_{n+1}(x)=(a_nx+b_n)\\phi_n(x)-c_n\\phi_{n-1}(x),\n\\]\nfor some constants \\(a_n,b_n\\), and \\(c_n\\). (Hint: Let \\(g(x)=\\phi_{n+1}(x)-a_nx\\phi_n(x)\\), where \\(a_n\\) is a constant chosen so that \\(g(x)\\) has degree \\(n\\).)"
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    }
+  ]
+}

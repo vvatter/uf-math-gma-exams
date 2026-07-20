@@ -1,0 +1,113 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2021, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2021, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2021, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove the Chinese remainder theorem: Let~\(R\) be a commutative ring with~\(1\) and let \(I,J\) be ideals in~\(R\) such that \(I+J=R\). Then \(IJ=I\cap J\) and there is a ring isomorphism \(R/IJ\cong(R/I)\times(R/J)\).
+\item
+Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain with respect to the field norm 
+\[
+N:\mathbb{Z}[\sqrt{-2}]\to\mathbb{Z}_{\geq 0},\qquad N(a+b\sqrt{-2})=a^2+2b^2.
+\]
+\item
+Prove that each of the following is irreducible in the indicated ring.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(2X^3+2X^2+3X+1\in\mathbb{Q}[X]\)
+\item[\textnormal{(b)}]
+\(Y^3+X^2+XY-Y\in\mathbb{Q}[X,Y]\)
+\item[\textnormal{(c)}]
+\(X^4-X^3+4X^2-15\in\mathbb{Z}[X]\)
+\end{examsubparts}
+\item
+Let~\(F\) be a field and let~\(V\) be a vector space over~\(F\). Let \(S\subset V\) be a set which spans~\(V\). Use Zorn’s lemma to prove that~\(V\) has a basis which is contained in~\(S\).
+\item
+Determine the number of similarity classes of matrices \(A\in\mathrm{M}_5(\mathbb{C})\) satisfying \(A^3=0\). Give a representative for each similarity class in Jordan canonical form.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(L/K\) be a field extension of degree~\(5\) and let \(f(X)\in K[X]\) have degree~\(4\). Prove that if \(\alpha\in L\) is a root of \(f(X)\), then \(\alpha\in K\).
+\item[\textnormal{(b)}]
+Give an example of a field extension \(L/K\) of degree~\(4\), a polynomial \(f(X)\in K[X]\) of degree~\(5\), and a root~\(\alpha\) of \(f(X)\) such that \(\alpha\in L\) but \(\alpha\notin K\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2023-aug-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2023,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2023_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. Write your answers clearly in complete English sentences."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(G\\) is a group and \\(H, K\\) are normal subgroups of \\(G\\) such that \\(H \\cap K = 1\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that there is an injective homomorphism \\(G \\to G/H \\times G/K\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\(G = HK\\) then \\(G\\) is isomorphic to \\(G/H \\times G/K\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(G\\) is a finite group, \\(p\\) is a prime, \\(|G|\\) is a power of \\(p\\) and \\(G \\times S \\to S\\) is an action of \\(G\\) on \\(S\\). Show that if \\(p\\) does not divide \\(|S|\\) then \\(S\\) has an element fixed by every element of \\(G\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(p\\) and \\(q\\) are primes such that \\(p < q\\) and \\(p \\mid q-1\\). Show that there is a unique nonabelian group of order \\(pq\\), and show it is a semidirect product of two cyclic groups."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give the definitions of"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "solvable group",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "nilpotent group.",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Show that \\(A_4\\) is solvable but not nilpotent.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that if \\(n \\geq 5\\) then \\(A_n\\) has no proper subgroup of index less than \\(n\\) (you may assume results about the simplicity of \\(A_n\\))."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "In both cases, justify your answer."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Find all conjugacy classes of elements of order \\(4\\) in \\(S_6\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Do the same for \\(A_6\\).",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

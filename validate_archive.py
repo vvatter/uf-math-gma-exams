@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the complete committed PDF, JSON, Markdown, HTML, and review archive."""
+"""Validate the complete committed PDF, JSON, HTML, and review archive."""
 
 from __future__ import annotations
 
@@ -20,15 +20,16 @@ from extract_exams import (
     ExamRecord,
     InstructionsBlock,
     NumberingMode,
+    ProblemTextBlock,
     ProblemBlock,
     ReviewFlag,
     SectionBlock,
     exam_html_path,
+    exam_figure_png_path,
     exam_json_path,
-    exam_markdown_path,
     load_sources,
+    iter_tikz_blocks,
     render_html,
-    render_markdown,
     review_bucket,
     sha256_file,
     validate_exam,
@@ -77,7 +78,9 @@ def located_text(exam: ExamRecord) -> Iterator[tuple[str, str]]:
             displayed_number += 1
             problem = item.problem
             location = f"{prefix}problem {displayed_number} (index {problem_index})"
-            yield location, problem.text
+            for body_index, body_block in enumerate(problem.body, start=1):
+                if isinstance(body_block, ProblemTextBlock):
+                    yield f"{location} text block {body_index}", body_block.text
             pending = [
                 (f"{location} subpart {part.label}", part)
                 for part in problem.subparts
@@ -220,11 +223,9 @@ def validate_archive(
             errors.append(prefix + "source PDF has no pages")
 
         json_path = exam_json_path(source)
-        markdown_path = exam_markdown_path(source)
         html_path = exam_html_path(source)
         for path, label in (
             (json_path, "canonical JSON"),
-            (markdown_path, "Markdown rendering"),
             (html_path, "HTML rendering"),
         ):
             if not path.exists():
@@ -242,12 +243,18 @@ def validate_archive(
             if any(page < 1 or page > page_count for page in flag.source_pages):
                 errors.append(prefix + "review flag refers to an unknown source page")
         errors.extend(prefix + error for error in validate_exam(exam, source, flags))
+        for figure in iter_tikz_blocks(exam):
+            figure_path = exam_figure_png_path(source, figure)
+            if not figure_path.is_file():
+                errors.append(prefix + f"figure PNG is missing: {figure_path.name}")
+                continue
+            try:
+                with pymupdf.open(figure_path) as image:
+                    if image.page_count != 1:
+                        errors.append(prefix + f"figure PNG is invalid: {figure_path.name}")
+            except (OSError, RuntimeError, ValueError) as error:
+                errors.append(prefix + f"figure PNG cannot be opened: {error}")
         expressions.extend(math_expressions(exam))
-        if (
-            markdown_path.exists()
-            and markdown_path.read_text(encoding="utf-8") != render_markdown(exam)
-        ):
-            errors.append(prefix + "Markdown does not match the canonical JSON")
         if (
             html_path.exists()
             and html_path.read_text(encoding="utf-8") != render_html(exam)
@@ -255,10 +262,12 @@ def validate_archive(
             errors.append(prefix + "HTML does not match the canonical JSON")
 
     if exam_ids is None:
-        source_ids = set(sources)
+        canonical_paths = {
+            ".json": {exam_json_path(source) for source in sources.values()},
+            ".html": {exam_html_path(source) for source in sources.values()},
+        }
         for suffix, label in (
             (".json", "JSON"),
-            (".md", "Markdown"),
             (".html", "HTML"),
         ):
             for path in review_dir.rglob(f"*{suffix}"):
@@ -266,7 +275,7 @@ def validate_archive(
                     continue
                 if path in index_pages:
                     continue
-                if path.stem not in source_ids:
+                if path not in canonical_paths[suffix]:
                     errors.append(f"{path}: orphaned canonical {label} file")
 
     errors.extend(validate_mathjax(expressions))

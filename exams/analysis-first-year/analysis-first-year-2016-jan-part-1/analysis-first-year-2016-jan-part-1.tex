@@ -1,0 +1,99 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, January 2016, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2016, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, January 2016, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do exactly four problems. Work should be presented in a logical fashion in order to receive full credit.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(A_1,\ldots,A_n,\ldots\) be subsets of a metric space~\(X\). If \(B=\bigcup_{i=1}^n A_i\), prove that \(\overline{B}=\bigcup_{i=1}^n \overline{A_i}\), where \(\overline{B}\) stands for the closure of~\(B\). If \(C=\bigcup_{n=1}^{\infty}A_n\), prove that \(\bigcup_{i=1}^{\infty}\overline{A_i}\subset\overline{C}\).
+\item
+Let~\(f\) be a mapping from \(B_1\) to itself, where \(B_1\) is the unit ball in \(\mathbb{R}^n\) (\(n\geq 1\)). Let \(R(f)\) be the range of~\(f\) in \(B_1\). Prove that~\(f\) is continuous if and only if for any open set~\(V\) in \(B_1\), \(f^{-1}(V\cap R(f))\) is also open. Your reasoning should be based on the following definition of continuity: \(f\) is called to be continuous at~\(x\) if for any given \(\varepsilon>0\), there exists \(\delta>0\) such that all \(y\in B(x,\delta)\) (the ball centered at~\(x\) with radius~\(\delta\)) satisfies \(|f(y)-f(x)|<\varepsilon\).
+\item
+Let~\(K\) be a compact subset of \(\mathbb{R}^n\) and~\(F\) be a closed subset of \(\mathbb{R}^n\) (\(n\geq 1\)). Suppose \(K\cap F=\varnothing\), prove that 
+\[
+\operatorname{distance}(K,F):=\inf_{x\in K,\,y\in F}|x-y|>0.
+\]
+ Moreover, there exist \(x_0\in K\) and \(y_0\in F\) such that \(|x_0-y_0|=\operatorname{distance}(K,F)\).
+\item
+Let~\(f\) be a monotone function on \((0,1)\). Prove that the number of points where~\(f\) is discontinuous is at most countable.
+\item
+Let~\(f\) be continuous function from \([0,2]\) to \([0,2]\). Prove that~\(f\) has a fixed point in \([0,2]\). Give an example to show that if~\(f\) is not continuous, the conclusion may not hold.
+\item
+Suppose \(\sum_{n=1}^{\infty}a_n\) is convergent and every \(a_n\geq 0\) (\(n=1,\ldots,\infty\)), prove that \(\sum_{n=1}^{\infty}\frac{\sqrt{a_n}}{n^{2/3}}\) is convergent. Give an example to show that \(\sum_{n=1}^{\infty}\frac{a_n^{1/4}}{n^{2/3}}\) could be divergent.
+\end{examproblems}
+\end{document}

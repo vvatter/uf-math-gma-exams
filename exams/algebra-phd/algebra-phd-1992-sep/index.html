@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra PhD Exam, September 1992</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra PhD Exam, September 1992</h1>
+    </header>
+    <div class="instructions">
+      <p>Please read through all the questions carefully before you begin. Your five best solutions will count. You may quote theorems from the course (within reason) as long as you make it clear that you are doing so and state them clearly. All rings have 1 and all modules are unital. Different parts of the same question may or may not be related, and do not usually carry equal credit.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \(G\) be a finite group and \(p\) a prime. The normalizer of a subgroup \(K\leq G\) is defined to be the set of all elements \(x\in G\) such that \(x^{-1}Kx=K\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(H\) is a normal subgroup of \(G\) and \(P\) is a Sylow \(p\)-subgroup of \(H\), show that every element of \(G\) can be written in the form</p>
+                <div class="display-math">\[
+g=hn,
+\]</div>
+                <p>where \(h\in H\) and \(n\) belongs to the normalizer in \(G\) of \(P\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Hence or otherwise show that the normalizer of a Sylow \(p\)-subgroup of a finite group is its own normalizer.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>This problem has two parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Let \(R\) be a commutative ring, and \(M\) an \(R\)-module such that all of the localizations \(M_{\mathfrak m}\) at maximal ideals \(\mathfrak m\) of \(R\) are zero. Prove that \(M=0\). (Hint: Consider the annihilator in \(R\) of a nonzero element of \(M\).)</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Suppose \(R\) is a subring of a field \(K\) and \(S\) is a multiplicative subset of \(R\) not containing \(0\). Show that if \(x\in K\) is integral over \(S^{-1}R\), then it may be written as \(x=b/s\), where \(s\in S\) and \(b\) is integral over \(R\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(k\) be an algebraically closed field and \(I\) a radical ideal of \(k[X_1,\ldots,X_n]\). Show that the set \(V(I)\) of simultaneous zeroes of \(I\) in \(k^n\) is irreducible in the Zariski topology (i.e., is not the union of two proper subsets which are algebraic sets) if and only if \(k[X_1,\ldots,X_n]/I\) is an integral domain. Give an example to show that if \(I\) is not radical, then \(V(I)\) may be irreducible without \(k[X_1,\ldots,X_n]/I\) being an integral domain.</p>
+      </li>
+      <li class="problem">
+        <p>Prove that all simple groups of order \(60\) are isomorphic to the alternating group on five letters.</p>
+      </li>
+      <li class="problem">
+        <p>In this question \(R\) is a ring with left modules \(A,B\) and \(C\) and a right module \(M\). For each of the following statements give a proof or furnish a counterexample.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>Given a surjective homomorphism \(f:B\to C\) of left \(R\)-modules, the induced homomorphism</p>
+                <div class="display-math">\[
+1\otimes f:M\otimes_R B\longrightarrow M\otimes_R C
+\]</div>
+                <p>of abelian groups is also surjective.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>Given an injective homomorphism \(g:A\to B\) of left \(R\)-modules, the induced homomorphism</p>
+                <div class="display-math">\[
+1\otimes g:M\otimes_R A\longrightarrow M\otimes_R B
+\]</div>
+                <p>of abelian groups is also injective.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">c)</span>
+              <div class="subpart-body">
+                <p>If \(R=\mathbb Z\) and \(M=\mathbb Q\), then every exact sequence</p>
+                <div class="display-math">\[
+0\longrightarrow A\xrightarrow{g}B\xrightarrow{f}C\longrightarrow 0
+\]</div>
+                <p>of \(R\)-modules induces an exact sequence</p>
+                <div class="display-math">\[
+0\longrightarrow M\otimes_R A\xrightarrow{1\otimes g}M\otimes_R B\xrightarrow{1\otimes f}M\otimes_R C\longrightarrow 0
+\]</div>
+                <p>of abelian groups.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(G\) be a finite group and \(\mathbb CG\) the complex group algebra. Let \(M\) be a finite dimensional (left) \(\mathbb CG\)-module. An Hermitian form \((\ ,\ )\) on \(M\) is said to be \(G\)-invariant if</p>
+        <div class="display-math">\[
+(gm,gn)=(m,n),\qquad \text{for all }g\in G,\ m,n\in M.
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>Use the trick of averaging over the group to show that \(M\) has a \(G\)-invariant, positive definite hermitian form.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>Using (a) or by another method, prove: If \(N\) is a \(\mathbb CG\)-submodule of \(M\), then there is a \(\mathbb CG\)-submodule \(N&#x27;\) with \(M=N\oplus N&#x27;\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be the ring of lower triangular \(n\times n\) complex matrices.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>Determine the Jacobson radical of \(R\) (You may use any properties of the radical as long as you state them correctly.).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>Give an example to show that the converse of Schur’s Lemma is false, namely, that there exist modules which are not simple (irreducible) but whose endomorphisms form a division ring. (Hint: Use \(R\) with \(n=2\) and the obvious module for this ring.)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Prove or give a counterexample in each case.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If we have Galois extensions of fields \(K\subset L\) and \(L\subset M\), then the extension \(K\subset M\) is Galois.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If we have algebraic extensions of fields \(K\subset L\) and \(L\subset M\), then the extension \(K\subset M\) is algebraic.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Every finite extension of an infinite field is separable.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(K\) be a subfield of the real numbers and \(f\in K[X]\) an irreducible cubic with three real roots.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>Let \(F\) be any field and \(p\) a prime. Show that the polynomial \(X^p-a\in F[X]\) either has a root in \(F\) or is irreducible.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>Show that if \(L\) is obtained from \(K\) by adjoining a real number \(\alpha\) with \(\alpha^p\in K\) for some prime \(p\neq 3\), then \(f\) remains irreducible over \(L\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">c)</span>
+              <div class="subpart-body">
+                <p>Let \(E\) be a splitting field of \(f\) over \(K\). Show that there is an intermediate field \(K_1\) with \([E:K_1]=3\) which is a subfield of the real numbers and a radical extension of \(K\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(d)</span>
+              <div class="subpart-body">
+                <p>Prove that \(f\) remains irreducible over any subfield of the real numbers which is a radical extension of \(K\). (Hints: First, show that we may reduce to the case where \(K=K_1\) and the radical extension is given by an irreducible polynomial as in (a). Then use (b) for the case \(p\neq 3\). If \(p=3\), use the normality of \(E\) over \(K\) and the facts that \([L:K]=3=[E:K]\) to show that \(f\) cannot have a root in \(L\).)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a semisimple artinian ring.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>Use the structure theorem to show that as a left \(R\)-module,</p>
+                <div class="display-math">\[
+R=\bigoplus_i Re_i,
+\]</div>
+                <p>where the elements \(e_i\) are idempotents such that \(\sum_i e_i=1_R\) and \(Re_i\) are minimal left ideals.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>Deduce that any left \(R\)-module \(M\) is the sum of submodules each isomorphic to some \(Re_i\). (Hint: For \(m\in M\) we have \(Rm=\bigoplus_i Re_i m\), the modules \(Re_i\) are simple and the map \(re_i\mapsto re_i m\) defines an \(R\)-module epimorphism \(Re_i\to Re_i m\). Now use Schur’s Lemma.)</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">c)</span>
+              <div class="subpart-body">
+                <p>Show that \(M\) is in fact the direct sum of such submodules.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">d)</span>
+              <div class="subpart-body">
+                <p>Deduce that every left \(R\)-module is projective.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Algebra PhD Exams</a></li>
+        <li><a href="algebra-phd-1992-sep.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

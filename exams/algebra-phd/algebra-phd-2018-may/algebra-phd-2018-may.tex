@@ -1,0 +1,149 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2018},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2018\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2018}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Determine the Galois group of the polynomial 
+\[
+f=x^4-2\in\mathbb{Q}[x].
+\]
+\item
+Let~\(K\) be a field and \(K(x)\) the field of rational functions over~\(K\). Let \(\frac{f}{g}\in K(x)\), with \(\frac{f}{g}\notin K\), where~\(f\) and~\(g\) are relatively prime elements of \(K[x]\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(\frac{f}{g}\) is transcendental over~\(K\).
+\item[\textnormal{(b)}]
+Prove that \(K(x)\) is a finite extension of \(K\left(\frac{f}{g}\right)\).
+\end{examsubparts}
+\item
+Let~\(C\) be a category and let~\(\Lambda\) be a set. Suppose that for each \(\lambda\in\Lambda\) we are given an object \(X_\lambda\) in~\(C\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give the definition of a coproduct of the collection of objects \(\{X_\lambda\}_{\lambda\in\Lambda}\).
+\item[\textnormal{(b)}]
+Prove that any two coproducts of the \(\{X_\lambda\}_{\lambda\in\Lambda}\) are isomorphic.
+\item[\textnormal{(c)}]
+Prove that in the category of Abelian groups a coproduct exists for any collection of objects indexed by a set~\(\Lambda\).
+\end{examsubparts}
+\item
+Let~\(F\) be the free group on two generators~\(x\) and~\(y\). Prove that the commutator subgroup is not finitely generated.
+\item
+Let~\(A\) be a torsion abelian group, and let~\(\mathbb{Q}\) be the (additive) group of the rational numbers.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove \(A\otimes_{\mathbb{Z}}\mathbb{Q}=\{0\}\).
+\item[\textnormal{(b)}]
+Prove \(\mathbb{Q}\otimes_{\mathbb{Z}}\mathbb{Q}\simeq\mathbb{Q}\).
+\end{examsubparts}
+\item
+Let~\(R\) be a ring and suppose that we have the following commutative diagram of~\(R\)-modules and module homomorphisms with exact rows. 
+{\tagpdfsetup{math/mathml/structelem=false,math/mathml/AF=false,math/alt/use=true}
+\[
+\begin{CD}
+0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\
+@. @V{\alpha}VV @V{\beta}VV @V{\gamma}VV @. \\
+0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0
+\end{CD}
+\]
+}
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that if~\(\alpha\) and~\(\gamma\) are monomorphisms, then so is~\(\beta\).
+\item[\textnormal{(b)}]
+Show that if~\(\alpha\) and~\(\gamma\) are epimorphisms, then so is~\(\beta\).
+\end{examsubparts}
+\item
+Let~\(R\) be a commutative ring with \(1\ne 0\). Prove that the set consisting of~\(0\) and all zero divisors in~\(R\) contains at least one prime ideal.
+\item
+State and prove Hilbert’s Basis Theorem.
+\item
+Prove that an ideal of a Dedekind domain can be generated by two elements.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove Schur’s Lemma: If~\(R\) is a ring and~\(M\) a simple~\(R\)-module, then \(D:=\operatorname{Hom}_R(M,M)\) is a division ring.
+\item[\textnormal{(b)}]
+Give an example of~\(R\) and~\(M\) as above where~\(D\) is not a field.
+\end{examsubparts}
+\item
+Let~\(V\) be a nonzero vector space over a field~\(F\). Prove that \(R=\operatorname{Hom}_F(V,V)\) is a simple ring if and only if~\(V\) is finite-dimensional over~\(F\).
+\end{examproblems}
+\end{document}

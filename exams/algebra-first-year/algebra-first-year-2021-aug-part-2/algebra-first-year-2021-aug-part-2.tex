@@ -1,0 +1,112 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, August 2021, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2021, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, August 2021, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. You should indicate which problems you wish to have graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(R\) be an integral domain and let~\(P\) be a prime ideal in~\(R\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that the set \(D=R\setminus P\) is closed under multiplication.
+\item[\textnormal{(b)}]
+Prove that the fraction ring \(D^{-1}R\) has a unique maximal ideal.
+\end{examsubparts}
+\item
+Let~\(R\) be an integral domain. State and prove Eisenstein’s criterion for the irreducibility of a monic polynomial in \(R[X]\).
+\item
+Let~\(R\) be an integral domain, let~\(M\) be an~\(R\)-module, and let \(0\leq n<\infty\). Say \(\operatorname{rank}_R(M)=n\) if the following two conditions hold:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+There exists a subset of~\(M\) with cardinality~\(n\) which is linearly independent over~\(R\).
+\item[\textnormal{(ii)}]
+Every subset of~\(M\) with cardinality \(>n\) is linearly dependent over~\(R\).
+\item[\textnormal{(a)}]
+Prove that if~\(M\) is an~\(R\)-module which is free on a set~\(S\) with cardinality~\(n\) then \(\operatorname{rank}_R(M)=n\).
+\item[\textnormal{(b)}]
+Give an example of an integral domain~\(R\) and an~\(R\)-module~\(M\) such that \(\operatorname{rank}_R(M)=1\) but~\(M\) is not a free~\(R\)-module.
+\end{examsubparts}
+\item
+Let~\(V\) be a vector space over the field~\(F\) and let~\(S\) be a set which spans~\(V\). Use Zorn’s Lemma to prove that there is a basis for~\(V\) which is contained in~\(S\).
+\item
+Give a representative for each similarity class of \(4\times 4\) nilpotent matrices with entries in \(\mathbb{F}_3=\mathbb{Z}/3\mathbb{Z}\). (We say that a square matrix~\(A\) is nilpotent if \(A^n=0\) for some \(n\geq 1\).)
+\item
+Let \(n\geq 1\). Prove that there is at least one irreducible polynomial of degree~\(n\) over~\(\mathbb{Q}\). Deduce that~\(\mathbb{Q}\) has at least one extension of degree~\(n\).
+\end{examproblems}
+\end{document}

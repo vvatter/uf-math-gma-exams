@@ -1,0 +1,108 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, January 2014},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, January 2014\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, January 2014}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do any 9 problems. The notation \(f \in H(\Omega)\) means~\(f\) is holomorphic in the domain~\(\Omega\).
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove the fundamental theorem of algebra.
+\item
+Let~\(\Omega\) be a domain on the complex plane and~\(M\) be a finite positive constant. Suppose~\(F\) is a family of holomorphic functions on~\(\Omega\). If \(|f(z)| \leq M\) for all \(z \in \Omega\) and all \(f \in F\), prove that~\(F\) is equi-continuous on~\(\Omega\).
+\item
+Let \(f_n \in H(\Omega)\), \(n=1,2,3,\ldots\), be one to one in~\(\Omega\). If \(f_n \to f\) uniformly on compact subsets in~\(\Omega\), prove that~\(f\) is either one to one or constant. Show with examples that both conclusions can occur.
+\item
+Let \(f \in H(\Omega)\). If~\(f\) has no zeros in~\(\Omega\), prove that \(\ln |f|\) is harmonic in~\(\Omega\).
+\item
+Evaluate the integral 
+\[
+\int_0^\infty \frac{\ln x}{(x^2+b^2)^2}, \quad b>0.
+\]
+\item
+Let~\(\mathbb{C}\) be the complex plane. Suppose \(f:\mathbb{C}\to\mathbb{C}\) is continuous and~\(f\) is holomorphic except in \([-1,1]\). Prove that~\(f\) is entire.
+\item
+Prove that a doubly periodic entire function is constant.
+\item
+Let~\(P\) be a polynomial and~\(C\) the circle \(|z-a|=R\). Evaluate the integral \(\int_C P(z)\,d\overline{z}\).
+\item
+Let \(f,F \in H(U)\), where \(U=\{z:|z|<1\}\), and let \(R_f=\{f(z):z\in U\}\) and \(R_F=\{F(z):z\in U\}\). Suppose~\(F\) is one to one in~\(U\), \(f(0)=F(0)\), and \(R_f\) is contained in \(R_F\). Prove that there exists an \(\omega \in H(U)\) such that \(f(z)=F(\omega(z))\) and \(|\omega(z)|\leq |z|\). Also show that the equality holds if and only if \(R_f=R_F\).
+\item
+Suppose \(f \in H(\Pi^+)\), where \(\Pi^+\) is the upper half plane and \(|f|\leq 1\). How large can \(|f'(i)|\) be? Find the extremal functions.
+\item
+Find all entire functions~\(f\) such that \(|f(z)|=1\) whenever \(|z|=1\).
+\end{examproblems}
+\end{document}

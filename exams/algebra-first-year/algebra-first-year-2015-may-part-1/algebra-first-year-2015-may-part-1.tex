@@ -1,0 +1,116 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2015, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2015, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2015, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(P \subset S_7\) be a cyclic subgroup of order 7. Show that the normalizer~\(N\) of~\(P\) has order 42, and find a pair of cycles generating~\(N\).
+\item
+Let \(Q_8\) be the quaternion group of order 8. Show that if \(Q_8\) acts faithfully on a set~\(S\), then \(|S| \geq 8\). Hint: the center lies in every nontrivial subgroup.
+\item
+Let~\(G\) be a group of order \(385=5\cdot 7\cdot 11\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that the 7-Sylow and 11-Sylow subgroups are normal.
+\item[\textnormal{(ii)}]
+Show that the 7-Sylow subgroup is in the center.
+\item[\textnormal{(iii)}]
+Show that~\(G\) has a cyclic normal subgroup of order 77.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Find representatives for all conjugacy classes of elements of order 15 in \(S_{11}\).
+\item[\textnormal{(ii)}]
+Do the same for \(A_{11}\).
+\end{examsubparts}
+\item
+Find
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+representatives of the isomorphism classes of abelian groups of order \(504=2^3 3^2 7\), and
+\item[\textnormal{(ii)}]
+the number of elements of order 6 in each such group.
+\end{examsubparts}
+\item
+Suppose~\(G\) is a finite group, \(P\) is a~\(p\)-Sylow subgroup of~\(G\) for some prime~\(p\), and~\(N\) is a normal subgroup of~\(G\). Show that \(N\cap P\) is a~\(p\)-Sylow subgroup of~\(N\).
+\end{examproblems}
+\end{document}

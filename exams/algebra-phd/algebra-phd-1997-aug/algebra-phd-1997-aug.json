@@ -1,0 +1,169 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-1997-aug",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 1997,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_1997_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer seven out of the following ten problems. State clearly any results you need."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a commutative Noetherian ring with identity. Show that if \\(A\\) is Noetherian, then so is the power series ring \\(A[[X]]\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(A\\) is a commutative ring with identity, \\(B\\) is an \\(A\\)-algebra integral over \\(A\\), and \\(f:A\\to K\\) is a homomorphism from \\(A\\) to an algebraically closed field \\(K\\). Show that \\(f\\) can be extended to a homomorphism \\(g:B\\to K\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that any automorphism of the field \\(\\mathbb R\\) of real numbers is the identity."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p\\) be a prime, \\(n>1\\) an integer, and \\(G=\\operatorname{GL}(n,\\mathbb F_p)\\). Compute the order of \\(G\\), and find a \\(p\\)-Sylow subgroup of \\(G\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p\\) be a prime,"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that if \\(S_p\\) is the symmetric group on \\(p\\) letters, and \\(H\\subseteq S_p\\) is a subgroup containing a \\(p\\)-cycle and a transposition, then \\(H=S_p\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(f(T)\\in\\mathbb Q[T]\\) is irreducible of degree \\(p\\). Show that if \\(f(T)\\) has exactly two non-real roots, then the Galois group of the splitting field of \\(f(T)\\) is \\(S_p\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(M_n(F)\\) denote the algebra of \\(n\\times n\\) matrices over the field \\(F\\). Fix \\(p\\) with \\(1<p<n\\) and let \\(R\\) be the subalgebra consisting of those matrices in “block form”\n\\[\n\\begin{pmatrix}A&B\\\\0&C\\end{pmatrix},\n\\]\nwhere \\(A\\) is a \\(p\\times p\\) matrix, and \\(C\\) is an \\((n-p)\\times(n-p)\\) matrix."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Describe the Jacobson radical of \\(R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Consider the vector space \\(V=F^n\\) with its natural structure as a left module for \\(R\\), given by matrix multiplication on the left. Show that \\(V\\) has an irreducible submodule \\(W\\) of dimension \\(p\\) and that \\(V/W\\) is also irreducible.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that \\(V\\) is indecomposable, i.e. \\(V\\) is not the direct sum of two nonzero \\(R\\)-submodules.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "If \\((m,n)=1\\), then compute \\((\\mathbb Z/m\\mathbb Z)\\otimes_{\\mathbb Z}(\\mathbb Z/n\\mathbb Z)\\). Explain."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(A\\) is a commutative ring with identity. If \\(A^m\\cong A^n\\) as \\(A\\)-modules, show that \\(m=n\\) (\\(A^m\\) denotes the direct sum of \\(m\\) copies of \\(A\\) as an \\(A\\)-module, and similarly for \\(A^n\\))."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a Noetherian ring and \\(M\\) a finitely generated \\(A\\)-module. Denote by \\(\\operatorname{Supp}(M)\\) the set of prime ideals \\(p\\) of \\(A\\) such that \\(M_p\\ne0\\), where \\(M_p\\) is the localization of \\(M\\) at \\(p\\). Show that if \\(M_p=0\\) for all \\(p\\), then \\(M=0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that a direct sum of more than one copy of \\(\\mathbb Z\\) is not generated by a single element.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Deduce that a direct sum of more than one copy of \\(\\mathbb Z\\) is not a free group.",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

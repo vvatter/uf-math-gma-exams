@@ -16,40 +16,48 @@ that has no continuing value.
 
 The Git repository is also the durable project archive. It tracks the acquisition and
 extraction code, documentation and tests, losslessly optimized source PDFs, canonical
-JSON records, generated Markdown and HTML views, and `manifest.json` provenance. The original
-download size and hash remain in the manifest even when optimization changes the stored
-PDF bytes. Regenerable page renders, model checkpoints, and other build artifacts remain
-outside Git under `build/`.
+JSON records, generated HTML views, and `manifest.json` provenance. Each
+exam has its own directory, which also provides stable locations for newly typeset TeX
+and accessible PDF output. The original download size and hash remain in the manifest
+even when optimization changes the stored PDF bytes. Regenerable page renders, model
+checkpoints, TeX auxiliary files, and other build artifacts remain outside Git.
 
 ## Unit of Work
 
-Every linked PDF is one exam record and produces one adjacent JSON file plus Markdown
-and HTML views generated from that JSON. A PDF labeled Part 1 and a PDF labeled Part 2
+Every linked PDF is one exam record and produces one JSON file plus an HTML view
+generated from that JSON. A PDF labeled Part 1 and a PDF labeled Part 2
 are separate exams for this purpose. If a part was never published, no placeholder or
 synthetic record is created.
 
 Files that repeat questions from another exam are extracted independently. The dataset
 does not deduplicate questions or create shared question records.
 
-The PDF, canonical JSON, generated Markdown, and generated HTML are stored together for
-efficient review. They share a filename stem and differ only by extension:
+The source PDF, canonical JSON, and generated HTML are stored
+together for efficient review. The exam directory name is the stable identifier. The
+archived original is always `<exam-id>.source.pdf`; `index.html` is the web presentation;
+and the data and typeset files retain the exam ID:
 
 ```text
-exams/algebra-first-year/algebra-first-year-2025-may-part-1.pdf
-exams/algebra-first-year/algebra-first-year-2025-may-part-1.json
-exams/algebra-first-year/algebra-first-year-2025-may-part-1.md
-exams/algebra-first-year/algebra-first-year-2025-may-part-1.html
+exams/algebra-first-year/algebra-first-year-2025-may-part-1/
+  algebra-first-year-2025-may-part-1.source.pdf
+  algebra-first-year-2025-may-part-1.json
+  index.html
+  algebra-first-year-2025-may-part-1.tex
+  algebra-first-year-2025-may-part-1.pdf
+  algebra-first-year-2025-may-part-1.<figure-id>.png  # only when needed
 ```
 
-An exam without a part has no part suffix:
+The TeX and second PDF are generated accessible presentations; they are not renamed
+copies of the archived source. An exam without a part has no part suffix:
 
 ```text
-exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.json
-exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.md
-exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug.html
+exams/numerical-analysis-phd/numerical-analysis-phd-2025-aug/
+  numerical-analysis-phd-2025-aug.source.pdf
+  numerical-analysis-phd-2025-aug.json
+  index.html
 ```
 
-The filename stem is the stable exam identifier.
+The directory name and manifest `id` field are the stable exam identifier.
 
 ## Canonical Metadata
 
@@ -71,11 +79,12 @@ does not need to be transcribed or stored separately.
 
 ## Core JSON
 
-Schema version 2 stores document content as an ordered block sequence:
+Schema version 3 stores document content as an ordered block sequence and gives each
+problem an ordered body of text and manually verified TikZ figure blocks:
 
 ```json
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "id": "analysis-first-year-2015-jan-part-2",
   "subject": "First Year Analysis",
   "subject_tag": "analysis-first-year",
@@ -96,7 +105,12 @@ Schema version 2 stores document content as an ordered block sequence:
         {
           "type": "problem",
           "problem": {
-            "text": "Let \\(\\sum_{n=0}^{\\infty}c_nx^n\\) be a power series.",
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(\\sum_{n=0}^{\\infty}c_nx^n\\) be a power series."
+              }
+            ],
             "subparts": []
           }
         }
@@ -145,7 +159,7 @@ are restored. OCRmyPDF is an optional archive-maintenance tool, not part of extr
 
 When an approved working hash differs from an existing extraction checkpoint, the old
 working hash is retained in `source_sha256_history` and the checkpoint adopts the new
-manifest-approved hash. This allows cached JSON, Markdown, and HTML to survive byte-level PDF
+manifest-approved hash. This allows cached JSON and HTML to survive byte-level PDF
 optimization without erasing provenance or making another model call.
 
 ## Instructions
@@ -205,14 +219,59 @@ is displayed as Problem 1 and logged as a numbering transformation. This keeps t
 problem schema minimal while making the added presentation number explicit in the audit
 record.
 
-## Multipart Problems
+## Problem Bodies And Figures
 
-Each problem block contains one problem object. Subparts do not remain embedded in its
-`text`. They are ordered objects in the problem's `subparts` array:
+Every problem has a `body` array followed by a `subparts` array. Normal extraction
+places the complete problem stem in one text block. Text and figures can be interleaved
+when a visual must appear at a specific point:
 
 ```json
 {
-  "text": "Determine which of the following are irreducible.",
+  "body": [
+    {
+      "type": "text",
+      "text": "Compute the homology of the space shown."
+    },
+    {
+      "type": "tikz",
+      "id": "filled-torus",
+      "alt": "Diagram of a torus with two filled openings.",
+      "libraries": [],
+      "options": ["line cap=round", "x=1cm", "y=1cm"],
+      "height_lines": 6,
+      "code": "\\draw (0,0) -- (1,1);"
+    }
+  ],
+  "subparts": []
+}
+```
+
+TikZ is manual, reviewed restoration rather than model output. The `code` value contains
+only the body of `tikzpicture`; `documentclass`, document wrappers, and the
+`tikzpicture` environment itself are generated downstream. `libraries` and `options`
+record only what that figure needs, `height_lines` sets its PDF and HTML height limit
+and defaults to six, and each figure ID is unique within its exam.
+
+The LaTeX renderer places the TikZ directly in the tagged PDF as vector content and
+passes `alt` to its `Figure` structure. The same build creates a transparent 300 DPI PNG
+for HTML. HTML uses a semantic `figure` and `img` with the same alt text. PDF and HTML presentations preserve
+aspect ratio, do not enlarge the art, and cap it at 80% of the text width and the
+figure's `height_lines` value. The generated PNG is named
+`<exam-id>.<figure-id>.png`.
+
+## Multipart Problems
+
+Each problem block contains one problem object. Subparts do not remain embedded in its
+body text. They are ordered objects in the problem's `subparts` array:
+
+```json
+{
+  "body": [
+    {
+      "type": "text",
+      "text": "Determine which of the following are irreducible."
+    }
+  ],
   "subparts": [
     {
       "label": "(a)",
@@ -238,7 +297,7 @@ forms are not normalized. Labels are not repeated in the `text` value. `subparts
 empty array when there are none. If a subpart itself contains labeled parts, the same
 structure recurses through its own `subparts` array.
 
-Nested subparts are supported by the Markdown renderer as nested bullet levels. This
+Nested subparts are supported by the HTML renderer as nested semantic lists. This
 occurs in the source corpus and is covered by a rendering regression test. Labels still
 count as subpart structure when they are printed inline: if `(a)` contains `(1)`, `(2)`,
 and `(3)`, those three items are nested beneath `(a)` rather than left inside its text.
@@ -262,9 +321,8 @@ Display math is reserved for standalone formulas. A short centered instruction s
 math rather than being promoted to a display equation solely because of its source
 layout. Meaningful paragraph boundaries are retained with blank lines; definitions,
 standalone formulas, instructions, and concluding tasks are not merged into adjacent
-paragraphs. In generated Markdown, every prose line of an instruction block receives
-its own emphasis markers. Display-math delimiters and their contents remain on separate,
-unitalicized lines so Markdown emphasis cannot interfere with MathJax rendering.
+paragraphs. Generated presentations italicize instruction prose while keeping displayed
+mathematics upright.
 
 Mathematicians' names use their standard spelling and diacritics when the identity is
 unambiguous, such as `Gödel` rather than `Goedel`. Established eponymous names use an en
@@ -348,7 +406,7 @@ The ordered-block schema was tested as a corpus migration rather than as 127 ind
 reports. Of the 528 version-1 records, 401 flat records were converted mechanically.
 The 127 records previously associated with instruction or numbering transformations
 were selected for fresh extraction from their PDFs. An eight-exam pilot was compared
-manually against source pages and generated Markdown before the complete run.
+manually against source pages and generated HTML before the complete run.
 
 The pilot added an ASCII-control-character invariant after exposing corrupt mathematical
 text that earlier MathJax matching could not see. That check found four more records for
@@ -356,10 +414,19 @@ fresh extraction, bringing the final source-based set to 131. Two especially mal
 documents required the narrowly scoped encoding-repair fallback described above.
 
 The finished archive contains 134 section blocks across 48 exams, and 92 exams contain
-more than one positioned instruction block. All 528 records use schema version 2. The
-complete archive validator passed 23,154 MathJax expressions with no control characters
-remaining. Superseded version-1 files are not retained in the canonical dataset; Git
-history and ignored build history provide the audit trail.
+more than one positioned instruction block. The complete version-2 archive validator
+passed 23,161 MathJax expressions with no control characters remaining. Superseded
+version-1 files are not retained in the canonical dataset; Git history and ignored
+build history provide the audit trail.
+
+### Schema Version 3 Figure Support
+
+Version 3 replaced each problem's single `text` field with an ordered `body` array. The
+528 version-2 records were migrated mechanically: every nonempty stem became one text
+block, with no change to its string value, and empty stems remained empty bodies. This
+made exact figure placement possible without changing problem numbering or subpart
+structure. Manually reviewed TikZ blocks can now be inserted beside the text they
+illustrate, and all presentations remain deterministic products of the same JSON.
 
 ## Review Logs
 
@@ -394,7 +461,7 @@ publication. A typical record is:
   "exam_id": "topology-phd-2025-may",
   "problem_indices": [12],
   "category": "visual-content",
-  "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+  "source_pdf": "exams/topology-phd/topology-phd-2025-may/topology-phd-2025-may.source.pdf",
   "source_pages": [2],
   "message": "Problem 12 depends on a pictured curve in a solid torus.",
   "status": "open"
@@ -445,7 +512,7 @@ Before an exam JSON is accepted, ordinary code checks that:
 
 1. The file matches the versioned JSON schema.
 2. Its identifier, directory, subject metadata, date, and part agree with the catalog
-   manifest and filename.
+   manifest and exam directory name.
 3. It contains at least one nonempty problem, or a nonempty notice when the linked PDF
    contains no exam questions.
 4. Every section has a nonempty heading, a restart/continue policy, and at least one
@@ -453,18 +520,20 @@ Before an exam JSON is accepted, ordinary code checks that:
    problems. Instruction blocks may occur anywhere but cannot be empty.
 5. Problem numbers are derived from content order and section policy rather than stored,
    so contradictory sequences cannot enter the data.
-6. Every problem and subpart has a `subparts` array, and every subpart has a nonempty
-   original `label` field.
-7. ASCII control characters and dollar-sign math delimiters are absent, MathJax
+6. Every problem has a `body` and `subparts` array; text blocks are nonempty; TikZ blocks
+   have unique IDs, nonempty alt text and code, and no document or environment wrappers;
+   every subpart has a nonempty original `label` field.
+7. Every canonical TikZ block has a readable generated PNG beside its exam outputs.
+8. ASCII control characters and dollar-sign math delimiters are absent, MathJax
    delimiters are balanced, and every expression completes real MathJax TeX-to-CHTML
    rendering without an error.
-8. Every model-reported correction, transformation, or uncertainty appears in its
+9. Every model-reported correction, transformation, or uncertainty appears in its
    corresponding review file.
-9. Every source PDF has either one dataset JSON or an explicit extraction failure.
-10. No exam with an open serious-review item is marked ready for publication.
+10. Every source PDF has either one dataset JSON or an explicit extraction failure.
+11. No exam with an open serious-review item is marked ready for publication.
 
 Initial extraction results remain provisional until the later verification phase. The
-archive validator additionally checks every PDF hash, JSON, Markdown, HTML, and site-index
+archive validator additionally checks every PDF hash, JSON, HTML, and site-index
 set, absolute review index, source reference in the review logs, review page number, and expression
 using the pinned MathJax version before publication begins. It accepts exam IDs for a
 focused validation run and no IDs for the complete archive.
@@ -472,15 +541,17 @@ focused validation run and no IDs for the complete archive.
 ## Presentation Is Downstream
 
 The dataset is the source of truth for generated outputs. The extraction command creates
-Markdown and HTML views of each accepted JSON record. Their title contains the subject,
-followed by “first year exam” or “PhD exam,” month, year, and part when present.
+an HTML view of each accepted JSON record. Its title contains the subject,
+followed by “First-Year Exam,” “PhD Exam,” or “Qualifying Exam,” month, year, and part
+when present.
 Instructions are italicized, problem numbers are bold, and labeled subparts are compact
-nested bullets. Section headings and displayed problem numbers are derived from ordered
-blocks and restart/continue policy. Both formats are always regenerated from JSON and
-are never independently edited or returned by the model.
+nested lists. Restored figures use PNG assets and carry the canonical alt text.
+Section headings and displayed problem numbers are derived from ordered
+blocks and restart/continue policy. HTML is always regenerated from JSON and is never
+independently edited or returned by the model.
 
-When a source problem has labeled subparts but no independent stem, the Markdown
-renderer adds a presentation-only sentence such as “This problem has three parts.” The
+When a source problem has labeled subparts but no independent stem, the HTML and TeX
+renderers add a presentation-only sentence such as “This problem has three parts.” The
 sentence is derived from the subpart array and is not added to the canonical JSON or
 represented as source-authored text.
 
@@ -490,7 +561,7 @@ output, and print styles. It uses a narrow reading column and Computer Modern we
 The source-PDF and subject-index links are omitted when the page is printed.
 
 A second deterministic renderer creates a root archive index and one index inside every
-subject directory. The root page orders levels as Qualifying, First-year, and PhD, then
+subject directory. The root page orders levels as Qualifying, First-Year, and PhD, then
 orders subjects alphabetically within each level. Subject tables order exams from newest
 to oldest and link to the accessible HTML and archived PDF. The index pages use semantic
 navigation, scoped table headings, visible keyboard focus, responsive overflow, and the
@@ -501,13 +572,54 @@ Website navigation is self-contained. Generated pages do not link to the retirin
 website; source URLs remain in canonical data only as provenance. Every page footer puts
 the project-source link first and includes a subdued semantic update date. Subject pages
 then link to the main archive, while exam pages link to the main archive, their named
-subject archive, and the adjacent committed PDF. The site-wide update date is an explicit
+subject archive, and the committed `<exam-id>.source.pdf`. The site-wide update date is an explicit
 renderer constant so regeneration remains deterministic and does not make every page
 appear changed merely because validation ran on another day.
 
 The same semantic HTML can be adapted for WordPress publication.
 
-A PDF generator can produce a newly typeset accessible PDF from the same record.
+A deterministic LaTeX renderer generates a second, newly typeset presentation from the
+same JSON. It uses LuaLaTeX from TeX Live 2026, Unicode Computer Modern fonts, ordinary
+LaTeX headings and lists, and current LaTeX tagging support to produce tagged PDF 2.0
+targeting PDF/UA-2. Ordinary mathematics receives nested MathML structure. The visual
+design follows the HTML presentation: a single-line institutional header, a large
+left-aligned title with a thin rule, italic instructions, bold problem numbers, compact
+problem spacing, paper-conscious margins, and no printed page numbers.
+The institutional names are invisible-style links to the university and department
+websites. Only the subject-and-level portion of the title is likewise linked, without
+color or border, to the future
+`https://gma.math.ufl.edu/exams/<subject-tag>/` archive location; the date and part
+remain outside the link.
+
+The TeX renderer also prevents a simple one-glyph inline expression from becoming a
+line-start orphan when it immediately follows a word. It emits a nonbreaking space
+before atoms such as `\(x\)`, `\(\alpha\)`, and `\(\mathbb{R}\)`, while leaving longer
+expressions normally breakable. This is presentation-only preprocessing and does not
+modify the canonical data or the other generated formats.
+
+The source and generated PDFs remain distinct. `<exam-id>.source.pdf` is the optimized
+archive copy; `<exam-id>.pdf` is compiled from `<exam-id>.tex`. TeX compilation occurs in a
+configurable temporary root, which may be a RAM drive. A reusable LuaLaTeX font cache is
+kept outside the repository. Successful build directories are deleted immediately,
+including all auxiliary files. Failed and interrupted attempts remain in numbered
+per-exam directories for diagnosis, while retries use a fresh directory to avoid
+reading a truncated auxiliary or MathML file.
+
+Generated accessible PDFs must not be passed through OCRmyPDF or Ghostscript
+optimization. Testing OCRmyPDF 16.10.2 with
+`-O1 --skip-text --quiet --jobs 1` removed the structure tree and link annotations,
+downgraded the file from PDF 2.0 to PDF 1.7, changed extracted text, and failed both
+PDF/UA-2 and Well-Tagged PDF validation. Lossless optimization of the archived
+`<exam-id>.source.pdf` inputs remains a separate, pre-extraction operation. A `qpdf`
+object-stream rewrite preserved accessibility and rendered output in testing, but its
+approximately 3% size reduction did not justify making it a build dependency.
+
+Automatic LuaLaTeX MathML generation does not currently handle `amscd` reliably. The
+renderer therefore disables nested MathML only around an `amscd` display, while keeping
+the diagram visually typeset and represented as a tagged formula. All other formulas
+retain MathML structure. This narrow compatibility fallback is covered by a renderer
+test and the resulting prototypes are checked against both veraPDF's PDF/UA-2 and
+Well-Tagged PDF profiles.
 
 Neither renderer should need to inspect the original PDF. Source pages are consulted
 only while resolving a review item or auditing extraction quality.

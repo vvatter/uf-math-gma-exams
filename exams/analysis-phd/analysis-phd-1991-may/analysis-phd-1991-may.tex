@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 1991},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 1991\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 1991}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Be sure to give complete proofs and justify your steps. Do not leave gaps.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+State:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+The Lebesgue Dominated Convergence Theorem
+\item[\textnormal{(b)}]
+Fatou’s Lemma
+\item[\textnormal{(c)}]
+The Radon–Nikodym Theorem
+\item[\textnormal{(d)}]
+\((L^1(S,\Sigma,\mu))^* = L^\infty(S,\Sigma,\mu)\)
+\end{examsubparts}
+\item
+State and prove the Vitali Convergence Theorem for integrals (convergence in measure form).
+\item
+Show that a subset~\(A\) of the reals is a set of Lebesgue measure zero if and only if there exists a sequence of intervals \(I_m\) such that
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\displaystyle \sum_m \operatorname{length}(I_m)<\infty.\)
+\item[\textnormal{(b)}]
+\(\displaystyle A\subset \bigcup_{m=k}^{\infty} I_m\) for every~\(k\).
+\end{examsubparts}
+\item
+Let~\(f\) be Lebesgue integrable on \(\mathbb R\). Suppose that \(\displaystyle \int_0^x f\,dm=0\) for every \(x\in\mathbb R\). What can you conclude about~\(f\)?
+\item
+State and prove Fubini’s Theorem.
+\item
+Let \((S_m,\Sigma_m,P_m)_{m=1}^{\infty}\) be a sequence of probability spaces. Let \(E_m\in\Sigma_m\), \(m=1,2,\ldots\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that 
+\[
+E=\mathop{\times}_{m=1}^{\infty}E_m\in\bigotimes_{m=1}^{\infty}\Sigma_m.
+\]
+\item[\textnormal{(b)}]
+Prove that 
+\[
+\left(\bigotimes_{m=1}^{\infty}P_m\right)(E)=\prod_{m=1}^{\infty}P_m(E_m).
+\]
+\end{examsubparts}
+\end{examproblems}
+\end{document}

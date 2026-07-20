@@ -1,0 +1,147 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2025},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2025\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examinstructions}
+Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(q>1\) be a power of a prime~\(p\). Prove that there exists some field~\(F\) with \(|F|=q\).
+\item
+Determine the Galois group of \(x^4-5\) over~\(\mathbb{Q}\), over \(\mathbb{Q}(\sqrt{5})\), and over \(\mathbb{Q}(\sqrt{5}\,i)\). Justify your answers.
+\item
+Let~\(R\) be an integral domain, let~\(D\) be a divisible~\(R\)-module, and let~\(T\) be a torsion~\(R\)-module. Prove that \(D\otimes_R T=\{0\}\).
+\item
+Prove that the group~\(G\) which is described below using generators and relations is not solvable. 
+\[
+G=\langle x,y\mid x^6=y^2=1\rangle
+\]
+\item
+Let~\(R\) be a ring with identity.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for a left~\(R\)-module to be projective.
+\item[\textnormal{(b)}]
+Show that a free~\(R\)-module is projective.
+\item[\textnormal{(c)}]
+Give an example of a projective~\(R\)-module that is not free.
+\end{examsubparts}
+\item
+Let~\(K\) be a field. Show that any vector space over~\(K\) has a basis (do not assume the vector space has finite dimension).
+\item
+Prove: If a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: Prove first that each prime ideal is principal, use the Chinese Remainder Theorem).
+\item
+Let~\(R\) be a integral domain.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for a fractional ideal of~\(R\) to be invertible.
+\item[\textnormal{(b)}]
+Show that an invertible ideal is a projective~\(R\)-module.
+\end{examsubparts}
+\item
+Suppose \(R\subseteq S\) are integral domains and let \(s\in S\). Prove that the following are equivalent:
+\begin{examsubparts}
+\item[\textnormal{1.}]
+\(s\) is integral over~\(R\);
+\item[\textnormal{2.}]
+\(R[s]\) is finitely generated as an~\(R\)-module;
+\item[\textnormal{3.}]
+There exists some ring~\(T\) such that \(R\subseteq T\subseteq S\), and \(s\in T\), and~\(T\) is finitely generated as an~\(R\)-module.
+\end{examsubparts}
+\item
+Suppose~\(R\) is a ring with identity (not necessarily commutative), \(M\) is a right~\(R\)-module and 
+\[
+N'\longrightarrow N\longrightarrow N''\longrightarrow 0
+\]
+ is an exact sequence of left~\(R\)-modules. Show that 
+\[
+M\otimes_R N'\longrightarrow M\otimes_R N\longrightarrow M\otimes_R N''\longrightarrow 0
+\]
+ is an exact sequence of abelian groups.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the Jacobson density theorem.
+\item[\textnormal{(b)}]
+Use it to show that if~\(K\) is a field and~\(A\) is a simple~\(K\)-algebra of finite dimension then there is a division~\(K\)-algebra~\(D\) and a finite dimensional vector space~\(V\) over~\(D\) such that \(A\simeq\operatorname{End}_D(V)\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

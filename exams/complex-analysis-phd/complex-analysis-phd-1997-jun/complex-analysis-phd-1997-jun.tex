@@ -1,0 +1,121 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, June 1997},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, June 1997\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, June 1997}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do each of the problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Evaluate the integral \(\displaystyle \int_0^\infty \frac{x^{a-1}}{1+x}\,dx\), \(0<a<1\).
+\item
+Suppose \(\Omega=\{z:-1<\operatorname{Re}z<1\}\). Find an explicit formula for the 1-1 conformal mapping~\(f\) of~\(\Omega\) onto \(\{z:|z|<1\}\) for which \(f(0)=0\) and \(f'(0)>0\). Compute \(f'(0)\).
+\item
+Let~\(F\) be the class of all analytic functions~\(f\) in \(\mathbb D=\{z:|z|<1\}\) for which 
+\[
+\iint_{\mathbb D}|f(z)|^2\,dx\,dy\leq 1.
+\]
+ Is this a normal family? Justify your answer.
+\item
+Let~\(g\) be a polynomial. Show that 
+\[
+2\iint_{\mathbb D}(1-|z|^2)|g'(z)|^2\,dx\,dy\leq \int_0^{2\pi}|g(e^{i\theta})|^2\,d\theta,
+\]
+ where \(\mathbb D=\{z:|z|<1\}\).
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give a definition of subharmonic functions.
+\item[\textnormal{(b)}]
+If~\(f\) is analytic in~\(\Omega\), prove that \(\ln(1+|f(z)|^2)\) is subharmonic.
+\item[\textnormal{(c)}]
+Let~\(f\) be analytic in~\(\Omega\). Is \(\ln|f(z)|\) subharmonic in~\(\Omega\)? Justify your answer.
+\end{examsubparts}
+\item
+Construct an entire function whose zero set is the set of Gaussian integers \(a+bi\), where \(a,b\in\mathbb Z\).
+\item
+For \(|z|<1\), define \(f(z)\) by 
+\[
+f(z)=z+\frac{z^3}{3}+\frac{z^5}{5}+\frac{z^7}{7}+\cdots.
+\]
+ Extend \(f(z)\) analytically in a suitable way so that it can be defined at \(z=i\). Using your analytic continuation, determine the radius of convergence of the Taylor series of~\(f\) with \(z=i\) as center.
+\item
+Show \(ze^z=1\) has infinitely many solutions.
+\item
+Define the order and genus of an entire function. What is the relation between the order and genus? Find the order of \(\sin z\).
+\end{examproblems}
+\end{document}

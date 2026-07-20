@@ -1,0 +1,131 @@
+{
+  "schema_version": 3,
+  "id": "probability-phd-2003-may",
+  "subject": "PhD Probability",
+  "subject_tag": "probability-phd",
+  "year": 2003,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Probability_2003_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Write clearly. State precisely results you use. Do not omit steps."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\overline X_m)_{m=1}^{\\infty}\\) be an i.i.d. sequence of real valued variables on \\((\\Omega,\\mathcal F,P)\\). Let \\(\\mathcal F_m=\\sigma(\\overline X_1,\\ldots,\\overline X_m)\\). Put \\(S_m=\\overline X_1+\\cdots+\\overline X_m\\), for \\(m\\geq1\\), and put \\(S_0=0\\). Which of the following sequences are martingales relative to \\(\\mathcal F_m\\)? For those which are not martingales with respect to this filtration, what conditions have to be added to make them martingales?"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "\\(S_m\\), \\(m=0,1,2,\\ldots\\), \\(E[|\\overline X_1|]<\\infty\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "\\(\\overline X_1^2+\\cdots+\\overline X_m^2-m\\lambda\\), \\(m=1,2,\\ldots\\), \\(E(\\overline X_1^2)<\\infty\\), \\(\\lambda\\) real.",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "\\(\\exp(\\alpha S_m-m\\lambda)\\), \\(m=0,1,2,\\ldots\\), where \\(\\varphi(\\alpha)=E[\\exp(\\alpha\\overline X_1)]<\\infty\\), \\(\\alpha,\\lambda\\) real.",
+            "subparts": []
+          },
+          {
+            "label": "d)",
+            "text": "\\(\\overline Y_m=S_{\\min(m,T)}\\), \\(m=0,1,2,\\ldots\\), where \\(P(\\overline X_1=\\pm1)=\\frac12\\) and \\(T=\\min\\{n>0:S_n=0\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\{\\alpha_m\\}_{m=1,2,\\ldots}\\) be a sequence of probability measures on \\(\\mathbb R\\). Show the following are equivalent:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "There exists a probability measure \\(\\alpha\\) on \\(\\mathbb R\\) such that \\(\\lim_{m\\to\\infty}\\alpha_m(I)=\\alpha(I)\\) for all closed intervals \\(I\\) on \\(\\mathbb R\\) whose end points are continuity points of \\(\\alpha\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "If \\(\\{F_m\\}\\), respectively \\(F\\), are the distribution functions of \\(\\{\\alpha_m\\}\\), respectively \\(\\alpha\\), then \\(\\lim_{m\\to\\infty}F_m(x)=F(x)\\) at every point \\(x\\) of continuity of \\(F\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\{\\alpha_m\\}_{m=1,2,\\ldots}\\) be a sequence of probability measures on \\(\\mathbb R\\), and let \\(\\{\\varphi_m(t)\\}_{m=1,2,\\ldots}\\) be the corresponding characteristic functions. Assume that \\(\\lim_{m\\to\\infty}\\varphi_m(t)=\\varphi(t)\\) for all \\(t\\in\\mathbb R\\), and \\(\\varphi(t)\\) is continuous at \\(t=0\\). Prove that \\(\\varphi(t)\\) is the characteristic function of some probability measure and that the conditions of Problem 2 hold."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "If \\(\\overline X\\) is a real valued random variable, show that for \\(0<\\varepsilon<1\\),\n\\[\nE\\left[\\frac{|\\overline X|}{1+|\\overline X|}\\right]\\leq \\varepsilon+P[|\\overline X|>\\varepsilon]\n\\]\nand that\n\\[\nP(|\\overline X|>\\varepsilon)\\leq\\frac{1+\\varepsilon}{\\varepsilon}E\\left[\\frac{|\\overline X|}{1+|\\overline X|}\\right].\n\\]\nDeduce that the set of real valued random variables on a given probability space can (with suitable identification) be regarded as a metric space if the distance between two random variables \\(\\overline X\\) and \\(\\overline Y\\) is defined to be\n\\[\nd(\\overline X,\\overline Y)=E\\left[\\frac{|\\overline X-\\overline Y|}{1+|\\overline X-\\overline Y|}\\right],\n\\]\nand that convergence in this metric space corresponds to convergence in probability."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Let \\(\\overline X_m\\), \\(m=1,2,\\ldots\\), be i.i.d., \\(\\overline X_m>0\\), \\(E[\\overline X_m]=1\\), and \\(\\overline Y_m=\\prod_{k=1}^m\\overline X_k\\). Prove that \\(\\overline Y_m\\) is a martingale relative to the filtration \\(\\mathcal F_m=\\sigma(\\overline X_1,\\ldots,\\overline X_m)\\). Show that \\(\\lim_{m\\to\\infty}\\overline Y_m=\\overline Y_\\infty\\) exists a.s.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Show that \\(P[\\overline Y_\\infty=0]=0\\) or \\(1\\).\n\nHint: Recall infinite products and the zero-one law.",
+            "subparts": []
+          },
+          {
+            "label": "c)",
+            "text": "Using b), show that\n\\[\nE[\\overline Y_\\infty]=1\\quad\\Longleftrightarrow\\quad P[\\overline Y_\\infty>0]=1.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\overline X_m\\), \\(m=1,2,\\ldots\\), be a supermartingale such that\n\\[\nE[|\\overline X_{m+1}-\\overline X_m|\\mid\\mathcal F_m]<M\\quad\\text{a.s.}\n\\]\nShow that for any two optional times \\(S\\leq T\\), \\(E[T]<\\infty\\), we have \\(E[|\\overline X_T|]<\\infty\\) and\n\\[\nE(\\overline X_T\\mid\\mathcal F_S)\\leq\\overline X_S.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

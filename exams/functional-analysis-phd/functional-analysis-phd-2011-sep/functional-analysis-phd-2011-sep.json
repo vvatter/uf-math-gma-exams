@@ -1,0 +1,133 @@
+{
+  "schema_version": 3,
+  "id": "functional-analysis-phd-2011-sep",
+  "subject": "PhD Functional Analysis",
+  "subject_tag": "functional-analysis-phd",
+  "year": 2011,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_FunctionalAnalysis_2011_09.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do any SIX problems. Write solutions in a neat and logical fashion, giving complete reasons for all steps."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a vector space and \\(\\mathcal F\\) a vector space of linear functionals on \\(X\\) that separates points."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Write down a base for the weak topology on \\(X\\) induced by \\(\\mathcal F\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Prove that if a linear functional \\(\\varphi\\) on \\(X\\) is continuous in this topology, then \\(\\varphi \\in \\mathcal F\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a normed vector space. Suppose \\((x_n)\\) is a sequence in \\(X\\), converging weakly to \\(x \\in X\\). (That is, \\(\\varphi(x_n) \\to \\varphi(x)\\) for every norm-continuous linear functional \\(\\varphi\\).) Prove that there is a sequence \\(y_n\\), where each \\(y_n\\) is a convex combination of finitely many of the \\(x_n\\), such that \\(\\lim \\lVert y_n-x\\rVert=0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(T\\) be a bounded linear operator on a Hilbert space \\(H\\). Prove that if both \\(T\\) and \\(T^*\\) are bounded below, then \\(T\\) is invertible. (Recall that \\(T\\) bounded below means that there is a constant \\(c>0\\) so that \\(\\lVert Tx\\rVert \\geq c\\lVert x\\rVert\\) for all \\(x\\in H\\).)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(T\\) be a bounded linear operator on Hilbert space. Prove that there is a positive operator \\(P\\) and a partial isometry \\(U\\) such that \\(\\ker U=\\ker T\\) and \\(T=UP\\) (that is, \\(T\\) has a polar decomposition)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(T\\) be a Hilbert space operator with \\(\\lVert T\\rVert\\leq 1\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Prove that \\(I-T^*T\\) and \\(I-TT^*\\) are positive operators.",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Prove that\n\\[\nT(I-T^*T)^{1/2}=(I-TT^*)^{1/2}T.\n\\]\n(Hint: approximate \\(\\sqrt{1-x}\\) by polynomials \\(p_n(x)\\) and use the spectral theorem.)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\lambda_n)\\) be a bounded sequence of complex numbers. Consider the weighted shift operator \\(S\\) defined on \\(\\ell^2(\\mathbb N)\\) by\n\\[\nS(x_0,x_1,x_2,\\ldots)=(0,\\lambda_0x_0,\\lambda_1x_1,\\lambda_2x_2,\\ldots).\n\\]\nCharacterize those sequences \\((\\lambda_n)\\) for which \\(S\\) is compact."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a Banach algebra (over \\(\\mathbb C\\)) and \\(a\\in A\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "a)",
+            "text": "Define the spectrum of \\(a\\).",
+            "subparts": []
+          },
+          {
+            "label": "b)",
+            "text": "Show that if \\(\\lambda\\in\\mathbb C\\) and \\(|\\lambda|>\\lVert a\\rVert\\), then \\(\\lambda\\) does not lie in the spectrum of \\(a\\).",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

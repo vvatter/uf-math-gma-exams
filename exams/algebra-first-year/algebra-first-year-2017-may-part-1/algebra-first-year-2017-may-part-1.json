@@ -1,0 +1,121 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2017-may-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2017,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2017_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. If you turn in more than four, only the first four will be graded. Unless otherwise indicated you may use theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p\\) be a prime and \\(G\\) be a finite group whose order is a power of \\(p\\) greater than 1."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that the center of \\(G\\) is not trivial.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Deduce that \\(G\\) is solvable. (Do not just state theorems; give the proof).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that a group of order \\(132=2^2\\cdot 3\\cdot 11\\) has a normal Sylow subgroup."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be the group\n\\[\nG=\\left\\{\\left.\\begin{pmatrix}a&b\\\\0&c\\end{pmatrix}\\ \\right|\\ a,b,c\\in\\mathbb{R},\\ ac\\ne 0\\right\\}\n\\]\nand let \\(H\\) (resp. \\(N\\)) be the subgroup of \\(G\\) consisting of elements in which \\(b=0\\) (resp. \\(a=c=1\\)). Show that \\(G\\) is isomorphic to a semidirect product of \\(H\\) and \\(N\\), and identify the relevant map \\(\\phi\\) from one to the automorphism group of the other."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group of permutations of a set \\(A\\), and for \\(a\\in A\\) let \\(G_a\\) be the stabilizer of \\(a\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that \\(gG_ag^{-1}=G_{g(a)}\\) for all \\(g\\in G\\), \\(a\\in A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\(G\\) is transitive then\n\\[\n\\bigcap_{g\\in G}gG_ag^{-1}=1.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "Show that if \\(G\\) is abelian and transitive then \\(g\\ne 1\\) implies \\(g(a)\\ne a\\) for all \\(a\\in A\\). Conclude that if \\(A\\) is finite then so is \\(G\\), and \\(|G|=|A|\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p\\) and \\(q\\) be distinct primes. List all abelian groups of order \\(p^3q^2\\). For each such group, how many elements are there of order \\(p\\)? \\(pq\\)?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "List representatives of all conjugacy classes in \\(S_9\\) whose elements have order 3.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Find the cardinality of every such class.",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

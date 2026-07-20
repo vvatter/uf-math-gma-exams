@@ -1,0 +1,187 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-2024-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2024,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Algebra-2024_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.\n\nResults from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(p\\) is an odd prime and let \\(K\\) be the extension of \\(\\mathbb{Q}\\) obtained by adjoining a primitive \\(p\\)th root of unity. Show that \\(K\\) has a unique subfield of degree 2 over \\(\\mathbb{Q}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(C\\) is a commutative ring with identity, \\(B \\subseteq C\\) is a subring, \\(A \\subseteq B\\) is a subring and \\(A\\) and \\(B\\) have the same identity as \\(C\\). Show that if \\(B\\) is integral over \\(A\\) and \\(C\\) is integral over \\(B\\) then \\(C\\) is integral over \\(A\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal{C}\\) be a category and \\(F:\\mathcal{C}^{\\mathrm{op}} \\to \\mathbf{Set}\\) be a functor (here \\(\\mathbf{Set}\\) is the category of sets)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Say what it means for a pair \\((X,\\xi)\\) to represent the functor \\(F\\), where \\(X\\) is an object of \\(\\mathcal{C}\\) and \\(\\xi \\in F(X)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\((X,\\xi)\\) and \\((Y,\\eta)\\) both represent \\(F\\), there is an isomorphism \\(f:X \\overset{\\sim}{\\longrightarrow} Y\\) such that the induced map \\(F(Y) \\to F(X)\\) sends \\(\\eta\\) to \\(\\xi\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(k\\) is a field and \\(U_n\\) is the group of upper unitriangular matrices with coefficients in \\(k\\) (this means that the diagonal entries are equal to 1 and the entries below the diagonal are 0). Show that the group \\(U_n\\) is nilpotent."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Define what it means for a fractional ideal of \\(R\\) to be invertible.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that an invertible ideal is a finitely generated projective \\(R\\)-module.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(K/k\\) is a finite extension and \\(k^{\\mathrm{alg}}\\) is an algebraic closure of \\(k\\). Show that \\(K/k\\) is separable if and only if the ring \\(K \\otimes_k k^{\\mathrm{alg}}\\) has no nonzero nilpotent elements."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(S\\) be a set and \\(F(S)\\) be the free group on \\(S\\). Show that \\(F(S)\\) is abelian if and only if \\(|S|<2\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(k\\) is a field and \\(R=k[X_1,\\ldots,X_n]\\). Show that \\(R\\) is a Dedekind domain if and only if \\(n<2\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(A\\) is a noetherian commutative ring with identity."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(f:A \\to B\\) is a surjective homomorphism then \\(B\\) is noetherian.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Recall that a multiplicative system in \\(A\\) is a nonempty subset containing the identity and closed under multiplication. Show that if \\(S \\subset A\\) is a multiplicative system then \\(S^{-1}A\\) is noetherian.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(k\\) is a field and \\(R=k[X,Y]\\). Find two distinct primary decompositions of the ideal \\(I=(X^2,XY)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "State the Jacobson density theorem for semisimple rings.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Use it to show that if \\(k\\) is an algebraically closed field and \\(A\\) is a simple \\(k\\)-algebra of finite dimension over \\(k\\), then \\(A\\) is a matrix algebra.",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

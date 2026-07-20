@@ -1,0 +1,115 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, May 2017},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, May 2017\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, May 2017}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do six of eight. Throughout, \(\mathbb{D}=\{ |z|<1\}\) and \(\mathbb{H}=\{\operatorname{Re} z>0\}\).
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Use Liouville’s Theorem to prove the fundamental theorem of algebra.
+\item
+Suppose \(f:\mathbb{C}\to\mathbb{C}\) is entire and \(|f(z)|=1\) for \(|z|=1\). What can be said about~\(f\)?
+\item
+Find 
+\[
+\int_0^\pi \frac{dt}{2+\cos(t)}.
+\]
+\item
+Let \(\mathbb{P}=\{0<|z|<1\}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Does there exist an onto analytic map \(f:\mathbb{D}\to\mathbb{P}\)? If so, can~\(f\) be one-one?
+\item[\textnormal{(b)}]
+Find a conformal map from the strip \(S=\{0<\operatorname{Im} z<1\}\) to~\(\mathbb{D}\).
+\end{examsubparts}
+\item
+Suppose \(f:\mathbb{C}\to\mathbb{C}\) is entire, non-constant and periodic of period 1, meaning \(f(z+1)=f(z)\). Prove the entire function \(g:\mathbb{C}\to\mathbb{C}\) given by \(g(z)=f(z)-z\) is onto.
+\item
+Suppose~\(f\) is analytic in an open set containing \(\{|z|\leq 1\}\) and \(|f(z)|<1\) for \(|z|=1\). Prove \(f(z)=z\) has exactly one solution (counting with multiplicity) in~\(\mathbb{D}\).
+\item
+Let 
+\[
+\mathcal{F}=\{f:\mathbb{D}\to\mathbb{H}: f\text{ is analytic and }f(0)=1\}.
+\]
+ Prove~\(\mathcal{F}\) is a normal family.
+\item
+Fix \(0<r<1\) and let \(\mathbb{A}=\{r<|z|<1\}\). Show, if~\(u\) is harmonic on~\(\mathbb{A}\), then there is an analytic function~\(f\) on~\(\mathbb{A}\) and a real constant~\(c\) such that 
+\[
+u(z)=\operatorname{Re} f(z)+c\log(|z|).
+\]
+\end{examproblems}
+\end{document}

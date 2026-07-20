@@ -1,0 +1,201 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, January 2020},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2020\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, January 2020}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(A \in \mathbb{C}^{m\times n}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine constants~\(\alpha\) and~\(\beta\) such that the following inequality holds for the~\(p\) and~\(\infty\) norms of matrix~\(A\), for integers \(p\geq 1\). Justify your answer. 
+\[
+\alpha\|A\|_\infty\leq \|A\|_p\leq \beta\|A\|_\infty.
+\]
+\item[\textnormal{(b)}]
+Prove or give a counterexample: \(\|A\|_2\leq \|A\|_F\), where \(\|A\|_F\) is the Frobenius norm of~\(A\). If you prove this, make sure to justify each nontrivial step.
+\end{examsubparts}
+\item
+Suppose~\(A\) is Hermitian positive definite.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that each principal submatrix of~\(A\) is Hermitian positive definite.
+\item[\textnormal{(b)}]
+Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
+\item[\textnormal{(c)}]
+Prove that~\(A\) has a Cholesky decomposition.
+\end{examsubparts}
+\item
+Define the matrices~\(A\) and~\(B\) by 
+\[
+A=\begin{pmatrix}
+1&2&0\\
+1&2&0\\
+1&2&0\\
+1&2&0
+\end{pmatrix},
+\qquad
+B=\begin{pmatrix}
+1&0&1\\
+0&2&0\\
+1&0&0\\
+0&0&1
+\end{pmatrix}.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find both full and economy singular value decompositions of~\(A\).
+\item[\textnormal{(b)}]
+Find both full and economy QR decompositions of~\(B\).
+\end{examsubparts}
+\item
+Let \(\|\cdot\|\) be a subordinate (induced) matrix norm.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(E\) is \(n\times n\) with \(\|E\|<1\), then show \(I+E\) is nonsingular and 
+\[
+\|(I+E)^{-1}\|\leq \frac{1}{1-\|E\|}.
+\]
+\item[\textnormal{(b)}]
+If~\(A\) is \(n\times n\) invertible and~\(E\) is \(n\times n\) with \(\|A^{-1}\|\|E\|<1\), then show \(A+E\) is nonsingular and 
+\[
+\|(A+E)^{-1}\|\leq \frac{\|A^{-1}\|}{1-\|A^{-1}\|\|E\|}.
+\]
+\end{examsubparts}
+\item
+Suppose the linear equation \(Ax=b\), with 
+\[
+A=\begin{pmatrix}\delta&1\\1&1\end{pmatrix},\qquad |\delta|<\epsilon_m/4,
+\]
+ is solved on a floating-point system with machine-epsilon \(\epsilon_m\), using an LU factorization (no pivoting!) followed by forward and back substitution. (You may assume the operations \((+,-,\div,\times)\), do not incur any additional errors.)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(b=(1,0)^T\), compute the backward error, \(\|\hat b-b\|_2/\|b\|_2\), where \(\hat b\) is the data that satisfies \(A\hat x=\hat b\), and \(\hat x\) is the computed solution.
+\item[\textnormal{(b)}]
+Is the result of (a) sufficient to draw any conclusions about the backward-stability of the algorithm used to compute \(\hat x\)? Explain.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Starting with the first two Legendre polynomials over \([-1,1]\), given by \(p_0(x)=1\), and \(p_1(x)=x\), find the next three (monic) Legendre polynomials, \(p_2(x),p_3(x)\) and \(p_4(x)\).
+\item[\textnormal{(b)}]
+Find the nodes \(t_0,t_1,t_2\) and weights \(w_0,w_1,w_2\) which define the Gaussian Quadrature formula 
+\[
+\int_{-1}^1 f(t)\,dt\approx w_0f(t_0)+w_1f(t_1)+w_2f(t_2),
+\]
+ with degree of exactness \(m=5\). You should find the nodes exactly, and may leave the weights \(w_0,w_1,w_2\), in integral form.
+\end{examsubparts}
+\item
+Consider the fixed point problem \(x=f(x)\), where \(f(x)=e^{-(3+x)}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Assuming all computations are done in exact arithmetic, find the largest open interval in~\(\mathbb{R}\) where the fixed-point iteration \(x_{k+1}=f(x_k)\) is ensured to converge.
+\item[\textnormal{(b)}]
+Write a Newton iteration for finding the fixed-point.
+\end{examsubparts}
+\item
+Let \(P_1\) be the space of polynomials of degree at most one. Using the norm \(\|u\|_2=\left(\int_a^b u^2\,dx\right)^{1/2}\)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the least-squares approximation to \(f(x)=x^3\) in \(P_1\) over \([a,b]=[-1,1]\).
+\item[\textnormal{(b)}]
+Find the least-squares approximation to \(f(x)=x^4\) in \(P_1\) over \([a,b]=[0,1]\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find a natural cubic spline \(B_0\) on \(-1\leq x\leq 1\) that satisfies \(v(-1)=0\), \(v(0)=2\), and \(v(1)=0\).
+\item[\textnormal{(b)}]
+Find a natural cubic spline on \(-1\leq x\leq 2\) that satisfies \(v(-1)=0\), \(v(0)=2\), \(v(1)=1/2\) and \(v(2)=0\). You may write the solution as \(B=B_0+B_1\), where \(B_0\) is (or is closely related to) the solution to (a), if you like.
+\end{examsubparts}
+\item
+Let \(f\in C^\infty(a-H,a+H)\), and let \(h<H\). Let \(x_0=a-h\), \(x_1=a\) and \(x_2=a+h\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the finite difference approximation to \(f''(a)\) based on the quadratic interpolant \(p_2\) which satisfies \(p_2(x_0)=f(x_0)\), \(p_2(x_1)=f(x_1)\) and \(p_2(x_2)=f(x_2)\) (you should explicitly show how the difference approximation is derived from the interpolant).
+\item[\textnormal{(b)}]
+Let \(\psi_0(h)=\psi(h)\) be the difference approximation to \(f''(a)\) found in part (a). Assume (in exact arithmetic) \(\psi(h)\to\psi(0)=f''(a)\) as \(h\to 0\), and that \(\psi(h)\) has the asymptotic expansion 
+\[
+\psi(h)=\psi(0)+a_2h^2+a_4h^4+a_6h^6+\cdots.
+\]
+ Find the general Richardson extrapolation formula for \(\psi_k(h)\) based on \(\psi_{k-1}(h)\) and \(\psi_{k-1}(h/2)\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

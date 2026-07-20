@@ -1,0 +1,135 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Linear Algebra First-Year Exam, January 2015},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, January 2015\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Linear Algebra First-Year Exam, January 2015}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Assume \(A \in \mathbb{R}^{m,n}\) with \(m \geq n\), \(\operatorname{rank}(A)=n\) and \(b \in \mathbb{R}^m\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the least squares solution to \(Ax=b\).
+\item[\textnormal{(b)}]
+Derive the normal equations for the least squares problem.
+\item[\textnormal{(c)}]
+Prove that \(A^T A\) is invertible.
+\item[\textnormal{(d)}]
+Prove that the unique solution to the least squares problem is \((A^T A)^{-1}A^T b\).
+\item[\textnormal{(e)}]
+Describe how to solve the least squares problem using the QR decomposition of~\(A\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Compute \(\det(\lambda I+uv^*)\) when \(\lambda \in \mathbb{C}\), \(I\) is the \(m \times m\) identity matrix, and \(u,v \in \mathbb{C}^m\).
+\item[\textnormal{(b)}]
+Prove necessary and sufficient conditions for \(I+uv^*\) to be nonsingular and when it is, give a formula for its inverse.
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(P\) is a projector, prove that \(\operatorname{null}(P) \cap \operatorname{range}(P)=\{0\}\) and \(\operatorname{null}(P)=\operatorname{range}(I-P)\).
+\item[\textnormal{(b)}]
+Prove that~\(P\) is an orthogonal projector if and only if it is Hermitian.
+\item[\textnormal{(c)}]
+If \(q_1,\ldots,q_n\) is an orthonormal basis for the subspace \(V \subset \mathbb{C}^m\) with \(m>n\), prove that the orthogonal projector onto~\(V\) is \(QQ^*\), where~\(Q\) is the matrix whose columns are the \(q_j\).
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(\lVert A\rVert_F=\operatorname{trace}(A^*A)^{1/2}\).
+\item[\textnormal{(b)}]
+Prove that \(\lVert A\rVert_F=(\sum \sigma_i^2)^{1/2}\), where \(\{\sigma_i\}\) are the singular values of~\(A\) counted with multiplicity.
+\item[\textnormal{(c)}]
+If both~\(A\) and~\(U\) are in \(\mathbb{C}^{m,m}\) and~\(U\) is unitary, prove that \(\lVert UA\rVert_F=\lVert AU\rVert_F=\lVert A\rVert_F\).
+\end{examsubparts}
+\item
+Define a normal matrix and prove that the following are equivalent.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(A\) is normal.
+\item[\textnormal{(b)}]
+\(A\) is unitarily diagonalizable.
+\item[\textnormal{(c)}]
+\(\lVert A\rVert_F=(\sum |\lambda_i|^2)^{1/2}\), where \(\{\lambda_i\}\) are the eigenvalues of~\(A\) counted with multiplicity.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

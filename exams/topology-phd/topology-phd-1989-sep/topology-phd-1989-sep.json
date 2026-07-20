@@ -1,0 +1,132 @@
+{
+  "schema_version": 3,
+  "id": "topology-phd-1989-sep",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 1989,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_1989_09.pdf",
+  "content": [
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the exact homology sequence of a pair."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Describe all coverings of the torus \\(T^2=S^1\\times S^1\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Lefschetz fixed point theorem for compact simplicial complexes."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State Tietze’s extension theorem for normal spaces."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(K=K_1\\cup K_2\\) be a simplicial complex with \\(K_1\\) and \\(K_2\\) subcomplexes, and let \\(A=K_1\\cap K_2\\). State the Mayer–Vietoris sequence for this."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be the set of points in the plane which is the closure of the set \\(S=\\{(x,\\sin(1/x))\\mid 0<x\\leq 1\\}\\). Show that there is no continuous mapping \\(f:[0,1]\\to X\\) which is onto."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that a compact Hausdorff space is normal."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f,g:X\\to S^n\\) be any continuous mappings. Suppose that for all \\(x\\in X\\), \\(f(x)\\) and \\(g(x)\\) are not antipodal. Show that \\(f\\) and \\(g\\) are homotopic."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Use the van Kampen theorem to compute the fundamental group of the surface of genus 2."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give an example of a space \\(X\\) for which \\(\\pi_1(X,x_0)\\) is not finitely generated."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, September 2009},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, September 2009\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, September 2009}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+A fixed point of a function~\(f\) is a point~\(x\) with \(f(x)=x\). Let~\(G\) be an open, simply connected subset of \(\mathbb C\). If~\(f\) is analytic on~\(G\), \(f(G)\subset G\), and~\(f\) has two fixed points, show that~\(f\) is the identity map.
+\item
+Let~\(G\) be an open, connected subset of \(\mathbb C\) and~\(f\) be analytic on~\(G\). Note that we are not assuming that~\(G\) is simply connected.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Assume now that for another open, connected set~\(H\), \(f(G)\subset H\) and \(h:H\to\mathbb R\) is harmonic. Show that \(h\circ f\) is harmonic.
+\item[\textnormal{(b)}]
+Prove or disprove: Both the real and imaginary parts of~\(f\) are harmonic functions.
+\item[\textnormal{(c)}]
+Prove or disprove, if \(u:G\to\mathbb R\) is harmonic, then there is a harmonic function \(v:G\to\mathbb R\) so that \(u+iv\) is analytic.
+\end{examsubparts}
+\item
+Give an explicit biholomorphism from the “wedge” \(\{z:0<\arg(z)<\pi/2\}\) onto the open unit disk.
+\item
+Evaluate the integral, and justify each step. 
+\[
+\int_{-\infty}^{\infty}\frac{x\sin x}{(x^2+1)^2}\,dx.
+\]
+\item
+Let~\(f\) be an entire function of finite order. Prove that if the order is not an integer, then~\(f\) must have infinitely many zeros. Does there exist an entire function of infinite order with finitely many zeros? Explain.
+\item
+Assume each \(g_n\) is entire and \(g_n\to g\) uniformly on compact sets in \(\mathbb C\) (i.e. \(g_n\to g\) in \(H(\mathbb C)\)). If each \(g_n\) has only real zeros, show that~\(g\) has only real zeroes.
+\item
+Assume that~\(f\) and~\(g\) are analytic and nonvanishing on \(\{z\in\mathbb C:|z|<2\}\) and that \(|f(z)|=|g(z)|\) when \(|z|=1\). Show that there is a constant \(\lambda\in\mathbb C\) with \(|\lambda|=1\) and \(f(z)=\lambda g(z)\) for all \(z\in B_2(0)\).
+\item
+Assume that~\(f\) is entire, and for some integer \(n>0\), 
+\[
+\lim_{z\to\infty}\frac{f(z)}{z^n}=c,
+\]
+ for some finite, nonzero complex number~\(c\). What can you say about~\(f\)?
+\end{examproblems}
+\end{document}

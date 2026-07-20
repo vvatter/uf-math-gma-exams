@@ -1,0 +1,125 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 2014},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2014\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 2014}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Compute \(\pi_1(T^2)\) and \(H_*(T^2)\), where \(T^2 = S^1 \times S^1\) is the 2-dimensional torus.
+\item
+Let~\(X\) be a connected completely regular topological space having more than one point. Can~\(X\) be countable?
+\item
+Prove that there is no map of degree 3 from \(S^2\) to the torus \(T^2\).
+\item
+Does there exist a covering space of the 2-dimensional sphere with four points deleted with nontrivial abelian fundamental group?
+\item
+Show that the 2-dimensional sphere with four points deleted cannot be a topological group.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Baire Category Theorem.
+\item
+State the homology Mayer–Vietoris Theorem.
+\item
+State the Urysohn Lemma.
+\item
+Do the following short exact sequences always split 
+\[
+0 \to A \to B \to \mathbb{Z}^2 \to 0
+\]
+ 
+\[
+0 \to \mathbb{Z} \to A \to B \to 0\ ?
+\]
+\item
+Compute the Euler characteristic \(\chi(\mathbb{R}P^2 \times S^1 \times S^2 \times S^3)\).
+\item
+Give an example of \(A \subset X\) such that~\(A\) is a retract of~\(X\) but not a deformation retract.
+\item
+State the Lefschetz Fixed Point Theorem.
+\item
+Can irrational numbers be presented as a countable union of closed in~\(\mathbb{R}\) subsets?
+\item
+Draw a picture of the universal cover of the 2-sphere with the segment joining the north and south poles.
+\item
+List all~\(i\) for which there is a closed orientable 6-manifold~\(M\) with \(H_i(M) = \mathbb{Z} \oplus \mathbb{Z} \oplus \mathbb{Z}\).
+\end{examproblems}
+\end{document}

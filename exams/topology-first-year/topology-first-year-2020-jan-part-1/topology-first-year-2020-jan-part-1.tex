@@ -1,0 +1,136 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, January 2020, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2020, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, January 2020, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that the set of functions \(f:\mathbb Z\to\mathbb Z\) that are eventually~\(0\) is countable.
+\item
+Let \(A\subset\mathbb R^2\) be a countable subset. Show that \(\mathbb R^2\setminus A\) is connected.
+\item
+Show that every continuous map \(f:[0,1]\to[0,1]\) has a fixed point. Is this true for continuous maps
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(f:[0,1]\to(0,1)\)?
+\item[\textnormal{(b)}]
+\(f:(0,1)\to(0,1)\)?
+\end{examsubparts}
+\item
+Let~\(X\) be connected, show that
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(X^n\) is connected;
+\item[\textnormal{(b)}]
+\(X^\omega\) is connected.
+\end{examsubparts}
+\item
+Let \(f:X\to X\) be a map of a compact metric space to itself that satisfies the following condition: \(d(f(x),f(y))<d(x,y)\) for \(x\ne y\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that~\(f\) is continuous.
+\item[\textnormal{(b)}]
+Show that~\(f\) has a fixed point and the fixed point is unique.
+\end{examsubparts}
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Intermediate Value Theorem.
+\item
+Does there exist a continuous surjective map from the 2-sphere \(S^2\) to the interval \((0,1)\)?
+\item
+Does there exist a continuous injective map from the 2-sphere \(S^2\) to the interval \((0,1)\)?
+\item
+State the Cantor–Schröder–Bernstein Theorem.
+\item
+Is every connected space path connected?
+\item
+What is a basis of a topology? Does the set of all half-open intervals \(\{(a,b],[c,d)\mid a<b,\ c<d\}\) form a basis of a topology on \(\mathbb R\)?
+\item
+State the Extreme Value Theorem.
+\item
+Is \(\mathbb R^\omega\) connected in the uniform topology?
+\item
+Is the set of integers \(\mathbb Z\) locally compact? Is the set of rational numbers \(\mathbb Q\) locally compact?
+\item
+Is \(\mathbb R^2\) with the dictionary order topology metrizable?
+\end{examproblems}
+\end{document}

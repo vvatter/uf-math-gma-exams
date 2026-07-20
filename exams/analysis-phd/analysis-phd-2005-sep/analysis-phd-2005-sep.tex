@@ -1,0 +1,119 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, September 2005},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2005\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, September 2005}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true. Partial credit will be given where justified.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(\Omega\subset\mathbb R^n\) be open. Prove that \(A\subset\mathcal D(\Omega)\) is bounded if and only if 
+\[
+\sup\{|\Lambda(\varphi)|\mid \varphi\in A\}<\infty,
+\]
+ for every \(\Lambda\in\mathcal D'(\Omega)\).
+\item
+Let~\(\mu\) be Lebesgue measure on \(\mathbb R\) and~\(f\) be~\(\mu\)-integrable on \([0,1]\). Suppose \(\int_0^r f\,d\mu=0\), for every rational \(r\in[0,1]\). Give a complete characterization of~\(f\).
+\item
+Let \(\mathcal H\) be a Hilbert space and suppose~\(A\) is a bounded operator on \(\mathcal H\) such that the range of~\(A\) is finite dimensional. Let \(\{y_1,\ldots,y_n\}\) be an orthonormal basis for the range of~\(A\). Prove that there exist \(x_1,\ldots,x_n\in\mathcal H\) such that 
+\[
+Ax=\sum_{j=1}^n[x,x_j]y_j,
+\]
+ for all \(x\in\mathcal H\).
+\item
+Let~\(A\) be a bounded operator on a Hilbert space \(\mathcal H\) such that \(A(B_1)=\{Ax\mid x\in B_1\}\) is compact, where \(B_1\) is the closed unit ball of \(\mathcal H\). Prove that, as a map from \(B_1\) with the weak vector topology to \(\mathcal H\) with the norm topology, \(A\) is continuous. (Hint: show that the weak and norm topologies on \(A(B_1)\) must coincide under the given hypothesis.)
+\item
+Let~\(\mu\) be a positive Radon measure on \(\mathbb R^N\) and~\(f\) be~\(\mu\)-integrable. Show that for each \(\epsilon>0\) there exist an upper semi-continuous function \(u_\epsilon\) and a lower semi-continuous function \(v_\epsilon\) such that \(u_\epsilon\leq f\leq v_\epsilon\) and \(\int(v_\epsilon-u_\epsilon)\,d\mu<\epsilon\).
+\item
+Let~\(\mu\) be a finite positive Radon measure on \(\mathbb R^N\) and \(\{f_n\}_{n\in\mathbb N}\subset L^2(\mu)\) with \(\|f_n\|_2\leq1\). Suppose \(\{f_n\}_{n\in\mathbb N}\) converges~\(\mu\)-a.e. to~\(f\). Show that \(\int|f_n-f|\,d\mu\to0\), as \(n\to\infty\).
+\item
+Let~\(E\) be a topological vector space. Prove that if~\(A\) and~\(B\) are compact subsets of~\(E\), then so is \(A+B\).
+\item
+Consider \(X\in\mathcal D(\mathbb R^2)^*\) defined by 
+\[
+\mathcal D(\mathbb R^2)\ni\phi\mapsto X(\phi)=\int_{\mathbb R}\phi(x,-x)\,dx.
+\]
+ Note. So~\(X\) is a solution of the PDE \((\partial_1-\partial_2)X=0\) which is not a classical solution.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that~\(X\) is a distribution of order zero.
+\item[\textnormal{(b)}]
+What is the support of~\(X\)? (Prove it.) Use this to prove that~\(X\) is not a regular distribution with continuous coefficient function.
+\item[\textnormal{(c)}]
+Show that \((\partial_1-\partial_2)X=0\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

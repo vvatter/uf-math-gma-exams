@@ -1,0 +1,145 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, January 2017},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2017\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, January 2017}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that the equation \(x=\frac{1}{2}\cos(x)\) has a solution~\(\alpha\).
+\item[\textnormal{(b)}]
+Find an interval \([a,b]\) containing~\(\alpha\) and such that for every \(x_0\in[a,b]\), the iterative sequence 
+\[
+x_{n+1}=\frac{1}{2}\cos x_n
+\]
+ will converge to~\(\alpha\). Justify your answer.
+\end{examsubparts}
+\item
+For the basic Lagrange polynomials 
+\[
+L_i(x)=\prod_{j\ne i}\frac{x-x_j}{x_i-x_j}\qquad\text{for}\qquad i=0,\ldots,n,
+\]
+ show that 
+\[
+\sum_i L_i(x)=1\qquad\text{for all }x.
+\]
+\item
+Consider a quadrature rule of the form for \(0<\alpha<1\): 
+\[
+\int_0^1 x^\alpha f(x)\,dx\approx A\int_0^1 f(x)\,dx+B\int_0^1 xf(x)\,dx.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine the constants \(A,B\) so that the quadrature formula has maximum degree of exactness.
+\item[\textnormal{(b)}]
+What is the degree of exactness of the formula in part (a)?
+\end{examsubparts}
+\item
+Let~\(f\) be an arbitrary (continuous) function on \([0,1]\) satisfying 
+\[
+f(x)+f(1-x)\equiv 1\qquad\text{for}\qquad 0\le x\le 1.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(\int_0^1 f(x)\,dx=\frac{1}{2}\).
+\item[\textnormal{(b)}]
+Show that the composite trapezoidal rule for computing \(\int_0^1 f(x)\,dx\) is exact.
+\end{examsubparts}
+\item
+Assume that you are solving the initial value problem 
+\[
+\begin{aligned}
+y'&=f(t,y), && a\le t\le b,\\
+y(a)&=\alpha.
+\end{aligned}
+\]
+ The formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method is (\(M=\lVert Y''\rVert_\infty\)): 
+\[
+\lvert Y(t_i)-w_i\rvert<\frac{hM}{2L}\left[e^{L(b-a)}-1\right].
+\]
+ Compute the values of~\(L\) and \(M=\lVert Y''\rVert_\infty\) necessary to apply the global error formula above to the specific ODE problem 
+\[
+\begin{aligned}
+y'&=\sin(t+2y)+e^t, && 0\le t\le 1,\\
+y(0)&=0.
+\end{aligned}
+\]
+\end{examproblems}
+\end{document}

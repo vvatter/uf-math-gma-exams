@@ -1,0 +1,126 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, September 2002},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2002\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, September 2002}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{I}
+\begin{examinstructions}
+State the following theorems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+The Egorov theorem.
+\item
+The Lebesgue theorem.
+\item
+The dual of \(L^p(\mu)\), \(1\leq p<\infty\).
+\item
+The Fubini theorem for \(\mu\times\nu\)-integrable functions.
+\item
+The Riesz representation theorem (of linear continuous functionals on the space \(C(K)\) of continuous functions on a compact space~\(K\)).
+\end{examproblems}
+\section{II}
+\begin{examinstructions}
+State and prove one of the following 2 theorems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+The representation of the dual of \(L^1(\mu)\).
+\item
+The Fubini theorem for \(\mathcal S\times\mathcal T\)-measurable functions.
+\end{examproblems}
+\section{III}
+\begin{examinstructions}
+Solve the following problems.
+\end{examinstructions}
+\begin{examinstructions}
+Let \((X,\Sigma,\mu)\) be a measure space and~\(E\) a Banach space.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Assume~\(\mu\) is finite. Let \(\mathcal F\subset\Sigma\) be a sub-\(\sigma\)-algebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal F)\) for functions \(f\in L_E^1(\mu)\).
+\item
+Let \(\mathcal R\subset\Sigma\) be an algebra generating~\(\Sigma\) and \(f\in L_E^1(\mu)\). Prove that there is a sequence \((f_n)\) of \(\mathcal R\)-step functions converging to~\(f\), \(\mu\)-a.e., and in the mean.
+\item
+Let \(\mathcal R\subset\Sigma\) be an algebra generating~\(\Sigma\) and \(f\in L_E^1(\mu)\). Prove that if \(\int_A f\,d\mu=0\) for every \(A\in\mathcal R\), then \(f=0\), \(\mu\)-a.e.
+\item
+Assume~\(\mu\) is finite and let \(f_n\in L_E^1(\mu)\), \(n=1,2,\ldots\). Prove that if \(f_n\to f\) uniformly, then \(f\in L_E^1(\mu)\) and \(f_n\to f\) in the mean.
+\item
+Let \((X,\mathcal S)\), \((Y,\mathcal T)\) be measurable spaces, and let \(\mu:\mathcal S\to\mathbb R\) and \(\nu:\mathcal T\to\mathbb R\) be~\(\sigma\)-additive measures. Prove the existence of the product measure \(\mu\times\nu\) and the equality \(\lvert\mu\times\nu\rvert=\lvert\mu\rvert\times\lvert\nu\rvert\).
+\end{examproblems}
+\begin{examinstructions}
+Note. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences. Write complete statements of theorems (including the framework).
+\end{examinstructions}
+\end{document}

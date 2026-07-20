@@ -1,0 +1,206 @@
+{
+  "schema_version": 3,
+  "id": "numerical-analysis-phd-2008-may",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2008,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2008_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer any 8 questions."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that any matrix has a singular value decomposition."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(A\\) and \\(B\\) are square matrices such that \\(AB\\) is normal. Prove that \\(\\lVert AB\\rVert_2\\leq \\lVert BA\\rVert\\) for any matrix norm \\(\\lVert\\cdot\\rVert\\) induced by a vector norm (where \\(\\lVert\\cdot\\rVert_2\\) denotes the spectral norm)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the singular values of any matrix \\(M\\) in \\(\\mathbb{C}^{m\\times n}\\) be denoted by \\(\\sigma_1(M)\\geq \\sigma_2(M)\\geq\\cdots\\geq\\sigma_q(M)\\) with \\(q=\\min(m,n)\\). Prove that if \\(A\\) and \\(B\\) are two matrices in \\(\\mathbb{C}^{m\\times n}\\), then\n\\[\n\\sigma_{i+j-1}(A+B)\\leq \\sigma_i(A)+\\sigma_j(B),\n\\]\nfor all \\(i,j=1,2,\\ldots,q\\) and \\(i+j\\leq q\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(T\\) be any square matrix and let \\(\\lVert\\cdot\\rVert\\) denote any induced norm. Prove that\n\\[\n\\lim_{n\\to\\infty}\\lVert T^n\\rVert^{1/n}\n\\]\nexists and equals\n\\[\n\\inf_{n=1,2,\\ldots}\\lVert T^n\\rVert^{1/n}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(\\widetilde Q\\) and \\(\\widetilde R\\) are the Householder QR factors of a well conditioned square nonsingular matrix \\(A=QR\\), computed in a floating point number system of machine precision \\(\\varepsilon_{\\mathrm{mac}}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State an algorithm in which you use \\(\\widetilde Q\\) and \\(\\widetilde R\\) to compute an approximation \\(\\widetilde x\\) to the solution \\(x\\) of \\(Ax=b\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(\\lVert\\cdot\\rVert\\) denote any vector norm as well as the matrix norm induced by it. Out of the following three statements A–C, pick one that is true, and prove it. (You may use the backward stability results that you know of without proof.)",
+            "subparts": [
+              {
+                "label": "A:",
+                "text": "\\(\\lVert\\widetilde Q-Q\\rVert=O(\\varepsilon_{\\mathrm{mac}})\\).",
+                "subparts": []
+              },
+              {
+                "label": "B:",
+                "text": "\\(\\dfrac{\\lVert\\widetilde R-R\\rVert}{\\lVert R\\rVert}=O(\\varepsilon_{\\mathrm{mac}})\\).",
+                "subparts": []
+              },
+              {
+                "label": "C:",
+                "text": "\\(\\dfrac{\\lVert\\widetilde x-x\\rVert}{\\lVert x\\rVert}=O(\\varepsilon_{\\mathrm{mac}})\\).",
+                "subparts": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(L_nf\\) denote the Lagrange interpolant of \\(f\\in C^{n+1}[a,b]\\) based on an equispaced partition \\(a=x_0<x_1<\\cdots<x_{n-1}<x_n=b\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State an error formula for \\(f(x)-L_nf(x)\\) in terms of Newton’s divided differences.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Use \\(L_nf\\) to determine an approximation of the integral\n\\[\n\\int_a^b f(x)\\,dx\n\\]\nby a sum\n\\[\n\\sum_{k=0}^n\\omega_k f(x_k),\n\\]\nand find a formula for \\(\\omega_k\\) in its simplest form.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that \\(\\displaystyle\\sum_{k=0}^n\\omega_k=b-a\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider the solution of the equation \\(\\tan x=4x/\\pi\\) in the interval \\([0,\\pi/2]\\) (what is it?), and how it perturbs due to errors in evaluating the coefficient \\(4/\\pi\\). Using Taylor expansion, give two expressions approximating the difference between the roots of \\(\\tan x-4x/\\pi=0\\) and \\(\\tan x-(\\varepsilon+4/\\pi)x=0\\) in the interval \\([0,\\pi/2]\\):"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "one in terms of a linear function of \\(\\varepsilon\\), and",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "another in terms of a quadratic function of \\(\\varepsilon\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(a=x_0<x_1<\\cdots<x_{n-1}<x_n=b\\) be a partition \\(P\\) of the interval \\([a,b]\\) and \\(f\\in C^2[a,b]\\). Define what is meant by saying that"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(S_c\\) is the “natural” cubic spline on \\(P\\) interpolating \\(f\\), and",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(S_n\\) is the “not-a-knot” cubic spline on \\(P\\) interpolating \\(f\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Show that \\(S_n\\) is a cubic polynomial on \\([x_0,x_2]\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(x_0,x_1,\\ldots,x_n\\) be distinct points in a finite interval \\([a,b]\\) and \\(f\\in C^1[a,b]\\). Show that for any given \\(\\varepsilon>0\\) there exists a polynomial \\(p\\) such that \\(\\lVert f-p\\rVert_\\infty<\\varepsilon\\) and \\(p(x_i)=f(x_i)\\) for all \\(i=0,1,\\ldots,n\\) (where \\(\\lVert\\cdot\\rVert_\\infty\\) denotes the \\(L^\\infty(a,b)\\)-norm)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(x_m\\) and \\(x_{m+1}\\) be two successive (complex) iterates when Newton’s method is applied to a polynomial \\(p(z)\\) of degree \\(n\\). Prove that there is a zero of \\(p(z)\\) in the disk\n\\[\n\\{z\\in\\mathbb{C}:|z-x_m|\\leq n|x_{m+1}-x_m|\\}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

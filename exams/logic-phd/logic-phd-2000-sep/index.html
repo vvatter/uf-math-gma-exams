@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logic PhD Exam, September 2000</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Logic PhD Exam, September 2000</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer 7 questions, including at least one from each of the four segments.</p>
+    </div>
+    <section aria-labelledby="section-1">
+      <h2 id="section-1">1. General Logic</h2>
+      <ol class="problems" start="1">
+        <li class="problem">
+          <p>State Gödel’s incompleteness theorem, and briefly sketch its proof.</p>
+        </li>
+        <li class="problem">
+          <p>Show that any complete, finitely axiomatizable first-order theory is decidable.</p>
+        </li>
+        <li class="problem">
+          <p>Give an example of two countable models which are elementarily equivalent, but not isomorphic.</p>
+        </li>
+      </ol>
+    </section>
+    <section aria-labelledby="section-2">
+      <h2 id="section-2">2. Model Theory</h2>
+      <ol class="problems" start="1">
+        <li class="problem">
+          <p>State and sketch a proof of the completeness theorem.</p>
+        </li>
+        <li class="problem">
+          <p>State and sketch a proof of the Łoś theorem about ultraproducts of models.</p>
+        </li>
+      </ol>
+    </section>
+    <section aria-labelledby="section-3">
+      <h2 id="section-3">3. Set Theory</h2>
+      <ol class="problems" start="1">
+        <li class="problem">
+          <p>Prove that a countable union of countable sets is countable.</p>
+        </li>
+        <li class="problem">
+          <p>Sketch the proof that \(L \models \mathrm{GCH}\).</p>
+        </li>
+        <li class="problem">
+          <p>Prove that if \(\kappa\) is a regular, uncountable cardinal then any diagonal intersection of closed and unbounded subsets of \(\kappa\) is closed and unbounded.</p>
+        </li>
+      </ol>
+    </section>
+    <section aria-labelledby="section-4">
+      <h2 id="section-4">4. Recursion Theory</h2>
+      <ol class="problems" start="1">
+        <li class="problem">
+          <p>Show that any total function \(f: \omega \to \omega\) with a recursively enumerable graph is recursive. Show that this is not true for partial functions.</p>
+        </li>
+        <li class="problem">
+          <p>Explain why, for any \(A \subset \omega\), there are at most countably many sets \(B\) such that \(B &lt;_T A\).</p>
+        </li>
+        <li class="problem">
+          <p>State and prove Kleene’s Recursion (or Fixed Point) Theorem.</p>
+        </li>
+      </ol>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Logic PhD Exams</a></li>
+        <li><a href="logic-phd-2000-sep.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

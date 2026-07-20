@@ -1,0 +1,111 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, September 2002},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, September 2002\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, September 2002}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+SHOW ALL WORK TO RECEIVE CREDIT!!
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+All~\(n\) soldiers of a military squadron stand in a line. The officer in charge splits the line at several places, forming smaller (nonempty) units. Then he chooses a (possibly empty) subset of the newly formed units for night duty. In how many different ways can he do this?
+\item
+All~\(n\) soldiers of a military squadron stand in a line. The officer in charge splits the line at several places, forming smaller (nonempty) units. Then he names one person in each unit to be the commander of that unit. Let \(h_n\) be the number of ways he can do this, and let \(H(x)\) be the ordinary generating function of the numbers \(h_n\). Find \(H(x)\).
+\item
+Let~\(G\) be a simple graph, and let~\(A\) be the adjacency matrix of~\(G\). Decide whether the following statements are true or false.
+\begin{examsubparts}
+\item[\textnormal{a.}]
+\(A\) has only real eigenvalues.
+\item[\textnormal{b.}]
+The sum of the eigenvalues of~\(A\) is~\(0\).
+\item[\textnormal{c.}]
+The determinant of~\(A\) is always positive.
+\end{examsubparts}
+\item
+Prove that the number of ways to partition a convex \(n+1\)-gon into triangles and one quadrilateral by noncrossing diagonals is \(\binom{2n-3}{n-3}\).
+\item
+Decide whether \(B_n\), \(\Pi_n\), and \(NC_n\) are distributive lattices. (The Boolean algebra, the partition lattice, and the lattice of noncrossing partitions).
+\item
+Let \(f_k(n)\) be the number of permutations of length~\(n\) having~\(k\) valleys. Is it true that \(f_k(n)\) is a~\(p\)-recursive function of~\(n\), no matter what~\(k\) is?
+\item
+How many permutations of length~\(8\) have descent set \(\{1,4,6\}\)?
+\item
+Let \(p=p_1p_2\cdots p_n\) be an~\(n\)-permutation, and assume \(n\ge 3\). We say that~\(i\) is an excedance of~\(p\) if \(p_i>i\). Find the number of~\(n\)-permutations whose set of excedances is \(\{n-2,n-1\}\).
+\item
+Let~\(D\) be the partially ordered set of positive integers ordered by divisibility. Find a formula for \(\mu(1,x)\).
+\item
+Find an explicit formula for the numbers \(a_n\), if \(a_{n+1}=(n+1)a_n+2(n+1)!\) if \(n\ge 1\), and \(a_0=0\).
+\end{examproblems}
+\end{document}

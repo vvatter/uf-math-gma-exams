@@ -1,0 +1,126 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2019-may-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2019,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2019_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove Sylow’s First Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that there is a non-abelian group of order \\(2019\\). (Hint: \\(2019 = 3 \\ast 673\\) and \\(673\\) is a prime.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "\\(S_4\\) is the symmetric group on four letters."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that every simple subgroup of \\(S_4\\) is abelian.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Use the result from (a) to prove that if \\(G\\) is a non-abelian finite simple group, then every proper subgroup of \\(G\\) has index at least \\(5\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a finite group, and assume that \\(G\\) acts on the set \\(\\Omega\\). For each \\(\\omega \\in \\Omega\\), we denote by \\(G_\\omega\\) the set of elements of \\(G\\) that fix \\(\\omega\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means to say that the action is faithful.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Define what it means to say that the action is transitive.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Suppose \\(G\\) acts on \\(\\Omega\\) faithfully and transitively. Suppose \\(\\nu \\in \\Omega\\) and \\(G_\\nu\\) is a cyclic group of order \\(p^n\\), where \\(p\\) is a prime. Prove that there exists some \\(g \\in G\\) such that \\(G_\\nu \\cap G_{g\\nu} = \\{1\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group of order \\(76 = 4 \\cdot 19\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(G\\) contains a normal Sylow \\(19\\)-subgroup.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that the center of \\(G\\) contains an element of order \\(2\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group, and let \\(M\\) and \\(N\\) be normal subgroups of \\(G\\). Suppose that \\(G/N\\) and \\(N\\) are simple groups. Suppose that \\(NM \\ne G\\) and that \\(N \\ne M\\). Prove that \\(M = \\{1\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

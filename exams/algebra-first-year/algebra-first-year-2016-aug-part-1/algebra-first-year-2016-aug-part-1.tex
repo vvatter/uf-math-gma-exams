@@ -1,0 +1,102 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, August 2016, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2016, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, August 2016, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be a cyclic group, and let~\(H\) be a subgroup of~\(G\). Prove that~\(H\) is cyclic.
+\item
+Let~\(G\) be a finite group, and suppose it is acting on the finite set~\(\Omega\). Suppose~\(N\) is a normal subgroup of~\(G\) and~\(N\) acts transitively on~\(\Omega\). Let \(\omega \in \Omega\), and let \(G_\omega\) be the stabilizer in~\(G\) of~\(\omega\). Prove that \(|G:N|=|G_\omega:G_\omega\cap N|\).
+\item
+Let~\(G\) be a finite group, let~\(H\) be a subgroup of~\(G\), and let \(n=|G:H|\) with \(n>1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(G\) is simple then~\(G\) is isomorphic to a subgroup of the symmetric group \(S_n\).
+\item[\textnormal{(b)}]
+Give an example to show that, under the general assumptions of the question, if~\(G\) is not simple it is possible that~\(G\) is not isomorphic to any subgroup of \(S_n\) (and prove that your example has these properties).
+\end{examsubparts}
+\item
+Let~\(p\) be a prime, and let~\(G\) be a finite group such that each element of~\(G\) has order a power of~\(p\). Prove that, if~\(G\) is not trivial, then the center \(Z(G)\) of~\(G\) is not trivial. Deduce that~\(G\) is nilpotent.
+\item
+Let \(S_n\) be the symmetric group in \(n\geq 1\) letters. Let \(\sigma\in S_n\). Describe what is meant by the cycle type of~\(\sigma\). Prove that two elements \(\sigma,\tau\in S_n\) are conjugate to each other in \(S_n\) if and only if they have the same cycle type.
+\item
+Prove that a group of order \(30\) must have a normal subgroup of order \(15\).
+\end{examproblems}
+\end{document}

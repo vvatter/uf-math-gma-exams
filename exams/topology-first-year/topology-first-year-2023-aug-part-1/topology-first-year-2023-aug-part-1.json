@@ -1,0 +1,178 @@
+{
+  "schema_version": 3,
+  "id": "topology-first-year-2023-aug-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2023,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2023_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:X\\to X\\) be a map of a compact metric space to itself that satisfies the following condition: \\(d(f(x),f(y))<d(x,y)\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(f\\) is continuous.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that \\(f\\) has a fixed point and the fixed point is unique.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\subset \\mathbb{R}^2\\) be a countable subset. Prove that \\(\\mathbb{R}^2\\setminus X\\) is connected."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a connected normal space having more than one point. Can \\(X\\) be countable?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a proper subset of \\(X\\) and let \\(B\\) be a proper subset of \\(Y\\). If \\(X\\) and \\(Y\\) are connected, show that \\((X\\times Y)-(A\\times B)\\) is connected."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(I_O\\) denote the square \\([0,1]\\times[0,1]\\) given the lexicographic order topology. Is \\(I_O\\)"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "compact?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "connected?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "path connected?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give definition of Lebesgue number."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that the power set \\(P(X)\\) has strictly greater cardinality than \\(X\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that the 2-sphere is not homeomorphic to"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "the circle \\(S^1\\);",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "the 2-plane \\(\\mathbb{R}^2\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that every compact Hausdorff space is regular."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give definition of a quotient map. Let\n\\[\nZ=\\{(x,y)\\in\\mathbb{R}^2\\mid xy=1\\}\\cup(\\{0\\}\\times\\mathbb{R})\\subset\\mathbb{R}\\times\\mathbb{R}\n\\]\nbe given the subspace topology. Is the projection \\(f:Z\\to\\mathbb{R}\\) to the first coordinate, \\(f(x,y)=x\\), a quotient map?"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

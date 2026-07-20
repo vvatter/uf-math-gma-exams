@@ -1,0 +1,125 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2022, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2022, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2022, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stating clearly any theorems you wish to apply.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(x^4-75\).
+\item[\textnormal{(b)}]
+\(x^3-5x^2+x+5\).
+\item[\textnormal{(c)}]
+\(x^4-14x^3+2x^2+21x-7\).
+\end{examsubparts}
+\item
+Let~\(R\) be the quotient of the ring \(\mathbb{Z}[i]\) of Gaussian integers by the principal ideal \((3+3i)\). Show that~\(R\) is finite and determine the number of its elements.
+\item
+Let~\(R\) be a commutative ring with 1 and let~\(I\), \(J\) and~\(P\) be ideals in~\(R\) such that \(I\cap J\subseteq P\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(P\) is a prime ideal then either \(I\subseteq P\) or \(J\subseteq P\).
+\item[\textnormal{(b)}]
+Give an example which shows that if~\(P\) is not prime then the conclusion above may not hold.
+\end{examsubparts}
+\item
+Let~\(R\) be a ring with 1 and~\(M\) a (unital) left~\(R\)-module.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State what it means for~\(M\) to satisfy the Ascending Chain Condition (i.e. for~\(M\) to be Noetherian).
+\item[\textnormal{(b)}]
+Prove that if~\(M\) satisfies the ACC then every submodule of~\(M\) is finitely generated.
+\item[\textnormal{(c)}]
+Give an example of a finitely generated module that does not satisfy the ACC.
+\end{examsubparts}
+\item
+Determine the conjugacy classes of elements of order 8 in \(\mathrm{GL}(4,\mathbb{Q}(\sqrt{2}))\). (Hint: Factorize \(x^4+1\) in \(\mathbb{Q}(\sqrt{2})[x]\).)
+\item
+Let~\(E\) be an extension field of the field~\(F\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+What does it mean for~\(E\) to be an algebraic extension of~\(F\)?
+\item[\textnormal{(b)}]
+Show that if~\(\alpha\) and~\(\beta\) are elements of~\(E\) that are both roots of the same irreducible polynomial in \(F[x]\), then the subfields \(F(\alpha)\) and \(F(\beta)\) of~\(E\) are isomorphic.
+\item[\textnormal{(c)}]
+Give an example where the subfields in (b) are not equal.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

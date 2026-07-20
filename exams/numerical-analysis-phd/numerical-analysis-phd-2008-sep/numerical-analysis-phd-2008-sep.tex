@@ -1,0 +1,134 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, September 2008},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, September 2008\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, September 2008}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer any 8 questions.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(M=\begin{bmatrix}A&B^t\\B&C\end{bmatrix}\) be real symmetric and positive definite matrix. Let \(S=C-BA^{-1}B^t\) be the Schur complement. Prove that~\(S\) is symmetric and positive definite.
+\item
+Suppose \(\widetilde Q\) and \(\widetilde R\) are the Householder QR factors of a well conditioned square nonsingular matrix \(A=QR\), computed in a floating point number system of machine precision \(\varepsilon_{\mathrm{mac}}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State an algorithm in which you use \(\widetilde Q\) and \(\widetilde R\) to compute an approximation \(\widetilde x\) to the solution~\(x\) of \(Ax=b\).
+\item[\textnormal{(b)}]
+Let \(\|\cdot\|\) denote any vector norm as well the matrix norm induced by it. Out of the following three statements A–C, pick one that is true, and prove it. (You may use the backward stability results that you know of without proof.)
+\begin{examsubparts}
+\item[\textnormal{A:}]
+\(\|\widetilde Q-Q\|=O(\varepsilon_{\mathrm{mac}})\).
+\item[\textnormal{B:}]
+\(\dfrac{\|\widetilde R-R\|}{\|R\|}=O(\varepsilon_{\mathrm{mac}})\).
+\item[\textnormal{C:}]
+\(\dfrac{\|\widetilde x-x\|}{\|x\|}=O(\varepsilon_{\mathrm{mac}})\).
+\end{examsubparts}
+\end{examsubparts}
+\item
+Show that if~\(P\) and~\(Q\) be Hermitian positive definite matrices satisfying \(x^*Px\leq x^*Qx\), for all \(x\in\mathbb C^n\), then \(\|P\|_F\leq\|Q\|_F\).
+\item
+Describe the finite element method for solving \(-\Delta u=f\) on \(\Omega=(0,1)\times(0,1)\) with zero Dirichlet boundary conditions on the boundary \(\partial\Omega\). Consider a subdivision of~\(\Omega\) by right triangles whose orthogonal edges are of length~\(h\). Prove that there is a \(C>0\) independent of~\(h\) such that the spectral condition number of the stiffness matrix~\(A\) satisfies \(\kappa(A)\leq Ch^{-2}\). (If you cannot prove this with the stated assumptions, you may try after placing further assumptions on the mesh.)
+\item
+State the (unshifted) QR iteration for eigenvalues. Show that if one iterate of the QR iteration is symmetric and tridiagonal, then the next one is also symmetric and tridiagonal.
+\item
+Let \(x_0,x_1,\ldots,x_n\) be distinct points in a finite interval \([a,b]\) and \(f\in C^1[a,b]\). Show that for any given \(\varepsilon>0\) there exists a polynomial~\(p\) such that \(\|f-p\|_\infty<\varepsilon\) and \(p(x_i)=f(x_i)\) for all \(i=0,1,\ldots,n\) (where \(\|\cdot\|_\infty\) denotes the \(L^\infty(a,b)\)-norm).
+\item
+Let \(\widehat f(s)\) be the continuous Fourier transform of \(f(t)\in L^2[-\infty,\infty]\). Suppose further that \(\widehat f(s)=0\) for \(|s|>\pi\). Derive the interpolation formula 
+\[
+f(t)=\sum_{k=-\infty}^{\infty}f(k)\frac{\sin(\pi(t-k))}{\pi(t-k)}.
+\]
+\item
+Let \(L_n(f)\) be the Lagrange polynomial interpolating a function~\(f\) at nodes \(a=x_0<x_1<\cdots<x_n=b\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give the formula for \(L_n(f)\).
+\item[\textnormal{(b)}]
+Prove that there is a unique polynomial interpolating~\(f\) at the nodes.
+\item[\textnormal{(c)}]
+State and prove the formula for the error \(f(x)-L_n(f)(x)\) when \(f\in C^{n+1}[a,b]\),
+\end{examsubparts}
+\item
+Let \(S_n(f)\) be the Simpson’s rule approximation to \(\int_{x_0}^{x_2}f(x)\,dx\), with three nodes \(x_0<x_2\) and \(x_1=.5(x_0+x_2)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State Simpson’s rule and prove that it is exact for cubic polynomials.
+\item[\textnormal{(b)}]
+Derive a formula for the error in Simpson’s rule by exploiting the formula for the error in Lagrange interpolation.
+\end{examsubparts}
+\item
+Let \(p>0\) and \(x=\sqrt{p+\sqrt{p+\sqrt{p+\cdots}}}\), where all the square roots are positive. Design a fixed point iteration \(x_{n+1}=F(x_n)\) with some~\(F\) which has~\(x\) as a fixed point. Prove that the fixed point iteration converges for all choices of initial guesses greater than \(-p+1/4\).
+\end{examproblems}
+\end{document}

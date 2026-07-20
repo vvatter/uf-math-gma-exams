@@ -1,0 +1,179 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Ergodic Theory PhD Exam, May 2012},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/ergodic-theory-phd/}{Ergodic Theory PhD Exam}, May 2012\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Ergodic Theory PhD Exam, May 2012}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do all problems.
+\end{examinstructions}
+\begin{examinstructions}
+Notation: • The statement that \((X,\mathcal{B},\mu,f)\) is a mpt (measure preserving transformation) means that~\(X\) is a set with the probability measure~\(\mu\) defined on the~\(\sigma\)-algebra~\(\mathcal{B}\) and~\(f\) is a bijective, bi-measurable map \(f:X\to X\) which preserves the measure~\(\mu\). • The statement that \((X,d,\mathcal{B},\mu,f)\) is a mph (measure preserving homeomorphism) means that \((X,\mathcal{B},\mu,f)\) is a mpt and in addition, \((X,d)\) is a compact metric space, \(f\) is a homeomorphism, and~\(\mathcal{B}\) is the Borel~\(\sigma\)-algebra.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \((X,d)\) be a compact metric space and \(f:X\to X\) a homeomorphism.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the recurrent set \(\Lambda(f)\) and the nonwandering set \(\Omega(f)\) and show they are both compact, invariant sets.
+\item[\textnormal{(b)}]
+Show that \(\Lambda(f)\subset\Omega(f)\) and give an example where the inclusion is proper.
+\item[\textnormal{(c)}]
+Define the omega-limit set \(\omega(x,f)\) of a point \(x\in X\) and show it is a compact, invariant set.
+\item[\textnormal{(d)}]
+Prove or disprove: For every \(x\in X\), that \(\omega(x,f)\subset\Lambda(f)\).
+\end{examsubparts}
+\item
+Let \((X,d)\) be a compact metric space and \(f:X\to X\) a homeomorphism.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that there is always an~\(f\)-invariant subset \(Z\subset X\) so that~\(f\) restricted to~\(Z\) is minimal.
+\item[\textnormal{(b)}]
+Show that there is always a measure~\(\mu\) so that \((X,d,\mathcal{B},\mu,f)\) is a mph.
+\end{examsubparts}
+\item
+Assume \((X,d,\mathcal{B},\mu,f)\) is a mph.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the support, \(\operatorname{supp}(\mu)\), of the measure~\(\mu\) and show it is a compact, invariant set.
+\item[\textnormal{(b)}]
+Show that almost every point in \(\operatorname{supp}(\mu)\) is recurrent.
+\item[\textnormal{(c)}]
+Show that every point in \(\operatorname{supp}(\mu)\) is nonwandering.
+\item[\textnormal{(d)}]
+Show that \(\mu(\Omega(f))=1\).
+\item[\textnormal{(e)}]
+If \((X,d,\mathcal{B},\mu,f)\) is ergodic, show that~\(f\) is full orbit transitive on \(\operatorname{supp}(\mu)\).
+\item[\textnormal{(f)}]
+Show that \(\operatorname{supp}(\mu)\subset\Lambda(f)\), where \(\Lambda(f)\) is the recurrent set of~\(f\).
+\end{examsubparts}
+\item
+State carefully with complete hypothesis.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Birkhoff’s pointwise ergodic theorem
+\item[\textnormal{(b)}]
+von Neumann’s \(L^2\)-mean ergodic theorem
+\end{examsubparts}
+\item
+Let 
+\[
+A=\begin{pmatrix}1&1\\1&0\end{pmatrix}.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the one-sided subshift of finite type \(\Sigma_A^+\) determined by~\(A\) and the shift map \(\sigma:\Sigma_A^+\to\Sigma_A^+\).
+\item[\textnormal{(b)}]
+Define one of the standard metrics on \(\Sigma_A^+\).
+\item[\textnormal{(c)}]
+Show that periodic points of~\(\sigma\) are dense in \(\Sigma_A^+\).
+\item[\textnormal{(d)}]
+Show that \((\Sigma_A^+,\sigma)\) is forward orbit transitive.
+\item[\textnormal{(e)}]
+Let \(N_k\) be the number of fixed points of \(\sigma^k\) in \(\Sigma_A^+\). Compute explicitly 
+\[
+\lim_{k\to\infty}\frac{\log(N_k)}{k}
+\]
+ and justify your answer completely.
+\end{examsubparts}
+\item
+Fix a~\(p\) with \(0<p<1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the Bernoulli measure \(\mu_p\) on the two-sided shift on two symbols \(\Sigma_2\).
+\item[\textnormal{(b)}]
+Show that \((\Sigma_2,\mathcal{B},\sigma,\mu_p)\) is strong mixing (you don’t have to prove it is a mpt, you may assume that is true).
+\item[\textnormal{(c)}]
+Define \(\alpha:\Sigma_2\to\mathbb{R}\) by 
+\[
+\alpha(\ldots s_{-1}s_0s_1s_2\ldots)=2s_{-1}-s_0+s_2^2.
+\]
+ Compute the following limit for \(\mu_p\)-almost every sequence \(\underline{s}\in\Sigma_2\): 
+\[
+\lim_{N\to\infty}\frac{1}{N}\sum_{i=0}^{N-1}\alpha(\sigma^i(\underline{s})).
+\]
+ and justify your answer completely.
+\end{examsubparts}
+\item
+Let \(f:\mathbb{R}^2\to\mathbb{R}^2\) be defined by \(f(x,y)=(3x,(1/2)y)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that the origin is an unstable fixed point for~\(f\).
+\item[\textnormal{(b)}]
+Find an invariant, Borel probability measure for~\(f\) (Hint: don’t try too hard).
+\item[\textnormal{(c)}]
+Show that your invariant measure in (b) is the only invariant, Borel probability measure.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

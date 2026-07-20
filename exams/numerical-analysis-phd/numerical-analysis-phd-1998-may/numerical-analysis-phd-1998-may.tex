@@ -1,0 +1,201 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, May 1998},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 1998\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, May 1998}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do any 8 of the following 10 problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has four parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Give a careful description of a Householder transformation.
+\item[\textnormal{(2)}]
+Describe how Householder transformations can be used to bidiagonalize a \(5\times 5\) matrix.
+\item[\textnormal{(3)}]
+Describe the \(QR\) Iteration Algorithm with shift~\(\mu\).
+\item[\textnormal{(4)}]
+Describe how the \(QR\) Iteration is used to compute the \(SVD\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Give a careful statement and proof of Gershgorin’s Circle Theorem.
+\item[\textnormal{(2)}]
+Determine whether or not the matrix 
+\[
+A=\begin{pmatrix}
+-3&1&1\\
+-1&-4&2\\
+-1&0&-2
+\end{pmatrix}
+\]
+ has the property that each eigenvalue has negative real part.
+\end{examsubparts}
+\item
+Suppose it is known that every eigenvalue of a matrix~\(A\) is real. Suppose the power method with shifts is to be used to approximate the largest eigenvalue of~\(A\). Explain how Gershgorin’s method can be used to aid in the choice of reasonable shifts.
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Give a careful statement of the \(LU\) factorization theorem.
+\item[\textnormal{(2)}]
+Give a careful statement and proof of the Cholesky Factorization Theorem.
+\item[\textnormal{(3)}]
+Find (if possible) a Cholesky factorization of the matrix 
+\[
+A=\begin{pmatrix}
+2&4&6\\
+4&7&8\\
+6&8&5
+\end{pmatrix}.
+\]
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Give a careful statement of the Sturm interlacing property for symmetric matrices.
+\item[\textnormal{(2)}]
+Determine whether or not the matrix 
+\[
+A=\begin{pmatrix}
+1&1&0\\
+1&1&1\\
+0&1&2
+\end{pmatrix}
+\]
+ has any negative eigenvalues.
+\end{examsubparts}
+\item
+This problem has four parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Give a careful statement of the Pythagorean Theorem property for clamped cubic splines.
+\item[\textnormal{(2)}]
+Give a careful statement of the integral minimization property for clamped cubic splines.
+\item[\textnormal{(3)}]
+If \(s_n(x)\) denotes the clamped cubic spline interpolant for a function \(f(x)\) at the knots \((x_0,y_0),(x_1,y_1),\ldots,(x_n,y_n)\), then give a precise statement for the error between \(s_n(x)\) and \(f(x)\).
+\item[\textnormal{(4)}]
+If \(s_n(x)\) denotes the clamped cubic spline interpolant for a function \(f(x)\) at the knots \((x_0,y_0),(x_1,y_1),\ldots,(x_n,y_n)\), then give a precise statement for the error between \(s_n''(x)\) and \(f''(x)\).
+\end{examsubparts}
+\item
+Let \(f(x)\) be a real valued function on~\(\mathbb{R}\) with a continuous 3rd derivative at each point. Assume also that \(f(x)\) has a simple root at \(x=p\).
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Show: If Newton’s method is used to approximate~\(p\), then there is a \(\delta>0\) with the property that the convergence rate to~\(p\) is 2nd order on the interval \([p-\delta,p+\delta]\).
+\item[\textnormal{(2)}]
+Approximate a solution to the following nonlinear system using Newton’s method. (Please don’t iterate—just set up the procedure for the initial guess \(x_0=(1,1,1)^t\).) 
+\[
+\begin{aligned}
+3x_1-\cos(x_2x_3)-0.5&=0,\\
+x_1^2-625x_2^2&=0,\\
+e^{-x_1x_2}+20x_3+9&=0.
+\end{aligned}
+\]
+\item[\textnormal{(3)}]
+What happens to the iteration process if the initial guess is changed to \(x_0=(1,0,1)^t\)?
+\end{examsubparts}
+\item
+Consider the method \(y_{k+1}=y_{k-1}+\frac{h}{2}(3f_k+f_{k-1})\) for solving the initial value equation \(y'=f(x,y)\), \(y(0)=\alpha\).
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+If the method is applied to the equation \(y'=-10y\), \(y(0)=4\), then is there a step size~\(h\) such that the global discretization error converges to zero as \(k\to\infty\)? Explain your answer.
+\item[\textnormal{(2)}]
+Consider the equation \(y'=xy(y-2)\) where \(y(0)=2\). Is this an ill-posed or a well-posed problem? Explain your answer. (Note that the general solution is \(y(x)=\frac{2y_0}{y_0+(2-y_0)e^{x^2}}\), when \(y(0)=y_0\).)
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Give a careful statement of the Contraction Mapping Theorem.
+\item[\textnormal{(2)}]
+Outline a proof of the Contraction Mapping Theorem.
+\item[\textnormal{(3)}]
+Indicate how Aitken’s method can be used to accelerate convergence.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+Explain Romberg’s technique for numerical approximation of an integral.
+\item[\textnormal{(2)}]
+Give a brief justification for the method.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

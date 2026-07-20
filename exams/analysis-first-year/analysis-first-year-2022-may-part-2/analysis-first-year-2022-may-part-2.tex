@@ -1,0 +1,118 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, May 2022, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2022, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, May 2022, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f:[a,b]\to\mathbb{R}\) have the property that for each \(\varepsilon>0\) there exist Riemann integrable functions~\(\ell\) and~\(u\) on \([a,b]\) such that \(\ell\leq f\leq u\) and \(\int_a^b(u-\ell)<\varepsilon\). Does it follow that~\(f\) is Riemann integrable on \([a,b]\)? Proof or counterexample.
+\item
+Suppose \((p_n)_{n=0}^{\infty}\) is a sequence of polynomials in one variable.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Assume that \(p_n\to f\) uniformly on \([0,1]\) as \(n\to\infty\); deduce as much as possible about the function \(f:[0,1]\to\mathbb{R}\).
+\item[\textnormal{(ii)}]
+Assume that \(p_n\to f\) uniformly on~\(\mathbb{R}\) as \(n\to\infty\); deduce as much as possible about the function \(f:\mathbb{R}\to\mathbb{R}\).
+\end{examsubparts}
+\item
+Let the continuous function \(f:[0,1]\to\mathbb{R}\) satisfy 
+\[
+\int_0^1 f(t)t^n\,dt=1/(n+2)
+\]
+ for all but finitely many positive integers~\(n\). Deduce as much as possible about~\(f\).
+\item
+Let \((f_n)_{n=0}^{\infty}\) be a sequence of measurable real-valued functions on some measurable space. Prove that each of the following sets is measurable:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(A=\{\omega:\sum_{n=0}^{\infty}f_n(\omega)\text{ is absolutely convergent}\}\);
+\item[\textnormal{(ii)}]
+\(C=\{\omega:\sum_{n=0}^{\infty}f_n(\omega)\text{ is conditionally convergent}\}\).
+\end{examsubparts}
+\item
+Let \((\Omega,\mathcal{A},\mu)\) be a measure space; let \(A_0\subseteq A_1\subseteq\cdots\) be an increasing sequence in~\(\mathcal{A}\) such that \(\bigcup_{n=0}^{\infty}A_n=\Omega\); let \(f:\Omega\to\mathbb{R}\) be measurable; and let~\(L\) be a real number. Consider the statements:
+
+\par
+Prove that (i) implies (ii) and decide (with proof or counterexample) whether (ii) implies (i).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(f\) is integrable on~\(\Omega\) and \(\int_\Omega f\,d\mu=L\);
+\item[\textnormal{(ii)}]
+\(f\) is integrable on each \(A_n\) and \(\int_{A_n}f\,d\mu\to L\) as \(n\to\infty\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

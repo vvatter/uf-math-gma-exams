@@ -1,0 +1,185 @@
+{
+  "schema_version": 3,
+  "id": "numerical-analysis-phd-2025-aug",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2025,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-NumericalAnalysis_2025_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do 4 (four) of the first 5 problems (1–5) and 4 (four) of the last 5 problems (6–10)."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(A\\) is Hermitian positive definite."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that each principal submatrix of \\(A\\) is Hermitian positive definite.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that an element of \\(A\\) with largest magnitude lies on the diagonal.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that \\(A\\) has a Cholesky decomposition.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Assume \\(A\\in\\mathbb{C}^{m\\times m}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(A\\) has a Schur decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(A\\) has a collection of \\(m\\) linearly independent eigenvectors, show that \\(A\\) is diagonalizable.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\in\\mathbb{C}^{m\\times n}\\), with \\(m\\ge n\\) and \\(\\operatorname{rank}(A)=p=n\\ge3\\). Let \\(a_1,a_2,\\ldots\\) denote the columns of \\(A\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Using the modified Gram–Schmidt process, write out expressions for \\(q_1,q_2,q_3\\), the first three columns of \\(Q\\) in the QR decomposition of \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show the vector \\(q_3\\) found in part (a) is orthogonal to both \\(q_1\\) and \\(q_2\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\). Let \\(u_j\\) denote column \\(j\\) of \\(U\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Suppose \\(\\operatorname{rank}(A)=p<n<m\\). Show \\(\\{u_1,u_2,\\ldots,u_p\\}\\) is a basis for \\(\\operatorname{Col}(A)\\) and \\(\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\) is a basis for \\(\\operatorname{Null}(A^*)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(A\\) is full rank and \\(x\\ne0\\). Let \\(\\sigma_i\\), \\(i=1,\\ldots,n\\), be the singular values of \\(A\\). Show\n\\[\n\\sigma_1\\ge \\frac{\\lVert Ax\\rVert_2}{\\lVert x\\rVert_2}\\ge\\sigma_n>0.\n\\]\nIf you want to use the property that \\(\\lVert A\\rVert_2=\\sigma_1\\), then you must prove that.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "If \\(q_1,\\ldots,q_n\\in\\mathbb{C}^m\\) is an orthonormal basis for the subspace \\(V\\subset\\mathbb{C}^m\\), prove that the orthogonal projector onto \\(V\\) is \\(QQ^*\\), where \\(Q\\) is the matrix whose columns are the \\(q_j\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider the fixed point iteration method \\(x_{k+1}=g(x_k)\\), \\(k=0,1,\\ldots\\), for solving the nonlinear equation \\(f(x)=0\\). Consider choosing an iteration function of the form\n\\[\ng(x)=x-af(x)-b(f(x))^2-c(f(x))^3,\n\\]\nwhere \\(a,b,\\) and \\(c\\) are parameters to be determined. Assume \\(f\\) is sufficiently differentiable and the corresponding iterations \\(x_{k+1}=g(x_k)\\) converge to a unique fixed point \\(z\\). Find expressions for the parameters \\(a,b,\\) and \\(c\\) in terms of functions of \\(z\\) such that the iteration method is of fourth order."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider the Lagrange polynomial approximation \\(p(x)\\) of a function \\(f(x)\\in C^2[a,b]\\) at two points \\(x_0,x_1\\in[a,b]\\). Determine \\(\\alpha(x)\\) explicitly in the following formula\n\\[\nf(x)-p(x)=\\frac{f^{(n+1)}(\\alpha(x))\\prod_{i=0}^{n}(x-x_i)}{(n+1)!}\n\\]\nfor the case\n\\[\nf(x)=\\frac1x,\\qquad x_0=1,\\qquad x_1=2.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Assume that \\(f\\in C^3[a,b]\\) and \\(x,x+h,x+2h\\in[a,b]\\). Determine constants \\(c_1\\) and \\(c_2\\) such that\n\\[\n\\left|f'(x)-\\frac1h\\left[-\\frac32f(x)+c_1f(x+h)+c_2f(x+2h)\\right]\\right|\\le ch^2\\max_{a\\le x\\le b}|f'''(x)|,\n\\]\nwhere \\(c>0\\) is a constant independent of \\(h\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(Q_m(f)\\) denote the \\(m\\)-point Gaussian quadrature rule over the interval \\([a,b]\\) and with continuous weight function \\(\\rho(x)\\ge0\\), that is,\n\\[\nQ_m(f)=\\sum_{i=1}^{m}\\alpha_i f(x_i)\\approx J(f)=\\int_a^b\\rho(x)f(x)\\,dx.\n\\]\nShow that, if \\(a\\) and \\(b\\) are finite and \\(f\\) is continuous, then \\(Q_m(f)\\to J(f)\\) as \\(m\\to\\infty\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider numerically solving the initial value problem\n\\[\ny'(t)=f(t,y),\\quad 0<t\\le t_f,\\qquad \\text{with }y(0)=\\eta.\n\\]\nAssume \\(f\\) is sufficiently differentiable and let \\(h\\) denote the step size. Prove that the method\n\\[\ny_{n+3}+y_{n+2}-y_{n+1}-y_n=h(f_{n+3}+f_{n+2}+f_{n+1}+f_n)\n\\]\nis consistent but not convergent."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

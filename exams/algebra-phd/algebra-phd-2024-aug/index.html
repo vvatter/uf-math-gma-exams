@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra PhD Exam, August 2024</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra PhD Exam, August 2024</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.</p>
+      <p>Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Suppose \(K/k\) is a finite normal extension and let \(G\) be the group of automorphisms of \(K\) fixing every element of \(k\). Denote by \(K^G\) the set of elements of \(K\) fixed by every element of \(G\). Show that \(K^G/k\) is a purely inseparable extension.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(k\) be a field and \(A,B\) finitely generated \(k\)-algebras. Let \(f:A\to B\) be a \(k\)-algebra homomorphism. Show that if \(\mathfrak m\subset B\) is a maximal ideal, \(f^{-1}(\mathfrak m)\subset A\) is also a maximal ideal (Hint: Nullstellensatz). Recall that a \(k\)-algebra \(A\) is a ring homomorphism \(k\to A\) sending the identity to the identity, and if \(A\) and \(B\) are \(k\)-algebras, a \(k\)-algebra homomorphism \(A\to B\) is a commutative diagram</p>
+        <div class="display-math">\[
+\begin{array}{ccc}
+A &amp; \longrightarrow &amp; B \\
+\uparrow &amp; \nearrow &amp; \\
+k &amp; &amp;
+\end{array}
+\]</div>
+      </li>
+      <li class="problem">
+        <p>This problem has three parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>Let \(\mathcal C\) be a category. Define what it means for an object \(X\) of \(\mathcal C\) to be a product of a set of objects \(\{X_i\}_{i\in I}\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Let \(\mathcal T\) be the category of torsion abelian groups. Show that if \(\{X_i\}_{i\in I}\) is any set of objects of \(\mathcal T\), the product as defined in (i) exists.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iii)</span>
+              <div class="subpart-body">
+                <p>Give an example of a set \(\{X_i\}_{i\in I}\) of objects of \(\mathcal T\) whose product is not isomorphic to the usual product (i.e. in the category of abelian groups).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>This problem has three parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>Define what it means for a finite group \(G\) to be nilpotent.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Show that if \(p\) is a prime and \(G\) is a \(p\)-group then \(G\) is nilpotent.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iii)</span>
+              <div class="subpart-body">
+                <p>Show that \(A_4\) is solvable but not nilpotent.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Suppose \(R\) is an integral domain with fraction field \(K\) and \(I,J\) are invertible fractional ideals of \(R\). Recall that the product \(IJ\) is the \(R\)-submodule of \(K\) generated by the products \(ab\) with \(a\in I\) and \(b\in J\). Show that \(I\otimes_R J\simeq IJ\) as \(R\)-modules.</p>
+      </li>
+      <li class="problem">
+        <p>Suppose \(R\) is a commutative ring, \(S\subseteq R\) is a multiplicative system (i.e. a nonempty subset closed under multiplication) and</p>
+        <div class="display-math">\[
+0\to L\to M\to N\to 0
+\]</div>
+        <p>is an exact sequence of \(R\)-modules. Show that the sequence</p>
+        <div class="display-math">\[
+0\to S^{-1}L\to S^{-1}M\to S^{-1}N\to 0
+\]</div>
+        <p>of \(R\)-modules is exact.</p>
+      </li>
+      <li class="problem">
+        <p>For any set \(S\) let \(F(S)\) denote the free group on \(S\). Which sets \(S\) have the property that \(F(S)\) is an abelian group? Give a proof of your answer from first principles.</p>
+      </li>
+      <li class="problem">
+        <p>Suppose \(R\) is an integral domain. Show that the polynomial ring \(R[X]\) is a Dedekind domain if and only if \(R\) is a field.</p>
+      </li>
+      <li class="problem">
+        <p>Suppose \(R\) is a noetherian ring and \(M\) is a finitely generated \(R\)-module. Show that \(M\) is noetherian.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a ring with identity. Show that any projective \(R\)-module is flat.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(p\) be a prime. Classify up to isomorphism all semisimple rings of cardinality \(p^6\).</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Algebra PhD Exams</a></li>
+        <li><a href="algebra-phd-2024-aug.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

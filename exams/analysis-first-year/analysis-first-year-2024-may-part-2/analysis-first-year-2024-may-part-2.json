@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2024-may-part-2",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2024,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-2-2024_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:[a,b]\\to\\mathbb{R}\\) be Riemann integrable, let \\(g\\) be a real-valued function on \\([a,b]\\), and let \\(D=\\{t\\in[a,b]:f(t)\\ne g(t)\\}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show by example that if \\(D\\) is countably infinite then \\(g\\) can fail to be Riemann integrable.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Prove that if \\(D\\) is finite then \\(g\\) must be Riemann integrable.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove Dini’s theorem that, if the sequence \\((f_n)_{n=0}^{\\infty}\\) of continuous real-valued functions on a compact space decreases pointwise to zero, then the convergence is uniform. Show by example that uniform convergence can fail if decreases pointwise is replaced by converges pointwise."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Weierstrass approximation theorem. Determine exactly which continuous functions \\(f:[-1,1]\\to\\mathbb{R}\\) satisfy the requirement that for each strictly positive integer \\(n\\),\n\\[\n\\int_{-1}^{1}f(t)t^n\\,dt=0.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\Omega,\\mathcal{A},\\mu)\\) be a measure space and let \\((A_n)_{n=1}^{\\infty}\\) be a sequence in \\(\\mathcal{A}\\). For each positive integer \\(N\\), let \\(B_N\\) be the set containing exactly those \\(\\omega\\in\\Omega\\) that lie in \\(A_n\\) for at least \\(N\\) values of \\(n\\). By considering the series \\(\\sum_{n=1}^{\\infty}\\mathbf{1}_{A_n}\\) of indicator functions, prove that\n\\[\nN\\mu(B_N)\\leq\\sum_{n=1}^{\\infty}\\mu(A_n).\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the non-negative function \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be integrable with respect to Lebesgue measure \\(\\lambda\\) and for each real \\(t\\) define\n\\[\nF(t)=\\int_0^t f\\,d\\lambda.\n\\]\nProve that the function \\(F\\) is continuous. Must \\(F\\) be uniformly continuous? Explain."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

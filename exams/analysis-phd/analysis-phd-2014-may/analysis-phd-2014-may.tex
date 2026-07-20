@@ -1,0 +1,108 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 2014},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2014\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 2014}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+You must answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \((X,\mathcal{M},\mu)\) be a measure space and \(f\in L^1(\mu)\). Prove that for every \(\epsilon>0\), there exists a \(\delta>0\) such that if \(\mu(E)<\delta\), then \(\int_E |f|\,d\mu<\epsilon\).
+\item
+State the Hahn decomposition theorem for signed measures. Prove that if~\(\rho\) is a signed measure on a measurable space \((X,\mathcal{M})\), then there exist unique positive measures \(\rho_+,\rho_-\) such that \(\rho_+\perp\rho_-\) and \(\rho=\rho_+-\rho_-\).
+\item
+State the Fubini–Tonelli theorem and give a sketch of its proof.
+\item
+Let \(C^1[0,1]\) denote the set of all continuous (real-valued) functions~\(f\) on \([0,1]\) such that~\(f\) is differentiable in \((0,1)\) and \(f'\) extends continuously to \([0,1]\). Prove that \(C^1[0,1]\) is a Banach space under the norm 
+\[
+\|f\|=\|f\|_\infty+\|f'\|_\infty.
+\]
+\item
+Let~\(\mathcal{X}\) be a normed vector space (over~\(\mathbb{C}\)) and \(\mathcal{M}\subset\mathcal{X}\) a closed subspace. Prove that if \(x\in\mathcal{X}\setminus\mathcal{M}\), then \(\mathcal{M}+\mathbb{C}x\) is closed.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+State the Closed Graph Theorem and the Banach Isomorphism Theorem.
+\item[\textnormal{b)}]
+Assuming the Banach Isomorphism Theorem (or otherwise), prove the Closed Graph Theorem.
+\end{examsubparts}
+\item
+Let~\(\mathcal{X}\) be a Banach space and~\(\mathcal{Y}\) a normed vector space. Suppose that \(T_n\) is a sequence of bounded linear operators from~\(\mathcal{X}\) to~\(\mathcal{Y}\). Prove that if \(\lim T_nx\) exists for each \(x\in\mathcal{X}\), then the mapping \(Tx=\lim T_nx\) defines a bounded linear operator from~\(\mathcal{X}\) to~\(\mathcal{Y}\).
+\item
+Let \((X,\mathcal{M},\mu)\) be a~\(\sigma\)-finite measure space. Prove that the simple functions that belong to \(L^2(\mu)\) are dense in \(L^2(\mu)\).
+\end{examproblems}
+\end{document}

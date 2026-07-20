@@ -1,0 +1,199 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-1989-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 1989,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_1989_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do 7 out of the following questions."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define: Solvable group.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "State the Burnside’s theorem for solvability of a finite group.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Let \\(H\\) be a normal subgroup of a group \\(G\\). Prove that \\(C_G(H)\\) is a normal subgroup of \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Let \\(G\\) be a finite group of order 12. Prove that \\(G\\) has a non-trivial normal 2-subgroup (i.e., there is a subgroup \\(T\\) of \\(G\\) such that \\(1\\ne T\\), and \\(T\\) is a 2-subgroup, and \\(T\\) is normal in \\(G\\)).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Two permutation representations \\(\\phi_i:G\\to\\Sigma(X_i)\\), (the symmetric group on \\(X_i\\)), are equivalent if there exists \\(\\alpha:X_1\\to X_2\\) such that for all \\(g\\in G\\), \\(x\\in X_1\\), we have \\(x(g\\phi_1)\\alpha=x(\\alpha)(g\\phi_2)\\). Prove or disprove that the following two permutation representations of \\(S_4\\) of degree 6 are equivalent:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "on the right coset space of \\(\\langle(12)(34),(13)(24)\\rangle\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "on the right coset space of \\(\\langle(12),(34)\\rangle\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(F_n\\) be the free group on \\(n\\) generators \\(x_1,\\ldots,x_n\\). Let \\(F_n'\\) denote the commutator subgroup. Prove that \\(F_n/F_n'\\) is the free abelian group on \\(\\{x_1,\\ldots,x_n\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "In each of the following groups decide whether it is a semi-direct product of two of its proper subgroups: \\(D_4\\) (the dihedral group of order 8); \\(Q_8\\) (the quaternion group of order 8). Justify your answer."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a commutative ring with identity. Suppose that for each prime ideal \\(P\\), the local ring \\(A_P\\) has no nilpotent element \\(\\ne 0\\). Show that \\(A\\) has no nilpotent element \\(\\ne 0\\). If each \\(A_P\\) is an integral domain, is \\(A\\) necessarily an integral domain? Justify your answer."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a commutative ring with identity, \\(a\\) an ideal, \\(M\\) an \\(A\\)-module."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(A\\otimes_A M\\cong M\\) as \\(A\\)-modules.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\((A/a)\\otimes_A M\\) is isomorphic to \\(M/aM\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\subseteq B\\) be integral domains, \\(B\\) integral over \\(A\\). Prove that \\(B\\) is a field if and only if \\(A\\) is a field."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Find a minimal primary decomposition for the following ideals. Also give the prime ideals to which the primary ideals belong."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\((36)\\) as an ideal in \\(\\mathbb{Z}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\((x^2,xy)\\) as an ideal in \\(\\mathbb{C}[x,y]\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the following theorems."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Nakayama’s lemma.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Hilbert basis theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Jacobson’s Density theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "Maschke’s theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(e)",
+            "text": "Wedderburn’s theorem for finite dimensional simple algebras (or Wedderburn–Artin’s theorem for simple Artinian rings).",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2018},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2018\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2018}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Consider the set \(T_n\) of (not rooted) trees with \(n \ge 3\) labeled leaves for which each interior (non-leaf) vertex has degree 3.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that each tree in \(T_n\) has exactly \(2n-3\) edges.
+\item[\textnormal{(b)}]
+Prove that the number of trees in \(T_n\) is \((2n-5)!!=1\cdot 3\cdot 5\cdot 7\cdots(2n-7)\cdot(2n-5)\).
+\end{examsubparts}
+\item
+The famous Dilworth Theorem for a finite poset~\(P\) states that the minimum number of chains in any partition of~\(P\) into chains is equal to the maximum number of elements in an antichain of~\(P\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(P\) has size at least \(rs+1\), then there is either a chain of size~\(r\) or an antichain of size~\(s\).
+\item[\textnormal{(b)}]
+There are many proofs of the following Erdős–Szekeres theorem: For any sequence \(a_1,a_2,\ldots,a_{n^2+1}\) of integers, there is a subsequence of length \(n+1\) that is monotone. Prove the Erdős–Szekeres theorem using Dilworth’s theorem, i.e., part (a).
+\end{examsubparts}
+\item
+Prove that 
+\[
+\sum_{i=0}^{n}(-1)^i\binom{n}{i}i^k=
+\begin{cases}
+0 & \text{if }0\le k<n,\\
+(-1)^n n! & \text{if }k=n.
+\end{cases}
+\]
+ What is the sum if \(k>n\)?
+
+\par
+Hint: Count surjective mappings from \([k]\) to \([n]\).
+\item
+Recall: The girth of a graph is the length of the shortest cycle (and~\(\infty\) if the graph has no cycles).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that a planar graph of girth (minimum cycle length) at least 6 has a vertex of degree at most 2.
+\item[\textnormal{(b)}]
+The Four Color Theorem states that any planar graph is 4-colorable. Grötzsch proved that any triangle-free planar graph is 3-colorable. Without using his result, prove that a planar graph of girth at least 6 is 3-colorable.
+\end{examsubparts}
+\item
+How many strings can be formed using the alphabet \(\{A,B,C,D,E\}\) if
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+the letter~\(A\) occurs an odd number of times
+\item[\textnormal{(b)}]
+the letters~\(A\) and~\(B\) are both used an odd number of times.
+\end{examsubparts}
+\item
+Let \(f(n)\) be the number of ways to tile a \(1\times n\) path with \(1\times 2\) tiles that are red, blue, or green, and \(1\times 1\) tiles that are yellow, orange, black, or white.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find an explicit formula for \(f(n)\).
+\item[\textnormal{(b)}]
+On average, how many \(1\times 1\) tiles will a \(1\times n\) path contain?
+\end{examsubparts}
+\item
+Choose a derangement~\(p\) of length~\(n\) uniformly at random. Recall that a derangement is a permutation with no 1-cycles. On average, how many 2-cycles does~\(p\) contain?
+\item
+Let~\(C\) be a binary code of length~\(n\) and minimum distance \(d\ge 2e+1\). Prove the following two bounds (the Hamming bound and Singleton bound). 
+\[
+|C|\le \frac{2^n}{\displaystyle\sum_{i=0}^{e}\binom{n}{i}}
+\]
+ 
+\[
+|C|\le 2^{n-d+1}
+\]
+\end{examproblems}
+\end{document}

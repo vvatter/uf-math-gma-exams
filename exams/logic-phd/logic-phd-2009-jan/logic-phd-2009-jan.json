@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "id": "logic-phd-2009-jan",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2009,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2009_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer six questions and at least one from each section."
+    },
+    {
+      "type": "section",
+      "heading": "Section 1",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that for any elementary chain \\(\\{\\mathcal A_i\\}_{i\\in\\omega}\\) of structures, \\(\\mathcal A_i\\) is an elementary submodel of the union \\(\\mathcal A\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that the theory of dense linear orderings without end points is complete and decidable."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Section 2",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Suppose \\(2\\leq\\kappa\\leq\\lambda\\) and \\(\\lambda\\) is infinite. Show that \\(2^\\lambda=\\kappa^\\lambda\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State and prove König’s Lemma. (Hint: trees.)"
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that for any notion of forcing \\(\\mathcal P\\) and any countable set \\(\\mathcal D\\) of \\(\\mathcal P\\)-dense sets, there exists a \\(\\mathcal D\\)-generic \\(\\mathcal P\\)-filter."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Section 3",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Define many-one and truth-table reducibility and show that one implies the other but the converse does not hold in general."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State the Friedberg–Muchnik Theorem and sketch the proof. Explain how the “priority” argument deals with “injury”."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    }
+  ]
+}

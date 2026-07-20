@@ -1,0 +1,110 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2020, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2020, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2020, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. If you turn in more than four, only the first four will be graded. Unless otherwise indicated you may use theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Suppose~\(G\) is a~\(p\)-group.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(S\) be a finite set on which~\(G\) acts and denote by \(S^G\) the set of elements of~\(S\) fixed by every element of~\(G\). Show that \(\lvert S^G\rvert \equiv \lvert S\rvert \pmod p\).
+\item[\textnormal{(b)}]
+Use part (a) to show that if~\(H\) is a nontrivial normal subgroup of~\(G\), then \(H\cap Z(G)\ne 1\) (consider the action of~\(G\) on~\(H\) by conjugation).
+\end{examsubparts}
+\item
+Suppose~\(G\) is a group of order \(231=3\cdot 7\cdot 11\). Show that~\(G\) has a normal Sylow~\(7\)-subgroup and is isomorphic to the product of \(\mathbb{Z}/11\mathbb{Z}\) and a solvable group of order \(21\).
+\item
+Construct three nonisomorphic groups of order \(56\) whose Sylow~\(2\)-subgroup is isomorphic to \(D_8\). (Use appropriate semidirect products, and observe that two semidirect products \(K\rtimes_\phi H\), \(K\rtimes_\psi H\) are nonisomorphic if \(\operatorname{Ker}(\phi)\) and \(\operatorname{Ker}(\psi)\) are not isomorphic.)
+\item
+Show that if~\(G\) is a finite nilpotent group and~\(H\) is a proper subgroup of~\(G\), then~\(H\) is a proper subgroup of its normalizer \(N_G(H)\). (Argue by induction on \(\lvert G\rvert\), and distinguish the cases \(Z(G)\subseteq H\), \(Z(G)\nsubseteq H\).)
+\item
+List up to isomorphism
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+the abelian groups of order \(p^4\),
+\item[\textnormal{(b)}]
+the number of elements of order~\(p\) in each, and
+\item[\textnormal{(c)}]
+the number of elements of order \(p^2\) in each.
+\end{examsubparts}
+\item
+Suppose~\(k\) and~\(n\) are positive integers such that \(k<n\). If \(\sigma\in S_n\) is a~\(k\)-cycle, show that \(C_{S_n}(\sigma)\) is isomorphic to \((\mathbb{Z}/k\mathbb{Z})\times S_{n-k}\).
+\end{examproblems}
+\end{document}

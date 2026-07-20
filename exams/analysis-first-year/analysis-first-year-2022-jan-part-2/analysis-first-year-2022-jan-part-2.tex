@@ -1,0 +1,112 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, January 2022, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2022, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, January 2022, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+For each integer \(n \geq 1\), let \(\chi_n=n\mathbf{1}_{[0,1/n]}\) be~\(n\) times the indicator function of the interval \([0,1/n]\). Prove that if \(f:[0,1]\to\mathbb{R}\) is continuous, then 
+\[
+\lim_{n\to\infty}\int_0^1 \chi_n(t)f(t)\,dt=f(0).
+\]
+\item
+Let \(a>0\). When~\(n\) is a positive integer and \(t\geq 0\), write 
+\[
+f_n(t)=\frac{\sin nt}{1+nt}.
+\]
+ Is the sequence \((f_n:n>0)\) uniformly convergent on \([a,\infty)\)? On \([0,\infty)\)?
+\item
+Let \(f:[0,1]\to\mathbb{R}\) be continuous. Prove that if 
+\[
+\int_0^1 f(t)t^{n+\frac12}\,dt=0
+\]
+ for each positive integer~\(n\), then~\(f\) vanishes identically.
+\item
+When \((f_n:n>0)\) is a sequence of measurable real-valued functions on some measurable space, show that the following sets are measurable:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(\{\omega:f_n(\omega)\text{ alternates in sign}\}\)
+\item[\textnormal{(ii)}]
+\(\{\omega:f_n(\omega)\text{ is eventually rational}\}\)
+\item[\textnormal{(iii)}]
+\(\{\omega:\sum_{n>0}f_n(\omega)\text{ is absolutely convergent}\}\).
+\end{examsubparts}
+\item
+State the Monotone Convergence Theorem and the Fatou Lemma, and deduce one of these from the other.
+\end{examproblems}
+\end{document}

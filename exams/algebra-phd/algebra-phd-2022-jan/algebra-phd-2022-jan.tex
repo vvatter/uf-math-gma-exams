@@ -1,0 +1,146 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, January 2022},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2022\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, January 2022}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.
+\end{examinstructions}
+\begin{examinstructions}
+Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Suppose~\(K\) is a field of characteristic different from~\(2\), \(a \in K\) is not a square and \(b \in K\) is not a square in \(K(\sqrt{a})\). Compute the degree of \(L=K(\sqrt{a},\sqrt{b})\) over~\(K\) and determine all subfields of~\(L\) containing~\(K\).
+\item
+Suppose~\(A\) is an integral domain with fraction field~\(K\), \(L/K\) is a field extension and \(x \in L\). Show that~\(x\) is integral over~\(A\) if and only if there is a finitely generated~\(A\)-module \(M \subseteq L\) such that \(xM \subseteq M\).
+\item
+Suppose~\(C\) is a category and~\(X\) and~\(Y\) are objects of~\(C\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for an object of~\(C\) to be a product of~\(X\) and~\(Y\).
+\item[\textnormal{(ii)}]
+Show that a product of~\(X\) and~\(Y\) is unique up to isomorphism.
+\end{examsubparts}
+\item
+Suppose~\(G\) is a finite nilpotent group. Show that if~\(H\) is a proper subgroup of~\(G\), it is a proper subgroup of its normalizer in~\(G\).
+\item
+Let~\(R\) be a integral domain.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for a fractional ideal of~\(R\) to be invertible.
+\item[\textnormal{(ii)}]
+Show that an invertible ideal is a projective~\(R\)-module.
+\end{examsubparts}
+\item
+Suppose~\(R\) is a ring with identity (not necessarily commutative), \(M\) is a right~\(R\)-module and 
+\[
+N' \to N \to N'' \to 0
+\]
+ is an exact sequence of left~\(R\)-modules. Show that 
+\[
+M \otimes_R N' \to M \otimes_R N \to M \otimes_R N'' \to 0
+\]
+ is an exact sequence of abelian groups.
+\item
+Suppose~\(F\) is a free group on a set~\(S\), \(T\) is a subset of~\(S\) and \(H \subseteq F\) is the smallest normal subgroup of~\(F\) containing~\(T\). Show that \(F/H\) is a free group on the set \(S \setminus T\).
+\item
+Suppose~\(R\) is a commutative ring with identity and~\(I\) is an ideal contained in the Jacobson radical of~\(R\). Prove Nakayama’s lemma: if~\(M\) is a finitely generated~\(R\)-module such that \(IM=M\) then \(M=0\).
+\item
+Suppose~\(A\) is a Noetherian commutative ring with identity.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that if \(f:A \to B\) is a surjective homomorphism then~\(B\) is Noetherian.
+\item[\textnormal{(ii)}]
+Recall that a multiplicative system in~\(A\) is a nonempty subset closed under multiplication. Show that if \(S \subset A\) is a multiplicative system then \(S^{-1}A\) is Noetherian.
+\end{examsubparts}
+\item
+Suppose~\(R\) is a nontrivial commutative ring with identity and \(S \subset R\) is a multiplicative system not containing~\(0\) (see the previous problem for the definition).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that there is a prime ideal \(\mathfrak p \subset R\) such that \(\mathfrak p \cap S=\varnothing\). Hint: Apply Zorn’s lemma on the ideals \(I \subset R\) such that \(I \cap S=\varnothing\).
+\item[\textnormal{(ii)}]
+Use this to show that the intersection of all prime ideals of~\(R\) is the set of nilpotent elements of~\(R\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+State the Jacobson density theorem for semisimple rings.
+\item[\textnormal{(ii)}]
+Use it to show that if~\(K\) is a field and~\(A\) is a simple~\(K\)-algebra of finite dimension then there is a division~\(K\)-algebra~\(D\) such that \(A \simeq M_n(D)\) for some~\(n\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

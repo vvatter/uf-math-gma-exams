@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 2025},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2025\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of the eight problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+For any two of the following, either give an example or explain why no example exists.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+A Lebesgue measurable set \(E \subseteq [0,1]\) that is closed, has positive measure, but contains no non-trivial interval.
+\item[\textnormal{(ii)}]
+A Lebesgue measurable set \(E \subseteq [0,1]\) of positive measure such that \(E-E=\{x-y:x,y\in E\}\) contains no non-trivial interval.
+\item[\textnormal{(iii)}]
+A measure space \((X,\mathcal M)\) and a set \(E\subseteq X\times X\) such that \([E]_x,[E]^y\in\mathcal M\) for all \(x,y\in X\), but \(E\notin\mathcal M\otimes\mathcal M\).
+\end{examsubparts}
+\item
+Suppose \(X,Y\) are metric spaces. Show, if \(f:X\to Y\) is continuous, then~\(f\) is Borel measurable.
+\item
+Let \(I=(-1,1)\) and let \(m^*\) denote Lebesgue outer measure. Show, if \(A\subseteq I\) and \(m^*(A)+m^*(I\setminus A)=2\), then~\(A\) is Lebesgue measurable.
+\item
+State the Radon–Nikodym Theorem and give an example that shows the~\(\sigma\)-finite hypothesis is needed.
+\item
+Suppose \(\mathcal X\) is a Banach space and \(\mathcal M\) and \(\mathcal N\) are (closed) subspaces of \(\mathcal X\). Show, if each \(x\in\mathcal X\) has a unique representation as \(x=m+n\) for some \(m\in\mathcal M\) and \(n\in\mathcal N\), then the mapping \(\mathcal X\to\mathcal M\) sending \(x=m+n\) to~\(m\) is linear and bounded.
+\item
+Prove, if \(\mathcal X\) is a Banach space and \(\mathcal X^*\) is separable, then \(\mathcal X\) is separable. Is \(\ell^1\) isomorphic, as a Banach space, to \((\ell^\infty)^*\)?
+\item
+Short answer. Do two.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Suppose \(h:\mathbb R\to\mathbb C\) is a measurable function. If \(hf\in L^1(\mathbb R)\) for every \(f\in L^4(\mathbb R)\), what can be said about~\(h\)? Explain your answer.
+\item[\textnormal{(ii)}]
+Does there exist a (bounded) linear functional \(L:\ell^\infty(\mathbb N)\to\mathbb C\) such that \(L(f)=\lim f(n)\) whenever \(f\in\ell^\infty(\mathbb N)\) and \((f(n))_n\) converges? Explain your answer.
+\item[\textnormal{(iii)}]
+Does there exist an inner product on \(\mathbb R^2\) that induces the norm \(\lVert x\rVert=|x_1|+|x_2|\) for \(x=\binom{x_1}{x_2}\in\mathbb R^2\)? Explain your answer.
+\end{examsubparts}
+\item
+Do two providing short justifications for your answers. Here \(\widehat{\phantom{f}}\) denotes the Fourier transform of an \(L^1\) function and \(\mathcal Ff\) denotes the Fourier transform of an \(L^2(\mathbb R)\) function~\(f\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define \(f\in L^1(\mathbb R)\) by \(f(x)=e^{-x^4}\chi_{[1,\infty)}(x)\). Is \(\widehat f\in L^1(\mathbb R)\)?
+\item[\textnormal{(ii)}]
+Recall, if \(f\in L^1(\mathbb R)\), then \(\lVert\widehat f\rVert_\infty\leq\lVert f\rVert_1\). When does equality hold?
+\item[\textnormal{(iii)}]
+Does there exist \(0\neq f\in L^2(\mathbb R)\) such that \(\mathcal Ff=e^{i\pi/4}f\)?
+\end{examsubparts}
+\end{examproblems}
+\end{document}

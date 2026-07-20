@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2020-jan-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2020,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA_5228_January2020-2.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f\\) be a bounded real-valued function on the set \\(X \\times Y\\). Prove that\n\\[\n\\sup_{x\\in X}\\inf_{y\\in Y} f(x,y) \\leq \\inf_{y\\in Y}\\sup_{x\\in X} f(x,y).\n\\]\nShow by example that the inequality can be strict."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "The diameter of the compact metric space \\(X\\) is defined by\n\\[\n\\operatorname{diam} X=\\sup\\{d(p,q):p,q\\in X\\}.\n\\]\nProve that there exist \\(p_0,q_0\\in X\\) such that \\(\\operatorname{diam} X=d(p_0,q_0)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the function \\(f:X\\to Y\\) between metric spaces have closed graph \\(\\{(x,y):y=f(x)\\}\\subseteq X\\times Y\\). Prove the true and disprove the false:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "if \\(X\\) is compact then \\(f\\) is continuous;",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "if \\(Y\\) is compact then \\(f\\) is continuous.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((s_n:n>0)\\) be a bounded real sequence and write \\(\\sigma_n=(s_1+\\cdots+s_n)/n\\) for each \\(n>0\\). Prove that\n\\[\n\\limsup_n \\sigma_n\\leq \\limsup_n s_n.\n\\]\nHence, or otherwise, show that if \\(s_n\\to s\\) then \\(\\sigma_n\\to s\\) also."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) satisfy \\(|f(x)-f(a)|\\leq A|x-a|^{1+\\alpha}\\) for some constants \\(A,\\alpha>0\\) and all \\(a,x\\in\\mathbb{R}\\). Prove that \\(f\\) is constant."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2023},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2023\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2023}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Let \(a_1,a_2,\ldots,a_{10}\) be positive integers not exceeding \(100\). Prove that there are disjoint, nonempty subsets~\(S\) and~\(T\) of \([10]\) so that 
+\[
+\sum_{i\in S}a_i=\sum_{j\in T}a_j.
+\]
+\item
+Prove that the number of permutations of length \(n+1\) that have exactly two cycles is equal to the number of all cycles in all \(n!\) permutations of length~\(n\). (For instance, if \(n=3\), then both of these numbers are equal to \(11\).)
+\item
+Let~\(P\) be a convex polyhedron whose faces are all either~\(a\)-gons or~\(b\)-gons, and whose vertices are each incident to three edges. Let \(p_a\), \(p_b\), and~\(n\) respectively denote the number of~\(a\)-gonal faces, \(b\)-gonal faces, and vertices of~\(P\). Prove that \(p_a(6-a)+p_b(6-b)=12\).
+\item
+A city has three high schools, each of them attended by~\(n\) students. Each student knows exactly \(n+1\) students who attend a high school different from his. Prove that we can choose three students, one from each school, so that each of them knows the other two.
+\item
+Let \(L_n\) be the total number of leaves in all binary plane trees with~\(n\) vertices. These are trees in which all non-leaf vertices have one or two children, and every child is a left child or a right child, even if it is an only child. So \(L_1=1\), \(L_2=2\), and \(L_3=6\). Find an explicit formula for the numbers \(L_n\).
+\item
+Let \(c:S\to\{0,1\}^*\) be a prefix-free code in which \(b_i\) codewords have length~\(i\). Prove that \(\sum_i \frac{b_i}{2^i}\leq 1\).
+\item
+Let~\(T\) be a rooted non-plane~\(2\)-tree (that is, every non-leaf vertex has two children) with~\(n\) leaves. For instance, for \(n=4\), there are two such trees, one in which each leaf is at edge-distance two from the root, and one in which the edge-distances of the leaves from the root are~\(1\), \(2\), \(3\), and~\(3\). Let \(\operatorname{sym}(T)\) be the number of non-leaf vertices~\(v\) of~\(T\) such that the two children of~\(v\) are the roots of identical subtrees. Your answers to parts (a) and (b) can contain \(\operatorname{sym}(T)\), but your answer to part (c) should not.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+How many automorphisms does~\(T\) have?
+\item[\textnormal{(b)}]
+How many different ways are there to bijectively label the leaves of~\(T\) with the numbers \(1,2,\ldots,n\)?
+\item[\textnormal{(c)}]
+Find an explicit formula for \(\sum_T \frac{1}{|\operatorname{Aut}(T)|}\), where the sum is taken over all rooted non-plane~\(2\)-trees with~\(n\) leaves. For example, for \(n=4\), the two trees mentioned above have, respectively, eight and two automorphisms, so the requested sum is \(\frac18+\frac12=\frac58\).
+\end{examsubparts}
+\item
+Let~\(k\) be a fixed positive integer, and let \(F_k(z)=\sum_{n\geq k}c(n,k)z^n/n!\), where \(c(n,k)\) is the signless Stirling number of the first kind.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find \(F_k(z)\) in an explicit form.
+\item[\textnormal{(b)}]
+Is \(F_k(z)\) an algebraic power series over~\(\mathbb{C}\)?
+\item[\textnormal{(c)}]
+Is \(F_k(z)\) a~\(d\)-finite power series over~\(\mathbb{C}\)?
+\end{examsubparts}
+\end{examproblems}
+\end{document}

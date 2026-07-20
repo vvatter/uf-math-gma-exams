@@ -1,0 +1,101 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, August 2015, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2015, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, August 2015, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(E\) be a dense subset of a metric space~\(X\) and let~\(U\) be an open subset of~\(X\). Prove that \(U \subset \overline{E \cap U}\). (Here \(\overline{E \cap U}\) denotes the closure of \(E \cap U\).)
+\item
+Let~\(X\) be a metric space and \(K \subset X\) a compact subset. Prove that~\(K\) is closed.
+\item
+Let~\(X\) be a compact metric space and \(\mathcal F\) a collection of closed subsets of~\(X\) with the following property: for all finite subcollections \(\mathcal G \subset \mathcal F\), the intersection \(\bigcap_{F \in \mathcal G} F\) is nonempty. Prove that \(\bigcap_{F \in \mathcal F} F\) is nonempty.
+\item
+Let \(X,Y\) be metric spaces and \(f:X\to Y\) a continuous function. Prove that if~\(X\) is connected, then its image \(f(X)\) is connected.
+\item
+Let \((a_n)_{n\in\mathbb N}\) be a sequence of real numbers and~\(\sigma\) a permutation of \(\mathbb N\). For each of the following provide either a proof or a counterexample.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+If the sequence \((a_n)_{n\in\mathbb N}\) converges then so does the rearrangement \((a_{\sigma(n)})_{n\in\mathbb N}\).
+\item[\textnormal{b)}]
+If the series \(\sum_{n\in\mathbb N}a_n\) converges then so does the rearrangement \(\sum_{n\in\mathbb N}a_{\sigma(n)}\).
+\end{examsubparts}
+\item
+Let \(f(x)=x^2\sin\frac{1}{x}\) for \(x\in\mathbb R\setminus\{0\}\) and \(f(0)=0\). Prove that~\(f\) is differentiable at every \(x\in\mathbb R\). Is \(f'\) continuous at \(x=0\)? (Prove your claim.)
+\end{examproblems}
+\end{document}

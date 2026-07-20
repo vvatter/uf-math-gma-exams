@@ -1,0 +1,93 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, August 2017, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2017, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, August 2017, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+\(A\) and~\(B\) are nonempty sets of real numbers such that: (i) \(A \cup B = \mathbb{R}\) and (ii) \(a < b\) whenever \(a \in A\) and \(b \in B\). Prove that there exists a unique \(s \in \mathbb{R}\) such that \((−\infty,s) \subseteq A\) and \((s,\infty) \subseteq B\).
+\item
+Let~\(X\) be a metric space, of which~\(A\) and~\(B\) are compact subsets; define \(\delta := \inf\{d(a,b):a \in A,b \in B\}\). Prove that there exist \(a_0 \in A\) and \(b_0 \in B\) such that \(d(a_0,b_0)=\delta\). Must \(a_0\) and \(b_0\) be unique? Proof or counterexample, as appropriate.
+\item
+Let~\(f\) be a surjective map from the precompact metric space~\(X\) onto the metric space~\(Y\). Prove that if~\(f\) is uniformly continuous then~\(Y\) is also precompact. Show by example that if uniformly is dropped then~\(Y\) can fail to be precompact.
+\item
+Let \(f:\mathbb{R}\to\mathbb{R}\) be continuous. Can it be the case that for each \(t \in \mathbb{R}\), the value \(f(t)\) is irrational iff~\(t\) itself is rational? If yes, give an example; if no, give a proof.
+\item
+Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable and assume that \(f(t)\to\ell \in \mathbb{R}\) as \(t\to\infty\). Prove that if \(f'(t)\to L \in \mathbb{R}\) as \(t\to\infty\) then \(L=0\).
+\end{examproblems}
+\end{document}

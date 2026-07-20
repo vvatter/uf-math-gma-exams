@@ -1,0 +1,159 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Probability PhD Exam, August 2023},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, August 2023\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Probability PhD Exam, August 2023}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Carefully justify your answers.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(X,Y:(\Omega,\mathcal{F},\mathbb{P})\to(\mathbb{R},\mathcal{B}(\mathbb{R}))\) be random variables. Prove that 
+\[
+\mathbb{P}(X+Y\ge 0)\le \mathbb{P}(X\ge 0)+\mathbb{P}(Y\ge 0).
+\]
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Give the mathematical definition of:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+convergence almost sure,
+\item[\textnormal{(b)}]
+convergence in probability,
+\item[\textnormal{(c)}]
+convergence in \(L^1\),
+\item[\textnormal{(d)}]
+convergence in distribution.
+\end{examsubparts}
+\item[\textnormal{2.}]
+For \(n\ge 1\), let \(X_n\) be uniformly distributed on \(\{1,\ldots,n\}\), that is 
+\[
+\mathbb{P}(X_n=k)=\frac{1}{n},\qquad k\in\{1,\ldots,n\}.
+\]
+ Prove that \(\left\{\frac{X_n}{n}\right\}_{n\ge 1}\) converges to~\(U\) in distribution, where~\(U\) is uniform on \([0,1]\).
+\end{examsubparts}
+\item
+Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. continuous random variables having a uniform distribution on \([0,1]\). Define, for \(n\ge 1\), 
+\[
+Y_n=\max(X_1,\ldots,X_n).
+\]
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Find the cumulative distribution function (CDF) of \(Y_n\), \(n\ge 1\).
+\item[\textnormal{2.}]
+Compute \(\mathbb{E}[Y_n]\) and \(\operatorname{Var}(Y_n)\).
+\item[\textnormal{3.}]
+Prove that \(\{Y_n\}\) converges to~\(1\) in \(L^1\). What about almost sure convergence?
+\end{examsubparts}
+\item
+Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. random variables with a Poisson distribution of parameter~\(\lambda\).
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Let \(n\ge 1\). Without justification, what is the distribution of \(X_1+\cdots+X_n\)?
+\item[\textnormal{2.}]
+State the weak and strong law of large numbers for i.i.d random variables.
+\item[\textnormal{3.}]
+Let \(\phi:\mathbb{R}\to\mathbb{R}\) be an arbitrary bounded continuous function. Prove that 
+\[
+\lim_{n\to+\infty}\sum_{k=0}^{+\infty}e^{-n\lambda}\frac{(n\lambda)^k}{k!}\phi\left(\frac{k}{n}\right)=\phi(\lambda).
+\]
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Give the mathematical definition of standard Brownian motion.
+\item[\textnormal{2.}]
+Let \(\{B_t\}\) be a standard Brownian motion. Prove that \(\left\{\frac{B_n}{n}\right\}\) converges to~\(0\) almost surely as \(n\to+\infty\) (\(n\in\mathbb{N}\)).
+\item[\textnormal{3.}]
+Find \(\mathbb{P}(B_2\ge 0,B_1\le 0)\).
+\end{examsubparts}
+\item
+Let \(\{M_n\}_{n\ge 0}\) be a sequence of integrable random variables adapted to a filtration \(\{\mathcal{F}_n\}\). Assume that for each bounded stopping time~\(T\), \(\mathbb{E}[M_T]=\mathbb{E}[M_0]\). Show that \(\{M_n\}_{n\ge 0}\) is a martingale.
+\item
+Let \(\{B_t\}\) be a standard Brownian motion. Define, for \(x\in\mathbb{R}\), 
+\[
+T_x=\min\{t\ge 0:B_t=x\}.
+\]
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Prove that for all \(x\in\mathbb{R}\), \(T_x\) is finite almost surely (that is, \(\mathbb{P}(T_x<+\infty)=1\)).
+\item[\textnormal{2.}]
+Find \(\mathbb{P}(T_3<T_{-1})\). You can use a picture as justification.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

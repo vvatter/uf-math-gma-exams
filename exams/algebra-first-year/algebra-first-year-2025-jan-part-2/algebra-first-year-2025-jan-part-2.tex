@@ -1,0 +1,107 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2025, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2025, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2025, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that if the ring~\(R\) is a Euclidean domain, then~\(R\) is a principal ideal domain.
+\item
+Suppose that~\(F\) is a field and~\(G\) is a finite multiplicative subgroup of \(F\setminus\{0\}\). Prove that~\(G\) is cyclic.
+\item
+Suppose that~\(F\) is a field whose characteristic is not~\(2\). Assume that \(d_1,d_2\in F\) are not squares in~\(F\). Prove that \(F(\sqrt{d_1},\sqrt{d_2})\) is of dimension~\(4\) over~\(F\) if \(d_1d_2\) is not a square in~\(F\) and of dimension~\(2\) otherwise.
+\item
+Let \(GL_4(\mathbb{Z}/3\mathbb{Z})\) denote the group of all invertible~\(4\) by~\(4\) matrices with entries in \(\mathbb{Z}/3\mathbb{Z}\), the field of three elements. Use rational canonical forms to determine the number of conjugacy classes of elements of order~\(4\). Give the rational canonical form for each class.
+\item
+Let~\(R\) be an integral domain, and~\(M\) be an~\(R\)-module.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the rank of~\(M\). (Note that this definition is different from the definition of free module of some rank. In particular, it applies to modules that are not torsion free.)
+\item[\textnormal{(b)}]
+Prove that if~\(M\) is a free~\(R\)-module of rank~\(n\), (where~\(n\) is a non-negative integer), then the rank of any submodule of~\(M\) is at most~\(n\).
+\end{examsubparts}
+\item
+Let~\(F\) be a field.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+What does it mean to say that a field extension of~\(F\) is algebraic?
+\item[\textnormal{(b)}]
+Let \(F\subseteq K\subseteq L\) be three fields. Prove that if~\(K\) is algebraic over~\(F\) and~\(L\) is algebraic over~\(K\), then~\(L\) is algebraic over~\(F\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

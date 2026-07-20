@@ -1,0 +1,209 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-1999-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 1999,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1999_05.pdf",
+  "content": [
+    {
+      "type": "section",
+      "heading": "I",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State the following theorems."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Hahn–Banach."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Egorov theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Vitali convergence theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Radon–Nikodym theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Fubini theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The monotone convergence theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The completeness theorem for \\(L_F^p(\\mu)\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The equality \\(|g\\mu|=|g|\\,|\\mu|\\)."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "II",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Prove one of the theorems 3 or 7."
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "III",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Solve the following problems, where \\((X,\\Sigma,\\mu)\\) is a measure space and \\(F\\) is a Banach space."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "If \\(f_n\\to f\\) in \\(L_F^p(\\mu)\\) and \\(f_n\\to g\\), \\(\\mu\\)-a.e., then \\(f=g\\), \\(\\mu\\)-a.e."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(\\mathcal F\\subset\\Sigma\\) be a \\(\\sigma\\)-algebra. Prove the existence of the conditional expectation \\(E(f\\mid\\mathcal F)\\) for \\(f\\in L_F^p(\\mu)\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(\\mathcal R\\) be a ring generating \\(\\Sigma\\) and \\(f\\in L_F^1(\\mu)\\). Prove that if \\(\\int_A f\\,d\\mu=0\\) for every \\(A\\in\\mathcal R\\), then \\(f=0\\), \\(\\mu\\)-a.e."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\((X,\\mathcal F)\\) and \\((Y,\\mathcal T)\\) be measurable spaces, and let \\(\\mu:\\mathcal F\\to\\mathbb R\\) and \\(\\nu:\\mathcal T\\to\\mathbb R\\) be \\(\\sigma\\)-additive measures. Prove the existence of the product measure \\(\\mu\\times\\nu:\\mathcal F\\times\\mathcal T\\to\\mathbb R\\) satisfying \\((\\mu\\times\\nu)(A\\times B)=\\mu(A)\\nu(B)\\) for \\(A\\times B\\in\\mathcal F\\times\\mathcal T\\), and \\(|\\mu\\times\\nu|=|\\mu|\\times|\\nu|\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "If \\(f\\in L_F^1(\\mu)\\), there is a sequence \\((f_n)\\) of \\(\\mathcal R\\)-step functions"
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "instructions",
+          "text": "The remainder of this problem was cut off in the archived source."
+        }
+      ]
+    },
+    {
+      "type": "instructions",
+      "text": "Note. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences."
+    }
+  ]
+}

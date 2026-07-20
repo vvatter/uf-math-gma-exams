@@ -1,0 +1,199 @@
+{
+  "schema_version": 3,
+  "id": "logic-phd-2006-may",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2006,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_2006_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Please complete seven problems among the following, including one from each section."
+    },
+    {
+      "type": "section",
+      "heading": "1. General logic",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State the incompleteness theorem and explain the role of Gödel numbering in its proof."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Sketch the proof of the completeness theorem for first order logic."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Sketch the proof of Tarski’s undefinability of truth."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "2. Model theory",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that the theory of dense linear orders without endpoints is complete."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Find two models which are elementarily equivalent but not isomorphic."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State and prove Tarski’s criterion for elementary submodels."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "3. Set theory",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Sketch the proof of \\(L\\) satisfying CH."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove from Martin’s Axiom that every set of reals of size \\(\\aleph_1\\) has Lebesgue measure zero."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that every stationary subset of \\(\\omega_1\\) can be split into \\(\\aleph_1\\) many pairwise disjoint stationary subsets."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "4. Computability",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show how to construct a simple recursively enumerable set \\(A\\) (meaning that \\(\\omega-A\\) has no infinite r.e. subset)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Define the recursively enumerable set \\(K=\\{a:\\{a\\}(a)\\mathord{\\downarrow}\\}\\). Use the \\(S_1^1\\) function to show that \\(K\\) is many-one complete."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that the following are equivalent, for any nonempty \\(A\\subset\\omega\\):"
+              }
+            ],
+            "subparts": [
+              {
+                "label": "(a)",
+                "text": "\\(A\\) is the domain of some partial recursive function \\(\\phi\\).",
+                "subparts": []
+              },
+              {
+                "label": "(b)",
+                "text": "\\(A\\) is the range of some (total) recursive function \\(f\\).",
+                "subparts": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

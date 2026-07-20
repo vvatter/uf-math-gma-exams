@@ -1,0 +1,130 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, August 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, August 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, August 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+For any two of the following, either give an example or explain why no example exists.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+a sequence of Lebesgue measurable functions on \(\mathbb R\) which converges in measure but not Lebesgue a.e.
+\item[\textnormal{b)}]
+a closed set \(E\subset[0,1]\) with positive Lebesgue measure, but which contains no open intervals
+\item[\textnormal{c)}]
+a decreasing sequence of nonnegative measurable functions on \(\mathbb R\) such that \(\lim \int f_n \ne \int \lim f_n\)
+\end{examsubparts}
+\item
+State Tonelli’s theorem, and give an example to show that the~\(\sigma\)-finiteness hypothesis is necessary.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+State the Lebesgue–Radon–Nikodym theorem.
+\item[\textnormal{b)}]
+State and prove a version of the chain rule for Radon–Nikodym derivatives.
+\end{examsubparts}
+\item
+Suppose that \(f:\mathbb R\to\mathbb C\) is a Lebesgue measurable function with the property that \(fg\in L^1(\mathbb R)\) for every \(g\in L^2(\mathbb R)\). Must~\(f\) belong to \(L^2(\mathbb R)\)? Prove, or give a counterexample.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Show that for every integer \(n\ge 1\), there exists a function \(f_n\in L^2[0,1]\) such that for every polynomial~\(p\) of degree at most~\(n\), 
+\[
+p(0)=\int_0^1 p(x)f_n(x)\,dx.
+\]
+\item[\textnormal{b)}]
+Prove that there is no \(L^2\) function~\(f\) such that the above holds for all polynomials~\(p\) (independent of the degree~\(n\)).
+\end{examsubparts}
+\item
+State the Baire category theorem. Prove that if \(\mathcal X\) is an infinite-dimensional Banach space, then \(\mathcal X\) does not have a countable basis.
+\item
+Let \(\mathcal X\) be a Banach space and \(\mathcal Y\) a normed vector space. Let \((T_n)\) be a sequence of bounded linear operators from \(\mathcal X\) to \(\mathcal Y\). Suppose that \(\lim_n T_nx\) exists for each \(x\in\mathcal X\). Prove that the linear transformation \(Tx:=\lim_n T_nx\) is bounded from \(\mathcal X\) to \(\mathcal Y\).
+\item
+For each of the following statements, determine if it is true or false, and sketch a proof of your claim.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+If~\(\nu\) is a signed measure and \(E,F\) are measurable sets with \(\nu(E)\ge 0\) and \(\nu(F)\ge 0\), then \(\nu(E\cup F)\ge 0\).
+\item[\textnormal{b)}]
+If \((X,\mathcal M)\) and \((Y,\mathcal N)\) are measurable spaces and \(E\subset X\), \(F\subset Y\) are sets such that \(E\times F\) is \(\mathcal M\otimes\mathcal N\)-measurable, then \(E\in\mathcal M\) and \(F\in\mathcal N\).
+\item[\textnormal{c)}]
+\(L^1(\mathbb R)\) is reflexive.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

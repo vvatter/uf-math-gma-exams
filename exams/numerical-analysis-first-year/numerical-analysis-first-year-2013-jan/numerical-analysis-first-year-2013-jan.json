@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "id": "numerical-analysis-first-year-2013-jan",
+  "subject": "First Year Numerical Analysis",
+  "subject_tag": "numerical-analysis-first-year",
+  "year": 2013,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_NumericalAnalysis_2013_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer any 4 questions."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(A \\in \\mathbb{C}^{n\\times n}\\) is Hermitian with \\(\\lambda_1\\) and \\(\\lambda_n\\) the smallest and largest eigenvalues of \\(A\\) respectively. Show that\n\\[\n\\lambda_1\\lVert x\\rVert^2 \\leq x^*Ax \\leq \\lambda_n\\lVert x\\rVert^2\n\\]\nfor all \\(x \\in \\mathbb{C}^n\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Suppose \\(p\\) and \\(q \\in \\mathbb{R}\\) with \\(p\\) and \\(q\\) positive and \\(p^{-1}+q^{-1}=1\\). Show that for any matrix \\(A \\in \\mathbb{C}^{m\\times n}\\), we have \\(\\lVert A\\rVert_p=\\lVert A^*\\rVert_q\\), where \\(A^*\\) is the conjugate transpose of \\(A\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that\n\\[\n\\lVert A\\rVert_2^2 \\leq \\lVert A\\rVert_p\\lVert A\\rVert_q\n\\]\nfor any \\(A \\in \\mathbb{C}^{m\\times n}\\) and any positive \\(p\\) and \\(q \\in \\mathbb{R}\\) with \\(p^{-1}+q^{-1}=1\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Prove that for any \\(p\\geq 1\\) and any diagonal matrix \\(D \\in \\mathbb{C}^{n\\times n}\\), we have\n\\[\n\\lVert D\\rVert_p=\\max\\{\\lvert d_{ii}\\rvert:1\\leq i\\leq n\\}.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that the eigenvalues of a projector are either \\(0\\) or \\(1\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that a projector \\(P\\) is orthogonal if and only if \\(P=P^*\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that the element of largest magnitude in a Hermitian, positive definite matrix lies on the diagonal."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(A \\in \\mathbb{C}^{n\\times n}\\) is an invertible matrix, \\(u \\in \\mathbb{C}^n\\), and \\(v \\in \\mathbb{C}^n\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that\n\\[\n\\det(A-uv^*)=(1-v^*A^{-1}u)\\det A.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose that \\(A\\) is a real diagonal matrix and \\(u=v\\) with \\(u_i\\neq 0\\) for each \\(i\\). Show that the eigenvalues of \\(A-uu^*\\) are the roots of\n\\[\n\\sum_{i=1}^n \\frac{\\lvert u_i\\rvert^2}{a_{ii}-\\lambda}=1.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

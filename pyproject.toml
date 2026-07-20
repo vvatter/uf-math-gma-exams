@@ -15,8 +15,9 @@ dependencies = [
 
 [project.scripts]
 build-uf-math-gma-exam-indexes = "build_indexes:main"
+build-uf-math-gma-exam-pdfs = "build_tex:main"
 extract-uf-math-gma-exams = "extract_exams:main"
 validate-uf-math-gma-exams = "validate_archive:main"
 
 [tool.setuptools]
-py-modules = ["build_indexes", "download_exams", "extract_exams", "validate_archive"]
+py-modules = ["build_indexes", "build_tex", "download_exams", "extract_exams", "validate_archive"]

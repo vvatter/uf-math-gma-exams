@@ -1,0 +1,136 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps.
+\end{examinstructions}
+\begin{examinstructions}
+Attempt SIX problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Consider Lebesgue measure on the real line~\(\mathbb{R}\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \(f_n\) in \(L^1(\mathbb{R})\) converging to an~\(f\) in \(L^1(\mathbb{R})\)...
+\begin{examsubparts}
+\item[\textnormal{a)}]
+...in the \(L^1\) norm but not in measure,
+\item[\textnormal{b)}]
+...in measure but not in the \(L^1\) norm,
+\item[\textnormal{c)}]
+...in the \(L^1\) norm but not a.e.,
+\item[\textnormal{d)}]
+...a.e. but not in measure.
+\end{examsubparts}
+\item
+State Tonelli’s theorem, and give an example to show that the~\(\sigma\)-finiteness hypothesis is necessary.
+\item
+For~\(\sigma\)-finite measures~\(\mu\) and~\(\nu\), define what it means for~\(\mu\) to be absolutely continuous with respect to~\(\nu\), and singular with respect to~\(\nu\). State the Lebesgue–Radon–Nikodym theorem.
+\item
+Let \((X,\mathcal{M},\mu)\) be a~\(\sigma\)-finite measure space. Suppose that~\(g\) is a measurable function with the property that \(gf\in L^2\) for all \(f\in L^2\). Prove that \(g\in L^\infty\).
+\item
+Fix \(1<p<\infty\), let~\(\mu\) be a~\(\sigma\)-finite measure, and let \((f_n)\) be a sequence in \(L^p(\mu)\). Suppose that there exists a function \(f\in L^p(\mu)\) such that 
+\[
+\int f_n g\,d\mu \to \int fg\,d\mu
+\]
+ for every \(g\in L^q(\mu)\), where \(\frac{1}{p}+\frac{1}{q}=1\).
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Prove that \(\sup_n\{\lVert f_n\rVert_p\}<+\infty\).
+\item[\textnormal{b)}]
+Prove that \(\lVert f\rVert_p\leq\limsup\lVert f_n\rVert_p\).
+\item[\textnormal{c)}]
+Give an example to show that strict inequality can hold in part (b).
+\end{examsubparts}
+\item
+Let~\(\mathcal{X}\) be a normed vector space. Say \(x_n\to x\) weakly if \(f(x_n)\to f(x)\) for all \(f\in\mathcal{X}^*\). Prove that if~\(\mathcal{M}\) is a norm closed subspace of~\(\mathcal{X}\), and \((x_n)\) is a sequence in~\(\mathcal{M}\) converging weakly to~\(x\), then \(x\in\mathcal{M}\).
+\item
+Let~\(\mu\) be a finite signed Borel measure on \([0,1]\). Suppose that 
+\[
+\int_0^1 \sin(2\pi nx)\,d\mu(x)=0 \quad\text{and}\quad \int_0^1 \cos(2\pi nx)\,d\mu(x)=0
+\]
+ for all \(n=0,1,2,\ldots\). Prove that \(\mu=0\). Does it suffice to assume only the vanishing of the sine integrals? Prove, or give a counterexample.
+\item
+Short answer.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Give a brief explanation of how the Fourier transform is defined on \(L^2(\mathbb{R})\).
+\item[\textnormal{b)}]
+Sketch a proof that the Banach space \(L^1(\mathbb{R})\) is not reflexive.
+\item[\textnormal{c)}]
+Explain why the norm in \(\ell^1(\mathbb{N})\) cannot be given by an inner product.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

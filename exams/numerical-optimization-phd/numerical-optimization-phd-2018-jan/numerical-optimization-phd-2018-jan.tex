@@ -1,0 +1,167 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Variational Analysis/Numerical Optimization PhD Exam, January 2018},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-optimization-phd/}{Variational Analysis/Numerical Optimization PhD Exam}, January 2018\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Variational Analysis/Numerical Optimization PhD Exam, January 2018}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 8 (eight) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(\mathbf Q\) denote an~\(n\) by~\(n\) symmetric matrix and let \(\mathbf d_k\), \(1\leq k\leq n\), denote a collection of directions that are \(\mathbf Q\)-conjugate.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose the \(\mathbf Q\) is positive definite. Show that the directions \(\mathbf d_k\), \(1\leq k\leq n\), are linearly independent, and express the solution of the linear system \(\mathbf Q\mathbf x=\mathbf b\) in terms of the conjugate directions.
+\item[\textnormal{(b)}]
+If \(\mathbf d_k^{\mathrm T}\mathbf Q\mathbf d_k>0\) for each~\(k\), then show that \(\mathbf Q\) is positive definite.
+\end{examsubparts}
+\item
+Consider the following variational problem: 
+\[
+\min\left\{\int_0^1 \frac{1}{2}u'(x)^2+e^{u(x)}\,dx:u\in H^1([0,1]),\quad u(0)=u(1)=0\right\}.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+What is the first-order necessary optimality condition (Euler equation) for this variational problem?
+\item[\textnormal{(b)}]
+Consider a uniform mesh \(x_k=kh\) where \(h=1/N\); let \(u_k\) denote an approximation to \(u(x_k)\). Of course, \(u_0=u_N=0\). Give a finite difference approximation in terms \(u_1,\ldots,u_{N-1}\) to the solution of the Euler equation.
+\item[\textnormal{(c)}]
+Let \(\mathbf F(\mathbf u)\) denote the finite difference system where \(\mathbf u=(u_1,u_2,\ldots,u_{N-1})\in\mathbb R^{N-1}\), and let \(\mathbf u^*\) denote the vector formed by evaluating the solution of the Euler equation at the mesh points \(x_1,x_2,\ldots,x_{N-1}\). Obtain a bound for the components of \(\mathbf F(\mathbf u^*)\) in terms of the mesh spacing~\(h\).
+\end{examsubparts}
+\item
+Consider the following variational problem where~\(f\) is a given smooth function: 
+\[
+\min\left\{\Phi(u):=\int_0^1 \frac{1}{2}u'(x)^2+f(x)u(x)\,dx:u\in H^1([0,1]),\quad u(0)=u(1)=0\right\}.
+\]
+ Let \(S^h\) denote the piecewise linear finite element space defined on a uniform mesh with \(v^h(0)=v^h(1)=0\) for all \(v^h\in S^h\). Obtain a bound for the error in the finite element approximation \(u^h\) obtained by minimizing~\(\Phi\) over \(S^h\).
+\item
+Suppose that \(f:\mathbb R^n\to\mathbb R\) is twice continuously differentiable, \(\mathbf x^*\in\mathbb R^n\), \(\nabla f(\mathbf x^*)=0\), and \(\nabla^2f(\mathbf x^*)\) is positive definite. Show that \(\mathbf x^*\) is a strict local minimizer of~\(f\).
+\item
+Suppose that a quadratic \(\Phi(\mathbf x)=\frac{1}{2}\mathbf x^{\mathrm T}\mathbf Q\mathbf x-\mathbf b^{\mathrm T}\mathbf x\) is minimized by steepest descent: \(\mathbf x_{k+1}=\mathbf x_k-s_k\mathbf g_k\), where \(\mathbf g_k=\nabla\Phi(\mathbf x_k)\) and \(s_k\) is the stepsize.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Derive the formula for the Cauchy step.
+\item[\textnormal{(b)}]
+Derive the formula for the BB step.
+\end{examsubparts}
+\item
+Consider the system of differential equations \(\dot{\mathbf x}(t)=\mathbf f(\mathbf x(t),\mathbf u(t))\), \(\mathbf x(0)=\mathbf x_0\), where \(\mathbf f:\mathbb R^n\times\mathbb R^m\to\mathbb R^n\) and \(\mathbf f\) satisfies the global Lipschitz condition 
+\[
+\|\mathbf f(\mathbf x_1,\mathbf u_1)-\mathbf f(\mathbf x_2,\mathbf u_2)\|\leq L\bigl(\|\mathbf x_1-\mathbf x_2\|+\|\mathbf u_1-\mathbf u_2\|\bigr).
+\]
+ Show that the differential equation has a global solution and on any interval \([0,T]\), the following bound holds for all \((\mathbf u_1,\mathbf u_2)\in\mathcal L^\infty([0,T])\): 
+\[
+\|\mathbf x_1-\mathbf x_2\|_{\mathcal L^\infty}\leq e^{LT}\|\mathbf u_1-\mathbf u_2\|_{\mathcal L^1},
+\]
+ where \(\mathbf x_i\) is the solution of the differential equation associated with \(\mathbf u_i\), \(i=1,2\).
+\item
+Suppose that~\(P\) and~\(Q\) are continuous on \([0,1]\) and the following functional is nonnegative over all \(h\in H_0^1([0,1])\): 
+\[
+\Omega(h)=\int_0^1 \bigl(P(x)h'(x)^2+Q(x)h(x)^2\bigr)\,dx.
+\]
+ Show that \(P\geq0\) on \([0,1]\).
+\item
+Suppose that \(u:[0,1]\to\mathbb R\) is twice continuously differentiable, and let \(u^I\) be the continuous, piecewise linear interpolant of~\(u\). Prove the following bound: 
+\[
+\|u-u^I\|_{\mathcal L^\infty}\leq\frac{h^2}{8}\|u''\|_{\mathcal L^\infty}.
+\]
+\item
+Suppose that \(f:\mathbb R^n\to\mathbb R\) is a convex function.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(f\) is continuously differentiable, then show that for all \(\mathbf x\) and \(\mathbf y\in\mathbb R^n\), we have 
+\[
+f(\mathbf y)\geq f(\mathbf x)+\nabla f(\mathbf x)(\mathbf y-\mathbf x).
+\]
+\item[\textnormal{(b)}]
+If~\(f\) is twice continuously differentiable, then show that the Hessian \(\nabla^2f(\mathbf x)\) is positive semidefinite for all \(\mathbf x\in\mathbb R^n\).
+\end{examsubparts}
+\item
+Suppose that \(\boldsymbol\Phi:\mathbb R^n\to\mathbb R^n\) and \(\mathbf x^*\in\mathbb R^n\) is a fixed point of \(\boldsymbol\Phi\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(\boldsymbol\Phi\) is a contraction mapping with contraction constant~\(\lambda\), then show that the iteration \(\mathbf x_{k+1}=\boldsymbol\Phi(\mathbf x_k)\) converges to \(\mathbf x^*\) from any starting guess \(\mathbf x_0\), and 
+\[
+\|\mathbf x_k-\mathbf x^*\|\leq\lambda^k\|\mathbf x_0-\mathbf x^*\|.
+\]
+\item[\textnormal{(b)}]
+Suppose that \(\boldsymbol\Phi\) is continuously differentiable on a convex set \(\mathcal K\subset\mathbb R^n\). Let~\(\mu\) denote the supremum of the singular values of \(\nabla\boldsymbol\Phi\) over \(\mathcal K\). Show that 
+\[
+\|\boldsymbol\Phi(\mathbf x)-\boldsymbol\Phi(\mathbf y)\|\leq\mu\|\mathbf x-\mathbf y\|
+\]
+ for all \(\mathbf x\) and \(\mathbf y\in\mathcal K\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

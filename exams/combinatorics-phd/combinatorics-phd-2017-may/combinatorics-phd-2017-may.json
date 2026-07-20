@@ -1,0 +1,135 @@
+{
+  "schema_version": 3,
+  "id": "combinatorics-phd-2017-may",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2017,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics-2017_05.pdf",
+  "content": [
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give a combinatorial proof that\n\\[\nk\\binom{n}{k}=n\\binom{n-1}{k-1}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "You can use results from your course to prove:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If a finite partially ordered set has \\(mn+1\\) elements, then there is either a chain of size \\(m+1\\) or an antichain of size \\(n+1\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(G\\) is a regular bipartite graph of degree at least 2, then \\(G\\) has a spanning subgraph that is the union of vertex disjoint cycles.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(a(n)\\) be the number of ways to tile a \\(2\\times n\\) rectangle with \\(1\\times 1\\) squares and \\(2\\times k\\) rectangles for any integer \\(k\\geq 1\\), where a \\(2\\times 1\\) rectangle must be vertical (i.e. no \\(1\\times 2\\) rectangle). For instance, \\(a(2)=5\\), given by"
+          },
+          {
+            "type": "tikz",
+            "id": "five-tilings",
+            "alt": "Five tilings of a 2x2 rectangle, shown left to right: four 1x1 squares; two 1x1 squares on the left with one vertical 2x1 rectangle on the right; one vertical 2x1 rectangle on the left with two 1x1 squares on the right; two vertical 2x1 rectangles; and one 2x2 rectangle.",
+            "libraries": [],
+            "options": [
+              "line width=0.8pt",
+              "line cap=round",
+              "line join=round"
+            ],
+            "code": "% 1. Four 1-by-1 squares\n\\begin{scope}[xshift=0cm]\n    \\draw (0,0) rectangle (2,2);\n    \\draw (1,0) -- (1,2);\n    \\draw (0,1) -- (2,1);\n\\end{scope}\n\n% 2. Two 1-by-1 squares on the left and one vertical 2-by-1 tile\n\\begin{scope}[xshift=3.2cm]\n    \\draw (0,0) rectangle (2,2);\n    \\draw (1,0) -- (1,2);\n    \\draw (0,1) -- (1,1);\n\\end{scope}\n\n% 3. One vertical 2-by-1 tile and two 1-by-1 squares on the right\n\\begin{scope}[xshift=6.4cm]\n    \\draw (0,0) rectangle (2,2);\n    \\draw (1,0) -- (1,2);\n    \\draw (1,1) -- (2,1);\n\\end{scope}\n\n% 4. Two vertical 2-by-1 tiles\n\\begin{scope}[xshift=9.6cm]\n    \\draw (0,0) rectangle (2,2);\n    \\draw (1,0) -- (1,2);\n\\end{scope}\n\n% 5. One 2-by-2 tile\n\\begin{scope}[xshift=12.8cm]\n    \\draw (0,0) rectangle (2,2);\n\\end{scope}"
+          },
+          {
+            "type": "text",
+            "text": "Set \\(a(0)=1\\), and find a simple expression for the generating function\n\\[\nA(x)=\\sum_{n\\geq 0}a(n)x^n.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(C\\) be a linear binary error correcting code. Prove that either every word in \\(C\\) has even weight or exactly half the words in \\(C\\) have even weight.\n\nIs a similar statement true for ternary codes?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal{L}\\) be a regular language. Prove that the language\n\\[\n\\mathcal{L}_2=\\{w:ww\\in\\mathcal{L}\\}\n\\]\nis regular."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that the number of \\(k\\cdots 21\\)-avoiding permutations is at most \\((k-1)^{2n}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(c(n,k)\\) be the number of permutations of length \\(n\\) with \\(k\\) cycles. Let \\(a_n\\) be the total number of cycles in all permutations of length \\(n\\). Prove that\n\\[\nc(n+1,2)=a_n.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(b_n\\) be the number of permutations of length \\(n\\) whose first ascent is in an even position. (For the decreasing permutation of length \\(n\\), we say that its first ascent is in position \\(n\\).)\n\nFind an explicit formula for \\(b_n\\). Your formula can contain one summation sign."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, September 2003},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, September 2003\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, September 2003}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do any 8 of the following 10 problems:
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(V\) be the space of all complex \(m\times n\) matrices endowed with any norm. Prove that its subset of full rank matrices is dense in~\(V\).
+\item[\textnormal{(b)}]
+Suppose~\(A\) and~\(B\) are square matrices.
+\begin{examsubparts}
+\item[\textnormal{i.}]
+If~\(A\) is invertible, show that \(AB\) and \(BA\) are similar matrices (so their spectra coincide).
+\item[\textnormal{ii.}]
+How will you use Problem (1a) to conclude that the spectra of \(AB\) and \(BA\) coincide when nothing is known about the invertibility of~\(A\) or~\(B\)?
+\end{examsubparts}
+\item[\textnormal{(c)}]
+For all rectangular matrices \(A\in\mathbb C^{m\times n}\), \(B\in\mathbb C^{n\times m}\) (\(m\ne n\)), does the spectrum of \(AB\) and \(BA\) coincide?
+\end{examsubparts}
+\item
+Let \(A\in\mathbb C^{m\times m}\), and let \(E\in\mathbb C^{m\times m}\) be of rank \(k<m\). Suppose the matrix \(M=A+E\) is invertible. Consider GMRES applied to the preconditioned system 
+\[
+M^{-1}Ax=M^{-1}b.
+\]
+ Give a tight bound, independent of the starting guess, on the number of GMRES iterations needed to compute the exact solution~\(x\) (ignoring roundoff). Your answer should be less than~\(m\). Give clear reasons.
+\item
+Let~\(U\) be the upper triangular matrix obtained by applying Gaussian elimination with partial pivoting (the “\(PA=LU\)” factorization) to a matrix \(A\in\mathbb C^{m\times m}\). Show that the growth factor 
+\[
+\rho=\frac{\max_{i,j}|U_{ij}|}{\max_{i,j}|A_{ij}|}
+\]
+ satisfies 
+\[
+\rho\le 2^{m-1}.
+\]
+ Exhibit a matrix~\(A\) for which the growth factor is \(2^{m-1}\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose \(A=QR\) is a QR factorization of a symmetric tridiagonal~\(A\). Which entries of~\(R\) and~\(Q\) are zero, in general?
+\item[\textnormal{(b)}]
+State the (unshifted) QR iteration for eigenvalues. Show that if one iterate of the QR iteration is symmetric and tridiagonal, then the next one is also symmetric and tridiagonal.
+\end{examsubparts}
+\item
+Given \(\mathbf v\) and \(\mathbf w\in\mathbb R^n\), show that 
+\[
+\mathbf v\mathbf w^{\mathsf T}+\mathbf w\mathbf v^{\mathsf T}
+=\frac{\lVert\mathbf v\rVert\lVert\mathbf w\rVert}{2}
+\left(\mathbf a\mathbf a^{\mathsf T}-\mathbf b\mathbf b^{\mathsf T}\right)
+\]
+ 
+\[
+=\begin{bmatrix}
+\dfrac{\mathbf a}{\lVert\mathbf a\rVert} & \big| & \dfrac{\mathbf b}{\lVert\mathbf b\rVert}
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf v^{\mathsf T}\mathbf w+\lVert\mathbf v\rVert\lVert\mathbf w\rVert & 0\\
+0 & \mathbf v^{\mathsf T}\mathbf w-\lVert\mathbf v\rVert\lVert\mathbf w\rVert
+\end{bmatrix}
+\begin{bmatrix}
+\dfrac{\mathbf a}{\lVert\mathbf a\rVert} & \big| & \dfrac{\mathbf b}{\lVert\mathbf b\rVert}
+\end{bmatrix}^{\mathsf T},
+\]
+ where 
+\[
+\mathbf a=\frac{\mathbf v}{\lVert\mathbf v\rVert}+\frac{\mathbf w}{\lVert\mathbf w\rVert}
+\quad\text{and}\quad
+\mathbf b=\frac{\mathbf v}{\lVert\mathbf v\rVert}-\frac{\mathbf w}{\lVert\mathbf w\rVert}.
+\]
+ What is \(\mathbf a^{\mathsf T}\mathbf b\)? What are the eigenvalues of \(\mathbf v\mathbf w^{\mathsf T}+\mathbf w\mathbf v^{\mathsf T}\)?
+\item
+Show that \(x=1+\tan^{-1}(x)\) has a solution~\(\alpha\). Find an interval \([a,b]\) containing~\(\alpha\) such that for every \(x_0\in[a,b]\) the iteration 
+\[
+x_{n+1}=1+\tan^{-1}(x_n)
+\]
+ will converge to~\(\alpha\).
+\item
+Let \(x_0,\ldots,x_n\) be distinct real points. Let 
+\[
+\{l_j(x)\}_{j=0,\ldots,n}
+\]
+ be the Lagrange basis functions for these points. Prove that 
+\[
+\sum_{j=0}^n l_j(x)=1
+\]
+ for all~\(x\).
+\item
+Suppose you want to solve numerically the ode 
+\[
+y'=f(x,y),\qquad y(0)=y_0.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+By applying the midpoint rule to the integral in the equation 
+\[
+y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,
+\]
+ derive the midpoint method for odes.
+\item[\textnormal{(b)}]
+Find the order of the local truncation error for this method.
+\item[\textnormal{(c)}]
+Determine if this method is stable or not.
+\item[\textnormal{(d)}]
+Would this method be a good choice for a stiff system such as \(y'=-100y\)? Why or why not?
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the linear least squares approximation to \(f(x)=x^2\) on the interval \([0,2]\) by optimizing the least squares error over~\(a\) and~\(b\) in \(r^*(x)=ax+b\).
+\item[\textnormal{(b)}]
+Find the first two orthonormal polynomials \(\phi_0(x),\phi_1(x)\) on \([0,2]\) (weight function \(w(x)=1\)). Use these to find the linear least squares approx to \(f(x)=x^2\), and check this result agrees with the previous problem.
+\end{examsubparts}
+\item
+Derive the one point Gaussian quadrature formula for 
+\[
+I=\int_0^1 xf(x)\,dx\approx\sum_{j=1}^n w_jf(x_j)
+\]
+ with weight function \(w(x)=x\). Find the system to solve for the two point Gaussian quadrature formula. (You do not need to solve the system)
+\end{examproblems}
+\end{document}

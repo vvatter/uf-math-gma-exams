@@ -1,0 +1,140 @@
+{
+  "schema_version": 3,
+  "id": "topology-first-year-2023-jan-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2023,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2023_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that a connected metric space having more than one point is uncountable."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give definition of retraction. Show that a retraction is a quotient map."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Is the set of rationals \\(\\mathbb{Q}\\) in the subspace topology locally compact?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that the set of irrational numbers in \\(\\mathbb{R}\\) is a Baire space."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:X\\to X\\) be a map of a compact metric space \\((X,d)\\) to itself that satisfies the following condition \\(d(f(x),f(y))<d(x,y)\\) for all \\(x\\ne y\\). Prove that \\(f\\) is continuous. Show that \\(f\\) has a unique fixed point."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Intermediate Value Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that any continuous map \\(f:S^2\\to(0,1)\\) of the 2-sphere \\(S^2\\) to the interval \\((0,1)\\) is neither surjective nor injective."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Cantor–Schröder–Bernstein Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Is the space \\(\\mathbb{R}_\\ell\\) connected? path connected?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "What is a basis of a topology? Does the set \\(\\{(a,b]\\cup[c,d)\\mid a<b<c<d\\}\\) form a basis of a topology on \\(\\mathbb{R}\\)?"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

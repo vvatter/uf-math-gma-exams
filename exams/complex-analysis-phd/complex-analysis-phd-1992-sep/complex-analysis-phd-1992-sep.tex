@@ -1,0 +1,158 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, September 1992},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, September 1992\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, September 1992}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Present the solutions with the necessary details, so the partial credit can be properly assessed. Do all 9 problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Construct a conformal map which maps the vertical strip \(0<\operatorname{Re} z<1\) onto the upper half-plane.
+\item
+The function 
+\[
+f(z)=\sum_{n=1}^{\infty}\frac{z^n}{n^2}
+\]
+ is analytic in the unit circle \(|z|<1\). Can it be continued analytically beyond the circle \(|z|=1\)? Discuss the nature of the singularities (if any) on \(|z|=1\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that the function 
+\[
+f(z)=\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^z}
+\]
+ is analytic in \(\operatorname{Re} z>0\).
+\item[\textnormal{(b)}]
+Show that it can be analytically continued to the entire complex plane.
+\end{examsubparts}
+\item
+Let \(f(z)\) be analytic in the disc \(|z|\leq 1\). If 
+\[
+|f(z)|\leq 1 \quad\text{for }|z|\leq 1,
+\]
+ prove that 
+\[
+\frac{|f'(z)|}{1-|f(z)|^2}\leq\frac{1}{1-|z|^2}\quad\text{for }|z|\leq 1.
+\]
+\item
+Let \(F(z)\) be an entire function with the property that \(\operatorname{Re}F(z)\) is bounded from above. Prove that \(F(z)\) is constant.
+\item
+Let~\(\Omega\) be an open connected subset of~\(\mathbb{C}\). Let \(\{f_n\}\) be a sequence of one-to-one analytic functions on~\(\Omega\), and assume that \(\{f_n\}\) converges uniformly on any compact subset of~\(\Omega\) to a function~\(f\). Show that~\(f\) is either one-to-one or a constant, and show that both possibilities can occur.
+\item
+Suppose that~\(f\) is entire, of order~\(\rho\). Let \(n(r)\) be the number of zeros (counting the multiplicity) of~\(f\) in the disk \(\{z:|z|\leq r\}\). Prove that 
+\[
+\limsup_{r\to\infty}\frac{\log n(r)}{\log r}\leq\rho,
+\]
+ and show, by examples, that equality can happen.
+\item
+The expression 
+\[
+\{f,z\}=\frac{f'''(z)}{f'(z)}-\frac{3}{2}\left\{\frac{f''(z)}{f'(z)}\right\}^2
+\]
+ is called the Schwarzian derivative of~\(f\). Prove the following:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(f(z)=a(z-z_0)^m+\cdots\), where~\(m\) is an integer, then 
+\[
+\{f,z\}=A(z-z_0)^{-2}+\cdots.
+\]
+\item[\textnormal{(b)}]
+Find the value of~\(A\).
+\item[\textnormal{(c)}]
+What can you say about \(\{f,z\}\) at the point \(z_0\) if \(m=\pm1\)?
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Evaluate 
+\[
+\frac{1}{2\pi i}\int_{2-i\infty}^{2+i\infty}\frac{x^z}{z(z+1)}\,dz
+\]
+ for \(x>1\).
+
+\par
+Hint: Write the above integral as \(\lim_{t\to\infty}I(t)\), where 
+\[
+I(t)=\frac{1}{2\pi i}\int_{2-it}^{2+it}\frac{x^z}{z(z+1)}\,dz,
+\]
+ and evaluate \(I(t)\) by using the residue theorem on the rectangle \(2-it\), \(2+it\), \(b+it\), and \(b-it\), where~\(b\) is a large negative number.
+\item[\textnormal{(b)}]
+What happens if \(0<x<1\)?
+\end{examsubparts}
+\end{examproblems}
+\end{document}

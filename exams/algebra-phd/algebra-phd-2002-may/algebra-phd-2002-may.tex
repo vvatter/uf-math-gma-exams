@@ -1,0 +1,117 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2002},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2002\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2002}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(X\) be a set and let \(\mathcal C\) be a concrete category. Define what is meant for an object~\(F\) together with a set map \(i:X\to F\) to be free. Prove that if \((F,i)\) and \((F',i')\) are free for the same set~\(X\), then~\(F\) and \(F'\) are equivalent (isomorphic) in the category \(\mathcal C\).
+\item
+Let~\(R\) be a ring and let~\(P\) be a left~\(R\)-module. Define what is meant for~\(P\) to be projective. Prove, from your definition, that a module is projective if and only if it is isomorphic to a direct summand of a free module.
+\item
+Define what is meant for a group to be solvable. Prove that the homomorphic image of every solvable group is solvable. Prove that every subgroup of a solvable group is solvable.
+\item
+Suppose~\(R\) is a commutative ring with identity. Let~\(M\) and~\(N\) be~\(R\)-modules, and let \(\phi:M\to N\) be an injective module homomorphism. Let~\(P\) be a projective~\(R\)-module.
+\begin{examsubparts}
+\item[\textnormal{•}]
+Show that \(\operatorname{Id}_P\otimes\phi:P\otimes_R M\to P\otimes_R N\) is injective.
+\item[\textnormal{•}]
+If~\(Q\) is an arbitrary~\(R\)-module is \(\operatorname{Id}_Q\otimes\phi:Q\otimes_R M\to Q\otimes_R N\) necessarily injective? Justify your answer.
+\end{examsubparts}
+\item
+State and prove Hilbert’s Basis Theorem.
+\item
+State and prove Hilbert’s Nullstellensatz.
+\item
+Let \(p(x)=x^7-3\in\mathbb Q[x]\), and let \(\zeta\in\mathbb C\) be a primitive 7-th root of 1.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Compute the Galois group of \(p(x)\) over \(\mathbb Q\).
+\item[\textnormal{b)}]
+Compute the Galois group of \(p(x)\) over \(\mathbb Q(\zeta)\).
+\end{examsubparts}
+\item
+Let~\(F\) be a finite field with exactly 4 elements. How many elements does the splitting field of the polynomial \(x^6-1\in F[x]\) have? Justify your answer.
+\item
+Let~\(R\) be a Dedekind domain, and let~\(I\) be a non-zero ideal of~\(R\). Show that \(R/I\) is Artinian. Are all Dedekind domains Artinian? Justify your answers.
+\item
+How many conjugacy classes of elements of order 3 are there in the general linear group \(\operatorname{GL}(4,\mathbb Q)\)? Justify your answer.
+\item
+Prove or disprove: Let~\(R\) and~\(S\) be semi-simple rings with \(|R|=|S|=2002=2\cdot7\cdot11\cdot13\). Then~\(R\) is isomorphic to~\(S\).
+\end{examproblems}
+\end{document}

@@ -69,6 +69,7 @@ class Subject:
 
 @dataclass
 class Exam:
+    id: str
     subject: str
     subject_tag: str
     subject_url: str
@@ -371,11 +372,13 @@ def discover_exams(subject: Subject, output_root: Path) -> list[Exam]:
             column_label = headers[column] if column < len(headers) else ""
             suffix = label_suffix(link.text, column_label)
             stem = exam_stem(subject.tag, year, month, suffix)
-            destination = unique_path(
-                output_root / subject.tag / f"{stem}.pdf", download_url, reserved
+            exam_directory = unique_path(
+                output_root / subject.tag / stem, download_url, reserved
             )
+            destination = exam_directory / f"{exam_directory.name}.source.pdf"
             exams.append(
                 Exam(
+                    id=exam_directory.name,
                     subject=subject.title,
                     subject_tag=subject.tag,
                     subject_url=subject.url,

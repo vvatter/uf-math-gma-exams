@@ -8,7 +8,7 @@ The links use jsDelivr’s GitHub CDN and point to the files on the `main` branc
 
 `algebra-first-year-2023-may-part-1`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-first-year/algebra-first-year-2023-may-part-1.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-first-year/algebra-first-year-2023-may-part-1.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-first-year/algebra-first-year-2023-may-part-1/algebra-first-year-2023-may-part-1.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-first-year/algebra-first-year-2023-may-part-1/index.html)
 
 ### Problem 3 (source page 1)
 
@@ -22,7 +22,7 @@ The source clearly states that one should deduce that every group of order 315 i
 
 `algebra-phd-1991-sep`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-1991-sep.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-1991-sep.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-1991-sep/algebra-phd-1991-sep.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-1991-sep/index.html)
 
 ### Problem 3 (source page 1)
 
@@ -34,7 +34,7 @@ The source clearly appears to say “upper triangular 2 by 2 matrices with integ
 
 `algebra-phd-2006-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2006-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2006-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2006-may/algebra-phd-2006-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2006-may/index.html)
 
 ### Problem 4 (source page 1)
 
@@ -48,7 +48,7 @@ The displayed indexing condition has been retained as printed, but its scope is 
 
 `algebra-phd-2009-sep`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2009-sep.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2009-sep.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2009-sep/algebra-phd-2009-sep.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/algebra-phd/algebra-phd-2009-sep/index.html)
 
 ### Problem 9 (source page 1)
 
@@ -66,7 +66,7 @@ Even after the grammatical correction, the printed assertion appears to require 
 
 `analysis-first-year-2014-jan-part-1`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2014-jan-part-1.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2014-jan-part-1.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2014-jan-part-1/analysis-first-year-2014-jan-part-1.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2014-jan-part-1/index.html)
 
 ### Problem 5 (source page 1)
 
@@ -78,7 +78,7 @@ Part (b) is not valid if the sequence \(\{x_n\}\) contains repeated values: the 
 
 `analysis-first-year-2018-may-part-2`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2018-may-part-2.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2018-may-part-2.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2018-may-part-2/analysis-first-year-2018-may-part-2.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2018-may-part-2/index.html)
 
 ### Problem 4 (source page 1)
 
@@ -92,7 +92,7 @@ The source clearly says “Lebesgue-measurable functions,” but measurability a
 
 `analysis-first-year-2019-aug-part-1`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2019-aug-part-1.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2019-aug-part-1.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2019-aug-part-1/analysis-first-year-2019-aug-part-1.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-first-year/analysis-first-year-2019-aug-part-1/index.html)
 
 ### Problem 5 (source page 1)
 
@@ -104,7 +104,7 @@ The problem is preserved as printed, but its conclusion generally fails without 
 
 `analysis-phd-1988-jan`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-jan.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-jan.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-jan/analysis-phd-1988-jan.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-jan/index.html)
 
 ### Problem 6 (source page 2)
 
@@ -118,7 +118,7 @@ Problem 6 uses \(q\) without defining it. Also, the retained Hint 2, \(g=|f|^{p-
 
 `analysis-phd-1988-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-may/analysis-phd-1988-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1988-may/index.html)
 
 ### Problem 8 (source pages 2, 3)
 
@@ -130,7 +130,7 @@ The source visibly defines \(\mu(A)=\int_A x\,dx\) while calling \(\mu\) a measu
 
 `analysis-phd-1993-jan`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1993-jan.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1993-jan.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1993-jan/analysis-phd-1993-jan.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1993-jan/index.html)
 
 ### Problem 6 (source page 1)
 
@@ -144,7 +144,7 @@ The underlying space in the opening tuple appears to be printed as \(S_\infty\),
 
 `analysis-phd-1994-oct`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1994-oct.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1994-oct.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1994-oct/analysis-phd-1994-oct.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1994-oct/index.html)
 
 ### Problem 14 (source page 1)
 
@@ -158,7 +158,7 @@ The source statement was retained, but on a general finite measure space the dis
 
 `analysis-phd-1997-jan`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1997-jan.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1997-jan.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1997-jan/analysis-phd-1997-jan.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-1997-jan/index.html)
 
 ### Problem 16 (source page 2)
 
@@ -170,7 +170,7 @@ The source legibly uses \((0,1)\) for the measure space but \((0,1]\) for the bi
 
 `analysis-phd-2018-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2018-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2018-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2018-may/analysis-phd-2018-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2018-may/index.html)
 
 ### Problem 3 (source page 1)
 
@@ -182,7 +182,7 @@ The source assigns \(\rho\) the codomain \([0,\infty)\), although for an arbitra
 
 `combinatorics-phd-1995-aug`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-1995-aug.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-1995-aug.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-1995-aug/combinatorics-phd-1995-aug.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-1995-aug/index.html)
 
 ### Problem 6 (source page 1)
 
@@ -194,7 +194,7 @@ The summation upper limit is clearly printed as \(m\), but \(m\) is otherwise un
 
 `combinatorics-phd-2002-sep`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2002-sep.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2002-sep.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2002-sep/combinatorics-phd-2002-sep.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2002-sep/index.html)
 
 ### Problem 10 (source page 10)
 
@@ -208,7 +208,7 @@ The recurrence is stated only for \(n\ge 1\), while the sole initial condition i
 
 `combinatorics-phd-2018-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2018-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2018-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2018-may/combinatorics-phd-2018-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2018-may/index.html)
 
 ### Problem 2 (source page 2)
 
@@ -230,7 +230,7 @@ The problem does not specify the length of the strings, so the requested finite 
 
 `combinatorics-phd-2022-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2022-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2022-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2022-may/combinatorics-phd-2022-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/combinatorics-phd/combinatorics-phd-2022-may/index.html)
 
 ### Problem 6 (source page 1)
 
@@ -244,7 +244,7 @@ The statement as printed is false when the unique element covered by \(y\) is th
 
 `complex-analysis-phd-1992-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-1992-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-1992-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-1992-may/complex-analysis-phd-1992-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-1992-may/index.html)
 
 ### Problem 3 (source page 1)
 
@@ -258,7 +258,7 @@ The source reading is clear, but the hypotheses and conclusion are mathematicall
 
 `complex-analysis-phd-2009-sep`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-2009-sep.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-2009-sep.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-2009-sep/complex-analysis-phd-2009-sep.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/complex-analysis-phd/complex-analysis-phd-2009-sep/index.html)
 
 ### Problem 6 (source page 1)
 
@@ -272,7 +272,7 @@ The statement is preserved as printed, but it overlooks the possible case \(g\eq
 
 `differential-geometry-phd-2007-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/differential-geometry-phd/differential-geometry-phd-2007-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/differential-geometry-phd/differential-geometry-phd-2007-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/differential-geometry-phd/differential-geometry-phd-2007-may/differential-geometry-phd-2007-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/differential-geometry-phd/differential-geometry-phd-2007-may/index.html)
 
 ### Problem 6 (source page 2)
 
@@ -284,7 +284,7 @@ The displayed tangent-map formula is type-inconsistent with the definitions that
 
 `numerical-analysis-phd-2000-jan`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan/numerical-analysis-phd-2000-jan.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan/index.html)
 
 ### Problem 3 (source page 1)
 
@@ -296,7 +296,7 @@ The source calls H an “orthogonal projection,” but H=I−2wwᵗ is generally
 
 `numerical-analysis-phd-2002-jan`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan/numerical-analysis-phd-2002-jan.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan/index.html)
 
 ### Problem 4 (source page 1)
 
@@ -318,7 +318,7 @@ The displayed dimensions make the product \(BA\) undefined in general. The sourc
 
 `numerical-analysis-phd-2013-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2013-may/numerical-analysis-phd-2013-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2013-may/index.html)
 
 ### Problem 1 (source page 1)
 
@@ -332,7 +332,7 @@ Part (v) asks for quadratic convergence under continuous differentiability and \
 
 `numerical-analysis-phd-2025-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2025-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2025-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2025-may/numerical-analysis-phd-2025-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-analysis-phd/numerical-analysis-phd-2025-may/index.html)
 
 ### Problem 4 (source page 1)
 
@@ -346,7 +346,7 @@ Part (c) uses \(A^{-1}\), but the standing assumption \(\lVert A\rVert_p<1\) doe
 
 `numerical-linear-algebra-first-year-2023-aug`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug/numerical-linear-algebra-first-year-2023-aug.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug/index.html)
 
 ### Problem 2 (source page 1)
 
@@ -368,7 +368,7 @@ Part (b) refers to n singular values and asserts σ_n > 0, which requires full c
 
 `numerical-linear-algebra-first-year-2024-aug`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug/numerical-linear-algebra-first-year-2024-aug.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug/index.html)
 
 ### Problem 2 (source page 1)
 
@@ -382,7 +382,7 @@ Part (c) is preserved as printed, but the stated assumptions do not ensure that 
 
 `pde-phd-2010-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-may/pde-phd-2010-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-may/index.html)
 
 ### Problem 7 (source page 2)
 
@@ -396,7 +396,7 @@ The displayed variational form places the lower-order terms inside the scope of 
 
 `pde-phd-2010-sep`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-sep.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-sep.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-sep/pde-phd-2010-sep.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/pde-phd/pde-phd-2010-sep/index.html)
 
 ### Problem 7 (source page 2)
 
@@ -410,7 +410,7 @@ The source is internally inconsistent: it states “where g, h are smooth functi
 
 `probability-phd-1989-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/probability-phd/probability-phd-1989-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/probability-phd/probability-phd-1989-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/probability-phd/probability-phd-1989-may/probability-phd-1989-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/probability-phd/probability-phd-1989-may/index.html)
 
 ### Problem 4 (source page 2)
 
@@ -422,7 +422,7 @@ Part (b) is retained as printed, but its conclusion can fail for a nonconstant s
 
 `topology-first-year-2013-jan-part-1`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2013-jan-part-1.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2013-jan-part-1/topology-first-year-2013-jan-part-1.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2013-jan-part-1/index.html)
 
 ### Problem 11 (source page 1)
 
@@ -436,7 +436,7 @@ The displayed family of half-open intervals uses \([b,c)\), while its conditions
 
 `topology-first-year-2020-may-part-2`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2020-may-part-2.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2020-may-part-2.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2020-may-part-2/topology-first-year-2020-may-part-2.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2020-may-part-2/index.html)
 
 ### Problem 6 (source page 1)
 
@@ -450,7 +450,7 @@ The displayed definition is mathematically inconsistent over the stated real dom
 
 `topology-first-year-2025-aug-part-2`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2025-aug-part-2.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2025-aug-part-2.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2025-aug-part-2/topology-first-year-2025-aug-part-2.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/topology-first-year/topology-first-year-2025-aug-part-2/index.html)
 
 ### Problem 14 (source page 1)
 

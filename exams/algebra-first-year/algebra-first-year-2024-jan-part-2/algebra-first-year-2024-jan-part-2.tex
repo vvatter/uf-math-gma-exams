@@ -1,0 +1,117 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2024, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2024, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2024, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Suppose~\(k\) is a field.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+If \(A=k[X,Y]/(X^2Y^3)\), find all minimal prime ideals of~\(A\).
+\item[\textnormal{(ii)}]
+Show that \(B=k[X,Y]/(X^2,Y^3)\) has a unique prime ideal, and that this prime ideal is maximal. What is it?
+\end{examsubparts}
+\item
+Which of the following polynomials are irreducible? Explain.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(X^3+X+1\) in \(\mathbb{F}_2[X]\);
+\item[\textnormal{(b)}]
+\(X^3+X+1\) in \(\mathbb{Q}[X]\);
+\item[\textnormal{(c)}]
+\(X^5+10X^2+25X+5\) in \(\mathbb{Q}[X]\);
+\end{examsubparts}
+\item
+Suppose~\(R\) is a ring with identity and~\(M\) is a nonzero left~\(R\)-module. Let \(\operatorname{End}_R(M)\) be the ring of~\(R\)-linear maps \(M\to M\). Show that if~\(0\) and~\(M\) are the only~\(R\)-submodules of~\(M\), then \(\operatorname{End}_R(M)\) is a division ring.
+\item
+Let~\(R\) be an integral domain.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for an element of~\(R\) to be irreducible, and to be prime.
+\item[\textnormal{(ii)}]
+Show that a prime element is irreducible.
+\end{examsubparts}
+\item
+Suppose~\(F\) is a field, \(V\) and~\(W\) are~\(F\)-vector spaces of finite dimension and \(f:V\to W\) is a surjective linear map, and let \(U=\operatorname{Ker}(f)\). Show using the definitions that \(\dim_F(V)=\dim_F(W)+\dim_F(U)\).
+\item
+Suppose \(L/K\) is an extension of fields. Show that \(\alpha\in L\) is algebraic over~\(K\) if and only if there is a nonzero sub-\(K\)-vector space \(V\subseteq L\) of finite dimension such that \(\alpha V\subseteq V\) (for “if,” pick a nonzero \(v\in V\) and consider \(\alpha^n v\) for \(n\in\mathbb{N}\)).
+\item
+Find representatives of each conjugacy class of \(GL_4(\mathbb{F}_2)\) of order~\(3\) or~\(5\) (the order of a conjugacy class is the order of any element of it).
+\end{examproblems}
+\end{document}

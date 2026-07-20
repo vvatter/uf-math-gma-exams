@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variational Analysis/Numerical Optimization PhD Exam, January 2018</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Variational Analysis/Numerical Optimization PhD Exam, January 2018</h1>
+    </header>
+    <div class="instructions">
+      <p>Do 8 (eight) problems.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \(\mathbf Q\) denote an \(n\) by \(n\) symmetric matrix and let \(\mathbf d_k\), \(1\leq k\leq n\), denote a collection of directions that are \(\mathbf Q\)-conjugate.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Suppose the \(\mathbf Q\) is positive definite. Show that the directions \(\mathbf d_k\), \(1\leq k\leq n\), are linearly independent, and express the solution of the linear system \(\mathbf Q\mathbf x=\mathbf b\) in terms of the conjugate directions.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(\mathbf d_k^{\mathrm T}\mathbf Q\mathbf d_k&gt;0\) for each \(k\), then show that \(\mathbf Q\) is positive definite.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider the following variational problem:</p>
+        <div class="display-math">\[
+\min\left\{\int_0^1 \frac{1}{2}u&#x27;(x)^2+e^{u(x)}\,dx:u\in H^1([0,1]),\quad u(0)=u(1)=0\right\}.
+\]</div>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>What is the first-order necessary optimality condition (Euler equation) for this variational problem?</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Consider a uniform mesh \(x_k=kh\) where \(h=1/N\); let \(u_k\) denote an approximation to \(u(x_k)\). Of course, \(u_0=u_N=0\). Give a finite difference approximation in terms \(u_1,\ldots,u_{N-1}\) to the solution of the Euler equation.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(c)</span>
+              <div class="subpart-body">
+                <p>Let \(\mathbf F(\mathbf u)\) denote the finite difference system where \(\mathbf u=(u_1,u_2,\ldots,u_{N-1})\in\mathbb R^{N-1}\), and let \(\mathbf u^*\) denote the vector formed by evaluating the solution of the Euler equation at the mesh points \(x_1,x_2,\ldots,x_{N-1}\). Obtain a bound for the components of \(\mathbf F(\mathbf u^*)\) in terms of the mesh spacing \(h\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider the following variational problem where \(f\) is a given smooth function:</p>
+        <div class="display-math">\[
+\min\left\{\Phi(u):=\int_0^1 \frac{1}{2}u&#x27;(x)^2+f(x)u(x)\,dx:u\in H^1([0,1]),\quad u(0)=u(1)=0\right\}.
+\]</div>
+        <p>Let \(S^h\) denote the piecewise linear finite element space defined on a uniform mesh with \(v^h(0)=v^h(1)=0\) for all \(v^h\in S^h\). Obtain a bound for the error in the finite element approximation \(u^h\) obtained by minimizing \(\Phi\) over \(S^h\).</p>
+      </li>
+      <li class="problem">
+        <p>Suppose that \(f:\mathbb R^n\to\mathbb R\) is twice continuously differentiable, \(\mathbf x^*\in\mathbb R^n\), \(\nabla f(\mathbf x^*)=0\), and \(\nabla^2f(\mathbf x^*)\) is positive definite. Show that \(\mathbf x^*\) is a strict local minimizer of \(f\).</p>
+      </li>
+      <li class="problem">
+        <p>Suppose that a quadratic \(\Phi(\mathbf x)=\frac{1}{2}\mathbf x^{\mathrm T}\mathbf Q\mathbf x-\mathbf b^{\mathrm T}\mathbf x\) is minimized by steepest descent: \(\mathbf x_{k+1}=\mathbf x_k-s_k\mathbf g_k\), where \(\mathbf g_k=\nabla\Phi(\mathbf x_k)\) and \(s_k\) is the stepsize.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>Derive the formula for the Cauchy step.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Derive the formula for the BB step.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Consider the system of differential equations \(\dot{\mathbf x}(t)=\mathbf f(\mathbf x(t),\mathbf u(t))\), \(\mathbf x(0)=\mathbf x_0\), where \(\mathbf f:\mathbb R^n\times\mathbb R^m\to\mathbb R^n\) and \(\mathbf f\) satisfies the global Lipschitz condition</p>
+        <div class="display-math">\[
+\|\mathbf f(\mathbf x_1,\mathbf u_1)-\mathbf f(\mathbf x_2,\mathbf u_2)\|\leq L\bigl(\|\mathbf x_1-\mathbf x_2\|+\|\mathbf u_1-\mathbf u_2\|\bigr).
+\]</div>
+        <p>Show that the differential equation has a global solution and on any interval \([0,T]\), the following bound holds for all \((\mathbf u_1,\mathbf u_2)\in\mathcal L^\infty([0,T])\):</p>
+        <div class="display-math">\[
+\|\mathbf x_1-\mathbf x_2\|_{\mathcal L^\infty}\leq e^{LT}\|\mathbf u_1-\mathbf u_2\|_{\mathcal L^1},
+\]</div>
+        <p>where \(\mathbf x_i\) is the solution of the differential equation associated with \(\mathbf u_i\), \(i=1,2\).</p>
+      </li>
+      <li class="problem">
+        <p>Suppose that \(P\) and \(Q\) are continuous on \([0,1]\) and the following functional is nonnegative over all \(h\in H_0^1([0,1])\):</p>
+        <div class="display-math">\[
+\Omega(h)=\int_0^1 \bigl(P(x)h&#x27;(x)^2+Q(x)h(x)^2\bigr)\,dx.
+\]</div>
+        <p>Show that \(P\geq0\) on \([0,1]\).</p>
+      </li>
+      <li class="problem">
+        <p>Suppose that \(u:[0,1]\to\mathbb R\) is twice continuously differentiable, and let \(u^I\) be the continuous, piecewise linear interpolant of \(u\). Prove the following bound:</p>
+        <div class="display-math">\[
+\|u-u^I\|_{\mathcal L^\infty}\leq\frac{h^2}{8}\|u&#x27;&#x27;\|_{\mathcal L^\infty}.
+\]</div>
+      </li>
+      <li class="problem">
+        <p>Suppose that \(f:\mathbb R^n\to\mathbb R\) is a convex function.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(f\) is continuously differentiable, then show that for all \(\mathbf x\) and \(\mathbf y\in\mathbb R^n\), we have</p>
+                <div class="display-math">\[
+f(\mathbf y)\geq f(\mathbf x)+\nabla f(\mathbf x)(\mathbf y-\mathbf x).
+\]</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>If \(f\) is twice continuously differentiable, then show that the Hessian \(\nabla^2f(\mathbf x)\) is positive semidefinite for all \(\mathbf x\in\mathbb R^n\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Suppose that \(\boldsymbol\Phi:\mathbb R^n\to\mathbb R^n\) and \(\mathbf x^*\in\mathbb R^n\) is a fixed point of \(\boldsymbol\Phi\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(a)</span>
+              <div class="subpart-body">
+                <p>If \(\boldsymbol\Phi\) is a contraction mapping with contraction constant \(\lambda\), then show that the iteration \(\mathbf x_{k+1}=\boldsymbol\Phi(\mathbf x_k)\) converges to \(\mathbf x^*\) from any starting guess \(\mathbf x_0\), and</p>
+                <div class="display-math">\[
+\|\mathbf x_k-\mathbf x^*\|\leq\lambda^k\|\mathbf x_0-\mathbf x^*\|.
+\]</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(b)</span>
+              <div class="subpart-body">
+                <p>Suppose that \(\boldsymbol\Phi\) is continuously differentiable on a convex set \(\mathcal K\subset\mathbb R^n\). Let \(\mu\) denote the supremum of the singular values of \(\nabla\boldsymbol\Phi\) over \(\mathcal K\). Show that</p>
+                <div class="display-math">\[
+\|\boldsymbol\Phi(\mathbf x)-\boldsymbol\Phi(\mathbf y)\|\leq\mu\|\mathbf x-\mathbf y\|
+\]</div>
+                <p>for all \(\mathbf x\) and \(\mathbf y\in\mathcal K\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Variational Analysis/Numerical Optimization PhD Exams</a></li>
+        <li><a href="numerical-optimization-phd-2018-jan.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

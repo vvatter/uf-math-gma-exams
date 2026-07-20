@@ -1,0 +1,149 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, May 2006},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, May 2006\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, May 2006}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Give complete proofs and computations. Partial credit will be given where justified.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(0<a<1\). Evaluate the integral 
+\[
+\int_{-\infty}^{\infty}\frac{e^{ax}}{1+e^x}\,dx,
+\]
+ where \(a\in(0,1)\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that 
+\[
+\cos \pi z=\prod_{n=1}^{\infty}\left(1-\frac{4z^2}{(2n-1)^2}\right).
+\]
+\item[\textnormal{(b)}]
+Deduce from (a) that 
+\[
+\tan \pi z=\frac{8}{\pi}\sum_{n=1}^{\infty}\frac{z}{(2n-1)^2-4z^2}.
+\]
+\end{examsubparts}
+\item
+Let~\(G\) be a region and \(u:G\to\mathbb{R}\) be harmonic. Let~\(v\) be a harmonic conjugate to~\(u\) in~\(G\). Show that the product \(u\cdot v\) is harmonic.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that if~\(f\) is analytic on the closed disk \(\overline{B(0;1)}\), then 
+\[
+|f(a)|^2\leq \frac{1}{\pi R^2}\int_0^{2\pi}\int_0^R|f(a+re^{i\theta})|^2r\,dr\,d\theta.
+\]
+\item[\textnormal{(b)}]
+Let~\(G\) be a region and \(M\in\mathbb{R}\) be fixed. Let 
+\[
+\mathcal{F}=\left\{f\in H(G)\mathrel{\bigg|}\int_G|f(z)|^2\,dx\,dy\leq M\right\}.
+\]
+ Show that~\(\mathcal{F}\) is a normal family.
+\end{examsubparts}
+\item
+Let \(f(z)=\sum_{n=0}^{\infty}a_nz^n\) and \(g(z)=\sum_{n=0}^{\infty}b_nz^n\) be analytic on \(\overline{B(0;1)}\). Let 
+\[
+F(z)=\frac{1}{2\pi i}\int_{\partial B(0;1)}\frac{f(w)}{w}g\left(\frac{z}{w}\right)\,dw,\qquad z\in B(0;1),
+\]
+ with the contour taken with counterclockwise orientation. Show that 
+\[
+F(z)=\sum_{n=0}^{\infty}a_nb_nz^n,\qquad z\in B(0;1).
+\]
+\item
+Let \(G=\{z\in\mathbb{C}\mid |z|<1\text{ and }|2z-1|>1\}\), and let \(f\in H(G)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Must there exist a sequence of polynomials \(P_n\) such that \(P_n\to f\) uniformly on compact subsets of~\(G\)? Explain your reasoning.
+\item[\textnormal{(b)}]
+Must there exist such a sequence which converges to~\(f\) uniformly on~\(G\)? Explain your reasoning.
+\item[\textnormal{(c)}]
+Must there exist such a sequence which converges to~\(f\) uniformly on~\(G\), if~\(f\) is now required to be analytic in some neighborhood of \(\overline{G}\)? Explain your reasoning.
+\end{examsubparts}
+\item
+Let~\(G\) be a region and~\(A\) be a discrete and relatively closed subset of~\(G\). Assume that \(f\in H(G\setminus A)\) is injective.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that no point of~\(A\) can be an essential singularity of~\(f\).
+\item[\textnormal{(b)}]
+Prove that if \(a\in A\) is a pole for~\(f\), then~\(a\) is a pole of order 1.
+\end{examsubparts}
+\item
+Let~\(f\) be analytic on \(\overline{B(0;1)}\). If \(|f(z)|<1\) on \(\partial B(0;1)\), prove that there exists a unique \(z_0\in B(0;1)\) (counting multiplicity) such that \(f(z_0)=z_0\). If \(|f(z)|\leq 1\) on \(\partial B(0;1)\), does the same conclusion hold? Justify your assertion.
+\end{examproblems}
+\end{document}

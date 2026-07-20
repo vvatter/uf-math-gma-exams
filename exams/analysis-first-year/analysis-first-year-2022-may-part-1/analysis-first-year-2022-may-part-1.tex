@@ -1,0 +1,107 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, May 2022, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2022, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, May 2022, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \((a_n)_{n=0}^{\infty}\) and \((b_n)_{n=0}^{\infty}\) be bounded real sequences. Prove that 
+\[
+\liminf(a_n+b_n) \geq \liminf a_n+\liminf b_n
+\]
+ and show by example that the inequality can be strict.
+\item
+Let the metric space~\(M\) be compact; let \(f:M\to M\) be distance-preserving and let \(a\in M\). Prove that~\(a\) is in the closure of the sequence \(f(a),f(f(a)),\ldots\) that~\(a\) generates by repeated application of~\(f\). Conclude that~\(f\) is surjective.
+\item
+Determine precisely all real numbers~\(x\) for which the series 
+\[
+\sum_{n=0}^{\infty}\frac{x^n}{1+x^n}
+\]
+ is convergent.
+\item
+Prove that no real-valued function on the unit square \([0,1]\times[0,1]\) can be simultaneously continuous and injective.
+\item
+Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable; let~\(A\) and~\(L\) be real numbers.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what is meant by the statement \(\lim_{x\to\infty}f(x)=A\).
+\item[\textnormal{(ii)}]
+Prove that if \(\lim_{x\to\infty}f(x)=A\) and \(\lim_{x\to\infty}f'(x)=L\), then \(L=0\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

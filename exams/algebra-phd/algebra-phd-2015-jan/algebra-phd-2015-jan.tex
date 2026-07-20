@@ -1,0 +1,133 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, January 2015},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2015\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, January 2015}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(L/K\) be an algebraic field extension and let~\(R\) be a subring of~\(L\) which contains~\(K\). Prove that~\(R\) is a field.
+\item
+Let \(E\subset\mathbb C\) be the splitting field of \(X^8-1\) over \(\mathbb Q\). Determine the Galois group \(G=\operatorname{Gal}(E/\mathbb Q)\). For each subgroup \(H\leq G\) determine the fixed field \(E^H\) of~\(H\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(\mathcal C\) be a category and let~\(\Lambda\) be a set. For each \(\lambda\in\Lambda\) let \(X_\lambda\) be an object in \(\mathcal C\). Give the definition of a coproduct of the collection of objects \(\{X_\lambda\}_{\lambda\in\Lambda}\).
+\item[\textnormal{(b)}]
+Let \(\mathcal C\) be the category of commutative rings with 1, with morphisms being unitary ring homomorphisms. Prove that for any \(R,S\in\mathcal C\), the ring \(R\otimes_{\mathbb Z}S\) is a coproduct of~\(R\) and~\(S\).
+\end{examsubparts}
+\item
+Prove that the group~\(G\) defined by the generators and relations 
+\[
+G=\langle x,y\mid x^2=y^2,\ yxy=x\rangle
+\]
+ is isomorphic to the quaternion group \(Q_8\).
+\item
+Prove that \(\mathbb Q\otimes_{\mathbb Z}\mathbb Q\) and \(\mathbb Q\otimes_{\mathbb Q}\mathbb Q\) are isomorphic as \(\mathbb Q\)-modules.
+\item
+Let~\(M\) be a nontrivial divisible \(\mathbb Z\)-module. Prove that~\(M\) is not a projective \(\mathbb Z\)-module.
+\item
+Let~\(R\) be a commutative ring with 1. Prove that the following conditions on~\(R\) are equivalent:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(I_1\supset I_2\supset\cdots\) are ideals in~\(R\), then there is \(k\geq1\) such that \(I_j=I_k\) for all \(j\geq k\).
+\item[\textnormal{(b)}]
+Every nonempty set of ideals in~\(R\) contains an element which is minimal with respect to inclusion.
+\end{examsubparts}
+\item
+Let~\(R\) be an integral domain whose unique maximal ideal~\(M\) is principal and satisfies \(\bigcap_{n\geq1}M^n=\{0\}\). Prove that~\(R\) is a discrete valuation ring.
+\item
+Let \(K=\mathbb Q(\sqrt{5})\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give an explicit description of the integral closure of \(\mathbb Z\) in~\(K\).
+\item[\textnormal{(b)}]
+Give an explicit description of the integral closure of \(\mathbb Z[\frac12]\) in~\(K\).
+\end{examsubparts}
+\item
+Let~\(D\) be a division ring and let \(M_n(D)\) be the ring of \(n\times n\) matrices with entries in~\(D\). Prove that the only two-sided ideals in \(M_n(D)\) are \(\{0\}\) and \(M_n(D)\).
+\item
+Let~\(R\) be a ring with 1 such that every short exact sequence of left~\(R\)-modules splits.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that every left~\(R\)-module~\(M\) is a direct sum of simple submodules.
+\item[\textnormal{(b)}]
+Prove that~\(R\), considered as a left~\(R\)-module, is a finite direct sum of simple left ideals.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

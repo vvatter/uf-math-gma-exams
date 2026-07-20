@@ -1,0 +1,122 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2018, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2018, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2018, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that the ring 
+\[
+\mathbb{Z}[\omega]=\{a+b\omega\in\mathbb{C}\mid a,b\in\mathbb{Z}\},\qquad \omega=\frac{1+i\sqrt{3}}{2}
+\]
+ is a Euclidean domain.
+\item
+Let~\(R\) be a commutative ring with identity. A subset \(S\subseteq R\) is multiplicative if it is nonempty and is closed under multiplication. Show that if~\(S\) is a multiplicative subset of~\(R\) not containing~\(0\), there is a prime ideal \(\mathfrak{p}\subset R\) such that \(\mathfrak{p}\cap S=\varnothing\). (First show using Zorn’s lemma that the set of ideals \(I\subset R\) such that \(I\cap S=\varnothing\) has a maximal element. Then show, using an argument by contradiction that any such maximal element is prime).
+\item
+Prove the following form of Eisenstein’s criterion: Let~\(R\) be an integral domain and \(P\subset R\) a prime ideal. Suppose 
+\[
+f(X)=X^d+a_{d-1}X^{d-1}+\cdots+a_1X+a_0\in R[X]
+\]
+ is a monic polynomial such that \(a_i\in P\) for \(i<d\) and \(a_0\notin P^2\). Then \(f(X)\) is irreducible in \(R[X]\).
+\item
+Let~\(R\) be an integral domain.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for an element of~\(R\) to be irreducible.
+\item[\textnormal{(ii)}]
+Define what it means for an element of~\(R\) to be prime.
+\item[\textnormal{(iii)}]
+Show that a prime element is irreducible.
+\end{examsubparts}
+\item
+Suppose~\(R\) is a commutative ring with identity, \(M\) and~\(N\) are~\(R\)-modules and \(f:M\to N\) is an~\(R\)-module homomorphism. Let \(I\subset R\) be an ideal.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that there is a homomorphism \(\overline{f}:M/IM\to N/IN\) such that 
+\[
+\overline{f}(m+IM)=f(m)+IN
+\]
+ for all \(m\in M\).
+\item[\textnormal{(ii)}]
+Show that if~\(I\) is nilpotent (i.e. \(I^k=0\) for some \(k>0\)) and \(\overline{f}\) is surjective then~\(f\) is surjective.
+\end{examsubparts}
+\item
+Find representatives of every similarity class of \(6\times 6\) matrices with rational coefficients whose minimal polynomial is \((x+1)^2(x-1)\).
+\end{examproblems}
+\end{document}

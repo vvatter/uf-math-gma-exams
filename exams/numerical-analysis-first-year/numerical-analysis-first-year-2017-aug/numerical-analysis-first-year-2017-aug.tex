@@ -1,0 +1,122 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis First-Year Exam, August 2017},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, August 2017\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis First-Year Exam, August 2017}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do all 5 (five) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f(x)=e^x\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the linear Taylor polynomial \(T_1(x)\) of \(f(x)\) expanded about \(x_0=1/2\) and give an estimate for the maximum of \(|T_1(x)-f(x)|\) on the interval \([0,1]\).
+\item[\textnormal{(b)}]
+Find the linear minimax approximation \(P_1(x)\) to \(f(x)\) on \([0,1]\) and find the maximum error of \(|P_1(x)-f(x)|\) on \([0,1]\).
+\item[\textnormal{(c)}]
+Find the linear least squares approximation to~\(f\) on \([0,1]\).
+\end{examsubparts}
+\item
+The midpoint method for DE’s is 
+\[
+w_0=\alpha
+\]
+ 
+\[
+w_{n+1}=w_n+hf\left(t_n+\frac{h}{2},w_n+\frac{h}{2}f(t_n,w_n)\right).
+\]
+ Apply this method to the IVP, \(y'=\lambda y;\ y(0)=1\), with \(\lambda<0\) and find the constant~\(c\) so that \(|h\lambda|<c\) implies that \(w_n\to0\) as \(n\to\infty\).
+\item
+Derive this three-point formula for the second derivative. 
+\[
+f''(x_0)=\frac{1}{h^2}\bigl(f(x_0-h)-2f(x_0)+f(x_0+h)\bigr)-\frac{h^2}{12}f^{(4)}(\eta)
+\]
+ for some \(\eta\in[x_0-h,x_0+h]\).
+\item
+Let \(f(x)=2^x\) Let \(x_0=-1,x_1=0,x_2=1\). Find the total error bound for the degree two interpolating polynomial \(p_2(x)\) with these nodes and~\(f\) on the interval \([-1,1]\), i.e. derive a~\(K\) with 
+\[
+\max_{t\in[-1,1]}|f(t)-p_2(t)|<K.
+\]
+\item
+Let \(g\in C^2([a,b])\) and \(p\in(a,b)\) with \(g(p)=p\), \(g'(p)=0\), \(g''(p)\ne0\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show there is an \(\epsilon>0\) so that for all \(x\in[p-\epsilon,p+\epsilon]\), we have \(g^n(x)\to p\) as \(n\to\infty\).
+\item[\textnormal{(b)}]
+With~\(\epsilon\) as in part (a), show that for all \(x\in[p-\epsilon,p+\epsilon]\), we have \(|g(x)-p|\le M|x-p|^2\) where \(M=\max\{|g''(x)|:|x-p|\le\epsilon\}/2\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

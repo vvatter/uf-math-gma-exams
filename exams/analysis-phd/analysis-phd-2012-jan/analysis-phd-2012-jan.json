@@ -1,0 +1,123 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-2012-jan",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2012,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2012_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(V\\) be the vector space of all complex sequences \\(z=(z_n)_{n\\in\\mathbb N}\\) and for each \\(n\\in\\mathbb N\\) denote the \\(n\\)th coordinate map by\n\\[\n\\phi_n:V\\to\\mathbb C:z\\mapsto z_n.\n\\]\nDoes \\(V\\) carry a norm relative to which the linear functional \\(\\phi_n\\) is bounded for infinitely many values of \\(n\\)? Explain."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Baire Category Theorem.\n\nDecide whether the vector space \\(c_{00}\\) comprising all finitely-nonzero complex sequences carries a complete norm (by considering suitable subspaces of finite dimension, or otherwise)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Closed Graph Theorem.\n\nProve the Banach Isomorphism Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(1\\leq p<\\infty\\) and define norms \\(\\|\\cdot\\|_p\\) and \\(\\|\\cdot\\|_\\infty\\) on \\(C[0,1]\\ni f\\) by\n\\[\n\\|f\\|_p=\\left(\\int_0^1|f(t)|^p\\,dt\\right)^{1/p}\n\\]\n\\[\n\\|f\\|_\\infty=\\sup\\{|f(t)|:0\\leq t\\leq1\\}\n\\]\nas usual. Show that on \\(C[0,1]\\):"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(\\|\\cdot\\|_p\\) and \\(\\|\\cdot\\|_\\infty\\) are inequivalent;",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(\\|\\cdot\\|_p\\) is incomplete.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathbb H\\) be a complex Hilbert space and \\(\\phi:\\mathbb H\\to\\mathbb C\\) a bounded linear functional. Prove that there exists a unique \\(u\\in\\mathbb H\\) such that \\(\\phi(v)=\\langle u\\mid v\\rangle\\) for each \\(v\\in\\mathbb H\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Say what it means for one measure to be absolutely continuous relative to another.\n\nLet \\((\\mu_n)_{n=1}^{\\infty}\\) be a sequence of finite measures on the \\(\\sigma\\)-algebra \\(\\mathcal F\\). Prove that there exists a finite measure \\(\\lambda\\) on \\(\\mathcal F\\) such that \\(\\mu_n\\ll\\lambda\\) for each \\(n\\geq1\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\Omega,\\mathcal F,\\mu)\\) be a finite measure space on which \\(f\\) is a measurable real-valued function. Prove that the rule\n\\[\nt\\in\\mathbb R\\Rightarrow F(t)=\\int_\\Omega e^{itf(\\omega)}\\,d\\mu(\\omega)\n\\]\ndefines a continuous function \\(F:\\mathbb R\\to\\mathbb C\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\Omega,\\mathcal F,\\mu)\\) be a \\(\\sigma\\)-finite measure space, let \\(g:\\Omega\\to\\mathbb C\\) be measurable and let \\(p\\geq1\\). Show that pointwise multiplication\n\\[\nf\\in L_p\\Rightarrow\\Phi_g(f)=gf\n\\]\ndefines a bounded linear operator \\(\\Phi_g\\) on \\(L_p\\) iff \\(g\\in L_\\infty\\). Note: Recall that \\(g\\in L_\\infty\\) iff there exists \\(K\\geq0\\) such that \\(\\mu\\{|g|>K\\}=0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

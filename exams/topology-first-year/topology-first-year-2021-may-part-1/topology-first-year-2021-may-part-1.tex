@@ -1,0 +1,110 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, May 2021, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2021, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, May 2021, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{Part 1.}
+\begin{examinstructions}
+Work each of the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(S\) be a set, and let \(\mathcal{P}(S)\) denote the set of subsets of~\(S\). Prove that there is no surjective function \(f:S\to\mathcal{P}(S)\).
+\item
+Let~\(X\) and~\(Y\) be connected topological spaces. Prove that \(X\times Y\) is connected, where \(X\times Y\) has the product topology.
+\item
+Prove that every compact, metrizable space has a countable basis.
+\item
+Prove that the one-point compactification of \(\mathbb{Z}_+\) is homeomorphic to the subspace \(\{0\}\cup\left\{\frac{1}{n}:n\in\mathbb{Z}_+\right\}\) of~\(\mathbb{R}\).
+\item
+Recall that \(\mathbb{R}_K\) denotes the real line with the~\(K\)-topology, and the set~\(K\) is given by \(K=\left\{\frac{1}{n}:n\in\mathbb{Z}_+\right\}\). Let~\(Y\) denote the quotient space obtained from \(\mathbb{R}_K\) by collapsing the set~\(K\) to a point. Prove that~\(Y\) satisfies the \(T_1\) axiom, but is not Hausdorff.
+\end{examproblems}
+\section{Part 2.}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+In the finite complement topology on~\(\mathbb{R}\), to what point or points does the sequence \(x_n=\frac{1}{n}\) converge?
+\item
+Is every simply ordered set a Hausdorff space in the order topology?
+\item
+Define compact, limit point compact, and sequentially compact.
+\item
+If \(f:X\to Y\) is a continuous surjective function, and~\(X\) is path connected, must~\(Y\) be path connected?
+\item
+State the Intermediate Value Theorem.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,96 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, May 2016, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2016, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, May 2016, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do exactly four problems. Work should be presented in a logical fashion in order to receive full credit.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f(x)=\sum_{n=0}^{\infty}c_nx^n\) be convergent at \(x=2\) where the \(c_n\) are real. Prove that 
+\[
+f'(x)=\sum_{n=1}^{\infty}nc_nx^{n-1},\qquad |x|<2.
+\]
+\item
+Let~\(f\) be a real-valued Riemann integrable function on \([0,1]\) and let \(F(x)=\int_0^x f(t)\,dt\). Prove \(F'(x)=f(x)\) for almost all \(x\in[0,1]\).
+\item
+Let~\(f\) be real and continuous on \([0,1]\). Prove, if \(\int_0^1 f(x)x^n\,dx=0\) for all \(n=0,1,2,\ldots\), then \(f\equiv0\) on \([0,1]\).
+\item
+Let \(f_n\) be a sequence of functions defined on \([0,1]\). Suppose there exists an \(\alpha\in(0,1)\) and positive number~\(M\) such that \(|f_n(0)|\le M\) and \(|f_n(x)-f_n(y)|\le |x-y|^\alpha\) for all~\(n\) and \(x,y\in[0,1]\). Prove there is a subsequence \(f_{n_k}\) of \(f_n\) converging (uniformly on \([0,1]\)) to a function~\(f\) that satisfies \(|f(x)-f(y)|\le |x-y|^\alpha\) for all \(x,y\in[0,1]\).
+\item
+State Fatou’s Theorem and give an example to show the statement can be false if the functions in the sequence are not assumed non-negative.
+\end{examproblems}
+\end{document}

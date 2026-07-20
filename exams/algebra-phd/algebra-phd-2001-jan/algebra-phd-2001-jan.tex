@@ -1,0 +1,127 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, January 2001},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2001\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, January 2001}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Time allowed: 240 minutes. Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb{Z}\), resp. \(\mathbb{Q}\), \(\mathbb{C}\), is the set of all integers, resp. of all rational numbers, of all complex numbers.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be a finite simple (abelian or non-abelian) group of order~\(n\). Find the number of normal subgroups of \(G \times G\).
+\item
+Show that there is no simple group of order \(112\). (Caution: You are not allowed to use Burnside’s \(p^a q^b\)-Theorem.)
+\item
+Let~\(N\) be a minimal normal subgroup of a finite group~\(G\). Assume~\(N\) is solvable. Show that~\(N\) is an elementary abelian~\(p\)-group for some prime~\(p\).
+\item
+Let \(A, B\) be two matrices over a field~\(F\). Suppose that \(\begin{pmatrix} A & 0 \\ 0 & A \end{pmatrix}\) is similar to \(\begin{pmatrix} B & 0 \\ 0 & B \end{pmatrix}\). Prove that~\(A\) is similar to~\(B\).
+\item
+Determine the Galois group over~\(\mathbb{Q}\) of
+\begin{examsubparts}
+\item[\textnormal{a)}]
+\((x^3-2)(x^2-3)\);
+\item[\textnormal{b)}]
+\((x^3-2)(x^2+3)\).
+\end{examsubparts}
+\item
+Is there any integer~\(d\) such that: for any separable extension~\(F\) of degree~\(5\) of a field~\(K\), if an extension~\(E\) of~\(K\) is a normal closure of \(F/K\) then \([E:K] \leq d\)? If yes, prove your bound. If not, justify why.
+\item
+Let \(\xi \in \mathbb{C}\) be such that \(\xi^{2000}=3\). Show that \(-3\) is not a sum of squares in \(\mathbb{Q}(\xi)\).
+\item
+Prove the Hilbert Basis Theorem: If~\(R\) is a commutative Noetherian ring with identity, then so is \(R[x_1,x_2,\ldots,x_n]\).
+\item
+Let~\(A\) be a finite dimensional (not necessarily commutative)~\(\mathbb{C}\)-algebra with no zero divisors, but with identity. Show that \(\dim_{\mathbb{C}} A=1\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+If the ring~\(R\) is a principal ideal domain, prove that every nonzero prime ideal in~\(R\) is maximal.
+\item[\textnormal{b)}]
+Is the statement in a) still true if~\(R\) is not a principal ideal domain? (Hint: Consider the ring \(\mathbb{Z}[x]\).)
+\end{examsubparts}
+\item
+Suppose that~\(R\) is a ring with identity.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Prove that each free left~\(R\)-module is projective.
+\item[\textnormal{b)}]
+Prove that a left~\(R\)-module~\(P\) is projective if and only if each short exact sequence of left~\(R\)-modules 
+\[
+0 \longrightarrow A \longrightarrow B \longrightarrow P \longrightarrow 0
+\]
+ splits.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, June 1994},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, June 1994\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, June 1994}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Show, if \(a>e\), then \(e^z-az^n\) has~\(n\) zeros in \(|z|<1\).
+\item
+Determine all entire functions~\(f\) such that \(|f|=1\) for \(|z|=1\).
+\item
+Let~\(G\) denote the punctured disc \(0<|z|<\delta\) and let \(f=z\cos(1/z)\). Determine the set \(f(G)\).
+\item
+Let~\(f\) be an entire function with a finite number of zeros. Show if for each \(c>0\) 
+\[
+\lim_{z\to\infty}\frac{|f(z)|}{e^{c|z|}}=0,
+\]
+ then~\(f\) is a polynomial.
+\item
+Let \(a_n\geq 0\) and \(f=\sum_{n=0}^{\infty}a_nz^n\) with radius of convergence \(\infty>R>0\). Show that \(z=R\) is a singularity of~\(f\). (Suggestion: Show, if \(R>r>0\) and 
+\[
+\sum \frac{f^{(n)}(r)}{n!}(z-r)^n
+\]
+ has radius of convergence \(R'\), then for each \(|z_0|=r\) 
+\[
+\sum \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n
+\]
+ has radius of convergence at least \(R'\). Conclude~\(f\) is analytic in \(|z|<R'+r\).)
+\item
+Let 
+\[
+f(z)=1+\frac{1}{2^z}+\frac{1}{4^z}+\frac{1}{5^z}+\frac{1}{7^z}+\frac{1}{8^z}+\cdots.
+\]
+ Show that~\(f\) is analytic in \(\operatorname{Re}z>1\). Analytically continue~\(f\) beyond this half plane. Is~\(f\) analytic at \(z=1\)?
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a.}]
+Show if~\(u\) is harmonic in a region~\(G\) then 
+\[
+\frac{\partial u}{\partial z}=\frac{\partial u}{\partial x}-i\frac{\partial u}{\partial y}
+\]
+ is analytic in~\(G\).
+\item[\textnormal{b.}]
+Show if~\(u\) is harmonic on the annulus \(G=\{z:r<|z|<R\}\), then there exists an analytic function~\(f\) on~\(G\) and a constant~\(c\) such that 
+\[
+u=\operatorname{Re}f+c\log(|z|).
+\]
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,108 @@
+{
+  "schema_version": 3,
+  "id": "combinatorics-phd-2024-aug",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2024,
+  "month": "august",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics-2024_08.pdf",
+  "content": [
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(h(n)\\) be the number of words of length \\(n\\) over the alphabet \\(\\{a,b,c\\}\\) in which an \\(a\\) is never immediately followed by a \\(b\\). Find the ordinary generating function of the sequence \\(\\{h(n)\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(H(n)\\) be the number of permutations of length \\(n\\) that have an even number of fixed points. Find the exponential generating function of the sequence \\(\\{H(n)\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Select a \\(132\\)-avoiding permutation \\(\\pi\\) of length \\(n\\) uniformly at random. Which is more likely, that \\(n\\) is at either end of \\(\\pi\\), or that \\(n\\) is somewhere between positions \\(2\\) and \\(n-1\\) (inclusive) in \\(\\pi\\)? Justify your answer."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(T\\) be a tree. Is it true that there is a vertex \\(v\\) in \\(T\\) that is part of all paths of maximum length in \\(T\\)? Justify your answer."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that a graph in which all of the vertices have even degrees contains no bridges. (Recall that an edge \\(e\\) of a graph \\(G\\) is a bridge if \\(G-e\\) has more connected components than \\(G\\).)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that every convex polyhedron has two faces that have the same number of vertices."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Find the number of all 2-element antichains in the Boolean algebra \\(B_n\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(P\\) be a finite poset. Prove that the number of elements in a maximum chain in \\(P\\) equals the number of antichains in the smallest antichain cover of \\(P\\). (Recall that an antichain cover of \\(P\\) is a set of antichains whose union is \\(P\\).)"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

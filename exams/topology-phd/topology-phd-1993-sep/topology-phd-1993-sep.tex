@@ -1,0 +1,132 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, September 1993},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, September 1993\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, September 1993}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer the following questions without giving proofs.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(X \subset Y\).
+\begin{examsubparts}
+\item[\textnormal{a)}]
+What does it mean for~\(X\) to be a retract of~\(Y\)?
+\item[\textnormal{b)}]
+What does it mean for~\(X\) to be a deformation retract of~\(Y\)?
+\end{examsubparts}
+\item
+Let~\(K\) be a finite simplicial complex. Define \(\chi(K)\), the Euler characteristic of~\(K\).
+\item
+Define what it means for a topological space to be
+\begin{examsubparts}
+\item[\textnormal{a)}]
+normal
+\item[\textnormal{b)}]
+connected
+\end{examsubparts}
+\item
+State the Brouwer fixed point theorem.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following questions, giving proofs or counterexamples.
+\end{examinstructions}
+\begin{examproblems}{4}
+\item
+Let \(p:X \to Y\) be a~\(d\)-sheeted covering projection, where~\(X\) and~\(Y\) are finite simplicial complexes. Show that \(\chi(X)=d\cdot\chi(Y)\).
+\item
+Compute the fundamental group of a closed, orientable surface~\(X\) of genus 3.
+\item
+Let~\(X\) be a closed, orientable surface of genus 3.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Compute the homology groups of~\(X\).
+\item[\textnormal{b)}]
+Compute the Euler characteristic of this surface~\(X\).
+\end{examsubparts}
+\item
+Show that every continuous map \(f:S^2 \to S^1\) is homotopic to a constant map.
+\item
+For \(i=1,2,\ldots\), let \(P_i\) be a 2-dimensional plane in \(\mathbb{R}^3\).
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Show that \(S=\mathbb{R}^3\setminus\bigcup_{i=1}^{\infty}P_i\) is not empty.
+\item[\textnormal{b)}]
+Must~\(S\) be an open set?
+\end{examsubparts}
+\item
+Let~\(C\) be the Cantor set and let~\(S\) be any compact metric space. Show that there is a continuous map \(f:C \to S\) such that~\(f\) is onto.
+\end{examproblems}
+\end{document}

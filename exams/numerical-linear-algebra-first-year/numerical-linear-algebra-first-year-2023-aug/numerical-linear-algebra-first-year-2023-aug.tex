@@ -1,0 +1,127 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Linear Algebra First-Year Exam, August 2023},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, August 2023\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Linear Algebra First-Year Exam, August 2023}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Suppose~\(A\) is Hermitian positive definite.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that each principal submatrix of~\(A\) is Hermitian positive definite.
+\item[\textnormal{(b)}]
+Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
+\item[\textnormal{(c)}]
+Prove that~\(A\) has a Cholesky decomposition.
+\end{examsubparts}
+\item
+Let \(P\in\mathbb{C}^{m\times n}\) be a projector. Show that \(\lVert P\rVert_2=1\) if and only if~\(P\) is an orthogonal projector.
+\item
+Let \(A\in\mathbb{C}^{m\times n}\), with \(m\geq n\) and \(\operatorname{rank}(A)=p=n\geq 3\). Let \(a_1,a_2,\ldots\) denote the columns of~\(A\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Using the modified Gram–Schmidt process, write out expressions for \(q_1,q_2,q_3\), the first three columns of~\(Q\) in the QR decomposition of~\(A\).
+\item[\textnormal{(b)}]
+Show the vector \(q_3\) found in part (a) is orthogonal to both \(q_1\) and \(q_2\).
+\end{examsubparts}
+\item
+Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column~\(j\) of~\(U\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose \(\operatorname{rank}(A)=p<n<m\). Show \(\{u_1,u_2,\ldots,u_p\}\) is a basis for \(\operatorname{Col}(A)\) and \(\{u_{p+1},u_{p+2},\ldots,u_m\}\) is a basis for \(\operatorname{Null}(A^*)\).
+\item[\textnormal{(b)}]
+Suppose~\(A\) is full rank and \(x\neq 0\). Let \(\sigma_i\), \(i=1,\ldots,n\), be the singular values of~\(A\). Show 
+\[
+\sigma_1\geq\frac{\lVert Ax\rVert_2}{\lVert x\rVert_2}\geq\sigma_n>0.
+\]
+ If you want to use the property that \(\lVert A\rVert_2=\sigma_1\), then you must prove that.
+\end{examsubparts}
+\item
+Let \(A\in\mathbb{C}^{m\times m}\) be Hermitian.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that all eigenvalues of~\(A\) are real.
+\item[\textnormal{(b)}]
+Define the stationary iterative method (a.k.a. fixed point method) 
+\[
+x^{(k+1)}=Ax^{(k)}+b. \tag{1}
+\]
+ Suppose (1) has fixed-point~\(x\), namely~\(x\) satisfies \(x=Ax+b\). Show the iteration (1) converges to~\(x\) from any starting guess \(x^{(0)}\), that is \(x^{(k)}\to x\) as \(k\to\infty\), if and only if the eigenvalues \(\lambda_i\) of~\(A\) satisfy \(|\lambda_i|<1\), \(i=1,\ldots,m\). You may use the fact that Hermitian matrix~\(A\) is unitarily diagonalizable.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

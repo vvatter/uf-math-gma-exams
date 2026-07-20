@@ -1,0 +1,194 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, August 2022},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, August 2022\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, August 2022}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Suppose~\(M\) is a compact 5-manifold with \(H_0(M;\mathbb{Z})=\mathbb{Z}\), \(H_1(M;\mathbb{Z})=\mathbb{Z}_3\), and \(H_2(M;\mathbb{Z})=\mathbb{Z}\). Is~\(M\) orientable? What are \(H_3(M;\mathbb{Z})\), \(H_4(M;\mathbb{Z})\), and \(H_5(M;\mathbb{Z})\)?
+\item
+Let~\(M\) be a compact, connected, nonorientable 3-manifold. Prove that \(H_1(M;\mathbb{Z})\) is infinite.
+\item
+Let~\(X\) be a connected metric space with metric~\(d\) and let \(p\in X\). Prove that if \(X\setminus\{p\}\ne\varnothing\), then \(X\setminus\{p\}\) is not compact.
+\item
+Let \(\Sigma_g\) denote the closed surface of genus~\(g\), and let \(\Sigma_{g,r}\) denote the surface of genus~\(g\) with~\(r\) boundary components (i.e., \(\Sigma_g\) with~\(r\) discs removed). Which of the surfaces \(\Sigma_{g,r}\) can admit a map \(f:\Sigma_{g,r}\to\Sigma_{g,r}\) homotopic to the identity that does not have a fixed point?
+\item
+Let~\(X\) be the space obtained by filling in two discs in the torus, as shown (the discs lie inside the surface of the torus). Compute \(H_\bullet(X;\mathbb{Z})\).
+\par\smallskip
+\begin{center}
+\begin{adjustbox}{max width=.8\linewidth,max totalheight=6\baselineskip}
+\begin{tikzpicture}[
+  alt={Diagram of a torus shown as a flattened oval with a small central opening. Two black-outlined, diagonally hatched disks fill openings on the left and right sides of the torus.},
+  line cap=round,
+  line join=round,
+  x=1cm,
+  y=1cm
+]
+% Left filling disc
+\fill[black!20]
+    (-4.4,0)
+    .. controls (-3.65,0.85) and (-2.10,1.25) .. (-1.05,0.15)
+    .. controls (-1.75,-0.75) and (-3.45,-0.80) .. cycle;
+
+\begin{scope}
+    \clip
+        (-4.4,0)
+        .. controls (-3.65,0.85) and (-2.10,1.25) .. (-1.05,0.15)
+        .. controls (-1.75,-0.75) and (-3.45,-0.80) .. cycle;
+    \foreach \x in {-4.7,-4.3,-3.9,-3.5,-3.1,-2.7,-2.3,-1.9,-1.5,-1.1}
+        \draw[line width=0.45pt]
+            (\x,-1.05) -- ++(0.62,2.15);
+\end{scope}
+
+\draw[line width=1pt]
+    (-4.4,0)
+    .. controls (-3.65,0.85) and (-2.10,1.25) .. (-1.05,0.15)
+    .. controls (-1.75,-0.75) and (-3.45,-0.80) .. cycle;
+
+% Right filling disc
+\fill[black!20]
+    (1.15,0.15)
+    .. controls (2.15,1.05) and (3.75,1.15) .. (4.4,0)
+    .. controls (3.95,-0.85) and (2.15,-0.80) .. cycle;
+
+\begin{scope}
+    \clip
+        (1.15,0.15)
+        .. controls (2.15,1.05) and (3.75,1.15) .. (4.4,0)
+        .. controls (3.95,-0.85) and (2.15,-0.80) .. cycle;
+    \foreach \x in {0.9,1.3,1.7,2.1,2.5,2.9,3.3,3.7,4.1}
+        \draw[line width=0.45pt]
+            (\x,-1.05) -- ++(0.62,2.15);
+\end{scope}
+
+\draw[line width=1pt]
+    (1.15,0.15)
+    .. controls (2.15,1.05) and (3.75,1.15) .. (4.4,0)
+    .. controls (3.95,-0.85) and (2.15,-0.80) .. cycle;
+
+% Outer boundary of the torus
+\draw[line width=1.2pt]
+    (-4.4,0)
+    .. controls (-4.45,1.65) and (-2.25,2.45) .. (0,2.40)
+    .. controls (2.40,2.38) and (4.20,1.65) .. (4.4,0);
+
+\draw[line width=1.2pt]
+    (4.4,0)
+    .. controls (4.15,-1.10) and (2.25,-1.45) .. (0,-1.35)
+    .. controls (-2.45,-1.48) and (-4.25,-1.05) .. (-4.4,0);
+
+% Central hole
+\draw[line width=1.15pt]
+    (-1.05,0.15)
+    .. controls (-0.55,0.72) and (0.65,0.72) .. (1.15,0.15)
+    .. controls (0.62,-0.48) and (-0.55,-0.48) .. cycle;
+\end{tikzpicture}
+\end{adjustbox}
+\end{center}
+\smallskip
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions, statements, or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Prove or give a counterexample: If \(A\subset X\) is path-connected, then the closure \(\overline{A}\) is path-connected.
+\item
+Compute \(\chi(\mathbb{R}P^2\times\mathbb{C}P^3\times S^4)\).
+\item
+Give the definition of a normal topological space. Show that a smooth manifold is a normal space.
+\item
+Prove that a continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
+\item
+Prove that if \(m\ne n\), then \(\mathbb{R}^m\) is not homeomorphic to \(\mathbb{R}^n\).
+\item
+Prove that the torus \(T^2=S^1\times S^1\) is not homotopy equivalent to \(S^1\vee S^1\vee S^2\).
+\item
+State the Tietze Extension Theorem.
+\item
+Describe all the connected covering spaces \(E\to\mathbb{R}P^2\vee\mathbb{R}P^3\).
+\item
+Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample. 
+\[
+0\to\mathbb{Z}_2\to A\to\mathbb{Z}_2\to 0
+\]
+\item
+Compute the integral homology of the space \(\mathbb{C}P^2\times\mathbb{R}P^2\).
+\end{examproblems}
+\end{document}

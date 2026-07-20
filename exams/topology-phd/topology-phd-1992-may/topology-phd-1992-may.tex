@@ -1,0 +1,116 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 1992},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 1992\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 1992}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer the following questions without giving proofs.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Define what it means for a space~\(X\) to be
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+connected
+\item[\textnormal{(b)}]
+arcwise connected
+\item[\textnormal{(c)}]
+simply connected
+\end{examsubparts}
+\item
+Let~\(K\) be a finite simplicial complex. Define \(\chi(K)\), the Euler characteristic of~\(K\).
+\item
+Define the degree of a map \(f:S^n\to S^n\). (You may assume that~\(f\) is smooth.)
+\item
+Let \(K=K_1\cup K_2\), where~\(K\) is a simplicial complex and \(K_1\), \(K_2\), and \(A=K_1\cap K_2\) are subcomplexes of~\(K\). State the Mayer–Vietoris sequence (in either homology or cohomology) for \((K,K_1,K_2,A)\).
+\end{examproblems}
+\begin{examinstructions}
+Answer the following questions, giving proofs and examples.
+\end{examinstructions}
+\begin{examproblems}{4}
+\item
+Must a continuous map \(f:S^4\to S^4\) of non-negative degree have a fixed point?
+\item
+Compute the fundamental group of a closed, non-orientable surface~\(X\) of genus 2.
+\item
+State and prove the Brouwer fixed point theorem.
+\item
+Let~\(U\) be an open subset of \(\mathbb{R}^n\). Show that~\(U\) is connected if and only if~\(U\) is arcwise connected.
+\item
+Show that no covering space for the two-torus, \(T^2=S^1\times S^1\), has the homotopy type of the figure-8, \(S^1\vee S^1\).
+\item
+Compute the homology groups of the closed unit disk \(D^n=\{x\in\mathbb{R}^n:\lVert x\rVert\leq 1\}\) and the unit sphere \(S^n=\{u\in\mathbb{R}^{n+1}:\lVert u\rVert=1\}\), for all \(n\geq 0\). (Note that \(D^0=\{0\}\) and that \(S^0=\{-1,1\}\).)
+\end{examproblems}
+\end{document}

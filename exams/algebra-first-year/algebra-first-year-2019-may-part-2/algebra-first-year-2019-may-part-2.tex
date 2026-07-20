@@ -1,0 +1,124 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2019, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2019, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2019, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+State and prove the Chinese Remainder Theorem for rings.
+\item
+Let \(R=\mathbb{Z}[\sqrt{-1}]\) be the ring of Gaussian integers. Suppose that~\(F\) is a finite field of characteristic~\(5\), and \(\phi:R\to F\) is a (unital) ring homomorphism. Prove that \(R/\ker(\phi)\) has exactly~\(5\) elements.
+\item
+Let \(\omega=\frac{-1+\sqrt{-3}}{2}\in\mathbb{C}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that~\(\omega\) is a root of the polynomial \(f(x)=x^2+x+1\).
+\item[\textnormal{(b)}]
+Prove that the set \(\mathbb{Z}[\omega]=\{a+b\omega:a,b\in\mathbb{Z}\}\) is a subring of~\(\mathbb{C}\).
+\item[\textnormal{(c)}]
+Prove that \(\mathbb{Z}[\omega]\) is a Euclidean domain with respect to the norm \(N(\alpha)=\alpha\overline{\alpha}\) for all \(\alpha\in\mathbb{Z}[\omega]\), where \(\overline{\alpha}\) denotes the complex conjugate of~\(\alpha\).
+\end{examsubparts}
+\item
+Let~\(R\) be an integral domain, and~\(M\) be an~\(R\)-module.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the rank of~\(M\);
+\item[\textnormal{(b)}]
+Prove that if~\(M\) is a free~\(R\)-module of rank~\(n\), (where~\(n\) is a non-negative integer), then the rank of any submodule of~\(M\) is at most~\(n\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(p\) be an odd prime. Let \(A\in\operatorname{GL}(2,p)\) be an invertible two by two matrix over the field with~\(p\) elements such that~\(A\) has order~\(2\) and \(A\ne-I\) (where~\(I\) is the identity matrix). Prove that~\(A\) is conjugate to the diagonal matrix whose diagonal entries are \(-1\) and~\(1\).
+\item[\textnormal{(b)}]
+Give an example of an element of order~\(2\) in \(\operatorname{GL}(2,2)\).
+\end{examsubparts}
+\item
+Let \(F/K\) be a field extension.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means to say that \(\theta\in F\) is algebraic over~\(K\).
+\item[\textnormal{(b)}]
+Let~\(A\) be the set of all elements of~\(F\) that are algebraic over~\(K\). Prove that~\(A\) is a subfield of~\(F\).
+\item[\textnormal{(c)}]
+Prove that every element of~\(F\) that is not in~\(A\) is transcendental over~\(A\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

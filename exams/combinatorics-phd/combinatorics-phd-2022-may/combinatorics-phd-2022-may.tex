@@ -1,0 +1,106 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2022},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2022\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2022}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Let \(G_n\) be the graph whose vertex set is the set of all permutations of \([n]\) (in one line notation), with two vertices adjacent if they differ by switching two consecutive entries in the permutation. What is the chromatic number of \(G_n\) (with proof).
+\item
+Let \(T=(V,E)\) be a tournament that is not strongly connected. Show there is a partition \(V=A\sqcup B\) with \(A,B\) non-empty so that every edge between \(a\in A\) and \(b\in B\) is from~\(a\) to~\(b\).
+\item
+Recall the permutation \(\pi=\pi_1\cdots\pi_n\) contains the permutation \(\sigma=\sigma_1\cdots\sigma_k\) if there is a subset \(\{i_1<\cdots<i_k\}\subseteq[n]\) so that \(\pi_{i_1}\cdots\pi_{i_k}\) has the same relative order as~\(\sigma\), and that~\(\pi\) avoids~\(\sigma\) if it does not contain~\(\sigma\). Let \(S_n(\sigma)\) be the set of permutations avoiding~\(\sigma\). Prove that \(\lvert S_n(231)\rvert\) is the~\(n\)th Catalan number \(C_n=\binom{2n}{n}/(n+1)\).
+\item
+Determine the number of binary strings of length~\(n\) beginning with~\(0\), ending with~\(1\), and such that the number of copies of \(00\) equals the number of copies of \(11\). For example, \(00011011\) has two copies of each.
+\item
+Show that the number of partitions of~\(n\) with no part divisible by~\(k\) is equal to the number of partitions of~\(n\) with each part appearing at most \(k-1\) times.
+\item
+Let~\(P\) be a finite poset with unique minimal element~\(0\) and Möbius function~\(\mu\). Let \(y\in P\) so that there is only one~\(x\) covered by~\(y\). Show \(\mu(0,y)=0\).
+\item
+Let \(e_k(x_1,\ldots,x_n)\) be the elementary symmetric function in~\(n\) variables and \(c(n,k)\) be the (signless) Stirling number of the first kind. Prove that 
+\[
+e_{n+1-k}(1,2,\ldots,n)=c(n+1,k).
+\]
+ For example, \(e_2(1,2,3)=1\cdot2+1\cdot3+2\cdot3=11=c(4,2)\).
+
+\par
+(Hint: what is \(e_k(x_1,\ldots,x_n)\) in terms of symmetric functions in \(n-1\) variables?)
+\item
+Let \(D_n\) be the set of permutations of~\(n\) with no fixed points and \(F_n\) be the set of permutations with exactly one fixed point. Show 
+\[
+\lvert D_n\rvert-\lvert F_n\rvert=(-1)^n.
+\]
+\end{examproblems}
+\end{document}

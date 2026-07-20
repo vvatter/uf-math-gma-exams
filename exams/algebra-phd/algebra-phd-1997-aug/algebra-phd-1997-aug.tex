@@ -1,0 +1,127 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, August 1997},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, August 1997\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, August 1997}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven out of the following ten problems. State clearly any results you need.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(A\) be a commutative Noetherian ring with identity. Show that if~\(A\) is Noetherian, then so is the power series ring \(A[[X]]\).
+\item
+Suppose that~\(A\) is a commutative ring with identity, \(B\) is an~\(A\)-algebra integral over~\(A\), and \(f:A\to K\) is a homomorphism from~\(A\) to an algebraically closed field~\(K\). Show that~\(f\) can be extended to a homomorphism \(g:B\to K\).
+\item
+Show that any automorphism of the field \(\mathbb R\) of real numbers is the identity.
+\item
+Let~\(p\) be a prime, \(n>1\) an integer, and \(G=\operatorname{GL}(n,\mathbb F_p)\). Compute the order of~\(G\), and find a~\(p\)-Sylow subgroup of~\(G\).
+\item
+Let~\(p\) be a prime,
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that if \(S_p\) is the symmetric group on~\(p\) letters, and \(H\subseteq S_p\) is a subgroup containing a~\(p\)-cycle and a transposition, then \(H=S_p\).
+\item[\textnormal{(b)}]
+Suppose \(f(T)\in\mathbb Q[T]\) is irreducible of degree~\(p\). Show that if \(f(T)\) has exactly two non-real roots, then the Galois group of the splitting field of \(f(T)\) is \(S_p\).
+\end{examsubparts}
+\item
+Let \(M_n(F)\) denote the algebra of \(n\times n\) matrices over the field~\(F\). Fix~\(p\) with \(1<p<n\) and let~\(R\) be the subalgebra consisting of those matrices in “block form” 
+\[
+\begin{pmatrix}A&B\\0&C\end{pmatrix},
+\]
+ where~\(A\) is a \(p\times p\) matrix, and~\(C\) is an \((n-p)\times(n-p)\) matrix.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Describe the Jacobson radical of~\(R\).
+\item[\textnormal{(b)}]
+Consider the vector space \(V=F^n\) with its natural structure as a left module for~\(R\), given by matrix multiplication on the left. Show that~\(V\) has an irreducible submodule~\(W\) of dimension~\(p\) and that \(V/W\) is also irreducible.
+\item[\textnormal{(c)}]
+Show that~\(V\) is indecomposable, i.e. \(V\) is not the direct sum of two nonzero~\(R\)-submodules.
+\end{examsubparts}
+\item
+If \((m,n)=1\), then compute \((\mathbb Z/m\mathbb Z)\otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z)\). Explain.
+\item
+Suppose that~\(A\) is a commutative ring with identity. If \(A^m\cong A^n\) as~\(A\)-modules, show that \(m=n\) (\(A^m\) denotes the direct sum of~\(m\) copies of~\(A\) as an~\(A\)-module, and similarly for \(A^n\)).
+\item
+Let~\(A\) be a Noetherian ring and~\(M\) a finitely generated~\(A\)-module. Denote by \(\operatorname{Supp}(M)\) the set of prime ideals~\(p\) of~\(A\) such that \(M_p\ne0\), where \(M_p\) is the localization of~\(M\) at~\(p\). Show that if \(M_p=0\) for all~\(p\), then \(M=0\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that a direct sum of more than one copy of \(\mathbb Z\) is not generated by a single element.
+\item[\textnormal{(b)}]
+Deduce that a direct sum of more than one copy of \(\mathbb Z\) is not a free group.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

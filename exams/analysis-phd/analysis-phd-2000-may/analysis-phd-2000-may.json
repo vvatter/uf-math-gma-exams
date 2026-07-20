@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-2000-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2000,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2000_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Be sure to write all proofs in a neat and logical fashion. Give reasons for all steps!"
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Vitali Convergence Theorem for integrals."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Martingale Convergence Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((X,\\mathcal B,\\mu)\\) and \\((Y,\\mathcal J,\\nu)\\) be finite measure spaces. Construct \\(\\mu\\otimes\\nu\\) on \\(\\mathcal B\\otimes\\mathcal J\\). Give details."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\{\\mu_m\\}\\) be a sequence of real valued signed measures on \\((S,\\Sigma)\\). Define\n\\[\n\\lambda(A)=\\sum_{m=1}^{\\infty}\\frac{1}{2^m}\\frac{|\\mu_m|(A)}{1+|\\mu_m|(S)},\\qquad A\\in\\Sigma.\n\\]\nShow \\(\\lambda\\) is a finite measure on \\(\\Sigma\\) and \\(\\mu_m\\overset{\\varepsilon-\\delta}{\\ll}\\lambda\\) for each \\(m\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:[0,b]\\to\\mathbb R\\) be Lebesgue integrable. Suppose \\(\\int_{[0,c]}f\\,dm=0\\) for each \\(c\\in[0,b]\\). Show \\(f=0\\) a.e. \\(m\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((\\Omega,\\mathcal F,P)\\) be a pr. space, \\(Y\\) an integrable r.v. and \\(\\mathcal E\\) a sub σ-field of \\(\\mathcal F\\). Suppose \\(\\mathcal E\\) and \\(\\mathcal F(Y)\\) are independent. What is \\(E(Y\\mid\\mathcal E)\\)? Prove."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal X\\) be a B-space and suppose \\(\\mathcal Y\\) and \\(\\mathcal Z\\) are closed linear subspaces of \\(\\mathcal X\\) such that each \\(x\\in\\mathcal X\\) has a unique representation of the form \\(x=y+z\\), where \\(y\\in\\mathcal Y\\) and \\(z\\in\\mathcal Z\\). Show that there is a constant \\(K\\) such that \\(|y|\\le K|x|\\) and \\(|z|\\le K|x|\\), for each \\(x\\in\\mathcal X\\), where \\(y\\) & \\(z\\) are given as above.\n\nHint: define a map \\(T:\\mathcal X\\to\\mathcal Y\\) which is useful, use the closed graph theorem to get continuity; then define \\(S:\\mathcal X\\to\\mathcal Z\\), etc."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

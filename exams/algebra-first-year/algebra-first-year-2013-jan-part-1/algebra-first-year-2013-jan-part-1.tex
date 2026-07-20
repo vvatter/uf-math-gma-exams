@@ -1,0 +1,136 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2013, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2013, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2013, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Give an example of each of the following, with some explanation.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+A group~\(G\) and a subgroup \(H \leq G\) such that \(C_G(H) \neq N_G(H)\).
+\item[\textnormal{(b)}]
+A group~\(G\) and a subgroup \(H \leq G\) such that \(H \nsubseteq C_G(H)\).
+\item[\textnormal{(c)}]
+A group~\(G\) and a normal subgroup \(H \trianglelefteq G\) such that \(C_G(H) \neq G\).
+\end{examsubparts}
+\item
+Let~\(G\) be a group and let \(T_G = \{x \in G : x^n = 1 \text{ for some } n \geq 1\}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(G\) is abelian then \(T_G\) is a subgroup of~\(G\).
+\item[\textnormal{(b)}]
+Give an example of a nonabelian group~\(G\) such that \(T_G\) is not a subgroup of~\(G\). Justify any claims that you make.
+\end{examsubparts}
+\item
+Let~\(G\) be a finite group which acts on the set~\(S\). Let~\(H\) be a normal subgroup of~\(G\) with the following property: For every \(x_1, x_2 \in S\), there is a unique \(h \in H\) such that \(h(x_1) = x_2\). Choose \(x \in S\) and let \(G_x = \{g \in G : g(x) = x\}\) denote the stabilizer of~\(x\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(G = G_xH\) and \(H \cap G_x = 1\).
+\item[\textnormal{(b)}]
+Show that if \(H \leq Z(G)\) then \(G_x \trianglelefteq G\) and~\(G\) is the internal direct product of \(G_x\) and~\(H\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that every simple subgroup of \(S_4\) is abelian.
+\item[\textnormal{(b)}]
+Use the result from (a) to prove that if~\(G\) is a nonabelian simple group then every proper subgroup of~\(G\) has index at least 5.
+\end{examsubparts}
+\item
+Let~\(G\) be a group of order \(76 = 4 \cdot 19\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that~\(G\) contains a normal Sylow 19-subgroup.
+\item[\textnormal{(b)}]
+Prove that the center of~\(G\) contains an element of order 2.
+\end{examsubparts}
+\item
+Let~\(G\) be a group.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the derived series \(G^{(0)} \geq G^{(1)} \geq G^{(2)} \geq \cdots\) of~\(G\).
+\item[\textnormal{(b)}]
+Prove that~\(G\) is solvable if and only if \(G^{(n)} = \{1\}\) for some \(n \geq 0\).
+\item[\textnormal{(c)}]
+Give an example of a solvable group~\(G\) such that \(G^{(1)} \neq \{1\}\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,108 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, January 2023, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2023, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, January 2023, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that a connected metric space having more than one point is uncountable.
+\item
+Give definition of retraction. Show that a retraction is a quotient map.
+\item
+Is the set of rationals~\(\mathbb{Q}\) in the subspace topology locally compact?
+\item
+Show that the set of irrational numbers in~\(\mathbb{R}\) is a Baire space.
+\item
+Let \(f:X\to X\) be a map of a compact metric space \((X,d)\) to itself that satisfies the following condition \(d(f(x),f(y))<d(x,y)\) for all \(x\ne y\). Prove that~\(f\) is continuous. Show that~\(f\) has a unique fixed point.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Intermediate Value Theorem.
+\item
+Show that any continuous map \(f:S^2\to(0,1)\) of the 2-sphere \(S^2\) to the interval \((0,1)\) is neither surjective nor injective.
+\item
+State the Cantor–Schröder–Bernstein Theorem.
+\item
+Is the space \(\mathbb{R}_\ell\) connected? path connected?
+\item
+What is a basis of a topology? Does the set \(\{(a,b]\cup[c,d)\mid a<b<c<d\}\) form a basis of a topology on~\(\mathbb{R}\)?
+\end{examproblems}
+\end{document}

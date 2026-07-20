@@ -1,0 +1,115 @@
+{
+  "schema_version": 3,
+  "id": "numerical-linear-algebra-first-year-2022-may",
+  "subject": "First Year Numerical Linear Algebra",
+  "subject_tag": "numerical-linear-algebra-first-year",
+  "year": 2022,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-NumericalLinearAlgebra-2022_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do 4 (four) problems."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove or provide a counterexample to each of the following."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "If matrix \\(A\\) is normal and triangular, then it is diagonal.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Every matrix has a Schur factorization.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "For \\(v\\in\\mathbb{C}^n\\), define \\(f_A(v):=(v^*Av)^{1/2}\\). Under what condition(s) on \\(A\\in\\mathbb{C}^{n\\times n}\\) is \\(f_A(\\cdot)\\) a norm on \\(\\mathbb{C}^n\\)? (Full credit will only be given for a general condition or conditions. An example is not sufficient.) Prove that \\(f_A(\\cdot)\\) is a norm on \\(\\mathbb{C}^n\\) under the condition(s) you require.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Assuming the condition(s) you require in (a), given a matrix \\(A\\), determine the best constants \\(\\alpha\\) and \\(\\beta\\) to satisfy the inequality\n\\[\n\\alpha\\lVert v\\rVert_2\\leq f_A(v)\\leq\\beta\\lVert v\\rVert_2.\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A=U\\Sigma V^*\\) be the singular value decomposition of \\(A\\in\\mathbb{C}^{m\\times n}\\). Let \\(u_j\\) denote column \\(j\\) of \\(U\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Suppose \\(\\operatorname{rank}(A)=p<n<m\\). Show \\(\\{u_1,u_2,\\ldots,u_p\\}\\), is a basis for \\(\\operatorname{Col}(A)\\), and \\(\\{u_{p+1},u_{p+2},\\ldots,u_m\\}\\) is a basis for \\(\\operatorname{Null}(A^*)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Suppose \\(A\\) is full rank and \\(x\\neq 0\\). Let \\(\\sigma_i\\), \\(i=1,\\ldots,n\\), be the singular values of \\(A\\). Show\n\\[\n\\sigma_1\\geq\\frac{\\lVert Ax\\rVert_2}{\\lVert x\\rVert_2}\\geq\\sigma_n>0.\n\\]\nIf you want to use the property that \\(\\lVert A\\rVert_2=\\sigma_1\\), then you must prove that also.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\{a_1,\\ldots,a_n\\}\\) be a linearly independent set of vectors. Consider the Gram–Schmidt and modified Gram–Schmidt algorithms for computing an orthonormal basis \\(\\{q_1,\\ldots,q_n\\}\\) so that \\(\\operatorname{Span}\\{q_1,\\ldots,q_k\\}=\\operatorname{Span}\\{a_1,\\ldots,a_k\\}\\), for each \\(k=1,\\ldots,n\\). Suppose in computing \\(q_2\\), an orthogonalization error is committed so that \\(q_2^*q_1=\\epsilon\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Use the Gram–Schmidt algorithm to compute \\(v_3\\) so that \\(q_3=v_3/\\lVert v_3\\rVert\\). What is \\(v_3^*q_2\\)?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Use the modified Gram–Schmidt algorithm to compute \\(v_3\\) so that \\(q_3=v_3/\\lVert v_3\\rVert\\). What is \\(v_3^*q_2\\)?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Compute the Cholesky decomposition of the following matrix, or explain why it does not exist.\n\\[\nA=\\begin{pmatrix}\n1 & 1/2 & 2 & 3\\\\\n1/2 & 5/16 & 3/2 & 5/2\\\\\n2 & 3/2 & 17 & 17\\\\\n3 & 5/2 & 17 & 31\n\\end{pmatrix}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

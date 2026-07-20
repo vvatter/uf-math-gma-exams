@@ -1,0 +1,112 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, June 1996},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, June 1996\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, June 1996}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Remark. In the sequel the word measure means positive, countably additive measure, unless otherwise stated.
+\end{examinstructions}
+\begin{examinstructions}
+Instructions. Do all of the following problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f_n:\mathbb{R}\to\mathbb{R}\) be a sequence of Lebesgue-measurable functions which converges pointwise to a function~\(g\). Prove, directly from the definition of measurability, that~\(g\) is measurable.
+\item
+For \(f\in L^1(\mathbb{R})\), let \(f_t\) denote the translation of~\(f\) by~\(t\), i.e. \(f_t(x):=f(x-t)\). Show that the map \(t\mapsto f_t\) is a continuous map from~\(\mathbb{R}\) to \(L^1(\mathbb{R})\).
+\item
+Let~\(\mu\) denote the Lebesgue measure on~\(\mathbb{R}\). Let \(T:\mathbb{R}\to\mathbb{R}\) be defined by \(T(x)=x^3-x\). Define a Borel measure~\(\nu\) setting \(\nu(A):=\mu(T^{-1}A)\). Compute the Radon–Nikodym derivative \(\frac{d\nu}{d\mu}\).
+\item
+Let \(K_n\subset[0,1]\) be a Cantor set of Lebesgue measure larger than \(1-\frac{1}{n}\). Let \(V:=\bigcup_{n=1}^{\infty}K_n\). Prove that, for any null set~\(N\), the set \(V\setminus N\) is not a \(G_\delta\) set. [Hint: Baire Category Theorem]
+\item
+Let~\(\mu\) and~\(\nu\) be~\(\sigma\)-finite measures on the measurable space \((X,\mathcal{B})\). Prove, from first principles, that~\(\nu\) can be written as \(\nu=\nu_{\mathrm{ac}}+\nu_{\mathrm{sing}}\), with \(\nu_{\mathrm{ac}}\ll\mu\) and \(\nu_{\mathrm{sing}}\perp\mu\).
+\item
+Let \(x_n\) be a sequence in a Banach space~\(B\). Assume that the sequence \(x_n\) converges weakly to~\(x\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that~\(x\) is the only weak limit of the sequence \(x_n\).
+\item[\textnormal{(b)}]
+Show that \(\sup_n\lVert x_n\rVert<\infty\). [Hint for (b): Consider the \(x_n\) as elements of the double dual \(B^{**}\).]
+\end{examsubparts}
+\item
+Let \(K:[0,2\pi]\to\mathbb{R}\) be defined by \(K(x)=\frac14\sin(x)\). Show that for every \(h\in L^p([0,2\pi])\), there exists a unique solution~\(f\) to the equation 
+\[
+f+f*K=h.
+\]
+ If~\(h\) is \(C^\infty\), is it true that the solution~\(f\) is \(C^\infty\)? Justify your answer.
+\item
+A distribution~\(T\) is called harmonic if \(\Delta T=0\), where \(\Delta=\sum_{i=1}^n\frac{\partial^2}{\partial x_i^2}\). Show that if~\(T\) is a harmonic tempered distribution, then~\(T\) is a polynomial. [Hint: a distribution with support \(\{0\}\) is a finite sum of multiples of Dirac's~\(\delta\) and its derivatives.]
+\end{examproblems}
+\end{document}

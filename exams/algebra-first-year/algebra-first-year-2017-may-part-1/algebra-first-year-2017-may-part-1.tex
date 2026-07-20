@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2017, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2017, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2017, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. If you turn in more than four, only the first four will be graded. Unless otherwise indicated you may use theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(p\) be a prime and~\(G\) be a finite group whose order is a power of~\(p\) greater than 1.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that the center of~\(G\) is not trivial.
+\item[\textnormal{(ii)}]
+Deduce that~\(G\) is solvable. (Do not just state theorems; give the proof).
+\end{examsubparts}
+\item
+Show that a group of order \(132=2^2\cdot 3\cdot 11\) has a normal Sylow subgroup.
+\item
+Let~\(G\) be the group 
+\[
+G=\left\{\left.\begin{pmatrix}a&b\\0&c\end{pmatrix}\ \right|\ a,b,c\in\mathbb{R},\ ac\ne 0\right\}
+\]
+ and let~\(H\) (resp. \(N\)) be the subgroup of~\(G\) consisting of elements in which \(b=0\) (resp. \(a=c=1\)). Show that~\(G\) is isomorphic to a semidirect product of~\(H\) and~\(N\), and identify the relevant map~\(\phi\) from one to the automorphism group of the other.
+\item
+Let~\(G\) be a group of permutations of a set~\(A\), and for \(a\in A\) let \(G_a\) be the stabilizer of~\(a\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that \(gG_ag^{-1}=G_{g(a)}\) for all \(g\in G\), \(a\in A\).
+\item[\textnormal{(ii)}]
+Show that if~\(G\) is transitive then 
+\[
+\bigcap_{g\in G}gG_ag^{-1}=1.
+\]
+\item[\textnormal{(iii)}]
+Show that if~\(G\) is abelian and transitive then \(g\ne 1\) implies \(g(a)\ne a\) for all \(a\in A\). Conclude that if~\(A\) is finite then so is~\(G\), and \(|G|=|A|\).
+\end{examsubparts}
+\item
+Let~\(p\) and~\(q\) be distinct primes. List all abelian groups of order \(p^3q^2\). For each such group, how many elements are there of order~\(p\)? \(pq\)?
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+List representatives of all conjugacy classes in \(S_9\) whose elements have order 3.
+\item[\textnormal{(ii)}]
+Find the cardinality of every such class.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

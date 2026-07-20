@@ -11,12 +11,9 @@ from extract_exams import (
     REVIEW_FILES,
     LegacyExamRecord,
     exam_json_path,
-    exam_markdown_path,
     load_sources,
     migrate_legacy_exam,
-    render_markdown,
     write_json,
-    write_text,
 )
 
 
@@ -97,7 +94,6 @@ def migrate_unaffected(
             )
         exam = migrate_legacy_exam(legacy)
         write_json(exam_json_path(sources[exam_id]), exam)
-        write_text(exam_markdown_path(sources[exam_id]), render_markdown(exam))
         migrated += 1
     return migrated
 

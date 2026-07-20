@@ -1,0 +1,151 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2016},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2016\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2016}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(M/K\) be a field extension and let~\(p\) be a prime. Let \(L_1/K, L_2/K\) be finite subextensions of \(M/K\) such that \([L_1:K]\) and \([L_2:K]\) are both powers of~\(p\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if \(L_1/K\) is a Galois extension then \([L_1L_2:K]\) is a power of~\(p\).
+\item[\textnormal{(b)}]
+Give an example which shows that if neither of \(L_1/K, L_2/K\) is Galois then \([L_1L_2:K]\) need not be a power of~\(p\).
+\end{examsubparts}
+\item
+Prove that every field~\(K\) is contained in an algebraically closed field.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(C\) be a category and let \(f:X\to Y\) be a morphism in~\(C\). Define what it means for~\(f\) to have each of the following properties:
+\begin{examsubparts}
+\item[\textnormal{i.}]
+\(f\) is a monomorphism.
+\item[\textnormal{ii.}]
+\(f\) is an epimorphism.
+\item[\textnormal{iii.}]
+\(f\) is an isomorphism.
+\end{examsubparts}
+\item[\textnormal{(b)}]
+Give an example of a category~\(C\) and a morphism \(f:X\to Y\) in~\(C\) which is a monomorphism and an epimorphism, but not an isomorphism.
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for a group~\(G\) to be nilpotent.
+\item[\textnormal{(b)}]
+Prove that if~\(G\) is nilpotent and \(N\trianglelefteq G\) then \(G/N\) is nilpotent.
+\item[\textnormal{(c)}]
+Prove that if~\(G\) is free on a set~\(S\) and \(|S|>1\) then~\(G\) is not nilpotent.
+\end{examsubparts}
+\item
+Let \(0\to A\mathrel{\mathop{\to}^{f}}B\mathrel{\mathop{\to}^{g}}C\to 0\) be an exact sequence of groups (not necessarily abelian).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose there is a group homomorphism \(r:B\to A\) such that \(r\circ f=\operatorname{id}_A\). Prove that \(B\cong A\times C\).
+\item[\textnormal{(b)}]
+Suppose there is a group homomorphism \(s:C\to B\) such that \(g\circ s=\operatorname{id}_C\). Prove that \(B\cong A\rtimes_\phi C\) for some \(\phi:C\to\operatorname{Aut}(A)\).
+\end{examsubparts}
+\item
+Let~\(R\) be a commutative ring with 1 and let~\(I\) be a proper ideal of~\(R\). The radical of~\(I\) is defined to be 
+\[
+\sqrt{I}=\{x\in R:x^n\in I\text{ for some }n\geq 1\}.
+\]
+ Prove that \(\sqrt{I}\) is equal to the intersection of all the prime ideals of~\(R\) which contain~\(I\).
+\item
+Let~\(R\) be a commutative ring with 1 and let~\(P\) and~\(Q\) be projective~\(R\)-modules. Prove that the~\(R\)-module \(P\otimes_R Q\) is projective.
+\item
+Let~\(R\) be an integral domain, let~\(K\) be field of fractions of~\(R\), and let \(A\subset K\) be a fractional ideal of~\(R\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that the set \(A'=\{x\in K:xA\subset R\}\) is a fractional ideal of~\(R\).
+\item[\textnormal{(b)}]
+Prove that the fractional ideal~\(A\) is invertible if and only if \(AA'=R\).
+\item[\textnormal{(c)}]
+Give an example of an integral domain~\(R\) and a nonzero fractional ideal~\(A\) of~\(R\) which is not invertible.
+\end{examsubparts}
+\item
+Let \(D>1\) be square-free. Determine the integral closure of~\(\mathbb{Z}\) in \(\mathbb{Q}(\sqrt{D})\). Your answer should be carefully justified.
+\item
+Let~\(R\) be a ring with 1 and let~\(M\) be a unital~\(R\)-module. Assume that for every~\(R\)-submodule~\(N\) of~\(M\) there is an~\(R\)-submodule \(N'\) such that \(M=N\oplus N'\). Prove that if~\(L\) is a nontrivial submodule of~\(M\) then~\(L\) contains a simple submodule.
+\item
+Determine the number of isomorphism classes of noncommutative semisimple rings with \(2592=2^5\cdot 3^4\) elements. You do not have to list the rings.
+\end{examproblems}
+\end{document}

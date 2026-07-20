@@ -1,0 +1,146 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, August 2020},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, August 2020\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, August 2020}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(X\) be a topological space. Given two points \(a,b\in X\), a collection of sets \(A_1,\ldots,A_n\) is a simple chain from~\(a\) to~\(b\) if \(a\in A_1\), \(b\in A_n\), and \(A_i\cap A_j\ne\varnothing\) if and only if \(|i-j|\le 1\). Prove that if \(\{U_\alpha\}\) is a collection of open sets covering~\(X\) and~\(X\) is connected, then there is a simple chain of elements in \(\{U_\alpha\}\) joining any pair of points \(a,b\in X\). (Hint: Consider the set \(C_a\) of all~\(b\) so that there is a simple chain of elements joining~\(a\) and~\(b\). Show that \(C_a\) is both open and closed.)
+\item
+Let \(X=S^2\cup_f e^3\cup_h e^5\), where \(f:S^2\to S^2\) has degree~\(n\) and \(h:S^4\to S^2\cup_f e^3\) is continuous.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+What is the Euler characteristic of~\(X\)?
+\item[\textnormal{(b)}]
+Determine \(H_\bullet(X;\mathbb Z)\) and \(H^\bullet(X;\mathbb Z_2)\) as a function of~\(n\).
+\item[\textnormal{(c)}]
+Can~\(X\) have the homotopy type of a closed~\(5\)-manifold? (If the answer depends on~\(n\), explain.)
+\end{examsubparts}
+\item
+Let~\(X\) be the space \(\mathbb{RP}^3/\mathbb{RP}^1\) (the space obtained by collapsing \(\mathbb{RP}^1\subset\mathbb{RP}^3\) to a point). Compute the integral homology groups of~\(X\).
+\item
+Let \(\mathbb{RP}^2\) be the real projective plane and fix a basepoint \(x_0\in\mathbb{RP}^2\). Note that we can realize the wedge sum \(\mathbb{RP}^2\vee\mathbb{RP}^2\) as \((\mathbb{RP}^2\times\{x_0\})\cup(\{x_0\}\times\mathbb{RP}^2)\subset\mathbb{RP}^2\times\mathbb{RP}^2\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Compute the fundamental groups of \(\mathbb{RP}^2\vee\mathbb{RP}^2\) and \(\mathbb{RP}^2\times\mathbb{RP}^2\).
+\item[\textnormal{(b)}]
+Show that \(\mathbb{RP}^2\vee\mathbb{RP}^2\) is not a retract of \(\mathbb{RP}^2\times\mathbb{RP}^2\).
+\item[\textnormal{(c)}]
+Show that any map \(f:\mathbb{RP}^2\vee\mathbb{RP}^2\to S^1\) is null-homotopic.
+\end{examsubparts}
+\item
+Compute \(H_\bullet(M;\mathbb Z_2)\), where~\(M\) is the space with integral homology groups 
+\[
+H_k(M;\mathbb Z)=
+\begin{cases}
+\mathbb Z & k=0,2,4,\\
+\mathbb Z_2 & k=1,\\
+\mathbb Z_3 & k=3,\\
+0 & \text{otherwise}.
+\end{cases}
+\]
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions, statements, or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Let~\(M\) be an orientable simply-connected~\(3\)-manifold. Compute the integral homology of~\(M\).
+\item
+Compute \(\chi(\mathbb{RP}^2\times\mathbb{CP}^4\times S^4)\).
+\item
+Give an example of a space that is connected but not locally connected.
+\item
+State the Urysohn Lemma.
+\item
+Prove that if \(m\ne n\), then \(\mathbb R^m\) is not homeomorphic to \(\mathbb R^n\).
+\item
+Let \(\mathbb N\) be the set of natural numbers and let \(\mathbb N^*\) be its one-point compactification. Let~\(X\) be any topological space. Prove that a sequence \(\{a_n\}\) in~\(X\) converges to~\(a\) if and only if the map \(f:\mathbb N^*\to X\) defined by \(f(n)=a_n\) and \(f(\infty)=a\) is continuous. (Here \(\mathbb N\) has the discrete topology.)
+\item
+State the Borsuk–Ulam Theorem.
+\item
+Describe the possible connected covering spaces of \(S^1\times S^1\).
+\item
+Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample. 
+\[
+0\to\mathbb Z\to\mathbb Z\oplus\mathbb Z\to A\to 0
+\]
+\item
+Compute the integral homology of the space \(\mathbb{CP}^2\times\mathbb{RP}^3\).
+\end{examproblems}
+\end{document}

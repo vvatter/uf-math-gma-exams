@@ -1,0 +1,110 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, August 2025, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2025, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, August 2025, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Let \(f:[0,1]\to\mathbb{R}\) be Riemann integrable. Must the function~\(F\) defined on \([0,1]\) by \(F(x)=\int_0^x f(t)\,dt\) be continuous? Explain.
+\item[\textnormal{(ii)}]
+Let \(g:[0,1]\to\mathbb{R}\) be Lebesgue integrable. Must the function~\(G\) defined on \([0,1]\) by \(G(x)=\int_{[0,x]}g\,d\lambda\) be continuous (\(\lambda\): Lebesgue measure)? Explain.
+\end{examsubparts}
+\item
+Equip the set \(C[0,1]\) (comprising all continuous real-valued functions on the interval \([0,1]\)) with the sup metric and let 
+\[
+B=\{f\in C[0,1]:\sup|f|\leq 1\}
+\]
+ be its closed ball of radius one about the zero function. Is~\(B\) complete? Is~\(B\) compact? Explain.
+\item
+Assume that the continuous function \(f:[0,1]\to\mathbb{R}\) satisfies 
+\[
+\int_0^1 f(t)\cos(nt)\,dt=0
+\]
+ whenever~\(n\) is a non-negative integer. Does it follow that~\(f\) is the zero function? Proof or counterexample required.
+\item
+Let \((f_n)_{n=0}^{\infty}\) be a sequence of real-valued measurable functions on~\(\Omega\). Prove that if \((f_n)_{n=0}^{\infty}\) converges pointwise to \(f:\Omega\to\mathbb{R}\), then~\(f\) is measurable.
+\item
+The bounded function \(f:[0,1]\times[0,1]\to\mathbb{R}\) is continuous in each variable separately: thus, \(f(x,y)\) is continuous in~\(x\) for each fixed~\(y\) and continuous in~\(y\) for each fixed~\(x\). Prove the continuity of~\(F\) defined by 
+\[
+F(x)=\int_0^1 f(x,y)\,dy.
+\]
+\end{examproblems}
+\end{document}

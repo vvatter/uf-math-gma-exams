@@ -1,0 +1,129 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, September 2010},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2010\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, September 2010}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps.
+
+\par
+Attempt EIGHT problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f\in L^1[0,1]\). Suppose that 
+\[
+\int_0^1 x^n f(x)\,dx=0 \quad\text{for all } n=0,1,2,\ldots
+\]
+ Prove that \(f=0\) almost everywhere. (Hint: reduce the problem to showing that if \(\int_E f(x)\,dx=0\) for every Borel~\(E\), then \(f=0\) a.e.)
+\item
+Let \((X,\mathcal M,\mu)\) be a~\(\sigma\)-finite measure space, and let \(g:X\to\mathbb C\) be a measurable function. Prove that the operator \(M_g:f\mapsto gf\) is bounded on \(L^p(\mu)\) (\(1\leq p\leq\infty\)) if and only if \(g\in L^\infty(\mu)\), in which case \(\lVert M_g\rVert=\lVert g\rVert_\infty\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Define monotone class, and state the Monotone Class Theorem.
+\item[\textnormal{b)}]
+State the Fubini–Tonelli theorem.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Let~\(\nu\) be a signed measure on \((X,\mathcal M)\). Define what it means for a set to be positive, negative or null for~\(\nu\), and state the Hahn decomposition theorem.
+\item[\textnormal{b)}]
+Prove that if~\(\nu\) is a signed measure, then there exist unique positive measures \(\nu^+,\nu^-\) so that \(\nu=\nu^+-\nu^-\) and \(\nu^+\perp\nu^-\).
+\end{examsubparts}
+\item
+Let \((k_n)_{n=1}^\infty\) be a sequence of measurable, \(1\)-periodic functions on \(\mathbb R\) with the following properties:
+
+\par
+Prove that if \(f\in L^1[-\tfrac12,\tfrac12]\), then \(f*k_n\to f\) in \(L^1[-\tfrac12,\tfrac12]\).
+
+\par
+(Here \(*\) denotes convolution on \([-\tfrac12,\tfrac12]\): \((f*g)(x)=\int_{-1/2}^{1/2}f(t)g(x-t)\,dt\).)
+\begin{examsubparts}
+\item[\textnormal{a)}]
+\(k_n\geq 0\) a.e., for all~\(n\).
+\item[\textnormal{b)}]
+\(\displaystyle \int_{-1/2}^{1/2}k_n(t)\,dt=1\) for all~\(n\).
+\item[\textnormal{c)}]
+For each \(\delta>0\), \(k_n\to 0\) uniformly on the set \(\delta\leq |t|\leq\tfrac12\).
+\end{examsubparts}
+\end{examproblems}
+\begin{examinstructions}
+A second page was presumably part of the original exam, but it was not present in the exam archive.
+\end{examinstructions}
+\end{document}

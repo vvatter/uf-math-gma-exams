@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "id": "logic-phd-2017-may",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 2017,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Logic-2017_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer six questions, at least one in each section."
+    },
+    {
+      "type": "section",
+      "heading": "Section 1",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State and prove Tarski’s criterion for elementarity of submodels."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State and prove the downward Löwenheim–Skolem theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that the models \\(\\langle \\mathbb{Z},\\leq\\rangle\\) (integers with the usual ordering) and \\(\\langle \\mathbb{Z}+\\mathbb{Z},\\leq\\rangle\\) (two copies of integers with the usual ordering, one following the other) are elementarily equivalent."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Section 2",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that for any cardinal \\(\\kappa\\), the cofinality \\(\\operatorname{cf}(2^\\kappa)>\\kappa\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that the wellordering principle implies the Zorn’s lemma."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that a c.c.c. forcing preserves all cardinals."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Section 3",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that every infinite computably enumerable set has an infinite computable subset."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Show that there are two subsets of \\(\\omega\\) which are incomparable in the sense of the Turing ordering."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Explain what a \\(\\Pi^1_1\\) complete set is and provide an example with a proof."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    }
+  ]
+}

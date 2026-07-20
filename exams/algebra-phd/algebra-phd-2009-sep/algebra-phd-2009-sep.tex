@@ -1,0 +1,144 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, September 2009},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 2009\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, September 2009}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do seven of the following eleven problems. Do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs.
+
+\par
+In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+State and prove the Jordan–Hölder theorem for finite groups.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that the additive group of a field is never a free abelian group.
+\item[\textnormal{(b)}]
+Show that the multiplicative group of positive rational numbers is a free abelian group, and find a basis.
+\end{examsubparts}
+\item
+A category~\(C\) is small if its class of objects is a set, and skeletal if for all~\(X\) and~\(Y\) in~\(C\), \(X\simeq Y\) implies \(X=Y\). Show that any small category is equivalent to a skeletal one (choose an object from each isomorphism class).
+\item
+Let~\(R\) be a commutative ring.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for an~\(R\)-module~\(M\) to be flat.
+\item[\textnormal{(b)}]
+Show that the polynomial ring \(R[x]\), considered as an~\(R\)-module in the natural way, is flat.
+\end{examsubparts}
+\item
+Show that if~\(R\) is a commutative ring with identity and every prime ideal of~\(R\) is finitely generated, then~\(R\) is Noetherian.
+\item
+Show that for any extension \(A\to B\) of commutative rings, any~\(A\)-module~\(M\) and any~\(B\)-module~\(N\), there is an isomorphism 
+\[
+\operatorname{Hom}_B(M\otimes_A B,N)\simeq \operatorname{Hom}_A(M,N_A)
+\]
+ functorial in~\(M\) and~\(N\) (here \(N_A\) denotes~\(N\) considered as an~\(A\)-module by means of the ring homomorphism \(A\to B\)).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that if \(L/F\), \(K/L\) are finite separable extensions, then so is \(K/F\).
+\item[\textnormal{(b)}]
+Do the same for purely inseparable extensions.
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that if \(K/F\) is a normal extension and \(F\subseteq L\subseteq K\) is an intermediate field, then \(K/L\) is normal.
+\item[\textnormal{(b)}]
+Give an example where \(L/F\) is not normal.
+\item[\textnormal{(c)}]
+Give an example of normal extensions \(L/F\), \(K/L\) where \(K/F\) is not normal.
+\end{examsubparts}
+\item
+Let~\(p\) be a prime and~\(K\) be the splitting field over \(\mathbb Q\) of \(X^p-1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that~\(K\) contains a unique quadratic extension of \(\mathbb Q\).
+\item[\textnormal{(b)}]
+When is this quadratic extension real? (You may assume as known the structure of the Galois group of \(K/\mathbb Q\). hint: if~\(\zeta\) is a primitive~\(p\)th root of unity, complex conjugation sends \(\zeta\mapsto\zeta^{-1}\)).
+\end{examsubparts}
+\item
+Let~\(k\) be a field and~\(R\) a finite-dimensional~\(k\)-algebra. Show that if~\(R\) is semisimple as a ring, it is a direct sum of extension fields of~\(k\).
+\item
+Classify up to isomorphism all semisimple rings with \(720\) elements.
+\end{examproblems}
+\end{document}

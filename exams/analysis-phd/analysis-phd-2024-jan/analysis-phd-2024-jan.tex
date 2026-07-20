@@ -1,0 +1,141 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, January 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, January 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \((X,\mathcal{M},\mu)\) be a finite measure space. Let \((f_n)\) be a sequence of measurable functions and suppose that \(\sum_n \int |f_n|\,d\mu<\infty\). Consider the series \(\sum_n f_n(x)\). Does this series converge… Prove your claims.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+pointwise a.e.?
+\item[\textnormal{b)}]
+in measure?
+\item[\textnormal{c)}]
+in the \(L^1\) norm?
+\end{examsubparts}
+\item
+State Tonelli’s theorem, and give an example to show that the~\(\sigma\)-finiteness hypothesis is necessary.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Let~\(\nu\) be a signed measure on \((X,\mathcal{M})\). Define what it means for a set to be positive, negative or null for~\(\nu\), and state the Hahn decomposition theorem.
+\item[\textnormal{b)}]
+Prove that if~\(\nu\) is a signed measure, then there exist unique positive measures \(\nu^+,\nu^-\) so that \(\nu=\nu^+-\nu^-\) and \(\nu^+\perp\nu^-\).
+\end{examsubparts}
+\item
+Let \(\varphi_n:\mathbb{R}\to\mathbb{C}\) be a sequence of Lebesgue measurable functions and suppose that there is a number~\(M\) such that \(\|\varphi_n\|_\infty\le M\) for all~\(n\). Prove that if 
+\[
+\int_a^b \varphi_n(t)\,dt\to 0
+\]
+ for every interval \([a,b]\subset\mathbb{R}\), then 
+\[
+\int_{-\infty}^{\infty}\varphi_n(t)f(t)\,dt\to 0
+\]
+ for every \(f\in L^1(\mathbb{R})\).
+\item
+Let~\(\mu\) and~\(\nu\) be finite, positive measures defined on the same measurable space \((X,\mathcal{M})\), and suppose that \(\nu\ll\mu\).
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Prove that if \(L^1(\mu)\subset L^1(\nu)\), then the inclusion map \(\iota:L^1(\mu)\hookrightarrow L^1(\nu)\) is necessarily bounded.
+\item[\textnormal{b)}]
+Prove that if \(L^1(\mu)\subset L^1(\nu)\) then \(\frac{d\nu}{d\mu}\in L^\infty(\mu)\).
+\end{examsubparts}
+\item
+Let \(\mathcal{X},\mathcal{Y}\) be Banach spaces and \(T:\mathcal{X}\to\mathcal{Y}\) a linear map. Prove that if \(f\circ T\in\mathcal{X}^*\) for all \(f\in\mathcal{Y}^*\), then~\(T\) is bounded.
+\item
+Short answer.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Explain why there is no norm on \(c_{00}\) (the space of finitely nonzero sequences) which makes it into a Banach space.
+\item[\textnormal{b)}]
+Explain why there is no bounded, surjective linear map from \(c_0\) onto \(\ell^\infty\).
+\item[\textnormal{c)}]
+Explain why the norm in \(L^1(\mathbb{R})\) cannot be given by an inner product.
+\end{examsubparts}
+\item
+Let~\(H\) be a Hilbert space with orthonormal basis \(\{e_k\}_{k=1}^\infty\). Let \((h_n)\) be a sequence in~\(H\) and let \(h\in H\). Prove that the following statements are equivalent:
+\begin{examsubparts}
+\item[\textnormal{1)}]
+\(\langle h_n,g\rangle\to\langle h,g\rangle\) for all \(g\in H\).
+\item[\textnormal{2)}]
+\(\langle h_n,e_k\rangle\to\langle h,e_k\rangle\) for all \(k=1,2,\ldots\), AND \(\sup_n\|h_n\|<\infty\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

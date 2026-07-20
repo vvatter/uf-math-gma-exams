@@ -1,0 +1,124 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2014, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2014, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2014, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Give an example of each of the following.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+A non-trivial abelian group.
+\item[\textnormal{(b)}]
+A non-abelian simple group.
+\item[\textnormal{(c)}]
+A non-nilpotent solvable group.
+\item[\textnormal{(d)}]
+A non-abelian nilpotent group.
+\end{examsubparts}
+\item
+Let~\(G\) be a group and let \(g \in G\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what is meant by the order of~\(g\).
+\item[\textnormal{(b)}]
+Let~\(g\) have infinite order, and suppose that~\(N\) is a finite normal subgroup of~\(G\). Prove, from your definition, that the element \(gN \in G/N\) has infinite order.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for a subset of a group~\(G\) to generate~\(G\).
+\item[\textnormal{(b)}]
+Let~\(G\) be a group, and suppose \(|G| = 2^n\). Prove that there is a subset~\(S\) of cardinality~\(n\) such that~\(S\) generates~\(G\).
+\end{examsubparts}
+\item
+State and prove the Second Isomorphism Theorem for groups.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(S\) be a simple group and suppose that~\(S\) acts non-trivially on a finite set~\(A\) with \(|A| = n\). Prove that \(|S| \leq n!\).
+\item[\textnormal{(b)}]
+Suppose \(G = A_5\) (the alternating group on five letters) is acting on a set~\(A\) in such a way that no element of~\(A\) is fixed by every element of~\(G\). Suppose that \(|A| = 10\). Prove that~\(G\) has at most two orbits in its action on~\(A\).
+\end{examsubparts}
+\item
+State and prove the First Sylow Theorem.
+\end{examproblems}
+\end{document}

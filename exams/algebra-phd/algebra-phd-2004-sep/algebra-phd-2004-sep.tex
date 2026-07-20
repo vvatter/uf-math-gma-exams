@@ -1,0 +1,121 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, September 2004},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 2004\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, September 2004}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has four parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define concrete category.
+\item[\textnormal{(b)}]
+Define what it means for an object~\(F\) in a concrete category to be free on a set~\(S\).
+\item[\textnormal{(c)}]
+Given a set~\(S\), construct a free object on~\(S\) in the category of abelian groups.
+\item[\textnormal{(d)}]
+Given a set~\(S\), construct a free object on~\(S\) in the category of sets.
+\end{examsubparts}
+\item
+Let~\(F\) be a field, let~\(A\) be a central simple algebra over~\(F\), and let~\(B\) be a simple~\(F\)-algebra with 1. Prove that \(A\otimes_F B\) is simple.
+\item
+Use the Wedderburn–Artin Theorem to determine all isomorphism classes of semisimple rings of order \(720=2^4\cdot 3^2\cdot 5\).
+\item
+Let \(\zeta=e^{2\pi i/16}\) be a primitive 16th root of unity and let \(F=\mathbb{Q}(\zeta)\). Determine the Galois group \(G=\operatorname{Gal}(F/\mathbb{Q})\), and for each subgroup \(H\leq G\) determine the fixed field \(F^H\).
+\item
+Let~\(p\) be prime and let~\(n\) be a positive integer. Prove that there is a field \(\mathbb{F}_{p^n}\) with \(p^n\) elements, and that this field is uniquely determined up to isomorphism.
+\item
+Let \(G=\langle x,y:x^3=y^2,\ y^4=1\rangle\). Prove that~\(G\) is infinite and non-abelian.
+\item
+Give an example of a projective module which is not free. Justify your answer.
+\item
+Let~\(R\) be an Artinian commutative ring with 1. Prove that~\(R\) has only finitely many prime ideals, all of which are maximal.
+\item
+Let~\(R\) be a commutative ring with 1 and let~\(S\) be a multiplicative subset of~\(R\) which contains no zero divisors. Prove that there is a one-to-one correspondence between prime ideals of \(S^{-1}R\) and prime ideals~\(P\) of~\(R\) such that \(P\cap S=\varnothing\).
+\item
+Let~\(R\) be a commutative ring with 1.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if \(I_1\) and \(I_2\) are ideals in~\(R\) such that \(I_1\cap I_2=P\) is prime then either \(I_1=P\) or \(I_2=P\).
+\item[\textnormal{(b)}]
+Is the statement above still true if “prime” is replaced by “primary”? Justify your answer.
+\end{examsubparts}
+\item
+Let \(R\subset S\) be commutative rings with \(1_R=1_S\) such that~\(S\) is integral over~\(R\). Let~\(C\) be an algebraically closed field and let \(\phi:R\to C\) be a unitary ring homomorphism. Prove that there is a ring homomorphism \(\widetilde{\phi}:S\to C\) such that \(\widetilde{\phi}|_R=\phi\).
+\end{examproblems}
+\end{document}

@@ -1,0 +1,161 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, May 2008},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2008\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, May 2008}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer any 8 questions.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that any matrix has a singular value decomposition.
+\item
+Suppose~\(A\) and~\(B\) are square matrices such that \(AB\) is normal. Prove that \(\lVert AB\rVert_2\leq \lVert BA\rVert\) for any matrix norm \(\lVert\cdot\rVert\) induced by a vector norm (where \(\lVert\cdot\rVert_2\) denotes the spectral norm).
+\item
+Let the singular values of any matrix~\(M\) in \(\mathbb{C}^{m\times n}\) be denoted by \(\sigma_1(M)\geq \sigma_2(M)\geq\cdots\geq\sigma_q(M)\) with \(q=\min(m,n)\). Prove that if~\(A\) and~\(B\) are two matrices in \(\mathbb{C}^{m\times n}\), then 
+\[
+\sigma_{i+j-1}(A+B)\leq \sigma_i(A)+\sigma_j(B),
+\]
+ for all \(i,j=1,2,\ldots,q\) and \(i+j\leq q\).
+\item
+Let~\(T\) be any square matrix and let \(\lVert\cdot\rVert\) denote any induced norm. Prove that 
+\[
+\lim_{n\to\infty}\lVert T^n\rVert^{1/n}
+\]
+ exists and equals 
+\[
+\inf_{n=1,2,\ldots}\lVert T^n\rVert^{1/n}.
+\]
+\item
+Suppose \(\widetilde Q\) and \(\widetilde R\) are the Householder QR factors of a well conditioned square nonsingular matrix \(A=QR\), computed in a floating point number system of machine precision \(\varepsilon_{\mathrm{mac}}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State an algorithm in which you use \(\widetilde Q\) and \(\widetilde R\) to compute an approximation \(\widetilde x\) to the solution~\(x\) of \(Ax=b\).
+\item[\textnormal{(b)}]
+Let \(\lVert\cdot\rVert\) denote any vector norm as well as the matrix norm induced by it. Out of the following three statements A–C, pick one that is true, and prove it. (You may use the backward stability results that you know of without proof.)
+\begin{examsubparts}
+\item[\textnormal{A:}]
+\(\lVert\widetilde Q-Q\rVert=O(\varepsilon_{\mathrm{mac}})\).
+\item[\textnormal{B:}]
+\(\dfrac{\lVert\widetilde R-R\rVert}{\lVert R\rVert}=O(\varepsilon_{\mathrm{mac}})\).
+\item[\textnormal{C:}]
+\(\dfrac{\lVert\widetilde x-x\rVert}{\lVert x\rVert}=O(\varepsilon_{\mathrm{mac}})\).
+\end{examsubparts}
+\end{examsubparts}
+\item
+Let \(L_nf\) denote the Lagrange interpolant of \(f\in C^{n+1}[a,b]\) based on an equispaced partition \(a=x_0<x_1<\cdots<x_{n-1}<x_n=b\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State an error formula for \(f(x)-L_nf(x)\) in terms of Newton’s divided differences.
+\item[\textnormal{(b)}]
+Use \(L_nf\) to determine an approximation of the integral 
+\[
+\int_a^b f(x)\,dx
+\]
+ by a sum 
+\[
+\sum_{k=0}^n\omega_k f(x_k),
+\]
+ and find a formula for \(\omega_k\) in its simplest form.
+\item[\textnormal{(c)}]
+Show that \(\displaystyle\sum_{k=0}^n\omega_k=b-a\).
+\end{examsubparts}
+\item
+Consider the solution of the equation \(\tan x=4x/\pi\) in the interval \([0,\pi/2]\) (what is it?), and how it perturbs due to errors in evaluating the coefficient \(4/\pi\). Using Taylor expansion, give two expressions approximating the difference between the roots of \(\tan x-4x/\pi=0\) and \(\tan x-(\varepsilon+4/\pi)x=0\) in the interval \([0,\pi/2]\):
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+one in terms of a linear function of~\(\varepsilon\), and
+\item[\textnormal{(b)}]
+another in terms of a quadratic function of~\(\varepsilon\).
+\end{examsubparts}
+\item
+Let \(a=x_0<x_1<\cdots<x_{n-1}<x_n=b\) be a partition~\(P\) of the interval \([a,b]\) and \(f\in C^2[a,b]\). Define what is meant by saying that
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(S_c\) is the “natural” cubic spline on~\(P\) interpolating~\(f\), and
+\item[\textnormal{(b)}]
+\(S_n\) is the “not-a-knot” cubic spline on~\(P\) interpolating~\(f\).
+\item[\textnormal{(c)}]
+Show that \(S_n\) is a cubic polynomial on \([x_0,x_2]\).
+\end{examsubparts}
+\item
+Let \(x_0,x_1,\ldots,x_n\) be distinct points in a finite interval \([a,b]\) and \(f\in C^1[a,b]\). Show that for any given \(\varepsilon>0\) there exists a polynomial~\(p\) such that \(\lVert f-p\rVert_\infty<\varepsilon\) and \(p(x_i)=f(x_i)\) for all \(i=0,1,\ldots,n\) (where \(\lVert\cdot\rVert_\infty\) denotes the \(L^\infty(a,b)\)-norm).
+\item
+Let \(x_m\) and \(x_{m+1}\) be two successive (complex) iterates when Newton’s method is applied to a polynomial \(p(z)\) of degree~\(n\). Prove that there is a zero of \(p(z)\) in the disk 
+\[
+\{z\in\mathbb{C}:|z-x_m|\leq n|x_{m+1}-x_m|\}.
+\]
+\end{examproblems}
+\end{document}

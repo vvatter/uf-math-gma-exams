@@ -1,0 +1,122 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis First-Year Exam, January 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, January 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis First-Year Exam, January 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Derive the three-point formula for the second derivative 
+\[
+f''(x_0)=\frac{1}{h^2}\bigl(f(x_0-h)-2f(x_0)+f(x_0+h)\bigr)-\frac{h^2}{12}f^{(4)}(\eta),
+\]
+ for some \(\eta\in[x_0-h,x_0+h]\).
+\item
+Consider 
+\[
+y'=4ty;\qquad t\in[0,1];\qquad y(0)=2, \tag{1}
+\]
+ which has solution \(Y(t)=2e^{2t^2}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Derive an error bound for the forward Euler scheme.
+\item[\textnormal{(b)}]
+Derive the Taylor method of order 2 for (1).
+\end{examsubparts}
+\item
+Let \(\mathcal P_1\) be the space of polynomials of degree at most one. Using the norm 
+\[
+\lVert u\rVert_2=\left(\int_a^b u^2\,dx\right)^{1/2}.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the least-squares approximation to \(f(x)=x^3\) in \(\mathcal P_1\) over \([a,b]=[-1,1]\).
+\item[\textnormal{(b)}]
+Find the least-squares approximation to \(f(x)=x^4\) in \(\mathcal P_1\) over \([a,b]=[0,1]\).
+\end{examsubparts}
+\item
+Consider the fixed point problem \(x=f(x)\) where \(f(x)=e^{-(3+x)}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Assuming all computations are done in exact arithmetic, find the largest open interval in \(\mathbb R\) where the fixed point iteration \(x_{k+1}=f(x_k)\) is ensured to converge.
+\item[\textnormal{(b)}]
+Write a Newton iteration for finding the fixed point.
+\end{examsubparts}
+\item
+Suppose \(f\in C^{n+1}[a,b]\), and let \(p\in\mathcal P_n\) be a polynomial that interpolates the data \(\{(x_i,f(x_i))\}_{i=0}^n\), where \(x_0,\ldots,x_n\) are distinct points in \([a,b]\). Consider an arbitrary fixed \(x\in[a,b]\), and derive an exact expression for the error \(f(x)-p(x)\).
+\end{examproblems}
+\end{document}

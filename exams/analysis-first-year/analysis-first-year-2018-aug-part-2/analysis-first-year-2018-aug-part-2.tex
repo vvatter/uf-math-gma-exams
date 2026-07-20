@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, August 2018, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2018, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, August 2018, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let the sequence \((s_n)_{n=1}^{\infty}\) in \([0,1]\) be uniformly distributed in the sense that if \(0 \le a \le b \le 1\) then 
+\[
+\lim_{n\to\infty}\frac{\#\{k\le n:s_k\in[a,b]\}}{n}=b-a.
+\]
+ Let \(f:[0,1]\to\mathbb{R}\) and prove that 
+\[
+\lim_{n\to\infty}\frac{f(s_1)+\cdots+f(s_n)}{n}=\int_0^1 f(t)\,dt
+\]
+ in each of the following cases:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(f\) is a step function (a finite linear combination of indicators of intervals);
+\item[\textnormal{(ii)}]
+\(f\) is Riemann-integrable.
+\end{examsubparts}
+\item
+Fix \(a\in\mathbb{R}\) and for each integer \(n>0\) write \(f_n(t)=n^a t(1-t^2)^n\) whenever \(0\le t\le 1\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that \((f_n)_{n=1}^{\infty}\) converges pointwise on \([0,1]\); say to~\(f\).
+\item[\textnormal{(ii)}]
+For which values of~\(a\) does \((f_n)_{n=1}^{\infty}\) converge uniformly on \([0,1]\)? Justify.
+\item[\textnormal{(iii)}]
+For which values of~\(a\) is it true that \(\int_0^1 f_n\to\int_0^1 f\)? Justify.
+\end{examsubparts}
+\item
+Let \(f:[1,\infty)\to\mathbb{R}\) be continuous and satisfy \(\lim_{t\to\infty}f(t)=A\in\mathbb{R}\). Prove that there is a sequence \((p_n)_{n=0}^{\infty}\) of polynomials such that \(p_n(1/t)\) converges to \(f(t)\) uniformly for \(t\ge 1\).
+\item
+Let \((f_n)_{n=1}^{\infty}\) be a sequence of real-valued measurable functions. Prove that each of the following sets is measurable:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(B=\{\omega:(f_n(\omega))_{n=1}^{\infty}\text{ has no biggest term}\}\);
+\item[\textnormal{(ii)}]
+\(C=\{\omega:\cos(f_n(\omega))>0\text{ for each }n>0\}\);
+\item[\textnormal{(iii)}]
+\(D=\{\omega:(f_n(\omega))_{n=1}^{\infty}\text{ does not converge to a rational number}\}\).
+\end{examsubparts}
+\item
+State the Monotone Convergence Theorem. Use it to prove the following: let \((f_n)_{n=1}^{\infty}\) be a sequence of non-negative integrable functions with pointwise limit~\(f\); if \(\int f_n\,d\mu\le M<\infty\) for each~\(n\) then~\(f\) is integrable and \(\int f\,d\mu\le M\).
+\end{examproblems}
+\end{document}

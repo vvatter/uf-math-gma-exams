@@ -1,0 +1,93 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2018-aug-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2018,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA-5228-August-2018.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((a_n)_{n=0}^{\\infty}\\) be a sequence of positive real numbers. Prove that\n\\[\n1/\\limsup a_n=\\liminf(1/a_n)\n\\]\nin the sense that if one side lies in \\((0,\\infty)\\) then so does the other and the two sides are equal."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((a_n)_{n=0}^{\\infty}\\) be a sequence of real numbers and \\(A=\\{a_n:n\\geq 0\\}\\) its set of values. For \\(p\\) a real number, consider the two implications. One of these is true and the other false; give a proof for the true and a counterexample for the false."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "if \\(p\\) is a limit point of \\(A\\) then \\(p\\) is the limit of a subsequence of \\((a_n)_{n=0}^{\\infty}\\);",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "if \\(p\\) is the limit of a subsequence of \\((a_n)_{n=0}^{\\infty}\\) then \\(p\\) is a limit point of \\(A\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a compact metric space and let \\(f:X\\to X\\) be a continuous function. Prove that if \\(f\\) has no fixed points, then there exists \\(a>0\\) such that \\(d(x,f(x))\\geq a\\) whenever \\(x\\in X\\). Show by example that the compact hypothesis cannot be dropped."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that if \\(c\\) is any real number then the following subset of the Euclidean plane is connected\n\\[\n\\{(x,y):(x=\\pm 1)\\text{ or }(|x|<1\\text{ and }y\\geq c)\\}.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Let \\(C_0\\supseteq C_1\\supseteq\\cdots\\) be a decreasing sequence of closed, connected subsets of a metric space. If the intersection \\(\\bigcap_{n\\geq 0}C_n\\) is nonempty, must it be connected? Proof or counterexample.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:(0,\\infty)\\to\\mathbb{R}\\) be differentiable and assume that \\(f'(t)\\to 0\\) as the real number \\(t\\) tends to infinity. Show that if \\(f(n)\\to\\ell\\) as the integer \\(n\\) tends to infinity, then \\(f(t)\\to\\ell\\) as the real number \\(t\\) tends to infinity."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

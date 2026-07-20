@@ -1,0 +1,197 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Partial Differential Equations PhD Exam, May 2001},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/pde-phd/}{Partial Differential Equations PhD Exam}, May 2001\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Partial Differential Equations PhD Exam, May 2001}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do all problems 1–4. Choose one problem of 5 and 6 and one problem of 7 and 8.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(B\) be the unit ball in \(\mathbb{R}^3\). For which values of~\(\alpha\) does the function \(|x|^\alpha\) belong to \(H^1(B)\)? Justify your answer.
+\item
+Let \(U\subset\mathbb{R}^n\) be open and bounded. Let \(u_m\) and \(v_m\) be bounded sequences in \(H^1(U)\). Show that there exist subsequences \(u_{m_j}\) of \(u_m\) and \(v_{m_j}\) of \(v_m\), and functions \(u,v\in H^1(U)\), such that 
+\[
+\int_U u_{m_j}v_{m_j}\,dx\to\int_U uv\,dx,
+\]
+ and 
+\[
+\int_U D_{x_i}(u_{m_j}v_{m_j})\,dx\to\int_U D_{x_i}(uv)\,dx,\qquad i=1,\ldots,n,
+\]
+ as \(j\to\infty\).
+\item
+Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let \(u(x,t)\) be a smooth solution to the IBV problem: 
+\[
+u_t=\Delta u,\qquad (x,t)\in U_T,
+\]
+ 
+\[
+\frac{\partial u}{\partial n}=0,\qquad (x,t)\in\partial U\times[0,T],
+\]
+ 
+\[
+u(x,0)=f(x),\qquad x\in U.
+\]
+ Let 
+\[
+(u)_U(t)=\frac{1}{|U|}\int_U u(x,t)\,dx.
+\]
+ Show that the following statements hold.
+
+\par
+Hint: Consider the equation for \(v=u-(u)_U\), and use energy estimate for the equation of~\(v\), and Poincaré’s inequality.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\displaystyle \frac{d}{dt}(u)_U(t)\equiv0.\)
+\item[\textnormal{(b)}]
+\(u\to(u)_U\) in \(L^2(U)\), as \(t\to\infty\).
+\end{examsubparts}
+\item
+Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let~\(L\) be a uniformly elliptic differential operator of the form 
+\[
+Lu=-\sum_{i,j=1}^n a_{ij}u_{x_i x_j}.
+\]
+ Suppose that~\(f\) is a bounded function and \(u,v\in C^2(\overline U)\) satisfy 
+\[
+Lu=f,\qquad Lv\geq1,\qquad x\in U,
+\]
+ 
+\[
+u(x)=0,\qquad v(x)\geq0,\qquad x\in\partial U.
+\]
+ Suppose that there exists a point \(x_0\in\partial U\) such that \(v(x_0)=0\). Prove that there exists a constant \(C>0\) such that 
+\[
+|Du(x_0)|\leq C\left|\frac{\partial v}{\partial n}(x_0)\right|.
+\]
+\item
+Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\). We say that a function \(u\in H_0^2(U)\) is a weak solution of the biharmonic equation 
+\[
+\Delta^2u=f,\qquad x\in U, \tag{5.1}
+\]
+ 
+\[
+u=0,\qquad \frac{\partial u}{\partial n}=0,\qquad x\in\partial U, \tag{5.2}
+\]
+ if 
+\[
+\int_U\Delta u\,\Delta v\,dx=\int_U fv\,dx,\qquad\text{for any }v\in H_0^2(U). \tag{5.3}
+\]
+ Prove the following statements:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+For a given \(f\in L^2(U)\) there is an unique solution to the problem (5.3).
+\item[\textnormal{(b)}]
+If \(u\in C^4(\overline U)\) and \(f\in C^0(\overline U)\) satisfy (5.3), then~\(u\) satisfies (5.1) at each point \(x\in U\).
+\end{examsubparts}
+\item
+Let \(U\subset\mathbb{R}^n\) be open and bounded. Show that \(u\in H_0^1(U)\) is a weak solution to the boundary value problem 
+\[
+-\Delta u+u=1,\qquad x\in U,
+\]
+ 
+\[
+u=0,\qquad x\in\partial U,
+\]
+ if and only if~\(u\) minimizes 
+\[
+E(v)=\int_U\bigl(|\nabla v|^2+v^2-2v\bigr)\,dx
+\]
+ over \(v\in H_0^1(U)\).
+\item
+Let \(U\subset\mathbb{R}^n\) be open and bounded. We say \(v\in C^2(\overline U)\) is subharmonic if \(-\Delta v\leq0\) for all \(x\in U\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that for any subharmonic~\(v\), 
+\[
+v(x)\leq\frac{1}{|B(x,r)|}\int_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subset U.
+\]
+\item[\textnormal{(b)}]
+Let \(\phi:\mathbb{R}\to\mathbb{R}\) be smooth and convex. Suppose that~\(u\) is harmonic and \(v=\phi(u)\). Prove that~\(v\) is subharmonic.
+\end{examsubparts}
+\item
+Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Write the fundamental solution \(\Phi(x)\) of Laplace’s equation.
+\item[\textnormal{(b)}]
+Prove that for any point \(x\in U\) and any function \(u\in C^2(\overline U)\), 
+\[
+u(x)=\int_U\Phi(y-x)\Delta u(y)\,dy
++\int_{\partial U}\left[\Phi(y-x)\frac{\partial u}{\partial n}(y)-u(y)\frac{\partial\Phi}{\partial n}(y-x)\right]dS(y),
+\]
+ where~\(\Phi\) is the fundamental solution of Laplace’s equation, and~\(n\) is the outward unit normal to \(\partial U\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

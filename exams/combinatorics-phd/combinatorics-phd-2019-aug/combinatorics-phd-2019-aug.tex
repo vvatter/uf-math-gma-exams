@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, August 2019},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2019\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, August 2019}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+List the infinite families of symmetries of the standard square tiling of the plane. (No two families should have more than the identity in common.)
+\item
+Let \((v,b,r,k,\lambda)\) denote the number, respectively, of points, blocks, blocks containing a given point, points in each block, and blocks containing two distinct points of a balanced incomplete block design. Prove that 
+\[
+bk=vr
+\]
+ and 
+\[
+\lambda(v-1)=r(k-1).
+\]
+\item
+Let \(h_n\) be the number of all words over the alphabet \(\{A,B,C\}\) that are of length~\(n\) and in which a letter~\(A\) is never immediately followed by a letter~\(B\). Set \(h_0=1\). Find a closed form for the ordinary generating function 
+\[
+H(z)=\sum_{n\ge 0}h_nz^n.
+\]
+\item
+Let \(\ell_n\) be the total number of leaves in all unlabeled plane binary trees on~\(n\) vertices. (These trees are rooted, and each vertex has at most two children, and every child is either a left child or a right child, even if it is an only child.) Note that \(\ell_1=1\), \(\ell_2=2\), and \(\ell_3=6\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the generating function 
+\[
+L(z)=\sum_{n\ge 1}\ell_nz^n
+\]
+ in closed form.
+\item[\textnormal{(b)}]
+Find an explicit formula for the numbers \(\ell_n\).
+\end{examsubparts}
+\item
+Let \(t_n\) be the number of ways to choose a permutation of length~\(n\), and then to color a subset (not necessarily proper) of its even cycles red. Find a closed formula for the exponential generating function of the numbers \(t_n\).
+\item
+Recall that for a prime power~\(q\), the Gaussian or~\(q\)-binomial coefficient \(\left[\begin{smallmatrix}n\\k\end{smallmatrix}\right]_q\) is defined to be the number of~\(k\) dimensional subspaces of an~\(n\)-dimensional vector space over \(\mathrm{GF}(q)\). Equivalently, we can think of \(\left[\begin{smallmatrix}n\\k\end{smallmatrix}\right]_q\) as counting \(k\times n\) matrices over \(\mathrm{GF}(q)\) which are in reduced row echelon form and have no all-zero rows. Using either of these interpretations, prove that 
+\[
+\left[\begin{smallmatrix}n\\k\end{smallmatrix}\right]_q
+=
+\left[\begin{smallmatrix}n-1\\k\end{smallmatrix}\right]_q
++q^{n-k}\left[\begin{smallmatrix}n-1\\k-1\end{smallmatrix}\right]_q
+\]
+ for all \(n,k\ge 1\).
+\item
+Recall that \(R(k,\ell)\) is the minimum integer~\(n\) such that every graph on~\(n\) vertices contains either a clique (complete subgraph) on~\(k\) vertices or an independent set on~\(\ell\) vertices. Prove that \(R(k,\ell)\) is finite for all~\(k\) and~\(\ell\).
+\item
+Prove that \(R(k,k)>2^{k/2}\) for all~\(k\). Hint: Consider a random graph.
+\end{examproblems}
+\end{document}

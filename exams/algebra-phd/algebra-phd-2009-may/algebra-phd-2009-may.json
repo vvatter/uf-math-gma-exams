@@ -1,0 +1,214 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-2009-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2009,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2009_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer exactly seven of the following eleven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \\(\\mathbb Q\\) and \\(\\mathbb C\\) are the fields of rational numbers and complex numbers respectively."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal C\\) be a category, and denote by \\(\\mathrm{Set}\\) the category of sets."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Define what it means for a functor \\(F:\\mathcal C^{op}\\to\\mathrm{Set}\\) to be representable.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if \\(X,Y\\) are objects of \\(\\mathcal C\\) representing the same functor \\(F:\\mathcal C^{op}\\to\\mathrm{Set}\\), then \\(X\\simeq Y\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring with identity. Show that the following are equivalent:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Every unitary left \\(R\\)-module is projective,",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "every unitary left \\(R\\)-module is injective,",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "every exact sequence of unitary left \\(R\\)-modules splits.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "If \\(G\\) is a group, denote by \\(G^{ab}\\) the abelianization of \\(G\\), and if \\(X\\) is a set, denote by \\(F(X)\\) and \\(F^{ab}(X)\\) the free group on \\(X\\) and the free abelian group on \\(X\\) respectively. Show that \\(F(X)^{ab}\\simeq F^{ab}(X)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(K\\) be a field, \\(L=K(\\alpha)\\) a simple extension of \\(K\\), and \\(\\overline K\\) an algebraic closure of \\(K\\). Show that \\(\\alpha\\) is separable over \\(K\\) if and only if the ring \\(L\\otimes_K\\overline K\\) has no nonzero nilpotent elements."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that if \\(R\\) is a Noetherian commutative ring with identity, then \\(R[X]\\) is also Noetherian."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove Artin’s theorem on the linear independence of characters. and use it to prove the multiplicative form of Hilbert’s Theorem 90."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p(x)=x^7-3\\in\\mathbb Q[x]\\), \\(\\zeta\\in\\mathbb C\\) a primitive \\(7\\)-th root of \\(1\\), and \\(K\\) the splitting field of \\(p(x)\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Compute the Galois group of \\(K/\\mathbb Q\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Compute the Galois group of \\(K/\\mathbb Q(\\zeta)\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Give an example of extensions \\(E/L\\), \\(L/K\\) where \\(E/K\\) is normal and \\(L/K\\) is not.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Give an example of normal extensions \\(L/K\\), \\(E/L\\) such that \\(E/K\\) is not normal.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a Dedekind domain, and let \\(I\\) be a non-zero ideal of \\(R\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that \\(R/I\\) is Artinian.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that if a Dedekind domain is Artinian then it is a field.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that if \\(L/K\\) is any extension of fields, there is an algebraically independent set \\(\\{\\alpha_i\\}_{i\\in I}\\) of elements of \\(L\\) such that \\(L\\) is algebraic over \\(K(\\alpha_i,i\\in I)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(k\\) be a field. A \\(k\\)-algebra \\(R\\) is central if the image of the structure map \\(k\\to R\\) is in the center of \\(R\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Suppose \\(D\\) is a central \\(k\\)-algebra that is a division algebra (in particular, \\(D\\) is a \\(k\\)-vector space). Show that if \\(k\\) is algebraically closed and \\(D\\) has finite dimension as a \\(k\\)-vector space, then \\(D=k\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Use this result to show that if \\(k\\) is algebraically closed and \\(R\\) is a central \\(k\\)-algebra that is semisimple and of finite dimension over \\(k\\), then \\(R\\) is a product of matrix algebras over \\(k\\).",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-2002-sep",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2002,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2002_09.pdf",
+  "content": [
+    {
+      "type": "section",
+      "heading": "I",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State the following theorems."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Egorov theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Lebesgue theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The dual of \\(L^p(\\mu)\\), \\(1\\leq p<\\infty\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Fubini theorem for \\(\\mu\\times\\nu\\)-integrable functions."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Riesz representation theorem (of linear continuous functionals on the space \\(C(K)\\) of continuous functions on a compact space \\(K\\))."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "II",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State and prove one of the following 2 theorems."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The representation of the dual of \\(L^1(\\mu)\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Fubini theorem for \\(\\mathcal S\\times\\mathcal T\\)-measurable functions."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "III",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Solve the following problems."
+        },
+        {
+          "type": "instructions",
+          "text": "Let \\((X,\\Sigma,\\mu)\\) be a measure space and \\(E\\) a Banach space."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Assume \\(\\mu\\) is finite. Let \\(\\mathcal F\\subset\\Sigma\\) be a sub-\\(\\sigma\\)-algebra. Prove the existence of the conditional expectation \\(E(f\\mid\\mathcal F)\\) for functions \\(f\\in L_E^1(\\mu)\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(\\mathcal R\\subset\\Sigma\\) be an algebra generating \\(\\Sigma\\) and \\(f\\in L_E^1(\\mu)\\). Prove that there is a sequence \\((f_n)\\) of \\(\\mathcal R\\)-step functions converging to \\(f\\), \\(\\mu\\)-a.e., and in the mean."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(\\mathcal R\\subset\\Sigma\\) be an algebra generating \\(\\Sigma\\) and \\(f\\in L_E^1(\\mu)\\). Prove that if \\(\\int_A f\\,d\\mu=0\\) for every \\(A\\in\\mathcal R\\), then \\(f=0\\), \\(\\mu\\)-a.e."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Assume \\(\\mu\\) is finite and let \\(f_n\\in L_E^1(\\mu)\\), \\(n=1,2,\\ldots\\). Prove that if \\(f_n\\to f\\) uniformly, then \\(f\\in L_E^1(\\mu)\\) and \\(f_n\\to f\\) in the mean."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\((X,\\mathcal S)\\), \\((Y,\\mathcal T)\\) be measurable spaces, and let \\(\\mu:\\mathcal S\\to\\mathbb R\\) and \\(\\nu:\\mathcal T\\to\\mathbb R\\) be \\(\\sigma\\)-additive measures. Prove the existence of the product measure \\(\\mu\\times\\nu\\) and the equality \\(\\lvert\\mu\\times\\nu\\rvert=\\lvert\\mu\\rvert\\times\\lvert\\nu\\rvert\\)."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "instructions",
+      "text": "Note. Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences. Write complete statements of theorems (including the framework)."
+    }
+  ]
+}

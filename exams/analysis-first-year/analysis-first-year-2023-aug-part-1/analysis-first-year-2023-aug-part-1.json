@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2023-aug-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2023,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2023_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the nonempty subsets \\(A \\subseteq \\mathbb{R}\\) and \\(B \\subseteq \\mathbb{R}\\) be bounded above; define \\(A+B=\\{a+b:a\\in A,b\\in B\\}\\) and \\(AB=\\{ab:a\\in A,b\\in B\\}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that \\(\\sup(A+B)=\\sup A+\\sup B\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show by example that ‘\\(\\sup(AB)=\\sup A\\sup B\\)’ can fail to hold.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(U\\) be an open subset of a metric space and let \\(A\\) be an arbitrary subset of the same space. Prove that when closures are taken in this same space,\n\\[\nU\\cap\\overline{A}\\subseteq\\overline{U\\cap A}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that the square-root function \\(f:[0,\\infty)\\to[0,\\infty):t\\mapsto\\sqrt{t}\\) is uniformly continuous."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((X,d)\\) be a compact metric space and \\(f:X\\to X\\) a continuous function. Prove that if \\(f\\) has no fixed point (that is, there exists no \\(p\\in X\\) such that \\(f(p)=p\\)) then \\(d(x,f(x))\\geq m\\) for some \\(m>0\\) and all \\(x\\in X\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the real-valued function \\(f\\) be continuous on \\([0,\\infty)\\) and differentiable on \\((0,\\infty)\\); assume that \\(f(0)=0\\) and that the derivative \\(f'\\) is increasing. Prove that \\(F:(0,\\infty)\\to\\mathbb{R}\\) defined by \\(F(x)=f(x)/x\\) is increasing in the same sense (weakly or strictly)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

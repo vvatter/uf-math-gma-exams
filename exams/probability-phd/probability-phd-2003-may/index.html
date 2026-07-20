@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Probability PhD Exam, May 2003</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Probability PhD Exam, May 2003</h1>
+    </header>
+    <div class="instructions">
+      <p>Write clearly. State precisely results you use. Do not omit steps.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \((\overline X_m)_{m=1}^{\infty}\) be an i.i.d. sequence of real valued variables on \((\Omega,\mathcal F,P)\). Let \(\mathcal F_m=\sigma(\overline X_1,\ldots,\overline X_m)\). Put \(S_m=\overline X_1+\cdots+\overline X_m\), for \(m\geq1\), and put \(S_0=0\). Which of the following sequences are martingales relative to \(\mathcal F_m\)? For those which are not martingales with respect to this filtration, what conditions have to be added to make them martingales?</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>\(S_m\), \(m=0,1,2,\ldots\), \(E[|\overline X_1|]&lt;\infty\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>\(\overline X_1^2+\cdots+\overline X_m^2-m\lambda\), \(m=1,2,\ldots\), \(E(\overline X_1^2)&lt;\infty\), \(\lambda\) real.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">c)</span>
+              <div class="subpart-body">
+                <p>\(\exp(\alpha S_m-m\lambda)\), \(m=0,1,2,\ldots\), where \(\varphi(\alpha)=E[\exp(\alpha\overline X_1)]&lt;\infty\), \(\alpha,\lambda\) real.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">d)</span>
+              <div class="subpart-body">
+                <p>\(\overline Y_m=S_{\min(m,T)}\), \(m=0,1,2,\ldots\), where \(P(\overline X_1=\pm1)=\frac12\) and \(T=\min\{n&gt;0:S_n=0\}\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(\{\alpha_m\}_{m=1,2,\ldots}\) be a sequence of probability measures on \(\mathbb R\). Show the following are equivalent:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>There exists a probability measure \(\alpha\) on \(\mathbb R\) such that \(\lim_{m\to\infty}\alpha_m(I)=\alpha(I)\) for all closed intervals \(I\) on \(\mathbb R\) whose end points are continuity points of \(\alpha\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>If \(\{F_m\}\), respectively \(F\), are the distribution functions of \(\{\alpha_m\}\), respectively \(\alpha\), then \(\lim_{m\to\infty}F_m(x)=F(x)\) at every point \(x\) of continuity of \(F\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(\{\alpha_m\}_{m=1,2,\ldots}\) be a sequence of probability measures on \(\mathbb R\), and let \(\{\varphi_m(t)\}_{m=1,2,\ldots}\) be the corresponding characteristic functions. Assume that \(\lim_{m\to\infty}\varphi_m(t)=\varphi(t)\) for all \(t\in\mathbb R\), and \(\varphi(t)\) is continuous at \(t=0\). Prove that \(\varphi(t)\) is the characteristic function of some probability measure and that the conditions of Problem 2 hold.</p>
+      </li>
+      <li class="problem">
+        <p>If \(\overline X\) is a real valued random variable, show that for \(0&lt;\varepsilon&lt;1\),</p>
+        <div class="display-math">\[
+E\left[\frac{|\overline X|}{1+|\overline X|}\right]\leq \varepsilon+P[|\overline X|&gt;\varepsilon]
+\]</div>
+        <p>and that</p>
+        <div class="display-math">\[
+P(|\overline X|&gt;\varepsilon)\leq\frac{1+\varepsilon}{\varepsilon}E\left[\frac{|\overline X|}{1+|\overline X|}\right].
+\]</div>
+        <p>Deduce that the set of real valued random variables on a given probability space can (with suitable identification) be regarded as a metric space if the distance between two random variables \(\overline X\) and \(\overline Y\) is defined to be</p>
+        <div class="display-math">\[
+d(\overline X,\overline Y)=E\left[\frac{|\overline X-\overline Y|}{1+|\overline X-\overline Y|}\right],
+\]</div>
+        <p>and that convergence in this metric space corresponds to convergence in probability.</p>
+      </li>
+      <li class="problem">
+        <p>This problem has three parts.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>Let \(\overline X_m\), \(m=1,2,\ldots\), be i.i.d., \(\overline X_m&gt;0\), \(E[\overline X_m]=1\), and \(\overline Y_m=\prod_{k=1}^m\overline X_k\). Prove that \(\overline Y_m\) is a martingale relative to the filtration \(\mathcal F_m=\sigma(\overline X_1,\ldots,\overline X_m)\). Show that \(\lim_{m\to\infty}\overline Y_m=\overline Y_\infty\) exists a.s.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>Show that \(P[\overline Y_\infty=0]=0\) or \(1\).</p>
+                <p>Hint: Recall infinite products and the zero-one law.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">c)</span>
+              <div class="subpart-body">
+                <p>Using b), show that</p>
+                <div class="display-math">\[
+E[\overline Y_\infty]=1\quad\Longleftrightarrow\quad P[\overline Y_\infty&gt;0]=1.
+\]</div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(\overline X_m\), \(m=1,2,\ldots\), be a supermartingale such that</p>
+        <div class="display-math">\[
+E[|\overline X_{m+1}-\overline X_m|\mid\mathcal F_m]&lt;M\quad\text{a.s.}
+\]</div>
+        <p>Show that for any two optional times \(S\leq T\), \(E[T]&lt;\infty\), we have \(E[|\overline X_T|]&lt;\infty\) and</p>
+        <div class="display-math">\[
+E(\overline X_T\mid\mathcal F_S)\leq\overline X_S.
+\]</div>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Probability PhD Exams</a></li>
+        <li><a href="probability-phd-2003-may.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

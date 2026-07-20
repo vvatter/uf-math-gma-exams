@@ -1,0 +1,105 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, August 2016, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2016, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, August 2016, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer exactly FOUR questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \((a_n)_{n=1}^{\infty}\) and \((b_n)_{n=1}^{\infty}\) be bounded real sequences and let \((c_n)_{n=1}^{\infty}\) be the sequence 
+\[
+a_1,b_1,a_2,b_2,\ldots
+\]
+ Prove that 
+\[
+\limsup_{n\to\infty}c_n\leq \max\left(\limsup_{n\to\infty}a_n,\limsup_{n\to\infty}b_n\right)
+\]
+ and that if \((a_n)_{n=1}^{\infty}\) and \((b_n)_{n=1}^{\infty}\) converge to~\(\gamma\), then so does \((c_n)_{n=1}^{\infty}\).
+\item
+State the definition of a perfect set and prove that the standard Cantor set in \([0,1]\) is a perfect set.
+\item
+Let \(f:X\to Y\) be a map between metric spaces and let 
+\[
+G_f=\{(x,f(x)):x\in X\}\subseteq X\times Y
+\]
+ be its graph. Prove that if \(G_f\) is compact then~\(f\) is continuous.
+\item
+Let~\(f\) be a uniformly continuous real-valued function on the bounded open interval \((a,b)\). Prove that the real limit \(\lim_{t\to b^-}f(t)\) exists. Show by example that we may not replace uniformly by bounded without jeopardizing this conclusion.
+\item
+Let the real-valued function~\(f\) be continuous on \([0,2]\) and twice-differentiable on \((0,2)\). Assume that \(f(0)=0\), that \(f(1)=1\), and that \(f(2)=2\). Prove that there exists \(u\in(0,2)\) such that \(f''(u)=0\).
+\end{examproblems}
+\end{document}

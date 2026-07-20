@@ -1,0 +1,130 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, May 2025, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2025, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, May 2025, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+For the first five problems, show all your work and support all statements.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(p:E\to B\) be a covering map, and let \(p(e_0)=b_0\). Define the map \(\Phi:\pi_1(B,b_0)\to p^{-1}(b_0)\) which gives the lifting correspondence. Prove that~\(\Phi\) is surjective if~\(E\) is path connected, and bijective if~\(E\) is simply connected.
+\item
+Prove that \(\pi_1(S^1,1)\cong\mathbb{Z}\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the Hawaiian earring space, \(H\).
+\item[\textnormal{(b)}]
+Show the images of the generators of the fundamental groups of the circles do not generate the fundamental group of~\(H\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define surface.
+\item[\textnormal{(b)}]
+Compute the fundamental group of the connected sum of a torus and second torus \(T^2\mathbin{\#}T^2\).
+\end{examsubparts}
+\item
+Let~\(X\) be the quotient space obtained from an 8-sided polygonal region~\(P\) by pasting its edges together according to the labeling scheme \(abcdc^{-1}a^{-1}db\). It turns out that all vertices of~\(P\) are mapped to the same point of the quotient space~\(X\) by the pasting map. Calculate \(H_1(X)\), and using this, determine which compact surface~\(X\) is homeomorphic to.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Tietze Extension Theorem.
+\item
+Show that if \(h,h':X\to Y\) are homotopic and \(k,k':Y\to Z\) are homotopic, then \(k\circ h\) and \(k'\circ h'\) are homotopic.
+\item
+Let~\(E\) and~\(B\) be topological spaces. Define what it means for a function \(p:E\to B\) to be a covering map.
+\item
+If \(j:A\hookrightarrow X\) is the inclusion of a retract, then show that the induced map on fundamental groups is injective.
+\item
+Let~\(\alpha\) be a path in~\(X\) from \(x_0\) to \(x_1\). Define the map \(\hat{\alpha}:\pi_1(X,x_0)\to\pi_1(X,x_1)\) and show that \(\hat{\alpha}\) is a group isomorphism.
+\item
+State the Seifert–van Kampen Theorem.
+\item
+Let \(S^n\) be the~\(n\)-sphere. Prove that \(\pi_1(S^n)\) is trivial for \(n\geq 2\).
+\item
+State the Borsuk–Ulam Theorem for \(S^2\).
+\item
+State the Brouwer Fixed Point Theorem for the disk.
+\item
+Give an example of a topological space whose fundamental group is \(\mathbb{Z}/3\mathbb{Z}\). Give an example of a topological space whose fundamental group is \(\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}\).
+\end{examproblems}
+\end{document}

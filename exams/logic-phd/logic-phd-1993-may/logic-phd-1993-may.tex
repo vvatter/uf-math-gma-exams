@@ -1,0 +1,117 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Logic PhD Exam, May 1993},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 1993\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Logic PhD Exam, May 1993}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment.
+\end{examinstructions}
+\section{1. General Logic}
+\begin{examproblems}{0}
+\item
+State Gödel’s incompleteness theorem. Explain the importance of Gödel numbering.
+\item
+State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.
+\item
+Prove that if~\(T\) is a countable theory with arbitrarily large finite models then~\(T\) has an infinite model.
+\end{examproblems}
+\section{2. Model Theory}
+\begin{examproblems}{0}
+\item
+State and sketch the proof of the Łoś theorem on ultraproducts.
+\item
+State and sketch a proof of the elementary substructure version of the downward Löwenheim–Skolem Theorem.
+\item
+Prove that the theory of dense linear orders without endpoints is complete.
+\end{examproblems}
+\section{3. Set Theory}
+\begin{examproblems}{0}
+\item
+Prove that the well ordering principle implies the axiom of choice.
+\item
+Prove, using the axioms of ZFC, that if~\(X\) is any set then the transitive closure of~\(X\) is also a set.
+\item
+Show that a countable union of countable sets is countable, pointing out any use of the axiom of choice.
+\end{examproblems}
+\section{4. Recursion Theory}
+\begin{examproblems}{0}
+\item
+Show that a function \(\phi:\omega\longrightarrow\omega\) is (partial) recursive iff its graph is recursively enumerable, and that if~\(\phi\) is total and recursive then its graph is recursive.
+\item
+State the halting problem, and show that it is undecidable. You may use the fact that there is a recursive enumeration of the (partial) recursive functions.
+\item
+Show that if \(A\ne\varnothing\) is the domain of a partial recursive function~\(f\) then there is a total recursive function~\(g\) such that~\(A\) is the range of~\(g\).
+\end{examproblems}
+\end{document}

@@ -1,0 +1,138 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2020},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2020\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2020}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+
+\par
+Below, ring means associative ring with identity, and module means unital module unless otherwise specified.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(q>1\) be a power of a prime~\(p\). Prove that there exists some field~\(F\) with \(|F|=q\).
+\item
+Let~\(F\) be the splitting field of \(p(x)=x^3+5x+5\) over~\(\mathbb{Q}\). Prove that there is a unique intermediate field~\(K\) such that \(K\ne\mathbb{Q}\), \(K\ne F\), and \(K/\mathbb{Q}\) is Galois.
+\item
+Let~\(A\) be a commutative ring with identity. Suppose that~\(P\) and~\(Q\) are projective~\(A\)-modules. Prove that \(P\otimes_A Q\) is a projective~\(A\)-module.
+\item
+Let~\(\mathcal{C}\) be a concrete category. Define what is meant by a free object in~\(\mathcal{C}\). Let~\(\mathcal{G}\) be the category of all finite groups. Prove that the free objects in~\(\mathcal{G}\) are exactly the trivial groups.
+\item
+Let~\(R\) be a ring. Prove that the following two conditions are equivalent for a left~\(R\)-module~\(P\). (You may not assume any properties of projective modules.)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Every short exact sequence of~\(R\)-modules 
+\[
+0\to A\to B\to P\to 0
+\]
+ splits;
+\item[\textnormal{(b)}]
+There is a free~\(R\)-module~\(F\) and an~\(R\)-module~\(K\) such that \(F\simeq K\oplus P\).
+\end{examsubparts}
+\item
+Give an example of a polynomial \(f(X)\in\mathbb{Q}[X]\) whose Galois group is isomorphic to \(S_5\). Prove that this is the case.
+\item
+Prove: if a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: prove first that each prime ideal is principal, use the Chinese Remainder Theorem.)
+\item
+Let~\(R\) be an integral domain with field of fractions~\(K\). For \(a\in K\), let \(D(a)=\{r\in R\mid ra\in R\}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(D(a)\) is an ideal and that \(D(a)=R\) if and only if \(a\in R\).
+\item[\textnormal{(b)}]
+For each prime ideal~\(P\), let \(R_P\) denote the elements of~\(K\) which can be represented as a fraction having denominator not in~\(P\). Show that \(a\in R_P\) if and only if \(D(a)\nsubseteq P\).
+\item[\textnormal{(c)}]
+Deduce that \(\bigcap_P R_P=R\), where the intersection is taken over the maximal ideals of~\(R\).
+\end{examsubparts}
+\item
+For this question you may not quote Nakayama’s Lemma. Let~\(R\) be a commutative local ring with~\(1\) and~\(J\) its unique maximal ideal.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(1-j\) is a unit for every \(j\in J\).
+\item[\textnormal{(b)}]
+Show that if~\(A\) is a finitely generated~\(R\)-module such that \(JA=A\), then \(A=0\). (Hint: Consider a generating set for~\(A\) of minimal size and derive a contradiction.)
+\end{examsubparts}
+\item
+Let~\(R\) be a ring (possibly non-commutative, and possibly without identity). Let~\(M\) be an irreducible left~\(R\)-module. Let \(D=\operatorname{End}_R(M)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove \(D=\operatorname{End}_R(M)\) is a division ring. (You may NOT assume Schur’s Lemma for this.)
+\item[\textnormal{(b)}]
+Give an example of a ring~\(R\) and an irreducible module~\(M\) such that~\(D\) is not commutative.
+\end{examsubparts}
+\item
+Classify (up to ring isomorphism) all semisimple rings of order \(720\).
+\end{examproblems}
+\end{document}

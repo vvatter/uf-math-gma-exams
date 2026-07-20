@@ -1,0 +1,166 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, August 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, August 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, August 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(X=\mathbb{R}/\mathbb{Z}\) be the quotient space obtained from the real line~\(\mathbb{R}\) by collapsing the set of integers to a point.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Is~\(X\) metrizable?
+\item[\textnormal{(b)}]
+Does~\(X\) admit a CW complex structure?
+\item[\textnormal{(c)}]
+Compute the fundamental group of~\(X\).
+\item[\textnormal{(d)}]
+Compute homology groups of~\(X\).
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that the 3-dimensional real projective space \(\mathbb{R}P^3\) is orientable.
+\item[\textnormal{(b)}]
+Does there exist a degree 2 continuous map \(f:\mathbb{R}P^3\to T^3\) where \(T^3=S^1\times S^1\times S^1\) is a 3-dimensional torus?
+\item[\textnormal{(c)}]
+Does there exist a degree 2 continuous map \(f:T^3\to\mathbb{R}P^3\)?
+\end{examsubparts}
+\item
+Let \(A\subset\mathbb{R}^2\) be an infinite countable subspace.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Can~\(A\) be connected?
+\item[\textnormal{(b)}]
+Is \(\mathbb{R}^2\setminus A\) connected?
+\end{examsubparts}
+\item
+Does there exist a closed orientable~\(n\)-manifold~\(M\) with
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(n=4\) and \(H_2(M)=\mathbb{Z}\)?
+\item[\textnormal{(b)}]
+\(n=5\) and \(H_3(M)=\mathbb{Z}\)?
+\item[\textnormal{(c)}]
+\(n=6\) and \(H_3(M)=\mathbb{Z}\)?
+\end{examsubparts}
+\item
+Prove that the fundamental group of a topological group is abelian.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Compute the Euler characteristic of the manifold \(M=\mathbb{H}P^3\times\mathbb{C}P^4\times\mathbb{R}P^5\).
+\item
+State the Lefschetz Fixed Point Theorem. Derive the Brouwer Fixed Point Theorem from the Lefschetz Fixed Point Theorem.
+\item
+State the Baire Category Theorem.
+\item
+Suppose that~\(A\) is a retract of~\(X\). Show that \(H_i(A)\) is a direct summand of \(H_i(X)\).
+\item
+Give the definition of the mapping cylinder. Is the Möbius band a mapping cylinder?
+\item
+Is the 2-sphere \(S^2\) with~\(k\) points removed homeomorphic to a topological group for
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(k=1\)?
+\item[\textnormal{(b)}]
+\(k=2\)?
+\item[\textnormal{(c)}]
+\(k=3\)?
+\end{examsubparts}
+\item
+Give the definition of the mapping cone. Is there a map \(f:X\to Y\) with the mapping cone \(C_f\) homeomorphic to \(\mathbb{R}P^3\)?
+\item
+Which of the following spaces are topological groups?
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+the torus \(T^2\);
+\item[\textnormal{(b)}]
+the Klein bottle~\(K\);
+\item[\textnormal{(c)}]
+the projective space \(\mathbb{R}P^3\).
+\end{examsubparts}
+\item
+Is \(\mathbb{R}^{\omega}\) connected in the uniform topology?
+\item
+State the Five Lemma.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, August 2016, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2016, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, August 2016, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Put your answers in numerical order. Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(R=\mathbb{Z}[\sqrt{-5}]\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Calculate the set of units of~\(R\).
+\item[\textnormal{(b)}]
+Prove that~\(R\) is not a unique factorization domain.
+\item[\textnormal{(c)}]
+Prove that \((2,1+\sqrt{-5})\) is a maximal ideal of~\(R\).
+\end{examsubparts}
+\item
+Let~\(R\) be an integral domain, let \(P\subseteq R\) be a prime ideal, and let \(F=\operatorname{Frac}(R)\) be the field of fractions of~\(R\). Define 
+\[
+R_P=\left\{\frac{a}{b}:a,b\in R\text{ and }b\notin P\right\}.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(R_P\) is a subring of~\(F\).
+\item[\textnormal{(b)}]
+Suppose now that \(R=\mathbb{Z}\) and \(P=(5)\). Is \(R_P\) isomorphic to~\(\mathbb{Z}\)? Justify your answer.
+\end{examsubparts}
+\item
+Suppose~\(R\) is a commutative ring with identity, and \(S\subseteq R\) is a multiplicative subset, i.e. \(0\notin S\), \(1\in S\), and \(a,b\in S\) implies \(ab\in S\). Show that there is a prime ideal \(P\subseteq R\) such that \(P\cap S=\varnothing\).
+\item
+Let~\(F\) be a field, and let~\(K\) be a field extension of~\(F\). Suppose that \(u\in K\), that \(u^3\in F\), and that \([F(u):F]\) is relatively prime to~\(6\). Prove that \(u\in F\).
+\item
+For this question do not assume that rings are necessarily commutative or that they necessarily have an identity. Likewise, do not assume that ring homomorphisms necessarily send the identity of the first ring to the identity of the second.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(R\) be a ring. Prove that~\(R\) can not have more than one identity.
+\item[\textnormal{(b)}]
+Let~\(R\), and~\(S\) be rings and let \(\phi:R\to S\) be a surjective ring homomorphism. Suppose that \(e\in R\) is the identity of~\(R\). Prove that \(\phi(e)\) is the identity of~\(S\).
+\item[\textnormal{(c)}]
+Let~\(R\), and~\(S\) be rings and let \(\phi:R\to S\) be a ring homomorphism. Suppose that \(e\in R\) is the identity of~\(R\), and that~\(S\) is an integral domain, and that \(\phi(e)\ne 0\). Show that \(\phi(e)\) is the identity of~\(S\).
+\item[\textnormal{(d)}]
+Give an example of rings~\(R\) and~\(S\) both with identity and a ring homomorphism \(\phi:R\to S\) such that \(e\in R\) is the identity of~\(R\), \(f\in S\) is the identity of~\(S\), and \(\phi(e)\notin\{0,f\}\).
+\end{examsubparts}
+\item
+Let \(\mathbb{F}_2\) be the field of~\(2\) elements, and let~\(V\) be a vector space of dimension~\(3\) over \(\mathbb{F}_2\). Calculate a set of representatives up to similarity for the linear transformations \(\phi\in\operatorname{End}(V)\) of determinant~\(0\) whose eigenvalues are either~\(0\) or primitive 3-rd roots of~\(1\).
+\end{examproblems}
+\end{document}

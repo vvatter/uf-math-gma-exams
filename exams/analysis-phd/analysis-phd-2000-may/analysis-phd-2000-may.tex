@@ -1,0 +1,104 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 2000},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2000\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 2000}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Be sure to write all proofs in a neat and logical fashion. Give reasons for all steps!
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+State and prove the Vitali Convergence Theorem for integrals.
+\item
+State and prove the Martingale Convergence Theorem.
+\item
+Let \((X,\mathcal B,\mu)\) and \((Y,\mathcal J,\nu)\) be finite measure spaces. Construct \(\mu\otimes\nu\) on \(\mathcal B\otimes\mathcal J\). Give details.
+\item
+Let \(\{\mu_m\}\) be a sequence of real valued signed measures on \((S,\Sigma)\). Define 
+\[
+\lambda(A)=\sum_{m=1}^{\infty}\frac{1}{2^m}\frac{|\mu_m|(A)}{1+|\mu_m|(S)},\qquad A\in\Sigma.
+\]
+ Show~\(\lambda\) is a finite measure on~\(\Sigma\) and \(\mu_m\overset{\varepsilon-\delta}{\ll}\lambda\) for each~\(m\).
+\item
+Let \(f:[0,b]\to\mathbb R\) be Lebesgue integrable. Suppose \(\int_{[0,c]}f\,dm=0\) for each \(c\in[0,b]\). Show \(f=0\) a.e. \(m\).
+\item
+Let \((\Omega,\mathcal F,P)\) be a pr. space, \(Y\) an integrable r.v. and \(\mathcal E\) a sub σ-field of \(\mathcal F\). Suppose \(\mathcal E\) and \(\mathcal F(Y)\) are independent. What is \(E(Y\mid\mathcal E)\)? Prove.
+\item
+Let \(\mathcal X\) be a B-space and suppose \(\mathcal Y\) and \(\mathcal Z\) are closed linear subspaces of \(\mathcal X\) such that each \(x\in\mathcal X\) has a unique representation of the form \(x=y+z\), where \(y\in\mathcal Y\) and \(z\in\mathcal Z\). Show that there is a constant~\(K\) such that \(|y|\le K|x|\) and \(|z|\le K|x|\), for each \(x\in\mathcal X\), where~\(y\) \& \(z\) are given as above.
+
+\par
+Hint: define a map \(T:\mathcal X\to\mathcal Y\) which is useful, use the closed graph theorem to get continuity; then define \(S:\mathcal X\to\mathcal Z\), etc.
+\end{examproblems}
+\end{document}

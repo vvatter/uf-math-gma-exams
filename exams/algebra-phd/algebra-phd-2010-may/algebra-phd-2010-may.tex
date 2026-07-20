@@ -1,0 +1,141 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2010},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2010\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2010}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that every field has an algebraic closure.
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine a splitting field~\(K\) for the polynomial \(X^8-1\in\mathbb{Q}[X]\).
+\item[\textnormal{(b)}]
+Determine \(\operatorname{Gal}(K/\mathbb{Q})\) and give an explicit description of the action of \(\operatorname{Gal}(K/\mathbb{Q})\) on~\(K\).
+\item[\textnormal{(c)}]
+For each subgroup~\(H\) of \(\operatorname{Gal}(K/\mathbb{Q})\) find the subfield of~\(K\) fixed by~\(H\).
+\end{examsubparts}
+\item
+Let~\(E\) and~\(F\) be fields such that \(\operatorname{char}(E)\ne\operatorname{char}(F)\). Let~\(V\) be a vector space over~\(E\) and let~\(W\) be a vector space over~\(F\). Prove that \(V\otimes_{\mathbb{Z}}W\) is trivial.
+\item
+This problem has four parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give the definition of a covariant functor from a category~\(C\) to a category~\(D\).
+\item[\textnormal{(b)}]
+Give the definition of a concrete category.
+\item[\textnormal{(c)}]
+Define what it means for an object~\(F\) in a concrete category to be free on a set~\(S\).
+\item[\textnormal{(d)}]
+Given a set~\(S\), construct a free object on~\(S\) in the category of pointed sets.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for an~\(R\)-module~\(M\) to be injective.
+\item[\textnormal{(b)}]
+Let \(\{M_\lambda:\lambda\in\Lambda\}\) be a nonempty collection of injective~\(R\)-modules. Prove that the product \(\prod_{\lambda\in\Lambda}M_\lambda\) is injective.
+\end{examsubparts}
+\item
+Let~\(F\) be a free group on a set~\(S\) with \(|S|>1\). Prove that~\(F\) is not solvable.
+\item
+Let~\(R\) be a commutative Noetherian ring with~\(1\) and let \(I\subset R\) be an ideal. Prove that~\(I\) has a primary decomposition.
+\item
+Let~\(S\) be a commutative ring with~\(1\), let~\(R\) be a subring of~\(S\) which contains \(1_S\), and let \(x\in S\). Suppose there is a subring \(T\subset S\) such that \(T\supset R[x]\) and~\(T\) is finitely generated as an~\(R\)-module. Prove that~\(x\) is integral over~\(R\).
+\item
+Prove Noether’s Normalization Lemma: Let~\(k\) be a field and let~\(A\) be a finitely generated~\(k\)-algebra with~\(1\). Then there are \(y_1,\ldots,y_q\in A\) such that \(y_1,\ldots,y_q\) are algebraically independent over~\(k\) and~\(A\) is integral over \(k[y_1,\ldots,y_q]\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that every nonzero proper ideal in a Dedekind domain is a product of prime ideals.
+\item[\textnormal{(b)}]
+Give an example of an integral domain~\(R\) and a nonzero proper ideal \(I\subset R\) such that~\(I\) cannot be expressed as a product of prime ideals.
+\end{examsubparts}
+\item
+Let~\(G\) be a finite group of order~\(n\) and let~\(F\) be a field.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if \(\operatorname{char}(F)\nmid n\) then for every \(F[G]\)-module~\(V\) and every \(F[G]\)-submodule \(W\subset V\) there is an \(F[G]\)-submodule \(W'\subset V\) such that \(V=W\oplus W'\).
+\item[\textnormal{(b)}]
+Show that if \(\operatorname{char}(F)\mid n\) then there exists an \(F[G]\)-module~\(V\) and an \(F[G]\)-submodule \(W\subset V\) such that there is no \(F[G]\)-submodule \(W'\subset V\) such that \(V=W\oplus W'\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

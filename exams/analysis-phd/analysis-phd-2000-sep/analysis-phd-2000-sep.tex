@@ -1,0 +1,97 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, September 2000},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2000\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, September 2000}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write all proofs in a neat and logical fashion.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+State and prove the Radon–Nikodym Theorem.
+\item
+State and prove the Vitali Integral Convergence Theorem.
+\item
+Let \((X,\Sigma,\mu)\) be a finite measure space and suppose \(\Sigma=\sigma(\Sigma_0)\), where \(\Sigma_0\) is an algebra. Show that for every \(\varepsilon>0\), if \(E\in\Sigma\), then there exists an \(E_0\in\Sigma_0\) such that \(\mu(E\mathbin{\triangle}E_0)<\varepsilon\).
+\item
+Let~\(Y\) and~\(Z\) be closed subspaces in the B-space~\(X\). Suppose each \(x\in X\) has a unique representation in the form \(x=y+z\), with \(y\in Y\) and \(z\in Z\). Show that there exists a constant~\(K\) such that \(\lVert y\rVert\leq K\lVert x\rVert\) and \(\lVert z\rVert\leq K\lVert x\rVert\), for each \(x\in X\). [Hint: First apply the Closed Graph Theorem to \(T:X\to Y\), \(T(x)=y\).]
+\item
+Let \((X,\Sigma,\mu)\) be a measure space. Let \((f_n)\) be a sequence of integrable functions such that \(\sum_n\int |f_n|\,d\mu<\infty\). Does \(\sum_n f_n\) converge a.e.? Prove.
+\item
+Let \((\Omega,\mathcal F,P)\) be a probability space. Let~\(X\) and~\(Y\) be integrable random variables. Suppose~\(X\) and~\(Y\) are independent. Find \(E(X/Y)\).
+\item
+Let \((X,\Sigma,\mu)\) be a finite measure space; let \((f_n)\) be a sequence of integrable functions such that \(\int_E f_n\,d\mu\) converges for each \(E\in\Sigma\). Assume \((f_n)\) is \(L^1\)-bounded. Show there exists an integrable function~\(f\) such that \(\int_E f_n\,d\mu\to\int_E f\,d\mu\) for all \(E\in\Sigma\).
+\end{examproblems}
+\end{document}

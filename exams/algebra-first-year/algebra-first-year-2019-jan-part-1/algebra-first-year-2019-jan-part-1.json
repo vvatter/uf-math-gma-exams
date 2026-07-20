@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2019-jan-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2019,
+  "month": "january",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2019_01.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove Sylow’s First Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider the symmetric group \\(S_6\\), and the corresponding alternating group \\(A_6\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "How many elements of order 4 are there in \\(S_6\\)? Justify your answer.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "How many elements of order 4 are there in \\(A_6\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be the alternating group \\(A_{100}\\), and assume \\(G\\) acts on a finite set \\(\\Omega\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that, if \\(|\\Omega|=90\\), then \\(G\\) acts trivially on \\(\\Omega\\), i.e. \\(G\\) has 90 orbits of size 1 on \\(\\Omega\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(|\\Omega|=120\\) and \\(G\\) does not act trivially on \\(\\Omega\\), then \\(G\\) has, at most, 21 orbits on \\(\\Omega\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that every group of order 30 has a normal subgroup of order 15."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group, let \\(N\\) be a normal subgroup of \\(G\\), and let \\(H\\) be a subgroup of \\(G\\). Assume that \\(H\\) is solvable. Prove that \\(HN/N\\) is a solvable group."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group of order 39. Does \\(G\\) need to be abelian? Prove that your answer is correct."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

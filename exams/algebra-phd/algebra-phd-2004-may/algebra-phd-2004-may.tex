@@ -1,0 +1,171 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2004},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2004\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2004}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(F\) be a field and let~\(E\) be a finite extension of~\(F\). Say that \(E/F\) is a simple extension if there is \(\alpha\in E\) such that \(E=F(\alpha)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(E/F\) is a simple extension if and only if there are only finitely many fields~\(K\) such that \(E\supset K\supset F\).
+\item[\textnormal{(b)}]
+Prove that if~\(F\) has characteristic~\(0\) then \(E/F\) is a simple extension.
+\end{examsubparts}
+\item
+Let~\(p\) and~\(q\) be primes and let \(E\subset\mathbb C\) be the splitting field for \(g(X)=X^p-q\) over \(\mathbb Q\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give generators for~\(E\) as an extension of \(\mathbb Q\).
+\item[\textnormal{(b)}]
+Determine the degree of the extension \(E/\mathbb Q\).
+\item[\textnormal{(c)}]
+Give generators and relations for \(\operatorname{Gal}(E/\mathbb Q)\).
+\item[\textnormal{(d)}]
+Describe how the generators of \(\operatorname{Gal}(E/\mathbb Q)\) act on the generators of~\(E\).
+\end{examsubparts}
+\item
+Let~\(G\) be a finite nilpotent group, i.e., a group whose ascending central series has the form 
+\[
+1=Z_0(G)\subsetneq Z_1(G)\subsetneq\cdots\subsetneq Z_{n-1}(G)\subsetneq Z_n(G)=G
+\]
+ for some \(n\geq 0\). Prove that the descending central series \(G=G^0\supseteq G^1\supseteq G^2\supseteq\cdots\) also has length~\(n\), and that \(G^i\subseteq Z_{n-i}(G)\) for \(0\leq i\leq n\).
+\item
+Let~\(R\) be a ring with~\(1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(J\) is a divisible abelian group then \(\operatorname{Hom}_{\mathbb Z}(R,J)\) is a divisible left~\(R\)-module.
+\item[\textnormal{(b)}]
+Prove that if~\(M\) is a unitary left~\(R\)-module then~\(M\) is isomorphic to a submodule of a divisible left~\(R\)-module.
+\end{examsubparts}
+\item
+Let~\(C\) be a category and let~\(\Lambda\) be a set. For each \(\lambda\in\Lambda\) let \(X_\lambda\) be an object in~\(C\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give the definition of a coproduct of the collection of objects \(\{X_\lambda\}_{\lambda\in\Lambda}\).
+\item[\textnormal{(b)}]
+Prove that any two coproducts of the \(\{X_\lambda\}_{\lambda\in\Lambda}\) are isomorphic.
+\item[\textnormal{(c)}]
+Prove that coproducts always exist in the category of abelian groups.
+\end{examsubparts}
+\item
+Let~\(F\) be a field and let \(F[[X]]\) denote the ring of formal power series over~\(F\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(a_0+a_1X+a_2X^2+\cdots\in F[[X]]\) is a unit if and only if \(a_0\neq 0\).
+\item[\textnormal{(b)}]
+Prove that \(F[[X]]\) is a discrete valuation ring.
+\end{examsubparts}
+\item
+Let~\(R\) be a commutative Noetherian ring with~\(1\) and let \(I\subset R\) be an ideal. Prove that~\(I\) has a primary decomposition.
+\item
+Let~\(R\) be a left Artinian ring. Prove that the following are equivalent:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(R\) is simple.
+\item[\textnormal{(b)}]
+\(R\) is primitive.
+\item[\textnormal{(c)}]
+\(R\cong M_n(D)\) for some \(n\geq 1\) and division ring~\(D\).
+\end{examsubparts}
+\item
+Let~\(R\) be a ring and let~\(M\) be a left~\(R\)-module. Assume that for every nonzero \(x\in M\) we have \(Rx\neq 0\), and that for every submodule \(N\subseteq M\) there is a submodule \(N'\) such that \(M=N\oplus N'\). Prove that~\(M\) is generated by its simple submodules.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the Noether–Skolem theorem.
+\item[\textnormal{(b)}]
+Let~\(D\) be a division ring such that
+
+\par
+Prove that~\(D\) is isomorphic to either \(\mathbb R\), \(\mathbb C\), or \(\mathbb H\).
+
+\par
+(Here \(\mathbb R\) is the real numbers, \(\mathbb C\) is the complex numbers, and \(\mathbb H\) is Hamilton’s quaternions.)
+\begin{examsubparts}
+\item[\textnormal{i.}]
+\(\mathbb R\) is a subfield of~\(D\).
+\item[\textnormal{ii.}]
+Every \(\alpha\in D\) is algebraic over \(\mathbb R\).
+\end{examsubparts}
+\end{examsubparts}
+\item
+Let \(m,n\geq 1\). Describe the ring \((\mathbb Z/m\mathbb Z)\otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z)\). In particular, what is the cardinality of this ring?
+\end{examproblems}
+\end{document}

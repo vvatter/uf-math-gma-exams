@@ -1,0 +1,124 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2006},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2006\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2006}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(C\) be a category.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(\{X_\lambda:\lambda\in\Lambda\}\) be a collection of objects in~\(C\). Give the definition of a coproduct of this collection.
+\item[\textnormal{(b)}]
+Prove that any two coproducts of \(\{X_\lambda:\lambda\in\Lambda\}\) are isomorphic.
+\item[\textnormal{(c)}]
+Prove that coproducts exist in the category of sets.
+\end{examsubparts}
+\item
+Prove that for each prime~\(p\) and each \(n\geq 1\) there is a field with \(p^n\) elements which is determined uniquely up to isomorphism.
+\item
+Let \(E\subset\mathbb{C}\) be the splitting field of \(X^8-1\) over~\(\mathbb{Q}\). Determine the Galois group \(G=\operatorname{Gal}(E/\mathbb{Q})\). For each subgroup \(H\leq G\) determine the fixed field \(E^H\) of~\(H\).
+\item
+Let~\(F\) be the free group on two letters. Prove that the commutator subgroup \([F,F]\) is not finitely generated. Hint: For each \(n\geq 1\) consider the group 
+\[
+G_n=\langle x_1,\ldots,x_n,y:x_ix_j=x_jx_i,\;yx_iy^{-1}=x_{i+1}\text{ for }1\leq i<j\leq n,\;yx_ny^{-1}=x_1\rangle.
+\]
+\item
+Let~\(R\) be an integral domain, let~\(F\) be the field of fractions of~\(R\), and let \(M,N\) be~\(F\)-modules. Prove that \(M\otimes_R N\simeq M\otimes_F N\) (as~\(R\)-modules).
+\item
+Let~\(R\) be a commutative Noetherian ring with 1 and let \(\phi:R\to R\) be an onto ring homomorphism. Prove that~\(\phi\) is one-to-one.
+\item
+Let~\(S\) be a commutative ring with 1, let~\(R\) be a subring of~\(S\) which contains 1, and let \(x\in S\). Suppose there is a subring \(T\subset S\) such that \(T\supset R[x]\) and~\(T\) is finitely generated as an~\(R\)-module. Prove that~\(x\) is integral over~\(R\).
+\item
+Let~\(R\) be a ring and let \(J(R)\) be the Jacobson radical of~\(R\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that every nil left ideal of~\(R\) is contained in \(J(R)\).
+\item[\textnormal{(b)}]
+Give an example that shows that~\(R\) may contain nilpotent elements which do not lie in \(J(R)\).
+\item[\textnormal{(c)}]
+Prove that if~\(R\) is left Artinian then \(J(R)\) is a nilpotent ideal.
+\end{examsubparts}
+\item
+Let~\(F\) be a field, let~\(A\) be a central simple algebra over~\(F\), and let~\(B\) be a simple~\(F\)-algebra with 1. Prove that \(A\otimes_F B\) is simple.
+\item
+Determine up to isomorphism all semisimple noncommutative rings with \(512=2^9\) elements.
+\item
+Give an example of a projective module which is not free. Prove that your example has the desired properties.
+\end{examproblems}
+\end{document}

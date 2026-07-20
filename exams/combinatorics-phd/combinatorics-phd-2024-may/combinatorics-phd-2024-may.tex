@@ -1,0 +1,108 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(g(n)\) be the number of all permutations of length~\(n\) in which every cycle length is odd. Find the closed form of the exponential generating function of the sequence \(g(n)\).
+\item[\textnormal{(b)}]
+Let \(h(n)\) be the number of all permutations of length~\(n\) in which every cycle length is odd and the total number of cycles is odd. Find the closed form of the exponential generating function of the sequence \(h(n)\).
+\end{examsubparts}
+\item
+Prove that a balanced, uniform design is regular. (A design is balanced if every pair of vertices belong to the same number of blocks. A design is uniform if each block contains the same number of vertices. A design is regular if every vertex lies in the same number of blocks.)
+\item
+Prove among any choice of 26 points inside the unit square, there are two points within distance \(0.29\) of each other.
+\item
+Let~\(G\) be a simple graph with more than 200 edges. Is it true that if~\(G\) does not have a vertex of degree at least 11, then~\(G\) must contain a matching consisting of at least 11 edges? Explain.
+\item
+Prove that the poset \(\mathbb{N}^k\) does not contain an infinite antichain. (For \(u,v\in\mathbb{N}^k\) we define \(u\leq v\) if \(u_i\leq v_i\) for all \(i\in[k]\).)
+\item
+Let \(f:[n]\to[n]\) be a function. Let us call~\(f\) an acyclic function if the diagram of~\(f\), that is, the directed graph on vertex set \([n]\) that has an edge from~\(i\) to~\(j\) when \(f(i)=j\), has no cycles longer than one. Find a formula for the number of all acyclic functions on \([n]\).
+\item
+Find the number of permutations of length nine whose descent set is \(\{3,7\}\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(C\) be a composition of~\(n\), and let \(X(C)\) be the number of parts of~\(C\). Find \(\mathbb{E}(X)\).
+\item[\textnormal{(b)}]
+Let~\(C\) be a composition of~\(n\), and let \(Y(C)\) be the number of parts of~\(C\) that are equal to 1. Find \(\mathbb{E}(Y)\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

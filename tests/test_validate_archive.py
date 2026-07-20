@@ -12,20 +12,30 @@ from extract_exams import (
     REVIEW_FILES,
     ExamRecord,
     Problem,
+    ProblemTextBlock,
     ProblemBlock,
+    exam_html_path,
+    exam_json_path,
+    load_sources,
     render_html,
-    render_markdown,
     sha256_file,
 )
 from validate_archive import validate_archive, validate_mathjax
 
 
+def make_problem(text: str, subparts: list[object]) -> Problem:
+    body = [ProblemTextBlock(text=text)] if text else []
+    return Problem(body=body, subparts=subparts)
+
+
 class ArchiveValidationTests(unittest.TestCase):
-    def make_archive(self, root: Path) -> tuple[Path, Path, Path, Path]:
+    def make_archive(self, root: Path) -> tuple[Path, Path, Path]:
         review_dir = root / "exams"
         subject_dir = review_dir / "algebra-phd"
-        subject_dir.mkdir(parents=True)
-        pdf_path = subject_dir / "algebra-phd-2025-may.pdf"
+        exam_id = "algebra-phd-2025-may"
+        exam_dir = subject_dir / exam_id
+        exam_dir.mkdir(parents=True)
+        pdf_path = exam_dir / f"{exam_id}.source.pdf"
         with pymupdf.open() as document:
             document.new_page()
             document.save(pdf_path)
@@ -36,6 +46,7 @@ class ArchiveValidationTests(unittest.TestCase):
                 {
                     "exams": [
                         {
+                            "id": exam_id,
                             "path": str(pdf_path),
                             "subject": "PhD Algebra",
                             "subject_tag": "algebra-phd",
@@ -51,21 +62,20 @@ class ArchiveValidationTests(unittest.TestCase):
             encoding="utf-8",
         )
         exam = ExamRecord(
-            id=pdf_path.stem,
+            id=exam_id,
             subject="PhD Algebra",
             subject_tag="algebra-phd",
             year=2025,
             month="may",
             part=None,
             pdf_url="https://example.edu/exam.pdf",
-            content=[ProblemBlock(problem=Problem(text="Prove it.", subparts=[]))],
+            content=[ProblemBlock(problem=make_problem(text="Prove it.", subparts=[]))],
         )
-        pdf_path.with_suffix(".json").write_text(
+        source = next(iter(load_sources(manifest_path).values()))
+        exam_json_path(source).write_text(
             exam.model_dump_json(indent=2) + "\n", encoding="utf-8"
         )
-        markdown_path = pdf_path.with_suffix(".md")
-        markdown_path.write_text(render_markdown(exam), encoding="utf-8")
-        html_path = pdf_path.with_suffix(".html")
+        html_path = exam_html_path(source)
         html_path.write_text(render_html(exam), encoding="utf-8")
         for bucket, (filename, purpose) in REVIEW_FILES.items():
             (review_dir / filename).write_text(
@@ -80,27 +90,19 @@ class ArchiveValidationTests(unittest.TestCase):
                 encoding="utf-8",
             )
         build_indexes(manifest_path)
-        return manifest_path, review_dir, markdown_path, html_path
+        return manifest_path, review_dir, html_path
 
     def test_complete_archive_passes(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            manifest, review_dir, _markdown, _html = self.make_archive(Path(temp))
+            manifest, review_dir, _html = self.make_archive(Path(temp))
             errors, stats = validate_archive(manifest, review_dir)
 
         self.assertEqual(errors, [])
         self.assertEqual(stats["exams"], 1)
 
-    def test_markdown_drift_fails(self) -> None:
-        with tempfile.TemporaryDirectory() as temp:
-            manifest, review_dir, markdown, _html = self.make_archive(Path(temp))
-            markdown.write_text("changed\n", encoding="utf-8")
-            errors, _stats = validate_archive(manifest, review_dir)
-
-        self.assertTrue(any("Markdown does not match" in error for error in errors))
-
     def test_html_drift_fails(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            manifest, review_dir, _markdown, html = self.make_archive(Path(temp))
+            manifest, review_dir, html = self.make_archive(Path(temp))
             html.write_text("changed\n", encoding="utf-8")
             errors, _stats = validate_archive(manifest, review_dir)
 
@@ -108,7 +110,7 @@ class ArchiveValidationTests(unittest.TestCase):
 
     def test_subject_index_drift_fails(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            manifest, review_dir, _markdown, _html = self.make_archive(Path(temp))
+            manifest, review_dir, _html = self.make_archive(Path(temp))
             subject_index = review_dir / "algebra-phd" / "index.html"
             subject_index.write_text("changed\n", encoding="utf-8")
             errors, _stats = validate_archive(manifest, review_dir)

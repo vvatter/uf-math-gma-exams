@@ -1,0 +1,120 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2015, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2015, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2015, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Find all units in the ring \(R=\mathbb{Z}[\sqrt{-7}]\).
+\item[\textnormal{(ii)}]
+Show that~\(R\) is not a unique factorization domain.
+\item[\textnormal{(iii)}]
+Show that \((2,1+\sqrt{-7})\) is a maximal ideal of~\(R\).
+\end{examsubparts}
+\item
+Suppose~\(R\) is a commutative ring and \(I\subset R\) is an ideal. Show that the set of \(r\in R\) such that \(r^n\in I\) for some \(n>0\) is an ideal of~\(R\).
+\item
+Let~\(R\) be an integral domain and~\(M\) a finitely generated~\(R\)-module. We say that~\(M\) has rank~\(n\) if there are~\(n\) elements \(m_1,\ldots,m_n\in M\) that are linearly independent, while any subset of~\(M\) with cardinality greater than~\(n\) is linearly dependent. Show that~\(M\) has rank~\(n\) if and only if~\(M\) has a submodule \(N\subseteq M\) such that (1)~\(N\) is free of rank~\(n\), and (2) \(M/N\) is torsion.
+\item
+Which of the following polynomials are irreducible? Explain.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(X^3+5X+1\in\mathbb{Q}[X]\)
+\item[\textnormal{(ii)}]
+\(X^4+X+2\in\mathbb{Q}[X]\)
+\item[\textnormal{(iii)}]
+\(X^5+Y^5-1\in\mathbb{C}[X,Y]\)
+\end{examsubparts}
+\item
+Suppose~\(M\) is an \(n\times n\) matrix with coefficients in an algebraically closed field. Show that the following statements are equivalent:
+\begin{examsubparts}
+\item[\textnormal{1.}]
+\(M\) is nilpotent, i.e. \(M^k=0\) for some \(k\geq 0\).
+\item[\textnormal{2.}]
+\(0\) is the only eigenvalue of~\(M\).
+\item[\textnormal{3.}]
+\(M\) is similar to an upper triangular matrix with 0s on the diagonal.
+\end{examsubparts}
+\item
+Find representatives for each similarity class of matrices in \(M_5(\mathbb{C})\) whose minimal polynomial is \(X^3+X^2-X-1=(X+1)^2(X-1)\).
+\end{examproblems}
+\end{document}

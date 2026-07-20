@@ -1,0 +1,113 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, September 2011},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2011\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, September 2011}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(Y_p\) denote \(\mathbb{R}^3\) provided with the~\(p\)-norm. Are the normed spaces \(Y_1\) and \(Y_\infty\) isometrically isomorphic? Prove or disprove.
+\item
+Let~\(X\) and~\(Y\) be normed spaces, \(X\) being complete. Let \((T_n)_{n=1}^{\infty}\) be a sequence of bounded linear operators \(X \to Y\) and assume that for each \(x \in X\) the limit \(\lim_{n\to\infty} T_nx =: Tx\) exists in~\(Y\). Show that \(T:X\to Y\) is a bounded linear operator.
+\item
+State the Closed Graph theorem and the Open Mapping theorem. Derive ONE of these from the Banach Isomorphism theorem.
+\item
+Let~\(\mathbb{H}\) be a Hilbert space. Prove that linear maps~\(S\) and~\(T\) from~\(\mathbb{H}\) to itself that satisfy 
+\[
+(\forall x,y\in\mathbb{H})\quad \langle Sx\mid y\rangle=\langle x\mid Ty\rangle
+\]
+ are automatically continuous.
+\item
+Let~\(\phi\) be a bounded linear functional on the real Hilbert space~\(\mathbb{H}\) and for \(x\in\mathbb{H}\) define 
+\[
+f(x)=\lVert x\rVert^2-\phi(x).
+\]
+ Prove that each nonempty closed convex set \(K\subset\mathbb{H}\) contains a unique point at which the restriction \(f|_K\) is minimized. Suggestion: represent the bounded linear functional.
+\item
+Let~\(f\) be a real-valued measurable function on the measure space \((\Omega,\mathcal{F},\mu)\). Prove that if \(A\in\mathcal{F}\) is an atom then there exists a real number~\(a\) such that \(f=a\) almost everywhere on~\(A\). Note: To say that \(A\in\mathcal{F}\) is an atom means that \(\mu(A)>0\) and if \(B\in\mathcal{F}\) is a subset of~\(A\) then either \(\mu(B)=0\) or \(\mu(A\setminus B)=0\).
+\item
+Let \((\Omega,\mathcal{F},\mu)\) be a measure space. Prove that if \(1<p<s<q<\infty\) then 
+\[
+L^p(\mu)\cap L^q(\mu)\subseteq L^s(\mu).
+\]
+\item
+State the (\(\sigma\)-finite) Radon–Nikodym theorem. Prove that if the~\(\sigma\)-finite measures \(\lambda,\mu,\nu\) satisfy \(\nu\ll\mu\) and \(\mu\ll\lambda\) then (\(\lambda\)-ae) 
+\[
+\frac{d\nu}{d\lambda}=\frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}.
+\]
+\end{examproblems}
+\end{document}

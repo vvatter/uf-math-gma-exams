@@ -1,0 +1,197 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-2020-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2020,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-AlgebraMay2020.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.\n\nBelow, ring means associative ring with identity, and module means unital module unless otherwise specified."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(q>1\\) be a power of a prime \\(p\\). Prove that there exists some field \\(F\\) with \\(|F|=q\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(F\\) be the splitting field of \\(p(x)=x^3+5x+5\\) over \\(\\mathbb{Q}\\). Prove that there is a unique intermediate field \\(K\\) such that \\(K\\ne\\mathbb{Q}\\), \\(K\\ne F\\), and \\(K/\\mathbb{Q}\\) is Galois."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A\\) be a commutative ring with identity. Suppose that \\(P\\) and \\(Q\\) are projective \\(A\\)-modules. Prove that \\(P\\otimes_A Q\\) is a projective \\(A\\)-module."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal{C}\\) be a concrete category. Define what is meant by a free object in \\(\\mathcal{C}\\). Let \\(\\mathcal{G}\\) be the category of all finite groups. Prove that the free objects in \\(\\mathcal{G}\\) are exactly the trivial groups."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring. Prove that the following two conditions are equivalent for a left \\(R\\)-module \\(P\\). (You may not assume any properties of projective modules.)"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Every short exact sequence of \\(R\\)-modules\n\\[\n0\\to A\\to B\\to P\\to 0\n\\]\nsplits;",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "There is a free \\(R\\)-module \\(F\\) and an \\(R\\)-module \\(K\\) such that \\(F\\simeq K\\oplus P\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give an example of a polynomial \\(f(X)\\in\\mathbb{Q}[X]\\) whose Galois group is isomorphic to \\(S_5\\). Prove that this is the case."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove: if a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: prove first that each prime ideal is principal, use the Chinese Remainder Theorem.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain with field of fractions \\(K\\). For \\(a\\in K\\), let \\(D(a)=\\{r\\in R\\mid ra\\in R\\}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(D(a)\\) is an ideal and that \\(D(a)=R\\) if and only if \\(a\\in R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "For each prime ideal \\(P\\), let \\(R_P\\) denote the elements of \\(K\\) which can be represented as a fraction having denominator not in \\(P\\). Show that \\(a\\in R_P\\) if and only if \\(D(a)\\nsubseteq P\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Deduce that \\(\\bigcap_P R_P=R\\), where the intersection is taken over the maximal ideals of \\(R\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "For this question you may not quote Nakayama’s Lemma. Let \\(R\\) be a commutative local ring with \\(1\\) and \\(J\\) its unique maximal ideal."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(1-j\\) is a unit for every \\(j\\in J\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if \\(A\\) is a finitely generated \\(R\\)-module such that \\(JA=A\\), then \\(A=0\\). (Hint: Consider a generating set for \\(A\\) of minimal size and derive a contradiction.)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring (possibly non-commutative, and possibly without identity). Let \\(M\\) be an irreducible left \\(R\\)-module. Let \\(D=\\operatorname{End}_R(M)\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove \\(D=\\operatorname{End}_R(M)\\) is a division ring. (You may NOT assume Schur’s Lemma for this.)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a ring \\(R\\) and an irreducible module \\(M\\) such that \\(D\\) is not commutative.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Classify (up to ring isomorphism) all semisimple rings of order \\(720\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

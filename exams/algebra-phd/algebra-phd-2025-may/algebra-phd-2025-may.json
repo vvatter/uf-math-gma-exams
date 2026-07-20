@@ -1,0 +1,201 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-2025-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2025,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Algebra_2025_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly."
+    },
+    {
+      "type": "instructions",
+      "text": "Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(q>1\\) be a power of a prime \\(p\\). Prove that there exists some field \\(F\\) with \\(|F|=q\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Determine the Galois group of \\(x^4-5\\) over \\(\\mathbb{Q}\\), over \\(\\mathbb{Q}(\\sqrt{5})\\), and over \\(\\mathbb{Q}(\\sqrt{5}\\,i)\\). Justify your answers."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain, let \\(D\\) be a divisible \\(R\\)-module, and let \\(T\\) be a torsion \\(R\\)-module. Prove that \\(D\\otimes_R T=\\{0\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that the group \\(G\\) which is described below using generators and relations is not solvable. \\[G=\\langle x,y\\mid x^6=y^2=1\\rangle\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring with identity."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for a left \\(R\\)-module to be projective.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that a free \\(R\\)-module is projective.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Give an example of a projective \\(R\\)-module that is not free.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(K\\) be a field. Show that any vector space over \\(K\\) has a basis (do not assume the vector space has finite dimension)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove: If a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: Prove first that each prime ideal is principal, use the Chinese Remainder Theorem)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a integral domain."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for a fractional ideal of \\(R\\) to be invertible.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that an invertible ideal is a projective \\(R\\)-module.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(R\\subseteq S\\) are integral domains and let \\(s\\in S\\). Prove that the following are equivalent:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "1.",
+            "text": "\\(s\\) is integral over \\(R\\);",
+            "subparts": []
+          },
+          {
+            "label": "2.",
+            "text": "\\(R[s]\\) is finitely generated as an \\(R\\)-module;",
+            "subparts": []
+          },
+          {
+            "label": "3.",
+            "text": "There exists some ring \\(T\\) such that \\(R\\subseteq T\\subseteq S\\), and \\(s\\in T\\), and \\(T\\) is finitely generated as an \\(R\\)-module.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(R\\) is a ring with identity (not necessarily commutative), \\(M\\) is a right \\(R\\)-module and \\[N'\\longrightarrow N\\longrightarrow N''\\longrightarrow 0\\] is an exact sequence of left \\(R\\)-modules. Show that \\[M\\otimes_R N'\\longrightarrow M\\otimes_R N\\longrightarrow M\\otimes_R N''\\longrightarrow 0\\] is an exact sequence of abelian groups."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State the Jacobson density theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Use it to show that if \\(K\\) is a field and \\(A\\) is a simple \\(K\\)-algebra of finite dimension then there is a division \\(K\\)-algebra \\(D\\) and a finite dimensional vector space \\(V\\) over \\(D\\) such that \\(A\\simeq\\operatorname{End}_D(V)\\).",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2018, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2018, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2018, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Give an example of each, with a few words of explanation.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+An abelian simple group.
+\item[\textnormal{(b)}]
+A nonabelian simple group.
+\item[\textnormal{(c)}]
+A nilpotent group which isn’t a~\(p\)-group.
+\item[\textnormal{(d)}]
+A finite group which is neither solvable nor simple.
+\end{examsubparts}
+\item
+Let~\(G\) act on the set~\(A\) and let \(a \in A\). Prove that \(|G \cdot a| = |G : G_a|\). (Note that \(G \cdot a\) is the orbit containing~\(a\), while \(G_a\) is the stabilizer of~\(a\) in~\(G\).)
+\item
+Let~\(G\) be a finite abelian group of order~\(n\) and let~\(k\) be an integer which is relatively prime to~\(n\). Define \(\tau : G \to G\) by \(\tau(g) = g^k\). Prove that \(\tau \in \operatorname{Aut}(G)\).
+\item
+Let~\(G\) be a finite group and let~\(H\) and~\(K\) be subgroups of~\(G\). Recall that \(HK = \{xy : x \in H, y \in K\}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove the following formula for the cardinality of the set \(HK\): 
+\[
+|HK| = \frac{|H| \cdot |K|}{|H \cap K|}.
+\]
+\item[\textnormal{(b)}]
+Give an example in which \(|HK|\) does not divide \(|G|\).
+\end{examsubparts}
+\item
+Let~\(G\) be a group and let~\(A\) be an abelian group.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the commutator subgroup \(G' = [G,G]\) of~\(G\).
+\item[\textnormal{(b)}]
+Prove that if \(\phi : G \to A\) is a homomorphism then there is a unique homomorphism \(\overline{\phi} : G/G' \to A\) such that \(\phi = \overline{\phi} \circ \pi\), where \(\pi : G \to G/G'\) is the projection map.
+\end{examsubparts}
+\item
+Determine all groups of order \(99\) up to isomorphism.
+\end{examproblems}
+\end{document}

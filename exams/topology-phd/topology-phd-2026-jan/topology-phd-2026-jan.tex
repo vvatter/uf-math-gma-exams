@@ -1,0 +1,179 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\usetikzlibrary{arrows.meta,decorations.markings}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, January 2026},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, January 2026\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, January 2026}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Be neat, and do not write too small.
+\end{examinstructions}
+\begin{examinstructions}
+For the first five problems, show all of your work and support all statements.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that every metrizable space \((X,d)\) is normal.
+\item
+Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c<1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).
+\item
+Consider the~\(\Delta\)-complex~\(X\) drawn below. (Note the orientation of the three edges carefully.) Compute the simplicial homology \(H_i(X)\) for \(i=0,1,2\).
+\par\smallskip
+\begin{center}
+\begin{adjustbox}{max width=.8\linewidth,max totalheight=6\baselineskip}
+\begin{tikzpicture}[
+  alt={A gray triangular face labeled T, with all three vertices labeled v. Each edge is labeled a and carries a centered arrow: the top edge points right, the left edge points downward toward the bottom vertex, and the right edge points upward toward the top-right vertex.},
+  scale=0.6,
+  line width=1pt,
+  line cap=round,
+  line join=round,
+  edge arrow/.style={
+        postaction={
+            decorate,
+            decoration={
+                markings,
+                mark=at position 0.5 with {
+                    \arrow{Straight Barb[length=3mm,width=3.5mm]}
+                }
+            }
+        }
+    }
+]
+% Vertices
+\coordinate (A) at (-2.0, 1.05);
+\coordinate (B) at ( 2.0, 1.30);
+\coordinate (C) at ( 0.0,-2.50);
+
+% Face
+\fill[black!30] (A) -- (B) -- (C) -- cycle;
+
+% Edges with centered arrows and upright labels outside the face
+\draw[edge arrow]
+    (A) -- node[midway,above=4pt] {$a$} (B);
+
+\draw[edge arrow]
+    (A) -- node[pos=0.55,left=5pt] {$a$} (C);
+
+\draw[edge arrow]
+    (C) -- node[pos=0.45,right=5pt] {$a$} (B);
+
+% Vertex labels
+\node[left=3pt]  at (A) {$v$};
+\node[right=3pt] at (B) {$v$};
+\node[below=3pt] at (C) {$v$};
+
+% Interior label
+\node at (0,-0.18) {$T$};
+\end{tikzpicture}
+\end{adjustbox}
+\end{center}
+\smallskip
+\item
+For~\(M\) a compact orientable odd-dimensional manifold without boundary, show that the Euler characteristic \(\chi(M)\) is zero.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(n>m\). Show there are no maps from \(\mathbb{RP}^n\) to \(\mathbb{RP}^m\) inducing a nontrivial map \(H^1(\mathbb{RP}^m;\mathbb{Z}_2)\to H^1(\mathbb{RP}^n;\mathbb{Z}_2)\).
+\item[\textnormal{(b)}]
+Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \(f:S^n\to\mathbb{R}^n\) satisfies \(f(x)\neq f(-x)\) for all~\(x\). Define \(g:S^n\to S^{n-1}\) by \(g(x)=\frac{f(x)-f(-x)}{\lVert f(x)-f(-x)\rVert}\), so \(g(-x)=-g(x)\) and~\(g\) induces a map \(\mathbb{RP}^n\to\mathbb{RP}^{n-1}\). Show that (a) applies to this map.
+\end{examsubparts}
+\end{examproblems}
+\begin{examinstructions}
+Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Tietze Extension Theorem.
+\item
+Let \(M_g\) be the orientable surface of genus~\(g\), i.e., the~\(g\)-fold connected sum of tori. Use the Seifert–van Kampen theorem to derive the fundamental group of \(M_g\) for \(g\geq 1\).
+\item
+Show that if \(g:S^n\to S^n\) is continuous and \(g(x)\neq g(-x)\) for all \(x\in S^n\), then~\(g\) is surjective.
+\item
+Prove that if \(f:S^n\to S^n\) has no fixed points, then \(\deg(f)=(-1)^{n+1}\).
+\item
+Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.
+\item
+State the Five-Lemma.
+\item
+Show that every map \(f:\mathbb{CP}^n\to\mathbb{CP}^n\) has a fixed point if~\(n\) is even.
+\item
+Let \(p:Y\to X\) and \(q:Z\to X\) be basepoint-preserving covering space maps, where \(X,Y,Z\) are path-connected and locally path-connected. Prove that if \(p_*(\pi_1(Y))=q_*(\pi_1(Z))\), then the covering spaces~\(p\) and~\(q\) are isomorphic.
+\item
+Does there exist a closed orientable \(18\)-dimensional manifold~\(M\) with \(H^9(M;\mathbb{Z})\cong\mathbb{Z}\)?
+\item
+Prove that if~\(X\) is the Möbius band and~\(A\) is its boundary circle, then there is no retraction \(r:X\to A\).
+\end{examproblems}
+\end{document}

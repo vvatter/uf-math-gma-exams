@@ -1,0 +1,218 @@
+{
+  "schema_version": 3,
+  "id": "topology-first-year-2019-aug-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2019,
+  "month": "august",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1-2019_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Work all problems."
+    },
+    {
+      "type": "section",
+      "heading": "Theorems and Proofs.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "In this section state and prove each theorem. The proofs should be complete without being tedious."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(X\\) be a metric space and suppose that \\(A_\\lambda \\subset X\\) is connected for all \\(\\lambda \\in \\Lambda\\). Suppose that there is an \\(x_0 \\in X\\) such that \\(x_0 \\in A_\\lambda\\) for all \\(\\lambda\\). Show that \\(\\bigcup_{\\lambda \\in \\Lambda} A_\\lambda\\) is connected."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State and prove the Contraction Mapping Theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(X\\) be a Hausdorff space. Show that if \\(A \\subset X\\) is compact, then \\(A\\) is closed."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(X\\) be a topological space. Suppose that \\(f:X \\to Y\\) is continuous. Show that if \\(A \\subset X\\) is connected, then \\(f(A) \\subset Y\\) is connected."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Suppose that \\(X\\) and \\(Y\\) are metric spaces and that \\(X\\) is compact. Show that if \\(f:X \\to Y\\) is continuous, then \\(f\\) is uniformly continuous."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "Examples and Minor Proofs.",
+      "numbering": "continue",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "In this section, give brief examples, counterexamples, or quick proofs."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State Urysohn’s Lemma."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Is it possible for there to be a continuous function \\(f:[0,1] \\to \\{0,1\\}\\) which is onto?"
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State the Bolzano–Weierstrass Theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Define a continuous function \\(f:C \\to [0,1]\\) which is onto where \\(C\\) is the Cantor set and \\([0,1]\\) is the unit interval."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Give an example of a space \\(X\\) which is \\(T_1\\) but not Hausdorff."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State the Tietze Extension Theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Define a quotient map."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "State the Baire Category Theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "What does it mean for a topological space \\(X\\) to be Hausdorff? Regular? Normal?"
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "What does it mean for a space \\(X\\) to be first countable? Show that every metric space is first-countable."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    }
+  ]
+}

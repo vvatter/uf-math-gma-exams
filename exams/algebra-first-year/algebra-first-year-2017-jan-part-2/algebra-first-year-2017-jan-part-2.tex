@@ -1,0 +1,120 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2017, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2017, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2017, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(R\) be a nonzero commutative ring with identity. Show that~\(R\) has a minimal prime ideal, i.e. a prime ideal not containing any other prime ideal.
+\item
+Which of the following polynomials are irreducible? Explain.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(X^3+X+1\) in \(\mathbb{F}_2[X]\);
+\item[\textnormal{(b)}]
+\(X^3+X+1\) in \(\mathbb{Q}[X]\);
+\item[\textnormal{(c)}]
+\(X^5+6X^2+9X+3\) in \(\mathbb{Q}[X]\);
+\end{examsubparts}
+\item
+Show that a nonzero ring~\(R\) with identity (not necessarily commutative) is a division ring if and only if its only left ideals are~\(0\) and~\(R\).
+\item
+Let~\(R\) be an integral domain.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for an element of~\(R\) to be irreducible.
+\item[\textnormal{(ii)}]
+Define what it means for an element of~\(R\) to be prime.
+\item[\textnormal{(iii)}]
+Show that a prime element is irreducible.
+\end{examsubparts}
+\item
+Suppose~\(F\) is a field and~\(V\) is an~\(F\)-vector space. Denote by \(V'\) the dual of~\(V\), i.e. the~\(F\)-vector space of linear maps \(V\to F\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that if \(\dim_F V<\infty\), then \(V\simeq V'\).
+\item[\textnormal{(ii)}]
+Show that if~\(V\) has infinite dimension, then \(V\not\simeq V'\).
+\end{examsubparts}
+\item
+Show that if \(L/K\) and \(E/L\) are algebraic extensions of fields, then so is \(E/K\).
+\item
+Show that \(GL_3(\mathbb{F}_2)\) has two conjugacy classes of elements of order~\(7\), and find representatives of each.
+\end{examproblems}
+\end{document}

@@ -5,3 +5,5 @@ __pycache__/
 *.part
 build/
 node_modules/
+TMPLOOK/
+missing-figures/

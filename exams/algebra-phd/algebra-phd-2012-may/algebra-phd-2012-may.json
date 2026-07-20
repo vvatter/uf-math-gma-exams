@@ -1,0 +1,224 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-2012-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2012,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Algebra_2012_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(K\\) be a field and let \\(f \\in K[x]\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State precisely a theorem concerning the existence and uniqueness of splitting fields for \\(f\\) over \\(K\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that for any prime power \\(p^n\\), there is, up to isomorphism, a unique field of order \\(p^n\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(F\\) be a normal extension of \\(K\\) and \\(f \\in K[x]\\) an irreducible polynomial. Prove that in a factorization of \\(f\\) in \\(F[x]\\) the irreducible factors all have the same degree."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(F\\) be a free group on the set \\(X\\). Show that the automorphism group of \\(F\\) has a subgroup isomorphic to the symmetric group of \\(X\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring with 1 and let\n\\[\n0 \\to A \\xrightarrow{f} B \\xrightarrow{g} C \\to 0\n\\]\nbe a short exact sequence of (left) \\(R\\)-modules. Show that for any (left) \\(R\\)-module \\(M\\), the sequence\n\\[\n0 \\to \\operatorname{hom}_R(M,A) \\xrightarrow{\\overline f} \\operatorname{hom}_R(M,B) \\xrightarrow{\\overline g} \\operatorname{hom}_R(M,C),\n\\]\ninduced by composition of maps, is exact."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove the Hilbert Basis Theorem: If \\(R\\) is a commutative Noetherian ring with identity then so is \\(R[x]\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "All parts involve ideals in a commutative ring with identity."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define the terms primary ideal and radical of an ideal.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that the radical of a primary ideal is prime.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Is it true that an ideal is primary iff it is a power of a prime ideal? Answers without an explanation will receive no credit.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "For this question you may not quote Nakayama’s Lemma. Let \\(R\\) be a commutative local ring with 1 and \\(J\\) its unique maximal ideal."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(1-j\\) is a unit for every \\(j \\in J\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that if \\(A\\) is a finitely generated \\(R\\)-module such that \\(JA=A\\), then \\(A=0\\). (Hint: Consider a generating set for \\(A\\) of minimal size and derive a contradiction.)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain with fraction field \\(K\\). For \\(a \\in K\\), let \\(D(a)=\\{r \\in R \\mid ra \\in R\\}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\(D(a)\\) is an ideal and that \\(D(a)=R\\) iff \\(a \\in R\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "For each prime ideal \\(P\\), let \\(R_P\\) denote the elements of \\(K\\) which can be represented as a fraction having denominator not in \\(P\\). Show that \\(a \\in R_P\\) iff \\(D(a) \\nsubseteq P\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Deduce that \\(\\bigcap_P R_P=R\\), where the intersection is taken over the maximal ideals of \\(R\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Provide examples, with proof of:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "an integral domain which is not integrally closed in its field of fractions.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "a commutative ring with 1 that is not Noetherian.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Classify (up to ring isomorphism) all semisimple rings of order 720."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(C\\) be a category and let \\((A_i)_{i \\in I}\\) be a family of objects of \\(C\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what is a product of \\((A_i)_{i \\in I}\\) in \\(C\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that any two products of \\((A_i)_{i \\in I}\\) in \\(C\\) are equivalent in \\(C\\).",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2016-may-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2016,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY_Algebra-1_2016_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give an example of each of the following, with some explanation."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "A non-solvable finite group.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "A non-cyclic infinite abelian group.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "A non-abelian solvable finite group.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a finite group and suppose \\(G\\) acts transitively on a set \\(\\Omega\\). Prove that \\(|\\Omega|\\) (the number of elements in \\(\\Omega\\)) is finite and that \\(|\\Omega|\\) divides \\(|G|\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group, and let \\(A\\) and \\(B\\) be normal subgroups of \\(G\\) such that \\(A \\cap B = 1\\). Prove that every element of \\(A\\) commutes with every element of \\(B\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a group of order \\(14\\) and let \\(H\\) be a (multiplicative) cyclic group of order \\(4\\). Suppose that \\(\\phi:G\\to H\\) is a group homomorphism. Let \\(g\\in G\\). Prove that there exists some \\(h\\in H\\) such that \\(\\phi(g)=h^2\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(a=(1\\ 2\\ 3\\ 4)(5\\ 6)(7\\ 8)\\) and let \\(b=(7\\ 2\\ 8\\ 4)(1\\ 6)(3\\ 5)\\) be elements of the symmetric group \\(S_8\\). Is there an element \\(\\sigma\\in S_8\\) such that \\(\\sigma a\\sigma^{-1}=b\\)? If so find one."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that if \\(G\\) is a group of order \\(56\\), then \\(G\\) has a normal Sylow \\(2\\)-subgroup or a normal Sylow \\(7\\)-subgroup."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

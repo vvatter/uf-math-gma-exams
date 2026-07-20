@@ -1,0 +1,118 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2017, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2017, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2017, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be a group.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+If \(H \subseteq G\) is a normal subgroup and~\(K\) is a characteristic subgroup of~\(H\), show that~\(K\) is normal in~\(G\).
+\item[\textnormal{(ii)}]
+Give an example of a group and subgroups \(K \subseteq H \subseteq G\) with~\(H\) normal in~\(G\), \(K\) normal in~\(H\) but not normal in~\(G\).
+\end{examsubparts}
+\item
+Let~\(G\) be a group.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that if~\(G\) is abelian, the subset~\(H\) of elements of finite order is a subgroup.
+\item[\textnormal{(ii)}]
+Give an example of a (nonabelian) group~\(G\) and elements \(x, y \in G\) such that \(xy\) has infinite order.
+\end{examsubparts}
+\item
+Show that a group of order \(3^2 \cdot 17\) is abelian.
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for a group~\(G\) to be nilpotent.
+\item[\textnormal{(ii)}]
+Show that any nilpotent group is solvable.
+\item[\textnormal{(iii)}]
+Give an example of a finite solvable group that is not nilpotent.
+\end{examsubparts}
+\item
+Let~\(G\) be a group acting on a set~\(S\), and \(H \subseteq G\) a normal subgroup. Assume that for any \(x_1, x_2 \in S\) there is a unique \(h \in H\) such that \(h(x_1)=x_2\). For \(x \in S\) let \(G_x\) be the stabilizer of~\(x\). Show that for any \(x \in S\), \(G\) is a semi-direct product of \(G_x\) and~\(H\).
+\item
+Show that for any \(n \geq 5\), \(A_n\) is the only nontrivial proper normal subgroup of \(S_n\).
+\item
+Show that the normalizer of a 5-Sylow subgroup of \(A_5\) has order 10, and is a maximal subgroup of \(A_5\).
+\end{examproblems}
+\end{document}

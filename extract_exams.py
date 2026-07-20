@@ -24,7 +24,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 DEFAULT_MODEL = "gpt-5.6-sol"
-PROMPT_VERSION = "exam-extraction-v15"
+PROMPT_VERSION = "exam-extraction-v16"
 NATIVE_EVIDENCE_VERSION = "native-text-c0-sanitized-v1"
 VISION_ONLY_EVIDENCE_VERSION = "page-images-only-v1"
 PILOT_IDS = [
@@ -83,8 +83,44 @@ class Subpart(StrictModel):
     )
 
 
+class ProblemTextBlock(StrictModel):
+    type: Literal["text"] = "text"
+    text: str = Field(description="Problem-stem text using MathJax TeX delimiters")
+
+
+class TikzBlock(StrictModel):
+    type: Literal["tikz"] = "tikz"
+    id: str = Field(
+        pattern=r"^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        description="Stable figure identifier used in generated asset filenames",
+    )
+    alt: str = Field(description="Plain-language alternative text for the figure")
+    libraries: list[str] = Field(
+        default_factory=list,
+        description="TikZ libraries required by this figure",
+    )
+    options: list[str] = Field(
+        default_factory=list,
+        description="Options added to the generated tikzpicture environment",
+    )
+    height_lines: int = Field(
+        default=6,
+        ge=1,
+        le=24,
+        description="Maximum rendered height in text lines for PDF and HTML",
+    )
+    code: str = Field(
+        description="Body of the tikzpicture without document or environment wrappers"
+    )
+
+
+ProblemBodyBlock = ProblemTextBlock | TikzBlock
+
+
 class Problem(StrictModel):
-    text: str = Field(description="Problem stem without top-level number or subpart text")
+    body: list[ProblemBodyBlock] = Field(
+        description="Ordered text and manually verified figure blocks in the problem stem"
+    )
     subparts: list[Subpart] = Field(
         description="Labeled parts in source order; empty when there are none"
     )
@@ -136,7 +172,7 @@ class ModelExtraction(StrictModel):
 
 
 class ExamRecord(StrictModel):
-    schema_version: Literal[2] = 2
+    schema_version: Literal[3] = 3
     id: str
     subject: str
     subject_tag: str
@@ -236,9 +272,11 @@ does not require a review flag.
 PROBLEMS
 Do not paraphrase, summarize, modernize, solve, or add to a problem. Join visual line wraps and
 remove line-break hyphenation. The order of problem blocks determines their numbers; do not include
-the source's top-level number in problem text. Put only the problem stem in its text field. Put each
-labeled part in the subparts array, preserve its label exactly in label, and do not repeat that label
-in text. Recurse for nested labeled parts. Use an empty subparts array when none exist.
+the source's top-level number in problem text. Put the problem stem in one text block in its body.
+Never return a tikz block: those blocks are reserved for separately reviewed, manually authored
+figures added after extraction. Use an empty body when a problem immediately begins with subparts.
+Put each labeled part in the subparts array, preserve its label exactly in label, and do not repeat
+that label in text. Recurse for nested labeled parts. Use an empty subparts array when none exist.
 
 NUMBERING
 Preserve ordinary integer top-level problem numbering through block order, including sequences that
@@ -343,7 +381,7 @@ def load_sources(manifest_path: Path) -> dict[str, SourceExam]:
     sources: dict[str, SourceExam] = {}
     for item in raw["exams"]:
         pdf_path = Path(item["path"])
-        exam_id = pdf_path.stem
+        exam_id = item["id"]
         source = SourceExam(
             id=exam_id,
             subject=item["subject"],
@@ -620,6 +658,13 @@ def iter_problems(exam: ExamRecord) -> Iterator[Problem]:
             yield block.problem
 
 
+def iter_tikz_blocks(exam: ExamRecord) -> Iterator[TikzBlock]:
+    for problem in iter_problems(exam):
+        for block in problem.body:
+            if isinstance(block, TikzBlock):
+                yield block
+
+
 def iter_numbered_problems(exam: ExamRecord) -> Iterator[tuple[int, int, Problem]]:
     """Yield absolute index, displayed number, and problem in reading order."""
     problem_index = 0
@@ -646,7 +691,9 @@ def all_content(exam: ExamRecord) -> Iterator[str]:
         if isinstance(block, InstructionsBlock):
             yield block.text
             continue
-        yield block.problem.text
+        for body_block in block.problem.body:
+            if isinstance(body_block, ProblemTextBlock):
+                yield body_block.text
         for subpart in walk_subparts(block.problem.subparts):
             yield subpart.text
 
@@ -658,7 +705,7 @@ def migrate_legacy_exam(legacy: LegacyExamRecord) -> ExamRecord:
     content.extend(
         ProblemBlock(
             problem=Problem(
-                text=problem.text,
+                body=[ProblemTextBlock(text=problem.text)] if problem.text else [],
                 subparts=problem.subparts,
             )
         )
@@ -707,13 +754,38 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
             if isinstance(item, InstructionsBlock) and not item.text.strip():
                 errors.append(f"section {block.heading!r} contains an empty instruction block")
     for problem_index, problem in enumerate(problems, start=1):
-        if not problem.text.strip() and not problem.subparts:
+        if not problem.body and not problem.subparts:
             errors.append(f"problem index {problem_index} has no content")
+        for body_block in problem.body:
+            if isinstance(body_block, ProblemTextBlock):
+                if not body_block.text.strip():
+                    errors.append(f"problem index {problem_index} has an empty text block")
+                continue
+            if not body_block.alt.strip():
+                errors.append(f"problem index {problem_index} has empty figure alt text")
+            if not body_block.code.strip():
+                errors.append(f"problem index {problem_index} has empty TikZ code")
+            if any(
+                marker in body_block.code
+                for marker in (
+                    r"\documentclass",
+                    r"\begin{document}",
+                    r"\end{document}",
+                    r"\begin{tikzpicture}",
+                    r"\end{tikzpicture}",
+                )
+            ):
+                errors.append(
+                    f"problem index {problem_index} TikZ code contains a document or picture wrapper"
+                )
         for subpart in walk_subparts(problem.subparts):
             if not subpart.label.strip():
                 errors.append(f"problem index {problem_index} has an empty subpart label")
             if not subpart.text.strip() and not subpart.subparts:
                 errors.append(f"problem index {problem_index} has an empty subpart")
+    figure_ids = [figure.id for figure in iter_tikz_blocks(exam)]
+    if len(figure_ids) != len(set(figure_ids)):
+        errors.append("TikZ figure IDs are not unique within the exam")
     for text in all_content(exam):
         if any(ord(character) < 32 and character not in "\n\t" for character in text):
             errors.append("content contains an ASCII control character")
@@ -734,15 +806,23 @@ def validate_exam(exam: ExamRecord, source: SourceExam, flags: list[ReviewFlag])
 
 
 def exam_json_path(source: SourceExam) -> Path:
-    return source.pdf_path.with_suffix(".json")
-
-
-def exam_markdown_path(source: SourceExam) -> Path:
-    return source.pdf_path.with_suffix(".md")
+    return source.pdf_path.parent / f"{source.id}.json"
 
 
 def exam_html_path(source: SourceExam) -> Path:
-    return source.pdf_path.with_suffix(".html")
+    return source.pdf_path.parent / "index.html"
+
+
+def exam_tex_path(source: SourceExam) -> Path:
+    return source.pdf_path.parent / f"{source.id}.tex"
+
+
+def exam_pdf_path(source: SourceExam) -> Path:
+    return source.pdf_path.parent / f"{source.id}.pdf"
+
+
+def exam_figure_png_path(source: SourceExam, figure: TikzBlock) -> Path:
+    return source.pdf_path.parent / f"{source.id}.{figure.id}.png"
 
 
 def checkpoint_path(source: SourceExam, build_root: Path) -> Path:
@@ -760,8 +840,8 @@ def has_current_extraction(source: SourceExam, build_root: Path) -> bool:
     except (OSError, ValueError):
         return False
     return (
-        output.get("schema_version") == 2
-        and checkpoint.get("schema_version") == 2
+        output.get("schema_version") == 3
+        and checkpoint.get("schema_version") == 3
         and checkpoint.get("prompt_version") == PROMPT_VERSION
         and checkpoint.get("source_sha256") == source.sha256
         and checkpoint.get("validation_errors") == []
@@ -781,89 +861,19 @@ def build_exam(source: SourceExam, extraction: ModelExtraction) -> ExamRecord:
     )
 
 
-def render_subparts(subparts: list[Subpart], depth: int = 0) -> list[str]:
-    lines: list[str] = []
-    for subpart in subparts:
-        indentation = "    " * depth
-        continuation = " " * (len(indentation) + 2)
-        text_lines = subpart.text.strip().splitlines()
-        if text_lines and text_lines[0] != r"\[":
-            lines.append(f"{indentation}* {subpart.label} {text_lines[0]}")
-            lines.extend(
-                continuation + line if line else "" for line in text_lines[1:]
-            )
-        else:
-            lines.append(f"{indentation}* {subpart.label}")
-            lines.extend(continuation + line if line else "" for line in text_lines)
-        lines.extend(render_subparts(subpart.subparts, depth + 1))
-    return lines
-
-
-def render_problem(problem: Problem, displayed_number: int) -> list[str]:
-    lines: list[str] = []
-    text_lines = problem.text.strip().splitlines()
-    if text_lines:
-        if text_lines[0] != r"\[":
-            lines.append(f"**{displayed_number}.** {text_lines[0]}")
-            lines.extend(text_lines[1:])
-        else:
-            lines.append(f"**{displayed_number}.**")
-            lines.extend(text_lines)
-    elif problem.subparts:
-        noun = "part" if len(problem.subparts) == 1 else "parts"
-        small_numbers = (
-            "zero",
-            "one",
-            "two",
-            "three",
-            "four",
-            "five",
-            "six",
-            "seven",
-            "eight",
-            "nine",
-        )
-        count = (
-            small_numbers[len(problem.subparts)]
-            if len(problem.subparts) <= 9
-            else str(len(problem.subparts))
-        )
-        lines.append(f"**{displayed_number}.** This problem has {count} {noun}.")
-    else:
-        lines.append(f"**{displayed_number}.**")
-    lines.extend(render_subparts(problem.subparts))
-    return lines
-
-
-def render_instructions(text: str) -> list[str]:
-    """Italicize prose line by line while leaving display math untouched."""
-    lines: list[str] = []
-    in_display_math = False
-    for raw_line in text.strip().splitlines():
-        line = raw_line.strip()
-        if line == r"\[":
-            in_display_math = True
-            lines.append(line)
-        elif in_display_math:
-            lines.append(line)
-            if line == r"\]":
-                in_display_math = False
-        elif line:
-            lines.append(f"*{line}*")
-        else:
-            lines.append("")
-    return lines
+def figure_png_filename(exam_id: str, figure: TikzBlock) -> str:
+    return f"{exam_id}.{figure.id}.png"
 
 
 def exam_title(exam: ExamRecord) -> str:
     if exam.subject.startswith("First Year "):
-        title = f"{exam.subject.removeprefix('First Year ')} first year exam"
+        title = f"{exam.subject.removeprefix('First Year ')} First-Year Exam"
     elif exam.subject.startswith("PhD "):
-        title = f"{exam.subject.removeprefix('PhD ')} PhD exam"
+        title = f"{exam.subject.removeprefix('PhD ')} PhD Exam"
     elif exam.subject.endswith(" Qualifying Exam"):
-        title = f"{exam.subject.removesuffix(' Qualifying Exam')} qualifying exam"
+        title = f"{exam.subject.removesuffix(' Qualifying Exam')} Qualifying Exam"
     else:
-        title = f"{exam.subject} exam"
+        title = f"{exam.subject} Exam"
     title += f", {exam.month.title()} {exam.year}"
     if exam.part is not None:
         title += f", Part {exam.part}"
@@ -871,8 +881,8 @@ def exam_title(exam: ExamRecord) -> str:
 
 
 PROJECT_SOURCE_URL = "https://github.com/vvatter/uf-math-gma-exams"
-PAGE_UPDATED_ISO = "2026-07-19"
-PAGE_UPDATED_LABEL = "July 19, 2026"
+PAGE_UPDATED_ISO = "2026-07-20"
+PAGE_UPDATED_LABEL = "July 20, 2026"
 
 
 def subject_display_name(subject: str, subject_tag: str) -> str:
@@ -889,39 +899,12 @@ def subject_display_name(subject: str, subject_tag: str) -> str:
 def subject_archive_title(subject: str, subject_tag: str) -> str:
     name = subject_display_name(subject, subject_tag)
     if subject_tag.endswith("-qualifying"):
-        return f"{name} Qualifying exams"
+        return f"{name} Qualifying Exams"
     if subject_tag.endswith("-first-year"):
-        return f"{name} First-Year exams"
+        return f"{name} First-Year Exams"
     if subject_tag.endswith("-phd"):
-        return f"{name} PhD exams"
+        return f"{name} PhD Exams"
     raise ValueError(f"subject tag has no recognized archive level: {subject_tag}")
-
-
-def render_markdown(exam: ExamRecord) -> str:
-    title = exam_title(exam)
-    lines = [f"# {title}", ""]
-    displayed_number = 0
-    for block in exam.content:
-        if isinstance(block, InstructionsBlock):
-            lines.extend(render_instructions(block.text))
-            lines.append("")
-        elif isinstance(block, ProblemBlock):
-            displayed_number += 1
-            lines.extend(render_problem(block.problem, displayed_number))
-            lines.append("")
-        else:
-            lines.extend([f"## {block.heading.strip()}", ""])
-            if block.numbering == NumberingMode.RESTART:
-                displayed_number = 0
-            for item in block.content:
-                if isinstance(item, InstructionsBlock):
-                    lines.extend(render_instructions(item.text))
-                    lines.append("")
-                else:
-                    displayed_number += 1
-                    lines.extend(render_problem(item.problem, displayed_number))
-                    lines.append("")
-    return "\n".join(lines).rstrip() + "\n"
 
 
 DISPLAY_MATH_BLOCK = re.compile(r"(\\\[(?:.|\n)*?\\\])")
@@ -950,10 +933,8 @@ def render_html_text(text: str, indentation: int) -> list[str]:
     return lines
 
 
-def html_problem_stem(problem: Problem) -> str:
-    if problem.text.strip():
-        return problem.text
-    if not problem.subparts:
+def html_problem_fallback(problem: Problem) -> str:
+    if problem.body or not problem.subparts:
         return ""
     small_numbers = (
         "zero",
@@ -998,12 +979,30 @@ def render_html_subparts(subparts: list[Subpart], indentation: int) -> list[str]
     return lines
 
 
-def render_html_problem(problem: Problem, indentation: int) -> list[str]:
+def render_html_problem(problem: Problem, indentation: int, exam_id: str) -> list[str]:
     prefix = " " * indentation
     lines = [f'{prefix}<li class="problem">']
-    stem = html_problem_stem(problem)
-    if stem:
-        lines.extend(render_html_text(stem, indentation + 2))
+    fallback = html_problem_fallback(problem)
+    if fallback:
+        lines.extend(render_html_text(fallback, indentation + 2))
+    for body_block in problem.body:
+        if isinstance(body_block, ProblemTextBlock):
+            lines.extend(render_html_text(body_block.text, indentation + 2))
+            continue
+        lines.extend(
+            [
+                f'{prefix}  <figure class="problem-figure">',
+                f'{prefix}    <img src="{escape(figure_png_filename(exam_id, body_block), quote=True)}" '
+                f'alt="{escape(body_block.alt, quote=True)}"'
+                + (
+                    f' style="max-height: {body_block.height_lines}lh"'
+                    if body_block.height_lines != 6
+                    else ""
+                )
+                + ">",
+                f"{prefix}  </figure>",
+            ]
+        )
     if problem.subparts:
         lines.extend(render_html_subparts(problem.subparts, indentation + 2))
     lines.append(f"{prefix}</li>")
@@ -1014,6 +1013,7 @@ def render_html_blocks(
     blocks: list[InstructionsBlock | ProblemBlock],
     displayed_number: int,
     indentation: int,
+    exam_id: str,
 ) -> tuple[list[str], int]:
     """Render content while grouping consecutive problems into semantic lists."""
     prefix = " " * indentation
@@ -1033,7 +1033,9 @@ def render_html_blocks(
         while index < len(blocks) and isinstance(blocks[index], ProblemBlock):
             problem_block = blocks[index]
             displayed_number += 1
-            lines.extend(render_html_problem(problem_block.problem, indentation + 2))
+            lines.extend(
+                render_html_problem(problem_block.problem, indentation + 2, exam_id)
+            )
             index += 1
         lines.append(f"{prefix}</ol>")
     return lines, displayed_number
@@ -1097,6 +1099,16 @@ def render_html(exam: ExamRecord) -> str:
         "    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }",
         "    .problem::marker { font-weight: 700; }",
         "    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }",
+        "    .problem-figure { margin: 1rem 0; }",
+        "    .problem-figure img {",
+        "      display: block;",
+        "      width: auto;",
+        "      height: auto;",
+        "      max-width: 80%;",
+        "      max-height: 6lh;",
+        "      margin: 0 auto;",
+        "      object-fit: contain;",
+        "    }",
         "    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }",
         "    .subparts .subparts { margin-left: 2.2rem; }",
         "    .subparts > li { margin: .55rem 0; }",
@@ -1165,6 +1177,7 @@ def render_html(exam: ExamRecord) -> str:
         "      .instructions { margin: .4rem 0 .55rem; }",
         "      .problems { padding-left: 1.75rem; }",
         "      .problem { margin-bottom: .55rem; padding-left: .1rem; }",
+        "      .problem-figure { margin: .3rem 0; break-inside: avoid; }",
         "      .subparts { margin-top: .18rem; }",
         "      .subparts .subparts { margin-left: 1.4rem; }",
         "      .subparts > li { margin: .12rem 0; }",
@@ -1193,7 +1206,7 @@ def render_html(exam: ExamRecord) -> str:
         if not pending_blocks:
             return
         rendered, displayed_number = render_html_blocks(
-            pending_blocks, displayed_number, 4
+            pending_blocks, displayed_number, 4, exam.id
         )
         lines.extend(rendered)
         pending_blocks.clear()
@@ -1211,23 +1224,21 @@ def render_html(exam: ExamRecord) -> str:
         if block.numbering == NumberingMode.RESTART:
             displayed_number = 0
         rendered, displayed_number = render_html_blocks(
-            block.content, displayed_number, 6
+            block.content, displayed_number, 6, exam.id
         )
         lines.extend(rendered)
         lines.append("    </section>")
     flush_pending()
 
     archive_title = subject_archive_title(exam.subject, exam.subject_tag)
-    local_pdf = f"{exam.id}.pdf"
-
     lines.extend(
         [
             "    <footer>",
             "      <ul>",
             f'        <li><a href="{PROJECT_SOURCE_URL}">Project source</a></li>',
-            '        <li><a href="../../index.html">All exam subjects</a></li>',
-            f'        <li><a href="index.html">{escape(archive_title)}</a></li>',
-            f'        <li><a href="{escape(local_pdf, quote=True)}">Original PDF</a></li>',
+            '        <li><a href="../../../index.html">All exam subjects</a></li>',
+            f'        <li><a href="../index.html">{escape(archive_title)}</a></li>',
+            f'        <li><a href="{escape(exam.id)}.source.pdf">Original PDF</a></li>',
             "      </ul>",
             f'      <p class="page-updated">Page updated <time datetime="{PAGE_UPDATED_ISO}">{PAGE_UPDATED_LABEL}</time>.</p>',
             "    </footer>",
@@ -1237,6 +1248,32 @@ def render_html(exam: ExamRecord) -> str:
         ]
     )
     return "\n".join(lines) + "\n"
+
+
+def regenerate_presentations(sources: dict[str, SourceExam]) -> int:
+    """Regenerate HTML from canonical JSON without model calls."""
+    failures: list[str] = []
+    rendered = 0
+    for exam_id in sorted(sources):
+        source = sources[exam_id]
+        json_path = exam_json_path(source)
+        if not json_path.is_file():
+            failures.append(f"{exam_id}: canonical JSON is missing")
+            continue
+        try:
+            exam = ExamRecord.model_validate_json(json_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as error:
+            failures.append(f"{exam_id}: {error}")
+            continue
+        errors = validate_exam(exam, source, [])
+        if errors:
+            failures.append(f"{exam_id}: {'; '.join(errors)}")
+            continue
+        write_text(exam_html_path(source), render_html(exam))
+        rendered += 1
+    if failures:
+        raise RuntimeError("presentation regeneration failed:\n" + "\n".join(failures))
+    return rendered
 
 
 def extract_one(
@@ -1252,7 +1289,6 @@ def extract_one(
     if source_hash != source.sha256:
         raise RuntimeError(f"source hash does not match manifest for {source.id}")
     output_path = exam_json_path(source)
-    rendered_path = exam_markdown_path(source)
     html_path = exam_html_path(source)
     saved_path = checkpoint_path(source, build_root)
     if output_path.exists() and saved_path.exists() and not force:
@@ -1271,7 +1307,6 @@ def extract_one(
         errors = validate_exam(exam, source, flags)
         if errors:
             raise RuntimeError(f"cached extraction invalid for {source.id}: {'; '.join(errors)}")
-        write_text(rendered_path, render_markdown(exam))
         write_text(html_path, render_html(exam))
         return exam, flags, True
     if saved_path.exists() and not force:
@@ -1291,12 +1326,11 @@ def extract_one(
                 checkpoint["revalidated_at"] = datetime.now(timezone.utc).isoformat()
                 write_json(saved_path, checkpoint)
                 write_json(output_path, exam)
-                write_text(rendered_path, render_markdown(exam))
                 write_text(html_path, render_html(exam))
                 return exam, extraction.review_flags, True
     if force:
         archive_files(
-            [output_path, rendered_path, html_path, saved_path],
+            [output_path, html_path, saved_path],
             build_root / source.id / "history",
         )
 
@@ -1323,7 +1357,7 @@ def extract_one(
     exam = build_exam(source, extraction)
     errors = validate_exam(exam, source, extraction.review_flags)
     checkpoint = {
-        "schema_version": 2,
+        "schema_version": 3,
         "prompt_version": PROMPT_VERSION,
         "evidence_version": (
             NATIVE_EVIDENCE_VERSION
@@ -1348,7 +1382,6 @@ def extract_one(
     if errors:
         raise RuntimeError(f"extraction invalid for {source.id}: {'; '.join(errors)}")
     write_json(output_path, exam)
-    write_text(rendered_path, render_markdown(exam))
     write_text(html_path, render_html(exam))
     return exam, extraction.review_flags, False
 
@@ -1449,6 +1482,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="extract every exam without a canonical JSON record",
     )
     selection.add_argument(
+        "--render-all",
+        action="store_true",
+        help="regenerate every HTML presentation without model calls",
+    )
+    selection.add_argument(
         "--subject",
         action="append",
         dest="subject_tags",
@@ -1496,6 +1534,12 @@ def main() -> int:
     if args.dpi < 100:
         raise SystemExit("--dpi must be at least 100")
     sources = load_sources(args.manifest)
+    if args.render_all:
+        if args.exam_ids:
+            raise SystemExit("exam IDs cannot be combined with --render-all")
+        count = regenerate_presentations(sources)
+        print(f"rendered={count}")
+        return 0
     exam_ids = args.exam_ids
     if args.affected is not None:
         if exam_ids:

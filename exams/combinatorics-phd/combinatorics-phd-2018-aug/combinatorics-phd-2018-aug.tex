@@ -1,0 +1,111 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, August 2018},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2018\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, August 2018}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Find a generating function for the number of positive integer solutions to \(x_1+2x_2+3x_3+4x_4+5x_5=n\).
+\item
+Tickets numbered \(\{1,2,\ldots,n\}\) are drawn from an urn at random one after the other without replacement. What is the probability that the number~\(r\) is drawn on the \(k^{th}\) drawing?
+
+\par
+Among a population of \(n+1\) people, a rumor is spread at random. One person tells the rumor to a second, who in turn repeats it to a third person, etc. What is the probability that the rumor will be told~\(k\) times without being repeated to any person?
+\item
+Prove that there exists no simple, bipartite, planar graph with minimum degree at least~\(4\).
+\item
+Let~\(\mu\) be the largest eigenvalue of the adjacency matrix of a graph~\(G\) and~\(\Delta\) the maximum degree of~\(G\). Prove that \(\mu\leq\Delta\).
+
+\par
+(Hint: Consider the largest, in absolute value, coordinate of a corresponding eigenvector.)
+\item
+Show that a~\(k\)-regular graph of girth~\(4\) has at least \(2k\) vertices, and a~\(k\)-regular graph of girth~\(5\) has at least \(k^2+1\) vertices. Draw a~\(3\)-regular graph of girth~\(4\) with \(2\cdot 3=6\) vertices and a~\(3\)-regular graph of girth~\(5\) with \(3^2+1=10\) vertices.
+\item
+Let \(f_n\) be the number of all compositions of the integer~\(n\) into odd parts. Find the exponential order of the numbers \(f_n\).
+\item
+Recall that a permutation is called even if it has an even number of even cycles, and it is called odd if it has an odd number of even cycles. Also recall that a derangement is a permutation with no~\(1\)-cycles.
+
+\par
+Let \(A_n\) be the number of all even derangements of length~\(n\), and let \(B_n\) be the number of all odd derangements of length~\(n\). Find an exact formula for \(A_n-B_n\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if a \((v,k,\lambda)\) BIBD exists with block set~\(\mathcal{B}\) on a point set~\(V\), then the set \(\mathcal{B}'=\{V\setminus B\mid B\in\mathcal{B}\}\) is a BIBD.
+\item[\textnormal{(b)}]
+Construct a \((7,4,2)\) BIBD.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

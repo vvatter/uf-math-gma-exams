@@ -1,0 +1,122 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Linear Algebra First-Year Exam, August 2017},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, August 2017\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Linear Algebra First-Year Exam, August 2017}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Assume that~\(A\) is Hermitian and all its eigenvalues are distinct and nonzero.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that each pair of distinct eigenvectors of~\(A\) are orthogonal.
+\item[\textnormal{(b)}]
+If~\(\lambda\) is an eigenvalue of~\(A\) with eigenvector~\(x\) with \(\lVert x\rVert_2=1\), then \(B=A-\lambda xx^*\) has the same eigenvectors as~\(A\) while~\(B\)'s eigenvalues are the same as those of~\(A\) except~\(\lambda\) is replaced with zero.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(P\) is a projector, prove that \(\operatorname{null}(P)\cap\operatorname{range}(P)=\{0\}\) and \(\operatorname{null}(P)=\operatorname{range}(I-P)\).
+\item[\textnormal{(b)}]
+Prove that~\(P\) is an orthogonal projector if and only if it is Hermitian.
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If both~\(A\) and~\(U\) are in \(\mathbb{C}^{m,m}\) and~\(U\) is unitary, prove that \(\lVert UA\rVert_F=\lVert AU\rVert_F=\lVert A\rVert_F\).
+\item[\textnormal{(b)}]
+If both~\(A\) and~\(U\) are in \(\mathbb{C}^{m,m}\) and~\(U\) is unitary, prove that \(\lVert UA\rVert_2=\lVert AU\rVert_2=\lVert A\rVert_2\).
+\item[\textnormal{(c)}]
+Prove that \(\lVert A\rVert_2=(\rho(A^*A))^{1/2}=\sigma_1\), where \(\sigma_1\) is the largest singular value of~\(A\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(A\in\mathbb{C}^{m,n}\) with \(m\geq n\), prove that \(A^*A\) is invertible if and only if \(\operatorname{rank}(A)=n\).
+\item[\textnormal{(b)}]
+Give an explicit formula for \(\det(\lambda I-ww^*)\) when \(\lambda\in\mathbb{C}\), \(I\) is the \(m\times m\) identity matrix and \(w\in\mathbb{C}^m\).
+\end{examsubparts}
+\item
+Assume that~\(T\) is tridiagonal and symmetric with the diagonal entries given by \(a_j\) for \(j=1,\ldots,m\) and the super- and sub-diagonal entries by \(b_j\) for \(j=1,\ldots,m-1\). Let \(p_k\) be the characteristic polynomial of the \(k\times k\) matrix in the upper left hand corner of~\(T\). Prove that 
+\[
+p_k(x)=(a_k-x)p_{k-1}(x)-b_{k-1}^2p_{k-2}(x).
+\]
+\end{examproblems}
+\end{document}

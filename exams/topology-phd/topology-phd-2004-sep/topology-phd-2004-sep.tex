@@ -1,0 +1,126 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, September 2004},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, September 2004\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, September 2004}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that \(\pi_1(S^2)\) is trivial.
+\item
+Show that there is no retraction of the Möbius band onto its boundary.
+\item
+Does there exists a covering space of the figure eight with nontrivial abelian fundamental group?
+\item
+Show that the 2-dimensional sphere with three points deleted cannot be a topological group.
+\item
+Let~\(M\) be a 4-dimensional closed simply connected manifold. Show that every continuous map \(f:M\to M\) which is homotopic to the identity has a fixed point.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+State the Baire Category Theorem.
+\item
+State the Lefschetz Fixed Point Theorem.
+\item
+State the Jordan Curve Theorem.
+\item
+State the Five Lemma.
+\item
+Show that no covering of the 2-torus has the homotopy type of a figure eight.
+\item
+Let \(S_r(x,y)\) denote a circle of radius~\(r\) centered at \((x,y)\in\mathbb{R}^2\). Let \(\Sigma R\) be the suspension over Hawaiian ring \(R=\bigcup_{n=1}^{\infty}S_{1/n}(1/n,0)\). Is \(\Sigma R\)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+locally path connected?
+\item[\textnormal{(b)}]
+locally simply connected?
+\item[\textnormal{(c)}]
+semi-locally simply connected?
+\end{examsubparts}
+\item
+State the Tietze Extension Theorem.
+\item
+Define retraction and deformation retraction.
+\item
+State the Universal Coefficient formula for homology.
+\item
+Let~\(X\) be a complete metric space such that no point is isolated. Can~\(X\) be countable?
+\end{examproblems}
+\end{document}

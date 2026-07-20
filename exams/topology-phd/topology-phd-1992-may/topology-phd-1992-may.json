@@ -1,0 +1,156 @@
+{
+  "schema_version": 3,
+  "id": "topology-phd-1992-may",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 1992,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_1992_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer the following questions without giving proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Define what it means for a space \\(X\\) to be"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "connected",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "arcwise connected",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "simply connected",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(K\\) be a finite simplicial complex. Define \\(\\chi(K)\\), the Euler characteristic of \\(K\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Define the degree of a map \\(f:S^n\\to S^n\\). (You may assume that \\(f\\) is smooth.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(K=K_1\\cup K_2\\), where \\(K\\) is a simplicial complex and \\(K_1\\), \\(K_2\\), and \\(A=K_1\\cap K_2\\) are subcomplexes of \\(K\\). State the Mayer–Vietoris sequence (in either homology or cohomology) for \\((K,K_1,K_2,A)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following questions, giving proofs and examples."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Must a continuous map \\(f:S^4\\to S^4\\) of non-negative degree have a fixed point?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Compute the fundamental group of a closed, non-orientable surface \\(X\\) of genus 2."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Brouwer fixed point theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(U\\) be an open subset of \\(\\mathbb{R}^n\\). Show that \\(U\\) is connected if and only if \\(U\\) is arcwise connected."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that no covering space for the two-torus, \\(T^2=S^1\\times S^1\\), has the homotopy type of the figure-8, \\(S^1\\vee S^1\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Compute the homology groups of the closed unit disk \\(D^n=\\{x\\in\\mathbb{R}^n:\\lVert x\\rVert\\leq 1\\}\\) and the unit sphere \\(S^n=\\{u\\in\\mathbb{R}^{n+1}:\\lVert u\\rVert=1\\}\\), for all \\(n\\geq 0\\). (Note that \\(D^0=\\{0\\}\\) and that \\(S^0=\\{-1,1\\}\\).)"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

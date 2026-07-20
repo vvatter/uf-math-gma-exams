@@ -1,0 +1,112 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Logic PhD Exam, May 2022},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2022\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Logic PhD Exam, May 2022}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Solve 5 problems of the following; at least one from each section.
+\end{examinstructions}
+\section{A. Set Theory.}
+\begin{examproblems}{0}
+\item
+Sketch any proof of consistency of the Continuum Hypothesis with the axioms of ZFC.
+\item
+What is a generic extension of a transitive model of ZFC? Provide a definition.
+\item
+Show that every Polish space is a continuous image of the Baire space.
+\end{examproblems}
+\section{B. Computability.}
+\begin{examproblems}{0}
+\item
+Define many-one reducibility and many-one equivalence. Prove that there exist two non-computable, computably enumerable sets which are not many-one equivalent.
+\item
+Prove Rice’s Theorem: If~\(P\) is a nonempty proper subset of the set of all partial computable functions, then the set of all indices of functions belonging to~\(P\) is not computable.
+\item
+Define the Turing degrees and the Turing jump operator. State the Friedberg Jump Inversion Theorem and outline its proof.
+\item
+State and prove Kleene’s Fixed Point Theorem (a.k.a. Recursion Theorem).
+\end{examproblems}
+\section{C. Model theory.}
+\begin{examproblems}{0}
+\item
+State both the upward and downward Löwenheim–Skolem Theorems. Prove either one of them.
+\item
+Define what an ultraproduct of structures is and state Łoś’s Theorem. Use Łoś’s Theorem to give a proof of the Compactness Theorem.
+\item
+Let \(\mathcal L\) be a language consisting of one unary function symbol~\(f\). Consider the class~\(K\) of all finite \(\mathcal L\)-structures in which~\(f\) is a bijection. Prove that~\(K\) is a Fraïssé class and describe its Fraïssé limit~\(M\). Prove or disprove: \(\operatorname{Th}(M)\) is \(\aleph_0\)-categorical.
+\item
+Let \(\mathcal L\) be a language, let~\(n\) be a number, let~\(M\) be an \(\mathcal L\)-structure, and let~\(A\) be a subset of~\(M\). Give the definition of an~\(n\)-type of~\(M\) over~\(A\). Define the Stone topology on the space~\(S\) of complete~\(n\)-types of~\(M\) over~\(A\) and prove that~\(S\) equipped with this topology is a compact space.
+\end{examproblems}
+\end{document}

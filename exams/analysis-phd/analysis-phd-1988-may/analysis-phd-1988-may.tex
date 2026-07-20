@@ -1,0 +1,131 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 1988},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 1988\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 1988}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven out of the eight questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that \(L^1(S,\mathcal A,\mu)\) is a complete space.
+\item
+State and prove the Hahn–Banach theorem.
+\item
+State and prove Fubini’s theorem.
+\item
+Prove that there exists no sequence \((c_n)_{n=1}^{\infty}\) of real numbers such that an infinite series \(\sum a_n\) of real numbers converges if and only if \((c_n a_n)_{n=1}^{\infty}\) is a bounded sequence.
+
+\par
+[Hint: Without loss of generality, assume such a sequence exists, with \(c_n\ne 0\) for all~\(n\). Consider the mapping \(T:\ell_\infty\to\ell_1\) given by \(T((x_n))=\frac{x_n}{c_n}\) and use the open mapping theorem.]
+\item
+Prove that there exists no Banach space of algebraic dimension \(\aleph_0\).
+
+\par
+[Hint: show that a finite dimensional subspace is closed and then use the Baire category theorem.]
+\item
+Let \(f:\mathbb R\to\mathbb R\) be a Lebesgue measurable function. Show that there exists a Borel measurable function~\(g\) such that \(f=g\) a.e. (a.e. with respect to Lebesgue measure).
+\item
+Let~\(\mu\) be a measure on \(([0,\infty),\mathcal B([0,\infty)))\) defined by 
+\[
+\mu(A)=\int_A x\,dx.
+\]
+ Let \(T:[0,\infty)\to[0,\infty)\) be given by \(T(x)=e^x-1\). Define a new measure~\(\pi\) on \(([0,\infty),\mathcal B([0,\infty)))\) by setting \(\pi(A)=\mu(T^{-1}(A))\). Compute \(d\pi/d\mu\).
+\item
+Let~\(\lambda\) be Lebesgue measure on \((\mathbb R,\mathcal B(\mathbb R))\). If \(A\in\mathcal B(\mathbb R)\), define the set \(-A=\{x:-x\in A\}\). Define \(\mathcal C=\{A\in\mathcal B(\mathbb R):A=-A\}\).
+\begin{examsubparts}
+\item[\textnormal{Part (a)}]
+Show \(\mathcal C\) is a sigma-algebra.
+\item[\textnormal{Part (b)}]
+Define two new measures~\(\mu\) and~\(\nu\) on the measurable space \((\mathbb R,\mathcal C)\) by setting 
+\[
+\mu(A)=\int_A x\,dx \qquad\text{whenever }A\in\mathcal C,
+\]
+ 
+\[
+\nu(A)=\int_{A\cap[0,\infty)}x\,dx \qquad\text{whenever }A\in\mathcal C.
+\]
+ Since~\(\lambda\) may also be considered as a measure on \((\mathbb R,\mathcal C)\), we can find two \(\mathcal C\)-measurable functions \(d\mu/d\lambda\) and \(d\nu/d\lambda\) so that 
+\[
+\mu(A)=\int_A \frac{d\mu}{d\lambda}\,dx \qquad\text{whenever }A\in\mathcal C,
+\]
+ 
+\[
+\nu(A)=\int_A \frac{d\nu}{d\lambda}\,dx \qquad\text{whenever }A\in\mathcal C.
+\]
+ Compute these two functions.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

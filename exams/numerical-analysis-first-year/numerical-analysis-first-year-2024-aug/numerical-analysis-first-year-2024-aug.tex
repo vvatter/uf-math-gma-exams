@@ -1,0 +1,112 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis First-Year Exam, August 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, August 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis First-Year Exam, August 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Consider an approximate integration scheme of the following form, for \(0<\alpha<1\), 
+\[
+\int_0^1 x^\alpha f(x)\,dx \approx A\int_0^1 f(x)\,dx+B\int_0^1 xf(x)\,dx.
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine the constants \(A,B\) so that the formula has the maximum degree of exactness.
+\item[\textnormal{(b)}]
+What is the degree of exactness of the formula in (a)?
+\end{examsubparts}
+\item
+Let~\(f\) be an arbitrary (continuous) function on \([0,1]\) satisfying \(f(x)+f(1-x)\equiv 1\) for \(0\leq x\leq 1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(\int_0^1 f(x)\,dx=\frac12\).
+\item[\textnormal{(b)}]
+Show that the composite trapezoidal rule for computing \(\int_0^1 f(x)\,dx\) is exact.
+\end{examsubparts}
+\item
+Discuss uniqueness and non-uniqueness of the least squares approximation to a function~\(f\) in the case of a discrete set \(T=\{t_1,t_2\}\) (i.e., \(N=2\)) where \(t_1\neq t_2\) and \(\Phi_n=P_{n-1}\) (polynomial of degree \(\leq n-1\)). In case of non-uniqueness, determine all solutions.
+\item
+Derive the three-point formula for the second derivative 
+\[
+f''(x_0)=\frac{1}{h^2}\bigl(f(x_0-h)-2f(x_0)+f(x_0+h)\bigr)-\frac{h^2}{12}f^{(4)}(\eta),
+\]
+ where~\(\eta\) is between \(x_0-h\) and \(x_0+h\).
+\item
+Let \(x_0,x_1,\ldots,x_n\) be pairwise distinct points in \([a,b]\), \(-\infty<a<b<\infty\), and \(f\in C^1[a,b]\). Show that given any \(\epsilon>0\), there exists a polynomial~\(p\) such that \(\lVert f-p\rVert_\infty<\epsilon\) and at the same time \(p(x_i)=f(x_i)\), \(i=0,1,\ldots,n\). Here \(\lVert u\rVert_\infty=\max_{a\leq x\leq b}|u(x)|\).
+\end{examproblems}
+\end{document}

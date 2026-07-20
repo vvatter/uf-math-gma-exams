@@ -1,0 +1,124 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2005},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2005\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2005}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Show your work.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that, for any \(n+1\) numbers chosen from the set \(\{1,2,3,\ldots,2n\}\), one divides another.
+\item
+State the Multiplier Theorem and use it to find two normalized \((11,5,2)\)-difference sets. (Normalized means that the sum of its elements is~\(0\).)
+\item
+Show that a plane graph for which every face has an even number of edges must be bipartite.
+\item
+Prove that for a binary linear code~\(C\), either all the codewords have even weight or exactly half the codewords have even weight. Show by example that this is not true for all ternary codes. Prove that if~\(C\) is a self-dual binary linear code, then all the codewords have even weight.
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the number of cycles of length \(2n\) in \(K_{n,n}\).
+\item[\textnormal{(b)}]
+Find the number of~\(6\)-cycles in \(K_{m,n}\).
+\item[\textnormal{(c)}]
+Find the number of~\(6\)-cycles in the~\(n\)-cube.
+\end{examsubparts}
+\item
+Find a recurrence for the number \(a_n\) of ways of going up~\(n\) stairs if we may take one or two steps at a time. Find the generating function for the sequence of \(a_n\) and an explicit formula for \(a_n\).
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that for a \((v,k,\lambda)\)-BIBD we have \(\lambda(v-1)=r(k-1)\).
+\item[\textnormal{(b)}]
+Consider a symmetric \((v,k,\lambda)\)-BIBD and denote the order by \(n:=k-\lambda\). Using calculus to minimize, prove that \(v\geq 4n-1\).
+\item[\textnormal{(c)}]
+If \(v=4n-1\), show that \((v,k,\lambda)=(4n-1,2n-1,n-1)\) or \((4n-1,2n,n)\). Provide a family of symmetric designs with one of these sets of parameters.
+\end{examsubparts}
+\item
+If~\(\lambda\) is an eigenvalue of (the adjacency matrix~\(A\) of) a graph with~\(n\) vertices, \(m\) edges and maximum degree~\(\Delta\), then prove that
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\lambda\leq\Delta\).
+\item[\textnormal{(b)}]
+\(\lambda\leq\sqrt{\frac{2m(n-1)}{n}}\).
+
+\par
+Hint on (b): use the trace of~\(A\), \(A^2\) and an appropriate inequality.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

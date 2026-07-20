@@ -1,0 +1,135 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, May 2019, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2019, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, May 2019, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer all questions and work all problems. Make proofs as succinct as possible.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(n \ge 1\). Suppose that \(f,g:X\to\mathbb{R}^n\) are continuous. Show that~\(f\) and~\(g\) are homotopic.
+\item
+Let \(\gamma:[0,1]\to X\) with basepoint \(x_0\). Let \(\gamma^{-1}\) be defined by \(\gamma^{-1}(t)=\gamma(1-t)\). Show that \(\gamma\ast\gamma^{-1}\) is loop homotopic to the constant loop \(1:[0,1]\to X\), \(1(t)\equiv x_0\).
+\item
+Show that \(\pi_1(S^1,1)=\mathbb{Z}\).
+\item
+Show that the disk, \(D^2=\{z\in\mathbb{C}\mid \lVert z\rVert\le 1\}\), has the fixed point property.
+\item
+Consider the matrix \(M=\begin{bmatrix}2&3\\1&1\end{bmatrix}\). This represents a group homomorphism \(M:\mathbb{Z}^2\to\mathbb{Z}^2\). Show that there is a map \(f:T^2\to T^2\) such that \(f_*=M\), where \(f_*:\pi_1(T^2)\to\pi_1(T^2)\) is the homomorphism induced by~\(f\) on the fundamental group.
+\item
+Suppose that \(f:S^1\to S^1\) is continuous. Show that~\(f\) is homotopic to \(z^n:S^1\to S^1\) for some \(n\in\mathbb{Z}\). This is the degree of~\(f\).
+\item
+Let \(n>1\). Let \(\mathbb{P}^n=S^n/D\), where~\(D\) identifies~\(x\) with its antipode for all \(x\in S^n\). Show that \(\pi_1(\mathbb{P}^n,x_0)\cong\mathbb{Z}_2\).
+\item
+Describe a space~\(X\) such that \(\pi_1(X,x_0)\cong\mathbb{Z}_3\). Verify that this is the fundamental group by the Seifert–van Kampen Theorem.
+\item
+A topological space is said to be Lindelöf provided that for every open cover~\(\mathcal{U}\) of~\(X\), there is a countable \(\mathcal{V}\subset\mathcal{U}\) covering~\(X\). Show that if~\(X\) is a separable metric space, then~\(X\) is Lindelöf.
+\item
+State and prove the Tychonoff Theorem.
+\item
+State the following theorems or verify the following statements with quick examples or statements.
+
+\par
+The Alexander Subbase Theorem.
+
+\par
+The Hahn–Mazurkiewicz Theorem
+
+\par
+The Brouwer Characterization of the Cantor Set
+
+\par
+The Jordan Curve Theorem
+
+\par
+The Borsuk–Ulam Theorem for \(S^2\).
+
+\par
+Determine the fundamental group of \(T^2\).
+
+\par
+Determine the fundamental group of the connected sum of two tori, \(\pi_1(T^2\#T^2)\).
+
+\par
+The Arcwise Connectedness Theorem
+
+\par
+Suppose that~\(X\) is a compact metric AR. Show that for any~\(Z\) and any pair of continuous functions \(f,g:Z\to X\), \(f\) and~\(g\) are homotopic.
+
+\par
+Suppose that~\(C\) is the Cantor set. Show that~\(C\) is homeomorphic to \(C\times C\).
+\end{examproblems}
+\end{document}

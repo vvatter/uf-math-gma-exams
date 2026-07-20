@@ -1,0 +1,115 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, August 2025},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2025\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, August 2025}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Find the number of sequences of length \(n \leq 26\) of letters from the alphabet, each such sequence required to be in alphabetical order with no letter repeated.
+\item
+Let \(n \geq 3\) be an odd number. Prove that the sequence 
+\[
+\binom{n}{1},\binom{n}{2},\ldots,\binom{n}{\frac{n-1}{2}}
+\]
+ contains an odd number of odd numbers.
+\item
+Find a second order linear recurrence for the number of ways to properly 3-color an~\(n\)-cycle. (No two adjacent vertices receive the same color.)
+\item
+In a tournament, each player plays every other player exactly once, except in the process 3 players dropped out after playing exactly 2 games each. If 50 games were played, how many games were played just among the 3 players who dropped out? Explain your answer.
+\item
+Suppose a convex polyhedron has 6 vertices and 12 edges. Prove that each facet is a triangle.
+\item
+Let \(A(n)\) be the number of set partitions of \([n]\) such that~\(i\) and \(i+1\) never occur in the same block for any \(i=1,2,\ldots,n-1\). Show that 
+\[
+A(n)=\sum_{i=0}^{n-1}(-1)^i\binom{n-1}{i}B(n-i),
+\]
+ where \(B(n)\) is the \(n^{th}\) Bell number. Alternatively, show that 
+\[
+A(n)=B(n-1).
+\]
+\item
+Let~\(P\) be a finite poset with a bottom element~\(0\). Show that if~\(x\) covers exactly one element of~\(P\), then 
+\[
+\mu(x,0)=
+\begin{cases}
+-1 & \text{if }x\text{ covers }0,\\
+0 & \text{otherwise.}
+\end{cases}
+\]
+ For any \(n\in\mathbb{Z}\), construct a poset containing an element~\(x\) with \(\mu(x)=n\).
+\item
+Prove that a simple~\(k\)-regular graph with girth~\(k\) has order at least \(2k\).
+\end{examproblems}
+\end{document}

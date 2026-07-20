@@ -1,0 +1,131 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-1991-may",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 1991,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_1991_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Be sure to give complete proofs and justify your steps. Do not leave gaps."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "The Lebesgue Dominated Convergence Theorem",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Fatou’s Lemma",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "The Radon–Nikodym Theorem",
+            "subparts": []
+          },
+          {
+            "label": "(d)",
+            "text": "\\((L^1(S,\\Sigma,\\mu))^* = L^\\infty(S,\\Sigma,\\mu)\\)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Vitali Convergence Theorem for integrals (convergence in measure form)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that a subset \\(A\\) of the reals is a set of Lebesgue measure zero if and only if there exists a sequence of intervals \\(I_m\\) such that"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(\\displaystyle \\sum_m \\operatorname{length}(I_m)<\\infty.\\)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(\\displaystyle A\\subset \\bigcup_{m=k}^{\\infty} I_m\\) for every \\(k\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f\\) be Lebesgue integrable on \\(\\mathbb R\\). Suppose that \\(\\displaystyle \\int_0^x f\\,dm=0\\) for every \\(x\\in\\mathbb R\\). What can you conclude about \\(f\\)?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove Fubini’s Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((S_m,\\Sigma_m,P_m)_{m=1}^{\\infty}\\) be a sequence of probability spaces. Let \\(E_m\\in\\Sigma_m\\), \\(m=1,2,\\ldots\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Show that \\[E=\\mathop{\\times}_{m=1}^{\\infty}E_m\\in\\bigotimes_{m=1}^{\\infty}\\Sigma_m.\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that \\[\\left(\\bigotimes_{m=1}^{\\infty}P_m\\right)(E)=\\prod_{m=1}^{\\infty}P_m(E_m).\\]",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

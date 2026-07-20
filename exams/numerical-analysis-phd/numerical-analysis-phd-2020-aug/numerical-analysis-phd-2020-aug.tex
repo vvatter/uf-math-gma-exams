@@ -1,0 +1,173 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, August 2020},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, August 2020\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, August 2020}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\) with \(\operatorname{rank}(A)=p\) and \(p\le n\le m\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show \(\operatorname{Col}(A^*)=\operatorname{Span}\{v_1,v_2,\ldots,v_p\}\), where \(v_1,\ldots,v_p\) are the first~\(p\) columns of~\(V\).
+\item[\textnormal{(b)}]
+Show \(\operatorname{Null}(A)=\operatorname{Span}\{v_{p+1},v_{p+2},\ldots,v_n\}\).
+\item[\textnormal{(c)}]
+Find the economy singular value decompositions of the matrix~\(A\) given by 
+\[
+A=\begin{pmatrix}
+1&0&4\\
+1&0&4\\
+1&0&4\\
+1&0&4
+\end{pmatrix}.
+\]
+\end{examsubparts}
+\item
+Let \(A\in\mathbb{C}^{m\times n}\) with \(\operatorname{rank}(A)=n<m\). Let \(A=QR\) be the \(QR\) decomposition of~\(A\), and \(A=Q_1R_1\) be the economy \(QR\) decomposition.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that \(x\in\mathbb{C}^n\) that solves \(R_1x=Q_1^*b\) is the least-squares solution to \(Ax=b\) for \(b\in\mathbb{C}^m\).
+\item[\textnormal{(b)}]
+Find the economy \(QR\) decomposition of matrix~\(B\) given by 
+\[
+B=\begin{pmatrix}
+3&0&1\\
+0&2&0\\
+4&0&0\\
+0&0&1
+\end{pmatrix}.
+\]
+\end{examsubparts}
+\item
+Let~\(A\) and~\(S\) be \(n\times n\) matrices, and suppose~\(S\) is nonsingular.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that~\(A\) and \(B=SAS^{-1}\) have the same eigenvalues, and provide the relation between the eigenvectors of~\(B\) and the eigenvectors of~\(A\).
+\item[\textnormal{(b)}]
+Suppose~\(A\) is skew-Hermitian. Show the eigenvalues of~\(A\) are pure imaginary.
+\end{examsubparts}
+\item
+Suppose the \(5\times5\) symmetric matrix~\(A\) has eigenvalues known to within the given tolerances. 
+\[
+\begin{aligned}
+3.5&>\lambda_1>2.5\\
+2.0&>\lambda_2>1.0\\
+1.0&>\lambda_3>-1.0\\
+-1.0&>\lambda_4>-2.0\\
+-2.5&>\lambda_5>-3.5.
+\end{aligned}
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Describe how shifting can be used so that the power method can be used to compute \(\lambda_1\) with guaranteed convergence.
+\item[\textnormal{(b)}]
+What is the shift that provides the best convergence rate in the worst case?
+\end{examsubparts}
+\item
+For \(x,y>0\), consider computing \(f(x,y)=\sqrt{y+x^2}-\sqrt{y}\) in floating-point arithmetic with machine precision \(\epsilon_m\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Explain the difficulties in computing \(f(x,y)\), if \(x\ll y\). What are the absolute and relative errors if \(x^2/y<\epsilon_m\), if \(f(x,y)\) is computed directly from the form given above?
+\item[\textnormal{(b)}]
+Suppose \(x^2/y<\epsilon_m\). Describe a way to compute \(f(x,y)\) with more accuracy in this situation.
+\end{examsubparts}
+\item
+Let \(\{\phi_k\}_{k=0}^{n+1}\) be a set of orthogonal polynomials on \([a,b]\), with respect to the inner-product \((f,g)=\int_a^b f(x)g(x)w(x)\,dx\), indexed so that \(\phi_k\) is of degree~\(k\). Prove that \(\phi_k\) has~\(k\) distinct roots \(\{x_j^{(k)}\}_{j=1}^k\), with \(x_j^{(k)}\in[a,b]\), \(j=1,\ldots,k\).
+\item
+Consider the interval \([a,b]\) with the partition \(a=x_1<x_2<\cdots<x_n<x_{n+1}=b\). Suppose \(s(x)\) is the natural cubic spline that interpolates the data \(\{(x_i,y_i)\}_{i=1}^{n+1}\), and that \(g\in C^2[a,b]\) interpolates the same data. Show that 
+\[
+\int_a^b (s''(x))^2\,dx\leq\int_a^b (g''(x))^2\,dx.
+\]
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Consider the inner product on \(C(0,2)\) given by \((f,g)=\int_0^2 f(t)g(t)\,dt\). Find three orthonormal polynomials \(\phi_0,\phi_1,\phi_2\) on \((0,2)\) with respect to the given inner product such that the degree of \(\phi_n\) is equal to~\(n\), \(n=0,1,2\).
+\item[\textnormal{(b)}]
+Find the nodes \(t_1\) and \(t_2\) and weights \(w_1\) and \(w_2\) which yield the weighted Gaussian Quadrature formula 
+\[
+\int_0^2 f(t)\,dt\approx w_1f(t_1)+w_2f(t_2)
+\]
+ with degree of exactness \(m=3\). You should find the nodes exactly, and may leave the weights \(w_1,w_2\) in integral form.
+\end{examsubparts}
+\item
+Prove for any \(f\in C[a,b]\) and integer \(n\geq0\), that the best uniform approximation of~\(f\) in \(P_n\) is unique. You may assume the existence of at least one best uniform approximation of~\(f\).
+\item
+Suppose \(f\in C^{n+1}[a,b]\), and let \(p\in P_n\) be a polynomial that interpolates the data \(\{(x_i,f(x_i))\}_{i=0}^n\), where \(x_0,\ldots,x_n\), are distinct points in \([a,b]\). Consider an arbitrary fixed \(x\in[a,b]\), and derive an exact expression for the error \(f(x)-p(x)\).
+\end{examproblems}
+\end{document}

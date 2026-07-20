@@ -1,0 +1,128 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, January 2024, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2024, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, January 2024, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+For the first five problems, show all your work and support all statements.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that \(\{0,1\}^{\omega}\) is not countable.
+\item
+Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.
+\item
+Assume that \(f:X\to Y\) is continuous and surjective.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(X\) is Lindelöf (every open covering has a countable subcovering), show that~\(Y\) is also.
+\item[\textnormal{(b)}]
+If~\(X\) is separable (has a countable dense subset), show that~\(Y\) is also.
+\end{examsubparts}
+\item
+Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c<1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).
+\item
+Let \((Y,d)\) be a complete metric space. Let~\(J\) be a set. Suppose \(d(y,y')\leq 1\) for all \(y,y'\in Y\), meaning a simpler definition for the uniform metric \(\bar{\rho}\) on \(Y^J\) is 
+\[
+\bar{\rho}(f,g)=\sup_{\alpha\in J}\{d(f(\alpha),g(\alpha))\}
+\]
+ for \(f,g:J\to Y\). Prove that \((Y^J,\bar{\rho})\) is a complete metric space.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following problems with complete definitions, complete statements, an example, or a short proof.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Define what it means for a topological space~\(X\) to be regular.
+\item
+Show that a closed subspace~\(C\) of a compact space~\(X\) is compact.
+\item
+A function \(f:\mathbb{Z}_+\to\{0,1\}\) is eventually zero if there is a positive integer~\(N\) such that \(f(n)=0\) for all \(n\geq N\). Prove that the set of all functions \(f:\mathbb{Z}_+\to\{0,1\}\) that are eventually zero is countable.
+\item
+Show that \([0,\infty)\) and~\(\mathbb{R}\) are not homeomorphic.
+\item
+Let \(x=(x_1,x_2,\ldots)\in\mathbb{R}^{\omega}\). Let \(\{x^{(n)}\}_{n\in\mathbb{Z}_+}\) be a sequence of points in \(\mathbb{R}^{\omega}\) such that for each coordinate \(i\in\mathbb{Z}_+\), the sequence \(\{x_i^{(n)}\}_{n\in\mathbb{Z}_+}\) converges to \(x_i\) in~\(\mathbb{R}\). Show that \(\{x^{(n)}\}_{n\in\mathbb{Z}_+}\) converges to~\(x\) if \(\mathbb{R}^{\omega}\) has the product topology.
+\item
+Give an example of a topological space that is connected but not path-connected.
+\item
+Define what it means for a topological space~\(X\) to be a Baire space.
+\item
+Show that if a topological space~\(X\) is Hausdorff, then a sequence in~\(X\) can converge to at most one point in~\(X\).
+\item
+Show that the function \(f:[0,2\pi)\to\{(x,y)\in\mathbb{R}^2\mid x^2+y^2=1\}\) from the half-open interval to the circle defined by \(f(t)=(\cos(t),\sin(t))\) is not a homeomorphism.
+\item
+Let~\(X\) be a locally compact Hausdorff space. Define the topology on \(Y=X\cup\{\infty\}\) that makes~\(Y\) the one-point compactification of~\(X\).
+\end{examproblems}
+\end{document}

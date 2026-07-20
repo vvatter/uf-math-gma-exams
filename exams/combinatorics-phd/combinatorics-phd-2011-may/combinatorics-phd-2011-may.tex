@@ -1,0 +1,102 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 2011},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2011\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 2011}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Let \(f(n)\) be the number of permutations of length~\(n\) that have no cycle that is shorter than three.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find the exponential generating function of the sequence \(f(n)\). You can assume that \(f(0)=1\).
+\item[\textnormal{(b)}]
+Find \(\lim_{n\to\infty} f(n)/n!\).
+\end{examsubparts}
+\item
+We divide a group of~\(n\) people into subgroups~\(A\), \(B\), and~\(C\), and ask each subgroup to form a line. We also require that~\(A\) have an odd number of people, and that~\(B\) have an even number of people. How many ways are there to do this?
+\item
+Let~\(A\) be the graph obtained from \(K_n\) by deleting an edge. Find a formula for the number of spanning trees of~\(A\).
+\item
+Let \(X_n(p)\) be the number of cycles of the~\(n\)-permutation~\(p\). Compute \(\operatorname{VAR}(X_n)\).
+\item
+Show that a planar graph for which every face has an even number of edges must be bipartite.
+\item
+Recall that a tournament is a complete directed graph. Prove that there exists a tournament on eight vertices that contains at least 316 Hamiltonian paths.
+\item
+For which values of~\(m\) and~\(n\) is the complete bipartite graph \(K_{m,n}\) planar, for which values of~\(m\) and~\(n\) is it Hamiltonian, and for which values of~\(m\) and~\(n\) is it Eulerian?
+\item
+Prove in a finite poset~\(P\), the number of elements in the longest chain is equal to the smallest number~\(k\) so that~\(P\) can be decomposed into the union of~\(k\) antichains.
+\end{examproblems}
+\end{document}

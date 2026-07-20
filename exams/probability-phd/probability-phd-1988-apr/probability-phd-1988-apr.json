@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "probability-phd-1988-apr",
+  "subject": "PhD Probability",
+  "subject_tag": "probability-phd",
+  "year": 1988,
+  "month": "april",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Probability_1988_04.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do not omit details."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\theta\\) be uniformly distributed on \\([0,1]\\). If \\(F\\) is a distribution function, let\n\\[\nG(y)=\\sup\\{x:F(x)\\leq y\\},\\qquad 0\\leq y\\leq 1.\n\\]\nShow that \\(G(\\theta)\\) has the distribution \\(F\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) and \\(Y\\) be independent random variables. Suppose for some \\(p>0\\),\n\\[\nE[|X+Y|^p]<\\infty.\n\\]\nThen \\(E[|X|^p]\\) and \\(E[|Y|^p]\\) are finite. Prove this."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the weak and strong laws of large numbers. Prove the weak law. All these for i.i.d. random variables. Also state the law of the iterated logarithm and deduce the strong law."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(S\\) be exponentially distributed with parameter \\(1\\). Compute\n\\[\nE[S\\mid S\\wedge t]\\quad\\text{and}\\quad E[S\\mid S\\vee t]\n\\]\nfor each \\(t>0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the optional sampling theorem for super martingales. Deduce that every positive super martingale converges."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Define what is meant by an infinitely divisible distribution. State the Lévy–Khintchine formula."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "(Bonus) Show using the martingale convergence theorem that a non-negative harmonic function in \\(\\mathbb{R}^n\\) is a constant."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

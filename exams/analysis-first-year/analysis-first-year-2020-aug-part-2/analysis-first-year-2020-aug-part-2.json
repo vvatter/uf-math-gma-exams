@@ -1,0 +1,103 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2020-aug-part-2",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2020,
+  "month": "august",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/MAA-5229_2020_08.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "The function \\(f:[0,1]\\to\\mathbb{R}\\) is Riemann-integrable and vanishes at each point of a dense set. Does it follow that \\(\\int_0^1 f=0\\)? Proof or counterexample, as appropriate."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be continuous. Prove that there exists a sequence \\((p_n)\\) of polynomials that converges to \\(f\\) both"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "pointwise on \\(\\mathbb{R}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "uniformly on each compact set in \\(\\mathbb{R}\\) (simultaneously).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal{F}\\subseteq C(X)\\) be equicontinuous and let \\(B\\) be the set comprising all points of \\(X\\) at which \\(\\mathcal{F}\\) is bounded; that is, \\(a\\in B\\) exactly when there exists \\(K\\) such that \\(|f(a)|<K\\) whenever \\(f\\in\\mathcal{F}\\). Prove that \\(B\\subseteq X\\) is both closed and open."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((f_n)\\) be a sequence of measurable real-valued functions on \\(\\Omega\\). Prove that each of the following subsets of \\(\\Omega\\) is measurable:"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "\\(P=\\{\\omega:(f_n(\\omega))\\text{ converges to an irrational number}\\}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "\\(Q=\\{\\omega:(f_n(\\omega))\\text{ converges to a rational number}\\}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(iii)",
+            "text": "\\(R=\\{\\omega:(f_n(\\omega))\\text{ converges to a real number}\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((f_n)\\) be a sequence of bounded, measurable, real-valued functions on \\(\\Omega\\) and assume that \\(f_n\\to f\\) uniformly. Prove that if \\(\\mu(\\Omega)<\\infty\\) then\n\\[\n\\int_\\Omega f_n\\,d\\mu\\to\\int_\\Omega f\\,d\\mu\n\\]\nand show by example that this can fail if \\(\\mu(\\Omega)=\\infty\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

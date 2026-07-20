@@ -1,0 +1,164 @@
+{
+  "schema_version": 3,
+  "id": "topology-first-year-2021-may-part-2",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2021,
+  "month": "may",
+  "part": 2,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-2-2021_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer the following problems and show all your work. Support all statements to the best of your ability."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State the Urysohn Lemma.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(X\\) be a connected normal space having two distinct points \\(x\\) and \\(y\\). Show that \\(X\\) has uncountably many points.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State the Brouwer fixed-point theorem for the disc \\(B^2\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(A\\) be a 3 by 3 matrix of positive real numbers. Show that \\(A\\) has a positive real eigenvalue. Hint: Let \\(B\\) be the intersection of the unit sphere \\(S^2\\) and the positive octant, \\(\\{(x,y,z)\\in\\mathbb{R}^3\\mid x,y,z\\geq 0\\}\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that \\(\\pi_1(S^1,1)\\cong\\mathbb{Z}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define the Hawaiian earring space, \\(H\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show the images of the generators of the fundamental groups of the circles do not generate the fundamental group of \\(H\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define surface.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Compute the fundamental group of the connected sum of a torus and second torus \\(T^2\\#T^2\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that \\(\\mathbb{R}^2\\) is not homeomorphic to \\(\\mathbb{R}^3\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "If \\(j:A\\hookrightarrow X\\) is the inclusion of a retract, then show that the induced map on fundamental groups \\(j_\\#\\) is injective."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Seifert–van Kampen Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "What is the fundamental group of the torus \\(T^2=S^1\\times S^1\\)?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Given continuous maps of topological spaces \\(f:A\\to X\\) and \\(g:A\\to Y\\), state the universal property satisfied by the pushout."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

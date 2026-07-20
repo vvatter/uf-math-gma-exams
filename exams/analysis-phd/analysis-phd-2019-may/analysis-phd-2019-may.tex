@@ -1,0 +1,116 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 2019},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2019\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 2019}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do six problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(X,Y\) be topological spaces. Prove that if \(f:X\to Y\) is continuous, then~\(f\) is Borel measurable.
+\item
+Rigorously determine the following expressions:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\[
+\lim_{n\to\infty}\int_0^\infty \frac{\sin(x/n)}{(1+x/n)^n}\,dx
+\]
+\item[\textnormal{(b)}]
+\[
+\lim_{n\to\infty}\int_0^\infty \frac{n\sin(x/n)}{x(1+x^2)}\,dx
+\]
+\item[\textnormal{(c)}]
+\[
+\lim_{n\to\infty}\int_0^\infty \frac{n}{n^2+x^2}\,dx
+\]
+\end{examsubparts}
+\item
+Prove that if a sequence of functions converges in \(L^1\), then it has a subsequence that converges pointwise almost everywhere.
+\item
+State and prove the Hahn decomposition theorem. For the proof, you may want to consider a sequence of sets such that \(\mu(E_n)\to\sup_E\mu(E)\) rapidly, under the assumption that such a supremum is bounded.
+\item
+Let~\(X\) be a Banach space. Let \(Y,Z\subseteq X\) be closed subspaces such that \(Y+Z=X\) and \(Y\cap Z=\{0\}\). Prove there is \(C>0\) such that for all \(y\in Y\) and \(z\in Z\), 
+\[
+C(\lVert y\rVert+\lVert z\rVert)\leq \lVert y+z\rVert\leq \lVert y\rVert+\lVert z\rVert.
+\]
+\item
+Let~\(X\) be a Banach space. Show that the natural map from~\(X\) to \(X^{**}\) is injective.
+\item
+State and prove the Cauchy–Schwarz inequality over a complex Hilbert space.
+\item
+Prove or give a counterexample: If \(f,g\) are smooth functions on~\(\mathbb{R}\) such that \(f,g\in L^1(\mathbb{R})\), then \(f*g\) is a smooth function and \(f*g\in L^1(\mathbb{R})\).
+\end{examproblems}
+\end{document}

@@ -1,0 +1,103 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2022, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2022, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2022, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. You should indicate which problems you wish to have graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(R\) be a ring with 1 and let \(I \subset R\) be a proper (2-sided) ideal in~\(R\). Prove that there is a maximal ideal~\(M\) of~\(R\) which contains~\(I\).
+\item
+Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain.
+\item
+For each of the following polynomials \(f(X)\in\mathbb{Q}[X]\), either prove that \(f(X)\) is irreducible or give a nontrivial factorization of \(f(X)\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(f(X)=X^4-6X^2+15X-21\)
+\item[\textnormal{(b)}]
+\(f(X)=X^4-6X^2+15X-23\)
+\item[\textnormal{(c)}]
+\(f(X)=X^4+X^3+X^2+X+1\)
+\end{examsubparts}
+\item
+Let~\(R\) be a ring with 1, let~\(F\) be an~\(R\)-module, and let~\(S\) be a subset of~\(F\) such that every \(y\in F\) can be written uniquely in the form \(y=\sum_{x\in S}a_xx\), where \(a_x\) are elements of~\(R\), all but finitely many of which are 0. Prove that for every~\(R\)-module~\(M\) and every function \(\phi:S\to M\) there is a unique~\(R\)-module homomorphism \(\Phi:F\to M\) such that \(\Phi|_S=\phi\).
+\item
+Give a representative for each conjugacy class in the group \(\operatorname{GL}_3(\mathbb{F}_2)\), where \(\mathbb{F}_2=\mathbb{Z}/2\mathbb{Z}\) is the field with two elements.
+\item
+Let \(E/F\) be a field extension and let \(\alpha\in E\). Prove that if \([F(\alpha):F]\) is an odd integer then \(F(\alpha^2)=F(\alpha)\). Give an example where \([F(\alpha):F]\) is an even integer and \(F(\alpha^2)\ne F(\alpha)\).
+\end{examproblems}
+\end{document}

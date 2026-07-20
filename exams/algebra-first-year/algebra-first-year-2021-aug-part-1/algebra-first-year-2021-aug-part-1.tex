@@ -1,0 +1,115 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, August 2021, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2021, Part 1\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, August 2021, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be a cyclic group. Prove that every subgroup of~\(G\) is cyclic. (Be sure to consider infinite cyclic groups as well as finite ones.)
+\item
+Let \(G, H\) be finite groups with orders \(m, n\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(m\) and~\(n\) are coprime then 
+\[
+\operatorname{Aut}(G \times H) \cong \operatorname{Aut}(G) \times \operatorname{Aut}(H).
+\]
+\item[\textnormal{(b)}]
+Give an example where~\(m\) and~\(n\) are not relatively prime and 
+\[
+\operatorname{Aut}(G \times H) \not\cong \operatorname{Aut}(G) \times \operatorname{Aut}(H).
+\]
+ Justify your claims.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(G\) be a finite group of order~\(n\) and let~\(p\) be the smallest prime which divides~\(n\). Prove that if~\(H\) is a subgroup of~\(G\) of index~\(p\) then~\(H\) is normal in~\(G\).
+\item[\textnormal{(b)}]
+Give an example of a finite group~\(G\) and a subgroup \(H \leq G\) such that~\(H\) is not normal in~\(G\) and the index \(|G:H|\) is prime.
+\end{examsubparts}
+\item
+Let \(p,q,r\) be primes such that \(p<q<r\) and let~\(G\) be a group of order \(pqr\). Prove that~\(G\) has a normal Sylow subgroup.
+\item
+Prove that the alternating group \(A_5\) is simple. Prove that \(A_4\) is solvable.
+\item
+Show that there are four different homomorphisms \(\phi:\mathbb{Z}_2\to\operatorname{Aut}(\mathbb{Z}_8)\), and prove that the corresponding semidirect products \(\mathbb{Z}_8\rtimes_\phi\mathbb{Z}_2\) are pairwise nonisomorphic. (Hint: Consider the number of elements of order 2.)
+\end{examproblems}
+\end{document}

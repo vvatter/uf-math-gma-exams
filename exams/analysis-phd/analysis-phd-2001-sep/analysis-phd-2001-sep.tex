@@ -1,0 +1,129 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, September 2001},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2001\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, September 2001}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{I.}
+\begin{examinstructions}
+State the following theorems:
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+The monotone class theorem.
+\item
+The Hahn decomposition theorem.
+\item
+The Egorov theorem.
+\item
+The Vitali convergence theorem.
+\item
+The Lebesgue convergence theorem.
+\item
+The Radon–Nikodym theorem.
+\item
+The Fubini theorem.
+\item
+The dual of \(L^p\).
+\item
+The Hahn–Banach theorem.
+\item
+Integrability with respect to the measure \(g\mu\) defined by \(g\mu(A)=\int_A g\,d\mu\).
+\end{examproblems}
+\section{II}
+\begin{examinstructions}
+Prove 2 of the above theorems 3, 5, 6, 7.
+\end{examinstructions}
+\section{III.}
+\begin{examinstructions}
+Solve the following problems. Let \((X,\Sigma,\mu)\) be a measure space.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(X,Y\) be normed spaces. Prove that if~\(Y\) is complete, then \(L(X,Y)\) is complete.
+\item
+Prove that if \(f:X\to\overline{\mathbb R}_+\) is~\(\mu\)-measurable and \(\int f\,d\mu<\infty\), then \(f<\infty\), \(\mu\)-a.e.
+\item
+If \(\mu(X)<\infty\), \(f_n\in L^1(\mu)\), and \(f_n\to f\) uniformly, then \(f\in L^1(\mu)\) and \(f_n\to f\) in the mean.
+\item
+Prove the existence of the conditional expectation \(E(f/\mathcal F)\) for functions \(f\in L^1(\mu)\), with respect to a~\(\sigma\)-algebra \(\mathcal F\subset\Sigma\).
+\item
+Prove that if \(f\in L^1\) and \(\int_A f\,d\mu=0\) for~\(A\) in a ring~\(R\) generating the~\(\sigma\)-algebra~\(\Sigma\), then \(f=0\), \(\mu\)-a.e.
+\item
+Prove the existence of the product \(\mu\times\nu\) of two real valued measures.
+\end{examproblems}
+\begin{examinstructions}
+Note: Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences.
+\end{examinstructions}
+\end{document}

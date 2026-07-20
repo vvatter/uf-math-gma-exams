@@ -1,0 +1,129 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 1996},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 1996\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 1996}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven out of the following ten problems. State clearly any results you need.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(R\) be an integral domain, with fraction field~\(K\). Recall that an~\(R\)-submodule~\(I\) of~\(K\) is said to be invertible if \(II^{-1}=R\), where \(I^{-1}=\{x\in K\mid ix\in R\text{ for all }i\in I\}\). Show that if~\(I\) is invertible, then it is finitely generated and projective.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(k\) be an algebraically closed field and~\(R\) a commutative, finitely generated~\(k\)-algebra. Show that the Jacobson radical of~\(R\) is the same as the nilradical. (Hint: Nullstellensatz).
+\item[\textnormal{(b)}]
+Give an example of a commutative ring with identity whose Jacobson radical is not equal to its nilradical.
+\end{examsubparts}
+\item
+Compute the Galois group of the extension \(K/\mathbb{Q}\), where~\(K\) is the splitting field over~\(\mathbb{Q}\) of the polynomial \(X^4-3\).
+\item
+Let~\(K\) be a field, and~\(R\) a simple, finite-dimensional~\(K\)-algebra with identity (not necessarily commutative). Show that if the identity is the only (nonzero) idempotent element of~\(R\), then~\(R\) is a division ring.
+\item
+Let~\(R\) be a discrete valuation ring with fraction field~\(K\). Show that~\(R\) is integrally closed in~\(K\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose~\(G\) is a finite~\(p\)-group and~\(S\) is a finite set on which~\(G\) acts. If \(S^G\) is the set of elements of~\(S\) fixed by~\(G\), show that \(\lvert S\rvert\equiv\lvert S^G\rvert\pmod p\).
+\item[\textnormal{(b)}]
+Suppose~\(G\) is a~\(p\)-group, \(k\) is a field of characteristic~\(p\), \(V\) is a finite-dimensional~\(k\)-vector space, and \(\rho:G\to\operatorname{GL}(V)\) is a homomorphism. Show that there is a nonzero vector \(v\in V\) such that \(\rho(g)(v)=v\) for all \(g\in G\). Hint: reduce to the case where~\(k\) is finite, and apply (a).
+\end{examsubparts}
+\item
+Let~\(k\) be a field and \(G=\operatorname{GL}(3,k)\). Describe the conjugacy classes of elements of order 3 in~\(G\) if
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(k=\mathbb{C}\),
+\item[\textnormal{(b)}]
+\(k=\mathbb{R}\),
+\item[\textnormal{(c)}]
+\(k=\mathbb{F}_3\).
+\end{examsubparts}
+\item
+Let~\(R\) be a commutative ring. Define what it means for an~\(R\)-module to be injective. Show that an~\(R\)-module~\(M\) is injective if and only if for every ideal \(I\subseteq R\) and~\(R\)-linear map \(f:I\to M\), \(f\) extends to a map \(R\to M\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that there exist solvable groups of arbitrarily large derived length.
+\item[\textnormal{(b)}]
+Show that if~\(S\) is an infinite set, then there is no “free solvable group generated by~\(S\)”; i.e. there is no solvable group~\(F\) and map \(\alpha:S\to F\) such that composition with~\(\alpha\) induces, for any solvable group~\(G\), a bijection between the set of group homomorphisms \(F\to G\) and the set of maps \(S\to G\).
+\end{examsubparts}
+\item
+State and prove the Hilbert Basis Theorem.
+\end{examproblems}
+\end{document}

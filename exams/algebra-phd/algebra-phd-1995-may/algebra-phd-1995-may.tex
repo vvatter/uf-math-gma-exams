@@ -1,0 +1,123 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 1995},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 1995\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 1995}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be a finite group and let~\(A\) be a subgroup of \(\operatorname{Aut}(G)\) such that \(G=[G,A]\). Let~\(N\) be a normal subgroup of~\(G\) such that \([N,A]=1\). Prove that~\(N\) is contained in the center of~\(G\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give an example of fields \(M\supset L\supset K\) such that \(M/L\) and \(L/K\) are normal extensions, but \(M/K\) is not normal. Justify your answer.
+\item[\textnormal{(b)}]
+Let \(L\supset K\) be fields such that \([L:K]=8\). Prove that there are \(\alpha,\beta,\gamma\in L\) such that \(L=K(\alpha,\beta,\gamma)\).
+\end{examsubparts}
+\item
+Let~\(A\) be a semi-simple commutative ring with 1. Prove that if~\(A\) is Artinian then~\(A\) is Noetherian. Give a counterexample to show that the converse is not true.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give an example of a free module~\(F\) over a ring with 1 which has a submodule~\(M\) which is not free.
+\item[\textnormal{(b)}]
+Let~\(A\) be a commutative ring with 1 and let~\(P\) and~\(Q\) be projective~\(A\)-modules. Prove that \(P\otimes Q\) is projective.
+\end{examsubparts}
+\item
+Let~\(A\) be a commutative ring with 1 and let \(S\not\ni 0\) be a multiplicative subset of~\(A\). Let~\(P\) be a maximal element in the set \(\{I:I\text{ is an ideal of }A\text{ and }I\cap S=\varnothing\}\). Prove that~\(P\) is a prime ideal.
+\item
+Let~\(A\) be a commutative ring.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if \(I_1\) and \(I_2\) are ideals in~\(A\) and~\(P\) is a prime ideal in~\(A\) such that \(I_1\cap I_2=P\), then \(I_1=P\) or \(I_2=P\).
+\item[\textnormal{(b)}]
+Is the above statement still true if the word “prime” is replaced by “primary”? Justify your answer.
+\end{examsubparts}
+\item
+Let~\(n\) and~\(m\) be positive integers. Find~\(r\) such that \(\mathbb{Z}_n\otimes_{\mathbb{Z}}\mathbb{Z}_m\cong\mathbb{Z}_r\). Justify your answer.
+\item
+Let~\(R\) be a commutative Noetherian ring with 1. Prove that \(R[[X]]\) is Noetherian.
+\item
+Let~\(R\) be a commutative ring with 1 and let \(S\subset R\) be a multiplicative set which contains no zero divisors. Prove that the prime ideals of the ring \(S^{-1}R\) are in one-to-one correspondence with the prime ideals~\(P\) of~\(R\) such that \(P\cap S=\varnothing\).
+\item
+Let~\(G\) be an abelian group which is injective. Prove that~\(G\) is divisible.
+\item
+Let \(f(X)=2X^5-10X+5\in\mathbb{Q}[X]\) and let~\(L\) be a splitting field for~\(f\). Compute the Galois group \(\operatorname{Gal}(L/\mathbb{Q})\).
+\end{examproblems}
+\end{document}

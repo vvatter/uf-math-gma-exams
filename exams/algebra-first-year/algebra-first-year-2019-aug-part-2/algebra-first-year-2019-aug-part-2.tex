@@ -1,0 +1,120 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, August 2019, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip -0.5em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2019, Part 2\par}%
+  \tagstructend%
+  \vskip 0.25em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 1em%
+}
+\makeatother
+\title{Algebra First-Year Exam, August 2019, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Put your answers in numerical order. Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(D\) be a positive integer such that \(D \equiv -1 \pmod 4\). Define \(\omega=\frac{1+\sqrt{-D}}{2}\), \(R=\{a+b\omega:a,b\in\mathbb Z\}\). For \(a\in R\) define \(N(a)=a\overline a\), where \(\overline a\) is the complex conjugate of~\(a\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that~\(R\) is a subring of the field \(\mathbb C\) of complex numbers.
+\item[\textnormal{(b)}]
+Prove that for all \(a\in R\) we have \(N(a)\in\mathbb Z_{\geq 0}\).
+\item[\textnormal{(c)}]
+Prove that for all \(\alpha,\beta\in R\) we have \(N(\alpha\beta)=N(\alpha)N(\beta)\).
+\item[\textnormal{(d)}]
+Let \(a\in R\). Prove that~\(a\) is a unit if and only if \(N(a)=1\).
+\end{examsubparts}
+\item
+Let~\(F\) be a field and let~\(V\) be a vector space over~\(F\). Prove that~\(V\) has a basis. (You may not assume that~\(V\) is finite dimensional.)
+\item
+Which of the following polynomials are irreducible? Explain.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(X^4+X^2+1\) in \(\mathbb F_2[X]\) (here \(\mathbb F_2\) is the field with 2 elements);
+\item[\textnormal{(b)}]
+\(X^3+X+1\) in \(\mathbb R[X]\) (here \(\mathbb R\) is the field of real numbers);
+\item[\textnormal{(c)}]
+\(X^6+14X^2+21X+35\) in \(\mathbb Q[X]\) (here \(\mathbb Q\) is the field of rational numbers).
+\end{examsubparts}
+\item
+Let~\(R\) be a ring with identity, and let~\(M\) be a (left)~\(R\)-module. Let~\(N\) be a submodule of~\(M\). Prove that \(M/N\) is a (left)~\(R\)-module.
+\item
+Find representatives of every similarity class of \(6\times6\) matrices with real coefficients whose minimal polynomial is \((x+2)^2(x-\sqrt3)^2\).
+\item
+Let \(F/K\) be a field extension.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means to say that \(\theta\in F\) is algebraic over~\(K\).
+\item[\textnormal{(b)}]
+Prove that if \(\theta\in F\) is algebraic over~\(K\), then the smallest subring \(K[\theta]\) of~\(F\) containing~\(K\) and~\(\theta\) is a field, and it is isomorphic to \(K[x]/(p(x))\) for some polynomial \(p(x)\in K[x]\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

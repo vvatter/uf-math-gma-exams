@@ -1,0 +1,190 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, September 1988},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 1988\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, September 1988}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do seven problems, at least two from each section.
+\end{examinstructions}
+\section{I. Group Theory.}
+\begin{examproblems}{0}
+\item
+Let~\(G\) be the group of all \(3\times 3\) non-singular matrices of determinant~\(1\) with coefficients in the field of~\(3\) elements.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Find \(|G|\).
+\item[\textnormal{(b)}]
+Find a Sylow~\(3\)-subgroup of~\(G\).
+\item[\textnormal{(c)}]
+Compute \(|\operatorname{Syl}_3(G)|\), where \(\operatorname{Syl}_3(G)\) is the set of all Sylow~\(3\)-subgroups of~\(G\).
+\end{examsubparts}
+\item
+Let~\(G\) be a finite group acting transitively on a set~\(X\), \(x\in X\), and~\(P\) be a Sylow~\(p\)-subgroup of \(G_x\) for some prime~\(p\). Consider the set \(\operatorname{Fix}(P)=\{y\in X\mid y^P=y\}\), the set of fixed points of~\(P\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(N_G(P)\) acts on \(\operatorname{Fix}(P)\), i.e., maps \(\operatorname{Fix}(P)\) to \(\operatorname{Fix}(P)\).
+\item[\textnormal{(b)}]
+Prove that \(N_G(P)\) acts transitively on \(\operatorname{Fix}(P)\).
+\end{examsubparts}
+\item
+Two permutation representations \(G\xrightarrow{\pi_i}\Sigma(X_i)\), (the symmetric group on \(X_i\) are equivalent if there exists \(\alpha:X_1\to X_2\) such that for all \(g\in G\), \(x\in X_1\), we have \(x(g\pi_1)\alpha=(x\alpha)(g\pi_2)\). Prove that the following two permutation representations of \(S_4\) of degree \(12\) are not equivalent:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+on the right coset space of \(\langle(12)\rangle\).
+\item[\textnormal{(b)}]
+on the right coset space of \(\langle(12)(34)\rangle\).
+\end{examsubparts}
+\item
+Let~\(G\) be a finite group and \(A\leq \operatorname{Aut}(G)\) such that \(G=[G,A]\). Suppose \(N\leq G\) satisfying \([N,A]=1\). Use the 3-subgroup lemma to prove \(N\leq Z(G)\), the center of~\(G\). (Recall the 3-subgroups lemma: For three subgroups \(X,Y,Z\) of a group~\(M\), if \([X,Y,Z]=1\) and \([Y,Z,X]=1\), then \([Z,X,Y]=1\).)
+\end{examproblems}
+\section{II. Homological algebra.}
+\begin{examproblems}{0}
+\item
+Let~\(R\) be a ring and consider the following commutative diagram of~\(R\)-modules and~\(R\)-module homomorphisms such that each row is a short exact sequence. 
+{\tagpdfsetup{math/mathml/structelem=false,math/mathml/AF=false,math/alt/use=true}
+\[
+\begin{CD}
+0 @>>> A @>{f}>> B @>{g}>> C @>>> 0 \\
+@. @V{\alpha}VV @V{\beta}VV @V{\gamma}VV @. \\
+0 @>>> A' @>{f'}>> B' @>{g'}>> C' @>>> 0
+\end{CD}
+\]
+}
+ Prove that if~\(\alpha\) and~\(\gamma\) are isomorphisms then~\(\beta\) is also an isomorphism.
+\item
+Prove the \(\mathbb Z\)-module isomorphisms, where \(c=(m,n)\) is the greatest common divisor.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\mathbb Z/m\mathbb Z\otimes\mathbb Z/n\mathbb Z=\mathbb Z/c\mathbb Z\).
+\item[\textnormal{(b)}]
+\(\operatorname{Hom}(\mathbb Z/m\mathbb Z,\mathbb Z/n\mathbb Z)=\mathbb Z/c\mathbb Z\).
+\end{examsubparts}
+\item
+A module~\(P\) over a ring~\(R\) is said to be projective if, given any diagram of~\(R\)-module homomorphisms with~\(g\) surjective 
+\[
+\begin{array}{ccc}
+& & P \\
+& & \downarrow^{f} \\
+A & \xrightarrow{g} & B
+\end{array}
+\]
+ there exists an~\(R\)-module homomorphism \(h:P\longrightarrow A\) such that the following diagram is commutative 
+\[
+\begin{array}{ccc}
+& & P \\
+& \overset{h}{\swarrow} & \downarrow^{f} \\
+A & \xrightarrow{g} & B
+\end{array}
+\]
+ Prove that the following conditions on a ring~\(R\) with identity are equivalent:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Every~\(R\)-module is projective.
+\item[\textnormal{(b)}]
+Every short exact sequence of~\(R\)-modules splits.
+\end{examsubparts}
+\end{examproblems}
+\section{III. Commutative algebra.}
+\begin{examproblems}{0}
+\item
+A non-empty subset~\(S\) of a ring~\(R\) with identity is called multiplicative if \(ab\in S\) whenever \(a,b\in S\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(I\) is a proper ideal of~\(R\) disjoint from~\(S\), then prove that there exists an ideal~\(P\) maximal with respect to containing~\(I\) and being disjoint from~\(S\). Furthermore, show that~\(P\) is a prime ideal.
+\item[\textnormal{(b)}]
+If~\(P\) is a prime ideal of ring~\(R\), define the localization of~\(R\) at~\(P\) and prove that the localization has a unique maximal ideal.
+\end{examsubparts}
+\item
+Find a reduced primary decomposition for the following ideals. Also give the prime ideals to which the primary ideals belong.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\((24)\) as an ideal in \(\mathbb Z\).
+\item[\textnormal{(b)}]
+\((2x,x^2)\) as an ideal in \(\mathbb Z[x]\).
+\item[\textnormal{(c)}]
+What theorems allow us to conclude that every ideal in \(\mathbb Z[x]\) has a primary decomposition.
+\end{examsubparts}
+\item
+Let~\(R\) be a unique factorization domain and~\(K\) its field of fractions.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that if \(a\in K\) is integral over~\(R\), then \(a\in R\). (In other words, \(R\) is integrally closed.)
+\item[\textnormal{(b)}]
+True or false: If~\(S\) is a subring of~\(K\) containing~\(R\), then~\(S\) is also a unique factorization domain. If true, prove your answer. If false give examples of~\(R\), \(K\), and~\(S\) that show it not to be true.
+\end{examsubparts}
+\item
+Determine, up to isomorphism, all semisimple rings of order \(1008=2^5\cdot 3^2\cdot 7\).
+\end{examproblems}
+\end{document}

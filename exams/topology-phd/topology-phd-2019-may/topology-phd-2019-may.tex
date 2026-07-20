@@ -1,0 +1,124 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 2019},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2019\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 2019}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all your work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that the topologist’s sine curve \(T=\{(x,\sin \frac{1}{x})\mid x\in(0,1]\}\cup\{(0,y)\mid y\in[0,1]\}\) is not path connected.
+\item
+Let~\(X\) be a connected completely regular topological space having more than one point. Can~\(X\) be countable?
+\item
+Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{RP}^2\), as well as that \(\mathbb{RP}^2\) is not a retract of \(S^2\).
+\item
+Consider the Klein Bottle, \(K\). Give its cellular chain complex and use it to calculate the homology groups of~\(K\) with integer coefficients.
+\item
+Let \(n>m\). Show that there is no map \(f:\mathbb{CP}^n\to\mathbb{CP}^m\) inducing a nontrivial map \(f^*:H^2(\mathbb{CP}^m;\mathbb{Z})\to H^2(\mathbb{CP}^n;\mathbb{Z})\).
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Draw a picture of the universal cover of the 2-sphere with a segment joining the north and south poles.
+\item
+Compute the Euler characteristic \(\chi(\mathbb{CP}^2\times\mathbb{RP}^2\times S^4)\).
+\item
+Give a definition of the compact-open topology for the space of functions.
+\item
+Construct a map \(f:T^2\to S^2\) of degree 3 where \(T^2=S^1\times S^1\) is a torus.
+\item
+Does every function \(f:\mathbb{N}\to S^1\) admit a continuous extension \(\bar f:\beta\mathbb{N}\to S^1\) to the Stone–Čech compactification?
+\item
+State the exact homology sequence for a pair of spaces.
+\item
+What can you say about the~\(k\)-th cohomology group of a closed orientable manifold of dimension~\(n\) for
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(k=n\)?
+\item[\textnormal{(b)}]
+\(k=n-1\)?
+\end{examsubparts}
+\item
+State the Universal Coefficient Theorem for Cohomology.
+\item
+Show that two closed orientable surfaces of different genus are not homeomorphic.
+\item
+State the Tietze Extension Theorem.
+\end{examproblems}
+\end{document}

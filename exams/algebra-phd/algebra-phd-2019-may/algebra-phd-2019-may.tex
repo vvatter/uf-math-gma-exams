@@ -1,0 +1,150 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2019},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2019\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2019}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(F\) be a finite field and let \(n \geq 1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that there is an extension \(E/F\) of degree~\(n\).
+\item[\textnormal{(b)}]
+Prove that if \(E'/F\) is another extension of degree~\(n\) then there is an isomorphism \(\sigma:E\to E'\) such that \(\sigma|_F=\operatorname{id}_F\).
+\item[\textnormal{(c)}]
+Prove that \(E/F\) is Galois, with cyclic Galois group.
+\end{examsubparts}
+\item
+Let \(C/K\) be a field extension.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for~\(C\) to be an algebraic closure of~\(K\).
+\item[\textnormal{(b)}]
+Prove that~\(C\) is an algebraic closure of~\(K\) if and only if~\(C\) is algebraic over~\(K\) and for every algebraic extension~\(L\) of~\(K\) there is a field map \(\sigma:L\to C\) such that \(\sigma|_K=\operatorname{id}_K\).
+\end{examsubparts}
+\item
+Let~\(R\) be an integral domain, let~\(D\) be a divisible~\(R\)-module, and let~\(T\) be a torsion~\(R\)-module. Prove that \(D\otimes_R T=\{0\}\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(C\) be a category and let \(f:X\to Y\) be a~\(C\)-morphism.
+\begin{examsubparts}
+\item[\textnormal{i.}]
+Define what it means for~\(f\) to be an epimorphism.
+\item[\textnormal{ii.}]
+Define what it means for~\(f\) to be a monomorphism.
+\end{examsubparts}
+\item[\textnormal{(b)}]
+Give an example of a category~\(C\) and a~\(C\)-morphism~\(f\) which is an epimorphism and a monomorphism, but not an isomorphism.
+\end{examsubparts}
+\item
+Prove that the group~\(G\) which is described below using generators and relations is not solvable. 
+\[
+G=\langle x,y\mid x^6=y^2=1\rangle
+\]
+\item
+Let~\(R\) be a Noetherian ring. Prove that the ring \(R[[X]]\) is Noetherian.
+\item
+Let~\(S\) be a commutative ring with~\(1\), let~\(R\) be a subring of~\(S\) which contains \(1_S\), and let \(\alpha\in S\). Suppose there is a subring \(T\subset S\) such that \(T\supset R[\alpha]\) and~\(T\) is finitely generated as an~\(R\)-module. Prove that~\(\alpha\) is integral over~\(R\).
+\item
+Let~\(R\) be a commutative ring with~\(1\) and let~\(D\) be a subset of~\(R\) such that \(1_R\in D\) and~\(D\) is closed under multiplication. Prove that if 
+\[
+0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0
+\]
+ is an exact sequence of~\(R\)-modules then the induced sequence of \(D^{-1}R\)-modules 
+\[
+0\longrightarrow D^{-1}A\longrightarrow D^{-1}B\longrightarrow D^{-1}C\longrightarrow 0
+\]
+ is also exact.
+\item
+Determine which of the following are Dedekind domains. Give a brief explanation in each case.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\mathbb{Z}[\sqrt{-3}]\)
+\item[\textnormal{(b)}]
+\(\mathbb{C}[X]\)
+\item[\textnormal{(c)}]
+\(\mathbb{Z}[X]\)
+\end{examsubparts}
+\item
+Let~\(R\) be a ring with~\(1\). Let~\(S\) denote the set of primitive ideals of~\(R\), that is, the annihilators in~\(R\) of simple left~\(R\)-modules. Let~\(T\) denote the set of maximal left ideals in~\(R\). Prove that \(\bigcap_{P\in S}P=\bigcap_{L\in T}L\).
+\item
+Let~\(R\) be a ring with~\(1\) and let~\(M\) be an~\(R\)-module which is generated by the union of its simple submodules. Prove that if \(N\subset M\) is a submodule then there is a submodule \(N'\subset M\) such that \(M=N\oplus N'\).
+\end{examproblems}
+\end{document}

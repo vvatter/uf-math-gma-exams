@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra PhD Exam, May 2023</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra PhD Exam, May 2023</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Let \(K\) be the splitting field of \(x^7-2\) over \(\mathbb{Q}\). What is \([K:\mathbb{Q}]\)? Justify your answer.</p>
+      </li>
+      <li class="problem">
+        <p>Give an example of a Galois extension of \(\mathbb{Q}(\zeta_5)\) with degree \(5\) (where \(\zeta_5\) is a primitive 5th root of unity). Give an example of a Galois extension of \(\mathbb{Q}\) with degree \(5\). Justify your answers.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(K\) be a field and \(G\) a finite subgroup of \(\operatorname{Aut}(K)\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>What does the “theorem of the fixed field” say about \([K:K^G]\)?</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Use the theorem of the fixed field to show that if \(K/F\) is a finite extension of fields then \(\#\operatorname{Aut}(K/F)\leq [K:F]\) with equality if and only if \(F\) is the fixed field of \(\operatorname{Aut}(K/F)\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iii)</span>
+              <div class="subpart-body">
+                <p>Use the theorem of the fixed field to show that if \(F=K^G\) then \(K/F\) is a Galois extension with Galois group \(G\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(\mathrm{Groups}\) denote the category of groups and \(\mathrm{Sets}\) denote the category of sets.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>Use free groups to construct a left adjoint to the forgetful functor \(U:\mathrm{Groups}\to\mathrm{Sets}\). (You can skip checking “naturality” i.e. compatibility with morphisms.)</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Show that the functor \(F:\mathrm{Groups}\to\mathrm{Sets}\) defined by</p>
+                <div class="display-math">\[
+F(G)=\{(x,y)\in G\times G:xyx^{-1}y^{-1}=1\}
+\]</div>
+                <p>is a representable functor. (Again, you can skip checking “naturality”.)</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(k\) be a field. For a \(k\)-vector space \(V\), recall that the dual vector space \(V^*\) is defined to be the \(k\)-vector space of linear functionals on \(V\), i.e. linear transformations from \(V\) to \(k\).</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>Construct a natural linear transformation \(\psi:V^*\otimes_k W^*\to(V\otimes_k W)^*\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Show that \(\psi\) is an isomorphism if \(V\) and \(W\) are finite dimensional.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a unital ring.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>State at least two equivalent definitions of a projective \(R\)-module. (You don’t need to show they are equivalent, but you should include any definition you want to use in the next part.)</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Let \(M\) and \(N\) be \(R\)-modules with \(M\subset N\). If \(M\) is projective and \(N/M\) is projective, prove that \(N\) is projective.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Are the functors \(F(A)=\operatorname{Hom}_{\mathbb{Z}}(A,\mathbb{Q}/\mathbb{Z})\) and \(G(A)=\operatorname{Hom}_{\mathbb{Z}}(A,\mathbb{Z})\) from the category of \(\mathbb{Z}\)-modules to the category of \(\mathbb{Z}\)-modules exact? Justify your answer.</p>
+      </li>
+      <li class="problem">
+        <p>Prove that the intersection of all prime ideals in a commutative ring is the nilradical. (Suggestion: for one direction, given a non-nilpotent element \(a\) consider the set of all ideals not containing any power of \(a\).)</p>
+      </li>
+      <li class="problem">
+        <p>Let \(\mathbb{R}\) and \(\mathbb{C}\) denote the real and complex numbers as usual.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>Give an example of two different maximal ideals of \(\mathbb{R}[x]\) which have the same zero set in the affine line \(\mathbb{A}^1_{\mathbb{R}}\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>Give an example of two ideals of \(\mathbb{C}[x]\) which have the same zero set in \(\mathbb{A}^1_{\mathbb{C}}\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(iii)</span>
+              <div class="subpart-body">
+                <p>State Hilbert’s Nullstellensatz.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a commutative ring and \(D\) a multiplicatively closed subset of \(R\) containing \(1\). State the universal property for the localization \(D^{-1}R\), show that any two rings satisfying the universal property are isomorphic, and construct a ring satisfying the universal property. (Checking the construction is well-defined will involve a variety of verifications which you can skip. But do check it satisfies the universal property.)</p>
+      </li>
+      <li class="problem">
+        <p>Give an example of the following, and briefly justify your answers:</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(i)</span>
+              <div class="subpart-body">
+                <p>A discrete valuation ring whose field of fractions is not of characteristic zero.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">(ii)</span>
+              <div class="subpart-body">
+                <p>A Dedekind domain that is not a unique factorization domain.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Algebra PhD Exams</a></li>
+        <li><a href="algebra-phd-2023-may.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

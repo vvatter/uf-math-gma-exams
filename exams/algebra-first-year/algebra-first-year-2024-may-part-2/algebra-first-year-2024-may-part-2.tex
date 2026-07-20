@@ -1,0 +1,109 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, May 2024, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2024, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, May 2024, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove the following version of the Chinese remainder theorem: Let~\(R\) be a commutative ring with~\(1\) and let \(I, J\) be ideals of~\(R\) such that \(I+J=R\). Then \(IJ=I\cap J\) and there is a ring isomorphism \(R/IJ\to (R/I)\times(R/J)\).
+\item
+Let~\(R\) be a commutative ring and let~\(M\) be a maximal ideal of~\(R\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that if~\(R\) has an identity then \(R/M\) is a field.
+\item[\textnormal{(b)}]
+Give an example of a commutative ring~\(R\) and a maximal ideal~\(M\) of~\(R\) such that \(R/M\) is not a field.
+\end{examsubparts}
+\item
+Let~\(R\) be a commutative ring with identity~\(1\) different from~\(0\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what is a prime ideal of~\(R\).
+\item[\textnormal{(b)}]
+Define what is a minimal prime ideal of~\(R\).
+\item[\textnormal{(c)}]
+Prove that~\(R\) has a minimal prime ideal.
+\end{examsubparts}
+\item
+Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain with respect to the norm defined by \(N(a+b\sqrt{-2})=a^2+2b^2\) for all \(a,b\in\mathbb{Z}\).
+\item
+Determine the conjugacy classes of elements of order~\(8\) in \(GL(5,\mathbb{Q})\), and, for each conjugacy class, give a representative matrix. (You may use the fact that \(x^4+1\) is irreducible in \(\mathbb{Q}[x]\).)
+\item
+Let \(F=\mathbb{Q}(\sqrt[4]{2},\sqrt{-1})\). Calculate the degree of the extension \(F/\mathbb{Q}\), and justify each of the steps of your calculation.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,156 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, January 2019},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2019\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, January 2019}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Determine the Galois group of the polynomial 
+\[
+f(x)=x^4-14x^2+9\in\mathbb{Q}[x].
+\]
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give the definition of a separable field extension.
+\item[\textnormal{(b)}]
+Show that a finite separable extension is contained in a finite Galois extension.
+\item[\textnormal{(c)}]
+Prove the Primitive Element Theorem: If~\(E\) is a finite separable extension of~\(F\), then \(E=F(\alpha)\) for some \(\alpha\in E\).
+\end{examsubparts}
+\item
+A pointed set is a pair \((S,x)\) with~\(S\) a set and \(x\in S\). A morphism of pointed sets \((S,x)\to(S',x')\) is a function \(f:S\to S'\) such that \(f(x)=x'\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that pointed sets and their morphisms form a category.
+\item[\textnormal{(b)}]
+Show that coproducts of arbitrarily indexed families of objects exist in this category.
+\end{examsubparts}
+\item
+Let~\(F\) be the free group on~\(n\) generators, \(n\geq 1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that the automorphism group of~\(F\) contains a subgroup isomorphic to the symmetric group \(S_n\).
+\item[\textnormal{(b)}]
+Give an example of an automorphism of~\(F\) that does not belong to this subgroup.
+\end{examsubparts}
+\item
+Define the term injective module for a ring~\(R\) with 1. Prove Baer’s criterion: A unitary left module~\(J\) is injective if and only if for every left ideal~\(L\) of~\(R\), any~\(R\)-module homomorphism \(L\to J\) can be extended to an~\(R\)-module homomorphism \(R\to J\).
+\item
+Let~\(R\) be a ring and suppose that we have a short exact sequence 
+\[
+0\to A\xrightarrow{f}B\xrightarrow{g}C\to 0
+\]
+ of left~\(R\)-modules. Let~\(M\) be a right~\(R\)-module. Show that the induced sequence 
+\[
+M\otimes_R A\xrightarrow{1\otimes f}M\otimes_R B\xrightarrow{1\otimes g}M\otimes_R C\to 0
+\]
+ is exact.
+\item
+Let~\(R\) be a commutative ring with \(1\neq 0\) and let~\(S\) be a multiplicative set containing 1.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the universal mapping property of the localization \(S^{-1}R\).
+\item[\textnormal{(b)}]
+Show that if \(S=R\setminus P\), the complement of a prime ideal~\(P\), then \(S^{-1}R\) has a unique maximal ideal.
+\end{examsubparts}
+\item
+Prove the following properties of \(R=\mathbb{Z}[\sqrt{10}]\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(R\) is noetherian.
+\item[\textnormal{(b)}]
+\(R\) is an integrally closed integral domain.
+\item[\textnormal{(c)}]
+Every nonzero prime ideal of~\(R\) is maximal.
+\end{examsubparts}
+\item
+Let~\(J\) be an ideal in a commutative ring~\(R\) with 1. Assume that~\(J\) is contained in every maximal ideal. Prove that if~\(A\) is an~\(R\)-module that satisfies the ascending chain condition on submodules, then \(\bigcap_{n=1}^{\infty}J^nA=0\).
+\item
+Prove the Noether Normalization Lemma: Let~\(R\) be an integral domain that is a finitely generated extension ring of a field~\(K\). Let~\(F\) be the field of quotients of~\(R\) and let~\(r\) be the transcendence degree of~\(F\) over~\(K\). Then there exist a subset of~\(r\) elements \(t_1,\ldots,t_r\) which are algebraically independent over~\(K\) and such that~\(R\) is integral over \(K[t_1,\ldots,t_r]\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the term left primitive ring and state Jacobson’s Density Theorem.
+\item[\textnormal{(b)}]
+Prove that if~\(R\) is a finite left primitive ring then \(R\cong M_n(F)\) for some finite field~\(F\) and some natural number~\(n\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

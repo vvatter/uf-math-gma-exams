@@ -1,0 +1,115 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, January 2022, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2022, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, January 2022, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 7 and only seven of the following.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(X \subset \mathbb{R}\) consist of all numbers of the form 
+\[
+1+\frac{1}{\sqrt{p}}+\cdots+\frac{1}{\sqrt{p^n}}
+\]
+ with~\(p\) prime and \(n \in \mathbb{Z}_+\). Show that~\(X\) is countable.
+\item
+Assume \(f:X\to Y\) is a continuous bijection with~\(X\) compact and~\(Y\) Hausdorff. Show that~\(f\) is a homeomorphism.
+\item
+Prove that a compact Hausdorff space is normal.
+\item
+Assume that \(f:X\to Y\) is continuous and surjective.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(X\) is Lindelöf, show that~\(Y\) is also.
+\item[\textnormal{(b)}]
+If~\(X\) is separable, show that~\(Y\) is also.
+\end{examsubparts}
+\item
+Each \(A_\lambda \subset X\) is connected for \(\lambda \in \Lambda\) and \(\bigcap_{\lambda\in\Lambda} A_\lambda \ne \varnothing\), then prove that \(\bigcup_{\lambda\in\Lambda} A_\lambda\) is connected.
+\item
+Show that a subspace of a complete metric space is itself complete if and only if it is a closed subspace.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the metric~\(\rho\) on \([-1,1]^{\mathbb{Z}_+}\) that gives it the uniform topology.
+\item[\textnormal{(b)}]
+Show that in this metric the unit ball, \(B_1(\underline{0})\), is not limit point compact where \(\underline{0}\) is the sequence \(0,0,0,\ldots\).
+\end{examsubparts}
+\item
+Prove or disprove: The real line \(\mathbb{R}_\ell\) with the lower limit topology is connected.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,132 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2024},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2024\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2024}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. If more than seven problems are answered only the first seven will be graded. Write your answers clearly in complete English sentences.
+
+\par
+Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Suppose~\(p\) is an odd prime and let~\(K\) be the extension of~\(\mathbb{Q}\) obtained by adjoining a primitive~\(p\)th root of unity. Show that~\(K\) has a unique subfield of degree 2 over~\(\mathbb{Q}\).
+\item
+Suppose~\(C\) is a commutative ring with identity, \(B \subseteq C\) is a subring, \(A \subseteq B\) is a subring and~\(A\) and~\(B\) have the same identity as~\(C\). Show that if~\(B\) is integral over~\(A\) and~\(C\) is integral over~\(B\) then~\(C\) is integral over~\(A\).
+\item
+Let~\(\mathcal{C}\) be a category and \(F:\mathcal{C}^{\mathrm{op}} \to \mathbf{Set}\) be a functor (here \(\mathbf{Set}\) is the category of sets).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Say what it means for a pair \((X,\xi)\) to represent the functor~\(F\), where~\(X\) is an object of~\(\mathcal{C}\) and \(\xi \in F(X)\).
+\item[\textnormal{(ii)}]
+Show that if \((X,\xi)\) and \((Y,\eta)\) both represent~\(F\), there is an isomorphism \(f:X \overset{\sim}{\longrightarrow} Y\) such that the induced map \(F(Y) \to F(X)\) sends~\(\eta\) to~\(\xi\).
+\end{examsubparts}
+\item
+Suppose~\(k\) is a field and \(U_n\) is the group of upper unitriangular matrices with coefficients in~\(k\) (this means that the diagonal entries are equal to 1 and the entries below the diagonal are 0). Show that the group \(U_n\) is nilpotent.
+\item
+Let~\(R\) be an integral domain.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for a fractional ideal of~\(R\) to be invertible.
+\item[\textnormal{(ii)}]
+Show that an invertible ideal is a finitely generated projective~\(R\)-module.
+\end{examsubparts}
+\item
+Suppose \(K/k\) is a finite extension and \(k^{\mathrm{alg}}\) is an algebraic closure of~\(k\). Show that \(K/k\) is separable if and only if the ring \(K \otimes_k k^{\mathrm{alg}}\) has no nonzero nilpotent elements.
+\item
+Let~\(S\) be a set and \(F(S)\) be the free group on~\(S\). Show that \(F(S)\) is abelian if and only if \(|S|<2\).
+\item
+Suppose~\(k\) is a field and \(R=k[X_1,\ldots,X_n]\). Show that~\(R\) is a Dedekind domain if and only if \(n<2\).
+\item
+Suppose~\(A\) is a noetherian commutative ring with identity.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show that if \(f:A \to B\) is a surjective homomorphism then~\(B\) is noetherian.
+\item[\textnormal{(ii)}]
+Recall that a multiplicative system in~\(A\) is a nonempty subset containing the identity and closed under multiplication. Show that if \(S \subset A\) is a multiplicative system then \(S^{-1}A\) is noetherian.
+\end{examsubparts}
+\item
+Suppose~\(k\) is a field and \(R=k[X,Y]\). Find two distinct primary decompositions of the ideal \(I=(X^2,XY)\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+State the Jacobson density theorem for semisimple rings.
+\item[\textnormal{(ii)}]
+Use it to show that if~\(k\) is an algebraically closed field and~\(A\) is a simple~\(k\)-algebra of finite dimension over~\(k\), then~\(A\) is a matrix algebra.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

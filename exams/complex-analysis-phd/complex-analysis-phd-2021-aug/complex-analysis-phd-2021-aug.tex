@@ -1,0 +1,118 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Complex Analysis PhD Exam, August 2021},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, August 2021\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Complex Analysis PhD Exam, August 2021}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Solve at most five of the following problems. Please explain your work in a careful and logical way. You can use any theorem, identity, functional equation contained in the syllabus for the complex analysis qualifying examination. Please make sure to state precisely any result or theorem you are using in your solutions. Failing to do so may result in a lower grade.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Use calculus of residues techniques to evaluate the following improper integral 
+\[
+\int_{-\infty}^{\infty}\frac{1}{x^6+1}\,dx.
+\]
+\item
+Consider the polynomial \(P(z)=z^4+6z+3\). How many zeros does \(P(z)\) have inside the circle of radius~\(2\) centered at the origin? Let~\(\gamma\) be the circle of radius~\(2\) centered at the origin oriented counterclockwise. Compute 
+\[
+\int_\gamma \frac{1}{P(z)}\,dz.
+\]
+\item
+Find an explicit analytic isomorphism between the first quadrant in the complex plane 
+\[
+Q_1:=\{z\in\mathbb C\mid \operatorname{Im}(z)>0,\ \operatorname{Re}(z)>0\}
+\]
+ and the upper half-plane~\(H\). Finally, find an explicit analytic isomorphism between \(Q_1\) and the unit disc~\(D\).
+\item
+Show that an analytic isomorphism of the open unit disc~\(D\) onto itself with two distinct fixed points must be the identity map.
+\item
+State the Fundamental Theorem of Algebra and give a detailed proof of it using tools and techniques from complex analysis.
+\item
+Let \(f:\mathbb C\to\mathbb C\) be an entire injective function. Show that~\(f\) is of the form 
+\[
+f(z)=az+b,\qquad a,b\in\mathbb C,\qquad a\ne 0.
+\]
+\item
+Let \(\{f_n\}\) be a sequence of holomorphic functions on a open set~\(U\). Assume that the sequence \(\{f_n\}\) converges to a limit~\(f\) in the sup norm on any closed domain in~\(U\). Show that~\(f\) must be holomorphic in~\(U\).
+\item
+Show that the function \(\psi(z):=z+1/z\) is an analytic isomorphism between \(\Omega_1:=\mathbb C\setminus\overline D\) (the complement of the closed unit disc in \(\mathbb C\)) and \(\Omega_2:=\mathbb C\setminus[-2,2]\) (\(\mathbb C\) with the closed segment \([-2,2]\) removed). Finally, give an example of a non-constant, bounded, holomorphic function on \(\Omega_2\).
+\item
+Let \(\Gamma(z)\) the Euler gamma function. Recall this is a meromorphic function over \(\mathbb C\) we defined via the infinite product 
+\[
+\Gamma(z)=\frac{e^{-\gamma z}}{z}\prod_{k=1}^{\infty}\left(1+\frac{z}{k}\right)^{-1}e^{z/k},
+\]
+ where~\(\gamma\) is the Euler constant. Find the poles of \(\Gamma(z)\) and compute their residues.
+\end{examproblems}
+\end{document}

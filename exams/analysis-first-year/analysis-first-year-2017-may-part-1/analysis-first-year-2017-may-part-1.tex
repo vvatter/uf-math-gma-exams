@@ -1,0 +1,100 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, May 2017, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2017, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, May 2017, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \(f:[0,1]\to[0,1]\) be increasing. By considering the set 
+\[
+A=\{t\in[0,1]:t\leq f(t)\}
+\]
+ or otherwise, prove that there exists \(a\in[0,1]\) such that \(f(a)=a\).
+\item
+Let~\(X\) be a metric space, of which~\(U\) is an open subset and~\(A\) an arbitrary subset. Prove that 
+\[
+U\cap\overline{A}\subseteq\overline{U\cap A}.
+\]
+\item
+Let \(f:X\to Y\) be a map between metric spaces. Prove that if \((f(x_n))_{n=0}^{\infty}\) converges in~\(Y\) whenever \((x_n)_{n=0}^{\infty}\) converges in~\(X\), then~\(f\) is continuous. [Note: it is not given that \(f(x_n)\to f(x)\) whenever \(x_n\to x\).]
+\item
+Let \(B\subseteq\mathbb{R}\) be bounded and \(f:B\to\mathbb{R}\) uniformly continuous. True or false: \(f(B)\subseteq\mathbb{R}\) is bounded? Give a proof or counterexample, as appropriate.
+\item
+Let \(f:(-a,a)\to\mathbb{R}\) be continuous everywhere and differentiable at each nonzero point. Show that if the limit \(\ell=\lim_{t\to0}f'(t)\) exists then~\(f\) is in fact continuously differentiable at~\(0\) with \(f'(0)=\ell\).
+\end{examproblems}
+\end{document}

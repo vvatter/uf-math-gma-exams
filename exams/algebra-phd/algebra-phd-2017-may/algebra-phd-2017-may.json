@@ -1,0 +1,196 @@
+{
+  "schema_version": 3,
+  "id": "algebra-phd-2017-may",
+  "subject": "PhD Algebra",
+  "subject_tag": "algebra-phd",
+  "year": 2017,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Algebra-2017_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly."
+    },
+    {
+      "type": "instructions",
+      "text": "Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(F\\) and \\(K\\) be fields and let \\(S\\) be a set of field homomorphisms from \\(F\\) to \\(K\\). Prove that \\(S\\) is linearly independent over \\(K\\) in the vector space of functions from \\(F\\) to \\(K\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f(x)=x^3-10\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Calculate the Galois group of \\(f(x)\\) over \\(\\mathbb{Q}\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Calculate the Galois group of \\(f(x)\\) over \\(\\mathbb{Q}(\\sqrt{2})\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathbb{Q}[x]\\) be the algebra over \\(\\mathbb{Q}\\) of all polynomials in one variable over \\(\\mathbb{Q}\\), and similarly let \\(\\mathbb{Q}[x,y]\\) be the algebra of polynomials in two variables. Prove that\n\\[\n\\mathbb{Q}[x]\\otimes_{\\mathbb{Q}}\\mathbb{Q}[x]\\simeq\\mathbb{Q}[x,y]\n\\]\nas algebras over \\(\\mathbb{Q}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "A group \\(G\\) is said to be nilpotent of class at most 2 if \\([[G,G],G]=1\\), where \\([H,K]\\) denotes the commutator group of the two subgroups \\(H\\) and \\(K\\) of \\(G\\). Let \\(C\\) be the concrete category whose objects are the nilpotent groups of class at most 2 and whose morphisms are all the group homomorphisms between them."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that, for every set \\(S\\), there is a free object in \\(C\\) with free generator set \\(S\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(S\\ne\\varnothing\\), then the free object in \\(C\\) with free generator set \\(S\\) is infinite.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring. Prove that the following two conditions are equivalent for a left \\(R\\)-module \\(P\\). (You may not assume any properties of projective modules.)"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Every short exact sequence of \\(R\\)-modules\n\\[\n0\\to A\\to B\\to P\\to 0\n\\]\nsplits;",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "There is a free \\(R\\)-module \\(F\\) and an \\(R\\)-module \\(K\\) such that \\(F\\simeq K\\oplus P\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be the ring of all rational numbers with odd denominators. Prove that the Jacobson radical \\(J(R)\\) of \\(R\\) consists of all fractions whose denominator is odd and whose numerator is even."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be an integral domain, and let \\(I\\) be an invertible ideal of \\(R\\). Prove that \\(I\\) is finitely generated."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a commutative ring with identity, let \\(M\\) be a maximal ideal of \\(R\\), and let \\(n\\) be a positive integer. Prove \\(R/M^n\\) has a unique prime ideal, so that, in particular, \\(R/M^n\\) is a local ring."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove the following version of Nakayama’s Lemma. Let \\(A\\) be a commutative ring with identity, let \\(M\\) be a finitely generated \\(A\\)-module, and let \\(I\\) be an ideal contained in the intersection of all the maximal ideals of \\(A\\). Show that if \\(IM=M\\) then \\(M=\\{0\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(R\\) be a ring (possibly non-commutative, and possibly without identity). Let \\(M\\) be an irreducible left \\(R\\)-module. Let \\(D=\\operatorname{End}_R(M)\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove \\(D=\\operatorname{End}_R(M)\\) is a division ring. (You may NOT assume Schur’s Lemma for this.)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Give an example of a ring \\(R\\) and an irreducible module \\(M\\) such that \\(D\\) is not commutative.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Classify (up to ring isomorphism) all semisimple rings of order \\(720\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

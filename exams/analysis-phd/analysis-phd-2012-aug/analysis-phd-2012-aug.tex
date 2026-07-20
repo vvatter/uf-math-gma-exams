@@ -1,0 +1,105 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, August 2012},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, August 2012\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, August 2012}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Be sure to carefully present all work in a neat and logical fashion. Do not leave any gaps. State clearly theorems used in your proofs.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the Vitali convergence theorem (define all terms).
+\item[\textnormal{(b)}]
+Use this theorem to prove the Lebesgue Dominated Convergence theorem (first state this theorem).
+\end{examsubparts}
+\item
+Let~\(f\) be an integrable function on \((S,\Sigma,\mu)\). Let~\(\nu\) be the indefinite integral of~\(f\). Let \(|\nu|(\cdot)\) denote the total variation of~\(\nu\) defined on~\(\Sigma\). Show that \(|\nu|(\cdot)\) is the indefinite integral of an a.e. unique integrable function~\(g\). What is the relationship between~\(g\) and~\(f\)? Prove.
+\item
+Let \((S,\Sigma,\mu)\) be a finite measure space. Suppose \(x^*\) belongs to the dual space of \(L^1(S,\Sigma,\mu)\). Show that there exist an a.e. unique integrable function~\(g\) such that 
+\[
+x^*(f)=\int_S fg\,d\mu,\quad\text{for each }f\in L^1(S,\Sigma,\mu).
+\]
+ [You need not prove that \(g\in L^\infty\), etc].
+\item
+Let \(\{y_n\}\) be an orthogonal sequence in a Hilbert space. Show \(\sum y_n\) converges unconditionally if and only if \(\sum |y_n|^2<\infty\).
+\item
+Let~\(X\) be a Banach space with closed linear subspaces~\(Y\) and~\(Z\). Suppose each~\(x\) in~\(X\) is the unique sum \(y+z\) where \(y\in Y\) and \(z\in Z\). Show that there is a constant~\(K\) such that \(|y|\le K|x|\) and \(|z|\le K|x|\) for each~\(x\) in~\(X\) with representation \(x=y+z\). [Hint: Use the open mapping theorem or closed graph theorem for certain maps]
+\item
+Let \(\{x_n\}\) be a weakly convergent sequence in a normed space~\(X\). Show that the weak limit belongs to the norm closed span of \(x_n\).
+\end{examproblems}
+\end{document}

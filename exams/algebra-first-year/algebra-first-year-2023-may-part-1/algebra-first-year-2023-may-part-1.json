@@ -1,0 +1,121 @@
+{
+  "schema_version": 3,
+  "id": "algebra-first-year-2023-may-part-1",
+  "subject": "First Year Algebra",
+  "subject_tag": "algebra-first-year",
+  "year": 2023,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Algebra-1-2023_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(P \\subset S_7\\) be a Sylow \\(7\\)-subgroup. Show that the normalizer \\(N\\) of \\(P\\) is a semidirect product \\(\\mathbb{Z}/7\\mathbb{Z} \\rtimes \\mathbb{Z}/6\\mathbb{Z}\\), where the homomorphism \\(\\mathbb{Z}/6\\mathbb{Z} \\to \\operatorname{Aut}(\\mathbb{Z}/7\\mathbb{Z})\\) is injective."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "It is known that \\(A_7\\) has a simple subgroup of order \\(168\\). Show that this subgroup is maximal."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(G\\) is a group of order \\(315\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that if \\(G\\) has a normal Sylow \\(3\\)-subgroup, that subgroup is contained in the center of \\(G\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Deduce from this that \\(G\\) is abelian.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(\\sigma \\in A_8\\) has order \\(15\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Find the order of the centralizer of \\(\\sigma\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Find the number of conjugates of \\(\\sigma\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(A\\) is an abelian group of order \\(p^4\\), where \\(p\\) is a prime."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Show that \\(A\\) has at most \\(1+p+p^2+p^3\\) subgroups of order \\(p\\).",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show that equality happens if and only if every nonidentity element of \\(A\\) has order \\(p\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(G\\) is a group and \\(M,N\\) are normal subgroups of \\(G\\) such that \\(G=MN\\). Show that \\(G/(M \\cap N) \\simeq G/M \\times G/N\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

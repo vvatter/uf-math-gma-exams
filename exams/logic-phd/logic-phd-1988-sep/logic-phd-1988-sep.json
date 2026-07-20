@@ -1,0 +1,136 @@
+{
+  "schema_version": 3,
+  "id": "logic-phd-1988-sep",
+  "subject": "PhD Logic",
+  "subject_tag": "logic-phd",
+  "year": 1988,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Logic_1988_09.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do any 8 problems."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Use truth tables to demonstrate the Cut Rule: \\(\\{P \\lor Q, \\neg P \\lor R \\vDash Q \\lor R\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State Gödel’s Completeness Theorem for Propositional Logic and sketch the proof for a countable theory. (You may assume the Deduction Lemma.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Compactness Theorem for Predicate Logic. (You may assume the Completeness Theorem.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Explain why the Theory of Dense Linear Orderings without Endpoints is complete. State the main results needed for the proof."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that every primitive recursive function is representable in formal arithmetic."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Define the ultraproduct \\(\\prod_{i\\in I} M_i/U\\) and state Łoś’ Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Explain why there is no Enumeration Theorem for the Primitive Recursive Functions."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Well-Ordering Principle and the Axiom of Choice and prove that the Well-Ordering Principle implies the Axiom of Choice."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that \\(\\omega^{<\\omega}\\) is countable, where \\(\\omega^{<\\omega}\\) is the set of finite strings of natural numbers."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(2 \\leq \\kappa \\leq \\lambda\\) and \\(\\lambda\\) is infinite. Show that \\(2^\\lambda = \\kappa^\\lambda\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

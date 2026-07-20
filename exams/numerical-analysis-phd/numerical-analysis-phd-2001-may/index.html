@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numerical Analysis PhD Exam, May 2001</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Numerical Analysis PhD Exam, May 2001</h1>
+    </header>
+    <div class="instructions">
+      <p>Do any 8 of the following 10 problems.</p>
+    </div>
+    <section aria-labelledby="section-1">
+      <h2 id="section-1">Part 1: Numerical Linear Algebra</h2>
+      <ol class="problems" start="1">
+        <li class="problem">
+          <p>This problem has five parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>Under what conditions does a real \(n\) by \(n\) matrix \(A\) have a Schur decomposition \(A=U^{\mathrm T}TU\), where \(U\) and \(T\) are real \(n\) by \(n\) matrices with \(U\) orthogonal and \(T\) upper triangular?</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Under what conditions on \(A\) is \(T\) diagonal?</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(c)</span>
+                <div class="subpart-body">
+                  <p>Does the matrix</p>
+                  <div class="display-math">\[
+A=\begin{pmatrix}1&amp;0&amp;1\\1&amp;-1&amp;0\\0&amp;1&amp;1\end{pmatrix}
+\]</div>
+                  <p>have an orthogonal set of eigenvectors?</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(d)</span>
+                <div class="subpart-body">
+                  <p>Give a careful statement of the singular value decomposition of a real \(m\) by \(n\) matrix.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(e)</span>
+                <div class="subpart-body">
+                  <p>Under what conditions does the singular value decomposition exist?</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>Consider the linear system \(Ax=b\).</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>If the rows of \(A\) are linearly independent, derive a formula for the solution of minimal 2-norm.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>If the columns of \(A\) are linearly independent, derive a formula for the \(x\) that minimizes the 2-norm of the residual \(r=b-Ax\).</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(c)</span>
+                <div class="subpart-body">
+                  <p>Use the singular value decomposition of \(A\) to give a formula for the \(x\) that minimizes the 2-norm of the residual, and among all the \(x\)’s which minimize the 2-norm, it has minimal norm.</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>This problem has two parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>Given a vector \(x\in\mathbb R^n\) and a natural number \(k&lt;n\), give a formula for a unit vector \(w\) for which the vector \(y=(I-2ww^{\mathrm T})x\) satisfies the following conditions: \(y_i=x_i\) for \(i&lt;k\) and \(y_i=0\) for \(i&gt;k\).</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Using these Householder transformations, write a pseudo code (or a matlab code) for reducing a real symmetric matrix to tridiagonal form using Householder similarity transformations.</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>This problem has three parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>State and prove the Gershgorin Circle Theorem.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Let</p>
+                  <div class="display-math">\[
+A=\begin{pmatrix}5&amp;1&amp;3\\2&amp;4&amp;1\\3&amp;-1&amp;4\end{pmatrix}.
+\]</div>
+                  <p>What can you say about the location of the eigenvalues of \(A\)?</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(c)</span>
+                <div class="subpart-body">
+                  <p>Use the Gershgorin Circle Theorem to estimate the size of the largest root of the polynomial \(p(x)=x^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_1x+a_0\).</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>This problem has two parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>Find the ellipse or hyperbola, of the form \(ax^2+by^2=1\), that best fits \(n\) data points \((x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n)\) in the plane by computing the least squares solution to the \(n\) linear equations gotten by substituting each of the data points into the quadratic equation.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Test your method with the dataset \((1,1),(2,4),(3,9),(4,16)\).</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+    <section aria-labelledby="section-2">
+      <h2 id="section-2">Part II: Numerical Analysis</h2>
+      <ol class="problems" start="6">
+        <li class="problem">
+          <p>This problem has three parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>State Newton’s method (the algorithm) for solving \(f(x)=0\) where \(f:\mathbb R\to\mathbb R\).</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Assuming \(f\) is smooth and we have an initial guess sufficiently close to a root \(p\), state sufficient condition(s) for the method to converge quadratically.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(c)</span>
+                <div class="subpart-body">
+                  <p>Show that Newton’s method applied to \(x^5=2\) converges quadratically to the root \(2^{1/5}\) from any starting guess \(x&gt;0\).</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>This problem has three parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>Given a function \(f\) with \(n+1\) continuous derivatives on the interval \(I=[-1,1]\), show that, given \(n+1\) points \(\{x_0,x_1,\ldots,x_n\}\) in \(I\), there exists a unique polynomial \(P_n(x)\) of degree \(\le n\) such that</p>
+                  <div class="display-math">\[
+P_n(x_i)=f(x_i)\qquad\text{for }i=0,\ldots,n.
+\]</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Prove that, given \(t\in I\), there exists \(\eta\in I\) such that</p>
+                  <div class="display-math">\[
+f(t)-P_n(t)=\frac{(t-x_0)\cdots(t-x_n)}{(n+1)!}f^{(n+1)}(\eta).
+\]</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(c)</span>
+                <div class="subpart-body">
+                  <p>From the above we get that (all norms are on the interval \(I\))</p>
+                  <div class="display-math">\[
+\lVert f-P_n\rVert_\infty\le \max_{t\in I}\left|(t-x_0)(t-x_1)\cdots(t-x_n)\right|\frac{\lVert f^{(n+1)}\rVert_\infty}{(n+1)!}.
+\]</div>
+                  <p>What choice for the points \(x_0,\ldots,x_n\) minimizes the right hand side of this error bound?</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>This problem has two parts.</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>Find a function \(q(x)\) which has a continuous first derivative for each \(x\in(-\infty,\infty)\) with the properties:</p>
+                  <div class="display-math">\[
+q(x)=\begin{cases}
+1,&amp;\text{if }x=0,\\
+0,&amp;\text{for all }|x|\ge 2,\\
+a_0+a_1x+a_2x^2,&amp;\text{for all }x\in[-2,-1],\\
+b_0+b_1x+b_2x^2,&amp;\text{for all }x\in[-1,1],\\
+c_0+c_1x+c_2x^2,&amp;\text{for all }x\in[1,2].
+\end{cases}
+\]</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Use the function \(q(x)\) defined in part a to interpolate a set of equally spaced points \((x_0,y_0),(x_1,y_1),\ldots,(x_n,y_n)\), where \(h=x_{k+1}-x_k\) for all \(k\). In particular, describe how to find constants \(c_k\) so that the function</p>
+                  <div class="display-math">\[
+Q(x)=\sum_{k=0}^n c_k q\!\left(\frac{x-x_k}{h}\right)
+\]</div>
+                  <p>has the property that \(Q(x_k)=y_k\) for all \(k\).</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>Let \(P_2(x)\) be a quadratic polynomial interpolating \(g(x)\) at \(x=0,h,2h\).</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>Use this to derive a numerical integration formula \(I_h\) for</p>
+                  <div class="display-math">\[
+I=\int_0^{3h}g(x)\,dx.
+\]</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>Use a Taylor series expansion of \(g(x)\) to show</p>
+                  <div class="display-math">\[
+I-I_h=\frac{3}{8}h^4g^{(3)}(0)+O(h^5).
+\]</div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="problem">
+          <p>Triple Recursion Formula. If \(\{\phi_n(x)\}\) is an orthogonal family of polynomials on \([a,b]\), with respect to the weight function \(w(x)\ge 0\), and \(n\ge 1\), then show that</p>
+          <div class="display-math">\[
+\phi_{n+1}(x)=(a_nx+b_n)\phi_n(x)-c_n\phi_{n-1}(x),
+\]</div>
+          <p>for some constants \(a_n,b_n\), and \(c_n\). (Hint: Let \(g(x)=\phi_{n+1}(x)-a_nx\phi_n(x)\), where \(a_n\) is a constant chosen so that \(g(x)\) has degree \(n\).)</p>
+        </li>
+      </ol>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Numerical Analysis PhD Exams</a></li>
+        <li><a href="numerical-analysis-phd-2001-may.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

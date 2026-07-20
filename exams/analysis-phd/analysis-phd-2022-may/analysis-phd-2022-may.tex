@@ -1,0 +1,141 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, May 2022},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2022\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, May 2022}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+State Tonelli’s theorem, and give an example to show that the~\(\sigma\)-finiteness hypothesis is necessary.
+\item
+Let~\(\mu\) be a positive measure and let \((E_n)\) be a sequence of measurable sets with \(\mu(E_n)<\infty\) for all~\(n\). Prove that if \(\mathbf{1}_{E_n}\to f\) in \(L^1(\mu)\), then there exists a measurable set~\(E\) so that \(f=\mathbf{1}_E\) a.e. and \(\mu(E)=\lim \mu(E_n)\).
+\item
+Let~\(\mu\) and~\(\nu\) be finite, positive measures defined on the same measurable space \((X,\mathcal{M})\), and suppose that \(\nu\ll\mu\).
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Prove that if \(L^1(\mu)\subset L^1(\nu)\), then the inclusion map \(\iota:L^1(\mu)\hookrightarrow L^1(\nu)\) is necessarily bounded.
+\item[\textnormal{b)}]
+Prove that if \(L^1(\mu)\subset L^1(\nu)\) then \(\frac{d\nu}{d\mu}\in L^\infty(\mu)\).
+\end{examsubparts}
+\item
+Let~\(\mu\) be a positive measure and suppose that \(1<p<r<q<\infty\). Prove that 
+\[
+L^r(\mu)\subset L^p(\mu)+L^q(\mu).
+\]
+ (That is, every \(f\in L^r(\mu)\) can be written as a sum \(f=g+h\) where \(g\in L^p(\mu)\) and \(h\in L^q(\mu)\).)
+\item
+Let~\(\mathcal{X}\) be a Banach space, and let \(\mathcal{M},\mathcal{N}\) be closed subspaces of~\(\mathcal{X}\). Suppose that every \(x\in\mathcal{X}\) can be decomposed uniquely as 
+\[
+x=m+n
+\]
+ with \(m\in\mathcal{M}\), \(n\in\mathcal{N}\). Prove that the assignment \(x\to m\) defines a bounded linear operator from~\(\mathcal{X}\) to~\(\mathcal{M}\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Prove that for each integer \(n\ge 0\), there exists a function \(f_n\in L^2[0,1]\) such that for every polynomial~\(p\) of degree at most~\(n\), 
+\[
+p(1)=\int_0^1 p(x)f_n(x)\,dx.
+\]
+ Is \(f_n\) unique?
+\item[\textnormal{b)}]
+Is there a function \(f\in L^2[0,1]\) such that 
+\[
+p(1)=\int_0^1 p(x)f(x)\,dx
+\]
+ for all polynomials~\(p\)? Prove or disprove.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a)}]
+State the Banach Isomorphism Theorem and the Closed Graph Theorem.
+\item[\textnormal{b)}]
+Using the Banach Isomorphism Theorem (or otherwise), prove the Closed Graph Theorem.
+\end{examsubparts}
+\item
+(Short answer, you do not need to give a detailed proof, just a brief explanation.)
+\begin{examsubparts}
+\item[\textnormal{a)}]
+Define the Fourier transform on \(L^1(\mathbb{R})\) and sketch its extension to \(L^2(\mathbb{R})\).
+\item[\textnormal{b)}]
+Sketch a construction of a bounded linear functional~\(\lambda\) on \(L^\infty(\mathbb{R})\) which is not of the form \(\lambda(f)=\int f(x)g(x)\,dx\) for any \(L^1\) function~\(g\).
+\item[\textnormal{c)}]
+Sketch a proof of the fact that there is no norm under which \(c_{00}\) is complete.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

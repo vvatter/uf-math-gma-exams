@@ -14,6 +14,7 @@ from extract_exams import (
     NumberingMode,
     PROMPT_VERSION,
     Problem,
+    ProblemTextBlock,
     ProblemBlock,
     ReviewCategory,
     ReviewFlag,
@@ -21,15 +22,16 @@ from extract_exams import (
     SYSTEM_PROMPT,
     SourceExam,
     Subpart,
+    TikzBlock,
     clean_native_text,
     exam_html_path,
     exam_json_path,
-    exam_markdown_path,
+    exam_pdf_path,
+    exam_tex_path,
     extract_one,
     has_ascii_control_characters,
     part_from_manifest,
     render_html,
-    render_markdown,
     select_exam_ids,
     sha256_file,
     update_review_files,
@@ -37,16 +39,22 @@ from extract_exams import (
 )
 
 
+def make_problem(text: str, subparts: list[Subpart]) -> Problem:
+    body = [ProblemTextBlock(text=text)] if text else []
+    return Problem(body=body, subparts=subparts)
+
+
 def source(subject_tag: str = "algebra-first-year") -> SourceExam:
+    exam_id = f"{subject_tag}-2025-may-part-1"
     return SourceExam(
-        id=f"{subject_tag}-2025-may-part-1",
+        id=exam_id,
         subject="First Year Algebra" if subject_tag != "logic-phd" else "PhD Logic",
         subject_tag=subject_tag,
         year=2025,
         month="may",
         part=1,
         pdf_url="https://gma.math.ufl.edu/wp-content/uploads/sites/130/exam.pdf",
-        pdf_path=Path("exams/example.pdf"),
+        pdf_path=Path("exams") / subject_tag / exam_id / f"{exam_id}.source.pdf",
         sha256="abc",
         download_sha256="abc",
     )
@@ -69,7 +77,7 @@ class ExtractionSchemaTests(unittest.TestCase):
     def test_prompt_normalizes_mathematician_names_and_eponyms(self) -> None:
         normalized_prompt = " ".join(SYSTEM_PROMPT.split())
 
-        self.assertEqual(PROMPT_VERSION, "exam-extraction-v15")
+        self.assertEqual(PROMPT_VERSION, "exam-extraction-v16")
         self.assertIn("Gödel rather than Goedel", normalized_prompt)
         self.assertIn("Hahn–Banach", SYSTEM_PROMPT)
         self.assertIn("Preserve a hyphen that is actually part", SYSTEM_PROMPT)
@@ -82,12 +90,23 @@ class ExtractionSchemaTests(unittest.TestCase):
             normalized_prompt,
         )
 
-    def test_outputs_are_adjacent_to_source_pdf(self) -> None:
+    def test_outputs_use_canonical_exam_directory_names(self) -> None:
         item = source()
 
-        self.assertEqual(exam_json_path(item), Path("exams/example.json"))
-        self.assertEqual(exam_markdown_path(item), Path("exams/example.md"))
-        self.assertEqual(exam_html_path(item), Path("exams/example.html"))
+        directory = Path("exams/algebra-first-year/algebra-first-year-2025-may-part-1")
+        self.assertEqual(
+            exam_json_path(item),
+            directory / "algebra-first-year-2025-may-part-1.json",
+        )
+        self.assertEqual(exam_html_path(item), directory / "index.html")
+        self.assertEqual(
+            exam_tex_path(item),
+            directory / "algebra-first-year-2025-may-part-1.tex",
+        )
+        self.assertEqual(
+            exam_pdf_path(item),
+            directory / "algebra-first-year-2025-may-part-1.pdf",
+        )
 
     def test_problem_number_is_derived_not_accepted_as_data(self) -> None:
         with self.assertRaises(ValueError):
@@ -103,10 +122,15 @@ class ExtractionSchemaTests(unittest.TestCase):
                     source("analysis-phd"),
                     id=f"analysis-phd-{year}-jan",
                     year=year,
-                    pdf_path=directory / f"analysis-phd-{year}-jan.pdf",
+                    pdf_path=(
+                        directory
+                        / f"analysis-phd-{year}-jan"
+                        / f"analysis-phd-{year}-jan.source.pdf"
+                    ),
                 )
                 for year in (1988, 1989, 1990)
             ]
+            exam_json_path(items[0]).parent.mkdir(parents=True)
             exam_json_path(items[0]).write_text("{}", encoding="utf-8")
             sources = {item.id: item for item in items}
 
@@ -139,12 +163,14 @@ class ExtractionSchemaTests(unittest.TestCase):
         analysis = replace(
             source("analysis-phd"),
             id="analysis-phd-1988-jan",
-            pdf_path=Path("exams/analysis-phd-1988-jan.pdf"),
+            pdf_path=Path(
+                "exams/analysis-phd-1988-jan/analysis-phd-1988-jan.source.pdf"
+            ),
         )
         logic = replace(
             source("logic-phd"),
             id="logic-phd-2006-aug",
-            pdf_path=Path("exams/logic-phd-2006-aug.pdf"),
+            pdf_path=Path("exams/logic-phd-2006-aug/logic-phd-2006-aug.source.pdf"),
         )
         sources = {item.id: item for item in (analysis, logic)}
 
@@ -181,10 +207,9 @@ class ExtractionSchemaTests(unittest.TestCase):
         ]
 
         self.assertEqual(validate_exam(exam, item, []), [])
-        self.assertEqual(
-            render_markdown(exam),
-            "# Algebra first year exam, May 2025, Part 1\n\n"
-            "*This exam was not provided to the archive.*\n",
+        self.assertIn(
+            "This exam was not provided to the archive.",
+            render_html(exam),
         )
 
     def test_empty_record_without_notice_is_invalid(self) -> None:
@@ -198,7 +223,7 @@ class ExtractionSchemaTests(unittest.TestCase):
 
     def test_ascii_control_characters_are_invalid(self) -> None:
         item = source()
-        exam = exam_for(item, [Problem(text="Let \x07 be a measure.", subparts=[])])
+        exam = exam_for(item, [make_problem(text="Let \x07 be a measure.", subparts=[])])
 
         self.assertIn(
             "content contains an ASCII control character",
@@ -209,8 +234,8 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertEqual(clean_native_text("  A\x07B\nC\x01  "), "AB\nC")
 
     def test_control_character_detection_walks_models(self) -> None:
-        clean = exam_for(source(), [Problem(text="Clean.", subparts=[])])
-        corrupt = exam_for(source(), [Problem(text="Bad \x1dmu.", subparts=[])])
+        clean = exam_for(source(), [make_problem(text="Clean.", subparts=[])])
+        corrupt = exam_for(source(), [make_problem(text="Bad \x1dmu.", subparts=[])])
 
         self.assertFalse(has_ascii_control_characters(clean))
         self.assertTrue(has_ascii_control_characters(corrupt))
@@ -228,8 +253,8 @@ class ExtractionSchemaTests(unittest.TestCase):
                 sha256=sha256_file(pdf_path),
                 download_sha256="download-hash",
             )
-            exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
-            pdf_path.with_suffix(".json").write_text(
+            exam = exam_for(item, [make_problem(text="Prove it.", subparts=[])])
+            exam_json_path(item).write_text(
                 exam.model_dump_json(indent=2), encoding="utf-8"
             )
             checkpoint_path = root / "build" / item.id / "extraction.json"
@@ -266,7 +291,10 @@ class ExtractionSchemaTests(unittest.TestCase):
                 "content": [
                     {
                         "type": "problem",
-                        "problem": {"text": "Prove it.", "subparts": []},
+                        "problem": {
+                            "body": [{"type": "text", "text": "Prove it."}],
+                            "subparts": [],
+                        },
                     }
                 ],
                 "review_flags": [],
@@ -289,18 +317,66 @@ class ExtractionSchemaTests(unittest.TestCase):
                 item, root / "build", "unused-model", "high", 200, False
             )
             checkpoint = json.loads(saved_path.read_text(encoding="utf-8"))
-            json_exists = pdf_path.with_suffix(".json").exists()
-            markdown_exists = pdf_path.with_suffix(".md").exists()
-            html_exists = pdf_path.with_suffix(".html").exists()
+            json_exists = exam_json_path(item).exists()
+            html_exists = exam_html_path(item).exists()
 
         self.assertTrue(cached)
-        self.assertEqual(exam.content[0].problem.text, "Prove it.")
+        self.assertEqual(exam.content[0].problem.body[0].text, "Prove it.")
         self.assertEqual(flags, [])
         self.assertEqual(checkpoint["validation_errors"], [])
         self.assertIn("revalidated_at", checkpoint)
         self.assertTrue(json_exists)
-        self.assertTrue(markdown_exists)
         self.assertTrue(html_exists)
+
+    def test_tikz_figure_renders_as_accessible_html(self) -> None:
+        item = source()
+        alt = "A square with vertices labeled clockwise."
+        problem = Problem(
+            body=[
+                ProblemTextBlock(text="Consider the following diagram."),
+                TikzBlock(
+                    id="labeled-square",
+                    alt=alt,
+                    options=["line cap=round"],
+                    height_lines=10,
+                    code=r"\draw (0,0) rectangle (1,1);",
+                ),
+            ],
+            subparts=[],
+        )
+        exam = exam_for(item, [problem])
+
+        html = render_html(exam)
+
+        self.assertIn('<figure class="problem-figure">', html)
+        self.assertIn(f'alt="{alt}"', html)
+        self.assertIn(f'src="{item.id}.labeled-square.png"', html)
+        self.assertIn('style="max-height: 10lh"', html)
+        self.assertIn("max-width: 80%", html)
+        self.assertIn("max-height: 6lh", html)
+
+    def test_tikz_wrapper_is_rejected_from_canonical_json(self) -> None:
+        item = source()
+        exam = exam_for(
+            item,
+            [
+                Problem(
+                    body=[
+                        TikzBlock(
+                            id="bad-wrapper",
+                            alt="A diagram.",
+                            code=r"\begin{tikzpicture}\draw (0,0)--(1,1);\end{tikzpicture}",
+                        )
+                    ],
+                    subparts=[],
+                )
+            ],
+        )
+
+        self.assertIn(
+            "problem index 1 TikZ code contains a document or picture wrapper",
+            validate_exam(exam, item, []),
+        )
 
     def test_manifest_part_label(self) -> None:
         self.assertEqual(part_from_manifest({"source_label": "Part 2"}), 2)
@@ -311,7 +387,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         exam = exam_for(
             item,
             [
-                Problem(
+                make_problem(
                     text=r"Let \(G\) be a group.",
                     subparts=[
                         Subpart(
@@ -326,12 +402,12 @@ class ExtractionSchemaTests(unittest.TestCase):
 
         self.assertEqual(validate_exam(exam, item, []), [])
 
-    def test_markdown_renders_nested_subparts(self) -> None:
+    def test_html_renders_nested_subparts(self) -> None:
         item = source()
         exam = exam_for(
             item,
             [
-                Problem(
+                make_problem(
                     text="Bipartite graphs:",
                     subparts=[
                         Subpart(
@@ -347,41 +423,21 @@ class ExtractionSchemaTests(unittest.TestCase):
             ],
         )
 
-        self.assertIn(
-            "**1.** Bipartite graphs:\n"
-            "* (a) Determine when the graph is\n"
-            "    * (1) planar;\n"
-            "    * (2) Eulerian.",
-            render_markdown(exam),
-        )
-
-    def test_markdown_is_rendered_from_exam_record(self) -> None:
-        item = source()
-        exam = exam_for(
-            item,
-            [
-                Problem(
-                    text=r"Let \(G\) be a group.",
-                    subparts=[Subpart(label="(a)", text="Prove it.", subparts=[])],
-                )
-            ],
-        )
-        exam.content.insert(0, InstructionsBlock(text="Answer one problem."))
-
-        self.assertEqual(
-            render_markdown(exam),
-            "# Algebra first year exam, May 2025, Part 1\n\n"
-            "*Answer one problem.*\n\n"
-            "**1.** Let \\(G\\) be a group.\n"
-            "* (a) Prove it.\n",
-        )
+        rendered = render_html(exam)
+        self.assertEqual(rendered.count('<ol class="subparts">'), 2)
+        self.assertIn('<span class="subpart-label">(a)</span>', rendered)
+        self.assertIn('<span class="subpart-label">(1)</span>', rendered)
+        self.assertIn('<span class="subpart-label">(2)</span>', rendered)
+        self.assertIn("Determine when the graph is", rendered)
+        self.assertIn("planar;", rendered)
+        self.assertIn("Eulerian.", rendered)
 
     def test_html_is_semantic_escaped_and_accessible(self) -> None:
         item = source()
         exam = exam_for(
             item,
             [
-                Problem(
+                make_problem(
                     text=r"Let \(G < H\) and prove the claim.",
                     subparts=[
                         Subpart(
@@ -403,7 +459,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertIn('<meta charset="utf-8">', rendered)
         self.assertIn('<main id="main-content">', rendered)
         self.assertIn(
-            "<h1>Algebra first year exam, May 2025, Part 1</h1>", rendered
+            "<h1>Algebra First-Year Exam, May 2025, Part 1</h1>", rendered
         )
         self.assertIn(
             '<p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, '
@@ -422,18 +478,18 @@ class ExtractionSchemaTests(unittest.TestCase):
             '<a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a>',
             rendered,
         )
-        self.assertIn('<a href="../../index.html">All exam subjects</a>', rendered)
+        self.assertIn('<a href="../../../index.html">All exam subjects</a>', rendered)
         self.assertIn(
-            '<a href="index.html">Algebra First-Year exams</a>', rendered
+            '<a href="../index.html">Algebra First-Year Exams</a>', rendered
         )
         self.assertIn(
-            '<a href="algebra-first-year-2025-may-part-1.pdf">Original PDF</a>',
+            '<a href="algebra-first-year-2025-may-part-1.source.pdf">Original PDF</a>',
             rendered,
         )
         self.assertLess(rendered.index("Project source"), rendered.index("All exam subjects"))
         self.assertIn(
-            '<p class="page-updated">Page updated <time datetime="2026-07-19">'
-            "July 19, 2026</time>.</p>",
+            '<p class="page-updated">Page updated <time datetime="2026-07-20">'
+            "July 20, 2026</time>.</p>",
             rendered,
         )
         self.assertNotIn('target="_blank"', rendered)
@@ -445,7 +501,7 @@ class ExtractionSchemaTests(unittest.TestCase):
 
     def test_html_preserves_section_numbering_and_instruction_math(self) -> None:
         item = source()
-        exam = exam_for(item, [Problem(text="Preamble problem.", subparts=[])])
+        exam = exam_for(item, [make_problem(text="Preamble problem.", subparts=[])])
         exam.content.extend(
             [
                 SectionBlock(
@@ -455,15 +511,15 @@ class ExtractionSchemaTests(unittest.TestCase):
                         InstructionsBlock(
                             text="Use this identity.\n\\[\na^2+b^2=c^2\n\\]"
                         ),
-                        ProblemBlock(problem=Problem(text="First theorem.", subparts=[])),
-                        ProblemBlock(problem=Problem(text="Second theorem.", subparts=[])),
+                        ProblemBlock(problem=make_problem(text="First theorem.", subparts=[])),
+                        ProblemBlock(problem=make_problem(text="Second theorem.", subparts=[])),
                     ],
                 ),
                 SectionBlock(
                     heading="SECTION III",
                     numbering=NumberingMode.CONTINUE,
                     content=[
-                        ProblemBlock(problem=Problem(text="Final theorem.", subparts=[]))
+                        ProblemBlock(problem=make_problem(text="Final theorem.", subparts=[]))
                     ],
                 ),
             ]
@@ -480,32 +536,7 @@ class ExtractionSchemaTests(unittest.TestCase):
             '<div class="display-math">\\[\na^2+b^2=c^2\n\\]</div>', rendered
         )
 
-    def test_markdown_italicizes_instruction_lines_but_not_display_math(self) -> None:
-        item = source()
-        exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
-        exam.content.insert(
-            0,
-            InstructionsBlock(
-                text=(
-                    "Use the following identity.\n"
-                    "\\[\n"
-                    "a^2+b^2=c^2\n"
-                    "\\]\n"
-                    "Explain every step."
-                )
-            ),
-        )
-
-        self.assertIn(
-            "*Use the following identity.*\n"
-            "\\[\n"
-            "a^2+b^2=c^2\n"
-            "\\]\n"
-            "*Explain every step.*",
-            render_markdown(exam),
-        )
-
-    def test_qualifying_exam_markdown_title(self) -> None:
+    def test_qualifying_exam_html_title(self) -> None:
         item = replace(
             source(),
             id="algebra-qualifying-2026-jan-part-1",
@@ -514,20 +545,19 @@ class ExtractionSchemaTests(unittest.TestCase):
             year=2026,
             month="january",
         )
-        exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
+        exam = exam_for(item, [make_problem(text="Prove it.", subparts=[])])
 
-        self.assertTrue(
-            render_markdown(exam).startswith(
-                "# Algebra qualifying exam, January 2026, Part 1\n"
-            )
+        self.assertIn(
+            "<h1>Algebra Qualifying Exam, January 2026, Part 1</h1>",
+            render_html(exam),
         )
 
-    def test_markdown_supplies_stub_for_parts_without_a_stem(self) -> None:
+    def test_html_supplies_stub_for_parts_without_a_stem(self) -> None:
         item = source()
         exam = exam_for(
             item,
             [
-                Problem(
+                make_problem(
                     text="",
                     subparts=[
                         Subpart(label="(a)", text="First.", subparts=[]),
@@ -537,50 +567,14 @@ class ExtractionSchemaTests(unittest.TestCase):
             ],
         )
 
-        self.assertIn(
-            "**1.** This problem has two parts.\n* (a) First.\n* (b) Second.",
-            render_markdown(exam),
-        )
-
-    def test_sections_control_derived_problem_numbers(self) -> None:
-        item = source()
-        exam = exam_for(item, [Problem(text="Preamble problem.", subparts=[])])
-        exam.content.extend(
-            [
-                SectionBlock(
-                    heading="II. Set Theory",
-                    numbering=NumberingMode.RESTART,
-                    content=[
-                        InstructionsBlock(text="Prove both statements."),
-                        ProblemBlock(problem=Problem(text="First theorem.", subparts=[])),
-                        ProblemBlock(problem=Problem(text="Second theorem.", subparts=[])),
-                    ],
-                ),
-                SectionBlock(
-                    heading="SECTION III",
-                    numbering=NumberingMode.CONTINUE,
-                    content=[
-                        ProblemBlock(problem=Problem(text="Final theorem.", subparts=[]))
-                    ],
-                ),
-            ]
-        )
-
-        self.assertEqual(validate_exam(exam, item, []), [])
-        self.assertIn(
-            "**1.** Preamble problem.\n\n"
-            "## II. Set Theory\n\n"
-            "*Prove both statements.*\n\n"
-            "**1.** First theorem.\n\n"
-            "**2.** Second theorem.\n\n"
-            "## SECTION III\n\n"
-            "**3.** Final theorem.",
-            render_markdown(exam),
-        )
+        rendered = render_html(exam)
+        self.assertIn("This problem has two parts.", rendered)
+        self.assertIn('<span class="subpart-label">(a)</span>', rendered)
+        self.assertIn('<span class="subpart-label">(b)</span>', rendered)
 
     def test_instruction_only_section_is_valid(self) -> None:
         item = source()
-        exam = exam_for(item, [Problem(text="First theorem.", subparts=[])])
+        exam = exam_for(item, [make_problem(text="First theorem.", subparts=[])])
         exam.content.append(
             SectionBlock(
                 heading="II",
@@ -590,15 +584,15 @@ class ExtractionSchemaTests(unittest.TestCase):
         )
 
         self.assertEqual(validate_exam(exam, item, []), [])
-        self.assertTrue(
-            render_markdown(exam).endswith("## II\n\n*Prove the first theorem.*\n")
-        )
+        rendered = render_html(exam)
+        self.assertIn('<h2 id="section-1">II</h2>', rendered)
+        self.assertIn("Prove the first theorem.", rendered)
         exam.content[-1].content = []
         self.assertIn("section 'II' is empty", validate_exam(exam, item, []))
 
     def test_correction_requires_review_evidence(self) -> None:
         item = source()
-        exam = exam_for(item, [Problem(text="Prove it.", subparts=[])])
+        exam = exam_for(item, [make_problem(text="Prove it.", subparts=[])])
         flag = ReviewFlag(
             category=ReviewCategory.CORRECTION,
             problem_indices=[1],

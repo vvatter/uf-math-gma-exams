@@ -1,0 +1,143 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, May 1991},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 1991\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, May 1991}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 9 out of 12 problems. Show all of your work.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+How many~\(k\)-tuples \((A_1,A_2,\ldots,A_k)\) of nested subsets of an~\(n\)-set are there, where \(A_1\subseteq A_2\subseteq\cdots\subseteq A_k\)?
+\item
+How many words of length~\(n\) are there in the alphabet \((a,b,c)\) with no two adjacent~\(a\)’s? With no two adjacent letters equal?
+\item
+Find the generating function for the sequence \(\{a_n\}\) given by the recurrence 
+\[
+a_n=a_{n-1}+6a_{n-2}+2^n
+\]
+ where \(a_0=1\) and \(a_1=3\).
+\item
+Bipartite graphs:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine for which values of~\(m\) and~\(n\) the complete bipartite graph \(K_{mn}\) is
+\begin{examsubparts}
+\item[\textnormal{(1)}]
+planar;
+\item[\textnormal{(2)}]
+Eulerian;
+\item[\textnormal{(3)}]
+Hamiltonian.
+\end{examsubparts}
+\item[\textnormal{(b)}]
+Prove: A plane graph where every face has an even number of edges must be bipartite.
+\end{examsubparts}
+\item
+Prove that 
+\[
+\sum_{k=1}^{n} S(n,k)x(x-1)\cdots(x-k+1)=x^n.
+\]
+\item
+Use Möbius inversion to find the number of integers between~\(1\) and~\(n\) and coprime to~\(n\), given the prime factorization of~\(n\).
+\item
+Prove or disprove: There is a matching from~\(V\) to~\(W\) in a bipartite graph if, for some fixed~\(k\), there are~\(k\) or more edges incident with each vertex of~\(V\) and~\(k\) or fewer edges incident with each vertex of~\(W\).
+\item
+Let \(A_{m,n}\) be the collection of all sets \(X=\{N_1,N_2,\ldots,N_k\}\), where~\(k\) is a non-negative integer, and for each \(i\leq k\), \(N_i\) is a positive integer divisor of \(N=2^m3^n\), and where \(N_i\mid N_j\) only if \(i=j\). Define a partial order on \(A_{m,n}\), where \(X=\{N_1,N_2,\ldots,N_k\}\), \(X'=\{N'_1,N'_2,\ldots,N'_l\}\), by \(X\preceq X'\) if and only if \(N_i\in X\Rightarrow\) there exists \(N'_j\in X'\) with \(N_i\mid N'_j\). Prove that \(A_{m,n}\) is a distributive lattice, and determine its poset of join-irreducible elements.
+\item
+Let~\(I\) be a collection of subsets of~\(E\), where~\(E\) is finite, and suppose that \(I\neq\varnothing\) and that \(Y\in I,\ X\subseteq Y\Rightarrow X\in I\). Let \(c:E\to\mathbb{R}^+\) assign a positive real number to each element of~\(E\). Consider the optimization problem:
+
+\par
+Find \(\max_{X\in I}\sum_{x\in X}c(x)\)
+
+\par
+Prove that the greedy algorithm solves this problem if and only if~\(I\) is the collection of independent sets of some matroid on~\(E\).
+\item
+State the MacWilliams identity, and use it to compute the weight polynomial of the \((15,11)\) Hamming binary code.
+\item
+A \((v,k,\lambda)\)-design~\(\Sigma\) is an incidence structure consisting of a set~\(S\) of~\(v\) points and a collection of~\(k\)-subsets of~\(S\) called blocks, such that every pair of points of~\(S\) is contained in precisely~\(\lambda\) blocks.
+
+\par
+Prove that, in the range \(30\leq v\leq45\), a \((v,6,1)\)-design exists if and only if \(v=31\).
+\item
+Use the Hall Multiplier Theorem
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+to prove the non-existence of a cyclic \((31,10,3)\) difference set.
+\item[\textnormal{(ii)}]
+to find a cyclic \((31,6,1)\) difference set.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

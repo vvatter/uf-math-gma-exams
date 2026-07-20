@@ -1,0 +1,148 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Probability PhD Exam, August 2020},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, August 2020\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Probability PhD Exam, August 2020}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Carefully justify your answers.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{1.}]
+State the weak and strong law of large numbers for i.i.d. random variables.
+\item[\textnormal{2.}]
+Prove the weak law of large numbers (for i.i.d. random variables).
+\item[\textnormal{3.}]
+Prove the strong law of large numbers under the additional assumption of finite fourth moment \(\bigl(\mathbb{E}[X_1^4]<+\infty\bigr)\).
+\end{examsubparts}
+\item
+Let \(X,Y\) be independent and uniformly distributed on \([0,1]\).
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Find the density of the random variable \(X+Y\).
+\item[\textnormal{2.}]
+Find the density of the random variable \(\mathbb{E}[X\mid X+Y]\).
+\end{examsubparts}
+\item
+Let \(\{X_n\}\) be a sequence of random variables uniformly bounded, that is, there exists \(M>0\) such that for all \(n\in\mathbb{N}\), \(|X_n|\le M\). Prove that \(\{X_n\}\) converges to~\(0\) in \(L^1\) if and only if \(\{X_n\}\) converges to~\(0\) in probability.
+\item
+Let \(\{X_n\}\) be a sequence of random variables such that for all \(n\ge 1\), \(X_n\) has a Poisson distribution of parameter~\(n\). Does the random variable 
+\[
+\frac{X_n-n}{\sqrt n}
+\]
+ converges in distribution as \(n\to+\infty\)? If so, what is the limit? What about convergence in probability? Carefully justify all your answers.
+\item
+Let \(\{X_n\}\) be a sequence of i.i.d. random variables in \(L^1\) \(\bigl(\mathbb{E}[|X_1|]<+\infty\bigr)\). Take \(\mathcal{F}_n=\sigma\{X_1,\ldots,X_n\}\), \(n\ge 1\), and denote \(S_n=\sum_{k=1}^n X_k\), \(S_0=0\).
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Let~\(\tau\) be an \(\{\mathcal{F}_n\}\)-stopping time in \(L^1\). Prove that \(S_\tau\) is in \(L^1\), and 
+\[
+\mathbb{E}[S_\tau]=\mathbb{E}[X_1]\mathbb{E}[\tau].
+\]
+\item[\textnormal{2.}]
+Let \(\{X_n\}\) be a sequence of i.i.d. random variables such that \(\mathbb{P}(X_1=1)=\mathbb{P}(X_1=-1)=\frac12\). Denote \(S_n=\sum_{k=1}^n X_k\), \(S_0=0\), and \(T=\inf\{n\ge 0:S_n=1\}\). Prove that \(\mathbb{E}[T]=+\infty\). (One may use question 1.)
+\end{examsubparts}
+\item
+Let \(X_1,\ldots,X_n\) be a sequence of i.i.d. random variables in \(L^1\). Compute \(\mathbb{E}[X_1\mid X_1+\cdots+X_n]\).
+
+\par
+Hint: for all \(i,j\in\{1,\ldots,n\}\), \(\mathbb{E}[X_i\mid X_1+\cdots+X_n]=\mathbb{E}[X_j\mid X_1+\cdots+X_n]\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Give the definition of a standard Brownian motion.
+\item[\textnormal{2.}]
+Let \(\{B_t\}\) and \(\{\widetilde B_t\}\) be two independent standard Brownian motion. Let \(\rho\in(0,1)\). Define, for \(t\ge 0\), 
+\[
+X_t=\rho B_t+\sqrt{1-\rho^2}\,\widetilde B_t.
+\]
+ Is \(\{X_t\}\) a standard Brownian motion? Carefully justify.
+\end{examsubparts}
+\item
+Let \(\{B_t\}\) be a standard Brownian motion.
+\begin{examsubparts}
+\item[\textnormal{1.}]
+Fix \(u>0\). Prove that \(M_t=e^{uB_t-\frac12u^2t}\) is a martingale (with respect to the same filtration as \(\{B_t\}\)).
+\item[\textnormal{2.}]
+Fix \(a>0\). Define \(T_a=\inf\{t\ge 0:B_t=a\}\). Prove that \(T_a<+\infty\) a.s. and \(\mathbb{E}[T_a]=+\infty\).
+
+\par
+Hint: One may find the density of \(T_a\) by considering \(X_t=\max_{0\le s\le t}B_s\), and noticing that \(\{T_a\le t\}=\{X_t\ge a\}\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

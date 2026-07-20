@@ -1,0 +1,118 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, May 2023, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2023, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, May 2023, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(X\) be a locally connected space. Show that each component of~\(X\) is closed.
+\item
+Is \(\mathbb{R}_\ell\) a Baire space? Here \(\mathbb{R}_\ell\) denotes the reals with the lower limit topology, i.e. the topology defined by the basis \(\{[a,b) \mid a,b \in \mathbb{R}\}\).
+\item
+Let \(X=\mathbb{Z}\times[0,1]\subset\mathbb{R}^2\). Let \(Y=\mathbb{Z}\times(0,1]\) and \(A=\mathbb{Z}\times\{0\}\) be subspaces of~\(X\). Is the one point compactification of~\(Y\) homeomorphic to the quotient space \(X/A\)?
+\item
+Show that the ordered square \(I_O^2\) is not path connected. Here \(I_O\) is the square \([0,1]\times[0,1]\) given the lexicographic order topology.
+\item
+Show that the power set \(\mathcal{P}(X)\) has strictly greater cardinality than~\(X\).
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Show that the circle \(S^1\) is not homeomorphic to the 2-sphere \(S^2\).
+\item
+Show that the 2-sphere \(S^2\) is not homeomorphic to the plane \(\mathbb{R}^2\).
+\item
+Is \(\mathbb{R}_\ell\) regular?
+\item
+State the Baire Category Theorem.
+\item
+Show that a connected metric space cannot be infinite countable.
+\item
+State the Intermediate Value Theorem.
+\item
+Give definition of a quotient map.
+\item
+Are the spaces \(\mathbb{R}\times[0,\infty)\) and \([0,\infty)\times[0,\infty)\) homeomorphic?
+\item
+Is every compact Hausdorff space completely regular?
+\item
+Is every continuous injective map \(f:\mathbb{R}\to\mathbb{R}^2\) an embedding?
+\end{examproblems}
+\end{document}

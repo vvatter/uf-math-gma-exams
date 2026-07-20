@@ -1,0 +1,111 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, January 2020, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2020, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, January 2020, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(f\) be a bounded real-valued function on the set \(X \times Y\). Prove that 
+\[
+\sup_{x\in X}\inf_{y\in Y} f(x,y) \leq \inf_{y\in Y}\sup_{x\in X} f(x,y).
+\]
+ Show by example that the inequality can be strict.
+\item
+The diameter of the compact metric space~\(X\) is defined by 
+\[
+\operatorname{diam} X=\sup\{d(p,q):p,q\in X\}.
+\]
+ Prove that there exist \(p_0,q_0\in X\) such that \(\operatorname{diam} X=d(p_0,q_0)\).
+\item
+Let the function \(f:X\to Y\) between metric spaces have closed graph \(\{(x,y):y=f(x)\}\subseteq X\times Y\). Prove the true and disprove the false:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+if~\(X\) is compact then~\(f\) is continuous;
+\item[\textnormal{(ii)}]
+if~\(Y\) is compact then~\(f\) is continuous.
+\end{examsubparts}
+\item
+Let \((s_n:n>0)\) be a bounded real sequence and write \(\sigma_n=(s_1+\cdots+s_n)/n\) for each \(n>0\). Prove that 
+\[
+\limsup_n \sigma_n\leq \limsup_n s_n.
+\]
+ Hence, or otherwise, show that if \(s_n\to s\) then \(\sigma_n\to s\) also.
+\item
+Let \(f:\mathbb{R}\to\mathbb{R}\) satisfy \(|f(x)-f(a)|\leq A|x-a|^{1+\alpha}\) for some constants \(A,\alpha>0\) and all \(a,x\in\mathbb{R}\). Prove that~\(f\) is constant.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,131 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, May 2018, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2018, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, May 2018, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do 4 (four) problems.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If~\(P\) is a projector, prove that \(\operatorname{null}(P)\cap\operatorname{range}(P)=\{0\}\) and \(\operatorname{null}(P)=\operatorname{range}(I-P)\).
+\item[\textnormal{(b)}]
+Prove that~\(P\) is an orthogonal projector if and only if it is Hermitian.
+\item[\textnormal{(c)}]
+If \(q_1,\ldots,q_n\) is an orthonormal basis for the subspace \(V\subset\mathbb{C}^m\) with \(m>n\), prove that the orthogonal projector onto~\(V\) is \(QQ^*\), where~\(Q\) is the matrix whose columns are the \(q_j\).
+\end{examsubparts}
+\item
+Assume \(A\in\mathbb{C}^{m\times m}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(\lVert A\rVert_2=(\rho(A^*A))^{1/2}=\sigma_1\), where \(\sigma_1\) is the largest singular value of~\(A\) and~\(\rho\) is the spectral radius.
+\item[\textnormal{(b)}]
+Let \(\kappa_2(A)\) be the two-norm condition number of the square, non-singular~\(A\). Prove that 
+\[
+\kappa_2(A)=\frac{\sigma_1}{\sigma_m}.
+\]
+ where \(\sigma_1\) and \(\sigma_m\) are the largest and smallest singular values of~\(A\), respectively.
+\item[\textnormal{(c)}]
+Show that \(\kappa_2(A)=1\) if and only if \(A=rQ\) with \(r\in\mathbb{R}\setminus\{0\}\) and~\(Q\) unitary.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Given \(A\in\mathbb{C}^{m\times n}\) with \(m\geq n\), show that \(A^*A\) is nonsingular if and only if~\(A\) has full rank.
+\item[\textnormal{(b)}]
+If \(u,v\in\mathbb{C}^m\) and \(A=uv^*\), show that \(\lVert A\rVert_2=\lVert u\rVert_2\lVert v\rVert_2\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that every square matrix~\(A\) has a Schur factorization.
+\item[\textnormal{(b)}]
+If~\(A\) is normal (so \(A^*A=AA^*\)) show that the triangular matrix in its Schur factorization is diagonal.
+\end{examsubparts}
+\item
+Assume \(A\in\mathbb{R}^{m,m}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(\langle x,y\rangle_A=x^*Ay\) is an inner product on \(\mathbb{R}^m\) if and only if~\(A\) is symmetric and positive definite.
+\item[\textnormal{(b)}]
+Assume now that~\(A\) is symmetric and positive definite. If \(x_*\) is the solution to \(Ax=b\) and \(\{p_1,\ldots,p_m\}\) is an orthonormal basis for \(\mathbb{R}^m\) with respect to \(\langle\, ,\,\rangle_A\) and \(x_*=\sum c_i p_i\), give a formula for the \(c_i\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

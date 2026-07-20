@@ -1,0 +1,116 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 1993},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 1993\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 1993}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{PART I}
+\begin{examinstructions}
+State the following theorems:
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Baire Category Theorem
+\item
+Urysohn’s Lemma
+\item
+Brouwer Fixed Point Theorem
+\item
+Jordan Separation Theorem for \(R^2\)
+\item
+Schoenflies Theorem for \(R^2\). Does the corresponding statement hold for \(R^3\)? Explain.
+\end{examproblems}
+\section{PART II}
+\begin{examinstructions}
+For the following problems, show all work and write clearly. The proofs should be detailed, leaving no doubt about the correctness!
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+What is the universal cover of \(P^2\)? Prove your answer.
+\item
+Prove: Let~\(C\) be the Cantor set, and let~\(X\) be any compact metric space. Then there exists a continuous, surjective function \(f:C\to X\).
+\item
+State and prove the Finite Simplicial Approximation Theorem.
+\item
+Use the Seifert–van Kampen Theorem to compute the fundamental group of the Klein bottle.
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+What is \(\widetilde H_0(X)\), when~\(X\) is a two point space? (Do not prove.)
+\item[\textnormal{(ii)}]
+Use the Mayer–Vietoris sequence and (i) to compute the homology of \(S^n\), for \(n\ge 1\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

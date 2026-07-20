@@ -1,0 +1,147 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, January 2019},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 2019\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, January 2019}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do three from part A and three from part B. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
+\end{examinstructions}
+\section{Part A}
+\begin{examproblems}{0}
+\item
+Let \(X,Y\) be topological spaces. Prove that every continuous function \(f:X\to Y\) is Borel measurable.
+\item
+Short answer.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give an example, if possible, of a closed set \(E\subset\mathbb R\) of positive Lebesgue measure that contains no interval.
+\item[\textnormal{(b)}]
+For \(n\geq 2\), let \(f_n=e^{inx}x^{-n}\). Find 
+\[
+\lim_{n\to\infty}\int_1^\infty f_n\,dx.
+\]
+\item[\textnormal{(c)}]
+Give an example, if possible, of strict inequality in Fatou’s Lemma.
+\end{examsubparts}
+\item
+Let \(X=Y=[0,1]\), \(\mathcal M=\mathcal B_{[0,1]}\) denote the Borel~\(\sigma\)-algebra, and \(\mathcal N=2^{\mathbb R}\). Let~\(\mu\) Lebesgue measure on \(\mathcal M\), and let~\(\nu\) counting measure on \(\mathcal N\). Prove that \(\Delta=\{(x,x):x\in[0,1]\}\subset[0,1]\times[0,1]\) is an element of the product~\(\sigma\)-algebra \(\mathcal M\otimes\mathcal N\) and compute 
+\[
+\int_X\left(\int_Y \mathbf 1_\Delta(x,y)\,d\nu(y)\right)d\mu(x),\qquad
+\int_Y\left(\int_X \mathbf 1_\Delta(x,y)\,d\mu(x)\right)d\nu(y). \tag{1}
+\]
+ Explain the relation to Tonelli’s Theorem on product integration.
+\item
+State the Hahn Decomposition Theorem. Prove, if~\(\rho\) is a signed measure on the measurable space \((X,\mathcal M)\), then there exist unique positive measures \(\rho_\pm\) on \(\mathcal M\) such that \(\rho_+\perp\rho_-\) and \(\rho=\rho_+-\rho_-\).
+
+\par
+Assuming~\(\mu\) is a positive measure on \(\mathcal M\) and \(f\in L^1(\mu)\) is real-valued, identify \(\rho_\pm\) for the signed measure 
+\[
+\rho(E)=\int_E f\,d\mu.
+\]
+\end{examproblems}
+\section{Part B}
+\begin{examproblems}{4}
+\item
+State the Baire Category Theorem. Suppose~\(X\) is a Banach space. Prove that, as a vector space, \(X\) does not have a countable basis. (Here countable means equinumerous with \(\mathbb N\).)
+\item
+Let \((\varphi_n)\) be a sequence from \(L^1(\mathbb R)\) with the following properties:
+
+\par
+Show, if \(f\in L^1(\mathbb R)\), then \(\varphi_n\star f\) converges to~\(f\) in \(L^1(\mathbb R)\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(\varphi_n\geq 0\) for all~\(n\),
+\item[\textnormal{(ii)}]
+\(\displaystyle \int\varphi_n\,dx=1\) for all~\(n\);
+\item[\textnormal{(iii)}]
+for each \(\delta>0\), \(\displaystyle \lim_{n\to\infty}\int_{|x|>\delta}\varphi_n\,dx=0\).
+\end{examsubparts}
+\item
+Let~\(X\) be a Banach space, \(Y\subset X\) a closed subspace. Say~\(Y\) is complemented in~\(X\) if there exists a closed subspace \(Z\subset X\) such that \(Y\cap Z=\{0\}\) and \(Y+Z=X\).
+
+\par
+Prove that if~\(Y\) is complemented in~\(X\), then there exists a bounded linear operator \(T:X\to Y\) such that \(T(y)=y\) for all \(y\in Y\).
+\item
+Let \(S:\ell^2(\mathbb N)\to\ell^2(\mathbb N)\) denote the shift operator defined, for \(f=(f(n))_{n=0}^\infty\in\ell^2(\mathbb N)\), by 
+\[
+Sf(n)=
+\begin{cases}
+f(n-1),&n\geq 1;\\
+0,&n=0.
+\end{cases}
+\]
+ Show~\(S\) is an isometry (and in particular is bounded) and find \(S^*\) and \(SS^*\). Is~\(S\) unitary?
+\end{examproblems}
+\end{document}

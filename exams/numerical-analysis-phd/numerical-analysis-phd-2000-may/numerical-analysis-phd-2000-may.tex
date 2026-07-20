@@ -1,0 +1,194 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, May 2000},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2000\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, May 2000}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the conditions under which a square matrix~\(A\) can be decomposed into a form \(A=SDS^{-1}\), where~\(D\) is diagonal.
+\item[\textnormal{(b)}]
+Can 
+\[
+A=\begin{pmatrix}5&1\\0&3\end{pmatrix}
+\]
+ be diagonalized in the sense of (a)? Why?
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the procedure for factoring a matrix~\(A\) into a form \(A=LU\), where~\(L\) is lower triangular, and~\(U\) is upper triangular.
+\item[\textnormal{(b)}]
+When can this type of decomposition be accomplished?
+\item[\textnormal{(c)}]
+What is the computational advantage of having lower and upper triangular matrices. An explanation without specific computation counts is sufficient.
+\end{examsubparts}
+\item
+Assume that a symmetric matrix can be factored into a Cholesky decomposition \(A=LL^t\), where~\(L\) is lower triangular.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give an exact numerical method for finding the specific entries \(l_{i,j}\) of \(L=\{l_{i,j}\}\), where \(i=1:n\), and \(j=1:n\)?
+\item[\textnormal{(b)}]
+What numerical problems would you anticipate with this method?
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Describe the method for factoring a matrix~\(A\) into a form \(A=QR\), where~\(Q\) is orthogonal, and~\(R\) is upper triangular.
+\item[\textnormal{(b)}]
+When can such a decomposition be accomplished?
+\item[\textnormal{(c)}]
+What numerical “tricks” can be used to make it more stable?
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State the Gershgorin Circle Theorem.
+\item[\textnormal{(b)}]
+Prove the first assertion, i.e. that the eigenvalues must be within one of the circles.
+\item[\textnormal{(c)}]
+Let 
+\[
+A=\begin{pmatrix}
+5&.01&.03\\
+.02&4&.01\\
+.03&-.01&4
+\end{pmatrix}.
+\]
+ What can you say, from the Gershgorin Circle Theorem, about the eigenvalues of~\(A\).
+\end{examsubparts}
+\item
+Suppose that a sequence is defined by \(x_{n+1}=g(x_n)\), where~\(g\) is continuous, and \(g([a,b])\subset[a,b]\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Show that there is a fixed point \(\alpha\in[a,b]\) such that \(g(\alpha)=\alpha\).
+\item[\textnormal{(b)}]
+If in addition, \(|g'(x)|\leq k<1\) prove that this fixed point must be unique.
+\item[\textnormal{(c)}]
+Under the above assumptions show that the sequence must converge to the unique fixed point.
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Give an exact expression for a Lagrange polynomial of degree~\(n\), which would interpolate \(n+1\) given data points, \(f(x_k)\).
+\item[\textnormal{(b)}]
+Describe the differences between Hermite polynomials and Lagrange polynomials.
+\item[\textnormal{(c)}]
+Describe a procedure for using a limiting set of Lagrange polynomials, which interpolates a function at the points \(x_0,x_0+h,x_1,x_1+h,x_2,x_2+h,\ldots\) to construct the Hermite polynomial at the points \(x_0,x_1,x_2,\ldots\).
+\end{examsubparts}
+\item
+Given the Lagrange interpolation formula for \(f(x)\), 
+\[
+f(x)=f(-h)\frac{x-h}{-2h}+f(h)\frac{x+h}{2h}+f''(\zeta(x))\frac{(x-h)(x+h)}{2!};
+\]
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Derive the trapezoid rule for \(\int_{-h}^{h}f(x)\,dx\),
+\item[\textnormal{(b)}]
+Derive the error formula for the trapezoid rule, and
+\item[\textnormal{(c)}]
+Describe the idea behind Gaussian Quadrature, and explain why it is more accurate than “traditional methods” such as trapezoid, Simpson’s, etc.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Triple Recursion Formula. Let \(\{\phi_n(x)\}\) be an orthogonal family of polynomials on \([a,b]\), with weight function \(w(x)>0\). Then for \(n\geq1\), show that 
+\[
+\phi_{n+1}(x)=(a_nx+b_n)\phi_n(x)-c_n\phi_{n-1}(x),
+\]
+ for some constants \(a_n,b_n\), and \(c_n\). Hint: Let \(g(x)=\phi_{n+1}(x)-A_nx\phi_n(x)\), where \(A_n\) is a constant chosen so that \(g(x)\) has degree~\(n\).
+\item[\textnormal{(b)}]
+What can you say about the location of the zeros of a family of orthogonal polynomials on \([a,b]\)?
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Describe Euler’s method for solving the initial value problem \(y'=f(t,y)\), \(y(a)=y_0\).
+\item[\textnormal{(b)}]
+Suppose that \(|f(t,x)-f(t,y)|\leq L|x-y|\), for a fixed constant~\(L\), and all~\(t\), \(x\) and~\(y\). Suppose further that all solutions \(y(t)\) to the initial value problem described in (a) satisfy \(|y''(t)|\leq M\), for some constant~\(M\). Then if \(w_i\) is the Euler solution to the initial value problem, prove that 
+\[
+|y_{i+1}-w_{i+1}|\leq(1+hL)|y_i-w_i|+\frac{h^2M}{2}.
+\]
+\end{examsubparts}
+\end{examproblems}
+\end{document}

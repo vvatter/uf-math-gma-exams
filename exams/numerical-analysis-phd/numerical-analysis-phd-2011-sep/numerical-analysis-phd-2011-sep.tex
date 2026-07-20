@@ -1,0 +1,135 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, September 2011},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, September 2011\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, September 2011}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer any 8 questions.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+For any matrices~\(A\) and~\(B\), show that the nonzero eigenvalues of \(AB\) and \(BA\) are the same.
+\item[\textnormal{(b)}]
+If \(AB\) is normal, \(\lVert\cdot\rVert_2\) is the 2-norm of a matrix, and \(\lVert\cdot\rVert\) is an induced matrix norm, then show that \(\lVert AB\rVert_2\leq \lVert BA\rVert\).
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Suppose~\(p\) and \(q\in\mathbb{R}\) with~\(p\) and~\(q\) positive and \(p^{-1}+q^{-1}=1\). Show that for any matrix \(A\in\mathbb{C}^{m\times n}\), we have \(\lVert A\rVert_p=\lVert A^*\rVert_q\).
+\item[\textnormal{(b)}]
+Prove that 
+\[
+\lVert A\rVert_2^2\leq \lVert A\rVert_p\lVert A\rVert_q
+\]
+ for any \(A\in\mathbb{C}^{m\times n}\) and any positive~\(p\) and \(q\in\mathbb{R}\) with \(p^{-1}+q^{-1}=1\).
+\end{examsubparts}
+\item
+Let~\(P\) and~\(Q\) be two \(m\times m\) orthogonal projectors. Prove that \(\lVert P-Q\rVert_2\leq 1\).
+\item
+Let~\(P\) and~\(Q\) be Hermitian positive definite matrices. Prove that 
+\[
+x^*Px\leq x^*Qx\quad\text{for all }x\in\mathbb{C}^n
+\]
+ if and only if 
+\[
+x^*Q^{-1}x\leq x^*P^{-1}x\quad\text{for all }x\in\mathbb{C}^n.
+\]
+\item
+Suppose~\(A\) is a Hermitian positive definite matrix split into \(A=C+C^*+D\) where~\(D\) is also Hermitian positive definite. Prove that \(B=C+\omega^{-1}D\) is invertible whenever \(0<\omega<2\). Consider the iteration \(x_{n+1}=x_n+B^{-1}(b-Ax_n)\), with any initial iterate \(x_0\). Prove that \(x_n\) converges to \(x=A^{-1}b\) whenever \(0<\omega<2\).
+\item
+Let \(f:R\to R\) be a contraction with constant \(\lambda\in(0,1)\). Prove that there exists a unique fixed point~\(\alpha\) of~\(f\). Prove the inequality 
+\[
+\lvert f^n(x)-\alpha\rvert\leq \frac{\lambda^n}{1-\lambda}\lvert f(x)-x\rvert,\qquad \forall x\in R,\ \forall n\in N.
+\]
+\item
+Derive the two point Gaussian quadrature for approximating \(\int_{-1}^1 f(x)x^2\,dx\).
+\item
+State the Hermite interpolation problem. Prove that the problem is well-posed, i.e. prove the existence and uniqueness of solutions. Derive the error formula for the interpolating polynomial.
+\item
+Describe Simpson’s rule for numerical integration (\(n=3\)). State and prove the error formula of Simpson’s rule.
+\item
+Let \(w(x)>0\) be integrable on \([a,b]\). Define an orthogonal polynomial family \(\{\phi_n\}\) on \([a,b]\) with weight \(w(x)\). Prove that
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(\phi_n(x)\) has~\(n\) distinct roots in the interval \((a,b)\), and
+\item[\textnormal{(ii)}]
+between any two consecutive zeros of \(\phi_n\) there is a zero of \(\phi_{n-1}\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

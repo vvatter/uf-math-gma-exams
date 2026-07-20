@@ -1,0 +1,130 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, August 2005},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2005\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, August 2005}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Show your work.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{a.}]
+There are~\(r\) black and \(n-r\) white balls in an urn. They are removed one at a time without replacement. What is the probability that exactly~\(k\) drawings are required to get a white ball?
+\item[\textnormal{b.}]
+Use your result to conclude that 
+\[
+\sum_{k=1}^{r}\frac{(r)_k}{(n-1)_k}=\frac{r}{n-r}.
+\]
+\end{examsubparts}
+\item
+Each of~\(n\) people is to be mailed an envelope containing a letter and a bill. How many ways \(Q_n\) are there of placing the~\(n\) letters and~\(n\) bills into~\(n\) addressed envelopes so that no envelope contains both the correct letter and bill?
+\item
+Let \(P_n\) be the total number of~\(k\)-permutations of~\(n\) for various~\(k\), that is, 
+\[
+P_n=\sum_{k=0}^{n}(n)_k,\qquad n=0,1,\ldots
+\]
+ Show that 
+\[
+P(t)=\sum_{n=0}^{\infty}P_n\frac{t^n}{n!}=(1-t)^{-1}e^t
+\]
+ and use this to show that 
+\[
+P_n=nP_{n-1}+1,\qquad n=1,2,\ldots,\quad P_0=1.
+\]
+\item
+Define the binary Hamming code \(H(r)\) of length \(2^r-1\). Show that \(H(r)\) is an exactly single error correcting code and that \(H(r)\) is a perfect code. Determine the number of codewords of weight 3 in \(H(r)\).
+\item
+Show that the number of partitions of a number~\(n\) into exactly~\(m\) parts is equal to the number of partitions of \(n-m\) into no more than~\(m\) parts.
+\item
+An order on the set of ordered pairs of non-negative integers is defined by \((a_1,a_2)\leq(b_1,b_2)\) if \(a_i\leq b_i\) for \(i=1,2\). Find the Möbius function of this poset.
+\item
+Determine for which values of~\(m\) and~\(n\) the complete bipartite graph \(K_{mn}\) is. Answer the same three questions for the~\(n\)-cube. (Recall that the n-cube \(Q_n\) is defined as the graph whose vertices are the set of all binary sequences of length~\(n\), where two vertices are adjacent if the corresponding sequences differ by exactly one digit.)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+planar
+\item[\textnormal{(b)}]
+Eulerian
+\item[\textnormal{(c)}]
+Hamiltonian.
+\end{examsubparts}
+\item
+Let~\(G\) be a triangle-free graph with~\(n\) vertices, minimum degree~\(k\) and girth~\(g\). Prove that \(g\leq 2n/k\).
+
+\par
+Hint: For an appropriate cycle~\(C\) count the number of edges from~\(C\) to \(G\mathbin{\backslash}C\) in two ways.
+\end{examproblems}
+\end{document}

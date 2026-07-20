@@ -1,0 +1,119 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra First-Year Exam, January 2023, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2023, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra First-Year Exam, January 2023, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer four problems. State clearly all the results from the text that you need, and write your answers clearly in complete English sentences. In all cases, be sure to justify your answer.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Denote by \(Q_8\) the quaternion group. Show that if \(f:Q_8\to S_n\) is an injective homomorphism then \(n\geq 8\).
+\item
+Show that any group of order \(80=2^4\cdot 5\) is solvable (do not simply quote Burnside’s theorem).
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Define what it means for a group~\(G\) to be nilpotent.
+\item[\textnormal{(ii)}]
+Show that any nilpotent group is solvable.
+\item[\textnormal{(iii)}]
+Give an example of a finite solvable group that is not nilpotent, and prove that this example is correct.
+\end{examsubparts}
+\item
+Find
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+representatives of the isomorphism classes of abelian groups of order \(504=2^3\cdot 3^2\cdot 7\), and
+\item[\textnormal{(ii)}]
+the number of elements of order~\(6\) in each such group.
+\end{examsubparts}
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Find all conjugacy classes of elements of order~\(2\) in \(S_6\), and the number of elements in each class.
+\item[\textnormal{(ii)}]
+Do the same for \(A_6\).
+\end{examsubparts}
+\item
+Suppose~\(p\) is prime, \(P\subseteq S_p\) is a Sylow~\(p\)-subgroup of \(S_p\) and \(N=N(P)\) is the normalizer of~\(P\). Show that 
+\[
+N\simeq (\mathbb{Z}/p\mathbb{Z})\rtimes_\varphi(\mathbb{Z}/p\mathbb{Z})^\times
+\]
+ and describe~\(\varphi\).
+\end{examproblems}
+\end{document}

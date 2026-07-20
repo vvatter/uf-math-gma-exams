@@ -36,7 +36,7 @@ class ArchiveLevel:
 
 LEVELS = (
     ArchiveLevel("qualifying", "Qualifying", "-qualifying"),
-    ArchiveLevel("first-year", "First-year", "-first-year"),
+    ArchiveLevel("first-year", "First-Year", "-first-year"),
     ArchiveLevel("phd", "PhD", "-phd"),
 )
 
@@ -321,14 +321,15 @@ def render_subject_index(subject_tag: str, sources: Iterable[SourceExam]) -> str
             if source.part is not None
             else '<span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span>'
         )
-        html_name = source.pdf_path.with_suffix(".html").name
+        html_path = f"{source.id}/index.html"
+        pdf_path = f"{source.id}/{source.id}.source.pdf"
         lines.extend(
             [
                 "          <tr>",
                 f'            <th scope="row"><time datetime="{source.year}-{month_number:02d}">{escape(date_label)}</time></th>',
                 f"            <td>{part}</td>",
-                f'            <td><a href="{escape(html_name, quote=True)}">Read exam</a></td>',
-                f'            <td><a href="{escape(source.pdf_path.name, quote=True)}">View PDF</a></td>',
+                f'            <td><a href="{escape(html_path, quote=True)}">Read exam</a></td>',
+                f'            <td><a href="{escape(pdf_path, quote=True)}">View PDF</a></td>',
                 "          </tr>",
             ]
         )
@@ -344,7 +345,7 @@ def expected_index_pages(
     groups = grouped_sources(source_list)
     pages = {site_root / "index.html": render_root_index(source_list)}
     for subject_tag, exams in groups.items():
-        pages[exams[0].pdf_path.parent / "index.html"] = render_subject_index(
+        pages[exams[0].pdf_path.parent.parent / "index.html"] = render_subject_index(
             subject_tag, exams
         )
     return pages

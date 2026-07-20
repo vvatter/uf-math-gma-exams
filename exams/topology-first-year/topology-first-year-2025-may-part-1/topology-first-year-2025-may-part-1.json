@@ -1,0 +1,217 @@
+{
+  "schema_version": 3,
+  "id": "topology-first-year-2025-may-part-1",
+  "subject": "First Year Topology",
+  "subject_tag": "topology-first-year",
+  "year": 2025,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Topology-1_2025_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer the following problems and show all your work. Support all statements to the best of your ability."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that for every set \\(X\\), there is no function \\(f:X\\to 2^X\\) such that \\(f\\) is onto. Note that \\(2^X\\) is the power set on \\(X\\) and is also denoted by \\(\\mathcal{P}(X)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for \\(\\tau\\) to be a topology on a set \\(X\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "If \\(\\{\\tau_\\alpha\\}_{\\alpha\\in J}\\) is a family of topologies on \\(X\\), show that \\(\\bigcap_{\\alpha\\in J}\\tau_\\alpha\\) is a topology on \\(X\\). (Remark: \\(\\bigcap_{\\alpha\\in J}\\tau_\\alpha=\\{U\\mid U\\in\\tau_\\alpha\\ \\forall\\alpha\\in J\\}\\).)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p:X\\to Y\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Define what it means for \\(p\\) to be a quotient map.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Assume that \\(p\\) is continuous. Show that if there is a continuous map \\(f:Y\\to X\\) such that \\(p\\circ f\\) equals the identity map of \\(Y\\), then \\(p\\) is a quotient map.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f,g:X\\to Y\\) be continuous maps to a Hausdorff space. Prove that the set \\(\\{x\\mid f(x)=g(x)\\}\\) is a closed subset of \\(X\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that if \\(X\\) is a compact Hausdorff space, then \\(X\\) is a regular space."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that \\(\\{(a,b]\\mid a<b\\}\\) is a basis for a topology on \\(\\mathbb{R}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\((X,\\tau)\\) be a topological space. Let \\(A\\subset X\\). Give the definition of the subspace topology on \\(A\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose that \\(f:X\\to Y\\) is continuous and that \\(A\\subset X\\) is connected. Show that \\(f(A)\\subset Y\\) is connected."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Does a connected space need to be path connected?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Intermediate Value Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Describe the one-point compactification of \\((0,1)\\cup(2,3)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Urysohn Lemma."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that a connected normal space \\(X\\) having more than one point is uncountable."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "What does it mean for a topological space \\(X\\) to be a Baire space?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that if \\(A\\subset\\mathbb{R}\\) is connected then \\(A\\) is an interval."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

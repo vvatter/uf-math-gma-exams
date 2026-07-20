@@ -1,0 +1,108 @@
+{
+  "schema_version": 3,
+  "id": "combinatorics-phd-2018-jan",
+  "subject": "PhD Combinatorics",
+  "subject_tag": "combinatorics-phd",
+  "year": 2018,
+  "month": "january",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD-Combinatorics-January-2018.pdf",
+  "content": [
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(D(n)\\) be the number of derangements of length \\(n\\). Let \\(F(n)\\) be the number of permutations of length \\(n\\) that have exactly one fixed point. Determine (with proof) the number \\(D(n)-F(n)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove: If \\(n\\) and \\(m\\) are the number of vertices and edges in a simple planar graph and \\(n \\ge 3\\), then \\(m \\le 3n-6\\).\n\nProve: For a simple graph \\(G\\) with \\(n \\ge 11\\), at most one of \\(G\\) or its complement \\(\\overline{G}\\) is planar. (Recall that \\(\\overline{G}\\) has the same vertex set as \\(G\\) and, for all vertices \\(u,v\\), we have that \\(\\{u,v\\}\\) is an edge of \\(\\overline{G}\\) if and only if \\(\\{u,v\\}\\) is not an edge of \\(G\\).)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "How many ways are there to seat \\(n\\) married couples at a straight table (only one side of the table) so that no woman sits next to her husband?\n\nHow many ways are there to seat \\(n\\) married couples at a straight table so that men and women alternate and no woman sits next to her husband?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(B\\) be a rectangular 3-dimensional box for which the width is equal to the length, but the depth is not equal to the length. How many ways are there to color the vertices of \\(B\\) using colors red and blue, where two colorings are considered the same if one can be obtained from the other by an orientation preserving symmetry of \\(B\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider a directed graph obtained by putting a direction on each edge of the complete graph. Such a digraph is called a tournament. Prove that a tournament has a Hamiltonian path. Is it true that every tournament has a Hamiltonian cycle? Explain?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(n \\ge 3\\). Let \\(h_n\\) be the number of permutations of length \\(n\\) in which the number of inversions is divisible by three. Find an explicit formula for \\(h_n\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that the language \\(\\mathcal{L}=\\{ww : w \\in \\{a,b\\}^*\\}\\) is not regular."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(\\mathcal{C}\\) and \\(\\mathcal{D}\\) are permutation classes. Prove that \\(\\mathcal{C}\\cup\\mathcal{D}\\) is a permutation class, and describe (with an algorithm, perhaps) how to compute its basis."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

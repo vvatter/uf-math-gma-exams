@@ -1,0 +1,140 @@
+{
+  "schema_version": 3,
+  "id": "complex-analysis-phd-2006-sep",
+  "subject": "PhD Complex Analysis",
+  "subject_tag": "complex-analysis-phd",
+  "year": 2006,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_ComplexAnalysis_2006_09.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Give complete proofs and computations. Partial credit will be given where justified. In the following, \\(\\mathbb{C}\\) denotes the set of complex numbers and \\(D=\\{z\\in\\mathbb{C}\\mid |z|<1\\}\\)."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Evaluate the integral\n\\[\n\\int_0^\\infty \\frac{\\log x}{(1+x^2)^2}\\,dx.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Let \\(f\\) be analytic at \\(z\\in\\mathbb{C}\\). Prove that\n\\[\n\\left(\\frac{\\partial^2}{\\partial x^2}+\\frac{\\partial^2}{\\partial y^2}\\right)|f(z)|^2=4|f'(z)|^2.\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Let \\(f_1,f_2,\\ldots,f_n\\) be analytic in the region \\(G\\). Prove that \\(|f_1|^2+|f_2|^2+\\cdots+|f_n|^2\\) is harmonic on \\(G\\) if and only if \\(f_k\\) is constant, for all \\(k=1,\\ldots,n\\).",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\{f_n\\}\\) be a sequence of functions, each analytic in the open set \\(G\\), which converges to \\(f\\) uniformly on all compact subsets of \\(G\\). Prove that \\(f\\) is analytic in \\(G\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(P(z)=z^7+z^5+5z^3+1\\). Find the number of zeros of \\(P\\), counted according to their multiplicities, in"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "\\(\\{z\\in\\mathbb{C}\\mid |z|<1\\}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "\\(\\{z\\in\\mathbb{C}\\mid 1<|z|<2\\}\\)",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "\\(\\{z\\in\\mathbb{C}\\mid |z|>0\\}\\)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(G\\) be a region and \\(f\\) be analytic in \\(G\\). Prove that if \\(f(G)\\) is a subset of a circle, then \\(f\\) is a constant function."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Suppose \\(f\\) is a nonconstant analytic function in \\(D\\) such that \\(|f(z)|\\leq 1\\). Let \\(a=f(0)\\). By considering the function\n\\[\ng(z)=\\frac{f(z)-a}{1-\\overline{a}f(z)},\n\\]\nprove that\n\\[\n\\frac{|a|-|z|}{1+|a||z|}\\leq |f(z)|\\leq\\frac{|a|+|z|}{1-|a||z|}\n\\]\nfor \\(|z|<1\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Does there exist an analytic mapping \\(f:D\\to D\\) such that \\(f(0)=0\\) and \\(f(i/4)=1/3\\)? Justify your answer.",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Does there exist an analytic mapping \\(f\\) of \\(\\{z\\in\\mathbb{C}\\mid \\operatorname{Re}(z)>0\\}\\) into itself such that \\(f(3)=3\\) and \\(f(9)=6\\)? Justify your answer.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mathcal{F}\\) be the collection of all analytic mappings of \\(D\\) into \\(\\{z\\in\\mathbb{C}\\mid \\operatorname{Re}(z)>0\\}\\) such that \\(f(0)=1\\). Show that \\(\\mathcal{F}\\) is a normal family."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

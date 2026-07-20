@@ -1,0 +1,241 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-2001-sep",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2001,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2001_09.pdf",
+  "content": [
+    {
+      "type": "section",
+      "heading": "I.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "State the following theorems:"
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The monotone class theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Hahn decomposition theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Egorov theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Vitali convergence theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Lebesgue convergence theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Radon–Nikodym theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Fubini theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The dual of \\(L^p\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "The Hahn–Banach theorem."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Integrability with respect to the measure \\(g\\mu\\) defined by \\(g\\mu(A)=\\int_A g\\,d\\mu\\)."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "II",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Prove 2 of the above theorems 3, 5, 6, 7."
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "heading": "III.",
+      "numbering": "restart",
+      "content": [
+        {
+          "type": "instructions",
+          "text": "Solve the following problems. Let \\((X,\\Sigma,\\mu)\\) be a measure space."
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Let \\(X,Y\\) be normed spaces. Prove that if \\(Y\\) is complete, then \\(L(X,Y)\\) is complete."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that if \\(f:X\\to\\overline{\\mathbb R}_+\\) is \\(\\mu\\)-measurable and \\(\\int f\\,d\\mu<\\infty\\), then \\(f<\\infty\\), \\(\\mu\\)-a.e."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "If \\(\\mu(X)<\\infty\\), \\(f_n\\in L^1(\\mu)\\), and \\(f_n\\to f\\) uniformly, then \\(f\\in L^1(\\mu)\\) and \\(f_n\\to f\\) in the mean."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove the existence of the conditional expectation \\(E(f/\\mathcal F)\\) for functions \\(f\\in L^1(\\mu)\\), with respect to a \\(\\sigma\\)-algebra \\(\\mathcal F\\subset\\Sigma\\)."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove that if \\(f\\in L^1\\) and \\(\\int_A f\\,d\\mu=0\\) for \\(A\\) in a ring \\(R\\) generating the \\(\\sigma\\)-algebra \\(\\Sigma\\), then \\(f=0\\), \\(\\mu\\)-a.e."
+              }
+            ],
+            "subparts": []
+          }
+        },
+        {
+          "type": "problem",
+          "problem": {
+            "body": [
+              {
+                "type": "text",
+                "text": "Prove the existence of the product \\(\\mu\\times\\nu\\) of two real valued measures."
+              }
+            ],
+            "subparts": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "instructions",
+      "text": "Note: Write complete computations and explanations. Do not use arrows or other unnecessary signs. Use words for explanations. Write complete sentences."
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Numerical Analysis PhD Exam, September 2005},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, September 2005\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Numerical Analysis PhD Exam, September 2005}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Do any eight of the ten problems below.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+For solving \(dy/dt=f(t,y)\), consider a one-step method of the form 
+\[
+y_1=y_0+h\Phi(t_0,y_0,h).
+\]
+ For any \(t_0\), it computes an approximation \(y_1\) to \(y(t_0+h)\), given \(y(t_0)=y_0\). Assuming enough smoothness on~\(f\), study the local truncation error of Runge–Kutta methods for which 
+\[
+\Phi(t_0,y_0,h)=\alpha_1k_1+\alpha_2k_2,
+\]
+ where 
+\[
+k_1=f(t_0,y_0),
+\]
+ and 
+\[
+k_2=f(t_0+\mu h,y_0+\mu hk_1).
+\]
+ Under what conditions on the constants \(\alpha_1,\alpha_2\), and~\(\mu\) do we get second order methods?
+\item
+Prove that any polynomial~\(q\) of degree at most \(n-1\) satisfies 
+\[
+\sum_{i=0}^n q(x_i)\prod_{\substack{j=0\\j\ne i}}^n\frac{1}{x_i-x_j}=0,
+\]
+ for any distinct \(n+1\) numbers \(x_i\), \(i=0,1,\ldots,n\). (Suggestion: Identify the left hand side as a divided difference.)
+\item
+Let \(p_2(x)\) be the quadratic polynomial that interpolates \(f(x)\) at nodes \(x=0,h\), and \(2h\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Approximating 
+\[
+Q=\int_0^{3h}f(x)\,dx
+\]
+ by 
+\[
+Q_h=\int_0^{3h}p_2(x)\,dx,
+\]
+ derive a quadrature rule: Explicitly calculate \(w_1,w_2,w_3\) so that 
+\[
+Q_h=w_1f(0)+w_2f(h)+w_3f(2h).
+\]
+\item[\textnormal{(b)}]
+Assuming that \(f(x)\) is four times continuously differentiable, show that 
+\[
+Q-Q_h=\frac{3}{8}h^4f'''(0)+O(h^5).
+\]
+\end{examsubparts}
+\item
+Denote the complete (or clamped) and natural cubic splines interpolating \(f\in C^2[a,b]\) at knots \(t_0<t_1<\cdots<t_n\) by \(s_c(t)\) and \(s_n(t)\), respectively.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that 
+\[
+\int_a^b|s_c''(x)|^2\,dx\leq\int_a^b|f''(x)|^2\,dx.
+\]
+ State an analogous inequality for \(s_n\).
+\item[\textnormal{(b)}]
+Which of the two interpolating splines has smaller “energy”, i.e., which of \(\int_a^b|s_c''(x)|^2\,dx\) and \(\int_a^b|s_n''(x)|^2\,dx\) is smaller?
+\end{examsubparts}
+\item
+Let \(p>0\) and 
+\[
+x=\sqrt{p+\sqrt{p+\sqrt{p+\cdots}}},
+\]
+ where all the square roots are positive. Let \(F(y)=\sqrt{p+y}\). (How is the fixed point of~\(F\) related to~\(x\)?)
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Consider the fixed point iteration \(x_{n+1}=F(x_n)\). Prove that if the initial iterate \(x_0\) satisfies \(x_0+p>0\) then all iterates remain on the same side of~\(x\) as \(x_0\).
+\item[\textnormal{(b)}]
+Prove that the fixed point iteration converges for all choices of initial guesses greater than \(-p+1/4\).
+\item[\textnormal{(c)}]
+Whenever the fixed point iteration converges, what is its order of convergence?
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Consider the matrix \(A=uv^*\) where~\(u\) and \(v\in\mathbb{C}^n\). Under what condition on~\(u\) and~\(v\) is~\(A\) a projector?
+\item[\textnormal{(b)}]
+Show that the Householder matrix \(H=I-2ww^*\) where \(\lVert w\rVert=1\) is unitary.
+\item[\textnormal{(c)}]
+Given a vector \(x\in\mathbb{C}^n\) and an integer~\(k\) with \(1<k<n\), derive a formula for a Householder matrix with the property that \((Hx)_i=0\) for \(i>k\) and \((Hx)_i=x_i\) for \(i<k\). Be sure to choose the signs so that the formula is numerically stable.
+\end{examsubparts}
+\item
+Consider the conjugate gradient algorithm for solving \(Ax=b\) for a symmetric positive definite \(A\in\mathbb{R}^{m\times m}\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+State a relationship between the~\(n\)-th iterate of the algorithm and the best approximation to~\(x\) from a Krylov space (be sure to specify the norm).
+\item[\textnormal{(b)}]
+Prove that if~\(A\) has only \(n\leq m\) distinct eigenvalues then the iteration (in the absence of round off errors) converges to the exact solution~\(x\) in at most~\(n\) steps no matter what the initial iterate is. (You may use 7a.)
+\end{examsubparts}
+\item
+Let~\(P\) and~\(Q\) be two \(m\times m\) orthogonal projectors.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that \(\lVert P-Q\rVert_2\leq 1\).
+\item[\textnormal{(b)}]
+Prove that if \(\lVert P-Q\rVert_2<1\) then the ranges of~\(P\) and~\(Q\) have equal dimensions.
+\end{examsubparts}
+\item
+Let~\(P\) and~\(Q\) be Hermitian positive definite matrices. Prove that 
+\[
+x^*Px\leq x^*Qx,\qquad\text{for all }x\in\mathbb{C}^n,
+\]
+ if and only if 
+\[
+x^*Q^{-1}x\leq x^*P^{-1}x,\qquad\text{for all }x\in\mathbb{C}^n.
+\]
+\item
+State the Rayleigh quotient iteration. Apply it to the \(2\times2\) real matrix 
+\[
+A=\begin{bmatrix}\lambda_1&0\\0&\lambda_2\end{bmatrix},
+\]
+ where \(\lambda_1\ne\lambda_2\). Find the subset \(S\subseteq\mathbb{R}^2\) having the property that the iteration applied to this matrix with initial guesses in~\(S\) do not converge. Is~\(S\) a set of measure zero?
+\end{examproblems}
+\end{document}

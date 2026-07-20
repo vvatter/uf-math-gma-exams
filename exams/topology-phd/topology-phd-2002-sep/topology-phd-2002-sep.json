@@ -1,0 +1,216 @@
+{
+  "schema_version": 3,
+  "id": "topology-phd-2002-sep",
+  "subject": "PhD Topology",
+  "subject_tag": "topology-phd",
+  "year": 2002,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Topology_2002_09.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Work the following problems and show all work. Support all statements to the best of your ability."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Use the Mayer–Vietoris sequence for reduced singular homology to compute \\(H_*(S^n)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that there is no retraction of the Möbius band onto its boundary."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Does there exist a covering space of the figure eight with nontrivial abelian fundamental group?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Show that the 2-dimensional sphere with three points deleted cannot be a topological group."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(M\\) be a 4-dimensional closed simply connected manifold. Show that every continuous map \\(f:M\\to M\\) which is homotopic to the identity has a fixed point."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "instructions",
+      "text": "Answer the following with complete definitions or statements or short proofs."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Seifert–van Kampen Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Lefschetz Fixed Point Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Jordan Curve Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Arzelà–Ascoli Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a finite complex. Find \\(\\chi(X\\times S^n)\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(S_r(x,y)\\) denote a circle of radius \\(r\\) centered at \\((x,y)\\in\\mathbb{R}^2\\). Let \\(\\Sigma R\\) be the suspension over Hawaiian ring \\(R=\\bigcup_{n=1}^{\\infty}S_{1/n}(1/n,0)\\). Is \\(\\Sigma R\\)"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "locally path connected?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "locally simply connected?",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "semi-locally simply connected?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Poincaré Duality Theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Define retraction and deformation retraction."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Universal Coefficient formula for homology."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a complete metric space such that no point is isolated. Can \\(X\\) be countable?"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

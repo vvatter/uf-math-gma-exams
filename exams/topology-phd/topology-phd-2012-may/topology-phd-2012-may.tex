@@ -1,0 +1,118 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 2012},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2012\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 2012}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Does there exist a compact space that contains a discrete infinite subspace?
+\item
+Let~\(X\) and~\(Y\) be connected spaces and \(X,Y\) is not the one-point space. Show that \(X \times Y \setminus \{z\}\) is connected for any \(z \in X \times Y\).
+\item
+Prove that \((0,1)\) and \([0,1)\) are not homeomorphic.
+\item
+Show that the 2-sphere \(S^2\) is not a retract of the projective plane, as well as the projective plane is not a retract of \(S^2\).
+\item
+Let \(GL(n)\) be the space of all invertible real \(n \times n\)-matrices. IS \(GL_n\) is compact? connected?
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Explain why every map \(S^n \to S^1\), \(n>1\) is null-homotopic.
+\item
+State the Lefschetz Fixed Point Theorem. Explain that every continuous map \(D^n \to D^n\) has a fixed point.
+\item
+State the Mayer–Vietoris sequence for homology.
+\item
+Show that the spaces \(S^2 \times S^2\) and \(S^2 \vee S^2 \vee S^4\) are not homotopy equivalent.
+\item
+Does every function \(f:\mathbb{N}\to\mathbb{R}\) admits a continuous extension \(\bar f:\beta\mathbb{N}\to\mathbb{R}\) of the Stone–Čech compactification?
+\item
+Formulate the Invariance of Domain Theorem.
+\item
+Let~\(M\) be a closed 4-dimensional simply connected manifold. What can you say about \(H_3(M)\)?
+\item
+Does there exist a cover space of the figure eight that has the non-trivial abelian fundamental group?
+\item
+Let~\(X\) be a compact Hausdorff topological space. Describe all compact subsets of the space \(C(X,\mathbb{R})\) of continuous functions \(X\to\mathbb{R}\) in uniform topology.
+\item
+State the Universal Coefficient Theorem for Cohomology.
+\end{examproblems}
+\end{document}

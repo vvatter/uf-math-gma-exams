@@ -1,0 +1,154 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, August 2016},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, August 2016\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, August 2016}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(L\) be a splitting field over~\(\mathbb{Q}\) for the polynomial \(f(X)=X^3-7\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Determine the Galois group \(\operatorname{Gal}(L/\mathbb{Q})\).
+\item[\textnormal{(b)}]
+For each subgroup~\(H\) of \(\operatorname{Gal}(L/\mathbb{Q})\) determine the fixed field \(L^H\) of~\(H\).
+\end{examsubparts}
+\item
+Let~\(p\) be prime and let \(n\geq 1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Prove that there is a field \(\mathbb{F}_{p^n}\) with \(p^n\) elements.
+\item[\textnormal{(b)}]
+Prove that if~\(K\) is a field with \(p^n\) elements then \(K\cong\mathbb{F}_{p^n}\).
+\end{examsubparts}
+\item
+This problem has three parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let \(\mathcal C\) be a category. Define what it means for a \(\mathcal C\)-morphism \(f:X\to Y\) to be a monomorphism.
+\item[\textnormal{(b)}]
+Give the definition of a concrete category.
+\item[\textnormal{(c)}]
+Let \(\mathcal C\) be a concrete category and let \(f:X\to Y\) be a \(\mathcal C\)-morphism whose underlying set map is one-to-one. Prove that~\(f\) is a monomorphism.
+\end{examsubparts}
+\item
+Prove that the group~\(G\) defined by the generators and relations 
+\[
+G=\langle x,y\mid xyx=y\rangle
+\]
+ is infinite and nonabelian.
+\item
+Let~\(R\) be a commutative ring with~\(1\) and let \(I,J\) be ideals in~\(R\). Prove that there is an isomorphism of~\(R\)-modules 
+\[
+(R/I)\otimes_R(R/J)\cong R/(I+J).
+\]
+\item
+Let~\(R\) be a commutative ring with~\(1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define what it means for a left~\(R\)-module to be flat.
+\item[\textnormal{(b)}]
+Prove that if~\(F\) is a free left~\(R\)-module then~\(F\) is flat.
+\end{examsubparts}
+\item
+Let \(R\subset S\) be integral domains such that~\(S\) is integral over~\(R\). Prove that~\(R\) is a field if and only if~\(S\) is a field.
+\item
+Let~\(R\) be a commutative ring with~\(1\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define the Jacobson radical \(J(R)\) of~\(R\).
+\item[\textnormal{(b)}]
+Let~\(M\) be a finitely generated~\(R\)-module and let~\(I\) be an ideal of~\(R\) which is contained in \(J(R)\). Prove that if \(IM=M\) then \(M=\{0\}\).
+\end{examsubparts}
+\item
+Determine which of the following rings are Dedekind domains, with some explanation in each case.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\mathbb{F}_7[X]\)
+\item[\textnormal{(b)}]
+\(\mathbb{F}_7[X,Y]\)
+\item[\textnormal{(c)}]
+\(\mathbb{Z}[\sqrt{3}]\)
+\item[\textnormal{(d)}]
+\(\mathbb{Z}[\sqrt{5}]\)
+\end{examsubparts}
+\item
+Let~\(G\) be a finite group and let~\(K\) be a field of characteristic~\(0\). Let~\(V\) be a \(K[G]\)-module which is a finite-dimensional vector space over~\(K\) and let~\(W\) be a \(K[G]\)-submodule of~\(V\). Prove there is a \(K[G]\)-submodule \(W'\) of~\(V\) such that \(V=W\oplus W'\).
+\item
+Determine the number of isomorphism classes of semisimple rings with \(4000\) elements. You don’t have to list the rings, but you do need to justify your computations.
+\end{examproblems}
+\end{document}

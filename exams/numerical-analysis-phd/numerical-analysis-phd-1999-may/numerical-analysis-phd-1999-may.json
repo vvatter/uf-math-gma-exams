@@ -1,0 +1,245 @@
+{
+  "schema_version": 3,
+  "id": "numerical-analysis-phd-1999-may",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 1999,
+  "month": "may",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_1999_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do any 8 of the following 10 problems."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful statement and proof of the singular value decomposition.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give a careful statement of the \\(QR\\) factorization theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Indicate how the Householder transformations are used in the proof of the \\(QR\\) factorization theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(4)",
+            "text": "Describe the \\(QR\\) Iteration Algorithm with shift \\(\\mu\\).",
+            "subparts": []
+          },
+          {
+            "label": "(5)",
+            "text": "Describe how the \\(QR\\) Iteration is used to compute the \\(SVD\\).",
+            "subparts": []
+          },
+          {
+            "label": "(6)",
+            "text": "How can the singular values be used to compute the condition number of a matrix.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Give a careful proof of the following Theorem: If \\(p\\geq 1\\),\n\n1. \\(\\mathbf A\\in\\mathbb R^{n\\times n}\\) is invertible,\n2. \\(\\mathbf b\\) and \\(\\Delta\\mathbf b\\) are vectors in \\(\\mathbb R^n\\), and\n3. \\(\\mathbf x\\) and \\(\\Delta\\mathbf x\\) are vectors in \\(\\mathbb R^n\\) and are solutions to \\(\\mathbf A\\mathbf x=\\mathbf b\\), and \\(\\mathbf A\\Delta\\mathbf x=\\Delta\\mathbf b\\), respectively,\n\nthen\n\\[\n\\frac{\\|\\Delta\\mathbf x\\|_p}{\\|\\mathbf x\\|_p}\\leq \\kappa_p(\\mathbf A)\\frac{\\|\\Delta\\mathbf b\\|_p}{\\|\\mathbf b\\|_p}.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Describe how Jacobi rotations can be used to diagonalize a real symmetric matrix.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give the error estimate for a single Jacobi rotation.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Give the error estimates for repeated Jacobi rotations.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Write out the system of linear equations to be solved to find the periodic spline interpolation for the given data points \\((x_0,y_0),(x_1,y_1),\\ldots,(x_n,y_n)\\), where \\(x_0<x_1<\\cdots<x_n\\) and \\(y_n=y_0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "What method would you recommend for solving the system of linear equations. Explain!!",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful definition of the Householder transformation.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Explain why the Householder transformation is preferred over the Gram–Schmidt orthogonalization process for creating an orthonormal basis. (Give an example if necessary.)",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Show how Householder transformations can be used to bidiagonalize any real matrix.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful statement of the Pythagorean Theorem property for clamped cubic splines.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give a careful statement of the integral minimization property for clamped cubic splines.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "If \\(s_n(x)\\) denotes the clamped cubic spline interpolant for a function \\(f(x)\\) at the knots \\((x_0,y_0),(x_1,y_1),\\ldots,(x_n,y_n)\\), then give a precise statement for the error between \\(s_n(x)\\) and \\(f(x)\\).",
+            "subparts": []
+          },
+          {
+            "label": "(4)",
+            "text": "Prove the error formula given in step (3) above.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "If \\(p_n(x)=\\frac{1}{2^n n!}\\frac{d^n}{dx^n}(x^2-1)^n\\), then show that \\(\\int_{-1}^1 x^m p_n(x)\\,dx=0\\) for all \\(m<n\\). (Hint: Think small values of \\(m\\) and \\(n\\), induction, and parts.)",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "What can you conclude about the relationship between the polynomials \\(p_n(x)\\) and the Legendre polynomials?",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Explain the method of Gauss quadrature for the numerical approximation of the integral of a function.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Discuss the ideas behind the linear shooting method for approximating the solution of a linear two point boundary value problem. In particular, explain how the Runge–Kutta method can be used in the approximation.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Describe how the Galerkin method can be used to solve a 2 point boundary value problem on the interval \\([0,1]\\).",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Explain why splines have an advantage over \\(\\sin(kx)\\) as choices of test functions for the Galerkin method.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful statement of the Contraction Mapping Theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Outline a proof of the Contraction Mapping Theorem.",
+            "subparts": []
+          },
+          {
+            "label": "(3)",
+            "text": "Indicate how Aitken’s method can be used to accelerate convergence.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(1)",
+            "text": "Give a careful statement of the error formula for the trapezoidal rule for approximating an integral.",
+            "subparts": []
+          },
+          {
+            "label": "(2)",
+            "text": "Give a careful proof of the error formula for the trapezoidal rule.",
+            "subparts": []
+          }
+        ]
+      }
+    }
+  ]
+}

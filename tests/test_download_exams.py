@@ -182,9 +182,17 @@ class TableTests(unittest.TestCase):
         self.assertEqual(
             [exam.path for exam in exams],
             [
-                "exams/algebra-first-year/algebra-first-year-2025-aug-part-1.pdf",
-                "exams/algebra-first-year/algebra-first-year-2025-aug-part-2.pdf",
-                "exams/algebra-first-year/algebra-first-year-2025-aug-part-1-2.pdf",
+                "exams/algebra-first-year/algebra-first-year-2025-aug-part-1/algebra-first-year-2025-aug-part-1.source.pdf",
+                "exams/algebra-first-year/algebra-first-year-2025-aug-part-2/algebra-first-year-2025-aug-part-2.source.pdf",
+                "exams/algebra-first-year/algebra-first-year-2025-aug-part-1-2/algebra-first-year-2025-aug-part-1-2.source.pdf",
+            ],
+        )
+        self.assertEqual(
+            [exam.id for exam in exams],
+            [
+                "algebra-first-year-2025-aug-part-1",
+                "algebra-first-year-2025-aug-part-2",
+                "algebra-first-year-2025-aug-part-1-2",
             ],
         )
 

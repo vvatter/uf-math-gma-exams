@@ -1,0 +1,117 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Logic PhD Exam, September 1992},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, September 1992\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Logic PhD Exam, September 1992}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment.
+\end{examinstructions}
+\section{1. General Logic}
+\begin{examproblems}{0}
+\item
+Prove that there is no single sentence~\(\phi\) in the language of ring theory such that a ring~\(R\) is a model of~\(\phi\) if and only if~\(R\) has characteristic 0.
+\item
+State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.
+\item
+State and sketch a proof of Gödel’s incompleteness theorem.
+\end{examproblems}
+\section{2. Model Theory}
+\begin{examproblems}{0}
+\item
+Show that any two elementarily equivalent, countably saturated models are isomorphic.
+\item
+State and sketch a proof of the downward Löwenheim–Skolem Theorem.
+\item
+State the Omitting types theorem, and use it to show that any~\(\omega\)-complete theory of arithmetic has an~\(\omega\)-model.
+\end{examproblems}
+\section{3. Set Theory}
+\begin{examproblems}{0}
+\item
+Show that a countable union of countable sets is countable. Explain any use of the axiom of choice.
+\item
+Show that \(2^\kappa = \kappa^\kappa\) for all infinite~\(\kappa\).
+\item
+Use Fodor’s theorem to prove that the diagonal intersection of a sequence of closed, unbounded sets is closed and unbounded.
+\end{examproblems}
+\section{4. Recursion Theory}
+\begin{examproblems}{0}
+\item
+Show that a function \(\phi : \omega \to \omega\) is (partial) recursive iff its graph is recursively enumerable, and that if~\(\phi\) is total and recursive then its graph is recursive.
+\item
+Prove that there is a subset of~\(\omega\) which is recursively enumerable but not recursive.
+\item
+State the normal form theorem for partial recursive functions and use it to prove the enumeration theorem.
+\end{examproblems}
+\end{document}

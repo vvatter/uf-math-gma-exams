@@ -1,0 +1,215 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\usepackage{tikz,adjustbox}
+\usetikzlibrary{arrows.meta,decorations.markings}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology PhD Exam, May 2023},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2023\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology PhD Exam, May 2023}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all your work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(X\) be a set. A filter base at \(x\in X\) is a nonempty collection \(\mathcal{U}_x\) of subsets of~\(X\) containing~\(x\) such that whenever \(U,V\in\mathcal{U}_x\) there exists \(W\in\mathcal{U}_x\) with \(W\subset U\cap V\). Assume that~\(X\) has a filter base at each \(x\in X\) and that if \(U\in\mathcal{U}_x\) and \(y\in U\) then \(U\in\mathcal{U}_y\). Prove that \(\mathcal{B}=\bigcup_{x\in X}\mathcal{U}_x\) is a base for a topology.
+\item
+Consider the torus \(T=S^1\times S^1\) with the following~\(\Delta\)-complex structure.
+\par\smallskip
+\begin{center}
+\begin{adjustbox}{max width=.8\linewidth,max totalheight=6\baselineskip}
+\begin{tikzpicture}[
+  alt={A square with vertices at its four corners and center. The center is joined to each corner, dividing the square into four triangular regions labeled T1 at the bottom, T2 at the right, T3 at the top, and T4 at the left. The four interior edges are labeled e1 through e4 and are directed outward from the center toward the corners. The top and bottom boundary edges are labeled a and point right; the left and right boundary edges are labeled b and point upward.},
+  scale=0.55,
+  line width=1pt,
+  line cap=round,
+  line join=round,
+  mid stealth/.style={
+        postaction={
+            decorate,
+            decoration={
+                markings,
+                mark=at position 0.5 with {
+                    \arrow{Stealth[length=3.2mm,width=3mm]}
+                }
+            }
+        }
+    },
+  vertex/.style={
+        circle,
+        fill=black,
+        inner sep=0pt,
+        minimum size=2.5mm
+    }
+]
+% Vertices
+\coordinate (BL) at (0,0);
+\coordinate (BR) at (5,0);
+\coordinate (TR) at (5,5);
+\coordinate (TL) at (0,5);
+\coordinate (O)  at (2.5,2.5);
+
+% Boundary edges
+\draw[mid stealth]
+    (TL) -- node[midway,above=4pt] {$a$} (TR);
+
+\draw[mid stealth]
+    (BL) -- node[midway,below=4pt] {$a$} (BR);
+
+\draw[mid stealth]
+    (BL) -- node[midway,left=4pt] {$b$} (TL);
+
+\draw[mid stealth]
+    (BR) -- node[midway,right=4pt] {$b$} (TR);
+
+% Interior edges and labels, directed outward from the center
+\draw[mid stealth]
+    (O) -- node[pos=0.5,below right=-3pt] {$e_1$} (BL);
+\draw[mid stealth]
+    (O) -- node[pos=0.5,above right=-3pt] {$e_2$} (BR);
+\draw[mid stealth]
+    (O) -- node[pos=0.5,above left=-3pt] {$e_3$} (TR);
+\draw[mid stealth]
+    (O) -- node[pos=0.5,below left=-3pt] {$e_4$} (TL);
+
+% Region labels
+\node at (2.5,1.5) {$T_1$};
+\node at (3.5,2.5) {$T_2$};
+\node at (2.5,3.5) {$T_3$};
+\node at (1.5,2.5) {$T_4$};
+
+% Black vertices
+\node[vertex] at (BL) {};
+\node[vertex] at (BR) {};
+\node[vertex] at (TR) {};
+\node[vertex] at (TL) {};
+\node[vertex] at (O)  {};
+\end{tikzpicture}
+\end{adjustbox}
+\end{center}
+\smallskip
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Define a 2-chain that you can show is a cycle and which generates \(H_2(T)\). The resulting homology class is called a fundamental class of~\(T\).
+\item[\textnormal{(b)}]
+Define 1-cochains that you can show are cocycles and which generate \(H^1(T)\).
+\item[\textnormal{(c)}]
+Compute a cup product which produces a cohomology class (Kronecker) dual to a fundamental class.
+\end{examsubparts}
+\item
+Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{RP}^2\), as well as that \(\mathbb{RP}^2\) is not a retract of \(S^2\).
+\item
+Assume \(n>m\). Show that there are no maps from \(\mathbb{CP}^n\) to \(\mathbb{CP}^m\) that induces a nontrivial map \(H^2(\mathbb{CP}^m)\to H^2(\mathbb{CP}^n)\).
+\item
+A map \(i:A\to X\) has the homotopy extension property (HEP) for the space~\(Y\) if for each homotopy \(h:A\times I\to Y\) and each map \(f:X\to Y\) with \(f(i(a))=h(a,0)\) there exists a homotopy \(H:X\times I\to Y\) with \(H(x,0)=f(x)\) for all \(x\in X\) and \(H(i(a),t)=h(a,t)\) for all \(a\in A\) and all \(t\in I\). We call~\(H\) an extension of~\(h\) with initial condition~\(f\). The map \(i:A\to X\) is a cofibration if it has the HEP for all spaces.
+
+\par
+The mapping cylinder of~\(i\), denoted \(Z(i)\), is the pushout of \(i:A\to X\) and the inclusion \(A\to A\times I\) given by \(a\mapsto(a,0)\).
+
+\par
+Prove that the following three statements about~\(i\) are equivalent:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(i\) is a cofibration.
+\item[\textnormal{(b)}]
+\(i\) has the HEP for the mapping cylinder \(Z(i)\).
+\item[\textnormal{(c)}]
+\(Z(i)\) is a retract of \(X\times I\).
+\end{examsubparts}
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Give the definition of a pushout and prove that if it exists then it is unique up to isomorphism.
+\item
+The Klein bottle, \(K\), may be obtained by taking two Möbius bands, \(M\), and identifying their boundary, \(K=M\cup_{\partial M}M\). Apply the Seifert–van Kampen theorem to give a presentation of the fundamental group of~\(K\).
+\item
+Describe all of the two-fold coverings of \(S^1\vee S^1\).
+\item
+Prove that for a finite CW-complex~\(X\), \(H^1(X;\mathbb{Z})\) is torsion-free.
+\item
+Compute the Euler characteristic of the manifold \(M=S^4\times\mathbb{RP}^2\times\mathbb{CP}^3\).
+\item
+State the Baire Category Theorem.
+\item
+Prove that for \(n\ne m\), \(\mathbb{R}^n\) is not homeomorphic to \(\mathbb{R}^m\).
+\item
+Give an example of a space that is connected but not path connected.
+\item
+State the Urysohn Lemma.
+\item
+Is \(\mathbb{R}^{\omega}\) connected in the uniform topology?
+\end{examproblems}
+\end{document}

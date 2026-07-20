@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "analysis-phd-2009-sep",
+  "subject": "PhD Analysis",
+  "subject_tag": "analysis-phd",
+  "year": 2009,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_Analysis_2009_09.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do 6 out of the 7 problems."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Fubini Theorems."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State and prove the Vitali integral convergence theorem."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mu\\) be a signed measure on the \\(\\sigma\\)-algebra \\(\\mathcal S\\). Define positive and negative set for \\(\\mu\\). Prove that if \\(E\\in\\mathcal S\\), then \\(\\mu^+(E)=\\sup\\{\\mu(F):F\\subset E,\\ F\\in\\mathcal S\\}\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(Y\\) be an orthogonal set in a Hilbert space. Prove that \\(\\sum_{y\\in Y}y\\) converges if and only if \\(\\sum_{y\\in Y}\\lVert y\\rVert^2<\\infty\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X\\) be a Banach space, \\(A\\subset X\\). Suppose that \\(\\sup_{a\\in A}|x^*a|<\\infty\\), for each \\(x^*\\in X^*\\). Prove \\(\\sup_{a\\in A}\\lVert a\\rVert<\\infty\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(\\mu\\) and \\(\\nu\\) be finite measures such that each is absolutely continuous with respect to the other. Prove \\(\\frac{d\\mu}{d\\nu}=\\frac{1}{\\left(\\frac{d\\nu}{d\\mu}\\right)}\\) a.e. \\(\\mu\\)."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(X,Y,Z\\) be Banach spaces and let \\(\\mathcal F\\) be a total family of continuous linear maps on \\(X\\) to \\(Y\\). Let \\(T:Z\\to X\\) be a linear map such that \\(fT\\) is continuous for every \\(f\\in\\mathcal F\\). Prove \\(T\\) is continuous. [Hint: Use the closed graph theorem.] Note: \\(\\mathcal F\\) total means if \\(f(x)=0\\) for all \\(f\\in\\mathcal F\\), then \\(x=0\\)."
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

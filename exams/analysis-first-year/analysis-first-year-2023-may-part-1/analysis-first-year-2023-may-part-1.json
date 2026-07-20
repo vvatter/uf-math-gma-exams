@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "analysis-first-year-2023-may-part-1",
+  "subject": "First Year Analysis",
+  "subject_tag": "analysis-first-year",
+  "year": 2023,
+  "month": "may",
+  "part": 1,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/FY-Analysis-1-2023_05.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Answer FOUR questions in detail. State carefully any results used without proof."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let the continuous function \\(f:(0,\\infty)\\to\\mathbb{R}\\) satisfy\n\\[\n\\liminf f(n)<0<\\limsup f(n).\n\\]\nProve that \\(f\\) has infinitely many zeros."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Fix any metric space \\(T\\) with exactly two points. Prove that the metric space \\(X\\) is connected if and only if each continuous function \\(f\\) from \\(X\\) to \\(T\\) is constant."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(B(X)\\) be the set of all bounded real-valued functions on the set \\(X\\). Prove that the formula\n\\[\nd(f,g)=\\sup\\{|f(x)-g(x)|:x\\in X\\}\n\\]\ndefines a metric \\(d\\) on \\(B(X)\\) that makes \\(B(X)\\) into a complete metric space."
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(A_1\\supseteq A_2\\supseteq\\cdots\\) be a decreasing sequence of nonempty subsets of \\(\\mathbb{R}^N\\) (with its standard Euclidean metric)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(i)",
+            "text": "Prove that if each \\(A_n\\) is compact then \\(\\bigcap_{n=1}^{\\infty}A_n\\) is nonempty.",
+            "subparts": []
+          },
+          {
+            "label": "(ii)",
+            "text": "Show by example that \\(\\bigcap_{n=1}^{\\infty}A_n\\) can be empty if each \\(A_n\\) is only closed.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(f:(a,b)\\to\\mathbb{R}\\) be differentiable, with bounded derivative. Prove the existence of the real limits\n\\[\n\\lim_{x\\to a+}f(x)\\quad\\text{and}\\quad\\lim_{x\\to b-}f(x).\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}

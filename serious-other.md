@@ -8,7 +8,7 @@ The links use jsDelivr’s GitHub CDN and point to the files on the `main` branc
 
 `analysis-phd-2002-may`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2002-may.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2002-may.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2002-may/analysis-phd-2002-may.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/analysis-phd/analysis-phd-2002-may/index.html)
 
 ### Problem 10 (source page 1)
 
@@ -22,7 +22,7 @@ The Banach space symbol F used in L_F^1 is not defined within this problem; it m
 
 `numerical-optimization-phd-2026-jan`
 
-[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-optimization-phd/numerical-optimization-phd-2026-jan.pdf) | [Extracted Markdown](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-optimization-phd/numerical-optimization-phd-2026-jan.md)
+[Source PDF](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-optimization-phd/numerical-optimization-phd-2026-jan/numerical-optimization-phd-2026-jan.source.pdf) | [Accessible HTML](https://cdn.jsdelivr.net/gh/vvatter/uf-math-gma-exams@main/exams/numerical-optimization-phd/numerical-optimization-phd-2026-jan/index.html)
 
 ### Problem 7 (source page 3)
 

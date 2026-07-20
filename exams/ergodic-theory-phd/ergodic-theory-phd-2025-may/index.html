@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ergodic Theory PhD Exam, May 2025</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Ergodic Theory PhD Exam, May 2025</h1>
+    </header>
+    <div class="instructions">
+      <p>Answer 4 problems total, and at least one problem from each category.</p>
+    </div>
+    <section aria-labelledby="section-1">
+      <h2 id="section-1">General ergodic Theory</h2>
+      <ol class="problems" start="1">
+        <li class="problem">
+          <p>Equip the circle \(\mathbb{R}/\mathbb{Z}\) with the usual Lebesgue measure. Let \(\alpha\in\mathbb{R}\) be irrational and let \(T:\mathbb{R}/\mathbb{Z}\to\mathbb{R}/\mathbb{Z}\) be rotation by \(\alpha\), i.e., \(T(x)=x+\alpha\pmod{\mathbb{Z}}\). Prove that \(T\) is ergodic.</p>
+        </li>
+        <li class="problem">
+          <p>Let \(T:X\to X\) be an invertible measure preserving transformation on a probability space \((X,\mathcal{B},\mu)\). State and prove the Poincaré recurrence theorem for \(T\).</p>
+        </li>
+        <li class="problem">
+          <p>Let \(\Gamma\) be a countable group acting by measure preserving transformations on standard probability spaces \((X,\mathcal{B}_X,\mu)\), and \((Y,\mathcal{B}_Y,\nu)\) and \((Z,\mathcal{B}_Z,\eta)\). Suppose that \(\pi_Y:X\to Y\) and \(\pi_Z:X\to Z\) are measure preserving \(\Gamma\)-equivariant maps from \(X\) to \(Y\) and \(Z\) respectively, and that</p>
+          <p>Prove that the pushforward of \(\mu\) under the map \(\pi_Y\times\pi_Z:X\to Y\times Z\), \(x\mapsto(\pi_Y(x),\pi_Z(x))\) is exactly the product measure \(\nu\times\eta\).</p>
+          <ol class="subparts">
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(a)</span>
+                <div class="subpart-body">
+                  <p>the action of \(\Gamma\) on \((Y,\mathcal{B}_Y,\nu)\) is ergodic, and</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="subpart-row">
+                <span class="subpart-label">(b)</span>
+                <div class="subpart-body">
+                  <p>the action of \(\Gamma\) on \((Z,\mathcal{B}_Z,\eta)\) is the identity action on \(Z\), i.e., every element of \(\Gamma\) fixes every point of \(Z\).</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+    <section aria-labelledby="section-2">
+      <h2 id="section-2">Ergodicity and Mixing Properties</h2>
+      <ol class="problems" start="4">
+        <li class="problem">
+          <p>Let \(\Gamma\) be a countable group acting by measure preserving transformations on a standard probability space \((X,\mathcal{B},\mu)\). Define what it means for the action to be weakly mixing, and define what it means for the action to be compact (for both properties there are many equivalent definitions, you just need to provide one definition for each). Prove that if the action is both weakly mixing and compact then \(\mu\) is a point mass.</p>
+        </li>
+        <li class="problem">
+          <p>Let \(T:X\to X\) be an invertible measure preserving transformation on a standard probability space \((X,\mathcal{B},\mu)\). Define what it means for \(T\) to be mixing. Give an example of a nontrivial mixing transformation, and prove that it is mixing.</p>
+        </li>
+        <li class="problem">
+          <p>Let \(T:X\to X\) be an invertible measure preserving transformation on a probability space \((X,\mathcal{B},\mu)\), and let \(h:X\to\mathbb{C}\) be a function in \(L^2(X,\mathcal{B},\mu)\). Prove that the sequence \(\frac{1}{n}\sum_{i=0}^{n-1}h\circ T^i\) converges in \(L^2(X,\mathcal{B},\mu)\) to \(P_T(h)\), where \(P_T\) denotes the orthogonal projection onto the subspace of \(T\)-invariant functions.</p>
+        </li>
+      </ol>
+    </section>
+    <section aria-labelledby="section-3">
+      <h2 id="section-3">Topological Dynamics.</h2>
+      <ol class="problems" start="7">
+        <li class="problem">
+          <p>Let \(X\) be a compact Hausdorff space, and let \(G\) be a (discrete) group acting by homeomorphisms on \(X\). Define what it means for the action to be topologically transitive. Prove that if \(X\) is metrizable then the action of \(G\) on \(X\) is topologically transitive if and only if there exists a point in \(X\) whose \(G\)-orbit is dense.</p>
+        </li>
+        <li class="problem">
+          <p>Let \(X\) be a compact Hausdorff space, and let \(G\) be a (discrete) group acting by homeomorphisms on \(X\). Let \(x_0\in X\) and assume that the \(G\)-orbit of \(x_0\) is dense in \(X\). Prove that the action of \(G\) on \(X\) is minimal if and only if for every open neighborhood \(U\) of \(x_0\), the set \(A_{U,x_0}=\{g\in G:g\mathbin{\cdot}x_0\in U\}\) is syndetic in \(G\). [A subset \(A\) of \(G\) is called syndetic in \(G\) if there is a finite subset \(F\) of \(G\) with \(FA=G\).]</p>
+        </li>
+      </ol>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Ergodic Theory PhD Exams</a></li>
+        <li><a href="ergodic-theory-phd-2025-may.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

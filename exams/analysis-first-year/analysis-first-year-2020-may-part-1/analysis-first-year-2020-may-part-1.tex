@@ -1,0 +1,126 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis First-Year Exam, May 2020, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2020, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis First-Year Exam, May 2020, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer FOUR questions in detail. State carefully any results used without proof.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let \((a_n)_{n=0}^{\infty}\) be a bounded real sequence. Write~\(L\) for the set of all real numbers~\(\ell\) such that \((\exists N)(\forall n>N)\;\ell<a_n\) and write~\(U\) for the set of all real numbers~\(u\) such that \((\exists N)(\forall n>N)\;a_n<u\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Prove that \(\sup L\leq\inf U\).
+\item[\textnormal{(ii)}]
+Give an example of a convergent sequence for which the inequality in (i) is strict, or prove that no such sequence exists.
+\end{examsubparts}
+\item
+Let~\(U\) be a subset of the metric space~\(X\). Does either of the following conditions imply the other? Prove or disprove, as appropriate.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+\(U\) is open.
+\item[\textnormal{(ii)}]
+For any \(A\subseteq X\), if~\(U\) meets the closure of~\(A\) then~\(U\) meets~\(A\) itself.
+\end{examsubparts}
+\item
+Let~\(X\) and~\(Y\) be metric spaces. Decide whether the following statements are true or false.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+If \((x_n)_{n=0}^{\infty}\) converges to~\(x\) in~\(X\) then \(\{x\}\cup\{x_n:n\geq 0\}\) is compact.
+\item[\textnormal{(ii)}]
+The function \(f:X\to Y\) is continuous if its restriction \(f|_K\) to each compact subset \(K\subseteq X\) is continuous.
+\end{examsubparts}
+\item
+Let \(f:X\to Y\) be a continuous bijection with inverse \(g:Y\to X\) and assume that~\(X\) is complete.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Show by example that if~\(g\) is continuous then~\(Y\) need not be complete.
+\item[\textnormal{(ii)}]
+Prove that if~\(g\) is uniformly continuous then~\(Y\) must be complete.
+\end{examsubparts}
+\item
+Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable and assume \(\lim_{x\to\infty}f'(x)=L\in\mathbb{R}\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+When~\(a\) is a positive real number, calculate 
+\[
+\lim_{x\to\infty}\frac{f(x+a)-f(x)}{a}.
+\]
+\item[\textnormal{(ii)}]
+Assume further that \(f(x)\to A\in\mathbb{R}\) as \(x\to\infty\) and calculate~\(L\).
+\end{examsubparts}
+\end{examproblems}
+\end{document}

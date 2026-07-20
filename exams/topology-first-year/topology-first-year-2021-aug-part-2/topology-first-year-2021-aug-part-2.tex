@@ -1,0 +1,116 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, August 2021, Part 2},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2021, Part 2\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, August 2021, Part 2}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Show that \(S^2\) is not homeomorphic to \(S^4\).
+\item
+Show that the Stone–Čech compactification \(\beta X\) of~\(X\) is connected if and only if~\(X\) is connected.
+\item
+Let \(X_{\geq 0}\), \(Y_{\geq 0}\), and \(Z_{\geq 0}\) denote the nonnegative parts of the~\(x\)-axis, the~\(y\)-axis, and the~\(z\)-axis in \(\mathbb{R}^3\) respectively. Let \(A=\mathbb{R}^3\setminus(X_{\geq 0}\cup Y_{\geq 0}\cup Z_{\geq 0})\). Is the fundamental group \(\pi_1(A)\) abelian?
+\item
+Show that the torus~\(T\) is not homeomorphic to the Klein bottle~\(K\).
+\item
+By the definition the triod (or the letter T space) is a space homeomorphic to \(X=([0,1]\times\{0\})\cup(\{0\}\times[-1,1])\subset\mathbb{R}^2\). Show that every continuous map of the triod to itself has a fixed point.
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or proofs.
+\end{examinstructions}
+\begin{examproblems}{5}
+\item
+Does the sequence \(f_n:\mathbb{R}\to\mathbb{R}\), \(f_n(x)=\ln\left(x^{1/n}\right)\), converge in
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+the point-wise convergence topology?
+\item[\textnormal{(b)}]
+the uniform topology?
+\item[\textnormal{(c)}]
+compact open topology?
+\end{examsubparts}
+\item
+State the Borsuk–Ulam Theorem for \(S^2\).
+\item
+Let \(X=\mathbb{R}\) and \(A=\mathbb{Z}\) be the reals and the integers respectively. Is the quotient space \(Y=X/A\) metrizable?
+\item
+State the Seifert–van Kampen Theorem.
+\item
+State the Urysohn Lemma.
+\end{examproblems}
+\end{document}

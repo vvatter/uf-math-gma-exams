@@ -1,0 +1,102 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Combinatorics PhD Exam, January 2018},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, January 2018\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Combinatorics PhD Exam, January 2018}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examproblems}{0}
+\item
+Let \(D(n)\) be the number of derangements of length~\(n\). Let \(F(n)\) be the number of permutations of length~\(n\) that have exactly one fixed point. Determine (with proof) the number \(D(n)-F(n)\).
+\item
+Prove: If~\(n\) and~\(m\) are the number of vertices and edges in a simple planar graph and \(n \ge 3\), then \(m \le 3n-6\).
+
+\par
+Prove: For a simple graph~\(G\) with \(n \ge 11\), at most one of~\(G\) or its complement \(\overline{G}\) is planar. (Recall that \(\overline{G}\) has the same vertex set as~\(G\) and, for all vertices \(u,v\), we have that \(\{u,v\}\) is an edge of \(\overline{G}\) if and only if \(\{u,v\}\) is not an edge of~\(G\).)
+\item
+How many ways are there to seat~\(n\) married couples at a straight table (only one side of the table) so that no woman sits next to her husband?
+
+\par
+How many ways are there to seat~\(n\) married couples at a straight table so that men and women alternate and no woman sits next to her husband?
+\item
+Let~\(B\) be a rectangular 3-dimensional box for which the width is equal to the length, but the depth is not equal to the length. How many ways are there to color the vertices of~\(B\) using colors red and blue, where two colorings are considered the same if one can be obtained from the other by an orientation preserving symmetry of~\(B\).
+\item
+Consider a directed graph obtained by putting a direction on each edge of the complete graph. Such a digraph is called a tournament. Prove that a tournament has a Hamiltonian path. Is it true that every tournament has a Hamiltonian cycle? Explain?
+\item
+Let \(n \ge 3\). Let \(h_n\) be the number of permutations of length~\(n\) in which the number of inversions is divisible by three. Find an explicit formula for \(h_n\).
+\item
+Prove that the language \(\mathcal{L}=\{ww : w \in \{a,b\}^*\}\) is not regular.
+\item
+Suppose~\(\mathcal{C}\) and~\(\mathcal{D}\) are permutation classes. Prove that \(\mathcal{C}\cup\mathcal{D}\) is a permutation class, and describe (with an algorithm, perhaps) how to compute its basis.
+\end{examproblems}
+\end{document}

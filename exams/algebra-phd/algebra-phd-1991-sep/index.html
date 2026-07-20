@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algebra PhD Exam, September 1991</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: #fff; }
+    body {
+      margin: 0;
+      color: #191918;
+      font-family: "CMU Serif", Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.58;
+    }
+    main {
+      width: 100%;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 4rem;
+    }
+    .exam-header {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 2px solid #242421;
+    }
+    .institution {
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h1, h2 { line-height: 1.18; }
+    h1 { margin: 0; font-size: 2.15rem; font-weight: 700; }
+    h2 {
+      margin: 2.8rem 0 1.25rem;
+      padding-bottom: .35rem;
+      border-bottom: 1px solid #b8b8b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    p { margin: 0 0 .8rem; }
+    .instructions {
+      margin: 1.4rem 0 1.8rem;
+      font-style: italic;
+    }
+    .instructions > :last-child { margin-bottom: 0; }
+    .problems { margin: 0; padding-left: 2.4rem; }
+    .problem { margin: 0 0 1.65rem; padding-left: .35rem; }
+    .problem::marker { font-weight: 700; }
+    .problem > p:first-child, .subpart-body > p:first-child { margin-top: 0; }
+    .problem-figure { margin: 1rem 0; }
+    .problem-figure img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 6lh;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .subparts { margin: .7rem 0 0; padding: 0; list-style: none; }
+    .subparts .subparts { margin-left: 2.2rem; }
+    .subparts > li { margin: .55rem 0; }
+    .subpart-row {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: .5rem;
+      align-items: start;
+    }
+    .subpart-label { font-weight: 700; }
+    .subpart-body > :last-child { margin-bottom: 0; }
+    .display-math {
+      max-width: 100%;
+      margin: .8rem 0 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-style: normal;
+    }
+    mjx-container { font-style: normal; }
+    mjx-container[display="true"] { margin: .3rem 0 !important; min-width: max-content; }
+    footer {
+      margin-top: 3.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #b8b8b2;
+      font-size: 1rem;
+    }
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .page-updated { margin: .65rem 0 0; color: #5f5f5a; font-size: .9rem; }
+    a { color: #174f78; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: #8a321d; }
+    a:focus-visible { outline: 3px solid #d28b18; outline-offset: 3px; }
+    @media (max-width: 40rem) {
+      body { font-size: 1.05rem; }
+      main { padding: 2rem 1.15rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      .problems { padding-left: 2rem; }
+      .subparts .subparts { margin-left: 1.25rem; }
+    }
+    @media print {
+      @page { margin: .5in .55in; }
+      body { font-size: 11pt; line-height: 1.28; color: #000; }
+      main { max-width: none; padding: 0; }
+      .exam-header {
+        margin-bottom: .6rem;
+        padding-bottom: .35rem;
+        border-bottom-width: 1px;
+      }
+      .institution { margin-bottom: .2rem; font-size: 9pt; }
+      .institution a { text-decoration: none; }
+      h1 { font-size: 17pt; line-height: 1.08; }
+      h2 {
+        margin: .85rem 0 .4rem;
+        padding-bottom: .12rem;
+        font-size: 12pt;
+        line-height: 1.1;
+        break-after: avoid;
+      }
+      p { margin-bottom: .25rem; }
+      .instructions { margin: .4rem 0 .55rem; }
+      .problems { padding-left: 1.75rem; }
+      .problem { margin-bottom: .55rem; padding-left: .1rem; }
+      .problem-figure { margin: .3rem 0; break-inside: avoid; }
+      .subparts { margin-top: .18rem; }
+      .subparts .subparts { margin-left: 1.4rem; }
+      .subparts > li { margin: .12rem 0; }
+      .subpart-row { gap: .3rem; break-inside: avoid; }
+      .display-math { margin: .15rem 0 .25rem; overflow: visible; }
+      mjx-container[display="true"] { margin: 0 !important; }
+      a { color: inherit; }
+      footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content">
+    <header class="exam-header">
+      <p class="institution"><a href="https://www.ufl.edu/">University of Florida</a>, <a href="https://math.ufl.edu/">Department of Mathematics</a></p>
+      <h1>Algebra PhD Exam, September 1991</h1>
+    </header>
+    <div class="instructions">
+      <p>Please read through all the questions before you begin. Your seven best solutions will count. You may quote standard results (within reason) as long as you make it clear that you are doing so and state them clearly.</p>
+    </div>
+    <ol class="problems" start="1">
+      <li class="problem">
+        <p>Prove that, if \(F\) is a field, the group of upper triangular \(n\) by \(n\) matrices (\(n&gt;1\)) with entries in \(F\) and 1 on every diagonal entry is nilpotent of class \(n-1\).</p>
+      </li>
+      <li class="problem">
+        <p>Calculate in detail the Galois group of the polynomial \(x^3+2\) over the field of rational numbers.</p>
+      </li>
+      <li class="problem">
+        <p>Prove that the group \(G\) of upper triangular 2 by 2 matrices with integer coefficients is a free nilpotent class 2 group on two generators.</p>
+      </li>
+      <li class="problem">
+        <p>Suppose \(R\) is a finite commutative ring with identity in which \(r^3=r\) for all \(r\in R\). Prove that \(R\) is a finite direct sum of fields, each of which is isomorphic to \(\mathbb Z_2\) or \(\mathbb Z_3\).</p>
+      </li>
+      <li class="problem">
+        <p>State and prove Hilbert’s Basis Theorem. Let \(R=\mathbb Z[x_1,x_2,\ldots]\) be the ring of polynomials in countably many independent variables with integer coefficients. Is \(R\) Noetherian? Justify your answer.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(G\) be a group and \(H\) be a normal subgroup of \(G\), and assume that the center of \(H\) is the identity. Show that the following are equivalent. Give an example to show that if \(H\) had a non-trivial center the two statements might not be equivalent.</p>
+        <ol class="subparts">
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">a)</span>
+              <div class="subpart-body">
+                <p>There is a subgroup \(J\) of \(G\) such that \(G\) is the (internal) direct product of \(H\) and \(J\).</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="subpart-row">
+              <span class="subpart-label">b)</span>
+              <div class="subpart-body">
+                <p>For every \(g\in G\), \(g\) induces by conjugation an inner automorphism of \(H\).</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a commutative ring with 1 and \(S\) a subset of non-zero divisors of \(R\) such that \(0\notin S\) and \(S\) is a semigroup. Form the ring of quotients \(S^{-1}R\). Prove that the prime ideals of \(S^{-1}R\) are in one-to-one correspondence with the prime ideals \(P\) of \(R\) such that \(P\cap S=\varnothing\).</p>
+      </li>
+      <li class="problem">
+        <p>If \(R\) is a commutative ring with identity prove that</p>
+        <div class="display-math">\[
+\bigcap\{P\mid P\text{ is a prime ideal of }R\}=\{x\in R\mid x^n=0\text{ for some }n&gt;0\}.
+\]</div>
+        <p>(use Zorn’s Lemma).</p>
+      </li>
+      <li class="problem">
+        <p>Prove that if \(F\) is a free abelian group then each non-trivial subgroup \(H\) of \(F\) is free abelian. (Hint: \(F=\) direct sum of \(\mathbb Z\)’s. Well order the copies. Define \(F(i)\) to be the sum of all the copies of \(\mathbb Z\) assigned some \(j&lt;i\). Then \(F(j+1)/F(j)\cong\mathbb Z\) and the union of all the \(F(i)\) is \(F\). Now consider \(H(i)=H\cap F(i)\). Prove that \(H(i+1)/H(i)\) is isomorphic either to \(\mathbb Z\) or to \(\{0\}\) and that the union of all the \(H(i)\) is \(H\).)</p>
+      </li>
+      <li class="problem">
+        <p>Prove that if \(k\) is a field then the power series ring \(k[[x]]\) in one variable is a discrete valuation ring.</p>
+      </li>
+      <li class="problem">
+        <p>Let \(R\) be a ring with identity and let \(A\) be a right-\(R\)-module and \(B\) a left-\(R\)-module. Define \(A\otimes_R B\). Let</p>
+        <div class="display-math">\[
+0\longrightarrow N\longrightarrow M\longrightarrow L\longrightarrow 0
+\]</div>
+        <p>be an exact sequence of left-\(R\)-modules. Show that</p>
+        <div class="display-math">\[
+A\otimes_R N\longrightarrow A\otimes_R M\longrightarrow A\otimes_R L\longrightarrow 0
+\]</div>
+        <p>is exact. Give an example to show that the first map need not be injective.</p>
+      </li>
+    </ol>
+    <footer>
+      <ul>
+        <li><a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a></li>
+        <li><a href="../../../index.html">All exam subjects</a></li>
+        <li><a href="../index.html">Algebra PhD Exams</a></li>
+        <li><a href="algebra-phd-1991-sep.source.pdf">Original PDF</a></li>
+      </ul>
+      <p class="page-updated">Page updated <time datetime="2026-07-20">July 20, 2026</time>.</p>
+    </footer>
+  </main>
+</body>
+</html>

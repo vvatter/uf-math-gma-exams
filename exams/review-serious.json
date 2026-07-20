@@ -14,7 +14,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/pde-phd/pde-phd-2010-may.pdf",
+      "source_pdf": "exams/pde-phd/pde-phd-2010-may/pde-phd-2010-may.source.pdf",
       "status": "open"
     },
     {
@@ -31,7 +31,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1988-jan.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-1988-jan/analysis-phd-1988-jan.source.pdf",
       "status": "open"
     },
     {
@@ -49,7 +49,7 @@
         2,
         3
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1988-may.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-1988-may/analysis-phd-1988-may.source.pdf",
       "status": "open"
     },
     {
@@ -66,7 +66,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-1991-sep.pdf",
+      "source_pdf": "exams/algebra-phd/algebra-phd-1991-sep/algebra-phd-1991-sep.source.pdf",
       "status": "open"
     },
     {
@@ -83,7 +83,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2006-may.pdf",
+      "source_pdf": "exams/algebra-phd/algebra-phd-2006-may/algebra-phd-2006-may.source.pdf",
       "status": "open"
     },
     {
@@ -100,7 +100,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2009-sep.pdf",
+      "source_pdf": "exams/algebra-phd/algebra-phd-2009-sep/algebra-phd-2009-sep.source.pdf",
       "status": "open"
     },
     {
@@ -117,7 +117,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/algebra-phd/algebra-phd-2009-sep.pdf",
+      "source_pdf": "exams/algebra-phd/algebra-phd-2009-sep/algebra-phd-2009-sep.source.pdf",
       "status": "open"
     },
     {
@@ -134,7 +134,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-first-year/analysis-first-year-2014-jan-part-1.pdf",
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2014-jan-part-1/analysis-first-year-2014-jan-part-1.source.pdf",
       "status": "open"
     },
     {
@@ -151,7 +151,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-first-year/analysis-first-year-2018-may-part-2.pdf",
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2018-may-part-2/analysis-first-year-2018-may-part-2.source.pdf",
       "status": "open"
     },
     {
@@ -168,7 +168,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-first-year/analysis-first-year-2019-aug-part-1.pdf",
+      "source_pdf": "exams/analysis-first-year/analysis-first-year-2019-aug-part-1/analysis-first-year-2019-aug-part-1.source.pdf",
       "status": "open"
     },
     {
@@ -185,7 +185,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2018-may.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-2018-may/analysis-phd-2018-may.source.pdf",
       "status": "open"
     },
     {
@@ -202,7 +202,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-1995-aug.pdf",
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-1995-aug/combinatorics-phd-1995-aug.source.pdf",
       "status": "open"
     },
     {
@@ -219,24 +219,7 @@
       "source_pages": [
         10
       ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2002-sep.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The diagrams occur after “For instance, a(2) = 5, given by” and before “Set a(0) = 1.”",
-      "corrected_text": null,
-      "exam_id": "combinatorics-phd-2017-may",
-      "message": "Five diagrams illustrate the tilings counted by a(2) = 5; the visual examples have not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        3
-      ],
-      "source_pages": [
-        3
-      ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2017-may.pdf",
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2002-sep/combinatorics-phd-2002-sep.source.pdf",
       "status": "open"
     },
     {
@@ -253,7 +236,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2018-may.pdf",
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2018-may/combinatorics-phd-2018-may.source.pdf",
       "status": "open"
     },
     {
@@ -270,7 +253,7 @@
       "source_pages": [
         5
       ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2018-may.pdf",
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2018-may/combinatorics-phd-2018-may.source.pdf",
       "status": "open"
     },
     {
@@ -287,7 +270,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2022-may.pdf",
+      "source_pdf": "exams/combinatorics-phd/combinatorics-phd-2022-may/combinatorics-phd-2022-may.source.pdf",
       "status": "open"
     },
     {
@@ -304,7 +287,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/complex-analysis-phd/complex-analysis-phd-1992-may.pdf",
+      "source_pdf": "exams/complex-analysis-phd/complex-analysis-phd-1992-may/complex-analysis-phd-1992-may.source.pdf",
       "status": "open"
     },
     {
@@ -321,7 +304,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/complex-analysis-phd/complex-analysis-phd-2009-sep.pdf",
+      "source_pdf": "exams/complex-analysis-phd/complex-analysis-phd-2009-sep/complex-analysis-phd-2009-sep.source.pdf",
       "status": "open"
     },
     {
@@ -338,7 +321,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/differential-geometry-phd/differential-geometry-phd-2007-may.pdf",
+      "source_pdf": "exams/differential-geometry-phd/differential-geometry-phd-2007-may/differential-geometry-phd-2007-may.source.pdf",
       "status": "open"
     },
     {
@@ -355,7 +338,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan.pdf",
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2000-jan/numerical-analysis-phd-2000-jan.source.pdf",
       "status": "open"
     },
     {
@@ -372,7 +355,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan.pdf",
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan/numerical-analysis-phd-2002-jan.source.pdf",
       "status": "open"
     },
     {
@@ -389,7 +372,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan.pdf",
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2002-jan/numerical-analysis-phd-2002-jan.source.pdf",
       "status": "open"
     },
     {
@@ -406,7 +389,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2025-may.pdf",
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2025-may/numerical-analysis-phd-2025-may.source.pdf",
       "status": "open"
     },
     {
@@ -423,7 +406,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug.pdf",
+      "source_pdf": "exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug/numerical-linear-algebra-first-year-2023-aug.source.pdf",
       "status": "open"
     },
     {
@@ -440,7 +423,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug.pdf",
+      "source_pdf": "exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2023-aug/numerical-linear-algebra-first-year-2023-aug.source.pdf",
       "status": "open"
     },
     {
@@ -457,7 +440,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug.pdf",
+      "source_pdf": "exams/numerical-linear-algebra-first-year/numerical-linear-algebra-first-year-2024-aug/numerical-linear-algebra-first-year-2024-aug.source.pdf",
       "status": "open"
     },
     {
@@ -474,7 +457,7 @@
       "source_pages": [
         3
       ],
-      "source_pdf": "exams/numerical-optimization-phd/numerical-optimization-phd-2026-jan.pdf",
+      "source_pdf": "exams/numerical-optimization-phd/numerical-optimization-phd-2026-jan/numerical-optimization-phd-2026-jan.source.pdf",
       "status": "open"
     },
     {
@@ -491,7 +474,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/pde-phd/pde-phd-2010-sep.pdf",
+      "source_pdf": "exams/pde-phd/pde-phd-2010-sep/pde-phd-2010-sep.source.pdf",
       "status": "open"
     },
     {
@@ -508,25 +491,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/probability-phd/probability-phd-1989-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "Problem 6 asks for the fundamental group of a pictured space. Problem 7 defines the edge identifications of a disk by a picture.",
-      "corrected_text": null,
-      "exam_id": "topology-first-year-2022-may-part-2",
-      "message": "The figures referenced in problems 6 and 7 carry information needed to answer the questions and have not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        6,
-        7
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2022-may-part-2.pdf",
+      "source_pdf": "exams/probability-phd/probability-phd-1989-may/probability-phd-1989-may.source.pdf",
       "status": "open"
     },
     {
@@ -543,7 +508,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/algebra-first-year/algebra-first-year-2023-may-part-1.pdf",
+      "source_pdf": "exams/algebra-first-year/algebra-first-year-2023-may-part-1/algebra-first-year-2023-may-part-1.source.pdf",
       "status": "open"
     },
     {
@@ -560,7 +525,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-1993-jan/analysis-phd-1993-jan.source.pdf",
       "status": "open"
     },
     {
@@ -577,7 +542,7 @@
       "source_pages": [
         2
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-1997-jan/analysis-phd-1997-jan.source.pdf",
       "status": "open"
     },
     {
@@ -594,7 +559,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-2002-may/analysis-phd-2002-may.source.pdf",
       "status": "open"
     },
     {
@@ -611,7 +576,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may.pdf",
+      "source_pdf": "exams/numerical-analysis-phd/numerical-analysis-phd-2013-may/numerical-analysis-phd-2013-may.source.pdf",
       "status": "open"
     },
     {
@@ -628,7 +593,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1.pdf",
+      "source_pdf": "exams/topology-first-year/topology-first-year-2013-jan-part-1/topology-first-year-2013-jan-part-1.source.pdf",
       "status": "open"
     },
     {
@@ -645,7 +610,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2020-may-part-2.pdf",
+      "source_pdf": "exams/topology-first-year/topology-first-year-2020-may-part-2/topology-first-year-2020-may-part-2.source.pdf",
       "status": "open"
     },
     {
@@ -662,92 +627,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/topology-first-year/topology-first-year-2025-aug-part-2.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "“Let \\(X\\) be the space obtained by filling in two discs in the torus, as shown (the discs lie inside the surface of the torus).”",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2022-aug",
-      "message": "The problem depends on a figure showing the placement of the two discs in the torus; the visual information has not been reconstructed.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        5
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2022-aug.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "Consider the torus \\(T=S^1\\times S^1\\) with the following \\(\\Delta\\)-complex structure.",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2023-may",
-      "message": "The diagram supplies essential information about the torus’s Δ-complex structure, including simplex labels and edge orientations, and is not reconstructed in the text extraction.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        2
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2023-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "“Consider the Δ-complex X drawn below. (Note the orientation of the three edges carefully.)”",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2026-jan",
-      "message": "The diagram defining the Δ-complex, including its edge orientations and identifications, carries information needed to solve the problem and is not represented in the extracted text.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2026-jan.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The problem refers to the Δ-complex drawn below.",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2025-may",
-      "message": "The diagram of the Δ-complex contains edge orientations and identifications needed to compute its simplicial homology.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        3
-      ],
-      "source_pages": [
-        1
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
-      "status": "open"
-    },
-    {
-      "category": "visual-content",
-      "context": "The problem identifies A as the circle shown in the figure.",
-      "corrected_text": null,
-      "exam_id": "topology-phd-2025-may",
-      "message": "The figure specifies how the circle A is embedded in the solid torus and is necessary for the retraction problem.",
-      "origin": "extraction",
-      "original_text": null,
-      "problem_indices": [
-        12
-      ],
-      "source_pages": [
-        2
-      ],
-      "source_pdf": "exams/topology-phd/topology-phd-2025-may.pdf",
+      "source_pdf": "exams/topology-first-year/topology-first-year-2025-aug-part-2/topology-first-year-2025-aug-part-2.source.pdf",
       "status": "open"
     },
     {
@@ -764,7 +644,7 @@
       "source_pages": [
         1
       ],
-      "source_pdf": "exams/analysis-phd/analysis-phd-1994-oct.pdf",
+      "source_pdf": "exams/analysis-phd/analysis-phd-1994-oct/analysis-phd-1994-oct.source.pdf",
       "status": "open"
     }
   ],

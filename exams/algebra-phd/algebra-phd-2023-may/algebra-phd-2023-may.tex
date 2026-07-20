@@ -1,0 +1,149 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Algebra PhD Exam, May 2023},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2023\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Algebra PhD Exam, May 2023}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Let~\(K\) be the splitting field of \(x^7-2\) over~\(\mathbb{Q}\). What is \([K:\mathbb{Q}]\)? Justify your answer.
+\item
+Give an example of a Galois extension of \(\mathbb{Q}(\zeta_5)\) with degree~\(5\) (where \(\zeta_5\) is a primitive 5th root of unity). Give an example of a Galois extension of~\(\mathbb{Q}\) with degree~\(5\). Justify your answers.
+\item
+Let~\(K\) be a field and~\(G\) a finite subgroup of \(\operatorname{Aut}(K)\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+What does the “theorem of the fixed field” say about \([K:K^G]\)?
+\item[\textnormal{(ii)}]
+Use the theorem of the fixed field to show that if \(K/F\) is a finite extension of fields then \(\#\operatorname{Aut}(K/F)\leq [K:F]\) with equality if and only if~\(F\) is the fixed field of \(\operatorname{Aut}(K/F)\).
+\item[\textnormal{(iii)}]
+Use the theorem of the fixed field to show that if \(F=K^G\) then \(K/F\) is a Galois extension with Galois group~\(G\).
+\end{examsubparts}
+\item
+Let \(\mathrm{Groups}\) denote the category of groups and \(\mathrm{Sets}\) denote the category of sets.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Use free groups to construct a left adjoint to the forgetful functor \(U:\mathrm{Groups}\to\mathrm{Sets}\). (You can skip checking “naturality” i.e. compatibility with morphisms.)
+\item[\textnormal{(ii)}]
+Show that the functor \(F:\mathrm{Groups}\to\mathrm{Sets}\) defined by 
+\[
+F(G)=\{(x,y)\in G\times G:xyx^{-1}y^{-1}=1\}
+\]
+ is a representable functor. (Again, you can skip checking “naturality”.)
+\end{examsubparts}
+\item
+Let~\(k\) be a field. For a~\(k\)-vector space~\(V\), recall that the dual vector space \(V^*\) is defined to be the~\(k\)-vector space of linear functionals on~\(V\), i.e. linear transformations from~\(V\) to~\(k\).
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Construct a natural linear transformation \(\psi:V^*\otimes_k W^*\to(V\otimes_k W)^*\).
+\item[\textnormal{(ii)}]
+Show that~\(\psi\) is an isomorphism if~\(V\) and~\(W\) are finite dimensional.
+\end{examsubparts}
+\item
+Let~\(R\) be a unital ring.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+State at least two equivalent definitions of a projective~\(R\)-module. (You don’t need to show they are equivalent, but you should include any definition you want to use in the next part.)
+\item[\textnormal{(ii)}]
+Let~\(M\) and~\(N\) be~\(R\)-modules with \(M\subset N\). If~\(M\) is projective and \(N/M\) is projective, prove that~\(N\) is projective.
+\end{examsubparts}
+\item
+Are the functors \(F(A)=\operatorname{Hom}_{\mathbb{Z}}(A,\mathbb{Q}/\mathbb{Z})\) and \(G(A)=\operatorname{Hom}_{\mathbb{Z}}(A,\mathbb{Z})\) from the category of~\(\mathbb{Z}\)-modules to the category of~\(\mathbb{Z}\)-modules exact? Justify your answer.
+\item
+Prove that the intersection of all prime ideals in a commutative ring is the nilradical. (Suggestion: for one direction, given a non-nilpotent element~\(a\) consider the set of all ideals not containing any power of~\(a\).)
+\item
+Let~\(\mathbb{R}\) and~\(\mathbb{C}\) denote the real and complex numbers as usual.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Give an example of two different maximal ideals of \(\mathbb{R}[x]\) which have the same zero set in the affine line \(\mathbb{A}^1_{\mathbb{R}}\).
+\item[\textnormal{(ii)}]
+Give an example of two ideals of \(\mathbb{C}[x]\) which have the same zero set in \(\mathbb{A}^1_{\mathbb{C}}\).
+\item[\textnormal{(iii)}]
+State Hilbert’s Nullstellensatz.
+\end{examsubparts}
+\item
+Let~\(R\) be a commutative ring and~\(D\) a multiplicatively closed subset of~\(R\) containing~\(1\). State the universal property for the localization \(D^{-1}R\), show that any two rings satisfying the universal property are isomorphic, and construct a ring satisfying the universal property. (Checking the construction is well-defined will involve a variety of verifications which you can skip. But do check it satisfies the universal property.)
+\item
+Give an example of the following, and briefly justify your answers:
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+A discrete valuation ring whose field of fractions is not of characteristic zero.
+\item[\textnormal{(ii)}]
+A Dedekind domain that is not a unique factorization domain.
+\end{examsubparts}
+\end{examproblems}
+\end{document}

@@ -1,0 +1,147 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Analysis PhD Exam, January 2026},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 2026\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Analysis PhD Exam, January 2026}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of eight.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Do two of three.
+\begin{examsubparts}
+\item[\textnormal{(i)}]
+Give an example of a Lebesgue measurable set \(E\subseteq[0,1]\) that is closed, has positive measure, but contains no non-trivial interval or explain why no such example exists.
+\item[\textnormal{(ii)}]
+Is the function \(g:\mathbb R\to\mathbb R\) defined by \(g(x)=\frac{1}{1+x^2}\) the Hardy–Littlewood maximal function of an \(L^1(\mathbb R)\) function~\(f\)?
+\item[\textnormal{(iii)}]
+Does there exist a measure space \((X,\mathcal M,\mu)\) and a nested decreasing sequence \((E_n)_{n=1}^{\infty}\) of measurable sets such that 
+\[
+\lim_{n\to\infty}\mu(E_n)\ne\mu\left(\bigcap_{n=1}^{\infty}E_n\right)?
+\]
+\end{examsubparts}
+\item
+Suppose \(f:[0,1]\times[0,1]\to\mathbb R\). Show that if the following conditions hold, then \(F:[0,1]\to\mathbb R\) defined by 
+\[
+F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
+\]
+ is continuous. Here~\(\lambda\) denotes Lebesgue measure on \(\mathbb R\).
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+For each \(x\in[0,1]\) the function \(g_x(y)=f(x,y)\) is continuous;
+\item[\textnormal{(b)}]
+For each \(y\in[0,1]\) the function \(h_y(x)=f(x,y)\) is continuous; and
+\item[\textnormal{(c)}]
+\(f\) is bounded.
+\end{examsubparts}
+\item
+Let \((X,\mathcal M)\) denote a measurable space and let \(P(X)\) denote the power set of~\(X\). Prove, if \(\mathcal M\ne P(X)\) and \(\{x\}\in\mathcal M\) for each \(x\in X\), then there exists an \(A\notin\mathcal M\otimes\mathcal M\) such that \([A]_x,[A]^y\in\mathcal M\) for all \(x,y\in X\). Suggestion: First show \(\delta:X\to X\times X\) defined by \(\delta(x)=(x,x)\) is measurable from \((X,\mathcal M)\) to \((X\times X,\mathcal M\otimes\mathcal M)\).
+\item
+Suppose \((X,\mathcal M,\mu)\) is a measure space and \(f,g:X\to[0,\infty)\) are measurable. Show:
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(\mu_f:\mathcal M\to[0,\infty]\) defined by \(\mu_f(A)=\int\chi_Af\,d\mu=\int_Af\,d\mu\) is a measure; and
+\item[\textnormal{(b)}]
+\(\int g\,d\mu_f=\int gf\,d\mu\).
+\end{examsubparts}
+\item
+Do two of three. Short answer: you do not need to give a detailed proof, just a brief explanation.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+If \(a_1,\ldots,a_n\) are nonnegative real numbers, must it be the case that 
+\[
+\left(\sum_{j=1}^n a_j\right)^6\le n^5\sum_{j=1}^n a_j^6?
+\]
+\item[\textnormal{(b)}]
+Explain why, given \(x\in[0,1]\), the mapping \(E_x:C([0,1])\to\mathbb C\) defined by \(E_x(f)=f(x)\) is a bounded linear functional. Is the dual of the Banach space \(C([0,1])\) separable?
+\item[\textnormal{(c)}]
+Give an example where the Radon–Nikodym Theorem fails without the sigma-finite hypothesis.
+\end{examsubparts}
+\item
+Let \(\mathbb C[x]\) denote the complex vector space of polynomials in~\(x\). Does there exist a norm \(\|\cdot\|\) on \(\mathbb C[x]\) such that \((\mathbb C[x],\|\cdot\|)\) is a Banach space. Provide a proof for your answer.
+\item
+Suppose \(\phi,\psi\) are bounded linear functionals on a Hilbert space~\(V\). Show, if \(\|\phi+\psi\|=\|\phi\|+\|\psi\|\), then one of \(\phi,\psi\) is a multiple of the other. Is the result still true if~\(V\) is only assumed to be a Banach space?
+\item
+Show if \(f\in L^1(\mathbb R)\) and \(g\in L^\infty(\mathbb R)\), then the convolution \(f*g\) is continuous. Let \(E\subseteq[0,1]\) be a Lebesgue measurable set of positive measure and let 
+\[
+-E=\{-x:x\in E\}.
+\]
+ By considering the function \(h=\chi_{-E}*\chi_E\) or otherwise, show 
+\[
+E-E=\{x-y:x,y\in E\}
+\]
+ contains an open interval.
+\end{examproblems}
+\end{document}

@@ -1,0 +1,146 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  pdfstandard=ua-2,
+  lang=en-US,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE,tabsorder=structure}
+}
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.68in,includefoot]{geometry}
+\usepackage{newcomputermodern}
+\usepackage{amsmath,amscd,mathtools}
+\providecommand{\square}{\mdlgwhtsquare}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Topology First-Year Exam, May 2013, Part 1},
+  pdfauthor={University of Florida Department of Mathematics},
+  pdfsubject={Graduate mathematics examination},
+  pdfdisplaydoctitle=true,
+  bookmarksopen=true
+}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.28em}
+\setlength{\emergencystretch}{3em}
+\setlength{\leftmargini}{2.15em}
+\setlength{\leftmarginii}{2.65em}
+\setlength{\leftmarginiii}{3em}
+\renewcommand{\labelenumi}{\textbf{\theenumi.}}
+\pagestyle{empty}
+\raggedbottom
+\allowdisplaybreaks
+\newenvironment{examproblems}[1]{%
+  \begin{enumerate}%
+  \setcounter{enumi}{#1}%
+  \setlength{\topsep}{0.35em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.48em}%
+  \setlength{\parsep}{0.18em}%
+}{\end{enumerate}}
+\newenvironment{examsubparts}{%
+  \begin{enumerate}%
+  \setlength{\topsep}{0.18em}%
+  \setlength{\partopsep}{0pt}%
+  \setlength{\itemsep}{0.16em}%
+  \setlength{\parsep}{0.1em}%
+}{\end{enumerate}}
+\newenvironment{examinstructions}{%
+  \par\begingroup\itshape
+}{%
+  \par\endgroup\vspace{0.18em}
+}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}%
+  {-1.25ex plus -.25ex minus -.1ex}%
+  {0.55ex plus .1ex}%
+  {\normalfont\large\bfseries}}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip -1.2em%
+  {\footnotesize\bfseries
+    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
+  \vskip 0.18em%
+  \tagstructbegin{tag=Title}%
+    {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2013, Part 1\par}%
+  \tagstructend%
+  \vskip 0.35em%
+  \tagmcbegin{artifact}%
+    \hrule height 1pt%
+  \tagmcend%
+  \vskip 0.55em%
+}
+\makeatother
+\title{Topology First-Year Exam, May 2013, Part 1}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\begin{examinstructions}
+Work the following problems and show all work. Support all statements to the best of your ability.
+\end{examinstructions}
+\begin{examproblems}{0}
+\item
+Prove that the spaces \([0,1]\) and \([0,1)\) are not homeomorphic.
+\item
+Let~\(X\) be a connected normal topological space having more than one point. Prove that~\(X\) is uncountable.
+\item
+Let \(f:X\to Y\) be a continuous map to a Hausdorff space. Prove that the graph of~\(f\), \(G=\{(x,f(x))\mid x\in X\}\), is a closed subset of \(X\times Y\).
+\item
+This problem has two parts.
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+Let~\(X\) be a compact space. Show that for every topological imbedding \(f:X\to Y\) into a Hausdorff space the image \(f(X)\) is closed in~\(Y\).
+\item[\textnormal{(b)}]
+Suppose that a normal topological space~\(X\) has the property that for every topological imbedding \(f:X\to Y\), the image \(f(X)\) is closed in~\(Y\). Does it follow that~\(X\) is compact?
+\end{examsubparts}
+\item
+Is every closed subset~\(A\) of a separable space~\(X\) separable itself if
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+\(X=\mathbb{R}\)?
+\item[\textnormal{(b)}]
+\(X=\mathbb{R}\times\mathbb{R}\)?
+\item[\textnormal{(c)}]
+\(X=\mathbb{R}_\ell\)?
+\item[\textnormal{(d)}]
+\(X=\mathbb{R}_\ell\times\mathbb{R}_\ell\)?
+\end{examsubparts}
+\item
+Does there exist a covering map \(p:\mathbb{R}^2\to\mathbb{RP}^2\) from the Euclidean plane to the projective plane?
+\end{examproblems}
+\begin{examinstructions}
+Answer the following with complete definitions or statements or short proofs.
+\end{examinstructions}
+\begin{examproblems}{6}
+\item
+State the Tietze Extension Theorem.
+\item
+Is the space \(\mathbb{R}^\omega\) connected in the uniform topology?
+\item
+Does there exist a continuous surjective map from the 2-sphere \(S^2\) to the punctured square \(([-1,1]\times[-1,1])\setminus\{(0,0)\}\)?
+\item
+Is every connected space path connected?
+\item
+What is a basis of a topology? What is a subbasis?
+\item
+State the Baire Category Theorem.
+\item
+Is the unit circle \(S^1=\{x\in\mathbb{R}^2\mid \lVert x\rVert=1\}\) a
+\begin{examsubparts}
+\item[\textnormal{(a)}]
+retract of \(\mathbb{R}^2\)?
+\item[\textnormal{(b)}]
+retract of \(\mathbb{R}^2\setminus\{(2,0)\}\)?
+\item[\textnormal{(c)}]
+deformation retract of \(\mathbb{R}^2\setminus\{(0,0)\}\)?
+\item[\textnormal{(d)}]
+deformation retract of \(\mathbb{R}^2\setminus\{(0,0),(2,0)\}\)?
+\item[\textnormal{(e)}]
+retract of \(\mathbb{R}^2\setminus\{(0,0),(2,0)\}\)?
+\end{examsubparts}
+\item
+State the Brouwer fixed point theorem. Does every continuous map \(f:[0,1]\times[0,1]\to[0,1)\times[0,1)\) have a fixed point?
+\item
+Can the space of irrationals in the subspace topology be presented as a countable union of nowhere dense subsets?
+\end{examproblems}
+\end{document}

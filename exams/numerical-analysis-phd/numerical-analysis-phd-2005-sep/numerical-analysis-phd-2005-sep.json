@@ -1,0 +1,207 @@
+{
+  "schema_version": 3,
+  "id": "numerical-analysis-phd-2005-sep",
+  "subject": "PhD Numerical Analysis",
+  "subject_tag": "numerical-analysis-phd",
+  "year": 2005,
+  "month": "september",
+  "part": null,
+  "pdf_url": "https://gma.math.ufl.edu/wp-content/uploads/sites/130/PhD_NumericalAnalysis_2005_09.pdf",
+  "content": [
+    {
+      "type": "instructions",
+      "text": "Do any eight of the ten problems below."
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "For solving \\(dy/dt=f(t,y)\\), consider a one-step method of the form\n\\[\ny_1=y_0+h\\Phi(t_0,y_0,h).\n\\]\nFor any \\(t_0\\), it computes an approximation \\(y_1\\) to \\(y(t_0+h)\\), given \\(y(t_0)=y_0\\). Assuming enough smoothness on \\(f\\), study the local truncation error of Runge–Kutta methods for which\n\\[\n\\Phi(t_0,y_0,h)=\\alpha_1k_1+\\alpha_2k_2,\n\\]\nwhere\n\\[\nk_1=f(t_0,y_0),\n\\]\nand\n\\[\nk_2=f(t_0+\\mu h,y_0+\\mu hk_1).\n\\]\nUnder what conditions on the constants \\(\\alpha_1,\\alpha_2\\), and \\(\\mu\\) do we get second order methods?"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Prove that any polynomial \\(q\\) of degree at most \\(n-1\\) satisfies\n\\[\n\\sum_{i=0}^n q(x_i)\\prod_{\\substack{j=0\\\\j\\ne i}}^n\\frac{1}{x_i-x_j}=0,\n\\]\nfor any distinct \\(n+1\\) numbers \\(x_i\\), \\(i=0,1,\\ldots,n\\). (Suggestion: Identify the left hand side as a divided difference.)"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p_2(x)\\) be the quadratic polynomial that interpolates \\(f(x)\\) at nodes \\(x=0,h\\), and \\(2h\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Approximating\n\\[\nQ=\\int_0^{3h}f(x)\\,dx\n\\]\nby\n\\[\nQ_h=\\int_0^{3h}p_2(x)\\,dx,\n\\]\nderive a quadrature rule: Explicitly calculate \\(w_1,w_2,w_3\\) so that\n\\[\nQ_h=w_1f(0)+w_2f(h)+w_3f(2h).\n\\]",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Assuming that \\(f(x)\\) is four times continuously differentiable, show that\n\\[\nQ-Q_h=\\frac{3}{8}h^4f'''(0)+O(h^5).\n\\]",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Denote the complete (or clamped) and natural cubic splines interpolating \\(f\\in C^2[a,b]\\) at knots \\(t_0<t_1<\\cdots<t_n\\) by \\(s_c(t)\\) and \\(s_n(t)\\), respectively."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that\n\\[\n\\int_a^b|s_c''(x)|^2\\,dx\\leq\\int_a^b|f''(x)|^2\\,dx.\n\\]\nState an analogous inequality for \\(s_n\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Which of the two interpolating splines has smaller “energy”, i.e., which of \\(\\int_a^b|s_c''(x)|^2\\,dx\\) and \\(\\int_a^b|s_n''(x)|^2\\,dx\\) is smaller?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(p>0\\) and\n\\[\nx=\\sqrt{p+\\sqrt{p+\\sqrt{p+\\cdots}}},\n\\]\nwhere all the square roots are positive. Let \\(F(y)=\\sqrt{p+y}\\). (How is the fixed point of \\(F\\) related to \\(x\\)?)"
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Consider the fixed point iteration \\(x_{n+1}=F(x_n)\\). Prove that if the initial iterate \\(x_0\\) satisfies \\(x_0+p>0\\) then all iterates remain on the same side of \\(x\\) as \\(x_0\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that the fixed point iteration converges for all choices of initial guesses greater than \\(-p+1/4\\).",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Whenever the fixed point iteration converges, what is its order of convergence?",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Consider the matrix \\(A=uv^*\\) where \\(u\\) and \\(v\\in\\mathbb{C}^n\\). Under what condition on \\(u\\) and \\(v\\) is \\(A\\) a projector?",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Show that the Householder matrix \\(H=I-2ww^*\\) where \\(\\lVert w\\rVert=1\\) is unitary.",
+            "subparts": []
+          },
+          {
+            "label": "(c)",
+            "text": "Given a vector \\(x\\in\\mathbb{C}^n\\) and an integer \\(k\\) with \\(1<k<n\\), derive a formula for a Householder matrix with the property that \\((Hx)_i=0\\) for \\(i>k\\) and \\((Hx)_i=x_i\\) for \\(i<k\\). Be sure to choose the signs so that the formula is numerically stable.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Consider the conjugate gradient algorithm for solving \\(Ax=b\\) for a symmetric positive definite \\(A\\in\\mathbb{R}^{m\\times m}\\)."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "State a relationship between the \\(n\\)-th iterate of the algorithm and the best approximation to \\(x\\) from a Krylov space (be sure to specify the norm).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(A\\) has only \\(n\\leq m\\) distinct eigenvalues then the iteration (in the absence of round off errors) converges to the exact solution \\(x\\) in at most \\(n\\) steps no matter what the initial iterate is. (You may use 7a.)",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(P\\) and \\(Q\\) be two \\(m\\times m\\) orthogonal projectors."
+          }
+        ],
+        "subparts": [
+          {
+            "label": "(a)",
+            "text": "Prove that \\(\\lVert P-Q\\rVert_2\\leq 1\\).",
+            "subparts": []
+          },
+          {
+            "label": "(b)",
+            "text": "Prove that if \\(\\lVert P-Q\\rVert_2<1\\) then the ranges of \\(P\\) and \\(Q\\) have equal dimensions.",
+            "subparts": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "Let \\(P\\) and \\(Q\\) be Hermitian positive definite matrices. Prove that\n\\[\nx^*Px\\leq x^*Qx,\\qquad\\text{for all }x\\in\\mathbb{C}^n,\n\\]\nif and only if\n\\[\nx^*Q^{-1}x\\leq x^*P^{-1}x,\\qquad\\text{for all }x\\in\\mathbb{C}^n.\n\\]"
+          }
+        ],
+        "subparts": []
+      }
+    },
+    {
+      "type": "problem",
+      "problem": {
+        "body": [
+          {
+            "type": "text",
+            "text": "State the Rayleigh quotient iteration. Apply it to the \\(2\\times2\\) real matrix\n\\[\nA=\\begin{bmatrix}\\lambda_1&0\\\\0&\\lambda_2\\end{bmatrix},\n\\]\nwhere \\(\\lambda_1\\ne\\lambda_2\\). Find the subset \\(S\\subseteq\\mathbb{R}^2\\) having the property that the iteration applied to this matrix with initial guesses in \\(S\\) do not converge. Is \\(S\\) a set of measure zero?"
+          }
+        ],
+        "subparts": []
+      }
+    }
+  ]
+}
