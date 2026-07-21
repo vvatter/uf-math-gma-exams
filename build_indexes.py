@@ -498,6 +498,7 @@ def render_subject_index(subject_tag: str, sources: Iterable[SourceExam]) -> str
     lines.append("      <table>")
     noun = "exam" if len(exams) == 1 else "exams"
     has_practice = any(source.practice_variant is not None for source in exams)
+    has_parts = any(source.part is not None for source in exams)
     ordering = (
         "newest first; undated practice exams last"
         if has_practice
@@ -513,7 +514,12 @@ def render_subject_index(subject_tag: str, sources: Iterable[SourceExam]) -> str
                 if has_practice
                 else '            <th scope="col">Date</th>'
             ),
-            '            <th scope="col">Part</th>',
+        ]
+    )
+    if has_parts:
+        lines.append('            <th scope="col">Part</th>')
+    lines.extend(
+        [
             '            <th scope="col">Accessible HTML</th>',
             '            <th scope="col">Archived PDF</th>',
             "          </tr>",
@@ -533,18 +539,23 @@ def render_subject_index(subject_tag: str, sources: Iterable[SourceExam]) -> str
             )
         else:
             raise ValueError(f"exam has neither a date nor a practice variant: {source.id}")
-        part = (
-            f"Part {source.part}"
-            if source.part is not None
-            else '<span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span>'
-        )
         html_path = f"{source.id}/index.html"
         pdf_path = f"{source.id}/{source.id}.source.pdf"
         lines.extend(
             [
                 "          <tr>",
                 f'            <th scope="row">{row_heading}</th>',
-                f"            <td>{part}</td>",
+            ]
+        )
+        if has_parts:
+            part = (
+                f"Part {source.part}"
+                if source.part is not None
+                else '<span aria-hidden="true">&mdash;</span><span class="sr-only">Not applicable</span>'
+            )
+            lines.append(f"            <td>{part}</td>")
+        lines.extend(
+            [
                 f'            <td><a href="{escape(html_path, quote=True)}">Read exam</a></td>',
                 f'            <td><a href="{escape(pdf_path, quote=True)}">View PDF</a></td>',
                 "          </tr>",

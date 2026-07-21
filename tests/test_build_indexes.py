@@ -179,6 +179,18 @@ class IndexRenderingTests(unittest.TestCase):
         self.assertNotIn("gma.math.ufl.edu", rendered)
         self.assertLess(rendered.index("Project source"), rendered.index("All exam subjects"))
 
+    def test_subject_index_omits_part_column_when_no_exam_has_parts(self) -> None:
+        exams = [
+            source("algebra-phd", "PhD Algebra", 2025, "january"),
+            source("algebra-phd", "PhD Algebra", 2024, "may"),
+        ]
+
+        rendered = render_subject_index("algebra-phd", exams)
+
+        self.assertNotIn('<th scope="col">Part</th>', rendered)
+        self.assertNotIn("Not applicable", rendered)
+        self.assertEqual(rendered.count("<td>"), 4)
+
     def test_subject_index_puts_undated_practice_exams_last(self) -> None:
         dated = source("algebra-first-year", "First Year Algebra", 2013, "january", 1)
         practice_a_1 = practice_source("A", 1)
