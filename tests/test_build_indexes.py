@@ -266,7 +266,7 @@ class IndexRenderingTests(unittest.TestCase):
         )
 
         self.assertIn("<h1>Known or Suspected Errors</h1>", rendered)
-        self.assertIn("mathjax@4/tex-chtml.js", rendered)
+        self.assertIn("mathjax@4.1.3/tex-chtml.js", rendered)
         self.assertIn("AI-assisted extraction", rendered)
         self.assertIn("have not been reviewed by a human", rendered)
         self.assertNotIn("University of Florida faculty", rendered)

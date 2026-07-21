@@ -626,7 +626,9 @@ Initial extraction results remain provisional until the later verification phase
 archive validator additionally checks every PDF hash, JSON, HTML, and site-index
 set, absolute review index, source reference in the review logs, review page number, and expression
 using the pinned MathJax version before publication begins. It accepts exam IDs for a
-focused validation run and no IDs for the complete archive.
+focused validation run and no IDs for the complete archive. Its verified, on-demand
+MathJax cache contains only the TeX input, CommonHTML output, lightweight DOM adapter,
+and required font metrics, avoiding a full npm installation and `node_modules` tree.
 
 ## Presentation Is Downstream
 

@@ -109,12 +109,17 @@ python3 -m pip install "openai>=2.0" "pydantic>=2.8" "PyMuPDF>=1.26"
 export OPENAI_API_KEY="your-key"
 ```
 
-Archive validation also requires Node.js 20 or newer. Install the exact MathJax version
-recorded in `package-lock.json` with:
+Archive validation also requires Node.js 20 or newer, but it does not require npm or a
+`node_modules` directory. Prepare the lightweight validator with:
 
 ```sh
-npm ci
+python3 prepare_mathjax.py
 ```
+
+This downloads the official MathJax 4.1.3 packages, verifies their pinned integrity
+hashes, and retains only the TeX input, CommonHTML output, lightweight DOM adapter, and
+font-metric files needed for validation. The resulting ignored cache is about 2 MiB.
+`validate_archive.py` prepares it automatically when it is absent.
 
 Newly typeset accessible PDFs require a full TeX Live 2026 installation. The current
 reference build uses LuaHBTeX 1.24.0 and `latexmk`; full MacTeX 2026 includes the

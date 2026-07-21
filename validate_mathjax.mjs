@@ -1,15 +1,26 @@
 #!/usr/bin/env node
 
 import readline from 'node:readline';
+import {pathToFileURL} from 'node:url';
 
 const failures = [];
+const [bundlePath, fontPath] = process.argv.slice(2);
+
+if (!bundlePath || !fontPath) {
+  process.stderr.write('usage: node validate_mathjax.mjs BUNDLE_PATH FONT_PATH\n');
+  process.exit(2);
+}
+
+const bundleUrl = pathToFileURL(`${bundlePath}/`).href.replace(/\/$/, '');
+const fontUrl = pathToFileURL(`${fontPath}/`).href.replace(/\/$/, '');
 
 global.MathJax = {
   loader: {
-    paths: {mathjax: '@mathjax/src/bundle'},
-    load: ['adaptors/liteDOM'],
+    paths: {mathjax: bundleUrl, 'mathjax-newcm': fontUrl},
+    load: ['input/tex', 'output/chtml', 'adaptors/liteDOM'],
     require: (file) => import(file),
   },
+  output: {font: fontUrl},
   tex: {
     packages: {'[-]': ['noundefined']},
     formatError(_jax, error) {
@@ -27,7 +38,7 @@ global.MathJax = {
 };
 
 try {
-  await import('@mathjax/src/bundle/tex-chtml.js');
+  await import(`${bundleUrl}/startup.js`);
   await MathJax.startup.promise;
 
   const input = readline.createInterface({input: process.stdin, crlfDelay: Infinity});

@@ -5,6 +5,7 @@ __pycache__/
 *.part
 build/
 TEMPNEWPRACTICE/
+.cache/
 node_modules/
 TMPLOOK/
 missing-figures/

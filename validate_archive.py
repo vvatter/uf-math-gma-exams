@@ -14,6 +14,8 @@ from typing import Iterator
 import pymupdf
 from pydantic import ValidationError
 
+from prepare_mathjax import MathJaxSetupError, prepare_mathjax
+
 from build_indexes import expected_index_pages
 from extract_exams import (
     REVIEW_FILES,
@@ -110,15 +112,26 @@ def math_expressions(exam: ExamRecord) -> Iterator[dict[str, object]]:
 
 
 def validate_mathjax(
-    expressions: list[dict[str, object]], script: Path | None = None
+    expressions: list[dict[str, object]],
+    script: Path | None = None,
+    cache_root: Path | None = None,
 ) -> list[str]:
     script = script or Path(__file__).resolve().with_name("validate_mathjax.mjs")
+    try:
+        cache_root = cache_root or prepare_mathjax()
+    except MathJaxSetupError as error:
+        return [f"MathJax validator could not be prepared: {error}"]
     input_text = "".join(
         json.dumps(expression, ensure_ascii=False) + "\n" for expression in expressions
     )
     try:
         result = subprocess.run(
-            ["node", str(script)],
+            [
+                "node",
+                str(script),
+                str(cache_root / "src" / "bundle"),
+                str(cache_root / "font"),
+            ],
             input=input_text,
             capture_output=True,
             check=False,
@@ -131,7 +144,7 @@ def validate_mathjax(
         failures = output["failures"]
     except (KeyError, TypeError, ValueError):
         detail = result.stderr.strip() or result.stdout.strip() or "no diagnostic output"
-        return [f"MathJax validator could not run; use npm ci: {detail}"]
+        return [f"MathJax validator could not run: {detail}"]
     errors = [
         f"{item['exam_id']}: {item['location']}: MathJax: {item['message']} "
         f"in {item['tex']!r}"
@@ -139,7 +152,7 @@ def validate_mathjax(
     ]
     if result.returncode not in (0, 1) and not errors:
         detail = result.stderr.strip() or f"exit status {result.returncode}"
-        errors.append(f"MathJax validator could not run; use npm ci: {detail}")
+        errors.append(f"MathJax validator could not run: {detail}")
     return errors
 
 

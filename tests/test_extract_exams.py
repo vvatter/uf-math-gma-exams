@@ -574,7 +574,7 @@ class ExtractionSchemaTests(unittest.TestCase):
         self.assertIn('<span class="subpart-label">i.</span>', rendered)
         self.assertIn(r"Let \(G &lt; H\) and prove the claim.", rendered)
         self.assertIn("computer-modern@0.1.3/cmu-serif.css", rendered)
-        self.assertIn("mathjax@4/tex-chtml.js", rendered)
+        self.assertIn("mathjax@4.1.3/tex-chtml.js", rendered)
         self.assertNotIn("gma.math.ufl.edu", rendered)
         self.assertIn(
             '<a href="https://github.com/vvatter/uf-math-gma-exams">Project source</a>',

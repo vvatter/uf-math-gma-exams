@@ -23,6 +23,8 @@ from openai import OpenAI
 import pymupdf
 from pydantic import BaseModel, ConfigDict, Field
 
+from prepare_mathjax import MATHJAX_VERSION
+
 
 DEFAULT_MODEL = "gpt-5.6-sol"
 PROMPT_VERSION = "exam-extraction-v17"
@@ -1058,7 +1060,9 @@ DISPLAY_MATH_BLOCK = re.compile(r"(\\\[(?:.|\n)*?\\\])")
 COMPUTER_MODERN_CSS = (
     "https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css"
 )
-MATHJAX_SCRIPT = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+MATHJAX_SCRIPT = (
+    f"https://cdn.jsdelivr.net/npm/mathjax@{MATHJAX_VERSION}/tex-chtml.js"
+)
 
 
 def render_html_text(text: str, indentation: int) -> list[str]:
