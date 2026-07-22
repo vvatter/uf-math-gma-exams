@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2022, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2022, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Do seven (7) and only seven of the following.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that a compact Hausdorff space is normal.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Say \(A \subset X\) is dense if \(\overline{A}=X\).
 \begin{examsubparts}
@@ -90,8 +108,9 @@ Show that~\(A\) is dense in~\(X\) if and only if every nonempty open subset~\(V\
 \item[\textnormal{(b)}]
 Assume that~\(X\) and~\(Y\) are topological spaces with~\(Y\) Hausdorff and~\(A\) is dense in~\(X\). Suppose that \(f:X\to Y\) and \(g:X\to Y\) are continuous functions with \(f(a)=g(a)\) for all \(a\in A\). Prove that \(f(x)=g(x)\) for all \(x\in X\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(B\subset\mathbb{R}^{\mathbb{Z}_+}\) be defined as 
+Let \(B\subset\mathbb{R}^{\mathbb{Z}_+}\) be defined as
 \[
 B=\prod_{i\in\mathbb{Z}_+}(-1,1)=(-1,1)\times(-1,1)\times(-1,1)\times\cdots.
 \]
@@ -103,8 +122,9 @@ Is~\(B\) open in the uniform topology?
 \item[\textnormal{(c)}]
 Is~\(B\) open in the product topology?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-If \((X,d)\) is a metric space and \(A\subset X\), for \(x\in X\) define 
+If \((X,d)\) is a metric space and \(A\subset X\), for \(x\in X\) define
 \[
 d(x,A)=\inf\{d(x,a):a\in A\}.
 \]
@@ -116,8 +136,10 @@ Show that \(x\in\overline{A}\) if and only if \(f(x)=0\).
 \item[\textnormal{(c)}]
 If~\(A\) is compact then for any \(x\in X\) there exists an \(a\in A\) with \(d(x,A)=d(x,a)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that \((X,d)\) is complete if and only if any nested family of nonempty closed sets \(A_n\) with \(\operatorname{diam}(A_n)\to0\) has \(\bigcap A_n\ne\emptyset\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Assume that \(f:X\to Y\) is continuous and surjective.
 \begin{examsubparts}
@@ -126,8 +148,10 @@ If~\(X\) is Lindelöf, show that~\(Y\) is also.
 \item[\textnormal{(b)}]
 If~\(X\) is separable, show that~\(Y\) is also.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 If~\(X\) and~\(Y\) are connected topological spaces, show that \(X\times Y\) is connected.
+\def\ProblemHeadingText{Problem 8.}
 \item
 In the real line~\(\mathbb{R}\) let~\(\mathcal{T}\) be the collection of all subsets~\(A\) of~\(\mathbb{R}\) such that \(\mathbb{R}-A\) is either finite or all of~\(\mathbb{R}\).
 \begin{examsubparts}

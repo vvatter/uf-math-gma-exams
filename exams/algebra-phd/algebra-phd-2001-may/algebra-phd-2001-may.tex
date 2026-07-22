@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2001}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2001\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do seven of the following eleven problems. Please do not turn in more than seven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Z\), resp. \(\mathbb Q, \mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(G\) be a finite group of order \(m\cdot n\) and~\(K\) a normal subgroup of~\(G\) of order~\(m\), where~\(m\) and~\(n\) are coprime.
 \begin{examsubparts}
@@ -88,24 +105,34 @@ Prove that~\(G\) has exactly one subgroup of order~\(m\).
 \item[\textnormal{(ii)}]
 Suppose that~\(n\) is a prime power. Is there any subgroup~\(H\) of~\(G\) such that~\(G\) is a semidirect product of~\(K\) by~\(H\)? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that any finite group of order \(616=11\cdot 8\cdot 7\) is solvable. You may assume that every group of order \(p^a q^b\), where~\(p\) and~\(q\) are primes, is solvable.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(\mathrm{GL}_2(\mathbb C)\) be the group of invertible \(2\times 2\) complex matrices under matrix multiplication and let~\(G\) be a finite subgroup of \(\mathrm{GL}_2(\mathbb C)\). Suppose that~\(G\) is simple and \(|G|\) is even. Prove that \(|G|=2\). (Hint: Consider elements of order 2 of~\(G\).)
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(A\) be a \(3\times 3\) complex matrix. Suppose that \(\operatorname{Tr}(A)=\operatorname{Tr}(A^2)=\operatorname{Tr}(A^3)=0\) (where \(\operatorname{Tr}(X)\) is the trace of the square matrix~\(X\)). Prove that \(A^{2001}=0\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(q\) be a prime power and~\(F\) a field of~\(q\) elements. Find the number \(N(q)\) of monic irreducible polynomials of degree 2 over~\(F\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(p\) be a prime. Let~\(K\) be a subfield of \(\mathbb C\) with the property: “If~\(E\) is a finite extension of~\(K\) such that \([E:K]\) is coprime to~\(p\), then \(E=K\).” Prove that if~\(F\) is any finite extension of~\(K\), then \([F:K]\) is a~\(p\)-power. (Hint: Use normal closure, Galois Theory, and Sylow’s Theorem.)
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(\xi\in\mathbb C\) be such that \(\xi^{2001}=5\). Show that \(\mathbb Q(\xi)\) cannot be contained in any cyclotomic extension of \(\mathbb Q\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Compute the integral closure~\(R\) of \(\mathbb Z\) in \(\mathbb Q(\sqrt{-5})\). Is~\(R\) a unique factorization domain? A principal ideal domain? A Dedekind domain? Justify your answer(s).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a local ring. Prove that every finitely generated projective~\(R\)-module is free.
+\def\ProblemHeadingText{Problem 10.}
 \item
 State and prove the Hilbert Nullstellensatz.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(R\) be a primitive ring such that \(ab-ba\) is nilpotent for all \(a,b\in R\). Prove that~\(R\) is a division ring.
 \end{examproblems}

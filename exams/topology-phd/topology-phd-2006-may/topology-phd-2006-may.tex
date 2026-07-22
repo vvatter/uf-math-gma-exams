@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 2006}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2006\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,32 +95,43 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Can a compact space contain a discrete infinite subspace?
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that the product of two connected spaces is connected.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Give an example of a space which is path connected but not locally connected.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Show that the Klein bottle with a deleted closed disk \(K \setminus D\) is not a retract of~\(K\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that the group \(SO(n)\) is connected in the matrix topology.
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State the Lefschetz fixed point theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Construct a map \(f:S^3 \to S^3\) of degree 3.
+\def\ProblemHeadingText{Problem 8.}
 \item
 State the Simplicial Approximation theorem.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove that for a path connected topological group~\(G\) the Euler characteristic \(\chi(G)\) is zero.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Does every function \(f:\mathbb{N} \to \mathbb{R}\) admit a continuous extension \(\bar f:\beta\mathbb{N} \to \mathbb{R}\) to the Stone–Čech compactification?
+\def\ProblemHeadingText{Problem 11.}
 \item
 What can you say about the~\(k\)-homology groups of a closed orientable~\(n\)-manifold for
 \begin{examsubparts}
@@ -113,12 +140,16 @@ What can you say about the~\(k\)-homology groups of a closed orientable~\(n\)-ma
 \item[\textnormal{(b)}]
 \(k=n-1\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 12.}
 \item
 Give a definition of the compact-open topology for the space of functions.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Let \(j:S^1 \subset S^4\) be an embedding. Can \(\pi_1(S^4 \setminus j(S^1))\) be trivial? If it is not trivial, can the fundamental group \(\pi_1(S^4 \setminus j(S^1))\) be abelian?
+\def\ProblemHeadingText{Problem 14.}
 \item
 Give a definition of the wedge of a family of topological spaces. Prove that an infinite wedge of circles is not metrizable.
+\def\ProblemHeadingText{Problem 15.}
 \item
 State the Contraction Mapping Theorem.
 \end{examproblems}

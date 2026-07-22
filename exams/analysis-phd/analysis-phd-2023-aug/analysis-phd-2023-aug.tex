@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, August 2023}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, August 2023\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Write solutions in a neat and logical fashion, giving complete reasons for all steps. You must attempt SIX problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State Tonelli’s theorem, and give an example to show that the~\(\sigma\)-finiteness hypothesis is necessary.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Give an example of each of the following, if possible. (If not possible, give a brief explanation of why.) When giving examples, be clear about what measure space you are working in.
 \begin{examsubparts}
@@ -92,10 +110,13 @@ a sequence converging almost uniformly but not essentially uniformly,
 \item[\textnormal{c)}]
 a sequence converging in \(L^1\) but not almost everywhere.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \((X,\mathcal{M},\mu)\) be a measure space. Prove that \(L^2(\mu)\) is complete (in the \(L^2\) norm).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(\mathcal{X}\) be a Banach space. Prove that every finite-dimensional subspace \(\mathcal{M}\subset\mathcal{X}\) is closed.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -104,10 +125,13 @@ State the Lebesgue–Radon–Nikodym theorem.
 \item[\textnormal{b)}]
 State and prove a version of the chain rule for Radon–Nikodym derivatives.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \((X,\mathcal{M},\mu)\) be a~\(\sigma\)-finite measure space, let \(1\leq q<p<\infty\) and suppose that \(L^q(\mu)\subseteq L^p(\mu)\). Prove that there exists a constant \(c>0\) such that, for every \(E\in\mathcal{M}\), either \(\mu(E)=0\) or \(\mu(E)\geq c\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(\mathcal{H}\) be a Hilbert space and let \(A:\mathcal{H}\to\mathcal{H}\) be a linear map (not assumed bounded). Suppose there exists another linear map \(B:\mathcal{H}\to\mathcal{H}\) (not assumed bounded) so that \(\langle Ax,y\rangle=\langle x,By\rangle\) for all \(x,y\in\mathcal{H}\). Prove that~\(A\) and~\(B\) are bounded.
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}

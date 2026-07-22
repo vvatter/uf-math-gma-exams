@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis First-Year Exam, August 2017}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, August 2017\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do all 5 (five) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f(x)=e^x\).
 \begin{examsubparts}
@@ -90,27 +107,31 @@ Find the linear minimax approximation \(P_1(x)\) to \(f(x)\) on \([0,1]\) and fi
 \item[\textnormal{(c)}]
 Find the linear least squares approximation to~\(f\) on \([0,1]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-The midpoint method for DE’s is 
+The midpoint method for DE’s is
 \[
 w_0=\alpha
 \]
- 
+
 \[
 w_{n+1}=w_n+hf\left(t_n+\frac{h}{2},w_n+\frac{h}{2}f(t_n,w_n)\right).
 \]
  Apply this method to the IVP, \(y'=\lambda y;\ y(0)=1\), with \(\lambda<0\) and find the constant~\(c\) so that \(|h\lambda|<c\) implies that \(w_n\to0\) as \(n\to\infty\).
+\def\ProblemHeadingText{Problem 3.}
 \item
-Derive this three-point formula for the second derivative. 
+Derive this three-point formula for the second derivative.
 \[
 f''(x_0)=\frac{1}{h^2}\bigl(f(x_0-h)-2f(x_0)+f(x_0+h)\bigr)-\frac{h^2}{12}f^{(4)}(\eta)
 \]
  for some \(\eta\in[x_0-h,x_0+h]\).
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(f(x)=2^x\) Let \(x_0=-1,x_1=0,x_2=1\). Find the total error bound for the degree two interpolating polynomial \(p_2(x)\) with these nodes and~\(f\) on the interval \([-1,1]\), i.e. derive a~\(K\) with 
+Let \(f(x)=2^x\) Let \(x_0=-1,x_1=0,x_2=1\). Find the total error bound for the degree two interpolating polynomial \(p_2(x)\) with these nodes and~\(f\) on the interval \([-1,1]\), i.e. derive a~\(K\) with
 \[
 \max_{t\in[-1,1]}|f(t)-p_2(t)|<K.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(g\in C^2([a,b])\) and \(p\in(a,b)\) with \(g(p)=p\), \(g'(p)=0\), \(g''(p)\ne0\).
 \begin{examsubparts}

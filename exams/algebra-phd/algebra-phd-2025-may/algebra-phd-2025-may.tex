@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,18 +98,23 @@ Answer seven problems. (If you turn in more, the first seven will be graded.) Wi
 \begin{examinstructions}
 Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(q>1\) be a power of a prime~\(p\). Prove that there exists some field~\(F\) with \(|F|=q\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Determine the Galois group of \(x^4-5\) over~\(\mathbb{Q}\), over \(\mathbb{Q}(\sqrt{5})\), and over \(\mathbb{Q}(\sqrt{5}\,i)\). Justify your answers.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be an integral domain, let~\(D\) be a divisible~\(R\)-module, and let~\(T\) be a torsion~\(R\)-module. Prove that \(D\otimes_R T=\{0\}\).
+\def\ProblemHeadingText{Problem 4.}
 \item
-Prove that the group~\(G\) which is described below using generators and relations is not solvable. 
+Prove that the group~\(G\) which is described below using generators and relations is not solvable.
 \[
 G=\langle x,y\mid x^6=y^2=1\rangle
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(R\) be a ring with identity.
 \begin{examsubparts}
@@ -104,10 +125,13 @@ Show that a free~\(R\)-module is projective.
 \item[\textnormal{(c)}]
 Give an example of a projective~\(R\)-module that is not free.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(K\) be a field. Show that any vector space over~\(K\) has a basis (do not assume the vector space has finite dimension).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove: If a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: Prove first that each prime ideal is principal, use the Chinese Remainder Theorem).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a integral domain.
 \begin{examsubparts}
@@ -116,6 +140,7 @@ Define what it means for a fractional ideal of~\(R\) to be invertible.
 \item[\textnormal{(b)}]
 Show that an invertible ideal is a projective~\(R\)-module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose \(R\subseteq S\) are integral domains and let \(s\in S\). Prove that the following are equivalent:
 \begin{examsubparts}
@@ -126,16 +151,18 @@ Suppose \(R\subseteq S\) are integral domains and let \(s\in S\). Prove that the
 \item[\textnormal{3.}]
 There exists some ring~\(T\) such that \(R\subseteq T\subseteq S\), and \(s\in T\), and~\(T\) is finitely generated as an~\(R\)-module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
-Suppose~\(R\) is a ring with identity (not necessarily commutative), \(M\) is a right~\(R\)-module and 
+Suppose~\(R\) is a ring with identity (not necessarily commutative), \(M\) is a right~\(R\)-module and
 \[
 N'\longrightarrow N\longrightarrow N''\longrightarrow 0
 \]
- is an exact sequence of left~\(R\)-modules. Show that 
+ is an exact sequence of left~\(R\)-modules. Show that
 \[
 M\otimes_R N'\longrightarrow M\otimes_R N\longrightarrow M\otimes_R N''\longrightarrow 0
 \]
  is an exact sequence of abelian groups.
+\def\ProblemHeadingText{Problem 11.}
 \item
 This problem has two parts.
 \begin{examsubparts}

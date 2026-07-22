@@ -684,10 +684,14 @@ The same semantic HTML can be adapted for WordPress publication.
 A deterministic LaTeX renderer generates a second, newly typeset presentation from the
 same JSON. It uses LuaLaTeX from TeX Live 2026, Unicode Computer Modern fonts, ordinary
 LaTeX headings and lists, and current LaTeX tagging support to produce tagged PDF 2.0
-targeting PDF/UA-2. Ordinary mathematics receives nested MathML structure. The visual
-design follows the HTML presentation: a single-line institutional header, a large
-left-aligned title with a thin rule, italic instructions, bold problem numbers, compact
-problem spacing, paper-conscious margins, and no printed page numbers.
+targeting PDF/UA-2. Ordinary mathematics receives nested MathML structure. The title
+is tagged as Heading 1. Named parts or groups are Heading 2 and the problems they
+contain are Heading 3. In exams without named groups, problems are Heading 2 so the
+document does not skip directly from Heading 1 to Heading 3. Problem headings retain
+the printed bold number and also expose labels such as “Problem 1.” to assistive
+technology. The visual design follows the HTML presentation: a single-line institutional
+header, a large left-aligned title with a thin rule, italic instructions, bold problem
+numbers, compact problem spacing, paper-conscious margins, and no printed page numbers.
 The institutional names are invisible-style links to the university and department
 websites. Only the subject-and-level portion of the title is likewise linked, without
 color or border, to the future

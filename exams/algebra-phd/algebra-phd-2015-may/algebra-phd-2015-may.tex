@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2015}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2015\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Give an example of each of the following, with some explanation.
 \begin{examsubparts}
@@ -90,6 +107,7 @@ A field extension \(L/K\) which is normal but not Galois.
 \item[\textnormal{(c)}]
 Two Galois field extensions \(L/K\) and \(M/L\) such that \(M/K\) is not Galois.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(K\) be a splitting field over~\(\mathbb{Q}\) for the polynomial \(f(X)=X^6-5\).
 \begin{examsubparts}
@@ -100,6 +118,7 @@ Give generators and relations for the group \(G=\operatorname{Gal}(K/\mathbb{Q})
 \item[\textnormal{(c)}]
 Indicate how the group generators from (b) act on the field generators from (a).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has four parts.
 \begin{examsubparts}
@@ -112,12 +131,14 @@ Define what it means for a morphism in a category~\(\mathcal{C}\) to be an isomo
 \item[\textnormal{(d)}]
 Let~\(\mathcal{R}\) be the category of commutative rings with 1, with morphisms being unitary ring homomorphisms. Prove that the canonical map \(i:\mathbb{Z}\to\mathbb{Q}\) is a monomorphism and an epimorphism in~\(\mathcal{R}\), but not an isomorphism.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Prove that the group~\(G\) defined by the generators and relations 
+Prove that the group~\(G\) defined by the generators and relations
 \[
 G=\langle x,y\mid x^4=x^2y^{-2}=xy^{-1}xy=1\rangle
 \]
  is isomorphic to the quaternion group \(Q_8\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(R\) be a commutative ring with 1 and let~\(I\) and~\(J\) be ideals in~\(R\).
 \begin{examsubparts}
@@ -126,8 +147,10 @@ Prove that there exists a surjective~\(R\)-module homomorphism \(\phi:I\otimes_R
 \item[\textnormal{(b)}]
 Give an example to show that the homomorphism~\(\phi\) does not have to be an isomorphism.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(R\) be an integral domain and let~\(M\) be a flat~\(R\)-module. Prove that~\(M\) is torsion-free as an~\(R\)-module.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(R\) be a commutative ring with 1, let~\(J\) be the Jacobson radical of~\(R\), and let~\(M\) be an~\(R\)-module such that \(JM=M\).
 \begin{examsubparts}
@@ -136,12 +159,16 @@ Prove that if~\(M\) is finitely generated then \(M=\{0\}\).
 \item[\textnormal{(b)}]
 Give an example where~\(M\) is not finitely generated and \(M\ne\{0\}\). (Hint: Let~\(R\) be a local ring.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a unique factorization domain such that any two irreducible elements of~\(R\) are associates. Prove that~\(R\) is either a discrete valuation ring or a field.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a Dedekind domain and let~\(I\) be a nonzero ideal in~\(R\). Prove that the quotient ring \(R/I\) has only finitely many ideals. Deduce that \(R/I\) is an Artinian ring.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Write down a representative for each isomorphism class of noncommutative semisimple rings with \(512=2^9\) elements.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(R\) be a ring with 1 such that every left~\(R\)-module is free. Prove that~\(R\) is a division ring. (Hint: The Wedderburn–Artin theorem is useful here.)
 \end{examproblems}

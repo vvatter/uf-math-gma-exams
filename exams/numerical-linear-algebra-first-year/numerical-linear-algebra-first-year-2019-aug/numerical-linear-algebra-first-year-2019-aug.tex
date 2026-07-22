@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, August 2019}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, August 2019\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(A \in \mathbb{C}^{m \times n}\).
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Prove or give a counterexample: \(\lVert A\rVert_2 \leq \sqrt{\lVert A\rVert_\in
 \item[\textnormal{(b)}]
 Prove or give a counterexample: \(\lVert A\rVert_2 \leq \lVert A\rVert_F\), where \(\lVert A\rVert_F\) is the Frobenius norm of~\(A\). If you prove this, make sure to justify each nontrivial step.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -96,6 +114,7 @@ Prove that the inverse of an upper-triangular matrix is upper-triangular.
 \item[\textnormal{(b)}]
 Let \(A \in \mathbb{C}^{m \times n}\) with \(m>n\). Consider the least-squares problem of finding \(x \in \mathbb{C}^n\) that minimizes \(\lVert Ax-b\rVert\) in the 2-norm. Describe a method for solving the problem efficiently, and explain (and justify) why the normal equations should not be solved.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(A \in \mathbb{C}^{m \times n}\), with \(m \geq n\) and \(\operatorname{rank}(A)=p=n \geq 3\). Let \(a_1,a_2,\ldots\) denote the columns of~\(A\).
 \begin{examsubparts}
@@ -106,20 +125,22 @@ Show the vector \(q_3\) found in part (a) is orthogonal to both \(q_1\) and \(q_
 \item[\textnormal{(c)}]
 Write an expression for the first Householder reflector \(H_1\), used to find the \(QR\) decomposition of~\(A\). Show \(H_1\) is both unitary and Hermitian.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(A \in \mathbb{C}^{m \times m}\) be Hermitian.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Show that all eigenvalues of~\(A\) are real.
 \item[\textnormal{(b)}]
-Define the stationary iterative method (a.k.a. fixed point method) 
+Define the stationary iterative method (a.k.a. fixed point method)
 \[
 x^{(k+1)}=Ax^{(k)}+b. \tag{1}
 \]
  Suppose (1) has fixed-point~\(x\), namely~\(x\) satisfies \(x=Ax+b\). Show the iteration (1) converges to~\(x\) from any starting guess \(x^{(0)}\), that is \(x^{(k)} \to x\) as \(k \to \infty\), if and only if the eigenvalues \(\lambda_i\) of~\(A\) satisfy \(|\lambda_i|<1\), \(i=1,\ldots,m\). You may use the fact that Hermitian matrix~\(A\) is unitarily diagonalizable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Consider the matrix~\(A\) given by 
+Consider the matrix~\(A\) given by
 \[
 \begin{pmatrix}
 1 & -1 & 2 & 0 \\

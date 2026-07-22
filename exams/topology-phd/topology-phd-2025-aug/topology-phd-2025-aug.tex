@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, August 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, August 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,11 +98,14 @@ Be neat and do not write too small.
 \begin{examinstructions}
 For the first five problems, show all of your work and support all statements.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c<1\) with \(d(f(x),f(y))\le c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Pick a CW complex structure on the Klein bottle~\(K\), and then use cellular homology to compute \(H_i(K;\mathbb{Z})\) for \(i=0,1,2\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -95,33 +114,45 @@ Show that the antipodal map \(-1:S^n\to S^n\) defined by \(-1(x)=-x\) has degree
 \item[\textnormal{(b)}]
 Prove that \(S^n\) has a continuous nonzero tangent vector field if and only if~\(n\) is odd.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(M\) be a compact orientable~\(n\)-manifold without boundary. Prove that if~\(n\) is odd, then the Euler characteristic \(\chi(M)\) is zero.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(M_1\) and \(M_2\) be closed connected~\(n\)-manifolds, and let \(M_1\#M_2\) be their connected sum obtained by removing a ball from each and gluing along the resulting boundary spheres. Show that there are isomorphisms \(H_i(M_1\#M_2;\mathbb{Z})\cong H_i(M_1;\mathbb{Z})\oplus H_i(M_2;\mathbb{Z})\) for \(0<i<n\), with one exception: If both \(M_1\) and \(M_2\) are nonorientable, then \(H_{n-1}(M_1\#M_2;\mathbb{Z})\) is obtained from \(H_{n-1}(M_1;\mathbb{Z})\oplus H_{n-1}(M_2;\mathbb{Z})\) by replacing one of the two \(\mathbb{Z}_2\) summands by a~\(\mathbb{Z}\) summand.
 \end{examproblems}
 \begin{examinstructions}
 Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Show that if \(g:S^2\to S^2\) is continuous and \(g(x)\ne g(-x)\) for all \(x\in S^2\), then~\(g\) is surjective.
+\def\ProblemHeadingText{Problem 7.}
 \item
 State the Tychonoff Theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let \(N_g\) be the nonorientable surface of genus~\(g\), i.e., the~\(g\)-fold connected sum of projective planes. Use the Seifert–van Kampen theorem to derive the fundamental group of \(N_g\) for \(g\ge 1\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(X\) be two unlinked circles in \(\mathbb{R}^3\) and let~\(Y\) be two simply linked circles. Show that the complements \(\mathbb{R}^3\setminus X\) and \(\mathbb{R}^3\setminus Y\) are not homotopy equivalent.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Show that if~\(n\) is even, then every map \(f:\mathbb{RP}^n\to\mathbb{RP}^n\) has a fixed point.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Let \(p_1:(\widetilde{X}_1,\widetilde{x}_1)\to(X,x_0)\) and \(p_2:(\widetilde{X}_2,\widetilde{x}_2)\to(X,x_0)\) be covering space maps, where all of the involved spaces are path-connected and locally path-connected. An isomorphism of covering spaces \(f:(\widetilde{X}_1,\widetilde{x}_1)\to(\widetilde{X}_2,\widetilde{x}_2)\) is a homeomorphism satisfying \(p_1=p_2f\). Prove the covering spaces \(p_1\) and \(p_2\) are isomorphic if and only if \(p_{1*}(\pi_1(\widetilde{X}_1,\widetilde{x}_1))=p_{2*}(\pi_1(\widetilde{X}_2,\widetilde{x}_2))\).
+\def\ProblemHeadingText{Problem 13.}
 \item
 Define what it means for a subspace \(A\subseteq X\) to be a retract. Give an example of a retract \(A\subseteq X\) that is not a deformation retract.
+\def\ProblemHeadingText{Problem 14.}
 \item
 Use the Tietze extension theorem to prove Urysohn’s lemma.
+\def\ProblemHeadingText{Problem 15.}
 \item
 What are the cohomology groups and cup product structure in \(H^*((S^2\times S^8)\#(S^4\times S^6);\mathbb{Z})\), where \(\#\) denotes the connected sum of the manifolds? You do not need to prove your answer.
 \end{examproblems}

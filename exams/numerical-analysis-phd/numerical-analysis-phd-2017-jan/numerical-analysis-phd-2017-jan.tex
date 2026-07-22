@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, January 2017}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2017\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,30 +95,33 @@
 \begin{examinstructions}
 You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Show that the equation \(x=\frac{1}{2}\cos(x)\) has a solution~\(\alpha\).
 \item[\textnormal{(b)}]
-Find an interval \([a,b]\) containing~\(\alpha\) and such that for every \(x_0\in[a,b]\), the iterative sequence 
+Find an interval \([a,b]\) containing~\(\alpha\) and such that for every \(x_0\in[a,b]\), the iterative sequence
 \[
 x_{n+1}=\frac{1}{2}\cos x_n
 \]
  will converge to~\(\alpha\). Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-For the basic Lagrange polynomials 
+For the basic Lagrange polynomials
 \[
 L_i(x)=\prod_{j\ne i}\frac{x-x_j}{x_i-x_j}\qquad\text{for}\qquad i=0,\ldots,n,
 \]
- show that 
+ show that
 \[
 \sum_i L_i(x)=1\qquad\text{for all }x.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
-Consider a quadrature rule of the form for \(0<\alpha<1\): 
+Consider a quadrature rule of the form for \(0<\alpha<1\):
 \[
 \int_0^1 x^\alpha f(x)\,dx\approx A\int_0^1 f(x)\,dx+B\int_0^1 xf(x)\,dx.
 \]
@@ -112,8 +131,9 @@ Determine the constants \(A,B\) so that the quadrature formula has maximum degre
 \item[\textnormal{(b)}]
 What is the degree of exactness of the formula in part (a)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let~\(f\) be an arbitrary (continuous) function on \([0,1]\) satisfying 
+Let~\(f\) be an arbitrary (continuous) function on \([0,1]\) satisfying
 \[
 f(x)+f(1-x)\equiv 1\qquad\text{for}\qquad 0\le x\le 1.
 \]
@@ -123,19 +143,20 @@ Show that \(\int_0^1 f(x)\,dx=\frac{1}{2}\).
 \item[\textnormal{(b)}]
 Show that the composite trapezoidal rule for computing \(\int_0^1 f(x)\,dx\) is exact.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Assume that you are solving the initial value problem 
+Assume that you are solving the initial value problem
 \[
 \begin{aligned}
 y'&=f(t,y), && a\le t\le b,\\
 y(a)&=\alpha.
 \end{aligned}
 \]
- The formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method is (\(M=\lVert Y''\rVert_\infty\)): 
+ The formula for the global error of the numerical solutions for the ODE problem above obtained via Euler’s method is (\(M=\lVert Y''\rVert_\infty\)):
 \[
 \lvert Y(t_i)-w_i\rvert<\frac{hM}{2L}\left[e^{L(b-a)}-1\right].
 \]
- Compute the values of~\(L\) and \(M=\lVert Y''\rVert_\infty\) necessary to apply the global error formula above to the specific ODE problem 
+ Compute the values of~\(L\) and \(M=\lVert Y''\rVert_\infty\) necessary to apply the global error formula above to the specific ODE problem
 \[
 \begin{aligned}
 y'&=\sin(t+2y)+e^t, && 0\le t\le 1,\\

@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, October 1994}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, October 1994\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,48 +101,63 @@
 \begin{examinstructions}
 \((X,\Sigma,\mu)\) is a finite measure space.
 \end{examinstructions}
-\section{I.}
+\subsection{I.}
 \begin{examinstructions}
 State the following theorems:
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Lebesgue dominated convergence theorem
+\def\ProblemHeadingText{Problem 2.}
 \item
 Fatou Lemma
+\def\ProblemHeadingText{Problem 3.}
 \item
 Vitali theorem
+\def\ProblemHeadingText{Problem 4.}
 \item
 Monotone convergence theorem
+\def\ProblemHeadingText{Problem 5.}
 \item
 The Radon–Nikodym theorem
+\def\ProblemHeadingText{Problem 6.}
 \item
 The Egorov theorem
+\def\ProblemHeadingText{Problem 7.}
 \item
 The Fubini theorem
+\def\ProblemHeadingText{Problem 8.}
 \item
 The Lebesgue decomposition theorem
+\def\ProblemHeadingText{Problem 9.}
 \item
 The Uniform boundedness theorem
+\def\ProblemHeadingText{Problem 10.}
 \item
 The Hahn–Banach theorem
 \end{examproblems}
-\section{II.}
-\begin{examproblems}{0}
+\subsection{II.}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove the \((L^1)^*=L^\infty\)
 \end{examproblems}
-\section{III. Problems}
-\begin{examproblems}{0}
+\subsection{III. Problems}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Find \(\displaystyle \lim_{n\to\infty}\int_0^1 n x^n\,dx\). (Hint: use the monotone convergence theorem)
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(\mu\) be the Lebesgue measure on~\(\mathbb{R}\) and~\(f\) a Lebesgue-integrable function on~\(\mathbb{R}\), such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb{R}\). What can you say about~\(f\)?
+\def\ProblemHeadingText{Problem 3.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source statement was retained, but on a general finite measure space the displayed hypotheses do not imply the stated lower bound. An additional normalization such as \(\mu(X)=1\), or a different lower bound, may have been intended; the correction is not uniquely determined.
 \end{problemconcern}
 Let \(f\geq 0\) be~\(\mu\)-integrable such that \(\int f\,d\mu\leq 1\). Prove that \(\int \frac{1}{f}\,d\mu\geq 1\). (Hint, use the Schwarz inequality for \(\sqrt f\) and \(\frac{1}{\sqrt f}\).)
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring of subsets of~\(X\), \(E\) a Banach space and \(\mu:R\to E\) be a finitely additive measure. Prove that~\(\mu\) is~\(\sigma\)-additive iff for any decreasing sequence \((A_n)\) from~\(R\) with \(\bigcap_n A_n=\phi\) we have \(\lim \mu(A_n)=0\).
 \end{examproblems}

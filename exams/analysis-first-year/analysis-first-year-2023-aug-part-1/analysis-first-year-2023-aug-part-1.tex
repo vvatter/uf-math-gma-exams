@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, August 2023, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2023, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let the nonempty subsets \(A \subseteq \mathbb{R}\) and \(B \subseteq \mathbb{R}\) be bounded above; define \(A+B=\{a+b:a\in A,b\in B\}\) and \(AB=\{ab:a\in A,b\in B\}\).
 \begin{examsubparts}
@@ -88,15 +105,19 @@ Prove that \(\sup(A+B)=\sup A+\sup B\).
 \item[\textnormal{(ii)}]
 Show by example that ‘\(\sup(AB)=\sup A\sup B\)’ can fail to hold.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let~\(U\) be an open subset of a metric space and let~\(A\) be an arbitrary subset of the same space. Prove that when closures are taken in this same space, 
+Let~\(U\) be an open subset of a metric space and let~\(A\) be an arbitrary subset of the same space. Prove that when closures are taken in this same space,
 \[
 U\cap\overline{A}\subseteq\overline{U\cap A}.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that the square-root function \(f:[0,\infty)\to[0,\infty):t\mapsto\sqrt{t}\) is uniformly continuous.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((X,d)\) be a compact metric space and \(f:X\to X\) a continuous function. Prove that if~\(f\) has no fixed point (that is, there exists no \(p\in X\) such that \(f(p)=p\)) then \(d(x,f(x))\geq m\) for some \(m>0\) and all \(x\in X\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let the real-valued function~\(f\) be continuous on \([0,\infty)\) and differentiable on \((0,\infty)\); assume that \(f(0)=0\) and that the derivative \(f'\) is increasing. Prove that \(F:(0,\infty)\to\mathbb{R}\) defined by \(F(x)=f(x)/x\) is increasing in the same sense (weakly or strictly).
 \end{examproblems}

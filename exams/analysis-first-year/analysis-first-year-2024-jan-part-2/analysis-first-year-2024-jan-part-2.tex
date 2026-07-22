@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2024, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2024, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that the function \(f:[a,b]\to\mathbb{R}\) is Riemann integrable iff for each \(\varepsilon>0\) there exist Riemann integrable functions \(\ell,u:[a,b]\to\mathbb{R}\) such that \(\ell\leq f\leq u\) pointwise on \([a,b]\) and \(\int_a^b(u-\ell)<\varepsilon\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 For each positive integer~\(n\) let \(f_n:[0,1]\to[0,1]\) be a Riemann integrable function. Which (if any) of the following conditions is sufficient to ensure that \(\int_0^1 f_n(t)\,dt\to0\) as \(n\to\infty\)?
 \begin{examsubparts}
@@ -90,12 +108,14 @@ For each positive integer~\(n\) let \(f_n:[0,1]\to[0,1]\) be a Riemann integrabl
 \item[\textnormal{(ii)}]
 \(f_n\to0\) pointwise on \([0,1]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-To each continuous function \(f:[0,1]\to\mathbb{R}\) associate the sequence \((a(f)_n)_{n=0}^{\infty}\) defined by 
+To each continuous function \(f:[0,1]\to\mathbb{R}\) associate the sequence \((a(f)_n)_{n=0}^{\infty}\) defined by
 \[
 a(f)_n=\int_0^1 f(t)t^n\,dt.
 \]
  Prove that the map \(f\mapsto a(f)\) is injective.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let the bounded set \(X\subseteq\mathbb{R}\) be Lebesgue measurable. Prove that:
 \begin{examsubparts}
@@ -104,6 +124,7 @@ for each \(\varepsilon>0\) there exists an open set \(U\supseteq X\) whose Lebes
 \item[\textnormal{(ii)}]
 there exists a Borel set \(B\supseteq X\) such that \(\lambda(B)=\lambda(X)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((f_n)_{n=0}^{\infty}\) be a sequence of functions on the measurable space \((X,\mathcal{A})\) with values in \([0,\infty)\). Prove that each of the following subsets of~\(X\) is measurable:
 \begin{examsubparts}

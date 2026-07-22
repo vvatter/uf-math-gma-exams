@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, June 1996}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, June 1996\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,17 +98,23 @@ Remark. In the sequel the word measure means positive, countably additive measur
 \begin{examinstructions}
 Instructions. Do all of the following problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f_n:\mathbb{R}\to\mathbb{R}\) be a sequence of Lebesgue-measurable functions which converges pointwise to a function~\(g\). Prove, directly from the definition of measurability, that~\(g\) is measurable.
+\def\ProblemHeadingText{Problem 2.}
 \item
 For \(f\in L^1(\mathbb{R})\), let \(f_t\) denote the translation of~\(f\) by~\(t\), i.e. \(f_t(x):=f(x-t)\). Show that the map \(t\mapsto f_t\) is a continuous map from~\(\mathbb{R}\) to \(L^1(\mathbb{R})\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(\mu\) denote the Lebesgue measure on~\(\mathbb{R}\). Let \(T:\mathbb{R}\to\mathbb{R}\) be defined by \(T(x)=x^3-x\). Define a Borel measure~\(\nu\) setting \(\nu(A):=\mu(T^{-1}A)\). Compute the Radon–Nikodym derivative \(\frac{d\nu}{d\mu}\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(K_n\subset[0,1]\) be a Cantor set of Lebesgue measure larger than \(1-\frac{1}{n}\). Let \(V:=\bigcup_{n=1}^{\infty}K_n\). Prove that, for any null set~\(N\), the set \(V\setminus N\) is not a \(G_\delta\) set. [Hint: Baire Category Theorem]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(\mu\) and~\(\nu\) be~\(\sigma\)-finite measures on the measurable space \((X,\mathcal{B})\). Prove, from first principles, that~\(\nu\) can be written as \(\nu=\nu_{\mathrm{ac}}+\nu_{\mathrm{sing}}\), with \(\nu_{\mathrm{ac}}\ll\mu\) and \(\nu_{\mathrm{sing}}\perp\mu\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(x_n\) be a sequence in a Banach space~\(B\). Assume that the sequence \(x_n\) converges weakly to~\(x\).
 \begin{examsubparts}
@@ -101,12 +123,14 @@ Show that~\(x\) is the only weak limit of the sequence \(x_n\).
 \item[\textnormal{(b)}]
 Show that \(\sup_n\lVert x_n\rVert<\infty\). [Hint for (b): Consider the \(x_n\) as elements of the double dual \(B^{**}\).]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(K:[0,2\pi]\to\mathbb{R}\) be defined by \(K(x)=\frac14\sin(x)\). Show that for every \(h\in L^p([0,2\pi])\), there exists a unique solution~\(f\) to the equation 
+Let \(K:[0,2\pi]\to\mathbb{R}\) be defined by \(K(x)=\frac14\sin(x)\). Show that for every \(h\in L^p([0,2\pi])\), there exists a unique solution~\(f\) to the equation
 \[
 f+f*K=h.
 \]
  If~\(h\) is \(C^\infty\), is it true that the solution~\(f\) is \(C^\infty\)? Justify your answer.
+\def\ProblemHeadingText{Problem 8.}
 \item
 A distribution~\(T\) is called harmonic if \(\Delta T=0\), where \(\Delta=\sum_{i=1}^n\frac{\partial^2}{\partial x_i^2}\). Show that if~\(T\) is a harmonic tempered distribution, then~\(T\) is a polynomial. [Hint: a distribution with support \(\{0\}\) is a finite sum of multiples of Dirac's~\(\delta\) and its derivatives.]
 \end{examproblems}

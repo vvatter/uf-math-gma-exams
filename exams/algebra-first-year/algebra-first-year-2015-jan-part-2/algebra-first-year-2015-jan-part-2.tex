@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2015, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2015, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose~\(R\) is an integral domain.
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Show that the annihilator of any finitely generated torsion~\(R\)-module is nonz
 \item[\textnormal{(ii)}]
 Give an example of a torsion~\(\mathbb{Z}\)-module whose annihilator is zero.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be the ring
 \[
@@ -100,10 +118,13 @@ Show that~\(R\) is a unique factorization domain.
 \item[\textnormal{(ii)}]
 Find the group of units of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(k\) be a field, \(V\) a~\(k\)-vector space of finite dimension, and \(V^*=\operatorname{Hom}(V,k)\) be the dual vector space. Show that \(\dim V=\dim V^*\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose~\(R\) is a commutative ring with identity, and \(S\subseteq R\) is a multiplicative subset, i.e. \(0\notin S\), \(1\in S\), and \(a,b\in S\) implies \(ab\in S\). Show that there is a prime ideal \(P\subset R\) such that \(P\cap S=\varnothing\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Which of the following polynomials are irreducible in their respective rings? Explain.
 \begin{examsubparts}
@@ -112,6 +133,7 @@ Which of the following polynomials are irreducible in their respective rings? Ex
 \item[\textnormal{(ii)}]
 \(Y^3+X^2Y+X^3Y+X\in k[X,Y]\), \(k\) a field
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(G=\mathrm{GL}_3(\mathbb{F}_2)\) be the group of \(3\times3\) invertible matrices with entries in the field with two elements.
 \begin{examsubparts}

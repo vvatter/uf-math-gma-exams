@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, January 2019, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2019, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,45 +95,60 @@
 \begin{examinstructions}
 Work all problems.
 \end{examinstructions}
-\section{Theorems and Proofs.}
+\subsection{Theorems and Proofs.}
 \begin{examinstructions}
 In this section state and prove each theorem. The proofs should be complete without being tedious.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that a compact Hausdorff space~\(X\) is normal.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove the Contraction Mapping Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Give a proof that if~\(X\) is any set, there is no function \(f:X\to\mathscr{P}(X)\) which is onto. Here \(\mathscr{P}(X)\) is the power set of~\(X\) or the set of all subsets of~\(X\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose that~\(X\) is a Hausdorff space. Show that if \(A\subset X\) is compact, then it is closed.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose that~\(X\) and~\(Y\) are metric spaces and that~\(X\) is compact. Show that if \(f:X\to Y\) is continuous, then~\(f\) is uniformly continuous.
 \end{examproblems}
-\section{Examples and Minor Proofs.}
+\subsection{Examples and Minor Proofs.}
 \begin{examinstructions}
 In this section, give brief examples, counterexamples, or quick proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H3}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State Urysohn’s Lemma..
+\def\ProblemHeadingText{Problem 7.}
 \item
 Is it possible for there to be a continuous function \(f:[0,1]\to[0,1)\) which is onto?
+\def\ProblemHeadingText{Problem 8.}
 \item
 State the Bolzano–Weierstrass Theorem.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Define a continuous function \(f:C\to[0,1]\) which is onto where~\(C\) is the Cantor set and \([0,1]\) is the unit interval.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Give an example of a space~\(X\) which is \(T_1\) but not Hausdorff.
+\def\ProblemHeadingText{Problem 11.}
 \item
 State the Tietze Extension Theorem.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Define a quotient map.
+\def\ProblemHeadingText{Problem 13.}
 \item
 State the Baire Category Theorem.
+\def\ProblemHeadingText{Problem 14.}
 \item
 Let \(\{X_\alpha\}_{\alpha\in A}\) be a collection of topological spaces. What is the product topology on \(\prod_{\alpha\in A}X_\alpha\)?
+\def\ProblemHeadingText{Problem 15.}
 \item
 What does it mean for a space~\(X\) to be first countable? Show that every metric space is first-countable.
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2015, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2015, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -90,10 +107,13 @@ Show that~\(R\) is not a unique factorization domain.
 \item[\textnormal{(iii)}]
 Show that \((2,1+\sqrt{-7})\) is a maximal ideal of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose~\(R\) is a commutative ring and \(I\subset R\) is an ideal. Show that the set of \(r\in R\) such that \(r^n\in I\) for some \(n>0\) is an ideal of~\(R\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be an integral domain and~\(M\) a finitely generated~\(R\)-module. We say that~\(M\) has rank~\(n\) if there are~\(n\) elements \(m_1,\ldots,m_n\in M\) that are linearly independent, while any subset of~\(M\) with cardinality greater than~\(n\) is linearly dependent. Show that~\(M\) has rank~\(n\) if and only if~\(M\) has a submodule \(N\subseteq M\) such that (1)~\(N\) is free of rank~\(n\), and (2) \(M/N\) is torsion.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Which of the following polynomials are irreducible? Explain.
 \begin{examsubparts}
@@ -104,6 +124,7 @@ Which of the following polynomials are irreducible? Explain.
 \item[\textnormal{(iii)}]
 \(X^5+Y^5-1\in\mathbb{C}[X,Y]\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(M\) is an \(n\times n\) matrix with coefficients in an algebraically closed field. Show that the following statements are equivalent:
 \begin{examsubparts}
@@ -114,6 +135,7 @@ Suppose~\(M\) is an \(n\times n\) matrix with coefficients in an algebraically c
 \item[\textnormal{3.}]
 \(M\) is similar to an upper triangular matrix with 0s on the diagonal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Find representatives for each similarity class of matrices in \(M_5(\mathbb{C})\) whose minimal polynomial is \(X^3+X^2-X-1=(X+1)^2(X-1)\).
 \end{examproblems}

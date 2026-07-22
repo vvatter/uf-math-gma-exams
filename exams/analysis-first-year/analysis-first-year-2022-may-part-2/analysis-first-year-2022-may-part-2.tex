@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2022, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2022, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f:[a,b]\to\mathbb{R}\) have the property that for each \(\varepsilon>0\) there exist Riemann integrable functions~\(\ell\) and~\(u\) on \([a,b]\) such that \(\ell\leq f\leq u\) and \(\int_a^b(u-\ell)<\varepsilon\). Does it follow that~\(f\) is Riemann integrable on \([a,b]\)? Proof or counterexample.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose \((p_n)_{n=0}^{\infty}\) is a sequence of polynomials in one variable.
 \begin{examsubparts}
@@ -90,12 +108,14 @@ Assume that \(p_n\to f\) uniformly on \([0,1]\) as \(n\to\infty\); deduce as muc
 \item[\textnormal{(ii)}]
 Assume that \(p_n\to f\) uniformly on~\(\mathbb{R}\) as \(n\to\infty\); deduce as much as possible about the function \(f:\mathbb{R}\to\mathbb{R}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let the continuous function \(f:[0,1]\to\mathbb{R}\) satisfy 
+Let the continuous function \(f:[0,1]\to\mathbb{R}\) satisfy
 \[
 \int_0^1 f(t)t^n\,dt=1/(n+2)
 \]
  for all but finitely many positive integers~\(n\). Deduce as much as possible about~\(f\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((f_n)_{n=0}^{\infty}\) be a sequence of measurable real-valued functions on some measurable space. Prove that each of the following sets is measurable:
 \begin{examsubparts}
@@ -104,6 +124,7 @@ Let \((f_n)_{n=0}^{\infty}\) be a sequence of measurable real-valued functions o
 \item[\textnormal{(ii)}]
 \(C=\{\omega:\sum_{n=0}^{\infty}f_n(\omega)\text{ is conditionally convergent}\}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((\Omega,\mathcal{A},\mu)\) be a measure space; let \(A_0\subseteq A_1\subseteq\cdots\) be an increasing sequence in~\(\mathcal{A}\) such that \(\bigcup_{n=0}^{\infty}A_n=\Omega\); let \(f:\Omega\to\mathbb{R}\) be measurable; and let~\(L\) be a real number. Consider the statements:
 

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2024, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2024, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,15 +95,18 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(f:(0,\infty)\to\mathbb{R}\) be continuous. Prove that if 
+Let \(f:(0,\infty)\to\mathbb{R}\) be continuous. Prove that if
 \[
 \limsup_{n\to\infty} f(n)>0>\liminf_{n\to\infty} f(n)
 \]
  then~\(f\) has infinitely many zeros. Does the same conclusion hold if one of the strict inequalities is replaced by a weak inequality?
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(f:\mathbb{R}\to\mathbb{R}\) be continuous and assume that \(f^{-1}(y)\subseteq\mathbb{Q}\) whenever \(y\in\mathbb{R}\setminus\mathbb{Q}\). What can be deduced about~\(f\)?
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let the function \(f:(0,1)\to\mathbb{R}\) be uniformly continuous.
 \begin{examsubparts}
@@ -96,6 +115,7 @@ Prove that~\(f\) extends to a continuous function \(F:[0,1]\to\mathbb{R}\).
 \item[\textnormal{(ii)}]
 Does the same conclusion follow if~\(f\) is merely continuous? What if~\(f\) is continuous and bounded? Justify your assertions.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(f:X\to Y\) be a map between metric spaces and consider the following two statements. For each implication (i)~\(\Rightarrow\) (ii) and (ii)~\(\Rightarrow\) (i), give a proof (if true) or a counterexample (if false).
 \begin{examsubparts}
@@ -104,6 +124,7 @@ if \((x_n)\) is a Cauchy sequence in~\(X\), then \((f(x_n))\) is Cauchy in~\(Y\)
 \item[\textnormal{(ii)}]
 \(f\) is uniformly continuous.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 The function \(f:\mathbb{R}\to\mathbb{R}\) is differentiable, except perhaps at \(a\in\mathbb{R}\). Prove that if the real limit \(\lim_{t\to a}f'(t)\) exists then~\(f\) is in fact differentiable at~\(a\).
 \end{examproblems}

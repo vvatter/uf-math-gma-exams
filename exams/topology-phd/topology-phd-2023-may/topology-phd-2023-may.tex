@@ -27,19 +27,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -52,7 +64,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -61,8 +73,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 2023}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2023\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -80,9 +96,11 @@
 \begin{examinstructions}
 Work the following problems and show all your work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(X\) be a set. A filter base at \(x\in X\) is a nonempty collection \(\mathcal{U}_x\) of subsets of~\(X\) containing~\(x\) such that whenever \(U,V\in\mathcal{U}_x\) there exists \(W\in\mathcal{U}_x\) with \(W\subset U\cap V\). Assume that~\(X\) has a filter base at each \(x\in X\) and that if \(U\in\mathcal{U}_x\) and \(y\in U\) then \(U\in\mathcal{U}_y\). Prove that \(\mathcal{B}=\bigcup_{x\in X}\mathcal{U}_x\) is a base for a topology.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Consider the torus \(T=S^1\times S^1\) with the following~\(\Delta\)-complex structure.
 \par\smallskip
@@ -166,10 +184,13 @@ Define 1-cochains that you can show are cocycles and which generate \(H^1(T)\).
 \item[\textnormal{(c)}]
 Compute a cup product which produces a cohomology class (Kronecker) dual to a fundamental class.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{RP}^2\), as well as that \(\mathbb{RP}^2\) is not a retract of \(S^2\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Assume \(n>m\). Show that there are no maps from \(\mathbb{CP}^n\) to \(\mathbb{CP}^m\) that induces a nontrivial map \(H^2(\mathbb{CP}^m)\to H^2(\mathbb{CP}^n)\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 A map \(i:A\to X\) has the homotopy extension property (HEP) for the space~\(Y\) if for each homotopy \(h:A\times I\to Y\) and each map \(f:X\to Y\) with \(f(i(a))=h(a,0)\) there exists a homotopy \(H:X\times I\to Y\) with \(H(x,0)=f(x)\) for all \(x\in X\) and \(H(i(a),t)=h(a,t)\) for all \(a\in A\) and all \(t\in I\). We call~\(H\) an extension of~\(h\) with initial condition~\(f\). The map \(i:A\to X\) is a cofibration if it has the HEP for all spaces.
 
@@ -190,25 +211,35 @@ Prove that the following three statements about~\(i\) are equivalent:
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Give the definition of a pushout and prove that if it exists then it is unique up to isomorphism.
+\def\ProblemHeadingText{Problem 7.}
 \item
 The Klein bottle, \(K\), may be obtained by taking two Möbius bands, \(M\), and identifying their boundary, \(K=M\cup_{\partial M}M\). Apply the Seifert–van Kampen theorem to give a presentation of the fundamental group of~\(K\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Describe all of the two-fold coverings of \(S^1\vee S^1\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove that for a finite CW-complex~\(X\), \(H^1(X;\mathbb{Z})\) is torsion-free.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Compute the Euler characteristic of the manifold \(M=S^4\times\mathbb{RP}^2\times\mathbb{CP}^3\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 State the Baire Category Theorem.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Prove that for \(n\ne m\), \(\mathbb{R}^n\) is not homeomorphic to \(\mathbb{R}^m\).
+\def\ProblemHeadingText{Problem 13.}
 \item
 Give an example of a space that is connected but not path connected.
+\def\ProblemHeadingText{Problem 14.}
 \item
 State the Urysohn Lemma.
+\def\ProblemHeadingText{Problem 15.}
 \item
 Is \(\mathbb{R}^{\omega}\) connected in the uniform topology?
 \end{examproblems}

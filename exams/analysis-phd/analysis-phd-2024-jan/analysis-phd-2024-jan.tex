@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, January 2024}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 2024\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Write solutions in a neat and logical fashion, giving complete reasons for all steps. Attempt SIX problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((X,\mathcal{M},\mu)\) be a finite measure space. Let \((f_n)\) be a sequence of measurable functions and suppose that \(\sum_n \int |f_n|\,d\mu<\infty\). Consider the series \(\sum_n f_n(x)\). Does this series converge… Prove your claims.
 \begin{examsubparts}
@@ -90,8 +107,10 @@ in measure?
 \item[\textnormal{c)}]
 in the \(L^1\) norm?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 State Tonelli’s theorem, and give an example to show that the~\(\sigma\)-finiteness hypothesis is necessary.
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -100,16 +119,18 @@ Let~\(\nu\) be a signed measure on \((X,\mathcal{M})\). Define what it means for
 \item[\textnormal{b)}]
 Prove that if~\(\nu\) is a signed measure, then there exist unique positive measures \(\nu^+,\nu^-\) so that \(\nu=\nu^+-\nu^-\) and \(\nu^+\perp\nu^-\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(\varphi_n:\mathbb{R}\to\mathbb{C}\) be a sequence of Lebesgue measurable functions and suppose that there is a number~\(M\) such that \(\|\varphi_n\|_\infty\le M\) for all~\(n\). Prove that if 
+Let \(\varphi_n:\mathbb{R}\to\mathbb{C}\) be a sequence of Lebesgue measurable functions and suppose that there is a number~\(M\) such that \(\|\varphi_n\|_\infty\le M\) for all~\(n\). Prove that if
 \[
 \int_a^b \varphi_n(t)\,dt\to 0
 \]
- for every interval \([a,b]\subset\mathbb{R}\), then 
+ for every interval \([a,b]\subset\mathbb{R}\), then
 \[
 \int_{-\infty}^{\infty}\varphi_n(t)f(t)\,dt\to 0
 \]
  for every \(f\in L^1(\mathbb{R})\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(\mu\) and~\(\nu\) be finite, positive measures defined on the same measurable space \((X,\mathcal{M})\), and suppose that \(\nu\ll\mu\).
 \begin{examsubparts}
@@ -118,8 +139,10 @@ Prove that if \(L^1(\mu)\subset L^1(\nu)\), then the inclusion map \(\iota:L^1(\
 \item[\textnormal{b)}]
 Prove that if \(L^1(\mu)\subset L^1(\nu)\) then \(\frac{d\nu}{d\mu}\in L^\infty(\mu)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(\mathcal{X},\mathcal{Y}\) be Banach spaces and \(T:\mathcal{X}\to\mathcal{Y}\) a linear map. Prove that if \(f\circ T\in\mathcal{X}^*\) for all \(f\in\mathcal{Y}^*\), then~\(T\) is bounded.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Short answer.
 \begin{examsubparts}
@@ -130,6 +153,7 @@ Explain why there is no bounded, surjective linear map from \(c_0\) onto \(\ell^
 \item[\textnormal{c)}]
 Explain why the norm in \(L^1(\mathbb{R})\) cannot be given by an inner product.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(H\) be a Hilbert space with orthonormal basis \(\{e_k\}_{k=1}^\infty\). Let \((h_n)\) be a sequence in~\(H\) and let \(h\in H\). Prove that the following statements are equivalent:
 \begin{examsubparts}

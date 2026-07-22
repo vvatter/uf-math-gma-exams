@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2024, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2024, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove Lagrange’s Theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a finite group, and let~\(H\) and~\(J\) be normal subgroups of~\(G\).
 \begin{examsubparts}
@@ -90,8 +108,10 @@ Prove that \(H \cap J\) is a normal subgroup of~\(G\);
 \item[\textnormal{(b)}]
 Prove that if \(H \cap J = 1\) then, for every \(h \in H\) and every \(j \in J\), we have \(hj = jh\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(G\) be a group acting on a non empty set~\(S\), and~\(H\) be a normal subgroup of~\(G\). Assume that for any \(x_1, x_2 \in S\) there is a unique \(h \in H\) such that \(h(x_1) = x_2\). For \(x \in S\) let \(G_x\) be the stabilizer of~\(x\). Show that for any \(x \in S\), \(G\) is a semi-direct product of \(G_x\) and~\(H\). Do not assume that~\(G\) is finite.
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -100,8 +120,10 @@ Prove that a group~\(G\) of order \(245\) has a unique subgroup~\(H\) of order \
 \item[\textnormal{(b)}]
 Show that if the above subgroup~\(H\) is cyclic then~\(G\) is abelian.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Give the definition of a solvable (finite) group. (You may give any of the equivalent definitions.) Prove, using your definition, that the symmetric group on four letters is solvable.
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has two parts.
 \begin{examsubparts}

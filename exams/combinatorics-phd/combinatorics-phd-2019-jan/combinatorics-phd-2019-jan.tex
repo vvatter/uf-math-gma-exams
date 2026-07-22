@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, January 2019}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, January 2019\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,19 +92,25 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(a_n\) be the total number of leaves in all rooted non-plane trees with vertices bijectively labeled with elements of \(\{1,2,\cdots n\}\), so \(a_1=1\), \(a_2=2\), and \(a_3=12\). Find an explicit formula for \(a_n\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a simple graph with the property that if the vertices~\(u\) and~\(v\) have the same degree, then there is no vertex adjacent to both~\(u\) and~\(v\). Prove that~\(G\) contains a vertex of degree one.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(h_n\) be the number of ways to color each of~\(n\) distinct objects red, blue, or green, so that the number of red objects is even and the number of blue objects is odd. Find the exponential generating function for the sequence \(h_n\), then deduce an explicit formula for the numbers \(h_n\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(G\) be a connected, regular, simple graph. If~\(G\) has \(22\) edges, how many vertices can~\(G\) have? Note: for full credit, give a complete list of all possibilities, and make sure that every possibility on the list is indeed possible.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Choose a permutation~\(p\) of length~\(n\) uniformly at random. Let \(a_n\) be the probability that~\(p\) has no fixed points and no cycles of length three. Compute \(\lim_{n\to\infty} a_n\).
+\def\ProblemHeadingText{Problem 6.}
 \item
-Recall that the permanent of the \(n\times n\) matrix~\(M\) is 
+Recall that the permanent of the \(n\times n\) matrix~\(M\) is
 \[
 \operatorname{per}(M)=\sum_{\pi\in S_n}\prod_{i=1}^n M_{i,\pi(i)}
 \]
@@ -99,10 +121,12 @@ Van der Waerden’s Conjecture (now a theorem) states that the permanent of an \
 
 \par
 Show how van der Waerden’s Conjecture implies that the number of derangements of length~\(n\) is at least \(n!\left(1-\frac{1}{n}\right)^n\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(G\) be a connected plane graph where all faces have an even number of edges. Prove that~\(G\) is bipartite.
+\def\ProblemHeadingText{Problem 8.}
 \item
-Recall that the Gaussian coefficients (or~\(q\)-binomial coefficients) are defined by 
+Recall that the Gaussian coefficients (or~\(q\)-binomial coefficients) are defined by
 \[
 \begin{bmatrix}n\\k\end{bmatrix}_q=\frac{(q^n-1)(q^{n-1}-1)\cdots(q^{n-k+1}-1)}{(q^k-1)(q^{k-1}-1)\cdots(q-1)}.
 \]

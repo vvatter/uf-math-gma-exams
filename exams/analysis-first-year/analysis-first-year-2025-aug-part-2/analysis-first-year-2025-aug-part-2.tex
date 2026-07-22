@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, August 2025, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2025, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -88,22 +105,26 @@ Let \(f:[0,1]\to\mathbb{R}\) be Riemann integrable. Must the function~\(F\) defi
 \item[\textnormal{(ii)}]
 Let \(g:[0,1]\to\mathbb{R}\) be Lebesgue integrable. Must the function~\(G\) defined on \([0,1]\) by \(G(x)=\int_{[0,x]}g\,d\lambda\) be continuous (\(\lambda\): Lebesgue measure)? Explain.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Equip the set \(C[0,1]\) (comprising all continuous real-valued functions on the interval \([0,1]\)) with the sup metric and let 
+Equip the set \(C[0,1]\) (comprising all continuous real-valued functions on the interval \([0,1]\)) with the sup metric and let
 \[
 B=\{f\in C[0,1]:\sup|f|\leq 1\}
 \]
  be its closed ball of radius one about the zero function. Is~\(B\) complete? Is~\(B\) compact? Explain.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Assume that the continuous function \(f:[0,1]\to\mathbb{R}\) satisfies 
+Assume that the continuous function \(f:[0,1]\to\mathbb{R}\) satisfies
 \[
 \int_0^1 f(t)\cos(nt)\,dt=0
 \]
  whenever~\(n\) is a non-negative integer. Does it follow that~\(f\) is the zero function? Proof or counterexample required.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((f_n)_{n=0}^{\infty}\) be a sequence of real-valued measurable functions on~\(\Omega\). Prove that if \((f_n)_{n=0}^{\infty}\) converges pointwise to \(f:\Omega\to\mathbb{R}\), then~\(f\) is measurable.
+\def\ProblemHeadingText{Problem 5.}
 \item
-The bounded function \(f:[0,1]\times[0,1]\to\mathbb{R}\) is continuous in each variable separately: thus, \(f(x,y)\) is continuous in~\(x\) for each fixed~\(y\) and continuous in~\(y\) for each fixed~\(x\). Prove the continuity of~\(F\) defined by 
+The bounded function \(f:[0,1]\times[0,1]\to\mathbb{R}\) is continuous in each variable separately: thus, \(f(x,y)\) is continuous in~\(x\) for each fixed~\(y\) and continuous in~\(y\) for each fixed~\(x\). Prove the continuity of~\(F\) defined by
 \[
 F(x)=\int_0^1 f(x,y)\,dy.
 \]

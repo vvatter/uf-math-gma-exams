@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, May 2009}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, May 2009\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Give complete proofs and computations. Partial credit will be given where justified. In the following, \(\mathbb{C}\) denotes the set of complex numbers and \(D=\{z\in\mathbb{C}\mid |z|<1\}\).
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Assume that~\(f\) is an entire function with \(f(0)=0\). Consider the family of functions \(\{f_n\}\), where \(f_n\) is the \(n^{\text{th}}\) iterate of~\(f\), i.e. \(f_n=f\circ f\circ\cdots\circ f\) (\(n\) times).
 \begin{examsubparts}
@@ -88,33 +105,40 @@ If \(|f'(0)|<1\), show there is a open set~\(U\) containing zero so that the fam
 \item[\textnormal{(b)}]
 If \(|f'(0)|>1\), show there is no open set~\(U\) containing zero so that the family \(\{f_n\}\) is normal when restricted to~\(U\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) and \(G'\) be open, simply connected proper subsets of~\(\mathbb{C}\). Show that for any pair of points \(p\in G\) and \(p'\in G'\) there is a bijective, analytic function \(f:G\to G'\) with \(f(p)=p'\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Show that 
+Show that
 \[
 \prod_{n=2}^{\infty}\left(1-\frac{1}{n^2}\right)=\frac{1}{2}.
 \]
 \item[\textnormal{(b)}]
-For which values of~\(z\) does the following product converge? 
+For which values of~\(z\) does the following product converge?
 \[
 \prod_{n=0}^{\infty}(1+z^{3n})
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Find an explicit biholomorphism from the semidisk \(E:=\{z\mid |z|<1,\operatorname{Re}(z)>0\}\) onto the unit disk~\(D\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(0<a<1\). Evaluate the integral 
+Let \(0<a<1\). Evaluate the integral
 \[
 \int_0^\infty \frac{x^{a-1}}{1+x}\,dx.
 \]
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(f\) be an entire function of finite order. Prove that if the order is not an integer, then~\(f\) must have infinitely many zeros. Does there exist an entire function of infinite order with finitely many zeros? Explain.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(f\) be entire and assume that there exist \(M,R>0\) and \(n\in\mathbb{N}\) such that \(|f(z)|\leq M|z|^n\) for all \(z\in\mathbb{C}\setminus B(0;R)\). Prove that~\(f\) is a polynomial of degree less than or equal to~\(n\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(f\) have a power series expansion about~\(0\) with radius of convergence~\(1\). Assume, in addition, that all of the coefficients of this power series expansion are greater than or equal to zero. Prove that~\(1\) must be a singular point for~\(f\).
 \end{examproblems}

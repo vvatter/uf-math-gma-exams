@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, May 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,32 +95,42 @@
 \begin{examinstructions}
 Answer six questions and at least one from each section.
 \end{examinstructions}
-\section{Section 1}
-\begin{examproblems}{0}
+\subsection{Section 1}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Sketch the proof of Gödel’s Completeness Theorem for Predicate Logic and explain the use of Henkin constants (or Skolem functions).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that the theory of the class of infinite sets is complete and decidable, but is not finitely axiomatizable.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Sketch a proof of the Vaught test for categoricity using the Löwenheim–Skolem Theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Show that if~\(A\) and~\(B\) are two countable atomic structures which are elementarily equivalent, then \(A \simeq_p B\).
 \end{examproblems}
-\section{Section 2}
-\begin{examproblems}{4}
+\subsection{Section 2}
+\begin{examproblems}{4}{H3}
+\def\ProblemHeadingText{Problem 5.}
 \item
 (ZFC) For any infinite cardinal~\(\kappa\), \(\kappa \times \kappa = \kappa\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Describe the constructible universe~\(L\) and sketch a proof that~\(L\) satisfies the Continuum Hypothesis.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Show that for any set~\(u\) and any countable set~\(v\), \(FF(u,v)\) satisfies the countable (anti)-chain condition.
 \end{examproblems}
-\section{Section 3}
-\begin{examproblems}{7}
+\subsection{Section 3}
+\begin{examproblems}{7}{H3}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Sketch a proof of Gödel’s incompleteness Theorem for Arithmetic. –You may assume the Representability Hypothesis.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Construct a simple r.e. set.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Show that the following are equivalent for any infinite \(X \subseteq \omega\):
 \begin{examsubparts}

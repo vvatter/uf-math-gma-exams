@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2014, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2014, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,16 +95,19 @@
 \begin{examinstructions}
 Answer FOUR questions. Write in a neat and logical fashion, giving complete reasons for all steps.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let~\(f\) be a continuous real-valued function on \([0,1]\). For each \(n \geq 1\), let \(h_n=n\mathbf{1}_{[0,1/n]}\) be~\(n\) times the indicator function of \([0,1/n]\). Prove that 
+Let~\(f\) be a continuous real-valued function on \([0,1]\). For each \(n \geq 1\), let \(h_n=n\mathbf{1}_{[0,1/n]}\) be~\(n\) times the indicator function of \([0,1/n]\). Prove that
 \[
 \lim_{n\to\infty}\int_0^1 f(t)h_n(t)\,dt=f(0).
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(f\) be a continuous real-valued function on \([0,1]\). For \(n\geq 1\) and \(0\leq t\leq 1\), let \(f_n(t)=f(t)t^n\). Determine a condition on \(f(1)\) that is necessary and sufficient for the sequence \((f_n)_{n=1}^{\infty}\) to be uniformly convergent; be sure to prove necessity and sufficiency.
+\def\ProblemHeadingText{Problem 3.}
 \item
-For \(n\geq 1\), let \(f_n\) be a continuous real-valued function on \([0,1]\), and for \(0\leq t\leq 1\) define 
+For \(n\geq 1\), let \(f_n\) be a continuous real-valued function on \([0,1]\), and for \(0\leq t\leq 1\) define
 \[
 F_n(t)=\int_0^t f_n(u)\,du.
 \]
@@ -99,18 +118,20 @@ F_n(t)=\int_0^t f_n(u)\,du.
 \item[\textnormal{(ii)}]
 \(0\leq f_1\leq f_2\leq\cdots\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \((f_n)_{n=1}^{\infty}\) be a sequence of measurable functions on some measure space. Show that each of the following sets is measurable: 
+Let \((f_n)_{n=1}^{\infty}\) be a sequence of measurable functions on some measure space. Show that each of the following sets is measurable:
 \[
 A=\{\omega\mid f_n(\omega)>0\text{ for infinitely many }n\};
 \]
- 
+
 \[
 B=\{\omega\mid f_n(\omega)\leq 0\text{ for finitely many }n\}.
 \]
  Warning: \(A\) and~\(B\) need not be complementary!
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \((f_n)_{n=1}^{\infty}\) be a uniformly-bounded sequence of continuous functions on \([0,1]\) that converges pointwise to zero. Does it follow that 
+Let \((f_n)_{n=1}^{\infty}\) be a uniformly-bounded sequence of continuous functions on \([0,1]\) that converges pointwise to zero. Does it follow that
 \[
 \lim_{n\to\infty}\int_0^1 f_n(t)\,dt=0?
 \]

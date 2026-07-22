@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, May 1995}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 1995\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,12 +92,13 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Let \(A_1,A_2,\ldots,A_k\) be subsets of \([n]\) such that \(A_i\cap A_j\ne\varnothing\), for all \(i,j\). Show that 
+Let \(A_1,A_2,\ldots,A_k\) be subsets of \([n]\) such that \(A_i\cap A_j\ne\varnothing\), for all \(i,j\). Show that
 \[
 k\le 2^{n-1}.
 \]
@@ -89,8 +106,10 @@ k\le 2^{n-1}.
 \item[\textnormal{(b)}]
 How many pairs \((A,B)\) of subsets of \([n]\) are there such that \(A\cap B=\varnothing\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Use inclusion–exclusion to determine the number of monic polynomials of degree~\(n\) with no roots in \(\mathbb{Z}_p[x]\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -99,19 +118,25 @@ Prove that the number of partitions of~\(n\) into at most~\(k\) parts equals the
 \item[\textnormal{(b)}]
 Prove that the number of partitions of~\(n\) into odd parts is equal to the number of partitions of~\(n\) into unequal parts. (Hint: use generating functions).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Prove that the number of~\(k\)-dimensional subspaces of the~\(n\) dimensional vector space over \(\mathbb{F}_q\) is 
+Prove that the number of~\(k\)-dimensional subspaces of the~\(n\) dimensional vector space over \(\mathbb{F}_q\) is
 \[
 \binom{n}{k}_q=\frac{(q^n-1)\cdots(q^{n-k+1}-1)}{(q^k-1)\cdots(q-1)}.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that \(K_{33}\) is not planar.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that every regular bipartite graph has a perfect matching. Show that this is not true in general for regular graphs of even order.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that in a binary self dual code, either all the vectors have weight divisible by 4 or half have even weight not divisible by 4 and half have weight divisible by 4.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(H\) be a parity check matrix for a binary \((n,k,d)\)-code~\(C\) with \(n\ge 4\). If the columns of~\(H\) are distinct and all have odd weight, then \(d\ge 4\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has four parts.
 \begin{examsubparts}
@@ -124,6 +149,7 @@ Show the nonexistence of a Steiner system \(S(3,6,11)\).
 \item[\textnormal{(d)}]
 Find a \((13,4,1)\) difference set~\(D\). The set of translates of~\(D\) form the blocks of a design. Find the parameters \(b,v,k,r,\lambda\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(A\) be an affine plane of order~\(n\). Write \(B_1\sim B_2\) if lines \(B_1\) and \(B_2\) are the same or have no points in common. Show that~\(\sim\) is an equivalence relation. Show that there exists a projective plane~\(\pi\) such that~\(A\) is obtained from~\(\pi\) by deleting one line and all the points on that line.
 \end{examproblems}

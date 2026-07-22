@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, September 1995}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 1995\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -88,8 +105,10 @@ Give the definitions of a solvable group and a nilpotent group.
 \item[\textnormal{(b)}]
 Let~\(G\) be a finite solvable group. Let \(F(G)\) be the largest normal nilpotent subgroup of~\(G\). Prove that if~\(G\) is not abelian, then \(F(G)>Z(G)\), where \(Z(G)\) is the center of~\(G\) (ie., \(F(G)\) is bigger but not equal to \(Z(G)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 A proper subgroup~\(M\) of a group~\(G\) is maximal if whenever \(M<H\leq G\), we have \(H=M\) or \(H=G\). Suppose that~\(G\) is a finite group has only one maximal subgroup. Prove that~\(G\) is cyclic of prime power order.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(A\) be a commutative Artinian ring with identity. Prove the following statements.
 \begin{examsubparts}
@@ -100,6 +119,7 @@ There is only finite number of prime, or maximal ideals.
 \item[\textnormal{(c)}]
 The ideal~\(N\) of nilpotent elements in~\(A\) is a nilpotent ideal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 A module~\(F\) over a commutative ring with identity is called flat if for any short exact sequence \(0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0\), the sequence \(0\longrightarrow F\otimes E'\longrightarrow F\otimes E\longrightarrow F\otimes E''\longrightarrow 0\) is exact.
 \begin{examsubparts}
@@ -108,6 +128,7 @@ Give an example of a non-flat module.
 \item[\textnormal{(b)}]
 Let \(0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow 0\) be an exact sequence of modules over a commutative ring with identity. Suppose \(F''\) is a flat module. Prove that \(F'\) is flat if and only if~\(F\) is flat.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -116,6 +137,7 @@ State the Jacobson Density Theorem.
 \item[\textnormal{(b)}]
 Using Jacobson’s density Theorem to prove the following Wedderburn’s Theorem: Let~\(R\) be a ring, and~\(E\) a simple, faithful module over~\(R\). Let \(D=\operatorname{End}_R(E)\), and assume that~\(E\) is a finite dimension over~\(D\). Then \(R=\operatorname{End}_D(E)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(A\) be a commutative ring with identity, let~\(M\) be an~\(A\)-module, and let~\(N\) be a submodule of~\(M\).
 \begin{examsubparts}
@@ -126,6 +148,7 @@ Prove that if~\(M\) is Noetherian then the quotient \(M/N\) must also be Noether
 \item[\textnormal{(c)}]
 Prove that a submodule of a Noetherian module is Noetherian.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(A\) be a commutative ring with identity. Let~\(M\) be a~\(A\)-module.
 \begin{examsubparts}
@@ -134,6 +157,7 @@ Give the definition of an associated prime of~\(M\).
 \item[\textnormal{(b)}]
 Prove that if~\(A\) is Noetherian and \(M\neq 0\), then~\(M\) has an associated prime.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(p\) be a prime and let \(U_p\) be the subgroup of the group of complex roots of unity consisting of those roots of unity whose order is a power of~\(p\).
 \begin{examsubparts}
@@ -144,8 +168,9 @@ Let~\(L\) denote the localization of the integers at the prime~\(p\). Deduce fro
 \item[\textnormal{(c)}]
 State Nakayama’s Lemma and explain why the module \(U_p\) is not a counterexample.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
-Consider the polynomial over the field \(F_2\) with two elements: 
+Consider the polynomial over the field \(F_2\) with two elements:
 \[
 g(x)=x^4+x^3+x^2+x+1
 \]
@@ -159,6 +184,7 @@ Show that \(K=F_2(r)\).
 \item[\textnormal{(d)}]
 Find the Galois group \(\operatorname{Gal}(K/F_2)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let \(K/k\) be a cyclic extension of fields with finite Galois group \(\langle\sigma\rangle\).
 \begin{examsubparts}
@@ -167,6 +193,7 @@ State the Hilbert 90 theorem (the multiplicative or the additive form).
 \item[\textnormal{(b)}]
 Suppose \([K:k]=n\) is prime to the \(\operatorname{Char}(k)\) and~\(k\) contains a primitive~\(n\)-th root of unity. Prove that there exists \(\alpha\in K\) such that \(K=k(\alpha)\) and \(\operatorname{Irr}(\alpha,k,x)\) (i.e., the irreducible polynomial of~\(\alpha\) over~\(k\)) \(=x^n-a\) for some \(a\in k\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let \(G=\langle g\rangle\) be a finite cyclic group and regard~\(\mathbb{Z}\) (the integers) as a trivial module of~\(G\) (i.e., \(\mathbb{Z}[G]\)-module). Compute for \(n\geq 1\), \(H^n(G,\mathbb{Z})\). Justify your answer.
 \end{examproblems}

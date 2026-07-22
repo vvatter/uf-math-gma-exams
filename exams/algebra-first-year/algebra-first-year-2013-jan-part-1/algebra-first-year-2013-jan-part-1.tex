@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2013, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2013, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Give an example of each of the following, with some explanation.
 \begin{examsubparts}
@@ -90,6 +107,7 @@ A group~\(G\) and a subgroup \(H \leq G\) such that \(H \nsubseteq C_G(H)\).
 \item[\textnormal{(c)}]
 A group~\(G\) and a normal subgroup \(H \trianglelefteq G\) such that \(C_G(H) \neq G\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a group and let \(T_G = \{x \in G : x^n = 1 \text{ for some } n \geq 1\}\).
 \begin{examsubparts}
@@ -98,6 +116,7 @@ Prove that if~\(G\) is abelian then \(T_G\) is a subgroup of~\(G\).
 \item[\textnormal{(b)}]
 Give an example of a nonabelian group~\(G\) such that \(T_G\) is not a subgroup of~\(G\). Justify any claims that you make.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(G\) be a finite group which acts on the set~\(S\). Let~\(H\) be a normal subgroup of~\(G\) with the following property: For every \(x_1, x_2 \in S\), there is a unique \(h \in H\) such that \(h(x_1) = x_2\). Choose \(x \in S\) and let \(G_x = \{g \in G : g(x) = x\}\) denote the stabilizer of~\(x\).
 \begin{examsubparts}
@@ -106,6 +125,7 @@ Prove that \(G = G_xH\) and \(H \cap G_x = 1\).
 \item[\textnormal{(b)}]
 Show that if \(H \leq Z(G)\) then \(G_x \trianglelefteq G\) and~\(G\) is the internal direct product of \(G_x\) and~\(H\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -114,6 +134,7 @@ Prove that every simple subgroup of \(S_4\) is abelian.
 \item[\textnormal{(b)}]
 Use the result from (a) to prove that if~\(G\) is a nonabelian simple group then every proper subgroup of~\(G\) has index at least 5.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(G\) be a group of order \(76 = 4 \cdot 19\).
 \begin{examsubparts}
@@ -122,6 +143,7 @@ Prove that~\(G\) contains a normal Sylow 19-subgroup.
 \item[\textnormal{(b)}]
 Prove that the center of~\(G\) contains an element of order 2.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(G\) be a group.
 \begin{examsubparts}

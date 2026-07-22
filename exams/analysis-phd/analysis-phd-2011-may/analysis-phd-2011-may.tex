@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2011}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2011\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -88,25 +105,32 @@ State the Hahn–Banach theorem.
 \item[\textnormal{(ii)}]
 Show that there exists an isometric linear map from each separable normed space into \(\ell_\infty\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that the spaces~\(c\) (of all convergent scalar sequences) and \(c_0\) (of all null scalar sequences) are not isometrically isomorphic when equipped with the sup norm.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State the Closed Graph Theorem and the Banach Isomorphism Theorem; deduce one of these from the other.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let the sequence \((T_n)_{n=1}^\infty \subset L(X,Y)\) be bounded in operator norm and assume~\(Y\) complete. Prove that 
+Let the sequence \((T_n)_{n=1}^\infty \subset L(X,Y)\) be bounded in operator norm and assume~\(Y\) complete. Prove that
 \[
 Z=\{z\in X:(T_nz)_{n=1}^\infty\text{ converges}\}
 \]
  is a closed subspace of~\(X\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(X\) and~\(Y\) be closed subspaces of a Hilbert space. Prove that if \(X\perp Y\), then \(X+Y\) is closed.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \((\Omega,\mathcal F,\mu)\) be a measure space. Define \(\overline{\mathcal F}\) to comprise all those \(A\subseteq\Omega\) for which there exist \(L,U\in\mathcal F\) such that \(L\subseteq A\subseteq U\) and \(\mu(U\setminus L)=0\) and then define \(\overline\mu(A)\) to be the common value \(\mu(L)=\mu(U)\). Show that \((\Omega,\overline{\mathcal F},\overline\mu)\) is a measure space that is complete in the sense that each subset of a null set is null.
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \((\Omega,\mathcal F,\mu)\) be an arbitrary measure space; let \(p,q,r>1\) satisfy \(\frac1p+\frac1q=\frac1r\). Prove that if \(f\in L_p(\mu)\) and \(g\in L_q(\mu)\) then \(fg\in L_r(\mu)\) with 
+Let \((\Omega,\mathcal F,\mu)\) be an arbitrary measure space; let \(p,q,r>1\) satisfy \(\frac1p+\frac1q=\frac1r\). Prove that if \(f\in L_p(\mu)\) and \(g\in L_q(\mu)\) then \(fg\in L_r(\mu)\) with
 \[
 \lVert fg\rVert_r\leq \lVert f\rVert_p\lVert g\rVert_q.
 \]
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(1\leq p<q<\infty\). Show that \(L_p(\mu)\nsubseteq L_q(\mu)\) iff \((\Omega,\mathcal F,\mu)\) contains measurable sets of arbitrarily small positive measure.
 \end{examproblems}

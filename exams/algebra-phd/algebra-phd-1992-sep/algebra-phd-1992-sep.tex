@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, September 1992}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 1992\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,12 +95,13 @@
 \begin{examinstructions}
 Please read through all the questions carefully before you begin. Your five best solutions will count. You may quote theorems from the course (within reason) as long as you make it clear that you are doing so and state them clearly. All rings have 1 and all modules are unital. Different parts of the same question may or may not be related, and do not usually carry equal credit.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(G\) be a finite group and~\(p\) a prime. The normalizer of a subgroup \(K\leq G\) is defined to be the set of all elements \(x\in G\) such that \(x^{-1}Kx=K\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-If~\(H\) is a normal subgroup of~\(G\) and~\(P\) is a Sylow~\(p\)-subgroup of~\(H\), show that every element of~\(G\) can be written in the form 
+If~\(H\) is a normal subgroup of~\(G\) and~\(P\) is a Sylow~\(p\)-subgroup of~\(H\), show that every element of~\(G\) can be written in the form
 \[
 g=hn,
 \]
@@ -92,6 +109,7 @@ g=hn,
 \item[\textnormal{(b)}]
 Hence or otherwise show that the normalizer of a Sylow~\(p\)-subgroup of a finite group is its own normalizer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -100,38 +118,42 @@ Let~\(R\) be a commutative ring, and~\(M\) an~\(R\)-module such that all of the 
 \item[\textnormal{(b)}]
 Suppose~\(R\) is a subring of a field~\(K\) and~\(S\) is a multiplicative subset of~\(R\) not containing~\(0\). Show that if \(x\in K\) is integral over \(S^{-1}R\), then it may be written as \(x=b/s\), where \(s\in S\) and~\(b\) is integral over~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(k\) be an algebraically closed field and~\(I\) a radical ideal of \(k[X_1,\ldots,X_n]\). Show that the set \(V(I)\) of simultaneous zeroes of~\(I\) in \(k^n\) is irreducible in the Zariski topology (i.e., is not the union of two proper subsets which are algebraic sets) if and only if \(k[X_1,\ldots,X_n]/I\) is an integral domain. Give an example to show that if~\(I\) is not radical, then \(V(I)\) may be irreducible without \(k[X_1,\ldots,X_n]/I\) being an integral domain.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that all simple groups of order \(60\) are isomorphic to the alternating group on five letters.
+\def\ProblemHeadingText{Problem 5.}
 \item
 In this question~\(R\) is a ring with left modules \(A,B\) and~\(C\) and a right module~\(M\). For each of the following statements give a proof or furnish a counterexample.
 \begin{examsubparts}
 \item[\textnormal{a)}]
-Given a surjective homomorphism \(f:B\to C\) of left~\(R\)-modules, the induced homomorphism 
+Given a surjective homomorphism \(f:B\to C\) of left~\(R\)-modules, the induced homomorphism
 \[
 1\otimes f:M\otimes_R B\longrightarrow M\otimes_R C
 \]
  of abelian groups is also surjective.
 \item[\textnormal{b)}]
-Given an injective homomorphism \(g:A\to B\) of left~\(R\)-modules, the induced homomorphism 
+Given an injective homomorphism \(g:A\to B\) of left~\(R\)-modules, the induced homomorphism
 \[
 1\otimes g:M\otimes_R A\longrightarrow M\otimes_R B
 \]
  of abelian groups is also injective.
 \item[\textnormal{c)}]
-If \(R=\mathbb Z\) and \(M=\mathbb Q\), then every exact sequence 
+If \(R=\mathbb Z\) and \(M=\mathbb Q\), then every exact sequence
 \[
 0\longrightarrow A\xrightarrow{g}B\xrightarrow{f}C\longrightarrow 0
 \]
- of~\(R\)-modules induces an exact sequence 
+ of~\(R\)-modules induces an exact sequence
 \[
 0\longrightarrow M\otimes_R A\xrightarrow{1\otimes g}M\otimes_R B\xrightarrow{1\otimes f}M\otimes_R C\longrightarrow 0
 \]
  of abelian groups.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let~\(G\) be a finite group and \(\mathbb CG\) the complex group algebra. Let~\(M\) be a finite dimensional (left) \(\mathbb CG\)-module. An Hermitian form \((\ ,\ )\) on~\(M\) is said to be~\(G\)-invariant if 
+Let~\(G\) be a finite group and \(\mathbb CG\) the complex group algebra. Let~\(M\) be a finite dimensional (left) \(\mathbb CG\)-module. An Hermitian form \((\ ,\ )\) on~\(M\) is said to be~\(G\)-invariant if
 \[
 (gm,gn)=(m,n),\qquad \text{for all }g\in G,\ m,n\in M.
 \]
@@ -141,6 +163,7 @@ Use the trick of averaging over the group to show that~\(M\) has a~\(G\)-invaria
 \item[\textnormal{b)}]
 Using (a) or by another method, prove: If~\(N\) is a \(\mathbb CG\)-submodule of~\(M\), then there is a \(\mathbb CG\)-submodule \(N'\) with \(M=N\oplus N'\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(R\) be the ring of lower triangular \(n\times n\) complex matrices.
 \begin{examsubparts}
@@ -149,6 +172,7 @@ Determine the Jacobson radical of~\(R\) (You may use any properties of the radic
 \item[\textnormal{b)}]
 Give an example to show that the converse of Schur’s Lemma is false, namely, that there exist modules which are not simple (irreducible) but whose endomorphisms form a division ring. (Hint: Use~\(R\) with \(n=2\) and the obvious module for this ring.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove or give a counterexample in each case.
 \begin{examsubparts}
@@ -159,6 +183,7 @@ If we have algebraic extensions of fields \(K\subset L\) and \(L\subset M\), the
 \item[\textnormal{(c)}]
 Every finite extension of an infinite field is separable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(K\) be a subfield of the real numbers and \(f\in K[X]\) an irreducible cubic with three real roots.
 \begin{examsubparts}
@@ -171,11 +196,12 @@ Let~\(E\) be a splitting field of~\(f\) over~\(K\). Show that there is an interm
 \item[\textnormal{(d)}]
 Prove that~\(f\) remains irreducible over any subfield of the real numbers which is a radical extension of~\(K\). (Hints: First, show that we may reduce to the case where \(K=K_1\) and the radical extension is given by an irreducible polynomial as in (a). Then use (b) for the case \(p\neq 3\). If \(p=3\), use the normality of~\(E\) over~\(K\) and the facts that \([L:K]=3=[E:K]\) to show that~\(f\) cannot have a root in~\(L\).)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(R\) be a semisimple artinian ring.
 \begin{examsubparts}
 \item[\textnormal{a)}]
-Use the structure theorem to show that as a left~\(R\)-module, 
+Use the structure theorem to show that as a left~\(R\)-module,
 \[
 R=\bigoplus_i Re_i,
 \]

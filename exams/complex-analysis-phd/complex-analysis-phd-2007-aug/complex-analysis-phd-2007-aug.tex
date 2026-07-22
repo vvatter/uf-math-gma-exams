@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, August 2007}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, August 2007\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,19 +92,26 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(\overline D\) be the closure of the unit disk. Assume \(f:\overline D\to\mathbb C\) is continuous with~\(f\) analytic on~\(D\), \(|f(z)|>3\) for \(|z|=1\), and \(f(0)=1-2i\). Must~\(f\) have a zero in the unit disk? Prove your answer is correct.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a simply connected region. A function \(f:G\to G\) is said to be biholomorphic if~\(f\) is bijective, analytic, and \(f^{-1}\) is also analytic. If \(z_1,z_2\) are distinct elements of~\(G\) and \(f_1,f_2:G\to G\) are biholomorphisms with \(f_1(z_1)=f_2(z_1)\) and \(f_1(z_2)=f_2(z_2)\), prove that \(f_1=f_2\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Assume that~\(f\) is entire, \(f(0)=3+4i\), and \(|f(z)|\leq 5\) when \(|z|<1\). What is \(f'(0)\)?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\mathcal F\) be the collection of analytic mappings of open unit disk~\(D\) into \(\{\operatorname{Re}(z)>0\}\) such that \(f(0)=1\). Show that \(\mathcal F\) is a normal family.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(h_n\) be a sequence of harmonic functions on the connected open set~\(G\) and assume that \(h_n\to h\) uniformly on compact subsets of~\(G\). Show that~\(h\) is harmonic.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Assume that~\(f\) and~\(g\) are entire and for all \(z\in\mathbb C\), \(|f(z)|\leq |g(z)|\). Show that for some constant~\(c\) with \(|c|\leq 1\), \(f=cg\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Assume that~\(f\) is a meromorphic function on \(\mathbb C\). A complex number~\(w\) is called a period of~\(f\) if \(f(z+w)=f(z)\) for all \(z\in\mathbb C\).
 \begin{examsubparts}
@@ -97,8 +120,9 @@ If \(w_1\) and \(w_2\) are periods of~\(f\), show that for all integers \(n_1\) 
 \item[\textnormal{(b)}]
 If~\(G\) is a bounded region of \(\mathbb C\), show that~\(f\) has at most finitely many periods in~\(G\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
-Let~\(p\) be the polynomial \(p(z)=a_0+a_1z+\cdots+a_nz^n\). Show that for each \(j=0,1,\ldots,n\), 
+Let~\(p\) be the polynomial \(p(z)=a_0+a_1z+\cdots+a_nz^n\). Show that for each \(j=0,1,\ldots,n\),
 \[
 |a_j|\leq\max\{|p(z)|:|z|=1\}. \tag{1}
 \]

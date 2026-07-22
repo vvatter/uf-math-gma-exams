@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, August 2018, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2018, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(G\) be a group and let~\(A\) be a set.
 \begin{examsubparts}
@@ -90,6 +107,7 @@ Suppose we have an action of~\(G\) on~\(A\) given by \((g,x)\mapsto g\cdot x\) f
 \item[\textnormal{(c)}]
 Define \(\phi:G\to S_A\) by \(\phi(g)=\sigma_g\). Prove that~\(\phi\) is a homomorphism.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a finite group of order~\(n\) and let \(k\in\mathbb{Z}\) be such that \(\gcd(k,n)=1\). Define \(\phi:G\to G\) by \(\phi(x)=x^k\) for all \(x\in G\).
 \begin{examsubparts}
@@ -98,12 +116,16 @@ Prove that~\(\phi\) is a bijection.
 \item[\textnormal{(b)}]
 Give an example which shows that~\(\phi\) need not be a homomorphism.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(G,H,K\) be groups and let \(\phi:G\to H\), \(\psi:G\to K\) be homomorphisms such that~\(\phi\) is onto and \(\ker\phi\subset\ker\psi\). Prove that there is a unique homomorphism \(\alpha:H\to K\) such that \(\alpha\circ\phi=\psi\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(G\) be a group of order \(105=3\cdot5\cdot7\) with a normal Sylow~\(3\)-subgroup. Prove that~\(G\) is cyclic.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Determine all groups of order \(76=2^2\cdot19\) up to isomorphism.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Determine all abelian groups of order \(800=2^5\cdot5^2\) which have at least one element of order \(40\).
 \end{examproblems}

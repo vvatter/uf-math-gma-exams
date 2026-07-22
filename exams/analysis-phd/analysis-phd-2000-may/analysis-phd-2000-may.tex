@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2000}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2000\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,23 +95,30 @@
 \begin{examinstructions}
 Be sure to write all proofs in a neat and logical fashion. Give reasons for all steps!
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove the Vitali Convergence Theorem for integrals.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove the Martingale Convergence Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \((X,\mathcal B,\mu)\) and \((Y,\mathcal J,\nu)\) be finite measure spaces. Construct \(\mu\otimes\nu\) on \(\mathcal B\otimes\mathcal J\). Give details.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(\{\mu_m\}\) be a sequence of real valued signed measures on \((S,\Sigma)\). Define 
+Let \(\{\mu_m\}\) be a sequence of real valued signed measures on \((S,\Sigma)\). Define
 \[
 \lambda(A)=\sum_{m=1}^{\infty}\frac{1}{2^m}\frac{|\mu_m|(A)}{1+|\mu_m|(S)},\qquad A\in\Sigma.
 \]
  Show~\(\lambda\) is a finite measure on~\(\Sigma\) and \(\mu_m\overset{\varepsilon-\delta}{\ll}\lambda\) for each~\(m\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f:[0,b]\to\mathbb R\) be Lebesgue integrable. Suppose \(\int_{[0,c]}f\,dm=0\) for each \(c\in[0,b]\). Show \(f=0\) a.e. \(m\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \((\Omega,\mathcal F,P)\) be a pr. space, \(Y\) an integrable r.v. and \(\mathcal E\) a sub σ-field of \(\mathcal F\). Suppose \(\mathcal E\) and \(\mathcal F(Y)\) are independent. What is \(E(Y\mid\mathcal E)\)? Prove.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(\mathcal X\) be a B-space and suppose \(\mathcal Y\) and \(\mathcal Z\) are closed linear subspaces of \(\mathcal X\) such that each \(x\in\mathcal X\) has a unique representation of the form \(x=y+z\), where \(y\in\mathcal Y\) and \(z\in\mathcal Z\). Show that there is a constant~\(K\) such that \(|y|\le K|x|\) and \(|z|\le K|x|\), for each \(x\in\mathcal X\), where~\(y\) \& \(z\) are given as above.
 

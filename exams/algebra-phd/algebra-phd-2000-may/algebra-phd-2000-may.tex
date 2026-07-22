@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2000}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2000\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,14 +95,17 @@
 \begin{examinstructions}
 Please work out seven out of the following eleven exercises. Please do not hand in more than seven.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(F\) denote the free group on the set~\(X\). Prove that \(F/[F,F]\) is the free abelian group on the set~\(X\). (Note: \([F,F]\) denotes the commutator subgroup of~\(F\).)
+\def\ProblemHeadingText{Problem 2.}
 \item
 Recall that a subgroup~\(H\) of a product of groups \(G=\prod_{i\in I}G_i\) is said to be a subdirect product if, for each \(i\in I\), the restriction of the projection \(\pi_i:G\longrightarrow G_i\) to~\(H\) is surjective.
 
 \par
 Let \(\mathcal V\) be a class of groups which is closed under the formation of subdirect products and homomorphic images. Prove that \(\mathcal V\) is also closed under formation of subgroups.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be a ring with identity, and~\(M\) be a left~\(R\)-module. A projective basis for~\(M\) is a subset \(\{a_i:i\in I\}\) of~\(M\) together with~\(R\)-homomorphisms \(f_i:M\longrightarrow R\) such that the following conditions hold. Prove that~\(M\) is a projective module if and only if it has a projective basis.
 \begin{examsubparts}
@@ -95,6 +114,7 @@ for each \(a\in M\), \(\left|\{i\in I:f_i(a)\neq 0\}\right|<\infty\), and
 \item[\textnormal{(ii)}]
 for each \(a\in M\), \(a=\sum_{i\in I}f_i(a)a_i\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose that~\(G\) is a finite group and~\(K\) is a field. Prove:
 \begin{examsubparts}
@@ -103,11 +123,12 @@ If the characteristic of~\(K\) does not divide \(|G|\), then \(K[G]\), the group
 \item[\textnormal{(b)}]
 Show that if the characteristic of~\(K\) does divide the order of~\(G\), then the Jacobson radical of \(K[G]\) is nontrivial.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(A\) be a commutative ring with identity, and suppose that~\(M\) is an~\(A\)-module, and~\(I\) is an ideal of~\(A\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that 
+Prove that
 \[
 (A/I)\otimes M\cong M/IM,
 \]
@@ -115,26 +136,32 @@ Prove that
 \item[\textnormal{(b)}]
 Prove that the isomorphism in (a) is natural.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose that~\(A\) is a commutative ring with identity. If every prime ideal of~\(A\) is finitely generated, show that~\(A\) is Noetherian.
+\def\ProblemHeadingText{Problem 7.}
 \item
 State and prove the Hilbert Basis Theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(K\) be a field.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Define discrete valuation on~\(K\), and the notion of a discrete valuation ring.
 \item[\textnormal{(b)}]
-Suppose that~\(A\) is an integral domain. Prove that it is a discrete valuation ring if and only if it is a principal ideal domain in which 
+Suppose that~\(A\) is an integral domain. Prove that it is a discrete valuation ring if and only if it is a principal ideal domain in which
 \[
 p\text{ and }q\text{ irreducible}\implies p=uq,
 \]
  for some unit \(u\in A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove that the lattice of all ideals of a Dedekind domain is distributive. (Hint: Localize!)
+\def\ProblemHeadingText{Problem 10.}
 \item
 Use the notion of formal derivatives to show that, if \(f(T)\) is an irreducible polynomial over the field~\(F\), then it has repeated roots in the splitting field if and only if the characteristic of~\(F\) is \(p>0\), and \(f(T)=g(T^p)\), for some \(g(T)\in F[T]\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(p\) be a prime number.
 \begin{examsubparts}

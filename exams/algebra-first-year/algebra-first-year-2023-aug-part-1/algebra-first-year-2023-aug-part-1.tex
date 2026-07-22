@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, August 2023, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2023, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose~\(G\) is a group and \(H, K\) are normal subgroups of~\(G\) such that \(H \cap K = 1\).
 \begin{examsubparts}
@@ -88,10 +105,13 @@ Show that there is an injective homomorphism \(G \to G/H \times G/K\).
 \item[\textnormal{(ii)}]
 Show that if \(G = HK\) then~\(G\) is isomorphic to \(G/H \times G/K\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose~\(G\) is a finite group, \(p\) is a prime, \(|G|\) is a power of~\(p\) and \(G \times S \to S\) is an action of~\(G\) on~\(S\). Show that if~\(p\) does not divide \(|S|\) then~\(S\) has an element fixed by every element of~\(G\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose~\(p\) and~\(q\) are primes such that \(p < q\) and \(p \mid q-1\). Show that there is a unique nonabelian group of order \(pq\), and show it is a semidirect product of two cyclic groups.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Give the definitions of
 \begin{examsubparts}
@@ -102,8 +122,10 @@ nilpotent group.
 \item[\textnormal{(iii)}]
 Show that \(A_4\) is solvable but not nilpotent.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that if \(n \geq 5\) then \(A_n\) has no proper subgroup of index less than~\(n\) (you may assume results about the simplicity of \(A_n\)).
+\def\ProblemHeadingText{Problem 6.}
 \item
 In both cases, justify your answer.
 \begin{examsubparts}

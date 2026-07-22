@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, September 1989}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, September 1989\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,19 +95,22 @@
 \begin{examinstructions}
 Do 7 out of 9 problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Define the Ramsey number \(r(m,n)\) and prove that 
+Define the Ramsey number \(r(m,n)\) and prove that
 \[
 r(m,n) \leq \binom{m+n-2}{m-1}.
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 The 12 edges of a cube are each colored one of two colors. Two such colored cubes are regarded as equivalent if one can be rotated so that it becomes identically colored to the other. Compute the number of equivalence classes of these colored cubes.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(\Sigma\) be a block design with parameters \(b,v,r,k,\lambda\).
 \begin{examsubparts}
 \item[\textnormal{(i)}]
-Prove that 
+Prove that
 \[
 MM^T=
 \begin{pmatrix}
@@ -109,6 +128,7 @@ Prove that \(b \geq v\).
 \item[\textnormal{(iv)}]
 If \(b=v\) is an even integer, prove that \(k-\lambda\) is the square of an integer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Give responses to any 4 out of the 5 parts. You may use the conclusions of (ii) and (iii) in responding to parts (iv) and (v) even if you omit their proofs.
 \begin{examsubparts}
@@ -123,11 +143,12 @@ Prove that there is no cyclic \((67,12,2)\)-difference set.
 \item[\textnormal{(v)}]
 Find a cyclic \((73,9,1)\)-difference set.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 A~\(t\)-\((v,k,\lambda)\) design~\(\Sigma\) is an incidence structure consisting of a set~\(S\) of~\(v\) points and a collection of~\(k\)-subsets of~\(S\) called blocks such that every~\(t\)-subset of~\(S\) is contained in precisely~\(\lambda\) blocks.
 \begin{examsubparts}
 \item[\textnormal{(i)}]
-If \(t\geq 1\), prove that~\(\Sigma\) is also a \((t-1)\)-\((v,k,\lambda')\) design with 
+If \(t\geq 1\), prove that~\(\Sigma\) is also a \((t-1)\)-\((v,k,\lambda')\) design with
 \[
 \lambda'=\frac{(v-t+1)\lambda}{k-t+1}.
 \]
@@ -137,14 +158,17 @@ Let~\(\Sigma\) be a~\(4\)-\((23,7,1)\) design. Let \(\Sigma^*\) be the incidence
 \par
 Hints: For \(0\leq s\leq 3\), \(\Sigma\) is an~\(s\)-\((23,7,\lambda_s)\) design. Use the principle of inclusion and exclusion.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State and prove Dilworth's Theorem for a finite poset.
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(\{a_n\}_{n=0}^{\infty}\) be a sequence satisfying a homogeneous linear recurrence relation. Define 
+Let \(\{a_n\}_{n=0}^{\infty}\) be a sequence satisfying a homogeneous linear recurrence relation. Define
 \[
 r_n=\frac{a_n}{a_{n-1}},\qquad n=1,2,3,\ldots.
 \]
  Give necessary and sufficient conditions on the recurrence relation for \(r_n\) to approach a finite limit, and give a way to find the limit when it exists.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Describe a combinatorial algorithm of polynomial time efficiency to solve the following problem. Prove that your algorithm has the required efficiency using theorems from the combinatorics class.
 
@@ -152,7 +176,7 @@ Describe a combinatorial algorithm of polynomial time efficiency to solve the fo
 Input: \(X\) a finite set, \(\{A_1,A_2,\ldots,A_n\}\) a collection of subsets of~\(X\), and \(p:X\to\mathbb{R}\) a function.
 
 \par
-Output: \(\{x_1,x_2,\ldots,x_n\}\) distinct elements of~\(X\) which maximize 
+Output: \(\{x_1,x_2,\ldots,x_n\}\) distinct elements of~\(X\) which maximize
 \[
 \sum_{i=1}^n p(x_i)
 \]
@@ -160,6 +184,7 @@ Output: \(\{x_1,x_2,\ldots,x_n\}\) distinct elements of~\(X\) which maximize
 
 \par
 (Assume there exists a set of~\(n\) elements satisfying the restriction \(x_i\in A_i\), \(\forall i\).)
+\def\ProblemHeadingText{Problem 9.}
 \item
 Find the number of spanning sets in a vector space~\(V\) of dimension~\(n\) over \(\operatorname{GF}(q)\), the finite field with~\(q\) elements. (Hint: try Möbius inversion.)
 \end{examproblems}

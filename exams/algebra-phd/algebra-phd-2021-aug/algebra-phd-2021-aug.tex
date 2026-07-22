@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, August 2021}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, August 2021\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,9 +98,11 @@ Answer seven problems. If more than seven problems are answered only the first s
 \par
 Results from lectures or textbooks may be used without proof (within reason—don’t state results equivalent to the problem), but must be clearly stated.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose~\(F\) is a finite field and \(K/F\) is a finite extension. Show that \(K/F\) is Galois and its Galois group is cyclic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be a ring with identity.
 \begin{examsubparts}
@@ -95,6 +113,7 @@ Show that a free~\(R\)-module is projective.
 \item[\textnormal{(iii)}]
 Give an example of a projective~\(R\)-module that is not free.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -103,6 +122,7 @@ Let~\(C\) be a category. Define what it means for an object of~\(C\) to be the p
 \item[\textnormal{(ii)}]
 Let~\(C\) be the category of torsion abelian groups (the full subcategory of the category of abelian groups whose objects are torsion abelian groups). Show that any set \(\{X_\alpha\}_{\alpha\in I}\) has a product. (Hint: if~\(I\) is infinite, it’s not the usual product).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -111,18 +131,25 @@ Show that a discrete valuation ring is a Dedekind domain.
 \item[\textnormal{(ii)}]
 Show that if~\(F\) is a field, \(F[X,Y]\) is not a Dedekind domain.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(A\) is a domain with fraction field~\(K\), and assume~\(A\) is integrally closed in~\(K\). Suppose \(S\subseteq A\) is a multiplicative set. Show that \(S^{-1}A\subseteq K\) is integrally closed in~\(K\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose~\(A\) is a commutative ring with identity and \(S\subseteq A\) is a multiplicative set. Let~\(P\) be the set of prime ideals of~\(A\), \(P'\) the set of prime ideals of \(S^{-1}A\), and let \(i:A\to S^{-1}A\) be the natural homomorphism. Show that \(\mathfrak p\mapsto i^{-1}(\mathfrak p)\) induces an injective map from \(P'\) to the subset of~\(P\) consisting of \(\mathfrak q\in P\) such that \(\mathfrak q\cap S=\varnothing\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Show that if~\(X\) is a set with more than one element, the free group \(F(X)\) on~\(X\) is not abelian.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(K\) be a field. Show that any vector space over~\(K\) has a basis (do not assume the vector space has finite dimension).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose~\(R\) is a ring with identity, \(M\) is a left~\(R\)-module and \(N\subseteq M\) is a submodule. Show that if~\(N\) and \(M/N\) are Noetherian then so is~\(M\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Prove the Hilbert basis theorem: if~\(A\) is a commutative Noetherian ring with identity then so is \(A[X]\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 If~\(p\) is a prime, describe all isomorphism classes of semisimple rings of order \(p^6\).
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, May 2022}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, May 2022\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove or provide a counterexample to each of the following.
 \begin{examsubparts}
@@ -88,29 +105,32 @@ If matrix~\(A\) is normal and triangular, then it is diagonal.
 \item[\textnormal{(b)}]
 Every matrix has a Schur factorization.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 For \(v\in\mathbb{C}^n\), define \(f_A(v):=(v^*Av)^{1/2}\). Under what condition(s) on \(A\in\mathbb{C}^{n\times n}\) is \(f_A(\cdot)\) a norm on \(\mathbb{C}^n\)? (Full credit will only be given for a general condition or conditions. An example is not sufficient.) Prove that \(f_A(\cdot)\) is a norm on \(\mathbb{C}^n\) under the condition(s) you require.
 \item[\textnormal{(b)}]
-Assuming the condition(s) you require in (a), given a matrix~\(A\), determine the best constants~\(\alpha\) and~\(\beta\) to satisfy the inequality 
+Assuming the condition(s) you require in (a), given a matrix~\(A\), determine the best constants~\(\alpha\) and~\(\beta\) to satisfy the inequality
 \[
 \alpha\lVert v\rVert_2\leq f_A(v)\leq\beta\lVert v\rVert_2.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column~\(j\) of~\(U\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Suppose \(\operatorname{rank}(A)=p<n<m\). Show \(\{u_1,u_2,\ldots,u_p\}\), is a basis for \(\operatorname{Col}(A)\), and \(\{u_{p+1},u_{p+2},\ldots,u_m\}\) is a basis for \(\operatorname{Null}(A^*)\).
 \item[\textnormal{(b)}]
-Suppose~\(A\) is full rank and \(x\neq 0\). Let \(\sigma_i\), \(i=1,\ldots,n\), be the singular values of~\(A\). Show 
+Suppose~\(A\) is full rank and \(x\neq 0\). Let \(\sigma_i\), \(i=1,\ldots,n\), be the singular values of~\(A\). Show
 \[
 \sigma_1\geq\frac{\lVert Ax\rVert_2}{\lVert x\rVert_2}\geq\sigma_n>0.
 \]
  If you want to use the property that \(\lVert A\rVert_2=\sigma_1\), then you must prove that also.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\{a_1,\ldots,a_n\}\) be a linearly independent set of vectors. Consider the Gram–Schmidt and modified Gram–Schmidt algorithms for computing an orthonormal basis \(\{q_1,\ldots,q_n\}\) so that \(\operatorname{Span}\{q_1,\ldots,q_k\}=\operatorname{Span}\{a_1,\ldots,a_k\}\), for each \(k=1,\ldots,n\). Suppose in computing \(q_2\), an orthogonalization error is committed so that \(q_2^*q_1=\epsilon\).
 \begin{examsubparts}
@@ -119,8 +139,9 @@ Use the Gram–Schmidt algorithm to compute \(v_3\) so that \(q_3=v_3/\lVert v_3
 \item[\textnormal{(b)}]
 Use the modified Gram–Schmidt algorithm to compute \(v_3\) so that \(q_3=v_3/\lVert v_3\rVert\). What is \(v_3^*q_2\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Compute the Cholesky decomposition of the following matrix, or explain why it does not exist. 
+Compute the Cholesky decomposition of the following matrix, or explain why it does not exist.
 \[
 A=\begin{pmatrix}
 1 & 1/2 & 2 & 3\\

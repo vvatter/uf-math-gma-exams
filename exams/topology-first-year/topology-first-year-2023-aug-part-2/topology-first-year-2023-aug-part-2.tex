@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2023, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2023, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,21 +95,26 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that \(B^2\) is not homeomorphic to \(B^3\), where \(B^n\) denotes the closed unit ball in \(\mathbb{R}^n\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that every continuous map \(f:S^2\to S^1\) of the 2-sphere to the circle \(S^1\) is null-homotopic.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let 
+Let
 \[
 X=([-1,1]\times\{0\}\times\{0\})\cup(\{0\}\times[-1,1]\times\{0\})\cup(\{0\}\times\{0\}\times[-1,1])\subset\mathbb{R}^3.
 \]
  Show that every continuous map \(f:X\to X\) has a fixed point.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Derive the Brouwer Fixed Point Theorem for \(B^2\) from the Borsuk–Ulam Theorem for \(S^2\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let~\(X\), \(Y\), and~\(Z\) denote the following open rays in \(\mathbb{R}^3\): 
+Let~\(X\), \(Y\), and~\(Z\) denote the following open rays in \(\mathbb{R}^3\):
 \[
 X=(0,\infty)\times\{0\}\times\{0\},\quad Y=\{0\}\times(0,\infty)\times\{0\},\quad Z=\{0\}\times\{0\}\times(0,\infty).
 \]
@@ -116,11 +137,14 @@ X=(0,\infty)\times\{0\}\times\{0\},\quad Y=\{0\}\times(0,\infty)\times\{0\},\qua
 \begin{examinstructions}
 Answer the following with complete definitions or proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Describe a space~\(X\) with \(\pi_1(X)\cong\mathbb{Z}_3\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Show that the projective plane \(\mathbb{R}P^2\) is not homeomorphic to the surface of genus 2, \(M_2=T\#T\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(X=[0,1]^{(0,1)}\) be given the product topology. Is the space~\(X\)
 \begin{examsubparts}
@@ -131,8 +155,10 @@ metrizable?
 \item[\textnormal{(c)}]
 separable?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 State the Seifert–van Kampen Theorem. Can it be used to compute \(\pi_1(S^n)\)?
+\def\ProblemHeadingText{Problem 10.}
 \item
 State the Tychonoff Theorem. Prove that every compact Hausdorff space~\(X\) can be embedded into a Tychonoff cube \([0,1]^A\).
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, January 2019}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, January 2019\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\) with \(\operatorname{rank}(A)=p\) and \(p\leq n\leq m\).
 \begin{examsubparts}
@@ -90,6 +107,7 @@ Show \(\operatorname{Null}(A^*)=\operatorname{Span}\{u_{p+1},u_{p+2},\ldots,u_m\
 \item[\textnormal{(c)}]
 Show that \(A^*A\) is invertible if and only if~\(A\) is full rank.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let matrix \(A\in\mathbb{C}^{m\times n}\), with \(n<m\). Let vector \(b\in\mathbb{C}^m\), and let~\(r\) denote the residual vector \(r=b-Ax\).
 \begin{examsubparts}
@@ -98,6 +116,7 @@ Show that~\(x\) solves the least-squares problem \(\min \lVert b-Ax\rVert_2\) if
 \item[\textnormal{(b)}]
 Suppose~\(A\) is full rank, and describe how to find the least-squares solution using the QR decomposition of~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -108,6 +127,7 @@ Show that if \(T\in\mathbb{C}^{m\times m}\) is normal and triangular, then~\(T\)
 \item[\textnormal{(c)}]
 Show that if \(A\in\mathbb{C}^{m\times m}\) is normal and~\(\lambda\) is an eigenvalue of~\(A\), then the geometric multiplicity of~\(\lambda\) is equal to the algebraic multiplicity of~\(\lambda\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\lVert\cdot\rVert\) be a subordinate (induced) matrix norm. If~\(A\) is \(n\times n\) invertible and~\(E\) is \(n\times n\) with \(\lVert A^{-1}\rVert\lVert E\rVert<1\), then show
 \begin{examsubparts}
@@ -118,8 +138,9 @@ Let \(\lVert\cdot\rVert\) be a subordinate (induced) matrix norm. If~\(A\) is \(
 \lVert(A+E)^{-1}\rVert\leq \frac{\lVert A^{-1}\rVert}{1-\lVert A^{-1}\rVert\lVert E\rVert}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Consider the matrix~\(A\) given by 
+Consider the matrix~\(A\) given by
 \[
 A=\begin{pmatrix}1&1&2&-3\\1&10&-1&1\\2&-1&13&-2\\-3&1&-2&25\end{pmatrix}.
 \]

@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, January 1997}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 1997\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,63 +98,79 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{I.}
+\subsection{I.}
 \begin{examinstructions}
 State the following theorems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 The monotone convergence theorem for nets in \(L^p\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 The Hahn decomposition theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 The Egorov theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
 The Vitali convergence theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 The Radon–Nikodym theorem.
+\def\ProblemHeadingText{Problem 6.}
 \item
 The Fubini theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 The representation of the dual of \(L^p\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 The Lebesgue dominated convergence theorem.
 \end{examproblems}
-\section{II}
+\subsection{II}
 \begin{examinstructions}
 Prove one of the theorems 6 or 7.
 \end{examinstructions}
-\section{III.}
+\subsection{III.}
 \begin{examinstructions}
 Solve 5 of the following problems.
 \end{examinstructions}
 \begin{examinstructions}
 In what follows, \((X,\Sigma,\mu)\) is a measure space.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((f_n)\) be a sequence of real-valued measurable functions on~\(X\), and let~\(f\) be a real measurable function on~\(X\). Prove that \((f_n)\) converges to~\(f\) in~\(\mu\)-measure, \(f_n\xrightarrow{\mu}f\), iff every subsequence \((f_{n_i})\) contains a further subsequence \((f_{n_{i_j}})\) converging to~\(f\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \((f_n)\) be a sequence of positive, \(\mu\)-integrable functions such that \(\sum_n\int f_n\,d\mu<\infty\). For each \(x\in X\), denote 
+Let \((f_n)\) be a sequence of positive, \(\mu\)-integrable functions such that \(\sum_n\int f_n\,d\mu<\infty\). For each \(x\in X\), denote
 \[
 L(x)=\sup\{n:f_n(x)>1\}.
 \]
  Prove that \(L(x)<\infty\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(f:\mathbb R\to\mathbb R\) be a Lebesgue integrable function. Prove that for every \(\varepsilon>0\), there is a bounded interval~\(I\) such that \(\left|\int_E f\,dx\right|<\varepsilon\) for every measurable set~\(E\) with \(E\cap I=\varnothing\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(F\) be a Banach space and \(\mathcal F\subseteq\Sigma\) a sub-σ-algebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal F)\) for every~\(\mu\)-integrable function \(f:X\to F\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((X,\mathcal S,\mu)\) and \((Y,\mathcal T,\nu)\) be two real measure spaces. Prove the existence of the product measure \(\mu\times\nu\) and that \(|\mu\times\nu|=|\mu|\times|\nu|\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(\mu\) be the Lebesgue measure on \(\mathbb R\), and let~\(f\) be a Lebesgue integrable function on \(\mathbb R\) such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb R\) (if \(x<0\), \(\int_0^x=-\int_x^0\)). What can you say about~\(f\)?
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(\mu\) be the Lebesgue measure on \(\mathbb R\), and let \(f_n=-\varphi_{(n,\infty)}\), \(n=1,2,\ldots\). Show that \((f_n)\) is increasing but that the conclusion of the monotone convergence theorem is not true. Explain why.
+\def\ProblemHeadingText{Problem 8.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source legibly uses \((0,1)\) for the measure space but \((0,1]\) for the binary-expansion domain; whether this endpoint difference is intentional is unclear.
 \end{problemconcern}
-Let~\(\mu\) be the Lebesgue measure on \((0,1)\). Each point \(x\in(0,1]\) has a binary expansion 
+Let~\(\mu\) be the Lebesgue measure on \((0,1)\). Each point \(x\in(0,1]\) has a binary expansion
 \[
 x=\sum_{i=1}^{\infty}\frac{x_i}{2^i},
 \]
@@ -149,7 +181,7 @@ Define \(T_i(x)=x_i\). Sketch the graphs of \(T_1,T_2,T_3\).
 \item[\textnormal{(ii)}]
 Let \(\mathcal F_k=\sigma(T_1,T_2,\ldots,T_k)\). Describe \(\mathcal F_k\).
 \item[\textnormal{(iii)}]
-Let \(f\in L^2(\mu)\). Find a function \(g_1\) which is \(\mathcal F_1\)-measurable and satisfies 
+Let \(f\in L^2(\mu)\). Find a function \(g_1\) which is \(\mathcal F_1\)-measurable and satisfies
 \[
 \int_A g_1\,d\mu=\int_A f\,d\mu\quad\text{for }A\in\mathcal F_1.
 \]

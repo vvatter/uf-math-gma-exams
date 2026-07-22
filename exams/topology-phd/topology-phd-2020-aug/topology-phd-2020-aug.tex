@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, August 2020}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, August 2020\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(X\) be a topological space. Given two points \(a,b\in X\), a collection of sets \(A_1,\ldots,A_n\) is a simple chain from~\(a\) to~\(b\) if \(a\in A_1\), \(b\in A_n\), and \(A_i\cap A_j\ne\varnothing\) if and only if \(|i-j|\le 1\). Prove that if \(\{U_\alpha\}\) is a collection of open sets covering~\(X\) and~\(X\) is connected, then there is a simple chain of elements in \(\{U_\alpha\}\) joining any pair of points \(a,b\in X\). (Hint: Consider the set \(C_a\) of all~\(b\) so that there is a simple chain of elements joining~\(a\) and~\(b\). Show that \(C_a\) is both open and closed.)
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(X=S^2\cup_f e^3\cup_h e^5\), where \(f:S^2\to S^2\) has degree~\(n\) and \(h:S^4\to S^2\cup_f e^3\) is continuous.
 \begin{examsubparts}
@@ -92,8 +110,10 @@ Determine \(H_\bullet(X;\mathbb Z)\) and \(H^\bullet(X;\mathbb Z_2)\) as a funct
 \item[\textnormal{(c)}]
 Can~\(X\) have the homotopy type of a closed~\(5\)-manifold? (If the answer depends on~\(n\), explain.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(X\) be the space \(\mathbb{RP}^3/\mathbb{RP}^1\) (the space obtained by collapsing \(\mathbb{RP}^1\subset\mathbb{RP}^3\) to a point). Compute the integral homology groups of~\(X\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\mathbb{RP}^2\) be the real projective plane and fix a basepoint \(x_0\in\mathbb{RP}^2\). Note that we can realize the wedge sum \(\mathbb{RP}^2\vee\mathbb{RP}^2\) as \((\mathbb{RP}^2\times\{x_0\})\cup(\{x_0\}\times\mathbb{RP}^2)\subset\mathbb{RP}^2\times\mathbb{RP}^2\).
 \begin{examsubparts}
@@ -104,8 +124,9 @@ Show that \(\mathbb{RP}^2\vee\mathbb{RP}^2\) is not a retract of \(\mathbb{RP}^2
 \item[\textnormal{(c)}]
 Show that any map \(f:\mathbb{RP}^2\vee\mathbb{RP}^2\to S^1\) is null-homotopic.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Compute \(H_\bullet(M;\mathbb Z_2)\), where~\(M\) is the space with integral homology groups 
+Compute \(H_\bullet(M;\mathbb Z_2)\), where~\(M\) is the space with integral homology groups
 \[
 H_k(M;\mathbb Z)=
 \begin{cases}
@@ -119,28 +140,38 @@ H_k(M;\mathbb Z)=
 \begin{examinstructions}
 Answer the following with complete definitions, statements, or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(M\) be an orientable simply-connected~\(3\)-manifold. Compute the integral homology of~\(M\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Compute \(\chi(\mathbb{RP}^2\times\mathbb{CP}^4\times S^4)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Give an example of a space that is connected but not locally connected.
+\def\ProblemHeadingText{Problem 9.}
 \item
 State the Urysohn Lemma.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Prove that if \(m\ne n\), then \(\mathbb R^m\) is not homeomorphic to \(\mathbb R^n\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let \(\mathbb N\) be the set of natural numbers and let \(\mathbb N^*\) be its one-point compactification. Let~\(X\) be any topological space. Prove that a sequence \(\{a_n\}\) in~\(X\) converges to~\(a\) if and only if the map \(f:\mathbb N^*\to X\) defined by \(f(n)=a_n\) and \(f(\infty)=a\) is continuous. (Here \(\mathbb N\) has the discrete topology.)
+\def\ProblemHeadingText{Problem 12.}
 \item
 State the Borsuk–Ulam Theorem.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Describe the possible connected covering spaces of \(S^1\times S^1\).
+\def\ProblemHeadingText{Problem 14.}
 \item
-Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample. 
+Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample.
 \[
 0\to\mathbb Z\to\mathbb Z\oplus\mathbb Z\to A\to 0
 \]
+\def\ProblemHeadingText{Problem 15.}
 \item
 Compute the integral homology of the space \(\mathbb{CP}^2\times\mathbb{RP}^3\).
 \end{examproblems}

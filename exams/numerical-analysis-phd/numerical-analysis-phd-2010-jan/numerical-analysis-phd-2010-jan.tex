@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, January 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,37 +95,47 @@
 \begin{examinstructions}
 Answer any 8 questions.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that a projector is normal if and only if it is self-adjoint.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(A \in \mathbb{R}^{N\times N}\) and \(b \in \mathbb{R}^N\). Consider the following iteration for solving \(Ax=b\), that computes \(x_{n+1}\), given \(x_n \in \mathbb{R}^N\), as follows (in~\(m\) intermediate steps): Setting \(x_{n+1}^{(0)}=x_n\), for \(\ell=1,2,\ldots,m\), compute \(x_{n+1}^{(\ell)}=x_{n+1}^{(\ell-1)}+\tau_\ell(b-Ax_{n+1}^{(\ell-1)})\). Then, define \(x_{n+1}=x_{n+1}^{(m)}\). There is a linear operator~\(E\) such that \(x_{n+1}-x=E(x_n-x)\). Give a formula for~\(E\). Suppose~\(A\) is Hermitian and positive definite with spectral condition number~\(\kappa\). Prove that there are real values of the~\(m\) parameters \(\tau_\ell\) such that 
+Let \(A \in \mathbb{R}^{N\times N}\) and \(b \in \mathbb{R}^N\). Consider the following iteration for solving \(Ax=b\), that computes \(x_{n+1}\), given \(x_n \in \mathbb{R}^N\), as follows (in~\(m\) intermediate steps): Setting \(x_{n+1}^{(0)}=x_n\), for \(\ell=1,2,\ldots,m\), compute \(x_{n+1}^{(\ell)}=x_{n+1}^{(\ell-1)}+\tau_\ell(b-Ax_{n+1}^{(\ell-1)})\). Then, define \(x_{n+1}=x_{n+1}^{(m)}\). There is a linear operator~\(E\) such that \(x_{n+1}-x=E(x_n-x)\). Give a formula for~\(E\). Suppose~\(A\) is Hermitian and positive definite with spectral condition number~\(\kappa\). Prove that there are real values of the~\(m\) parameters \(\tau_\ell\) such that
 \[
 \rho(E)\leq 2\left(\frac{\sqrt{\kappa}-1}{\sqrt{\kappa}+1}\right)^m.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose~\(A\) and~\(B\) are square matrices such that \(AB\) is normal. Prove that \(\lVert AB\rVert_2\leq \lVert BA\rVert\). (We use \(\lVert\cdot\rVert_2\) to denote the spectral norm and \(\lVert\cdot\rVert\) to denote any induced matrix norm.)
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(A\in\mathbb{C}^{m\times m}\), and \(a_j\) be its~\(j\)-th column. Prove that 
+Let \(A\in\mathbb{C}^{m\times m}\), and \(a_j\) be its~\(j\)-th column. Prove that
 \[
 |\det A|\leq \prod_{j=1}^m\lVert a_j\rVert_2.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(A\) is a Hermitian positive definite matrix split into \(A=C+C^*+D\) where~\(D\) is also Hermitian positive definite. Show that \(B=C+\omega^{-1}D\) is invertible. Consider the iteration \(x_{n+1}=x_n+B^{-1}(b-Ax_n)\), with any initial iterate \(x_0\). Prove that \(x_n\) converges to \(x=A^{-1}b\) whenever \(0<\omega<2\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(x_0,x_1,\ldots,x_n\) be distinct points in a finite interval \([a,b]\) and \(f\in C^1[a,b]\). Show that for any given \(\varepsilon>0\) there exists a polynomial~\(p\) such that \(\lVert f-p\rVert_\infty<\varepsilon\) and \(p(x_i)=f(x_i)\) for all \(i=0,1,\ldots,n\) (where \(\lVert\cdot\rVert_\infty\) denotes the \(L^\infty(a,b)\)-norm).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(p>0\) and \(x=\sqrt{p+\sqrt{p+\sqrt{p+\cdots}}}\), where all the square roots are positive. Design a fixed point iteration \(x_{n+1}=F(x_n)\) that converges to~\(x\). You should write down a specific~\(F\). Obtain a sufficient condition on the initial iterates for (global) convergence of the iteration.
+\def\ProblemHeadingText{Problem 8.}
 \item
-Let~\(n\) be a positive integer, \(h=1/n\), and consider the grid of points \((ih,jh)\) for \(i,j=0,1,\ldots,n\). Let~\(A\) be the finite difference operator with the “5-point stencil” discretizing the Laplace operator \(-\Delta\), with zero Dirichlet boundary conditions on this grid. Describe it. Prove that the spectrum of~\(A\) consists of the numbers 
+Let~\(n\) be a positive integer, \(h=1/n\), and consider the grid of points \((ih,jh)\) for \(i,j=0,1,\ldots,n\). Let~\(A\) be the finite difference operator with the “5-point stencil” discretizing the Laplace operator \(-\Delta\), with zero Dirichlet boundary conditions on this grid. Describe it. Prove that the spectrum of~\(A\) consists of the numbers
 \[
 \lambda_{lm}=4h^{-2}\bigl(\sin^2(l\pi h/2)+\sin^2(m\pi h/2)\bigr),
 \]
  for all \(l,m=1,\ldots,n-1\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let \(x_m\) and \(x_{m+1}\) be two successive (complex) iterates when Newton’s method is applied to a polynomial \(p(z)\) of degree~\(n\). Prove that there is a zero of \(p(z)\) in the disk \(\{z\in\mathbb{C}:|z-x_m|\leq n|x_{m+1}-x_m|\}\).
+\def\ProblemHeadingText{Problem 10.}
 \item
-Let \(w(x)\) be a positive integrable function on \([a,b]\). Consider the quadrature 
+Let \(w(x)\) be a positive integrable function on \([a,b]\). Consider the quadrature
 \[
 \int_a^b f(x)w(x)\,dx\approx\sum_{k=0}^n\bigl(A_kf(x_k)+B_kf'(x_k)+C_kf''(x_k)\bigr)
 \]

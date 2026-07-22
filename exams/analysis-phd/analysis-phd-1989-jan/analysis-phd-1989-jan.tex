@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, January 1989}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 1989\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,12 +95,13 @@
 \begin{examinstructions}
 Answer 6 out of the 7 problems. Justify all work. To obtain any partial credit, all work must be presented in a neat, logical and concise fashion.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(f\) be a Borel-measurable function defined on \([0,1]\) with \(\infty>f(x)\ge 0\).
 \begin{examsubparts}
 \item[\textnormal{Part (a)}]
-Prove that there is a non-increasing function \(f^*\) defined on \([0,1]\) such that 
+Prove that there is a non-increasing function \(f^*\) defined on \([0,1]\) such that
 \[
 m\{x:f^*(x)\ge\lambda\}=m\{x:f(x)\ge\lambda\}
 \]
@@ -92,43 +109,49 @@ m\{x:f^*(x)\ge\lambda\}=m\{x:f(x)\ge\lambda\}
 \item[\textnormal{Part (b)}]
 Show that \(\int f^*\,dm=\int f\,dm\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \((X,\mathcal F,\mu)\) be a finite measure space, and let~\(f\) and~\(g\) be two measurable functions such that 
+Let \((X,\mathcal F,\mu)\) be a finite measure space, and let~\(f\) and~\(g\) be two measurable functions such that
 \[
 \mu(f\in A,\ g\in B)=\mu(f\in A)\mu(g\in B)
 \]
- for every \(A,B\in\mathcal B(\mathbb R)\). Let \(\nu(A)=\mu(g\in A)\). Show that 
+ for every \(A,B\in\mathcal B(\mathbb R)\). Let \(\nu(A)=\mu(g\in A)\). Show that
 \[
 \int H(f,g)\,d\mu=\int\!\int H(f,t)\,\nu(dt)\,d\mu
 \]
  for every positive \(\mathcal B(\mathbb R^2)\)-measurable function~\(H\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Consider \(\ell^\infty=\{(a_n)_{n=1}^\infty:\sup_n|a_n|<\infty\}\). This space becomes a Banach space when equipped with the norm \(\|(a_n)_{n=1}^\infty\|=\sup\{|a_n|:n\ge 1\}\).
 \begin{examsubparts}
 \item[\textnormal{Part (a)}]
-Show there is a linear functional \(T:\ell^\infty\to\mathbb R\) with the property: if \(\lim_{n\to\infty}a_n\) exists, then 
+Show there is a linear functional \(T:\ell^\infty\to\mathbb R\) with the property: if \(\lim_{n\to\infty}a_n\) exists, then
 \[
 T[(a_n)_{n=1}^\infty]=\lim_{n\to\infty}a_n.
 \]
  (Use the Hahn–Banach theorem.)
 \item[\textnormal{Part (b)}]
-Modify your proof in (a) to show there is a linear functional \(S:\ell^\infty\to\mathbb R\) with the property: if \(\lim_{n\to\infty}n^{-1}\sum_{k\le n}a_k\) exists, then 
+Modify your proof in (a) to show there is a linear functional \(S:\ell^\infty\to\mathbb R\) with the property: if \(\lim_{n\to\infty}n^{-1}\sum_{k\le n}a_k\) exists, then
 \[
 S[(a_n)_{n=1}^\infty]=\lim_{n\to\infty}n^{-1}\sum_{k\le n}a_k.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 State and prove the Radon–Nikodym theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 State and prove Fubini’s theorem.
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let~\(\mu\) be a measure on \(((0,\infty),\mathcal B(0,\infty))\) defined by 
+Let~\(\mu\) be a measure on \(((0,\infty),\mathcal B(0,\infty))\) defined by
 \[
 \mu(A)=\int_A |x|^{-1/2}\,dx.
 \]
  Let \(T:(0,\infty)\to(0,\infty)\) be given by \(T(x)=x^{-1}\). Define a new measure~\(\pi\) on \((0,\infty)\) by setting \(\pi(A)=\mu(T^{-1}(A))\). Compute \(d\pi/d\mu\).
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(c(t)\) be a function defined on \([0,\infty)\) with the following properties: \(c(t)\) is strictly increasing and continuous, \(c(0)=0\), and \(c(\infty)=\infty\). Let \(\tau_t=\inf\{s:c(s)>t\}\). Prove that 
+Let \(c(t)\) be a function defined on \([0,\infty)\) with the following properties: \(c(t)\) is strictly increasing and continuous, \(c(0)=0\), and \(c(\infty)=\infty\). Let \(\tau_t=\inf\{s:c(s)>t\}\). Prove that
 \[
 \int_0^\infty f(t)\,c(dt)=\int_0^\infty f(\tau_t)\,dt
 \]

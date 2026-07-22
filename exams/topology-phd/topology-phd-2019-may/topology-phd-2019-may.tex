@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 2019}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2019\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,34 +95,46 @@
 \begin{examinstructions}
 Work the following problems and show all your work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that the topologist’s sine curve \(T=\{(x,\sin \frac{1}{x})\mid x\in(0,1]\}\cup\{(0,y)\mid y\in[0,1]\}\) is not path connected.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(X\) be a connected completely regular topological space having more than one point. Can~\(X\) be countable?
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that the 2-sphere \(S^2\) is not a retract of the real projective plane \(\mathbb{RP}^2\), as well as that \(\mathbb{RP}^2\) is not a retract of \(S^2\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Consider the Klein Bottle, \(K\). Give its cellular chain complex and use it to calculate the homology groups of~\(K\) with integer coefficients.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(n>m\). Show that there is no map \(f:\mathbb{CP}^n\to\mathbb{CP}^m\) inducing a nontrivial map \(f^*:H^2(\mathbb{CP}^m;\mathbb{Z})\to H^2(\mathbb{CP}^n;\mathbb{Z})\).
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Draw a picture of the universal cover of the 2-sphere with a segment joining the north and south poles.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Compute the Euler characteristic \(\chi(\mathbb{CP}^2\times\mathbb{RP}^2\times S^4)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Give a definition of the compact-open topology for the space of functions.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Construct a map \(f:T^2\to S^2\) of degree 3 where \(T^2=S^1\times S^1\) is a torus.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Does every function \(f:\mathbb{N}\to S^1\) admit a continuous extension \(\bar f:\beta\mathbb{N}\to S^1\) to the Stone–Čech compactification?
+\def\ProblemHeadingText{Problem 11.}
 \item
 State the exact homology sequence for a pair of spaces.
+\def\ProblemHeadingText{Problem 12.}
 \item
 What can you say about the~\(k\)-th cohomology group of a closed orientable manifold of dimension~\(n\) for
 \begin{examsubparts}
@@ -115,10 +143,13 @@ What can you say about the~\(k\)-th cohomology group of a closed orientable mani
 \item[\textnormal{(b)}]
 \(k=n-1\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 13.}
 \item
 State the Universal Coefficient Theorem for Cohomology.
+\def\ProblemHeadingText{Problem 14.}
 \item
 Show that two closed orientable surfaces of different genus are not homeomorphic.
+\def\ProblemHeadingText{Problem 15.}
 \item
 State the Tietze Extension Theorem.
 \end{examproblems}

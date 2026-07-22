@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, January 1988}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 1988\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,19 +101,23 @@
 \begin{examinstructions}
 Answer all six questions. Justify all work. To obtain any partial credit, all work must be presented in a neat and logical fashion.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove the Radon–Nikodym Theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove the Hahn–Banach Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let~\(\Omega\) be a topological space, \(\mathcal B(\Omega)\) the Borel subsets of~\(\Omega\). Suppose that for each~\(n\), \(\mu_n\) is a countably additive positive finite regular measure defined on \(\mathcal B(\Omega)\). Let 
+Let~\(\Omega\) be a topological space, \(\mathcal B(\Omega)\) the Borel subsets of~\(\Omega\). Suppose that for each~\(n\), \(\mu_n\) is a countably additive positive finite regular measure defined on \(\mathcal B(\Omega)\). Let
 \[
 \mu(\mathord\cdot)=\sum_{n=1}^{\infty}\frac{\mu_n(\mathord\cdot)}{2^n\bigl(1+\mu_n(\Omega)\bigr)}.
 \]
  Show that~\(\mu\) is also a regular countably additive measure.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(\{f_n:n\geq 0\}\) and \(\{g_n:n\geq -1\}\) be two sequences of real-valued measurable functions on a measurable space \((\Omega,\mathcal F)\). Let \(B\subset\mathbb R^1\) be a Borel set on \(\mathbb R^1\). Define 
+Let \(\{f_n:n\geq 0\}\) and \(\{g_n:n\geq -1\}\) be two sequences of real-valued measurable functions on a measurable space \((\Omega,\mathcal F)\). Let \(B\subset\mathbb R^1\) be a Borel set on \(\mathbb R^1\). Define
 \[
 T(w)=
 \begin{cases}
@@ -112,13 +132,15 @@ Prove~\(T\) is \(\mathcal F\)-measurable.
 \item[\textnormal{(B)}]
 Define \(h(w)=g_{T(w)}(w)\); prove~\(h\) is \(\mathcal F\)-measurable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(T:(-\pi/2,\pi/2)\to\mathbb R\) be given by \(T(x)=\tan x\). Let~\(\lambda\) be Lebesgue measure on \((-\pi/2,\pi/2)\) and define a measure~\(\mu\) on \((\mathbb R,\mathcal B(\mathbb R))\) by setting \(\mu(A)=\lambda(T^{-1}(A))\). Compute \(\dfrac{d\mu}{dx}\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} Problem 6 uses~\(q\) without defining it. Also, the retained Hint 2, \(g=|f|^{p-1}\in L^q\), does not account for the sign of a general~\(f\), and the endpoint \(p=1\) requires separate treatment. The intended correction is not uniquely determined from the immediate context.
 \end{problemconcern}
-Fix \(1\leq p<\infty\), and let \(f\in L^p(X,\mathcal A,\mu)\). Show that 
+Fix \(1\leq p<\infty\), and let \(f\in L^p(X,\mathcal A,\mu)\). Show that
 \[
 \lVert f\rVert_p=\sup\left\{\int fg\,d\mu:\lVert g\rVert_q\leq 1\right\}.
 \]

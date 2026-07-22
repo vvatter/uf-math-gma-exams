@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, August 2015}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2015\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,7 +92,8 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f(n)\) be the number of permutations of length~\(n\) that contain no cycles of length exactly two.
 \begin{examsubparts}
@@ -85,18 +102,25 @@ Find the exponential generating function of the sequence \(f(n)\). You can assum
 \item[\textnormal{(b)}]
 Find \(\lim_{n\to\infty} f(n)/n!\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 We select an odd number of people from a group of~\(n\) people to form a committee. Then we select an even number of people from this committee to serve on a subcommittee. (Zero is an even number.) In how many ways can we do this?
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(T\) be a tree in which no path is longer than~\(k\). Is it true that there is a vertex \(v\in T\) that is contained in all paths of length~\(k\) in~\(T\)?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(X_n(S)\) be the size of the subset~\(S\) of \([n]\) selected uniformly, that is, each element of \([n]\) has fifty percent chance to be selected. Compute \(\mathrm{VAR}(X_n)\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f_n\) be the number of all parts of all compositions of~\(n\). So \(f_1=1\), \(f_2=3\), and \(f_3=8\). Find and prove an explicit formula for \(f_n\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(m_n\) be the number of ways to have a group of~\(n\) people split into nonempty subsets, to have each subset sit down around a circular table, then to arrange the tables in a circle. Find the exponential growth rate of the sequence \(m_n/n!\). Two arrangements are considered identical if each person has the same left neighbor in them, and each table has the same left neighbor in them.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that every convex polyhedron has two faces that have the same number of vertices.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(p\) be a permutation that can be decomposed into the disjoint union of~\(k\) increasing subsequences, but not into the disjoint union of \(k-1\) or fewer increasing subsequences. What can be said about the length of the longest decreasing subsequence of~\(p\)?
 \end{examproblems}

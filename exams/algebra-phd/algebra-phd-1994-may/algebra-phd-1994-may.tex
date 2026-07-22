@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 1994}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 1994\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Work 7 out of the following 11 exercises.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose that~\(F\) is a free group on the alphabet~\(X\), and that~\(Y\) is a subset of~\(X\). Let~\(H\) be the least normal subgroup of~\(F\) containing~\(Y\). Prove that \(F/H\) is a free group. (Hint: Show it's free on the alphabet \(X\setminus Y\).)
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose that~\(G\) is a finite group.
 \begin{examsubparts}
@@ -90,22 +108,29 @@ Prove that if~\(G\) is nilpotent, and~\(H\) is any proper subgroup, then~\(H\) i
 \item[\textnormal{(b)}]
 Use (a) to prove that if~\(G\) is nilpotent then it is isomorphic to a finite direct product of~\(p\)-groups.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose that~\(R\) is a principal ideal domain. Prove that any submodule of a free~\(R\)-module is free.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that there are (up to ring isomorphism) only 12 semisimple left Artinian rings of order 1008, of which only two are not commutative.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose that~\(A\) is a commutative ring with identity. Suppose that \(F(m)\) and \(F(n)\) are free modules on~\(m\) and~\(n\) generators, respectively. Prove that if \(F(m)\cong F(n)\), then \(m=n\).
+\def\ProblemHeadingText{Problem 6.}
 \item
-Suppose that~\(R\) is a ring with identity. Prove that 
+Suppose that~\(R\) is a ring with identity. Prove that
 \[
 \operatorname{Hom}_{\mathbb Z}\left(B,\prod_{i\in I}G_i\right)=\prod_{i\in I}\operatorname{Hom}_{\mathbb Z}(B,G_i),
 \]
  as right~\(R\)-modules, for all left~\(R\)-modules~\(B\) and all abelian groups \(G_i\) (\(i\in I\)). You may use resources from category theory; if so, outline your argument so that it is clear which theorems you are appealing to.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(A\) be a commutative ring with identity. For each multiplicative system~\(S\) of~\(A\), prove that \(S^{-1}A\) is a flat~\(A\)-module.
+\def\ProblemHeadingText{Problem 8.}
 \item
 State and prove the Hilbert Nullstellensatz. (You may use the following: if~\(K\) is an algebraically closed field, \(A\) a finitely generated~\(K\)-algebra, and~\(M\) is a maximal ideal of~\(A\), then \(A/M\) is isomorphic to~\(K\).)
+\def\ProblemHeadingText{Problem 9.}
 \item
 Among the following integral domains, decide which ones are Dedekind domains, and give a brief explanation. Quoting a relevant theorem will do; likewise, a well-illustrated example.
 \begin{examsubparts}
@@ -116,8 +141,10 @@ Among the following integral domains, decide which ones are Dedekind domains, an
 \item[\textnormal{(c)}]
 The ring \(k[[T]]\) of all formal power series in one variable, over the field~\(k\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Suppose that~\(E\) is a finite Galois extension of the field~\(F\). If \(\operatorname{Gal}(E/F)\) has order \(pq\), where \(p<q\) are primes, such that~\(p\) does not divide \(q-1\), prove that~\(E\) has two subfields \(E_p\) and \(E_q\), which are stable under the action of \(\operatorname{Gal}(E/F)\), such that \(E_p\cap E_q=F\), \(E_p\) and \(E_q\) generate~\(E\), and \(\operatorname{Gal}(E_p/F)\) (resp. \(\operatorname{Gal}(E_q/F)\)) is cyclic of order~\(p\) (resp. \(q\)).
+\def\ProblemHeadingText{Problem 11.}
 \item
 This problem has two parts.
 \begin{examsubparts}

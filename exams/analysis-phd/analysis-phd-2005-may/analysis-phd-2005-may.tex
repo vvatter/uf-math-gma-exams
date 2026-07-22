@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2005}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2005\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Give complete proofs and computations. Be particularly careful to indicate why the most crucial steps in your proof are true.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(\mu\) be a positive Radon measure on a locally compact Hausdorff space~\(T\). Let \(f_n:T\to\overline{\mathbb R}\) be~\(\mu\)-measurable for all \(n\in\mathbb N\). Prove that \(\sup\{f_n\mid n\in\mathbb N\}\) is~\(\mu\)-measurable.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(E\) be a complex Banach space. Suppose \(\{x_n\}_{n\in\mathbb N}\subset E\) converges in the weakened topology \(\sigma(E,E')\) to \(x\in E\), i.e. \(\lvert\langle x_n-x,y\rangle\rvert\to0\) for all \(y\in E'\) as \(n\to\infty\). Prove that~\(x\) is contained in the closure of the linear span of the set \(\{x_n\}_{n\in\mathbb N}\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(E\) be a topological vector space. Prove the following:
 \begin{examsubparts}
@@ -94,6 +113,7 @@ If \(A\subset E\) is compact and \(B\subset E\) is closed, then \(A+B\) is close
 \item[\textnormal{(c)}]
 The sum of closed subsets may fail to be closed.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\delta\in\mathcal D'(\mathbb R)\) denote the distribution given by \(\delta(\phi)=\phi(0)\), for all \(\phi\in\mathcal D(\mathbb R)\). Prove your answers are correct.
 \begin{examsubparts}
@@ -104,16 +124,20 @@ What is the support of~\(\delta\)?
 \item[\textnormal{(c)}]
 If \(X\in\mathcal D'(\mathbb R)\), \(f\in C^\infty(\mathbb R)\), and~\(f\) restricted to the support of~\(X\) is~\(0\), is it true that \(f\cdot X=0\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(K:[0,1]\times[0,1]\to\mathbb R\) be continuous and \(f:[0,1]\times\mathbb R\to\mathbb R\) be continuous and bounded. Show that the Hammerstein equation 
+Let \(K:[0,1]\times[0,1]\to\mathbb R\) be continuous and \(f:[0,1]\times\mathbb R\to\mathbb R\) be continuous and bounded. Show that the Hammerstein equation
 \[
 u(s)=\int_0^1 K(s,t)f(t,u(t))\,dt,\qquad s\in[0,1],
 \]
  has a solution in \(E=\{x:[0,1]\to\mathbb R\mid x\text{ continuous}\}\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(1\in\mathcal D'(\mathbb R)\) be given by \(1(\phi)=\int_{\mathbb R}\phi\,dx\), for all \(\phi\in\mathcal D(\mathbb R)\). Compute \((1*\delta')(\phi)\) for all \(\phi\in\mathcal D(\mathbb R)\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(\mu\) be a~\(\sigma\)-finite positive Radon measure on a locally compact Hausdorff space~\(T\). Let \(\{f_n\}_{n\in\mathbb N}\subset L^p(T,\mu)\) for some \(p\in[1,\infty)\). Suppose that \(\lim_{n\to\infty}f_n(t)=f(t)\) \(\mu\)-a.e., that \(f\in L^p(T,\mu)\), and that \(\lim_{n\to\infty}\int\lvert f_n\rvert^p\,d\mu=\int\lvert f\rvert^p\,d\mu\). Prove that \(\lim_{n\to\infty}\int\lvert f_n-f\rvert^p\,d\mu=0\). Hint: Bring the Lebesgue Dominated Convergence Theorem and the~\(\sigma\)-finiteness of the measure into play.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(\mathcal H\) be a Hilbert space with inner product \((\cdot,\cdot)\), and let \(\{y_\alpha\}_{\alpha\in A}\subset\mathcal H\) be an orthonormal family. Let \(x\in\mathcal H\).
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2014, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2014, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Give an example of each of the following.
 \begin{examsubparts}
@@ -92,6 +109,7 @@ A non-nilpotent solvable group.
 \item[\textnormal{(d)}]
 A non-abelian nilpotent group.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a group and let \(g \in G\).
 \begin{examsubparts}
@@ -100,6 +118,7 @@ Define what is meant by the order of~\(g\).
 \item[\textnormal{(b)}]
 Let~\(g\) have infinite order, and suppose that~\(N\) is a finite normal subgroup of~\(G\). Prove, from your definition, that the element \(gN \in G/N\) has infinite order.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -108,8 +127,10 @@ Define what it means for a subset of a group~\(G\) to generate~\(G\).
 \item[\textnormal{(b)}]
 Let~\(G\) be a group, and suppose \(|G| = 2^n\). Prove that there is a subset~\(S\) of cardinality~\(n\) such that~\(S\) generates~\(G\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 State and prove the Second Isomorphism Theorem for groups.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -118,6 +139,7 @@ Let~\(S\) be a simple group and suppose that~\(S\) acts non-trivially on a finit
 \item[\textnormal{(b)}]
 Suppose \(G = A_5\) (the alternating group on five letters) is acting on a set~\(A\) in such a way that no element of~\(A\) is fixed by every element of~\(G\). Suppose that \(|A| = 10\). Prove that~\(G\) has at most two orbits in its action on~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State and prove the First Sylow Theorem.
 \end{examproblems}

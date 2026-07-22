@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2016}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2016\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,8 +95,9 @@
 \begin{examinstructions}
 Do THREE problems from Part A and THREE problems from Part B. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
 \end{examinstructions}
-\section{Part A}
-\begin{examproblems}{0}
+\subsection{Part A}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Consider Lebesgue measure on the real line~\(\mathbb{R}\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \((f_n)\) in \(L^1(\mathbb{R})\) converging to an~\(f\) in \(L^1(\mathbb{R})\)...
 \begin{examsubparts}
@@ -93,6 +110,7 @@ Consider Lebesgue measure on the real line~\(\mathbb{R}\). Give an example for e
 \item[\textnormal{d)}]
 ...a.e. but not in measure.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(\nu\) be a signed measure on \((X,\mathcal{M})\).
 \begin{examsubparts}
@@ -101,27 +119,32 @@ Define what it means for a set to be positive, negative or null for~\(\nu\), and
 \item[\textnormal{b)}]
 Prove there exist unique positive measures \(\nu^+,\nu^-\) on~\(\mathcal{M}\) so that \(\nu=\nu^+-\nu^-\) and \(\nu^+\perp\nu^-\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let~\(\mu\) be a finite, regular Borel measure on \([0,1]\). Suppose that 
+Let~\(\mu\) be a finite, regular Borel measure on \([0,1]\). Suppose that
 \[
 \int_0^1 x^n\,d\mu=0 \quad \text{for } n=0,1,2,\ldots
 \]
  Prove that \(\mu=0\).
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \((X,\mathcal{M},\mu)\) be a~\(\sigma\)-finite measure space. Let~\(\mathcal{N}\) be a sub-\(\sigma\) algebra of~\(\mathcal{M}\) and let~\(\nu\) be the restriction of~\(\mu\) to~\(\mathcal{N}\). Prove that for each \(f\in L^1(\mu)\), there exists a \(g\in L^1(\nu)\) such that 
+Let \((X,\mathcal{M},\mu)\) be a~\(\sigma\)-finite measure space. Let~\(\mathcal{N}\) be a sub-\(\sigma\) algebra of~\(\mathcal{M}\) and let~\(\nu\) be the restriction of~\(\mu\) to~\(\mathcal{N}\). Prove that for each \(f\in L^1(\mu)\), there exists a \(g\in L^1(\nu)\) such that
 \[
 \int_E f\,d\mu=\int_E g\,d\nu
 \]
  for all \(E\in\mathcal{N}\).
 \end{examproblems}
-\section{Part B}
-\begin{examproblems}{0}
+\subsection{Part B}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(\mathcal{X}\) be a normed vector space. Say a sequence \((x_n)\) from~\(\mathcal{X}\) converges weakly to \(x\in\mathcal{X}\) if \(f(x_n)\to f(x)\) for all \(f\in\mathcal{X}^*\). Prove that if~\(\mathcal{M}\) is a norm closed subspace of~\(\mathcal{X}\), and \((x_n)\) is a sequence in~\(\mathcal{M}\) converging weakly to \(x\in\mathcal{X}\), then \(x\in\mathcal{M}\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(\mathcal{H}\) be a Hilbert space and \(\mathcal{M},\mathcal{N}\) closed subspaces of~\(\mathcal{H}\). Prove that if \(\mathcal{M}\perp\mathcal{N}\), then \(\mathcal{M}+\mathcal{N}\) is closed.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Fix \(1<p<\infty\), let~\(\mu\) be a~\(\sigma\)-finite measure, and let \((f_n)\) be a sequence in \(L^p(\mu)\). Suppose that there exists a function \(f\in L^p(\mu)\) such that 
+Fix \(1<p<\infty\), let~\(\mu\) be a~\(\sigma\)-finite measure, and let \((f_n)\) be a sequence in \(L^p(\mu)\). Suppose that there exists a function \(f\in L^p(\mu)\) such that
 \[
 \int f_ng\,d\mu\to\int fg\,d\mu
 \]
@@ -132,6 +155,7 @@ Prove that \(\sup_n\{\lVert f_n\rVert_p\}<+\infty\).
 \item[\textnormal{b)}]
 Prove that \(\lVert f\rVert_p\leq\limsup\lVert f_n\rVert_p\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((\varphi_n)\) be a sequence in \(L^1(\mathbb{R})\) with the following properties:
 

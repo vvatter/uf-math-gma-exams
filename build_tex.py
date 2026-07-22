@@ -198,9 +198,12 @@ def render_problem(problem: Problem) -> list[str]:
     return lines
 
 
-def render_problem_run(problems: list[Problem], starting_after: int) -> list[str]:
-    lines = [rf"\begin{{examproblems}}{{{starting_after}}}"]
-    for problem in problems:
+def render_problem_run(
+    problems: list[Problem], starting_after: int, heading_level: int
+) -> list[str]:
+    lines = [rf"\begin{{examproblems}}{{{starting_after}}}{{H{heading_level}}}"]
+    for problem_number, problem in enumerate(problems, start=starting_after + 1):
+        lines.append(rf"\def\ProblemHeadingText{{Problem {problem_number}.}}")
         lines.extend(render_problem(problem))
     lines.append(r"\end{examproblems}")
     return lines
@@ -250,11 +253,14 @@ def render_standalone_figure_tex(figure: TikzBlock) -> str:
             "",
         ]
     )
-    return "\n".join(lines)
+    rendered = "\n".join(lines)
+    return "\n".join(line.rstrip() for line in rendered.split("\n"))
 
 
 def render_content_blocks(
-    blocks: Iterable[InstructionsBlock | ProblemBlock], displayed_number: int
+    blocks: Iterable[InstructionsBlock | ProblemBlock],
+    displayed_number: int,
+    problem_heading_level: int,
 ) -> tuple[list[str], int]:
     lines: list[str] = []
     pending: list[Problem] = []
@@ -263,7 +269,9 @@ def render_content_blocks(
         nonlocal displayed_number
         if not pending:
             return
-        lines.extend(render_problem_run(pending, displayed_number))
+        lines.extend(
+            render_problem_run(pending, displayed_number, problem_heading_level)
+        )
         displayed_number += len(pending)
         pending.clear()
 
@@ -330,20 +338,32 @@ def render_tex(exam: ExamRecord) -> str:
         r"\setlength{\leftmargini}{2.15em}",
         r"\setlength{\leftmarginii}{2.65em}",
         r"\setlength{\leftmarginiii}{3em}",
-        r"\renewcommand{\labelenumi}{\textbf{\theenumi.}}",
         r"\pagestyle{empty}",
         r"\raggedbottom",
         r"\allowdisplaybreaks",
         *concern_definitions,
-        r"\newenvironment{examproblems}[1]{%",
+        r"\NewTaggingSocketPlug{block/list/label}{examproblem}{%",
+        r"  \tagstructbegin{tag=Lbl}\tagstructend%",
+        r"  \tagstructbegin{tag=\LBody}%",
+        r"  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%",
+        r"  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%",
+        r"  #2%",
+        r"  \tagmcend%",
+        r"  \tagstructend%",
+        r"}",
+        r"\newenvironment{examproblems}[2]{%",
+        r"  \def\ProblemHeadingTag{#2}%",
+        r"  \AssignTaggingSocketPlug{block/list/label}{examproblem}%",
         r"  \begin{enumerate}%",
         r"  \setcounter{enumi}{#1}%",
+        r"  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%",
         r"  \setlength{\topsep}{0.35em}%",
         r"  \setlength{\partopsep}{0pt}%",
         r"  \setlength{\itemsep}{0.48em}%",
         r"  \setlength{\parsep}{0.18em}%",
         r"}{\end{enumerate}}",
         r"\newenvironment{examsubparts}{%",
+        r"  \AssignTaggingSocketPlug{block/list/label}{default}%",
         r"  \begin{enumerate}%",
         r"  \setlength{\topsep}{0.18em}%",
         r"  \setlength{\partopsep}{0pt}%",
@@ -356,7 +376,7 @@ def render_tex(exam: ExamRecord) -> str:
         r"  \par\endgroup\vspace{0.18em}",
         r"}",
         r"\makeatletter",
-        r"\renewcommand\section{\@startsection{section}{1}{0pt}%",
+        r"\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%",
         r"  {-1.25ex plus -.25ex minus -.1ex}%",
         r"  {0.55ex plus .1ex}%",
         r"  {\normalfont\large\bfseries}}",
@@ -365,8 +385,12 @@ def render_tex(exam: ExamRecord) -> str:
         r"  {\footnotesize\bfseries",
         r"    \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%",
         r"  \vskip -0.5em%",
-        r"  \tagstructbegin{tag=Title}%",
+        r"  \tagstructbegin{tag=H1,title={" + escaped_title + r"}}%",
+        r"  \tagpdfparaOff%",
+        r"  \tagmcbegin{tag=H1}%",
         rf"    {{\LARGE\bfseries\href{{{subject_url}}}{{{escaped_linked_title}}}{escaped_title_suffix}\par}}%",
+        r"  \tagmcend%",
+        r"  \tagpdfparaOn%",
         r"  \tagstructend%",
         r"  \vskip 0.25em%",
         r"  \tagmcbegin{artifact}%",
@@ -397,7 +421,9 @@ def render_tex(exam: ExamRecord) -> str:
         nonlocal displayed_number
         if not pending:
             return
-        rendered, displayed_number = render_content_blocks(pending, displayed_number)
+        rendered, displayed_number = render_content_blocks(
+            pending, displayed_number, 2
+        )
         lines.extend(rendered)
         pending.clear()
 
@@ -406,16 +432,17 @@ def render_tex(exam: ExamRecord) -> str:
             pending.append(block)
             continue
         flush_pending()
-        lines.append(rf"\section{{{escape_text(block.heading.strip())}}}")
+        lines.append(rf"\subsection{{{escape_text(block.heading.strip())}}}")
         if block.numbering == NumberingMode.RESTART:
             displayed_number = 0
         rendered, displayed_number = render_content_blocks(
-            block.content, displayed_number
+            block.content, displayed_number, 3
         )
         lines.extend(rendered)
     flush_pending()
     lines.extend((r"\end{document}", ""))
-    return "\n".join(lines)
+    rendered = "\n".join(lines)
+    return "\n".join(line.rstrip() for line in rendered.split("\n"))
 
 
 def directory_size(path: Path) -> int:

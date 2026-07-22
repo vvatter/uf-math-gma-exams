@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, August 2024}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, August 2024\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(X=\mathbb{R}/\mathbb{Z}\) be the quotient space obtained from the real line~\(\mathbb{R}\) by collapsing the set of integers to a point.
 \begin{examsubparts}
@@ -92,6 +109,7 @@ Compute the fundamental group of~\(X\).
 \item[\textnormal{(d)}]
 Compute homology groups of~\(X\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -102,6 +120,7 @@ Does there exist a degree 2 continuous map \(f:\mathbb{R}P^3\to T^3\) where \(T^
 \item[\textnormal{(c)}]
 Does there exist a degree 2 continuous map \(f:T^3\to\mathbb{R}P^3\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(A\subset\mathbb{R}^2\) be an infinite countable subspace.
 \begin{examsubparts}
@@ -110,6 +129,7 @@ Can~\(A\) be connected?
 \item[\textnormal{(b)}]
 Is \(\mathbb{R}^2\setminus A\) connected?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Does there exist a closed orientable~\(n\)-manifold~\(M\) with
 \begin{examsubparts}
@@ -120,23 +140,30 @@ Does there exist a closed orientable~\(n\)-manifold~\(M\) with
 \item[\textnormal{(c)}]
 \(n=6\) and \(H_3(M)=\mathbb{Z}\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that the fundamental group of a topological group is abelian.
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Compute the Euler characteristic of the manifold \(M=\mathbb{H}P^3\times\mathbb{C}P^4\times\mathbb{R}P^5\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 State the Lefschetz Fixed Point Theorem. Derive the Brouwer Fixed Point Theorem from the Lefschetz Fixed Point Theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 State the Baire Category Theorem.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose that~\(A\) is a retract of~\(X\). Show that \(H_i(A)\) is a direct summand of \(H_i(X)\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Give the definition of the mapping cylinder. Is the Möbius band a mapping cylinder?
+\def\ProblemHeadingText{Problem 11.}
 \item
 Is the 2-sphere \(S^2\) with~\(k\) points removed homeomorphic to a topological group for
 \begin{examsubparts}
@@ -147,8 +174,10 @@ Is the 2-sphere \(S^2\) with~\(k\) points removed homeomorphic to a topological 
 \item[\textnormal{(c)}]
 \(k=3\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 12.}
 \item
 Give the definition of the mapping cone. Is there a map \(f:X\to Y\) with the mapping cone \(C_f\) homeomorphic to \(\mathbb{R}P^3\)?
+\def\ProblemHeadingText{Problem 13.}
 \item
 Which of the following spaces are topological groups?
 \begin{examsubparts}
@@ -159,8 +188,10 @@ the Klein bottle~\(K\);
 \item[\textnormal{(c)}]
 the projective space \(\mathbb{R}P^3\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 14.}
 \item
 Is \(\mathbb{R}^{\omega}\) connected in the uniform topology?
+\def\ProblemHeadingText{Problem 15.}
 \item
 State the Five Lemma.
 \end{examproblems}

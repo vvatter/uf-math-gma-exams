@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, May 2006}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, May 2006\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,53 +95,59 @@
 \begin{examinstructions}
 Give complete proofs and computations. Partial credit will be given where justified.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(0<a<1\). Evaluate the integral 
+Let \(0<a<1\). Evaluate the integral
 \[
 \int_{-\infty}^{\infty}\frac{e^{ax}}{1+e^x}\,dx,
 \]
  where \(a\in(0,1)\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that 
+Prove that
 \[
 \cos \pi z=\prod_{n=1}^{\infty}\left(1-\frac{4z^2}{(2n-1)^2}\right).
 \]
 \item[\textnormal{(b)}]
-Deduce from (a) that 
+Deduce from (a) that
 \[
 \tan \pi z=\frac{8}{\pi}\sum_{n=1}^{\infty}\frac{z}{(2n-1)^2-4z^2}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(G\) be a region and \(u:G\to\mathbb{R}\) be harmonic. Let~\(v\) be a harmonic conjugate to~\(u\) in~\(G\). Show that the product \(u\cdot v\) is harmonic.
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Show that if~\(f\) is analytic on the closed disk \(\overline{B(0;1)}\), then 
+Show that if~\(f\) is analytic on the closed disk \(\overline{B(0;1)}\), then
 \[
 |f(a)|^2\leq \frac{1}{\pi R^2}\int_0^{2\pi}\int_0^R|f(a+re^{i\theta})|^2r\,dr\,d\theta.
 \]
 \item[\textnormal{(b)}]
-Let~\(G\) be a region and \(M\in\mathbb{R}\) be fixed. Let 
+Let~\(G\) be a region and \(M\in\mathbb{R}\) be fixed. Let
 \[
 \mathcal{F}=\left\{f\in H(G)\mathrel{\bigg|}\int_G|f(z)|^2\,dx\,dy\leq M\right\}.
 \]
  Show that~\(\mathcal{F}\) is a normal family.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(f(z)=\sum_{n=0}^{\infty}a_nz^n\) and \(g(z)=\sum_{n=0}^{\infty}b_nz^n\) be analytic on \(\overline{B(0;1)}\). Let 
+Let \(f(z)=\sum_{n=0}^{\infty}a_nz^n\) and \(g(z)=\sum_{n=0}^{\infty}b_nz^n\) be analytic on \(\overline{B(0;1)}\). Let
 \[
 F(z)=\frac{1}{2\pi i}\int_{\partial B(0;1)}\frac{f(w)}{w}g\left(\frac{z}{w}\right)\,dw,\qquad z\in B(0;1),
 \]
- with the contour taken with counterclockwise orientation. Show that 
+ with the contour taken with counterclockwise orientation. Show that
 \[
 F(z)=\sum_{n=0}^{\infty}a_nb_nz^n,\qquad z\in B(0;1).
 \]
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(G=\{z\in\mathbb{C}\mid |z|<1\text{ and }|2z-1|>1\}\), and let \(f\in H(G)\).
 \begin{examsubparts}
@@ -136,6 +158,7 @@ Must there exist such a sequence which converges to~\(f\) uniformly on~\(G\)? Ex
 \item[\textnormal{(c)}]
 Must there exist such a sequence which converges to~\(f\) uniformly on~\(G\), if~\(f\) is now required to be analytic in some neighborhood of \(\overline{G}\)? Explain your reasoning.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(G\) be a region and~\(A\) be a discrete and relatively closed subset of~\(G\). Assume that \(f\in H(G\setminus A)\) is injective.
 \begin{examsubparts}
@@ -144,6 +167,7 @@ Prove that no point of~\(A\) can be an essential singularity of~\(f\).
 \item[\textnormal{(b)}]
 Prove that if \(a\in A\) is a pole for~\(f\), then~\(a\) is a pole of order 1.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(f\) be analytic on \(\overline{B(0;1)}\). If \(|f(z)|<1\) on \(\partial B(0;1)\), prove that there exists a unique \(z_0\in B(0;1)\) (counting multiplicity) such that \(f(z_0)=z_0\). If \(|f(z)|\leq 1\) on \(\partial B(0;1)\), does the same conclusion hold? Justify your assertion.
 \end{examproblems}

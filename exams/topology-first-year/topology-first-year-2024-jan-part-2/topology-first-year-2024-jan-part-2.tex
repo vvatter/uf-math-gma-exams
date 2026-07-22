@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, January 2024, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, January 2024, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,40 +95,55 @@
 \begin{examinstructions}
 For the first five problems, show all your work and support all statements.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(p\colon E \to B\) be a covering map, and let \(p(e_0)=b_0\). Prove that the lifting correspondence \(\phi\colon \pi_1(B,b_0) \to p^{-1}(b_0)\) is surjective if~\(E\) is path connected, and bijective if~\(E\) is simply connected.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that a continuous map \(f\colon S^1 \to S^1\) is homotopic to \(z^n\colon S^1 \to S^1\) (given by \(e^{i\theta} \mapsto e^{in\theta}\)) for some integer \(n\in\mathbb Z\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 State and prove the Brouwer fixed point theorem for the unit disk, \(D^2\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 The connected sum of two surfaces~\(S\) and \(S'\) is obtained by cutting out a disk from each surface and gluing the resulting surfaces along their circle boundaries: \(S\mathbin{\#}S'=(S\setminus D^2)\cup_{S^1}(S'\setminus D^2)\). Let~\(T\) be the torus. Using the Seifert–van Kampen theorem on the natural decomposition into two pieces given by the connected sum, calculate \(\pi_1(T\mathbin{\#}T)\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that if~\(X\) is path connected and \(x_0\) and \(x_1\) are two points of~\(X\), then \(\pi_1(X,x_0)\) is isomorphic to \(\pi_1(X,x_1)\).
 \end{examproblems}
 \begin{examinstructions}
 Answer the following problems with complete definitions, complete statements, an example, or a short proof.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State the Seifert–van Kampen theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Show that the Tietze Extension Theorem implies Urysohn’s Lemma.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(X\) be a topological space. Define what it means for~\(X\) to be compact.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(X\) be a completely regular space. Define the Stone–Čech compactification of~\(X\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 State the Tychonoff Theorem.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let \([0,1]^J\) be the set of all functions from a set~\(J\) to \([0,1]\). Prove that if \(\mathcal F\) is a closed subset of \([0,1]^J\), then \(\mathcal F\) is compact.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Let \(A\subset X\). Let \(r\colon X\to A\) be a retraction, meaning~\(r\) is continuous and \(r(a)=a\) for all \(a\in A\). Show that for any \(a_0\in A\), the induced map \(r_*\colon \pi_1(X,a_0)\to\pi_1(A,a_0)\) on the fundamental groups is surjective.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Let \(\gamma\colon [0,1]\to X\) be a loop with basepoint \(x_0\). Let \(\gamma^{-1}\) be defined by \(\gamma^{-1}(t)=\gamma(1-t)\). Show that \(\gamma*\gamma^{-1}\) is loop homotopic to the constant loop.
+\def\ProblemHeadingText{Problem 14.}
 \item
 Describe a surface whose fundamental group is not abelian.
+\def\ProblemHeadingText{Problem 15.}
 \item
 Let~\(X\) and~\(Y\) be topological spaces and let \(f\colon X\to Y\) be continuous and surjective. Show that if~\(X\) is connected, then so is~\(Y\).
 \end{examproblems}

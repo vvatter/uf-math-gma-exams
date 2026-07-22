@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, August 2018, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2018, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(R\) be a commutative ring with~\(1\) and let \(I, J, P\) be ideals in~\(R\) such that \(I \cap J \subset P\).
 \begin{examsubparts}
@@ -88,8 +105,10 @@ Prove that if~\(P\) is a prime ideal then either \(I \subset P\) or \(J \subset 
 \item[\textnormal{(b)}]
 Give an example which shows that if~\(P\) is not prime then the conclusion above may not hold.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that the ring \(\mathbb{Z}[\sqrt{-2}] = \{a + b\sqrt{-2} : a,b \in \mathbb{Z}\}\) is a Euclidean domain with respect to the norm defined by \(N(a+b\sqrt{-2})=a^2+2b^2\) for \(a,b \in \mathbb{Z}\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that the following polynomials are irreducible over~\(\mathbb{Q}\). Cite any theorems that you use.
 \begin{examsubparts}
@@ -100,6 +119,7 @@ Prove that the following polynomials are irreducible over~\(\mathbb{Q}\). Cite a
 \item[\textnormal{(c)}]
 \(X^4+2X^3-14X^2+31X-7\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring with~\(1\).
 \begin{examsubparts}
@@ -111,8 +131,10 @@ Let \(A_1,A_2,\ldots,A_n\) be~\(R\)-modules and for \(1 \leq i \leq n\) let \(B_
 (A_1 \times \cdots \times A_n)/(B_1 \times \cdots \times B_n) \cong (A_1/B_1) \times \cdots \times (A_n/B_n).
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 State the classification theorems for finitely generated modules over a PID. You should give both the invariant factor and the elementary divisor decompositions. Be sure to include the uniqueness statements.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(L/K\) be an algebraic field extension and let~\(R\) be a subring of~\(L\) such that \(K \subset R\). Prove that~\(R\) is a field.
 \end{examproblems}

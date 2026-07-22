@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, May 2017}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2017\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,12 +92,14 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Give a combinatorial proof that 
+Give a combinatorial proof that
 \[
 k\binom{n}{k}=n\binom{n-1}{k-1}.
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 You can use results from your course to prove:
 \begin{examsubparts}
@@ -90,6 +108,7 @@ If a finite partially ordered set has \(mn+1\) elements, then there is either a 
 \item[\textnormal{(b)}]
 If~\(G\) is a regular bipartite graph of degree at least 2, then~\(G\) has a spanning subgraph that is the union of vertex disjoint cycles.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(a(n)\) be the number of ways to tile a \(2\times n\) rectangle with \(1\times 1\) squares and \(2\times k\) rectangles for any integer \(k\geq 1\), where a \(2\times 1\) rectangle must be vertical (i.e. no \(1\times 2\) rectangle). For instance, \(a(2)=5\), given by
 \par\smallskip
@@ -136,28 +155,33 @@ Let \(a(n)\) be the number of ways to tile a \(2\times n\) rectangle with \(1\ti
 \end{adjustbox}
 \end{center}
 \smallskip
-Set \(a(0)=1\), and find a simple expression for the generating function 
+Set \(a(0)=1\), and find a simple expression for the generating function
 \[
 A(x)=\sum_{n\geq 0}a(n)x^n.
 \]
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(C\) be a linear binary error correcting code. Prove that either every word in~\(C\) has even weight or exactly half the words in~\(C\) have even weight.
 
 \par
 Is a similar statement true for ternary codes?
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let~\(\mathcal{L}\) be a regular language. Prove that the language 
+Let~\(\mathcal{L}\) be a regular language. Prove that the language
 \[
 \mathcal{L}_2=\{w:ww\in\mathcal{L}\}
 \]
  is regular.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that the number of \(k\cdots 21\)-avoiding permutations is at most \((k-1)^{2n}\).
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(c(n,k)\) be the number of permutations of length~\(n\) with~\(k\) cycles. Let \(a_n\) be the total number of cycles in all permutations of length~\(n\). Prove that 
+Let \(c(n,k)\) be the number of permutations of length~\(n\) with~\(k\) cycles. Let \(a_n\) be the total number of cycles in all permutations of length~\(n\). Prove that
 \[
 c(n+1,2)=a_n.
 \]
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(b_n\) be the number of permutations of length~\(n\) whose first ascent is in an even position. (For the decreasing permutation of length~\(n\), we say that its first ascent is in position~\(n\).)
 

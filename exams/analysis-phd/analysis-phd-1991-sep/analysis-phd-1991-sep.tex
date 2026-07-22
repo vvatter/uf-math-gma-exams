@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, September 1991}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 1991\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,21 +95,29 @@
 \begin{examinstructions}
 Present all work in a neat and logical fashion.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove the Lebesgue Monotone Convergence Theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that \(L^1(S,\Sigma,\mu)\) is complete, where~\(\mu\) is a nonnegative measure.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Give the construction of the product measure \(\mu\times\nu\) on \(\mathcal S\times\mathcal W\), where \((X,\mathcal S,\mu)\) and \((Y,\mathcal W,\nu)\) are~\(\sigma\)-finite nonnegative measure spaces.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(f\) be Lebesgue integrable on \(\mathbb R\). Suppose \(\int_0^x f\,dm=0\) for all real~\(x\). What can you say about~\(f\)? Prove your answer.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon>0\). Is it possible to find an interval~\(I\) such that whenever~\(E\) is a measurable set such that \(E\cap I=\phi\), then \(\left|\int_E f\,dm\right|<\epsilon\)?
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(X\) be a metric space. Let \(\{P_n\}\) be a sequence of regular probability measures on \(\mathcal B(X)\), the Borel subsets of~\(X\). Let \(P=\sum_{n=1}^{\infty}\left(\frac{1}{2^n}\right)P_n\). Show that~\(P\) is regular on \(\mathcal B(X)\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(\mu(dx)=x^2\,dx\) on \([0,1]\). Let \(T:[0,1]\to[0,1]\) be defined by \(T(x)=x^4\). Compute the Radon–Nikodym derivative of the image measure \(T\mu\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \((\Omega,\mathcal F,\mu)\) be a measure space with \(\mu(\Omega)=1\). Let \(\mathcal A\) and \(\mathcal B\) be sub~\(\sigma\)-algebras of \(\mathcal F\). Suppose \(\mu(A\cap B)=\mu(A)\mu(B)\) for all \(A\in\mathcal A\) and \(B\in\mathcal B\). Prove that \(\int fg\,d\mu=\left(\int f\,d\mu\right)\left(\int g\,d\mu\right)\) for all \(\mathcal A\)-measurable positive functions~\(f\) and all \(\mathcal B\)-measurable positive functions~\(g\).
 \end{examproblems}

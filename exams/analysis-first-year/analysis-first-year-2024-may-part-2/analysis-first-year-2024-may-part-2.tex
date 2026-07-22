@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2024, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2024, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f:[a,b]\to\mathbb{R}\) be Riemann integrable, let~\(g\) be a real-valued function on \([a,b]\), and let \(D=\{t\in[a,b]:f(t)\ne g(t)\}\).
 \begin{examsubparts}
@@ -88,20 +105,24 @@ Show by example that if~\(D\) is countably infinite then~\(g\) can fail to be Ri
 \item[\textnormal{(ii)}]
 Prove that if~\(D\) is finite then~\(g\) must be Riemann integrable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove Dini’s theorem that, if the sequence \((f_n)_{n=0}^{\infty}\) of continuous real-valued functions on a compact space decreases pointwise to zero, then the convergence is uniform. Show by example that uniform convergence can fail if decreases pointwise is replaced by converges pointwise.
+\def\ProblemHeadingText{Problem 3.}
 \item
-State the Weierstrass approximation theorem. Determine exactly which continuous functions \(f:[-1,1]\to\mathbb{R}\) satisfy the requirement that for each strictly positive integer~\(n\), 
+State the Weierstrass approximation theorem. Determine exactly which continuous functions \(f:[-1,1]\to\mathbb{R}\) satisfy the requirement that for each strictly positive integer~\(n\),
 \[
 \int_{-1}^{1}f(t)t^n\,dt=0.
 \]
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \((\Omega,\mathcal{A},\mu)\) be a measure space and let \((A_n)_{n=1}^{\infty}\) be a sequence in~\(\mathcal{A}\). For each positive integer~\(N\), let \(B_N\) be the set containing exactly those \(\omega\in\Omega\) that lie in \(A_n\) for at least~\(N\) values of~\(n\). By considering the series \(\sum_{n=1}^{\infty}\mathbf{1}_{A_n}\) of indicator functions, prove that 
+Let \((\Omega,\mathcal{A},\mu)\) be a measure space and let \((A_n)_{n=1}^{\infty}\) be a sequence in~\(\mathcal{A}\). For each positive integer~\(N\), let \(B_N\) be the set containing exactly those \(\omega\in\Omega\) that lie in \(A_n\) for at least~\(N\) values of~\(n\). By considering the series \(\sum_{n=1}^{\infty}\mathbf{1}_{A_n}\) of indicator functions, prove that
 \[
 N\mu(B_N)\leq\sum_{n=1}^{\infty}\mu(A_n).
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let the non-negative function \(f:\mathbb{R}\to\mathbb{R}\) be integrable with respect to Lebesgue measure~\(\lambda\) and for each real~\(t\) define 
+Let the non-negative function \(f:\mathbb{R}\to\mathbb{R}\) be integrable with respect to Lebesgue measure~\(\lambda\) and for each real~\(t\) define
 \[
 F(t)=\int_0^t f\,d\lambda.
 \]

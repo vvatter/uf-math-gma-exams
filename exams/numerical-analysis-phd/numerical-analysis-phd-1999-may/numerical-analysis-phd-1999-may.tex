@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, May 1999}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 1999\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do any 8 of the following 10 problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has six parts.
 \begin{examsubparts}
@@ -96,6 +113,7 @@ Describe how the \(QR\) Iteration is used to compute the \(SVD\).
 \item[\textnormal{(6)}]
 How can the singular values be used to compute the condition number of a matrix.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Give a careful proof of the following Theorem: If \(p\geq 1\),
 
@@ -103,10 +121,11 @@ Give a careful proof of the following Theorem: If \(p\geq 1\),
 1. \(\mathbf A\in\mathbb R^{n\times n}\) is invertible, 2. \(\mathbf b\) and \(\Delta\mathbf b\) are vectors in \(\mathbb R^n\), and 3. \(\mathbf x\) and \(\Delta\mathbf x\) are vectors in \(\mathbb R^n\) and are solutions to \(\mathbf A\mathbf x=\mathbf b\), and \(\mathbf A\Delta\mathbf x=\Delta\mathbf b\), respectively,
 
 \par
-then 
+then
 \[
 \frac{\|\Delta\mathbf x\|_p}{\|\mathbf x\|_p}\leq \kappa_p(\mathbf A)\frac{\|\Delta\mathbf b\|_p}{\|\mathbf b\|_p}.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -117,6 +136,7 @@ Give the error estimate for a single Jacobi rotation.
 \item[\textnormal{(3)}]
 Give the error estimates for repeated Jacobi rotations.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -125,6 +145,7 @@ Write out the system of linear equations to be solved to find the periodic splin
 \item[\textnormal{(2)}]
 What method would you recommend for solving the system of linear equations. Explain!!
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -135,6 +156,7 @@ Explain why the Householder transformation is preferred over the Gram–Schmidt 
 \item[\textnormal{(3)}]
 Show how Householder transformations can be used to bidiagonalize any real matrix.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has four parts.
 \begin{examsubparts}
@@ -147,6 +169,7 @@ If \(s_n(x)\) denotes the clamped cubic spline interpolant for a function \(f(x)
 \item[\textnormal{(4)}]
 Prove the error formula given in step (3) above.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -157,6 +180,7 @@ What can you conclude about the relationship between the polynomials \(p_n(x)\) 
 \item[\textnormal{(3)}]
 Explain the method of Gauss quadrature for the numerical approximation of the integral of a function.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -167,6 +191,7 @@ Describe how the Galerkin method can be used to solve a 2 point boundary value p
 \item[\textnormal{(3)}]
 Explain why splines have an advantage over \(\sin(kx)\) as choices of test functions for the Galerkin method.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -177,6 +202,7 @@ Outline a proof of the Contraction Mapping Theorem.
 \item[\textnormal{(3)}]
 Indicate how Aitken’s method can be used to accelerate convergence.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 This problem has two parts.
 \begin{examsubparts}

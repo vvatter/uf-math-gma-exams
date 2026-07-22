@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, May 2013}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2013\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,30 +95,39 @@
 \begin{examinstructions}
 Answer six questions and at least one from each section.
 \end{examinstructions}
-\section{Section 1}
-\begin{examproblems}{0}
+\subsection{Section 1}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that the theory of the class of infinite sets is complete and decidable, but is not finitely axiomatizable.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and sketch a proof of the Łoś theorem about ultraproducts of models
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that for any elementary chain \(\{A_i\}_{i\in\omega}\) of structures, \(A_i\) is an elementary submodel of the union~\(A\).
 \end{examproblems}
-\section{Section 2}
-\begin{examproblems}{3}
+\subsection{Section 2}
+\begin{examproblems}{3}{H3}
+\def\ProblemHeadingText{Problem 4.}
 \item
 State and prove the Schröder–Bernstein Theorem
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that Zorn’s Lemma implies the Well-Ordering Principle.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Show that for any notion of forcing \(\mathcal P\) and any countable set \(\mathcal D\) of \(\mathcal P\)-dense sets, there exists a \(\mathcal D\)-generic \(\mathcal P\)-filter.
 \end{examproblems}
-\section{Section 3}
-\begin{examproblems}{6}
+\subsection{Section 3}
+\begin{examproblems}{6}{H3}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that if \(X\subseteq\omega\) has an infinite computably enumerable subset~\(A\), then it has an infinite computable subset~\(B\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Sketch the proof that there are \(\le_m\)-incomparable c. e. sets.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Explain why the set \(WF\) of well-founded trees in \(\omega^*\) and the set \(WO\) of well-orderings of~\(\omega\) are \(\Pi^1_1\) complete and prove the Boundedness Principle, that any \(\Sigma^1_1\) subset of \(WO\) is bounded below \(\omega_1\).
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, January 2014}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2014\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,11 +98,14 @@ Answer seven problems. (If you turn in more, the first seven will be graded.) Wi
 \begin{examinstructions}
 Below, ring means associative ring with identity, and module means unital module.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f(x)=\sum_{i=0}^{n} a_i x^i\in\mathbb{Z}[x]\) be a polynomial with integer coefficients of degree \(n>1\). Suppose that for some~\(k\), with \(0<k<n\), and some prime~\(p\), we have \(p\nmid a_n\); \(p\nmid a_k\); \(p\mid a_i\) for \(i=0,\ldots,k-1\); and \(p^2\nmid a_0\). Show that \(f(x)\) has a factor of degree at least~\(k\) which is irreducible in \(\mathbb{Z}[x]\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Calculate the Galois group of \(x^5-12x+2\) over~\(\mathbb{Q}\), the field of rational numbers. Justify your answer carefully.
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -95,24 +114,30 @@ Give an example of fields \(M\supset L\supset K\) such that \(M/L\) and \(L/K\) 
 \item[\textnormal{(b)}]
 Let \(L\supset K\) be fields such that \([L:K]=8\). Prove that there exist \(\alpha,\beta,\gamma\in L\) such that \(L=K(\alpha,\beta,\gamma)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that the group defined by generators~\(a\) and~\(b\) and relations \(a^2=b^3=1\), \(abab=1\) is isomorphic to \(S_3\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let~\(R\) be a ring with 1 and let 
+Let~\(R\) be a ring with 1 and let
 \[
 0\to A\xrightarrow{f}B\xrightarrow{g}C\to 0
 \]
- be a short exact sequence of (left)~\(R\)-modules. Show that for any (right)~\(R\)-module~\(M\), the sequence 
+ be a short exact sequence of (left)~\(R\)-modules. Show that for any (right)~\(R\)-module~\(M\), the sequence
 \[
 M\otimes_R A\xrightarrow{1_M\otimes f}M\otimes_R B\xrightarrow{1_M\otimes g}M\otimes_R C\to 0
 \]
  of tensor products is exact.
+\def\ProblemHeadingText{Problem 6.}
 \item
 State and prove Hilbert’s Basis Theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove the Lying-Over Theorem: Let~\(S\) be an integral extension of an integral domain~\(R\), and let~\(P\) be a prime ideal of~\(R\). Then, there exists a prime ideal~\(Q\) of~\(S\), such that \(Q\cap R=P\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove that a commutative ring~\(R\) with identity is local if and only if, for all \(r,s\in R\), \(r+s=1_R\) implies that either~\(r\) or~\(s\) is a unit.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a ring.
 \begin{examsubparts}
@@ -123,8 +148,10 @@ Prove that any free~\(R\)-module is projective.
 \item[\textnormal{(c)}]
 Prove that there exists some ring~\(R\) and some projective~\(R\)-module~\(P\) such that~\(P\) is a projective module but not a free module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Determine up to isomorphism all semisimple noncommutative rings with \(512=2^9\) elements.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(C\) be the category of all finitely generated~\(\mathbb{Z}\)-modules, where~\(\mathbb{Z}\) is the ring of integers.
 \begin{examsubparts}

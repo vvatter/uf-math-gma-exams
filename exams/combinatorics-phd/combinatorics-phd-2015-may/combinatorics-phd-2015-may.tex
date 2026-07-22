@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, May 2015}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2015\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,13 +92,17 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f(n)\) be the number of simple undirected graphs on vertex set \([n]\) in which each vertex has degree at most two. Find the exponential generating function of the sequence \(f(n)\). You can assume that \(f(0)=1\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 We partition a group of~\(n\) people into blocks~\(A\), \(B\), and~\(C\), and ask each block to form a line. We also require that~\(A\) have an odd number of people, and that~\(B\) have an even number of people. Let \(h(n)\) be the number of ways to do this. Find the exponential generating function of the numbers \(h(n)\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(f(n)\) be the number of ways to choose a subset~\(S\) of \([n]\), then to choose a permutation~\(p\) on \([n]\) so that if \(s\in S\), then \(p(s)\notin S\). Find a formula for \(f(n)\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -91,20 +111,24 @@ Find the number of permutations of length~\(n\) whose first ascent occurs in pos
 \item[\textnormal{(b)}]
 The number of all permutations of length~\(n\) whose first ascent occurs in an even position is equal to the number of some other easily defined permutations that we studied this semester. What is that class of permutations, and why are the two numbers equal?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 This Fall, the United States Congress will have~\(n\) working days, split into an unspecified number of sessions. Within each session, one day will be designated for a plenary meeting, and each of the remaining days (if there are any remaining days) will be designated for either committee work or subcommittee work.
 
 \par
 Find an explicit formula for the number of ways the US Congress can schedule its season.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Compute the order polynomial \(\Omega(n,P)\) of the 4-element poset~\(P\) that consists of one maximum element and three minimal elements.
 
 \par
 (Recall that \(\Omega(n,P)\) is the number of order-preserving maps from~\(P\) to \([n]\). That is, the number of maps \(f:P\to[n]\) so that if \(x\le_P y\), then \(f(x)\le f(y)\).)
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove the Sylvester–Gallai Theorem: In any configuration of~\(n\) points in the plane, not all on a line, there is a line which contains exactly two of the points.
+\def\ProblemHeadingText{Problem 8.}
 \item
-Prove Pick’s Theorem: The area of any (not necessarily convex) polygon~\(P\) in the plane with vertices on the integer lattice is given by 
+Prove Pick’s Theorem: The area of any (not necessarily convex) polygon~\(P\) in the plane with vertices on the integer lattice is given by
 \[
 A(P)=n_{int}+\frac{1}{2}n_{bd}-1,
 \]

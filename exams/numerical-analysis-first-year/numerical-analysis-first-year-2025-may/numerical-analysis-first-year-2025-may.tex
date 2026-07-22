@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis First-Year Exam, May 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, May 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Consider the function \(g(x)=e^{-x}\).
 \begin{examsubparts}
@@ -90,10 +107,12 @@ Prove that~\(g\) maps \(G=[\ln 1.1,\ln 3]\) into \(G=[\ln 1.1,\ln 3]\).
 \item[\textnormal{(c)}]
 Prove that \(x_{k+1}=g(x_k)\) converges to an unique fixed point \(z\in G=[\ln 1.1,\ln 3]\) for any initial value \(x_0\in G=[\ln 1.1,\ln 3]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Based on \(u_1(x)=1,u_2(x)=x,u_3(x)=x^2\), use Gram–Schmidt orthogonalization process to compute the three polynomials \(w_1(x),w_2(x),w_3(x)\) which are orthonormal on the interval \([0,1]\) with respect to the inner product \((f,g)=\int_0^1 f(x)g(x)\,dx\). Using these polynomials, find the best approximation in \(P^2[0,1]\) for \(f(x)=x^{\frac12}\).
+\def\ProblemHeadingText{Problem 3.}
 \item
-Consider the finite difference formula 
+Consider the finite difference formula
 \[
 f'(t_j)=\frac{1}{12h}\left[f(t_j-2h)-8f(t_j-h)+8f(t_j+h)-f(t_j+2h)\right]+O(h^4).
 \]
@@ -103,18 +122,20 @@ Derive this formula by using Taylor’s theorem.
 \item[\textnormal{(b)}]
 Derive this formula by using Lagrange polynomial representation.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Assume the numerical quadrature for \(\hat f(\hat x)\) on \([0,1]\) is 
+Assume the numerical quadrature for \(\hat f(\hat x)\) on \([0,1]\) is
 \[
 \hat J(\hat f)=\int_0^1 \hat f(\hat x)\,d\hat x\approx \hat Q(\hat f)=\sum_{j=0}^m \hat\alpha_j\hat f(\hat x_j).
 \]
  Derive the numerical quadrature of \(J(f)=\int_a^b f(x)\,dx\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Consider numerically solving the initial value problem 
+Consider numerically solving the initial value problem
 \[
 y'(t)=f(t,y),\quad 0<t\leq t_f,\qquad \text{with }y(0)=\eta.
 \]
- Assume~\(f\) is sufficiently differentiable and let~\(h\) denote the step size. Show that all convergent members of the family of methods 
+ Assume~\(f\) is sufficiently differentiable and let~\(h\) denote the step size. Show that all convergent members of the family of methods
 \[
 y_{n+2}+(\theta-2)y_{n+1}+(1-\theta)y_n=\frac14h\left[(6+\theta)f_{n+2}+3(\theta-2)f_n\right],
 \]

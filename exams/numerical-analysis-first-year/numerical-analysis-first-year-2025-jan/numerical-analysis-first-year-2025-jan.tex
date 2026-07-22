@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis First-Year Exam, January 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, January 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,32 +95,37 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-\(g(x)=\frac{x}{2}+\frac{a}{2x}\) has \(x=\sqrt{a}\) as a fixed point where \(a>0\). Suppose we use the fixed point method with a starting point \(x_0>\sqrt{a}\). Use the theory of the fixed point method to determine the condition on \(x_0\) which guarantees 
+\(g(x)=\frac{x}{2}+\frac{a}{2x}\) has \(x=\sqrt{a}\) as a fixed point where \(a>0\). Suppose we use the fixed point method with a starting point \(x_0>\sqrt{a}\). Use the theory of the fixed point method to determine the condition on \(x_0\) which guarantees
 \[
 |x_{k+1}-\sqrt{a}|\leq \frac{1}{2}|x_k-\sqrt{a}|,\qquad k\geq 1.
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(f\in C[0,1]\) and let \(\sum_{i=1}^n w_i f(x_i)\) (\(n\geq 1\)) be an approximation to \(\int_0^1 f(x)\,dx\). Assume that \(0\leq w_i\leq 1\), \(0\leq x_i\leq 1\) (\(i=1,2,\ldots,n\)). Let 
+Let \(f\in C[0,1]\) and let \(\sum_{i=1}^n w_i f(x_i)\) (\(n\geq 1\)) be an approximation to \(\int_0^1 f(x)\,dx\). Assume that \(0\leq w_i\leq 1\), \(0\leq x_i\leq 1\) (\(i=1,2,\ldots,n\)). Let
 \[
 E_n(f)=\int_0^1 f(x)\,dx-\sum_{i=1}^n w_i f(x_i)
 \]
  be the error in the approximation. Assume that \(E_n(p_n)=0\) for \(p_n\), which denotes any polynomial of degree \(\leq n\). Use the Weierstrass approximation theorem to prove that, given \(\epsilon>0\), there is an \(N>0\) such that \(|E_n(f)|<\epsilon\) when \(n>N\).
+\def\ProblemHeadingText{Problem 3.}
 \item
-Given a differentiable function \(f(x)\), consider the problem of finding a polynomial \(p(x)\in\mathbb{P}^n\) such that 
+Given a differentiable function \(f(x)\), consider the problem of finding a polynomial \(p(x)\in\mathbb{P}^n\) such that
 \[
 p(x_0)=f(x_0),\qquad p'(x_i)=f'(x_i),\qquad i=1,2,\ldots,n,
 \]
  where \(x_i\), \(i=1,2,\ldots,n\), are distinct nodes. (It is not excluded that \(x_1=x_0\).) Show that the problem has a unique solution and describe how it can be obtained.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\{p_i(x)\}_{i=0}^{\infty}\) be the sequence of orthogonal polynomials obtained from the Gram–Schmidt orthogonalization process of \(\{x^i\}_{i=0}^{\infty}\). Consider the quadrature formula \(Q(f)=\sum_{j=0}^m \alpha_j f(x_j)\) for \(J(f)=\int_a^b f(x)\rho(x)\,dx\). Prove that \(Q(f)\) is exact for polynomials of degree \(\leq 2m+1\) if and only if the quadrature nodes \(x_j\) (\(j=0,1,\ldots,m\)) are the roots of \(p_{m+1}(x)\) and the quadrature weights \(\alpha_j=\int_a^b l_j(x)\rho(x)\,dx\), (\(j=0,1,\ldots,m\)).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Consider numerically solving the initial value problem 
+Consider numerically solving the initial value problem
 \[
 y'(t)=f(t,y),\quad 0<t\leq t_f,\qquad \text{with }y(0)=\eta.
 \]
- Assume~\(f\) is sufficiently differentiable and let~\(h\) denote the step size. Show that the method 
+ Assume~\(f\) is sufficiently differentiable and let~\(h\) denote the step size. Show that the method
 \[
 y_{n+2}-y_{n+1}=\frac{1}{4}h(f_{n+2}+2f_{n+1}+f_n)
 \]

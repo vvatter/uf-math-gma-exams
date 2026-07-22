@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2014, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2014, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,11 +101,14 @@
 \begin{examinstructions}
 Do only 4 problems of the 6. Work must be presented in a neat and logical fashion to receive credit. Do not leave any gaps. State clearly any theorems used in proofs.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(F\) be a closed subset of the reals~\(\mathbb{R}\) with the usual topology. Show~\(F\) is a countable union of compact sets.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(E\) be a nonempty subset of a metric space. State the definition of the distance \(\rho_E(x)\) of a point~\(x\) to~\(E\). Characterize \(\overline{E}\) in terms of \(\rho_E\), where \(\overline{E}\) is the closure of~\(E\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -98,6 +117,7 @@ Let~\(f\) be a continuous function from a compact metric space~\(X\) into a metr
 \item[\textnormal{(b)}]
 Assume the setting in (a) with the further assumption that~\(Y\) is the reals with the usual topology. Show that~\(f\) assumes maximum and minimum values on~\(X\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(f\) be a continuous map of a metric space~\(X\) into a metric space~\(Y\).
 \begin{examsubparts}
@@ -106,11 +126,12 @@ Show that if~\(f\) is NOT uniformly continuous on~\(X\), then for some \(\vareps
 \item[\textnormal{(b)}]
 Assume that~\(X\) is compact. Show, using (a), that~\(f\) is uniformly continuous on~\(X\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} Part (b) is not valid if the sequence \(\{x_n\}\) contains repeated values: the jump at \(x_n\) would include every \(c_k\) for which \(x_k=x_n\). The intended repair is not unique; the source reading has therefore been retained.
 \end{problemconcern}
-Let \(\{x_n\}\) be a sequence of points in \((a,b)\) and let \(\{c_n\}\) be a sequence of positive numbers such that \(\sum c_n\) converges. Define 
+Let \(\{x_n\}\) be a sequence of points in \((a,b)\) and let \(\{c_n\}\) be a sequence of positive numbers such that \(\sum c_n\) converges. Define
 \[
 f(x)=\sum_{n:x_n<x}c_n,\qquad a<x<b,
 \]
@@ -121,6 +142,7 @@ Show \(f(x-)=f(x)\) for each~\(x\) in \((a,b)\).
 \item[\textnormal{(b)}]
 Show \(f(x_n+)-f(x_n-)=c_n\), for each~\(n\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose~\(f\) is continuous on \([0,\infty)\), differentiable on \((0,\infty)\), \(f(0)=0\) and \(f'\) is monotonically increasing. Define~\(g\) on \((0,\infty)\) by \(g(x)=f(x)/x\), \(x>0\). Prove~\(g\) is monotonically increasing.
 \end{examproblems}

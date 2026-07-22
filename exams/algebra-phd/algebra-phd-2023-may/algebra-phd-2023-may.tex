@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2023}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2023\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(K\) be the splitting field of \(x^7-2\) over~\(\mathbb{Q}\). What is \([K:\mathbb{Q}]\)? Justify your answer.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Give an example of a Galois extension of \(\mathbb{Q}(\zeta_5)\) with degree~\(5\) (where \(\zeta_5\) is a primitive 5th root of unity). Give an example of a Galois extension of~\(\mathbb{Q}\) with degree~\(5\). Justify your answers.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(K\) be a field and~\(G\) a finite subgroup of \(\operatorname{Aut}(K)\).
 \begin{examsubparts}
@@ -94,18 +113,20 @@ Use the theorem of the fixed field to show that if \(K/F\) is a finite extension
 \item[\textnormal{(iii)}]
 Use the theorem of the fixed field to show that if \(F=K^G\) then \(K/F\) is a Galois extension with Galois group~\(G\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\mathrm{Groups}\) denote the category of groups and \(\mathrm{Sets}\) denote the category of sets.
 \begin{examsubparts}
 \item[\textnormal{(i)}]
 Use free groups to construct a left adjoint to the forgetful functor \(U:\mathrm{Groups}\to\mathrm{Sets}\). (You can skip checking “naturality” i.e. compatibility with morphisms.)
 \item[\textnormal{(ii)}]
-Show that the functor \(F:\mathrm{Groups}\to\mathrm{Sets}\) defined by 
+Show that the functor \(F:\mathrm{Groups}\to\mathrm{Sets}\) defined by
 \[
 F(G)=\{(x,y)\in G\times G:xyx^{-1}y^{-1}=1\}
 \]
  is a representable functor. (Again, you can skip checking “naturality”.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(k\) be a field. For a~\(k\)-vector space~\(V\), recall that the dual vector space \(V^*\) is defined to be the~\(k\)-vector space of linear functionals on~\(V\), i.e. linear transformations from~\(V\) to~\(k\).
 \begin{examsubparts}
@@ -114,6 +135,7 @@ Construct a natural linear transformation \(\psi:V^*\otimes_k W^*\to(V\otimes_k 
 \item[\textnormal{(ii)}]
 Show that~\(\psi\) is an isomorphism if~\(V\) and~\(W\) are finite dimensional.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(R\) be a unital ring.
 \begin{examsubparts}
@@ -122,10 +144,13 @@ State at least two equivalent definitions of a projective~\(R\)-module. (You don
 \item[\textnormal{(ii)}]
 Let~\(M\) and~\(N\) be~\(R\)-modules with \(M\subset N\). If~\(M\) is projective and \(N/M\) is projective, prove that~\(N\) is projective.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Are the functors \(F(A)=\operatorname{Hom}_{\mathbb{Z}}(A,\mathbb{Q}/\mathbb{Z})\) and \(G(A)=\operatorname{Hom}_{\mathbb{Z}}(A,\mathbb{Z})\) from the category of~\(\mathbb{Z}\)-modules to the category of~\(\mathbb{Z}\)-modules exact? Justify your answer.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove that the intersection of all prime ideals in a commutative ring is the nilradical. (Suggestion: for one direction, given a non-nilpotent element~\(a\) consider the set of all ideals not containing any power of~\(a\).)
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(\mathbb{R}\) and~\(\mathbb{C}\) denote the real and complex numbers as usual.
 \begin{examsubparts}
@@ -136,8 +161,10 @@ Give an example of two ideals of \(\mathbb{C}[x]\) which have the same zero set 
 \item[\textnormal{(iii)}]
 State Hilbert’s Nullstellensatz.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(R\) be a commutative ring and~\(D\) a multiplicatively closed subset of~\(R\) containing~\(1\). State the universal property for the localization \(D^{-1}R\), show that any two rings satisfying the universal property are isomorphic, and construct a ring satisfying the universal property. (Checking the construction is well-defined will involve a variety of verifications which you can skip. But do check it satisfies the universal property.)
+\def\ProblemHeadingText{Problem 11.}
 \item
 Give an example of the following, and briefly justify your answers:
 \begin{examsubparts}

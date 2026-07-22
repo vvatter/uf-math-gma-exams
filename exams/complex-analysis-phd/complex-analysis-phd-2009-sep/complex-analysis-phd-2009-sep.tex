@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, September 2009}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, September 2009\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,9 +98,11 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 A fixed point of a function~\(f\) is a point~\(x\) with \(f(x)=x\). Let~\(G\) be an open, simply connected subset of \(\mathbb C\). If~\(f\) is analytic on~\(G\), \(f(G)\subset G\), and~\(f\) has two fixed points, show that~\(f\) is the identity map.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be an open, connected subset of \(\mathbb C\) and~\(f\) be analytic on~\(G\). Note that we are not assuming that~\(G\) is simply connected.
 \begin{examsubparts}
@@ -95,24 +113,30 @@ Prove or disprove: Both the real and imaginary parts of~\(f\) are harmonic funct
 \item[\textnormal{(c)}]
 Prove or disprove, if \(u:G\to\mathbb R\) is harmonic, then there is a harmonic function \(v:G\to\mathbb R\) so that \(u+iv\) is analytic.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Give an explicit biholomorphism from the “wedge” \(\{z:0<\arg(z)<\pi/2\}\) onto the open unit disk.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Evaluate the integral, and justify each step. 
+Evaluate the integral, and justify each step.
 \[
 \int_{-\infty}^{\infty}\frac{x\sin x}{(x^2+1)^2}\,dx.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(f\) be an entire function of finite order. Prove that if the order is not an integer, then~\(f\) must have infinitely many zeros. Does there exist an entire function of infinite order with finitely many zeros? Explain.
+\def\ProblemHeadingText{Problem 6.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The statement is preserved as printed, but it overlooks the possible case \(g\equiv0\), for example when \(g_n\equiv1/n\). The intended correction is not uniquely determined: one could assume \(g\not\equiv0\) or conclude that~\(g\) is identically zero or has only real zeros.
 \end{problemconcern}
 Assume each \(g_n\) is entire and \(g_n\to g\) uniformly on compact sets in \(\mathbb C\) (i.e. \(g_n\to g\) in \(H(\mathbb C)\)). If each \(g_n\) has only real zeros, show that~\(g\) has only real zeroes.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Assume that~\(f\) and~\(g\) are analytic and nonvanishing on \(\{z\in\mathbb C:|z|<2\}\) and that \(|f(z)|=|g(z)|\) when \(|z|=1\). Show that there is a constant \(\lambda\in\mathbb C\) with \(|\lambda|=1\) and \(f(z)=\lambda g(z)\) for all \(z\in B_2(0)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
-Assume that~\(f\) is entire, and for some integer \(n>0\), 
+Assume that~\(f\) is entire, and for some integer \(n>0\),
 \[
 \lim_{z\to\infty}\frac{f(z)}{z^n}=c,
 \]

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, September 2001}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2001\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,51 +92,67 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{I.}
+\subsection{I.}
 \begin{examinstructions}
 State the following theorems:
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 The monotone class theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 The Hahn decomposition theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 The Egorov theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
 The Vitali convergence theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 The Lebesgue convergence theorem.
+\def\ProblemHeadingText{Problem 6.}
 \item
 The Radon–Nikodym theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 The Fubini theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 The dual of \(L^p\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 The Hahn–Banach theorem.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Integrability with respect to the measure \(g\mu\) defined by \(g\mu(A)=\int_A g\,d\mu\).
 \end{examproblems}
-\section{II}
+\subsection{II}
 \begin{examinstructions}
 Prove 2 of the above theorems 3, 5, 6, 7.
 \end{examinstructions}
-\section{III.}
+\subsection{III.}
 \begin{examinstructions}
 Solve the following problems. Let \((X,\Sigma,\mu)\) be a measure space.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(X,Y\) be normed spaces. Prove that if~\(Y\) is complete, then \(L(X,Y)\) is complete.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that if \(f:X\to\overline{\mathbb R}_+\) is~\(\mu\)-measurable and \(\int f\,d\mu<\infty\), then \(f<\infty\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 3.}
 \item
 If \(\mu(X)<\infty\), \(f_n\in L^1(\mu)\), and \(f_n\to f\) uniformly, then \(f\in L^1(\mu)\) and \(f_n\to f\) in the mean.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove the existence of the conditional expectation \(E(f/\mathcal F)\) for functions \(f\in L^1(\mu)\), with respect to a~\(\sigma\)-algebra \(\mathcal F\subset\Sigma\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that if \(f\in L^1\) and \(\int_A f\,d\mu=0\) for~\(A\) in a ring~\(R\) generating the~\(\sigma\)-algebra~\(\Sigma\), then \(f=0\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove the existence of the product \(\mu\times\nu\) of two real valued measures.
 \end{examproblems}

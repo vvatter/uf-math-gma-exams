@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, May 1991}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 1991\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,17 +95,21 @@
 \begin{examinstructions}
 Do 9 out of 12 problems. Show all of your work.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 How many~\(k\)-tuples \((A_1,A_2,\ldots,A_k)\) of nested subsets of an~\(n\)-set are there, where \(A_1\subseteq A_2\subseteq\cdots\subseteq A_k\)?
+\def\ProblemHeadingText{Problem 2.}
 \item
 How many words of length~\(n\) are there in the alphabet \((a,b,c)\) with no two adjacent~\(a\)’s? With no two adjacent letters equal?
+\def\ProblemHeadingText{Problem 3.}
 \item
-Find the generating function for the sequence \(\{a_n\}\) given by the recurrence 
+Find the generating function for the sequence \(\{a_n\}\) given by the recurrence
 \[
 a_n=a_{n-1}+6a_{n-2}+2^n
 \]
  where \(a_0=1\) and \(a_1=3\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Bipartite graphs:
 \begin{examsubparts}
@@ -106,17 +126,22 @@ Hamiltonian.
 \item[\textnormal{(b)}]
 Prove: A plane graph where every face has an even number of edges must be bipartite.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Prove that 
+Prove that
 \[
 \sum_{k=1}^{n} S(n,k)x(x-1)\cdots(x-k+1)=x^n.
 \]
+\def\ProblemHeadingText{Problem 6.}
 \item
 Use Möbius inversion to find the number of integers between~\(1\) and~\(n\) and coprime to~\(n\), given the prime factorization of~\(n\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove or disprove: There is a matching from~\(V\) to~\(W\) in a bipartite graph if, for some fixed~\(k\), there are~\(k\) or more edges incident with each vertex of~\(V\) and~\(k\) or fewer edges incident with each vertex of~\(W\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(A_{m,n}\) be the collection of all sets \(X=\{N_1,N_2,\ldots,N_k\}\), where~\(k\) is a non-negative integer, and for each \(i\leq k\), \(N_i\) is a positive integer divisor of \(N=2^m3^n\), and where \(N_i\mid N_j\) only if \(i=j\). Define a partial order on \(A_{m,n}\), where \(X=\{N_1,N_2,\ldots,N_k\}\), \(X'=\{N'_1,N'_2,\ldots,N'_l\}\), by \(X\preceq X'\) if and only if \(N_i\in X\Rightarrow\) there exists \(N'_j\in X'\) with \(N_i\mid N'_j\). Prove that \(A_{m,n}\) is a distributive lattice, and determine its poset of join-irreducible elements.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(I\) be a collection of subsets of~\(E\), where~\(E\) is finite, and suppose that \(I\neq\varnothing\) and that \(Y\in I,\ X\subseteq Y\Rightarrow X\in I\). Let \(c:E\to\mathbb{R}^+\) assign a positive real number to each element of~\(E\). Consider the optimization problem:
 
@@ -125,13 +150,16 @@ Find \(\max_{X\in I}\sum_{x\in X}c(x)\)
 
 \par
 Prove that the greedy algorithm solves this problem if and only if~\(I\) is the collection of independent sets of some matroid on~\(E\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 State the MacWilliams identity, and use it to compute the weight polynomial of the \((15,11)\) Hamming binary code.
+\def\ProblemHeadingText{Problem 11.}
 \item
 A \((v,k,\lambda)\)-design~\(\Sigma\) is an incidence structure consisting of a set~\(S\) of~\(v\) points and a collection of~\(k\)-subsets of~\(S\) called blocks, such that every pair of points of~\(S\) is contained in precisely~\(\lambda\) blocks.
 
 \par
 Prove that, in the range \(30\leq v\leq45\), a \((v,6,1)\)-design exists if and only if \(v=31\).
+\def\ProblemHeadingText{Problem 12.}
 \item
 Use the Hall Multiplier Theorem
 \begin{examsubparts}

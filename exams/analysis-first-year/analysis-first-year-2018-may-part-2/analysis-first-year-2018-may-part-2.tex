@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2018, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2018, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,7 +101,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -94,8 +111,10 @@ Let \(g_n \to g\) and \(h_n \to h\) uniformly on~\(X\). Prove that if~\(g\) and~
 \item[\textnormal{(ii)}]
 Let \(f:[a,b]\to\mathbb{R}\) be continuous. By considering the square-root or otherwise, prove that if~\(f\) is non-negative then there exists a sequence of non-negative polynomials converging uniformly to~\(f\) on \([a,b]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(\mathcal{F}\) be an equicontinuous family of real-valued functions on the connected space~\(X\). By considering the set of points at which the family~\(\mathcal{F}\) is bounded, prove that if~\(\mathcal{F}\) is bounded at one point of~\(X\) then it is bounded at all points of~\(X\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 \((f_n:n\geq 0)\) is a sequence of measurable real-valued functions. Prove that each of the following sets is measurable:
 \begin{examsubparts}
@@ -104,11 +123,13 @@ the set~\(A\) comprising all points~\(\omega\) for which the sequence of values 
 \item[\textnormal{(b)}]
 the set~\(B\) comprising all points~\(\omega\) for which the sequence of values \(f_n(\omega)\) changes sign infinitely often.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source clearly says “Lebesgue-measurable functions,” but measurability and uniform convergence alone do not ensure the stated integrability conclusion, even when the measure is finite. A missing integrability hypothesis may have been intended, but the correction is not uniquely determined, so the source wording has been retained.
 \end{problemconcern}
 \((\Omega,\mathcal{F},\mu)\) is a measure space on which \((f_n:n\geq 0)\) is a sequence of Lebesgue-measurable functions converging uniformly to~\(f\). Prove that if \(\mu(\Omega)<\infty\) then it follows that~\(f\) is integrable and \(\int_\Omega f_n\,d\mu\to\int_\Omega f\,d\mu\). Show by example that if \(\mu(\Omega)=\infty\) then the same conclusion may not follow.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((f_n:n\geq 0)\) be a uniformly-bounded sequence of Riemann-integrable functions on \([a,b]\). If \(f_n\to 0\) pointwise, does it follow that \(\int_a^b f_n\to 0\)? Proof or counterexample required.
 \end{examproblems}

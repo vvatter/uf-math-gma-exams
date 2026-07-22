@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2015, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2015, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,36 +95,49 @@
 \begin{examinstructions}
 Answer all questions and work all problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose that \(f:X\to Y\) is continuous and onto. Show that if~\(X\) is compact, then~\(Y\) is also compact.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose that \(A\subset X\) is connected. Show that the closure of~\(A\), \(\overline{A}\), is also connected.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State and prove the Banach Fixed-Point Theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose that~\(X\) is a compact metric space. Show that if \(\{x_i\}\) is a sequence of points in~\(X\), then there is a point \(z\in X\) and a subsequence, \(\{x_{i_j}\}\), such that \(x_{i_j}\to z\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Give an example of a sequence of functions \(f_i:[0,1]\to[0,1]\) such that \(f_i(x)\to g(x)\) for all \(x\in[0,1]\), but such that \(g:[0,1]\to[0,1]\) is not continuous.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose that~\(X\) is a set and that \(f:X\to 2^X\). Show that~\(f\) cannot be onto.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Suppose that~\(X\) is a complete metric space that is countably infinite. Show that~\(X\) has an isolated point, i.e., there is a point \(x\in X\) such that \(\{x\}\) is open in~\(X\).
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{7}
+\begin{examproblems}{7}{H2}
+\def\ProblemHeadingText{Problem 8.}
 \item
 State The Urysohn Lemma.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Show that \([0,1)\) is not compact.
+\def\ProblemHeadingText{Problem 10.}
 \item
 State the Tietze Extension Theorem.
+\def\ProblemHeadingText{Problem 11.}
 \item
 State the Tychonoff Theorem.
+\def\ProblemHeadingText{Problem 12.}
 \item
 State the Alexander Subbase Theorem.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Give an example of a Hausdorff space that is not normal.
 \end{examproblems}

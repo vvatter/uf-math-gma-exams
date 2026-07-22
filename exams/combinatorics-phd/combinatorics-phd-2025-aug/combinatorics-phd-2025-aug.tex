@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, August 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,32 +92,39 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Find the number of sequences of length \(n \leq 26\) of letters from the alphabet, each such sequence required to be in alphabetical order with no letter repeated.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(n \geq 3\) be an odd number. Prove that the sequence 
+Let \(n \geq 3\) be an odd number. Prove that the sequence
 \[
 \binom{n}{1},\binom{n}{2},\ldots,\binom{n}{\frac{n-1}{2}}
 \]
  contains an odd number of odd numbers.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Find a second order linear recurrence for the number of ways to properly 3-color an~\(n\)-cycle. (No two adjacent vertices receive the same color.)
+\def\ProblemHeadingText{Problem 4.}
 \item
 In a tournament, each player plays every other player exactly once, except in the process 3 players dropped out after playing exactly 2 games each. If 50 games were played, how many games were played just among the 3 players who dropped out? Explain your answer.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose a convex polyhedron has 6 vertices and 12 edges. Prove that each facet is a triangle.
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let \(A(n)\) be the number of set partitions of \([n]\) such that~\(i\) and \(i+1\) never occur in the same block for any \(i=1,2,\ldots,n-1\). Show that 
+Let \(A(n)\) be the number of set partitions of \([n]\) such that~\(i\) and \(i+1\) never occur in the same block for any \(i=1,2,\ldots,n-1\). Show that
 \[
 A(n)=\sum_{i=0}^{n-1}(-1)^i\binom{n-1}{i}B(n-i),
 \]
- where \(B(n)\) is the \(n^{th}\) Bell number. Alternatively, show that 
+ where \(B(n)\) is the \(n^{th}\) Bell number. Alternatively, show that
 \[
 A(n)=B(n-1).
 \]
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let~\(P\) be a finite poset with a bottom element~\(0\). Show that if~\(x\) covers exactly one element of~\(P\), then 
+Let~\(P\) be a finite poset with a bottom element~\(0\). Show that if~\(x\) covers exactly one element of~\(P\), then
 \[
 \mu(x,0)=
 \begin{cases}
@@ -110,6 +133,7 @@ Let~\(P\) be a finite poset with a bottom element~\(0\). Show that if~\(x\) cove
 \end{cases}
 \]
  For any \(n\in\mathbb{Z}\), construct a poset containing an element~\(x\) with \(\mu(x)=n\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove that a simple~\(k\)-regular graph with girth~\(k\) has order at least \(2k\).
 \end{examproblems}

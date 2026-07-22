@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, May 2018}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, May 2018\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -90,13 +107,14 @@ Prove that~\(P\) is an orthogonal projector if and only if it is Hermitian.
 \item[\textnormal{(c)}]
 If \(q_1,\ldots,q_n\) is an orthonormal basis for the subspace \(V\subset\mathbb{C}^m\) with \(m>n\), prove that the orthogonal projector onto~\(V\) is \(QQ^*\), where~\(Q\) is the matrix whose columns are the \(q_j\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Assume \(A\in\mathbb{C}^{m\times m}\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Prove that \(\lVert A\rVert_2=(\rho(A^*A))^{1/2}=\sigma_1\), where \(\sigma_1\) is the largest singular value of~\(A\) and~\(\rho\) is the spectral radius.
 \item[\textnormal{(b)}]
-Let \(\kappa_2(A)\) be the two-norm condition number of the square, non-singular~\(A\). Prove that 
+Let \(\kappa_2(A)\) be the two-norm condition number of the square, non-singular~\(A\). Prove that
 \[
 \kappa_2(A)=\frac{\sigma_1}{\sigma_m}.
 \]
@@ -104,6 +122,7 @@ Let \(\kappa_2(A)\) be the two-norm condition number of the square, non-singular
 \item[\textnormal{(c)}]
 Show that \(\kappa_2(A)=1\) if and only if \(A=rQ\) with \(r\in\mathbb{R}\) and~\(Q\) unitary.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -112,6 +131,7 @@ Given \(A\in\mathbb{C}^{m\times n}\) with \(m\geq n\), show that \(A^*A\) is non
 \item[\textnormal{(b)}]
 If \(u,v\in\mathbb{C}^m\) and \(A=uv^*\), show that \(\lVert A\rVert_2=\lVert u\rVert_2\lVert v\rVert_2\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -120,6 +140,7 @@ Prove that every square matrix~\(A\) has a Schur factorization.
 \item[\textnormal{(b)}]
 If~\(A\) is normal (so \(A^*A=AA^*\)) show that the triangular matrix in its Schur factorization is diagonal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Assume \(A\in\mathbb{R}^{m,m}\).
 \begin{examsubparts}

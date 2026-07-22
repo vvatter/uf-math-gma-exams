@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2015}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2015\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Do six of eight. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(X\) and~\(Y\) be topological spaces. Prove, if \(f:X\to Y\) is continuous, then~\(f\) is \(\mathcal{B}_X\)-\(\mathcal{B}_Y\) measurable (that is, measurable with respect to the Borel~\(\sigma\)-algebras on~\(X\) and~\(Y\) respectively).
+\def\ProblemHeadingText{Problem 2.}
 \item
 (Short Answer.) Do two of three.
 \begin{examsubparts}
@@ -90,24 +108,30 @@ Give an example, if possible, of a closed subset~\(F\) of~\(\mathbb{R}\) of posi
 \item[\textnormal{(ii)}]
 Give an example, if possible, which shows that the~\(\sigma\)-finite hypothesis is needed in Tonelli’s Theorem.
 \item[\textnormal{(iii)}]
-Determine the limit of the sequence, 
+Determine the limit of the sequence,
 \[
 \int_1^\infty \frac{\sin(nx)}{x^n}\,dx.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \((X,\mathcal{M},\mu)\) be a measure space and \((f_n)_{n=1}^\infty\) be a sequence from \(L^1(\mu)\). Prove, if there is a \(g\in L^1(\mu)\) such that \(g(x)\geq |f_n(x)|\) for all~\(n\) and \(x\in X\), then 
+Let \((X,\mathcal{M},\mu)\) be a measure space and \((f_n)_{n=1}^\infty\) be a sequence from \(L^1(\mu)\). Prove, if there is a \(g\in L^1(\mu)\) such that \(g(x)\geq |f_n(x)|\) for all~\(n\) and \(x\in X\), then
 \[
 \lim_{\delta\to 0}\sup_n\int_{\{|f_n|<\delta\}}|f_n|\,d\mu=0.
 \]
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove, if \(E\subset\mathbb{R}\) is a Lebesgue measurable set of positive measure, then \(E-E=\{x-y:x,y\in E\}\) contains a nontrivial open interval.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((X,\mathcal{M},\mu)\) be a measure space and \(1\leq p<q<\infty\). Prove, \(L^q(\mu)\subset L^p(\mu)\) if and only if there is a (real) constant~\(K\) such that for each \(E\in\mathcal{M}\) either \(\mu(E)\leq K\) or \(\mu(E)=\infty\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove, if~\(X\) is a Banach space and~\(M\) is a finite dimensional subspace of~\(X\), then there is a closed subspace~\(N\) of~\(X\) such that \(M\cap N=(0)\) and \(M+N=X\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Suppose \(\|\cdot\|\) and \(\|\cdot\|_*\) are both norms on a vector space~\(X\) and \(\|x\|\leq\|x\|_*\) for all \(x\in X\). Show, if both \((X,\|\cdot\|)\) and \((X,\|\cdot\|_*)\) are Banach spaces, then these norms are equivalent.
+\def\ProblemHeadingText{Problem 8.}
 \item
 (Short Answer. Do two of three)
 \begin{examsubparts}

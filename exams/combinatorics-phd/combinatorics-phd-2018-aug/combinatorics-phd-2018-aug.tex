@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, August 2018}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2018\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,30 +92,38 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Find a generating function for the number of positive integer solutions to \(x_1+2x_2+3x_3+4x_4+5x_5=n\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Tickets numbered \(\{1,2,\ldots,n\}\) are drawn from an urn at random one after the other without replacement. What is the probability that the number~\(r\) is drawn on the \(k^{th}\) drawing?
 
 \par
 Among a population of \(n+1\) people, a rumor is spread at random. One person tells the rumor to a second, who in turn repeats it to a third person, etc. What is the probability that the rumor will be told~\(k\) times without being repeated to any person?
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that there exists no simple, bipartite, planar graph with minimum degree at least~\(4\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(\mu\) be the largest eigenvalue of the adjacency matrix of a graph~\(G\) and~\(\Delta\) the maximum degree of~\(G\). Prove that \(\mu\leq\Delta\).
 
 \par
 (Hint: Consider the largest, in absolute value, coordinate of a corresponding eigenvector.)
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that a~\(k\)-regular graph of girth~\(4\) has at least \(2k\) vertices, and a~\(k\)-regular graph of girth~\(5\) has at least \(k^2+1\) vertices. Draw a~\(3\)-regular graph of girth~\(4\) with \(2\cdot 3=6\) vertices and a~\(3\)-regular graph of girth~\(5\) with \(3^2+1=10\) vertices.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(f_n\) be the number of all compositions of the integer~\(n\) into odd parts. Find the exponential order of the numbers \(f_n\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Recall that a permutation is called even if it has an even number of even cycles, and it is called odd if it has an odd number of even cycles. Also recall that a derangement is a permutation with no~\(1\)-cycles.
 
 \par
 Let \(A_n\) be the number of all even derangements of length~\(n\), and let \(B_n\) be the number of all odd derangements of length~\(n\). Find an exact formula for \(A_n-B_n\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, August 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, August 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,12 +95,13 @@
 \begin{examinstructions}
 Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do six of the eight problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Do two. Short answer, you do not need to give a detailed proof, just a brief explanation.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-If \(a_1,\ldots,a_n\) are non-negative numbers, must it be the case that 
+If \(a_1,\ldots,a_n\) are non-negative numbers, must it be the case that
 \[
 \left(\sum_{j=1}^n a_j\right)^5 \leq n^4\sum_{j=1}^n a_j^5?
 \]
@@ -93,16 +110,18 @@ Define \(f\in L^1(\mathbb{R})\) by \(f(x)=e^{-x^4}\chi_{[1,\infty)}(x)\), where~
 \item[\textnormal{(c)}]
 If \(g,h\in L^1(\mu)\), when are \(g\,d\mu\) and \(h\,d\mu\) mutually singular?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Suppose \((X,\mathcal{M})\) is a measurable space. Show, if \(E\in\mathcal{M}\otimes\mathcal{M}\), then 
+Suppose \((X,\mathcal{M})\) is a measurable space. Show, if \(E\in\mathcal{M}\otimes\mathcal{M}\), then
 \[
 \{x\in X:(x,x)\in E\}\in\mathcal{M}.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Let \(f_n(x)=x^{-n}\) for \(n\geq 2\). Does the numerical sequence 
+Let \(f_n(x)=x^{-n}\) for \(n\geq 2\). Does the numerical sequence
 \[
 c_n=\int_1^\infty e^{inx}f_n(x)\,dx
 \]
@@ -110,22 +129,27 @@ c_n=\int_1^\infty e^{inx}f_n(x)\,dx
 \item[\textnormal{(b)}]
 Give an example, if possible, where strict inequality holds in Fatou’s Lemma.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Suppose~\(X\) is a Banach space, \(Y,Z\subseteq X\) are (closed) subspaces and \(Y\cap Z=\{0\}\). Prove or disprove: there is a \(C>0\) such that 
+Suppose~\(X\) is a Banach space, \(Y,Z\subseteq X\) are (closed) subspaces and \(Y\cap Z=\{0\}\). Prove or disprove: there is a \(C>0\) such that
 \[
 C(\lVert y\rVert+\lVert z\rVert)\leq\lVert y+z\rVert
 \]
  for all \(y\in Y\) and \(z\in Z\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Highlighting the key points, outline a proof of the following statement. If a sequence of functions converges in \(L^1\), then it has a subsequence that converges pointwise almost everywhere.
+\def\ProblemHeadingText{Problem 6.}
 \item
-Suppose \((X,\mathcal{M},\mu)\) is a measure space, \(1\leq p,q\leq\infty\) and \(h:X\to\mathbb{C}\) is measurable. Show, if \(hf\in L^q(\mu)\) for each \(f\in L^p(\mu)\), then the map 
+Suppose \((X,\mathcal{M},\mu)\) is a measure space, \(1\leq p,q\leq\infty\) and \(h:X\to\mathbb{C}\) is measurable. Show, if \(hf\in L^q(\mu)\) for each \(f\in L^p(\mu)\), then the map
 \[
 L^p(\mu)\ni f\mapsto hf\in L^q(\mu)
 \]
  is continuous.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Define the Hardy–Littlewood maximal function of a Lebesgue measurable function \(f:\mathbb{R}\to\mathbb{R}\). State the Hardy–Littlewood maximal inequality. Show, if \(f\in L^1(\mathbb{R})\), then \(f^*\) (the Hardy–Littlewood maximal function of~\(f\)) is finite almost everywhere.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Do two. Short answer, you do not need to give a detailed proof, just a brief explanation.
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2022, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2022, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stating clearly any theorems you wish to apply.
 \begin{examsubparts}
@@ -90,8 +107,10 @@ Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stati
 \item[\textnormal{(c)}]
 \(x^4-14x^3+2x^2+21x-7\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be the quotient of the ring \(\mathbb{Z}[i]\) of Gaussian integers by the principal ideal \((3+3i)\). Show that~\(R\) is finite and determine the number of its elements.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be a commutative ring with 1 and let~\(I\), \(J\) and~\(P\) be ideals in~\(R\) such that \(I\cap J\subseteq P\).
 \begin{examsubparts}
@@ -100,6 +119,7 @@ Prove that if~\(P\) is a prime ideal then either \(I\subseteq P\) or \(J\subsete
 \item[\textnormal{(b)}]
 Give an example which shows that if~\(P\) is not prime then the conclusion above may not hold.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring with 1 and~\(M\) a (unital) left~\(R\)-module.
 \begin{examsubparts}
@@ -110,8 +130,10 @@ Prove that if~\(M\) satisfies the ACC then every submodule of~\(M\) is finitely 
 \item[\textnormal{(c)}]
 Give an example of a finitely generated module that does not satisfy the ACC.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Determine the conjugacy classes of elements of order 8 in \(\mathrm{GL}(4,\mathbb{Q}(\sqrt{2}))\). (Hint: Factorize \(x^4+1\) in \(\mathbb{Q}(\sqrt{2})[x]\).)
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(E\) be an extension field of the field~\(F\).
 \begin{examsubparts}

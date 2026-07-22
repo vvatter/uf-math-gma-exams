@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Probability PhD Exam, May 2005}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, May 2005\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,7 +92,8 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(X_1, X_2\) be two independent random variables with the same uniform distribution on \((\theta-1/2,\theta+1/2)\), and let \(Y_1=\min(X_1,X_2)\), \(Y_2=\max(X_1,X_2)\),
 \begin{examsubparts}
@@ -85,6 +102,7 @@ Find \(\mathbb{P}(Y_1\leq\theta\leq Y_2)\),
 \item[\textnormal{(b).}]
 Find \(\mathbb{P}(Y_1\leq\theta\leq Y_2\mid Y_2-Y_1\geq 1/2)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(\phi(t)\) be a characteristic function, prove that
 \begin{examsubparts}
@@ -93,21 +111,23 @@ Let \(\phi(t)\) be a characteristic function, prove that
 \item[\textnormal{(b).}]
 \(1-|\phi(2t)|^2\leq 4(1-|\phi(t)|^2)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(\{X_n,n\geq 1\}\) be a sequence of i.i.d. nonnegative random variables. let \(S_0=0\), and \(S_n=X_1+\cdots+X_n\). For \(t>0\), we define 
+Let \(\{X_n,n\geq 1\}\) be a sequence of i.i.d. nonnegative random variables. let \(S_0=0\), and \(S_n=X_1+\cdots+X_n\). For \(t>0\), we define
 \[
 \{\omega\mid N_t(\omega)=n\}=\{\omega\mid S_n(\omega)\leq t<S_{n+1}(\omega)\}
 \]
- show that 
+ show that
 \[
 \mathbb{E}(N_t(\omega))=\sum_{n=1}^{\infty}\mathbb{P}(S_n(\omega)\leq t).
 \]
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(X_1,X_2,\ldots\) be a sequence of strictly positive random variables such that 
+Let \(X_1,X_2,\ldots\) be a sequence of strictly positive random variables such that
 \[
 \mathbb{E}(X_{n+1}\mid\mathcal{F}_n)=f_n(X_n).
 \]
- For \(n\geq 2\), let 
+ For \(n\geq 2\), let
 \[
 M_n=\frac{X_1X_2\cdots X_n}{f_1(X_1)f_2(X_2)\cdots f_{n-1}(X_{n-1})}.
 \]
@@ -117,26 +137,32 @@ Show that for \(n\geq 2\), \(M_n\) is a \(\mathcal{F}_n\)-martingale.
 \item[\textnormal{(b).}]
 Does this martingale converges almost surely and in \(L^1\)? Explain it.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(\{M_n,n\geq 0\}\) be a sequence of integrable random variables adapted to a filtration \(\mathcal{F}_n\). Assume that for each bounded stopping time~\(T\), \(\mathbb{E}(M_T)=\mathbb{E}(M_0)\), show that \(\{M_n,n\geq 0\}\) is a martingale.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(X\) and~\(Y\) be random variables such that \(\mathbb{E}(X^2)<\infty\) and \(\mathbb{E}(Y^2)<\infty\), \(\mathbb{E}(X\mid Y)=Y\) and \(\mathbb{E}(Y\mid X)=X\). Show that \(X=Y\) a.s.
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(X,Y\) be two independent random variables with \(\mathbb{E}[Y]=0\). Show that for \(p\geq 1\) 
+Let \(X,Y\) be two independent random variables with \(\mathbb{E}[Y]=0\). Show that for \(p\geq 1\)
 \[
 \mathbb{E}[|X|^p]\leq\mathbb{E}[|X+Y|^p].
 \]
+\def\ProblemHeadingText{Problem 8.}
 \item
-Let \((X,Y)\) be a random point on a unit circle with uniform distribution, that is 
+Let \((X,Y)\) be a random point on a unit circle with uniform distribution, that is
 \[
 \mathbb{P}((X,Y)\in A)=\frac{\operatorname{length}(A)}{2\pi}
 \]
  for any Borel subset~\(A\) of \(C_2=\{(x,y)\mid x^2+y^2=1\}\). Find the marginal distribution of~\(X\).
+\def\ProblemHeadingText{Problem 9.}
 \item
-Let \(\mathcal{F}_n\) be a filtration, \(|X_n|\leq Y\), \(Y\) integrable. Suppose that \(X_n\longrightarrow X\) a.e. Using the martingale convergence theorem to prove that 
+Let \(\mathcal{F}_n\) be a filtration, \(|X_n|\leq Y\), \(Y\) integrable. Suppose that \(X_n\longrightarrow X\) a.e. Using the martingale convergence theorem to prove that
 \[
 \mathbb{E}[X_n\mid\mathcal{F}_n]\longrightarrow\mathbb{E}[X\mid\mathcal{F}_\infty]\qquad\text{a.e.}
 \]
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let \(Y\in L^p\), \(|X_n|\leq Y\) and \(X_n\longrightarrow X\) in distribution. Show that \(X_n\) converges to~\(X\) in \(L^p\).
 \end{examproblems}

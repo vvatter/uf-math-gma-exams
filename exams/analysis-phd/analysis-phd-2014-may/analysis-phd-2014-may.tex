@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2014}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2014\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,20 +95,26 @@
 \begin{examinstructions}
 You must answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((X,\mathcal{M},\mu)\) be a measure space and \(f\in L^1(\mu)\). Prove that for every \(\epsilon>0\), there exists a \(\delta>0\) such that if \(\mu(E)<\delta\), then \(\int_E |f|\,d\mu<\epsilon\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 State the Hahn decomposition theorem for signed measures. Prove that if~\(\rho\) is a signed measure on a measurable space \((X,\mathcal{M})\), then there exist unique positive measures \(\rho_+,\rho_-\) such that \(\rho_+\perp\rho_-\) and \(\rho=\rho_+-\rho_-\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 State the Fubini–Tonelli theorem and give a sketch of its proof.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(C^1[0,1]\) denote the set of all continuous (real-valued) functions~\(f\) on \([0,1]\) such that~\(f\) is differentiable in \((0,1)\) and \(f'\) extends continuously to \([0,1]\). Prove that \(C^1[0,1]\) is a Banach space under the norm 
+Let \(C^1[0,1]\) denote the set of all continuous (real-valued) functions~\(f\) on \([0,1]\) such that~\(f\) is differentiable in \((0,1)\) and \(f'\) extends continuously to \([0,1]\). Prove that \(C^1[0,1]\) is a Banach space under the norm
 \[
 \|f\|=\|f\|_\infty+\|f'\|_\infty.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(\mathcal{X}\) be a normed vector space (over~\(\mathbb{C}\)) and \(\mathcal{M}\subset\mathcal{X}\) a closed subspace. Prove that if \(x\in\mathcal{X}\setminus\mathcal{M}\), then \(\mathcal{M}+\mathbb{C}x\) is closed.
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -101,8 +123,10 @@ State the Closed Graph Theorem and the Banach Isomorphism Theorem.
 \item[\textnormal{b)}]
 Assuming the Banach Isomorphism Theorem (or otherwise), prove the Closed Graph Theorem.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(\mathcal{X}\) be a Banach space and~\(\mathcal{Y}\) a normed vector space. Suppose that \(T_n\) is a sequence of bounded linear operators from~\(\mathcal{X}\) to~\(\mathcal{Y}\). Prove that if \(\lim T_nx\) exists for each \(x\in\mathcal{X}\), then the mapping \(Tx=\lim T_nx\) defines a bounded linear operator from~\(\mathcal{X}\) to~\(\mathcal{Y}\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \((X,\mathcal{M},\mu)\) be a~\(\sigma\)-finite measure space. Prove that the simple functions that belong to \(L^2(\mu)\) are dense in \(L^2(\mu)\).
 \end{examproblems}

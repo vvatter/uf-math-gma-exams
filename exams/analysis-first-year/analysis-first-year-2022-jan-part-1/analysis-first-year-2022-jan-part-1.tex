@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2022, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2022, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,23 +95,26 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \((a_n)\) be a bounded real sequence. Let 
+Let \((a_n)\) be a bounded real sequence. Let
 \[
 U=\{u:(\exists N)(\forall n\geq N)(a_n<u)\}
 \]
- and 
+ and
 \[
 L=\{\ell:(\exists N)(\forall n\geq N)(a_n>\ell)\}.
 \]
  Prove that \(\sup L\) and \(\inf U\) exist and satisfy \(\sup L\leq\inf U\).
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let~\(X\) be the set of all bounded real-valued functions on the set~\(S\). Prove that the rule 
+Let~\(X\) be the set of all bounded real-valued functions on the set~\(S\). Prove that the rule
 \[
 d(f,g)=\sup\{|f(s)-g(s)|:s\in S\}
 \]
  defines a metric on~\(X\). Are closed and bounded subsets of~\(X\) compact when~\(S\) is finite? Explain.
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -104,6 +123,7 @@ Prove that if \((x_n)_{n=0}^{\infty}\) converges to~\(x\) in a metric space then
 \item[\textnormal{(ii)}]
 Prove that the function \(f:X\to Y\) between metric spaces is continuous if and only if its restriction \(f|_K\) to each compact subset~\(K\) of~\(X\) is continuous.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(f:X\to Y\) be a map between metric spaces. Consider the statements: Prove or disprove each of the implications (i)~\(\Rightarrow\) (ii) and (ii)~\(\Rightarrow\) (i).
 \begin{examsubparts}
@@ -112,6 +132,7 @@ Let \(f:X\to Y\) be a map between metric spaces. Consider the statements: Prove 
 \item[\textnormal{(ii)}]
 \(f\) is uniformly continuous.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 The function \(f:(0,\infty)\to\mathbb{R}\) is differentiable and \(\lim_{x\to\infty}f'(x)=b\in\mathbb{R}\).
 \begin{examsubparts}

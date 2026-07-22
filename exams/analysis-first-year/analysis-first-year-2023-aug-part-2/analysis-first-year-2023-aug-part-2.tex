@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, August 2023, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2023, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((f_n)\) be a sequence of continuous functions from \([0,1]\) to \([0,1]\). For each of the following, give a proof (if true) or a counterexample (if false):
 \begin{examsubparts}
@@ -88,6 +105,7 @@ if \(f_n(t)\) decreases pointwise to~\(0\) then \(\int_0^1 f_n(t)\,dt \to 0\);
 \item[\textnormal{(ii)}]
 if \(f_n(t)\) only converges pointwise to~\(0\) then \(\int_0^1 f_n(t)\,dt \to 0\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 For \(0<t<1\) and for~\(n\) a positive integer, let \(f_n(t)=t^n\).
 \begin{examsubparts}
@@ -96,10 +114,13 @@ Show that the sequence \((f_n)\) converges uniformly on each compact subset of \
 \item[\textnormal{(ii)}]
 Show that \((f_n)\) does not converge uniformly on \((0,1)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let the function \(f:[1,\infty)\to\mathbb{R}\) be continuous, with \(\lim_{t\to\infty}f(t)=A\in\mathbb{R}\). Prove there exists a sequence \((p_n)\) of polynomials such that \(p_n(1/t)\to f(t)\) uniformly for \(t\geq 1\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(A\subseteq[0,1]\) have positive Lebesgue measure: that is, \(\lambda(A)>0\). Prove that if \(0<\alpha<\lambda(A)\) then there exists a Lebesgue measurable set \(A_\alpha\subseteq A\) such that \(\lambda(A_\alpha)=\alpha\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 State the Monotone Convergence Theorem and ‘Fatou’s Lemma’. Deduce one of these from the other.
 \end{examproblems}

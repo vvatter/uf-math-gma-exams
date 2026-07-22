@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, May 1993}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 1993\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,39 +95,51 @@
 \begin{examinstructions}
 This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment.
 \end{examinstructions}
-\section{1. General Logic}
-\begin{examproblems}{0}
+\subsection{1. General Logic}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State Gödel’s incompleteness theorem. Explain the importance of Gödel numbering.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that if~\(T\) is a countable theory with arbitrarily large finite models then~\(T\) has an infinite model.
 \end{examproblems}
-\section{2. Model Theory}
-\begin{examproblems}{0}
+\subsection{2. Model Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and sketch the proof of the Łoś theorem on ultraproducts.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and sketch a proof of the elementary substructure version of the downward Löwenheim–Skolem Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that the theory of dense linear orders without endpoints is complete.
 \end{examproblems}
-\section{3. Set Theory}
-\begin{examproblems}{0}
+\subsection{3. Set Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that the well ordering principle implies the axiom of choice.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove, using the axioms of ZFC, that if~\(X\) is any set then the transitive closure of~\(X\) is also a set.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that a countable union of countable sets is countable, pointing out any use of the axiom of choice.
 \end{examproblems}
-\section{4. Recursion Theory}
-\begin{examproblems}{0}
+\subsection{4. Recursion Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that a function \(\phi:\omega\longrightarrow\omega\) is (partial) recursive iff its graph is recursively enumerable, and that if~\(\phi\) is total and recursive then its graph is recursive.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State the halting problem, and show that it is undecidable. You may use the fact that there is a recursive enumeration of the (partial) recursive functions.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that if \(A\ne\varnothing\) is the domain of a partial recursive function~\(f\) then there is a total recursive function~\(g\) such that~\(A\) is the range of~\(g\).
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis First-Year Exam, May 2020}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, May 2020\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,39 +95,43 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(\alpha>0\). For (i) \(p=2\); (ii) \(p=\infty\), find the constant \(c_p\) that minimizes 
+Let \(\alpha>0\). For (i) \(p=2\); (ii) \(p=\infty\), find the constant \(c_p\) that minimizes
 \[
 E_p(c)=\lVert t^\alpha-c\rVert_p=\left(\int_0^1 |t^\alpha-c|^p\,dt\right)^{1/p},
 \]
  and find \(E_p(c_p)\), for each of those values of~\(p\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(\{\phi_k\}_{k=0}^{m+1}\) be the set of monic orthogonal polynomials with respect to inner product \((u,v)=\int_a^b u(x)v(x)w(x)\,dx\). Let \(\phi_{-1}=0\) and \(\phi_0=1\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Find expressions for constants \(\alpha_k\) and \(\beta_k\) to determine a 3-term recurrence relation of the form 
+Find expressions for constants \(\alpha_k\) and \(\beta_k\) to determine a 3-term recurrence relation of the form
 \[
 \phi_{k+1}(x)=(x-\alpha_k)\phi_k-\beta_k\phi_{k-1}(x),\quad k=0,\ldots,m.
 \]
 \item[\textnormal{(b)}]
 Use the above relation to determine \(\phi_1,\phi_2\) and \(\phi_3\), using the inner-product \((u,v)=\int_0^1 u(x)v(x)\,dx\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Consider finding a zero of function \(f:D\subseteq\mathbb{R}^n\to\mathbb{R}^n\) that can be written as the sum of a linear and nonlinear part 
+Consider finding a zero of function \(f:D\subseteq\mathbb{R}^n\to\mathbb{R}^n\) that can be written as the sum of a linear and nonlinear part
 \[
 f(x)=Bx+G(x),
 \]
  where~\(B\) is a nonsingular matrix and \(G:D\subseteq\mathbb{R}^n\to\mathbb{R}^n\) is some nonlinear function. At a point \(x_k\) consider an affine model \(M_k(x)=a_k+A_k(x-x_k)\), where the quantities \(a_k\in\mathbb{R}^n\) and \(A_k\in\mathbb{R}^{n\times n}\) are to be determined.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Determine \(a_k\) and \(A_k\) so that the following conditions hold: 
+Determine \(a_k\) and \(A_k\) so that the following conditions hold:
 \[
 M_k(x_k)=f(x_k)\quad\text{and}\quad M_k'(x_k)=B.
 \]
 \item[\textnormal{(b)}]
 Derive the iteration obtained by defining \(x_{k+1}\) as the zero of \(M_k(x)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(f\in C^\infty(a,b)\). Let \(x_0<x_1<x_2\) be three points in \([a,b]\) that are not necessarily equally spaced.
 \begin{examsubparts}
@@ -120,17 +140,18 @@ Based on the quadratic interpolant \(p_2\) which satisfies \(p_2(x_0)=f(x_0)\), 
 \item[\textnormal{(b)}]
 Derive an expression for the error, \(f'(x_1)-p_2'(x_1)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-For \(f\in C^\infty(a,b)\), the composite trapezoidal quadrature rule with~\(n\) subintervals with length \(h=(b-a)/n\) satisfies 
+For \(f\in C^\infty(a,b)\), the composite trapezoidal quadrature rule with~\(n\) subintervals with length \(h=(b-a)/n\) satisfies
 \[
 \left|\int_a^b f(x)\,dx-I_{T,n}\right|=a_2h^2+a_4h^4+a_6h^6+\cdots,
 \]
  where the coefficients \(a_2,a_4,\ldots\), do not depend on~\(n\). Find and inductively prove an expression for the~\(k\)th Richardson extrapolant \(I_k\) of \(I_0:=I_{T,n}\).
 \item[\textnormal{(b)}]
-Consider a quadrature formula of the type 
+Consider a quadrature formula of the type
 \[
 \int_0^1 f(x)\,dx\approx \alpha f(x_1)+\beta[f(1)-f(0)].
 \]

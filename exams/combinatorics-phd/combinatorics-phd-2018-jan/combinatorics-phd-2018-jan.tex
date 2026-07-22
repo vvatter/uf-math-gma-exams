@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, January 2018}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, January 2018\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,27 +92,35 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(D(n)\) be the number of derangements of length~\(n\). Let \(F(n)\) be the number of permutations of length~\(n\) that have exactly one fixed point. Determine (with proof) the number \(D(n)-F(n)\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove: If~\(n\) and~\(m\) are the number of vertices and edges in a simple planar graph and \(n \ge 3\), then \(m \le 3n-6\).
 
 \par
 Prove: For a simple graph~\(G\) with \(n \ge 11\), at most one of~\(G\) or its complement \(\overline{G}\) is planar. (Recall that \(\overline{G}\) has the same vertex set as~\(G\) and, for all vertices \(u,v\), we have that \(\{u,v\}\) is an edge of \(\overline{G}\) if and only if \(\{u,v\}\) is not an edge of~\(G\).)
+\def\ProblemHeadingText{Problem 3.}
 \item
 How many ways are there to seat~\(n\) married couples at a straight table (only one side of the table) so that no woman sits next to her husband?
 
 \par
 How many ways are there to seat~\(n\) married couples at a straight table so that men and women alternate and no woman sits next to her husband?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(B\) be a rectangular 3-dimensional box for which the width is equal to the length, but the depth is not equal to the length. How many ways are there to color the vertices of~\(B\) using colors red and blue, where two colorings are considered the same if one can be obtained from the other by an orientation preserving symmetry of~\(B\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Consider a directed graph obtained by putting a direction on each edge of the complete graph. Such a digraph is called a tournament. Prove that a tournament has a Hamiltonian path. Is it true that every tournament has a Hamiltonian cycle? Explain?
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(n \ge 3\). Let \(h_n\) be the number of permutations of length~\(n\) in which the number of inversions is divisible by three. Find an explicit formula for \(h_n\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that the language \(\mathcal{L}=\{ww : w \in \{a,b\}^*\}\) is not regular.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Suppose~\(\mathcal{C}\) and~\(\mathcal{D}\) are permutation classes. Prove that \(\mathcal{C}\cup\mathcal{D}\) is a permutation class, and describe (with an algorithm, perhaps) how to compute its basis.
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, September 2006}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, September 2006\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,25 +95,29 @@
 \begin{examinstructions}
 Give complete proofs and computations. Partial credit will be given where justified. In the following, \(\mathbb{C}\) denotes the set of complex numbers and \(D=\{z\in\mathbb{C}\mid |z|<1\}\).
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Evaluate the integral 
+Evaluate the integral
 \[
 \int_0^\infty \frac{\log x}{(1+x^2)^2}\,dx.
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Let~\(f\) be analytic at \(z\in\mathbb{C}\). Prove that 
+Let~\(f\) be analytic at \(z\in\mathbb{C}\). Prove that
 \[
 \left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\right)|f(z)|^2=4|f'(z)|^2.
 \]
 \item[\textnormal{(b)}]
 Let \(f_1,f_2,\ldots,f_n\) be analytic in the region~\(G\). Prove that \(|f_1|^2+|f_2|^2+\cdots+|f_n|^2\) is harmonic on~\(G\) if and only if \(f_k\) is constant, for all \(k=1,\ldots,n\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(\{f_n\}\) be a sequence of functions, each analytic in the open set~\(G\), which converges to~\(f\) uniformly on all compact subsets of~\(G\). Prove that~\(f\) is analytic in~\(G\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(P(z)=z^7+z^5+5z^3+1\). Find the number of zeros of~\(P\), counted according to their multiplicities, in
 \begin{examsubparts}
@@ -108,18 +128,21 @@ Let \(P(z)=z^7+z^5+5z^3+1\). Find the number of zeros of~\(P\), counted accordin
 \item[\textnormal{(c)}]
 \(\{z\in\mathbb{C}\mid |z|>0\}\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(G\) be a region and~\(f\) be analytic in~\(G\). Prove that if \(f(G)\) is a subset of a circle, then~\(f\) is a constant function.
+\def\ProblemHeadingText{Problem 6.}
 \item
-Suppose~\(f\) is a nonconstant analytic function in~\(D\) such that \(|f(z)|\leq 1\). Let \(a=f(0)\). By considering the function 
+Suppose~\(f\) is a nonconstant analytic function in~\(D\) such that \(|f(z)|\leq 1\). Let \(a=f(0)\). By considering the function
 \[
 g(z)=\frac{f(z)-a}{1-\overline{a}f(z)},
 \]
- prove that 
+ prove that
 \[
 \frac{|a|-|z|}{1+|a||z|}\leq |f(z)|\leq\frac{|a|+|z|}{1-|a||z|}
 \]
  for \(|z|<1\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -128,6 +151,7 @@ Does there exist an analytic mapping \(f:D\to D\) such that \(f(0)=0\) and \(f(i
 \item[\textnormal{(b)}]
 Does there exist an analytic mapping~\(f\) of \(\{z\in\mathbb{C}\mid \operatorname{Re}(z)>0\}\) into itself such that \(f(3)=3\) and \(f(9)=6\)? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(\mathcal{F}\) be the collection of all analytic mappings of~\(D\) into \(\{z\in\mathbb{C}\mid \operatorname{Re}(z)>0\}\) such that \(f(0)=1\). Show that~\(\mathcal{F}\) is a normal family.
 \end{examproblems}

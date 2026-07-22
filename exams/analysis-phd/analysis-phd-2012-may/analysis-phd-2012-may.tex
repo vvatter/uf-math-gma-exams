@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2012}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2012\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,17 +95,23 @@
 \begin{examinstructions}
 Be sure to carefully present all work in a neat and logical fashion. Do not leave any gaps. State clearly theorems used in your proofs.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(\mu\) be a real-valued signed measure on a~\(\sigma\)-algebra~\(\Sigma\). Does there exist a set in~\(\Sigma\) on which~\(\mu\) attains its minimum value? Prove or disprove.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(X\) be a Banach space. Show that there exists a compact \(T_2\) space~\(S\) such that~\(X\) is isometrically isomorphic to a closed linear subspace of \(C(S)\). [Hint: Examine the unit ball of the dual space \(X^*\) with the appropriate topology and the action of~\(X\) on \(X^*\).]
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(\{f_n\}\) be a sequence of integrable functions on~\(S\) such that \(\sum \int |f_n|\,d\mu < \infty\). Give all details concerning the convergence of \(\sum f_n(s)\), \(s \in S\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 State and prove the Fubini theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(\pi\) be the natural map from the Banach space~\(X\) into its second dual \(X^{**}\). Show \(\pi(X)\) is closed in the norm topology of \(X^{**}\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Show that the continuous functions on \([0,1]\) are dense in \(L^1[0,1]\) (Lebesgue measure). [Hint: First show this is true for the indicator function of a Lebesgue measurable subset of \([0,1]\).]
 \end{examproblems}

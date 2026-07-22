@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, May 2012}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2012\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,38 +95,42 @@
 \begin{examinstructions}
 Answer any 8 questions.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Suppose that~\(A\) and \(B\in\mathbb{C}^{n\times n}\) are Hermitian matrices. If \(\sigma(A)\) denotes the largest eigenvalue of~\(A\), then show that 
+Suppose that~\(A\) and \(B\in\mathbb{C}^{n\times n}\) are Hermitian matrices. If \(\sigma(A)\) denotes the largest eigenvalue of~\(A\), then show that
 \[
 \sigma(A+B)\leq \sigma(A)+\sigma(B).
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose that \(A\in\mathbb{C}^{n\times n}\) is an invertible matrix, \(u\in\mathbb{C}^n\), and \(v\in\mathbb{C}^n\). Let \(v^*\) denote the conjugate transpose of~\(v\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Show that 
+Show that
 \[
 \det(A-uv^*)=(1-v^*A^{-1}u)\det A.
 \]
 \item[\textnormal{(b)}]
-Show that \(A-uv^*\) is invertible if and only if \(v^*A^{-1}u\neq 1\). Moreover, if \(v^*A^{-1}u\neq 1\), then 
+Show that \(A-uv^*\) is invertible if and only if \(v^*A^{-1}u\neq 1\). Moreover, if \(v^*A^{-1}u\neq 1\), then
 \[
 (A-uv^*)^{-1}=A^{-1}+\left(\frac{1}{1-v^*A^{-1}u}\right)A^{-1}uv^*A^{-1}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Suppose~\(p\) and \(q\in\mathbb{R}\) with~\(p\) and~\(q\) positive and \(p^{-1}+q^{-1}=1\). Show that for any matrix \(A\in\mathbb{C}^{m\times n}\), we have \(\lVert A\rVert_p=\lVert A^*\rVert_q\).
 \item[\textnormal{(b)}]
-Prove that 
+Prove that
 \[
 \lVert A\rVert_2^2\leq \lVert A\rVert_p\lVert A\rVert_q
 \]
  for any \(A\in\mathbb{C}^{m\times n}\) and any positive~\(p\) and \(q\in\mathbb{R}\) with \(p^{-1}+q^{-1}=1\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -119,24 +139,30 @@ For any matrices~\(A\) and~\(B\), show that the nonzero eigenvalues of \(AB\) an
 \item[\textnormal{(b)}]
 If \(AB\) is normal, \(\lVert\cdot\rVert_2\) is the 2-norm of a matrix, and \(\lVert\cdot\rVert\) is an induced matrix norm, then show that \(\lVert AB\rVert_2\leq\lVert BA\rVert\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(P\) and~\(Q\) be two \(m\times m\) orthogonal projectors. Prove that \(\lVert P-Q\rVert_2\leq 1\).
+\def\ProblemHeadingText{Problem 6.}
 \item
-Consider the following minimization problem: 
+Consider the following minimization problem:
 \[
 \tau_n=\inf_{\deg Q<n}\left(\max_{x\in[-1,1]}\lvert x^n+Q(x)\rvert\right).
 \]
- Prove that \(\tau_n=\frac{1}{2^{n-1}}\), the infimum is in fact a minimum, attained at a unique \(Q^*\) satisfying 
+ Prove that \(\tau_n=\frac{1}{2^{n-1}}\), the infimum is in fact a minimum, attained at a unique \(Q^*\) satisfying
 \[
 x^n+Q^*(x)=\frac{1}{2^{n-1}}T_n(x),
 \]
  where \(\{T_n\}\) are the Chebyshev’s polynomials.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Design an algorithm with a cubic rate of convergence for computing the quantity \(\sqrt{5}\). Prove that your algorithm is indeed cubic. Find an interval \([a,b]\subset[0,+\infty)\) such that any iterative sequence starting in \([a,b]\) will converge to \(\sqrt{5}\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 State the classical Hermite interpolation problem. Prove that the problem is well-posed, i.e. prove the existence and uniqueness of solutions. Derive the error formula for the interpolating polynomial.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Describe Simpson’s Rule for numerical integration. State (without proof) the error formula of the Trapezoidal Rule. Show that the error bound cannot be improved.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let \(w(x)>0\) be integrable on \([a,b]\). Define an orthogonal polynomial family \(\{\phi_n\}\) on \([a,b]\) with weight \(w(x)\). Prove that between two consecutive zeros of \(\phi_n\) there is exactly one zero of \(\phi_{n-1}\). You may use the triple recursion formula without proof.
 \end{examproblems}

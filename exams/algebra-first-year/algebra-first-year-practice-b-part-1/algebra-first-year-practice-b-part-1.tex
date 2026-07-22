@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Practice Exam B, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Practice Exam B}, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove Cayley’s Theorem about finite groups.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a group of order \(p^n\), where~\(p\) is prime and \(n \geq 1\).
 \begin{examsubparts}
@@ -90,6 +108,7 @@ Prove that~\(G\) has nontrivial center.
 \item[\textnormal{(b)}]
 Using (a), or otherwise, prove that if~\(H\) is a proper subgroup of~\(G\), then~\(H\) is proper in \(N_G(H)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -100,8 +119,10 @@ Give an example of a group~\(G\) such that~\(G\) is the union of three of its pr
 \item[\textnormal{(c)}]
 Determine all groups~\(G\) such that~\(G\) is the union of all its proper subgroups.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that there is no simple group of order \(9477 = 3^6 \cdot 13\). (Hint: Consider the action of~\(G\) by conjugation on the set \(\operatorname{Syl}_3(G)\) of Sylow~\(3\)-subgroups of~\(G\).)
+\def\ProblemHeadingText{Problem 5.}
 \item
 Classify the groups of order \(57 = 19 \cdot 3\) up to isomorphism.
 \end{examproblems}

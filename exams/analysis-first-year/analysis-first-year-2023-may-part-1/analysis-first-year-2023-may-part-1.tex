@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2023, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2023, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,21 +95,25 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let the continuous function \(f:(0,\infty)\to\mathbb{R}\) satisfy 
+Let the continuous function \(f:(0,\infty)\to\mathbb{R}\) satisfy
 \[
 \liminf f(n)<0<\limsup f(n).
 \]
  Prove that~\(f\) has infinitely many zeros.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Fix any metric space~\(T\) with exactly two points. Prove that the metric space~\(X\) is connected if and only if each continuous function~\(f\) from~\(X\) to~\(T\) is constant.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(B(X)\) be the set of all bounded real-valued functions on the set~\(X\). Prove that the formula 
+Let \(B(X)\) be the set of all bounded real-valued functions on the set~\(X\). Prove that the formula
 \[
 d(f,g)=\sup\{|f(x)-g(x)|:x\in X\}
 \]
  defines a metric~\(d\) on \(B(X)\) that makes \(B(X)\) into a complete metric space.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(A_1\supseteq A_2\supseteq\cdots\) be a decreasing sequence of nonempty subsets of \(\mathbb{R}^N\) (with its standard Euclidean metric).
 \begin{examsubparts}
@@ -102,8 +122,9 @@ Prove that if each \(A_n\) is compact then \(\bigcap_{n=1}^{\infty}A_n\) is none
 \item[\textnormal{(ii)}]
 Show by example that \(\bigcap_{n=1}^{\infty}A_n\) can be empty if each \(A_n\) is only closed.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(f:(a,b)\to\mathbb{R}\) be differentiable, with bounded derivative. Prove the existence of the real limits 
+Let \(f:(a,b)\to\mathbb{R}\) be differentiable, with bounded derivative. Prove the existence of the real limits
 \[
 \lim_{x\to a+}f(x)\quad\text{and}\quad\lim_{x\to b-}f(x).
 \]

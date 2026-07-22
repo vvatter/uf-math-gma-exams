@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, May 2022, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, May 2022, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do seven 7 and only seven of the following.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(X\) be a set, and let \(\mathcal T\) be the collection of all subsets~\(A\) of~\(X\) such that \(X-A\) is either finite or all of~\(X\).
 \begin{examsubparts}
@@ -96,18 +113,25 @@ Show that every infinite set is connected.
 What is \(\overline{\{5\}}\)?
 \end{examsubparts}
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(X\) be a topological space. Let \(D=\{(x,y)\in X\times X:x=y\}\). Prove that~\(X\) is a Hausdorff space if and only if~\(D\) is a closed subset of \(X\times X\), where \(X\times X\) has the product topology.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that \(\mathbb R^{\mathbb Z_+}\) with the uniform topology is not connected.
+\def\ProblemHeadingText{Problem 4.}
 \item
 A chain of subsets is a collection \(A_n\) for \(n\in\mathbb Z_+\) with the property that for all~\(i\), \(A_i\cap A_{i+1}\ne\varnothing\). If each \(A_n\) in a chain is connected, show that \(\bigcup_{n\in\mathbb Z_+}A_n\) is also connected.
+\def\ProblemHeadingText{Problem 5.}
 \item
 If~\(A\) is a countable set, show that \(\mathbb R^2-A\) is path connected.
+\def\ProblemHeadingText{Problem 6.}
 \item
 A space is called locally Baire if every point has an open neighborhood that is a Baire space. Prove that locally Baire implies Baire.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Show that the Tietze Extension Theorem implies Urysohn’s Lemma.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Assume that \((X,d)\) is metric. Show the following
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, January 2011}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2011\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,22 +95,26 @@
 \begin{examinstructions}
 Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(F\) be a field and let \(g(X) \in F[X]\). Prove that if \(E/F\) and \(E'/F\) are splitting fields for \(g(X)\), then there is an isomorphism \(\phi : E \to E'\) such that \(\phi|_F = \operatorname{id}_F\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(F\) be a splitting field over~\(\mathbb{Q}\) for the polynomial \(h(X) = X^{12} - 1\). Determine the Galois group \(G = \operatorname{Gal}(F/\mathbb{Q})\). For each subgroup~\(H\) of~\(G\), determine the fixed field \(F^H\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that there exists a one-to-one ring homomorphism 
+Prove that there exists a one-to-one ring homomorphism
 \[
 \phi : \mathbb{Z}[[X]] \otimes_{\mathbb{Z}} \mathbb{Q} \longrightarrow \mathbb{Q}[[X]].
 \]
 \item[\textnormal{(b)}]
 Give an example of an element of \(\mathbb{Q}[[X]]\) which is not in the image of~\(\phi\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(\mathcal{C}\) be a category and let~\(\Lambda\) be a set. For each \(\lambda \in \Lambda\), let \(X_\lambda\) be an object in~\(\mathcal{C}\).
 \begin{examsubparts}
@@ -105,10 +125,13 @@ Prove that any two coproducts of the collection \(\{X_\lambda\}_{\lambda \in \La
 \item[\textnormal{(c)}]
 Let~\(\mathcal{C}\) be the category of abelian groups. Prove that every collection \(\{X_\lambda\}_{\lambda \in \Lambda}\) of objects in~\(\mathcal{C}\) has a coproduct in~\(\mathcal{C}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Give an example of a ring~\(R\) and a left~\(R\)-module~\(M\) such that~\(M\) is projective but not free. Justify any claims that you make.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(X\) be a set, let~\(Y\) be subset of~\(X\), and let~\(F\) be a group which is free on~\(X\). Let~\(N\) be the smallest normal subgroup of~\(F\) which contains~\(Y\). Prove that \(F/N\) is a free group. (Hint: Show \(F/N\) is free on the set \(X \setminus Y\).)
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(A\) be a commutative ring with~\(1\).
 \begin{examsubparts}
@@ -117,8 +140,10 @@ Prove that if \(I_1\) and \(I_2\) are ideals in~\(A\) and~\(P\) is a prime ideal
 \item[\textnormal{(b)}]
 Is the above statement still true if the word “prime” is replaced by “primary”? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a commutative ring with~\(1\) and let \(S \subset R\) be a multiplicative set which does not contain zero and does not contain any zero divisors. Prove that the prime ideals of the ring \(S^{-1}R\) are in one-to-one correspondence with the prime ideals~\(P\) of~\(R\) such that \(P \cap S = \varnothing\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Give an example of each of the following. Justify any claims you make.
 \begin{examsubparts}
@@ -129,6 +154,7 @@ An integral domain which is not integrally closed in its field of fractions.
 \item[\textnormal{(c)}]
 A field of characteristic~\(p\) which is not perfect.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(R\) be a ring and let \(J(R)\) be the Jacobson radical of~\(R\).
 \begin{examsubparts}
@@ -139,6 +165,7 @@ Give an example that shows that~\(R\) may contain nilpotent elements which do no
 \item[\textnormal{(c)}]
 Prove that if~\(R\) is left Artinian, then there is \(n \geq 1\) such that \(J(R)^n = 0\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(R\) be a commutative Noetherian ring with~\(1\) and let \(\phi : R \to R\) be an onto ring homomorphism. Prove that~\(\phi\) is one-to-one.
 \end{examproblems}

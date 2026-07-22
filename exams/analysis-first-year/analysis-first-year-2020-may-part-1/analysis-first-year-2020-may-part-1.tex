@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2020, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2020, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((a_n)_{n=0}^{\infty}\) be a bounded real sequence. Write~\(L\) for the set of all real numbers~\(\ell\) such that \((\exists N)(\forall n>N)\;\ell<a_n\) and write~\(U\) for the set of all real numbers~\(u\) such that \((\exists N)(\forall n>N)\;a_n<u\).
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Prove that \(\sup L\leq\inf U\).
 \item[\textnormal{(ii)}]
 Give an example of a convergent sequence for which the inequality in (i) is strict, or prove that no such sequence exists.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(U\) be a subset of the metric space~\(X\). Does either of the following conditions imply the other? Prove or disprove, as appropriate.
 \begin{examsubparts}
@@ -96,6 +114,7 @@ Let~\(U\) be a subset of the metric space~\(X\). Does either of the following co
 \item[\textnormal{(ii)}]
 For any \(A\subseteq X\), if~\(U\) meets the closure of~\(A\) then~\(U\) meets~\(A\) itself.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(X\) and~\(Y\) be metric spaces. Decide whether the following statements are true or false.
 \begin{examsubparts}
@@ -104,6 +123,7 @@ If \((x_n)_{n=0}^{\infty}\) converges to~\(x\) in~\(X\) then \(\{x\}\cup\{x_n:n\
 \item[\textnormal{(ii)}]
 The function \(f:X\to Y\) is continuous if its restriction \(f|_K\) to each compact subset \(K\subseteq X\) is continuous.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(f:X\to Y\) be a continuous bijection with inverse \(g:Y\to X\) and assume that~\(X\) is complete.
 \begin{examsubparts}
@@ -112,11 +132,12 @@ Show by example that if~\(g\) is continuous then~\(Y\) need not be complete.
 \item[\textnormal{(ii)}]
 Prove that if~\(g\) is uniformly continuous then~\(Y\) must be complete.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable and assume \(\lim_{x\to\infty}f'(x)=L\in\mathbb{R}\).
 \begin{examsubparts}
 \item[\textnormal{(i)}]
-When~\(a\) is a positive real number, calculate 
+When~\(a\) is a positive real number, calculate
 \[
 \lim_{x\to\infty}\frac{f(x+a)-f(x)}{a}.
 \]

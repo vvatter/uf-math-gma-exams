@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, August 2018, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2018, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,13 +95,15 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \((a_n)_{n=0}^{\infty}\) be a sequence of positive real numbers. Prove that 
+Let \((a_n)_{n=0}^{\infty}\) be a sequence of positive real numbers. Prove that
 \[
 1/\limsup a_n=\liminf(1/a_n)
 \]
  in the sense that if one side lies in \((0,\infty)\) then so does the other and the two sides are equal.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \((a_n)_{n=0}^{\infty}\) be a sequence of real numbers and \(A=\{a_n:n\geq 0\}\) its set of values. For~\(p\) a real number, consider the two implications. One of these is true and the other false; give a proof for the true and a counterexample for the false.
 \begin{examsubparts}
@@ -94,19 +112,22 @@ if~\(p\) is a limit point of~\(A\) then~\(p\) is the limit of a subsequence of \
 \item[\textnormal{(ii)}]
 if~\(p\) is the limit of a subsequence of \((a_n)_{n=0}^{\infty}\) then~\(p\) is a limit point of~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(X\) be a compact metric space and let \(f:X\to X\) be a continuous function. Prove that if~\(f\) has no fixed points, then there exists \(a>0\) such that \(d(x,f(x))\geq a\) whenever \(x\in X\). Show by example that the compact hypothesis cannot be dropped.
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(i)}]
-Prove that if~\(c\) is any real number then the following subset of the Euclidean plane is connected 
+Prove that if~\(c\) is any real number then the following subset of the Euclidean plane is connected
 \[
 \{(x,y):(x=\pm 1)\text{ or }(|x|<1\text{ and }y\geq c)\}.
 \]
 \item[\textnormal{(ii)}]
 Let \(C_0\supseteq C_1\supseteq\cdots\) be a decreasing sequence of closed, connected subsets of a metric space. If the intersection \(\bigcap_{n\geq 0}C_n\) is nonempty, must it be connected? Proof or counterexample.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f:(0,\infty)\to\mathbb{R}\) be differentiable and assume that \(f'(t)\to 0\) as the real number~\(t\) tends to infinity. Show that if \(f(n)\to\ell\) as the integer~\(n\) tends to infinity, then \(f(t)\to\ell\) as the real number~\(t\) tends to infinity.
 \end{examproblems}

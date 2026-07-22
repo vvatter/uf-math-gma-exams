@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, May 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, May 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,18 +92,20 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that 
+Prove that
 \[
 \sum_{i=0}^{n} \binom{i}{k}=\binom{n+1}{k+1}.
 \]
 \item[\textnormal{(b)}]
 Prove that the number of solutions of \(x_1+\cdots+x_k\leq n\) in positive integers is \(\binom{n}{k}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -96,38 +114,44 @@ Prove that the number of Hamiltonian cycles in the complete bipartite graph \(K_
 \item[\textnormal{(b)}]
 Let~\(e\) be an edge of the complete graph \(K_n\). Use Cayley’s Theorem to find the number of spanning trees in \(K_n-e\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Recall that the average degree of a graph~\(G\) of order~\(n\) is 
+Recall that the average degree of a graph~\(G\) of order~\(n\) is
 \[
 av(G)=\frac{\sum_{v\in V}\deg(v)}{n}.
 \]
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that 
+Prove that
 \[
 \chi(G)\leq 1+\Delta(G),
 \]
  where~\(\chi\) denotes the chromatic number and~\(\Delta\) the maximum degree.
 \item[\textnormal{(b)}]
-For an arbitrary graph~\(G\), prove or give a counterexample to the statement 
+For an arbitrary graph~\(G\), prove or give a counterexample to the statement
 \[
 \chi(G)\leq 1+av(G).
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(C\) be a binary code and let \(\overline{C}\) be the code obtained from~\(C\) by adding an even parity check. Find the minimum distance \(d(\overline{C})\) in terms of \(d(C)\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Prove that balanced incomplete block designs with the following parameters do not exist: 
+Prove that balanced incomplete block designs with the following parameters do not exist:
 \[
 (12,8,6,4,3),\qquad (22,22,7,7,2).
 \]
+\def\ProblemHeadingText{Problem 6.}
 \item
-Find the unique sequence \(\{a_n\}\) with 
+Find the unique sequence \(\{a_n\}\) with
 \[
 \sum_{k=0}^{n} a_k a_{n-k}=1.
 \]
+\def\ProblemHeadingText{Problem 7.}
 \item
 Use inclusion-exclusion to find a formula for the number of surjective functions \(f:X\to Y\) with \(|X|=n\) and \(|Y|=m\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(f(n,k)\) be the number of~\(k\)-subsets of \(\{1,2,\ldots,n\}\) that do not contain a pair of consecutive integers.
 \begin{examsubparts}

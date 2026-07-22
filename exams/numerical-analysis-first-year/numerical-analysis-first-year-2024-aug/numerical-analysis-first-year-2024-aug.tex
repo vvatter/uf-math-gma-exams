@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis First-Year Exam, August 2024}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, August 2024\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,10 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Consider an approximate integration scheme of the following form, for \(0<\alpha<1\), 
+Consider an approximate integration scheme of the following form, for \(0<\alpha<1\),
 \[
 \int_0^1 x^\alpha f(x)\,dx \approx A\int_0^1 f(x)\,dx+B\int_0^1 xf(x)\,dx.
 \]
@@ -91,6 +108,7 @@ Determine the constants \(A,B\) so that the formula has the maximum degree of ex
 \item[\textnormal{(b)}]
 What is the degree of exactness of the formula in (a)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(f\) be an arbitrary (continuous) function on \([0,1]\) satisfying \(f(x)+f(1-x)\equiv 1\) for \(0\leq x\leq 1\).
 \begin{examsubparts}
@@ -99,14 +117,17 @@ Show that \(\int_0^1 f(x)\,dx=\frac12\).
 \item[\textnormal{(b)}]
 Show that the composite trapezoidal rule for computing \(\int_0^1 f(x)\,dx\) is exact.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Discuss uniqueness and non-uniqueness of the least squares approximation to a function~\(f\) in the case of a discrete set \(T=\{t_1,t_2\}\) (i.e., \(N=2\)) where \(t_1\neq t_2\) and \(\Phi_n=P_{n-1}\) (polynomial of degree \(\leq n-1\)). In case of non-uniqueness, determine all solutions.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Derive the three-point formula for the second derivative 
+Derive the three-point formula for the second derivative
 \[
 f''(x_0)=\frac{1}{h^2}\bigl(f(x_0-h)-2f(x_0)+f(x_0+h)\bigr)-\frac{h^2}{12}f^{(4)}(\eta),
 \]
  where~\(\eta\) is between \(x_0-h\) and \(x_0+h\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(x_0,x_1,\ldots,x_n\) be pairwise distinct points in \([a,b]\), \(-\infty<a<b<\infty\), and \(f\in C^1[a,b]\). Show that given any \(\epsilon>0\), there exists a polynomial~\(p\) such that \(\lVert f-p\rVert_\infty<\epsilon\) and at the same time \(p(x_i)=f(x_i)\), \(i=0,1,\ldots,n\). Here \(\lVert u\rVert_\infty=\max_{a\leq x\leq b}|u(x)|\).
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2023, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2023, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stating clearly any theorems you wish to apply.
 \begin{examsubparts}
@@ -90,8 +107,10 @@ Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stati
 \item[\textnormal{(c)}]
 \(x^4-4x^3+2x^2+21x-7\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that the ring \(\mathbb{Z}[\sqrt{-2}]\) is a Euclidean domain with respect to the norm \(N(a+b\sqrt{-2})=a^2+2b^2\). (You may regard this ring as a subring of the field of complex numbers, with \(\sqrt{-2}=i\sqrt{2}\).)
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) and~\(S\) be commutative rings with 1 and \(\phi:R\to S\) a ring homomorphism with \(\phi(1)=1\). Let~\(I\) be an ideal of~\(S\) and \(\phi^{-1}(I)=\{r\in R\mid \phi(r)\in I\}\).
 \begin{examsubparts}
@@ -102,6 +121,7 @@ Show that if~\(I\) is a prime ideal then so is \(\phi^{-1}(I)\).
 \item[\textnormal{(c)}]
 If~\(I\) is maximal, is \(\phi^{-1}(I)\) necessarily maximal? Give a proof or counterexample.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring with 1 and~\(M\) a (unital) left~\(R\)-module.
 \begin{examsubparts}
@@ -112,8 +132,10 @@ Prove that if~\(M\) satisfies the ACC then~\(M\) is finitely generated.
 \item[\textnormal{(c)}]
 Give an example of a finitely generated~\(R\)-module~\(M\) that does not satisfy the ACC.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Use the rational canonical form to find one representative of each conjugacy class of elements of order 6 in \(\mathrm{GL}(4,\mathbb{Q})\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(K\subset F\subset E\) be fields.
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 1995}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 1995\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(G\) be a finite group and let~\(A\) be a subgroup of \(\operatorname{Aut}(G)\) such that \(G=[G,A]\). Let~\(N\) be a normal subgroup of~\(G\) such that \([N,A]=1\). Prove that~\(N\) is contained in the center of~\(G\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -90,8 +108,10 @@ Give an example of fields \(M\supset L\supset K\) such that \(M/L\) and \(L/K\) 
 \item[\textnormal{(b)}]
 Let \(L\supset K\) be fields such that \([L:K]=8\). Prove that there are \(\alpha,\beta,\gamma\in L\) such that \(L=K(\alpha,\beta,\gamma)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(A\) be a semi-simple commutative ring with 1. Prove that if~\(A\) is Artinian then~\(A\) is Noetherian. Give a counterexample to show that the converse is not true.
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -100,8 +120,10 @@ Give an example of a free module~\(F\) over a ring with 1 which has a submodule~
 \item[\textnormal{(b)}]
 Let~\(A\) be a commutative ring with 1 and let~\(P\) and~\(Q\) be projective~\(A\)-modules. Prove that \(P\otimes Q\) is projective.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(A\) be a commutative ring with 1 and let \(S\not\ni 0\) be a multiplicative subset of~\(A\). Let~\(P\) be a maximal element in the set \(\{I:I\text{ is an ideal of }A\text{ and }I\cap S=\varnothing\}\). Prove that~\(P\) is a prime ideal.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(A\) be a commutative ring.
 \begin{examsubparts}
@@ -110,14 +132,19 @@ Prove that if \(I_1\) and \(I_2\) are ideals in~\(A\) and~\(P\) is a prime ideal
 \item[\textnormal{(b)}]
 Is the above statement still true if the word “prime” is replaced by “primary”? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(n\) and~\(m\) be positive integers. Find~\(r\) such that \(\mathbb{Z}_n\otimes_{\mathbb{Z}}\mathbb{Z}_m\cong\mathbb{Z}_r\). Justify your answer.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a commutative Noetherian ring with 1. Prove that \(R[[X]]\) is Noetherian.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a commutative ring with 1 and let \(S\subset R\) be a multiplicative set which contains no zero divisors. Prove that the prime ideals of the ring \(S^{-1}R\) are in one-to-one correspondence with the prime ideals~\(P\) of~\(R\) such that \(P\cap S=\varnothing\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(G\) be an abelian group which is injective. Prove that~\(G\) is divisible.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let \(f(X)=2X^5-10X+5\in\mathbb{Q}[X]\) and let~\(L\) be a splitting field for~\(f\). Compute the Galois group \(\operatorname{Gal}(L/\mathbb{Q})\).
 \end{examproblems}

@@ -27,19 +27,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -52,7 +64,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -61,8 +73,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, January 2026}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, January 2026\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -83,11 +99,14 @@ Be neat, and do not write too small.
 \begin{examinstructions}
 For the first five problems, show all of your work and support all statements.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that every metrizable space \((X,d)\) is normal.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \((X,d)\) be a compact metric space. Let \(f:X\to X\) and suppose there is some \(c<1\) with \(d(f(x),f(y))\leq c\cdot d(x,y)\) for all \(x,y\in X\). Prove there exists a unique \(x\in X\) with \(f(x)=x\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Consider the~\(\Delta\)-complex~\(X\) drawn below. (Note the orientation of the three edges carefully.) Compute the simplicial homology \(H_i(X)\) for \(i=0,1,2\).
 \par\smallskip
@@ -140,8 +159,10 @@ Consider the~\(\Delta\)-complex~\(X\) drawn below. (Note the orientation of the 
 \end{adjustbox}
 \end{center}
 \smallskip
+\def\ProblemHeadingText{Problem 4.}
 \item
 For~\(M\) a compact orientable odd-dimensional manifold without boundary, show that the Euler characteristic \(\chi(M)\) is zero.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -154,25 +175,35 @@ Prove the Borsuk–Ulam theorem as follows. Suppose on the contrary that \(f:S^n
 \begin{examinstructions}
 Answer the following ten problems with complete definitions, complete statements, an example, or a short proof.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State the Tietze Extension Theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(M_g\) be the orientable surface of genus~\(g\), i.e., the~\(g\)-fold connected sum of tori. Use the Seifert–van Kampen theorem to derive the fundamental group of \(M_g\) for \(g\geq 1\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Show that if \(g:S^n\to S^n\) is continuous and \(g(x)\neq g(-x)\) for all \(x\in S^n\), then~\(g\) is surjective.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove that if \(f:S^n\to S^n\) has no fixed points, then \(\deg(f)=(-1)^{n+1}\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Show that \(\mathbb{R}^{\omega}\) with the box topology is not connected.
+\def\ProblemHeadingText{Problem 11.}
 \item
 State the Five-Lemma.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Show that every map \(f:\mathbb{CP}^n\to\mathbb{CP}^n\) has a fixed point if~\(n\) is even.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Let \(p:Y\to X\) and \(q:Z\to X\) be basepoint-preserving covering space maps, where \(X,Y,Z\) are path-connected and locally path-connected. Prove that if \(p_*(\pi_1(Y))=q_*(\pi_1(Z))\), then the covering spaces~\(p\) and~\(q\) are isomorphic.
+\def\ProblemHeadingText{Problem 14.}
 \item
 Does there exist a closed orientable \(18\)-dimensional manifold~\(M\) with \(H^9(M;\mathbb{Z})\cong\mathbb{Z}\)?
+\def\ProblemHeadingText{Problem 15.}
 \item
 Prove that if~\(X\) is the Möbius band and~\(A\) is its boundary circle, then there is no retraction \(r:X\to A\).
 \end{examproblems}

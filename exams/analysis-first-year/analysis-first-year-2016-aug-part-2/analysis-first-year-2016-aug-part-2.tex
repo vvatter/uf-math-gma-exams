@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, August 2016, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2016, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,15 +95,20 @@
 \begin{examinstructions}
 Answer exactly FOUR questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let the function \(f:\mathbb{R}\to\mathbb{R}\) be uniformly continuous. For each positive integer~\(n\) let \(f_n(t)=f\!\left(t+\frac{1}{n}\right)\) whenever~\(t\) is a real number. Prove that the sequence \((f_n)_{n=1}^{\infty}\) is uniformly convergent. Give an example (with justification) to show that the conclusion can fail if the hypothesis uniformly is dropped.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(A=\{a_n:n\geq 1\}\) be a countably infinite subset of \([0,1]\) and let \(1_A:[0,1]\to\mathbb{R}\) be its indicator (or characteristic) function. Exhibit such a set~\(A\) for which \(1_A\) is not Riemann integrable and exhibit such a set~\(A\) for which \(1_A\) is Riemann integrable, providing justification in each case.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \((f_n)_{n=1}^{\infty}\) be a sequence of continuous functions from \([0,1]\) to \([0,1]\). Prove that if \(f_n(t)\) decreases to~\(0\) whenever \(0\leq t\leq 1\), then \(\int_0^1 f_n(t)\,dt\to 0\). Does the same conclusion follow when decreases is replaced by converges? Justify.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that if the function \(f:\mathbb{R}\to\mathbb{R}\) is differentiable then its derivative is measurable.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(f\) be a Lebesgue integrable function on~\(\mathbb{R}\) and let~\(g\) be defined on~\(\mathbb{R}\) by \(g(y)=\int_{-\infty}^{\infty}\cos(xy)f(x)\,dx\). Prove that \(\lim_{k\to\infty}g(k)=0\).
 \end{examproblems}

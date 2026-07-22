@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2018, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2018, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(G\) be a finite group and let \(x,y \in G\) satisfy \(|x|=m\) and \(|y|=n\), with \(\gcd(m,n)=1\). (Here \(|x|\) denotes the order of~\(x\).)
 \begin{examsubparts}
@@ -90,6 +107,7 @@ Give an example where \(xy \ne yx\), \(\gcd(m,n)=1\), and \(|xy|>mn\).
 \item[\textnormal{(c)}]
 Give an example where \(xy \ne yx\), \(\gcd(m,n)=1\), and \(|xy|<mn\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a group and let \(S \subset G\). Let~\(N\) be the intersection of all normal subgroups~\(H\) of~\(G\) such that \(S \subset H\).
 \begin{examsubparts}
@@ -98,6 +116,7 @@ Prove that \(N \trianglelefteq G\).
 \item[\textnormal{(b)}]
 Prove that \(N=\langle T\rangle\), where \(T=\{gxg^{-1}:g\in G,\ x\in S\}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -106,10 +125,13 @@ Let \(n \ge 3\) and let \(\sigma,\tau \in S_n\). Prove that~\(\sigma\) and~\(\ta
 \item[\textnormal{(b)}]
 Give an example of \(\sigma,\tau \in A_5\) such that~\(\sigma\) and~\(\tau\) are conjugate in \(S_5\) but~\(\sigma\) and~\(\tau\) are not conjugate in \(A_5\). Prove that your example is correct.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(G\) be a group of order \(715=5\cdot 11\cdot 13\). Prove that \(Z(G)\) is nontrivial.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Determine the number of abelian groups of order \(324=2^2\cdot 3^4\). Give a representative for each isomorphism class of such groups.
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has two parts.
 \begin{examsubparts}

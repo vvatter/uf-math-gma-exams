@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, September 2000}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, September 2000\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,40 +95,55 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove the Brouwer Fixed Point Theorem. You may assume some homology.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove the Baire Category Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Give the Mayer–Vietoris sequence for homology. Use this to compute the homology groups for the~\(n\)-sphere \(S^n\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose that \(f,g:X\to P\) are two maps and that~\(P\) is a compact connected polyhedron. Show that there is an \(\epsilon>0\) such that if \(d(f(x),g(x))<\epsilon\) for all \(x\in X\), then~\(f\) and~\(g\) are homotopic.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that \(\pi_1(S^1)\cong Z\), where~\(Z\) is the group of integers and \(S^1\) is the circle.
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Define retraction and deformation retraction.
+\def\ProblemHeadingText{Problem 7.}
 \item
 State Urysohn’s Lemma. State the Tietze Extension Theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 State the Five Lemma.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Define the cone of a space~\(X\). Define the suspension of~\(X\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 State the exact homology sequence for a pair of spaces.
+\def\ProblemHeadingText{Problem 11.}
 \item
 State the Jordan Curve Theorem.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Let~\(A\) be a countable subset of \(R^2\). Show that \(R^2\setminus A\) is arcwise connected.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Show that the Cantor set less its endpoints is homeomorphic to the irrationals in the unit interval. [Hint: Use the Cantor Ternary Function.]
+\def\ProblemHeadingText{Problem 14.}
 \item
 Let~\(V\) be a complete metric space such that no point is isolated. Can~\(V\) be a countably infinite set?
+\def\ProblemHeadingText{Problem 15.}
 \item
 Let \(0\to G\xrightarrow{g}H\xrightarrow{h}J\to 0\) be an exact sequence. What does this say about~\(g\) and~\(h\)? Prove your claims.
 \end{examproblems}

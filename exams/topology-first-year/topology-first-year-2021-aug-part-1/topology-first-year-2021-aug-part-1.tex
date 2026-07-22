@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2021, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2021, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Is it true that every continuous map \(f:[0,1]\to[0,1)\) has a fixed point. Justify your answer.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that every compact Hausdorff space is regular.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Is it true that
 \begin{examsubparts}
@@ -92,8 +111,10 @@ every continuous injective map \(f:(0,1)\to\mathbb{R}\) is an embedding?
 \item[\textnormal{(b)}]
 every continuous injective map \(f:(0,1)\to\mathbb{R}^2\) is an embedding?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Show that Greek letter theta~\(\Theta\) is not homeomorphic to the figure eight~\(8\). Formally, \(\Theta=S^1\cup[-1,1]\times\{0\}\) and \(8=S_-^1\cup S_+^1\) are subspaces of \(\mathbb{R}^2\), where \(S_-^1\) is the unit circle centered at the point \((0,-1)\) and \(S_+^1\) is the unit circle centered at \((0,1)\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -106,11 +127,14 @@ Let \(B\subset\mathbb{R}^3\) be the union of a countable family of lines in \(\m
 \begin{examinstructions}
 Answer the following with complete definitions or statements or proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 State the Extreme Value Theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 State the Tietze Extension Theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(\mathbb{R}_\ell\) denote the reals with the lower limit topology. Is the subspace \(\mathbb{R}_\ell\cap[0,1]\)
 \begin{examsubparts}
@@ -119,8 +143,10 @@ compact?
 \item[\textnormal{(b)}]
 connected?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Is every compact Hausdorff space normal?
+\def\ProblemHeadingText{Problem 10.}
 \item
 Give definition of a locally connected space. Is every path connected space locally connected?
 \end{examproblems}

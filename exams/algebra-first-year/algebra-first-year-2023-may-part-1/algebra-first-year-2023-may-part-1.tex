@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2023, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2023, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,11 +101,14 @@
 \begin{examinstructions}
 Answer four problems. If you turn in more than four, only the first four will be graded. Within reason, you may use theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(P \subset S_7\) be a Sylow~\(7\)-subgroup. Show that the normalizer~\(N\) of~\(P\) is a semidirect product \(\mathbb{Z}/7\mathbb{Z} \rtimes \mathbb{Z}/6\mathbb{Z}\), where the homomorphism \(\mathbb{Z}/6\mathbb{Z} \to \operatorname{Aut}(\mathbb{Z}/7\mathbb{Z})\) is injective.
+\def\ProblemHeadingText{Problem 2.}
 \item
 It is known that \(A_7\) has a simple subgroup of order \(168\). Show that this subgroup is maximal.
+\def\ProblemHeadingText{Problem 3.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source clearly states that one should deduce that every group of order 315 is abelian, but this conclusion appears mathematically false; nonabelian groups of order 315 exist. The intended statement is not uniquely determined, so the source reading has been retained.
@@ -101,6 +120,7 @@ Show that if~\(G\) has a normal Sylow~\(3\)-subgroup, that subgroup is contained
 \item[\textnormal{(ii)}]
 Deduce from this that~\(G\) is abelian.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose \(\sigma \in A_8\) has order \(15\).
 \begin{examsubparts}
@@ -109,6 +129,7 @@ Find the order of the centralizer of~\(\sigma\).
 \item[\textnormal{(ii)}]
 Find the number of conjugates of~\(\sigma\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(A\) is an abelian group of order \(p^4\), where~\(p\) is a prime.
 \begin{examsubparts}
@@ -117,6 +138,7 @@ Show that~\(A\) has at most \(1+p+p^2+p^3\) subgroups of order~\(p\).
 \item[\textnormal{(ii)}]
 Show that equality happens if and only if every nonidentity element of~\(A\) has order~\(p\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose~\(G\) is a group and \(M,N\) are normal subgroups of~\(G\) such that \(G=MN\). Show that \(G/(M \cap N) \simeq G/M \times G/N\).
 \end{examproblems}

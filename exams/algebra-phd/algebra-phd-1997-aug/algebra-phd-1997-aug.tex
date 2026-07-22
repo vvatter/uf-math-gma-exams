@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, August 1997}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, August 1997\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,15 +95,20 @@
 \begin{examinstructions}
 Answer seven out of the following ten problems. State clearly any results you need.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(A\) be a commutative Noetherian ring with identity. Show that if~\(A\) is Noetherian, then so is the power series ring \(A[[X]]\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose that~\(A\) is a commutative ring with identity, \(B\) is an~\(A\)-algebra integral over~\(A\), and \(f:A\to K\) is a homomorphism from~\(A\) to an algebraically closed field~\(K\). Show that~\(f\) can be extended to a homomorphism \(g:B\to K\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that any automorphism of the field \(\mathbb R\) of real numbers is the identity.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(p\) be a prime, \(n>1\) an integer, and \(G=\operatorname{GL}(n,\mathbb F_p)\). Compute the order of~\(G\), and find a~\(p\)-Sylow subgroup of~\(G\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(p\) be a prime,
 \begin{examsubparts}
@@ -96,8 +117,9 @@ Show that if \(S_p\) is the symmetric group on~\(p\) letters, and \(H\subseteq S
 \item[\textnormal{(b)}]
 Suppose \(f(T)\in\mathbb Q[T]\) is irreducible of degree~\(p\). Show that if \(f(T)\) has exactly two non-real roots, then the Galois group of the splitting field of \(f(T)\) is \(S_p\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let \(M_n(F)\) denote the algebra of \(n\times n\) matrices over the field~\(F\). Fix~\(p\) with \(1<p<n\) and let~\(R\) be the subalgebra consisting of those matrices in “block form” 
+Let \(M_n(F)\) denote the algebra of \(n\times n\) matrices over the field~\(F\). Fix~\(p\) with \(1<p<n\) and let~\(R\) be the subalgebra consisting of those matrices in “block form”
 \[
 \begin{pmatrix}A&B\\0&C\end{pmatrix},
 \]
@@ -110,12 +132,16 @@ Consider the vector space \(V=F^n\) with its natural structure as a left module 
 \item[\textnormal{(c)}]
 Show that~\(V\) is indecomposable, i.e. \(V\) is not the direct sum of two nonzero~\(R\)-submodules.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 If \((m,n)=1\), then compute \((\mathbb Z/m\mathbb Z)\otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z)\). Explain.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Suppose that~\(A\) is a commutative ring with identity. If \(A^m\cong A^n\) as~\(A\)-modules, show that \(m=n\) (\(A^m\) denotes the direct sum of~\(m\) copies of~\(A\) as an~\(A\)-module, and similarly for \(A^n\)).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(A\) be a Noetherian ring and~\(M\) a finitely generated~\(A\)-module. Denote by \(\operatorname{Supp}(M)\) the set of prime ideals~\(p\) of~\(A\) such that \(M_p\ne0\), where \(M_p\) is the localization of~\(M\) at~\(p\). Show that if \(M_p=0\) for all~\(p\), then \(M=0\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 This problem has two parts.
 \begin{examsubparts}

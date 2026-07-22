@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, January 2022}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, January 2022\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,11 +98,14 @@ Answer seven problems. If more than seven problems are answered only the first s
 \begin{examinstructions}
 Results from lectures or textbooks may be used without proof (within reason – don’t state results equivalent to the problem), but must be clearly stated.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose~\(K\) is a field of characteristic different from~\(2\), \(a \in K\) is not a square and \(b \in K\) is not a square in \(K(\sqrt{a})\). Compute the degree of \(L=K(\sqrt{a},\sqrt{b})\) over~\(K\) and determine all subfields of~\(L\) containing~\(K\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose~\(A\) is an integral domain with fraction field~\(K\), \(L/K\) is a field extension and \(x \in L\). Show that~\(x\) is integral over~\(A\) if and only if there is a finitely generated~\(A\)-module \(M \subseteq L\) such that \(xM \subseteq M\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose~\(C\) is a category and~\(X\) and~\(Y\) are objects of~\(C\).
 \begin{examsubparts}
@@ -95,8 +114,10 @@ Define what it means for an object of~\(C\) to be a product of~\(X\) and~\(Y\).
 \item[\textnormal{(ii)}]
 Show that a product of~\(X\) and~\(Y\) is unique up to isomorphism.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose~\(G\) is a finite nilpotent group. Show that if~\(H\) is a proper subgroup of~\(G\), it is a proper subgroup of its normalizer in~\(G\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(R\) be a integral domain.
 \begin{examsubparts}
@@ -105,20 +126,24 @@ Define what it means for a fractional ideal of~\(R\) to be invertible.
 \item[\textnormal{(ii)}]
 Show that an invertible ideal is a projective~\(R\)-module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
-Suppose~\(R\) is a ring with identity (not necessarily commutative), \(M\) is a right~\(R\)-module and 
+Suppose~\(R\) is a ring with identity (not necessarily commutative), \(M\) is a right~\(R\)-module and
 \[
 N' \to N \to N'' \to 0
 \]
- is an exact sequence of left~\(R\)-modules. Show that 
+ is an exact sequence of left~\(R\)-modules. Show that
 \[
 M \otimes_R N' \to M \otimes_R N \to M \otimes_R N'' \to 0
 \]
  is an exact sequence of abelian groups.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Suppose~\(F\) is a free group on a set~\(S\), \(T\) is a subset of~\(S\) and \(H \subseteq F\) is the smallest normal subgroup of~\(F\) containing~\(T\). Show that \(F/H\) is a free group on the set \(S \setminus T\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Suppose~\(R\) is a commutative ring with identity and~\(I\) is an ideal contained in the Jacobson radical of~\(R\). Prove Nakayama’s lemma: if~\(M\) is a finitely generated~\(R\)-module such that \(IM=M\) then \(M=0\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose~\(A\) is a Noetherian commutative ring with identity.
 \begin{examsubparts}
@@ -127,6 +152,7 @@ Show that if \(f:A \to B\) is a surjective homomorphism then~\(B\) is Noetherian
 \item[\textnormal{(ii)}]
 Recall that a multiplicative system in~\(A\) is a nonempty subset closed under multiplication. Show that if \(S \subset A\) is a multiplicative system then \(S^{-1}A\) is Noetherian.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Suppose~\(R\) is a nontrivial commutative ring with identity and \(S \subset R\) is a multiplicative system not containing~\(0\) (see the previous problem for the definition).
 \begin{examsubparts}
@@ -135,6 +161,7 @@ Show that there is a prime ideal \(\mathfrak p \subset R\) such that \(\mathfrak
 \item[\textnormal{(ii)}]
 Use this to show that the intersection of all prime ideals of~\(R\) is the set of nilpotent elements of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 This problem has two parts.
 \begin{examsubparts}

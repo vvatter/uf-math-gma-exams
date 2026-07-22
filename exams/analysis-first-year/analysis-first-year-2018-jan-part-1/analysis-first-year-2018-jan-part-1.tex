@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2018, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2018, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((a_n:n\ge 0)\) be a bounded real sequence. For each \(N\ge 0\) define \(\bar a_N=\sup\{a_n:n\ge N\}\) and let \(s=\inf\{\bar a_N:N\ge 0\}\). Prove:
 \begin{examsubparts}
@@ -88,8 +105,10 @@ if \(s<t\) then \(a_n<t\) eventually, in the sense \((\exists N)(\forall n\ge N)
 \item[\textnormal{(ii)}]
 if \(s>r\) then \(a_n>r\) frequently, in the sense \((\forall N)(\exists n\ge N)(a_n>r)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(X\) be a metric space. Assume that there exists \(\delta>0\) such that the distance between distinct points of~\(X\) is always~\(\delta\) or greater. Determine precisely which subsets of~\(X\) are open, which closed, which compact and which connected.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(f:X\to\mathbb{R}\) have the property that if~\(a\) is any real number then \(U(a)=\{x:f(x)<a\}\) is an open subset of the compact metric space~\(X\).
 \begin{examsubparts}
@@ -98,6 +117,7 @@ Prove that~\(f\) is bounded above on~\(X\).
 \item[\textnormal{(ii)}]
 Prove that \(s=\sup\{f(x):x\in X\}\) is a value of~\(f\). For (ii): suppose~\(s\) not a value and consider the function \(F=1/(s-f)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(f:X\to Y\) be a bijection between metric spaces; assume that~\(Y\) is complete and that \(f^{-1}\) is continuous.
 \begin{examsubparts}
@@ -106,6 +126,7 @@ Show that if~\(f\) is uniformly continuous then~\(X\) is complete.
 \item[\textnormal{(ii)}]
 Show that if~\(f\) is only continuous then~\(X\) can fail to be complete.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f:(a,b)\to\mathbb{R}\) be differentiable and assume that its derivative \(f'\) is bounded. Prove that the right-hand limit \(\lim_{t\to a+}f(t)\) exists.
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2024, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2024, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove Sylow’s First Theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) and~\(H\) be finite groups of orders~\(m\), and~\(n\) respectively. Justify your claims.
 \begin{examsubparts}
@@ -96,8 +114,10 @@ Give an example where~\(m\) and~\(n\) are not relatively prime and
 \operatorname{Aut}(G \times H) \not\simeq \operatorname{Aut}(G) \times \operatorname{Aut}(H).
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Here~\(\mathbb{Z}\) is considered as a group. Show that there are two different group homomorphisms \(\phi : \mathbb{Z}/2\mathbb{Z} \to \operatorname{Aut}(\mathbb{Z}/7\mathbb{Z})\), and prove that the corresponding semidirect products \(\mathbb{Z}/7\mathbb{Z} \rtimes_{\phi} \mathbb{Z}/2\mathbb{Z}\) are pairwise nonisomorphic.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Note that \(2024 = 2^3 * 11 * 23\).
 \begin{examsubparts}
@@ -106,6 +126,7 @@ Prove that the symmetric group \(S_{42}\) has at least one element of order \(20
 \item[\textnormal{(b)}]
 Does the alternating group \(A_{42}\) have an element of order \(2024\)? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(G\) be a finite group.
 \begin{examsubparts}
@@ -114,6 +135,7 @@ Define what it means to say that~\(G\) is nilpotent.
 \item[\textnormal{(b)}]
 Without assuming any result about nilpotent groups (i.e. just from your definition), prove that if the order of~\(G\) is \(p^n\), where~\(p\) is a prime and \(n \in \mathbb{Z}\) with \(n \geq 0\), then~\(G\) is nilpotent.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(S\) be a finite simple group, and let~\(H\) be a proper subgroup of~\(S\). Let \(n = [S : H]\). Prove that~\(S\) is isomorphic to a subgroup of the symmetric group \(S_n\).
 \end{examproblems}

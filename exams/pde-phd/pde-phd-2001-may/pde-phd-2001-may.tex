@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Partial Differential Equations PhD Exam, May 2001}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/pde-phd/}{Partial Differential Equations PhD Exam}, May 2001\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,33 +95,36 @@
 \begin{examinstructions}
 Do all problems 1–4. Choose one problem of 5 and 6 and one problem of 7 and 8.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(B\) be the unit ball in \(\mathbb{R}^3\). For which values of~\(\alpha\) does the function \(|x|^\alpha\) belong to \(H^1(B)\)? Justify your answer.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(U\subset\mathbb{R}^n\) be open and bounded. Let \(u_m\) and \(v_m\) be bounded sequences in \(H^1(U)\). Show that there exist subsequences \(u_{m_j}\) of \(u_m\) and \(v_{m_j}\) of \(v_m\), and functions \(u,v\in H^1(U)\), such that 
+Let \(U\subset\mathbb{R}^n\) be open and bounded. Let \(u_m\) and \(v_m\) be bounded sequences in \(H^1(U)\). Show that there exist subsequences \(u_{m_j}\) of \(u_m\) and \(v_{m_j}\) of \(v_m\), and functions \(u,v\in H^1(U)\), such that
 \[
 \int_U u_{m_j}v_{m_j}\,dx\to\int_U uv\,dx,
 \]
- and 
+ and
 \[
 \int_U D_{x_i}(u_{m_j}v_{m_j})\,dx\to\int_U D_{x_i}(uv)\,dx,\qquad i=1,\ldots,n,
 \]
  as \(j\to\infty\).
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let \(u(x,t)\) be a smooth solution to the IBV problem: 
+Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let \(u(x,t)\) be a smooth solution to the IBV problem:
 \[
 u_t=\Delta u,\qquad (x,t)\in U_T,
 \]
- 
+
 \[
 \frac{\partial u}{\partial n}=0,\qquad (x,t)\in\partial U\times[0,T],
 \]
- 
+
 \[
 u(x,0)=f(x),\qquad x\in U.
 \]
- Let 
+ Let
 \[
 (u)_U(t)=\frac{1}{|U|}\int_U u(x,t)\,dx.
 \]
@@ -119,33 +138,35 @@ Hint: Consider the equation for \(v=u-(u)_U\), and use energy estimate for the e
 \item[\textnormal{(b)}]
 \(u\to(u)_U\) in \(L^2(U)\), as \(t\to\infty\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let~\(L\) be a uniformly elliptic differential operator of the form 
+Let \(U\subset\mathbb{R}^n\) be open, bounded, and connected with smooth boundary \(\partial U\). Let~\(L\) be a uniformly elliptic differential operator of the form
 \[
 Lu=-\sum_{i,j=1}^n a_{ij}u_{x_i x_j}.
 \]
- Suppose that~\(f\) is a bounded function and \(u,v\in C^2(\overline U)\) satisfy 
+ Suppose that~\(f\) is a bounded function and \(u,v\in C^2(\overline U)\) satisfy
 \[
 Lu=f,\qquad Lv\geq1,\qquad x\in U,
 \]
- 
+
 \[
 u(x)=0,\qquad v(x)\geq0,\qquad x\in\partial U.
 \]
- Suppose that there exists a point \(x_0\in\partial U\) such that \(v(x_0)=0\). Prove that there exists a constant \(C>0\) such that 
+ Suppose that there exists a point \(x_0\in\partial U\) such that \(v(x_0)=0\). Prove that there exists a constant \(C>0\) such that
 \[
 |Du(x_0)|\leq C\left|\frac{\partial v}{\partial n}(x_0)\right|.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\). We say that a function \(u\in H_0^2(U)\) is a weak solution of the biharmonic equation 
+Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\). We say that a function \(u\in H_0^2(U)\) is a weak solution of the biharmonic equation
 \[
 \Delta^2u=f,\qquad x\in U, \tag{5.1}
 \]
- 
+
 \[
 u=0,\qquad \frac{\partial u}{\partial n}=0,\qquad x\in\partial U, \tag{5.2}
 \]
- if 
+ if
 \[
 \int_U\Delta u\,\Delta v\,dx=\int_U fv\,dx,\qquad\text{for any }v\in H_0^2(U). \tag{5.3}
 \]
@@ -156,38 +177,41 @@ For a given \(f\in L^2(U)\) there is an unique solution to the problem (5.3).
 \item[\textnormal{(b)}]
 If \(u\in C^4(\overline U)\) and \(f\in C^0(\overline U)\) satisfy (5.3), then~\(u\) satisfies (5.1) at each point \(x\in U\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let \(U\subset\mathbb{R}^n\) be open and bounded. Show that \(u\in H_0^1(U)\) is a weak solution to the boundary value problem 
+Let \(U\subset\mathbb{R}^n\) be open and bounded. Show that \(u\in H_0^1(U)\) is a weak solution to the boundary value problem
 \[
 -\Delta u+u=1,\qquad x\in U,
 \]
- 
+
 \[
 u=0,\qquad x\in\partial U,
 \]
- if and only if~\(u\) minimizes 
+ if and only if~\(u\) minimizes
 \[
 E(v)=\int_U\bigl(|\nabla v|^2+v^2-2v\bigr)\,dx
 \]
  over \(v\in H_0^1(U)\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(U\subset\mathbb{R}^n\) be open and bounded. We say \(v\in C^2(\overline U)\) is subharmonic if \(-\Delta v\leq0\) for all \(x\in U\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that for any subharmonic~\(v\), 
+Prove that for any subharmonic~\(v\),
 \[
 v(x)\leq\frac{1}{|B(x,r)|}\int_{B(x,r)}v(y)\,dy,\qquad\text{for all }B(x,r)\subset U.
 \]
 \item[\textnormal{(b)}]
 Let \(\phi:\mathbb{R}\to\mathbb{R}\) be smooth and convex. Suppose that~\(u\) is harmonic and \(v=\phi(u)\). Prove that~\(v\) is subharmonic.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(U\subset\mathbb{R}^n\) be open and bounded with smooth boundary \(\partial U\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Write the fundamental solution \(\Phi(x)\) of Laplace’s equation.
 \item[\textnormal{(b)}]
-Prove that for any point \(x\in U\) and any function \(u\in C^2(\overline U)\), 
+Prove that for any point \(x\in U\) and any function \(u\in C^2(\overline U)\),
 \[
 u(x)=\int_U\Phi(y-x)\Delta u(y)\,dy
 +\int_{\partial U}\left[\Phi(y-x)\frac{\partial u}{\partial n}(y)-u(y)\frac{\partial\Phi}{\partial n}(y-x)\right]dS(y),

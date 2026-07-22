@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, August 2016, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, August 2016, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,10 @@
 \begin{examinstructions}
 You have 2 hours to answer the following questions. You must show all your work as neatly and clearly as possible and indicate the final answer clearly. You may not use a calculator.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-The iteration 
+The iteration
 \[
 x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)-\frac{1}{2}f''(x_n)\frac{f(x_n)}{f'(x_n)}}
 \]
@@ -92,11 +109,12 @@ Show that the method can, alternatively, be interpreted as applying Newton’s m
 \item[\textnormal{(b)}]
 Assuming~\(\alpha\) is a simple root of the equation, and \(x_n\to\alpha\) as \(n\to\infty\), show that convergence is at least cubic. Hint: Part (a) might help.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Do the following parts which are unrelated.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Derive a Taylor method of order two for the first order initial value problem (IVP) 
+Derive a Taylor method of order two for the first order initial value problem (IVP)
 \[
 \begin{cases}
 y'=\dfrac{y^2}{1+t},\\
@@ -105,7 +123,7 @@ y(1)=-\dfrac{1}{\ln 2}.
 \tag{1}
 \]
 \item[\textnormal{(b)}]
-Derive a numerical method for the following second order IVP by replacing the derivatives with centered differences over the mesh \(t_{n+1}=t_n+h\) where \(h=1/N\). 
+Derive a numerical method for the following second order IVP by replacing the derivatives with centered differences over the mesh \(t_{n+1}=t_n+h\) where \(h=1/N\).
 \[
 \begin{cases}
 y''+2y'+y=\cos t, & 0\le t\le 1,\\
@@ -115,8 +133,9 @@ y'(0)=0.
 \tag{2}
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Consider a quadrature rule of the form 
+Consider a quadrature rule of the form
 \[
 \int_0^1 f(x)\,dx\approx Af(0)+Bf'(0)+Cf(\gamma)+Df(1).
 \]
@@ -126,8 +145,10 @@ Determine the constants \(A,B,C,D\), and~\(\gamma\) so that the quadrature formu
 \item[\textnormal{(b)}]
 What is the degree of exactness of the formula in part (a)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 For the function \(f(x)=\ln(x)\) for \(x\in[1,2]\), find the minimax approximation polynomial of degree one. Give the exact value of the minimax error.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has the following parts.
 \begin{examsubparts}

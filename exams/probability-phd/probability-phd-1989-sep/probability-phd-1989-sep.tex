@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Probability PhD Exam, September 1989}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, September 1989\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,23 +92,32 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(\{\overline{X}_m\}\) be a submartingale and~\(T\) a stopping time such that \(E[T]<\infty\). Assume \(E[|\overline{X}_{m+1}-\overline{X}_m|\mid\mathcal F_m]\le M\) on \((T>m)\) for some constant~\(M\). Show that \(\overline{X}_T\) is integrable and \(E[\overline{X}_0]\le E[\overline{X}_T]\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(\overline{X}_m\to\overline{X}\) in probability. Let~\(f\) be continuous on \(\mathbb R^1\). Then \(f(\overline{X}_m)\to f(\overline{X})\) in probability. Prove this.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Can convergence a.e. be given by a metric? In other words, is there a metric~\(\rho\) such that \(\rho(\overline{X}_m,0)\to0\) is equivalent to \(\overline{X}_m\to0\) a.e.? Substantiate.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Explain the notion of convergence in distribution. Let \(\overline{X}_m\to\overline{X}\) in distribution. Does it follow that \(\overline{X}_m\to\overline{X}\) in probability? Suppose \(P[\overline{X}=a]=1\). Is it then true that \(\overline{X}_m\to\overline{X}\) in probability? Substantiate all your answers.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(\overline{Y}\in L^p\), \(|\overline{X}_m|\le\overline{Y}\), and \(\overline{X}_m\to\overline{X}\) in distribution. Show that \(E(|\overline{X}_m|^p)\to E(|\overline{X}|^p)\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Given that~\(f\) is a characteristic function and \(|f(1/2)|=1\), what can you conclude?
+\def\ProblemHeadingText{Problem 7.}
 \item
 State and give a sketch of the proof of the strong law of large numbers.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(\overline{X}_m\) be i.i.d., \(E[\overline{X}_m]=0\), \(E[\overline{X}_m^2]=1\). Can this sequence be complete orthonormal? Substantiate.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(\mu\) be a non-trivial infinitely divisible distribution on \(\mathbb R^1\). Prove that~\(\mu\) cannot have compact support.
 \end{examproblems}

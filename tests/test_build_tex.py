@@ -97,9 +97,19 @@ class TexRenderingTests(unittest.TestCase):
         self.assertIn("math/setup=mathml-SE", rendered)
         self.assertIn(r"\usepackage{newcomputermodern}", rendered)
         self.assertIn(r"\providecommand{\square}{\mdlgwhtsquare}", rendered)
-        self.assertIn(r"\section{I. Algebra \& Geometry}", rendered)
+        self.assertIn(r"\subsection{I. Algebra \& Geometry}", rendered)
         self.assertIn(r"\begin{examinstructions}", rendered)
-        self.assertIn(r"\renewcommand{\labelenumi}{\textbf{\theenumi.}}", rendered)
+        self.assertIn(r"\begin{examproblems}{0}{H3}", rendered)
+        self.assertIn(
+            r"\tagstructbegin{tag=H1,title={Algebra PhD Exam, September 1988}}",
+            rendered,
+        )
+        self.assertIn(r"\def\ProblemHeadingText{Problem 1.}", rendered)
+        self.assertIn(r"tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}", rendered)
+        self.assertIn(r"actualtext={\ProblemHeadingText}", rendered)
+        self.assertIn(r"\tagstructbegin{tag=Lbl}\tagstructend", rendered)
+        self.assertIn(r"\tagstructbegin{tag=\LBody}", rendered)
+        self.assertIn(r"\tagpdfparaOff", rendered)
         self.assertIn(
             r"University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}",
             rendered,
@@ -156,7 +166,10 @@ class TexRenderingTests(unittest.TestCase):
             )
         ]
 
-        self.assertIn("This problem has two parts.", render_tex(exam))
+        rendered = render_tex(exam)
+
+        self.assertIn("This problem has two parts.", rendered)
+        self.assertIn(r"\begin{examproblems}{0}{H2}", rendered)
 
     def test_problem_concern_is_tagged_colored_and_precedes_source_text(self) -> None:
         exam = self.exam()

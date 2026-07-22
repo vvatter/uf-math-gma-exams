@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2025, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2025, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,15 +95,20 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that if the ring~\(R\) is a Euclidean domain, then~\(R\) is a principal ideal domain.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose that~\(F\) is a field and~\(G\) is a finite multiplicative subgroup of \(F\setminus\{0\}\). Prove that~\(G\) is cyclic.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose that~\(F\) is a field whose characteristic is not~\(2\). Assume that \(d_1,d_2\in F\) are not squares in~\(F\). Prove that \(F(\sqrt{d_1},\sqrt{d_2})\) is of dimension~\(4\) over~\(F\) if \(d_1d_2\) is not a square in~\(F\) and of dimension~\(2\) otherwise.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(GL_4(\mathbb{Z}/3\mathbb{Z})\) denote the group of all invertible~\(4\) by~\(4\) matrices with entries in \(\mathbb{Z}/3\mathbb{Z}\), the field of three elements. Use rational canonical forms to determine the number of conjugacy classes of elements of order~\(4\). Give the rational canonical form for each class.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(R\) be an integral domain, and~\(M\) be an~\(R\)-module.
 \begin{examsubparts}
@@ -96,6 +117,7 @@ Define the rank of~\(M\). (Note that this definition is different from the defin
 \item[\textnormal{(b)}]
 Prove that if~\(M\) is a free~\(R\)-module of rank~\(n\), (where~\(n\) is a non-negative integer), then the rank of any submodule of~\(M\) is at most~\(n\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(F\) be a field.
 \begin{examsubparts}

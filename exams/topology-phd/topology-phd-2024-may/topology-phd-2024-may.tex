@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 2024}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2024\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that compact Hausdorff space is normal.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(X_\alpha\) be a family of connected spaces that have a common point. Prove that \(\bigcup_\alpha X_\alpha\) is connected.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Does there exist a closed orientable~\(n\)-manifold~\(M\) with
 \begin{examsubparts}
@@ -94,33 +113,45 @@ Does there exist a closed orientable~\(n\)-manifold~\(M\) with
 \item[\textnormal{(c)}]
 \(n=6\) and \(H_3(M)=\mathbb{Z}\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Show that the boundary of the Möbius strip is not a retract of the Möbius strip.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Is the space of all real \(n\times n\)-matrices compact? Connected?
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Explain relations between connectedness and path connectedness.
+\def\ProblemHeadingText{Problem 7.}
 \item
 State the Lefschetz Fixed Point Theorem. Explain why every continuous map \(D^n\to D^n\) has a fixed point.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Give definitions of retraction, deformation retraction, retract, and deformation retract. Give an example of a retract~\(A\) of a topological space which is not a deformation retract.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Show that the spaces \(S^2\times S^2\) and \(S^2\vee S^2\vee S^4\) are not homotopy equivalent.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Give definitions of the mapping cylinder and the mapping cone. Is the Möbius strip a mapping cylinder?
+\def\ProblemHeadingText{Problem 11.}
 \item
 Formulate the Urysohn Lemma.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Does \(S^1\vee S^1\) admit a covering space with an abelian fundamental group?
+\def\ProblemHeadingText{Problem 13.}
 \item
 What is the Euler characteristic of the product of five 2-dimensional spheres \(S^2\times S^2\times S^2\times S^2\times S^2\)?
+\def\ProblemHeadingText{Problem 14.}
 \item
 Is \(\mathbb{R}^\omega\) connected in the uniform topology?
+\def\ProblemHeadingText{Problem 15.}
 \item
 State the Five Lemma.
 \end{examproblems}

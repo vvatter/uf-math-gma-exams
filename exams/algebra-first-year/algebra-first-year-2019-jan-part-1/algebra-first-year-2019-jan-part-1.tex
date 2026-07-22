@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2019, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2019, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove Sylow’s First Theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Consider the symmetric group \(S_6\), and the corresponding alternating group \(A_6\).
 \begin{examsubparts}
@@ -90,6 +108,7 @@ How many elements of order 4 are there in \(S_6\)? Justify your answer.
 \item[\textnormal{(b)}]
 How many elements of order 4 are there in \(A_6\)? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(G\) be the alternating group \(A_{100}\), and assume~\(G\) acts on a finite set~\(\Omega\).
 \begin{examsubparts}
@@ -98,10 +117,13 @@ Prove that, if \(|\Omega|=90\), then~\(G\) acts trivially on~\(\Omega\), i.e. \(
 \item[\textnormal{(b)}]
 Prove that if \(|\Omega|=120\) and~\(G\) does not act trivially on~\(\Omega\), then~\(G\) has, at most, 21 orbits on~\(\Omega\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that every group of order 30 has a normal subgroup of order 15.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(G\) be a group, let~\(N\) be a normal subgroup of~\(G\), and let~\(H\) be a subgroup of~\(G\). Assume that~\(H\) is solvable. Prove that \(HN/N\) is a solvable group.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(G\) be a group of order 39. Does~\(G\) need to be abelian? Prove that your answer is correct.
 \end{examproblems}

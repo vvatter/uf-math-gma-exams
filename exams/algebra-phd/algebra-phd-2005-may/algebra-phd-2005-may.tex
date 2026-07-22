@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2005}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2005\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,27 +95,38 @@
 \begin{examinstructions}
 Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(\mathcal{C}\) be a concrete category. Define what is meant by a free object in~\(\mathcal{C}\). Let~\(\mathcal{G}\) be the category of all finite groups. Prove that the free objects in~\(\mathcal{G}\) are exactly the trivial groups.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove Maschke’s Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be a left-Artinian ring such that, for all \(r \in R\), we have \(r^2=r\). Prove that~\(R\) is finite and commutative. Prove that any two such rings are isomorphic to each other if and only if they have the same number of elements.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(F\) be the splitting field of \(p(x)=x^3+5x+5\) over~\(\mathbb{Q}\). Prove that there is a unique intermediate field~\(K\) such that \(K \ne \mathbb{Q}\), \(K \ne F\), and \(K/\mathbb{Q}\) is Galois.
+\def\ProblemHeadingText{Problem 5.}
 \item
 State and prove Hilbert’s Theorem 90.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(G=\langle x,y:x^3=y^2=1\rangle\). Prove that~\(G\) is infinite and non-abelian.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(A\) be a finitely generated abelian group. Consider \(T=\mathbb{R}\otimes_{\mathbb{Z}}A\). Describe for which abelian groups~\(A\) we have that~\(T\) is not trivial. Prove your description. In your proof, you may assume the existence and uniqueness of the tensor product as an abelian group, but you need to prove any other property of the tensor product that you use.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove the Lying-Over Theorem: Let~\(S\) be an integral extension of an integral domain~\(R\), and let~\(P\) be a prime ideal of~\(R\). Then, there exists a prime ideal~\(Q\) of~\(S\), such that \(Q\cap R=P\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Define what is a Dedekind domain. Give an example of a Dedekind domain which is not a unique factorization domain.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Prove that an invertible ideal in an integral domain that is a local ring is principal.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(R\) be a ring with identity. Consider the ring \(\operatorname{Hom}_R(R,R)\) of left~\(R\)-module homomorphisms from~\(R\) to itself. Prove that \(\operatorname{Hom}_R(R,R)\) is isomorphic, as a ring, to \(R^{op}\).
 \end{examproblems}

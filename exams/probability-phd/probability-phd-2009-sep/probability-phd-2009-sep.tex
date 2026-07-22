@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Probability PhD Exam, September 2009}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, September 2009\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,30 +92,37 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 For each fixed~\(n\), \(X_n^1, X_n^2, \ldots, X_n^n\) are independent random variables and have the same Binomial distribution, that is, \(\mathbb P(X_n^i=1)=p_n\) and \(\mathbb P(X_n^i=0)=1-p_n\) for \(i=1,2,\ldots,n\). Let \(S_n=X_n^1+X_n^2+\cdots+X_n^n\). Given the condition that \(np_n\) converges to a positive constant~\(\beta\) as~\(n\) goes to~\(\infty\), find the limit distribution of \(S_n\) and prove it.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let~\(X\) and~\(Y\) be two independent random variables with \(\mathbb E[Y]=0\). Show that for \(p\geq 1\), we have 
+Let~\(X\) and~\(Y\) be two independent random variables with \(\mathbb E[Y]=0\). Show that for \(p\geq 1\), we have
 \[
 \mathbb E|X+Y|^p\geq \mathbb E|X|^p.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(X\) be a positive random variable with a probability density function \(f(x)\) that is continuous and \(U_n=nX-[nX]\), where \([a]\) means the largest integer which is less than~\(a\). Find the limit distribution of \(U_n\) as~\(n\) goes to~\(\infty\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(X_1,X_2,\ldots,X_n\) be i.i.d. random variables with probability density function \(f(x)\), and \(M=\max(X_1,X_2,\ldots,X_n)\). Find the conditional expectation \(\mathbb E[X_1\mid M]\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-For a continuous function \(f(x)\) on \([0,1]\), define 
+For a continuous function \(f(x)\) on \([0,1]\), define
 \[
 P_n(x)=\sum_{k=0}^n f\left(\frac{k}{n}\right)\binom{n}{k}x^k(1-x)^{n-k}.
 \]
  Show that \(P_n(x)\) converges to \(f(x)\) on \([0,1]\) as~\(n\) goes to infinity.
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let \(S_n\) be a one-dimensional simple random walk, that is, \(S_n=X_1+\cdots+X_n\), where \(X_1,\ldots,X_n\) are i.i.d. random variables with \(\mathbb P(X_1=+1)=\mathbb P(X_1=-1)=1/2\), and \(S_0=0\). and let 
+Let \(S_n\) be a one-dimensional simple random walk, that is, \(S_n=X_1+\cdots+X_n\), where \(X_1,\ldots,X_n\) are i.i.d. random variables with \(\mathbb P(X_1=+1)=\mathbb P(X_1=-1)=1/2\), and \(S_0=0\). and let
 \[
 R_n=1+\max_{0\leq k\leq n}S_k-\min_{0\leq k\leq n}S_k
 \]
  be the number of points visited by time~\(n\). Prove that \(R_n/\sqrt n\) converges weakly to some limit (in distribution).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(B_t\) be standard Brownian motion with \(B_0=0\) and \(\tau=\inf\{t:B_t=a+bt\}\), where \(a>0\) and~\(b\) are two constants. Prove that
 \begin{examsubparts}
@@ -112,8 +135,9 @@ Let \(B_t\) be standard Brownian motion with \(B_0=0\) and \(\tau=\inf\{t:B_t=a+
 \mathbb P_0(\tau<\infty)=\exp\{-2ab\}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
-Let \(\{X_n,n=0,1,2,3,\ldots\}\) be a Markov chain on a countable irreducible state space~\(S\). Let~\(\phi\) be a nonnegative function with 
+Let \(\{X_n,n=0,1,2,3,\ldots\}\) be a Markov chain on a countable irreducible state space~\(S\). Let~\(\phi\) be a nonnegative function with
 \[
 \mathbb E[\phi(X_1)\mid X_0=x]\leq \phi(x)
 \]

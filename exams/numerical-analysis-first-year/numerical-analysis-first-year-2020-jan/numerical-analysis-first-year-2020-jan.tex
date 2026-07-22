@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis First-Year Exam, January 2020}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-first-year/}{Numerical Analysis First-Year Exam}, January 2020\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,19 +95,21 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Starting with the first two Legendre polynomials over \([-1,1]\), given by \(p_0(x)=1\), and \(p_1(x)=x\), find the next three (monic) Legendre polynomials, \(p_2(x),p_3(x)\) and \(p_4(x)\).
 \item[\textnormal{(b)}]
-Find the nodes \(t_0,t_1,t_2\) and weights \(w_0,w_1,w_2\) which define the Gaussian Quadrature formula 
+Find the nodes \(t_0,t_1,t_2\) and weights \(w_0,w_1,w_2\) which define the Gaussian Quadrature formula
 \[
 \int_{-1}^{1} f(t)\,\mathrm{d}t \approx w_0f(t_0)+w_1f(t_1)+w_2f(t_2),
 \]
  with degree of exactness \(m=5\). You should find the nodes exactly, and may leave the weights \(w_0,w_1,w_2\), in integral form.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Consider the fixed point problem \(x=f(x)\), where \(f(x)=e^{-(3+x)}\).
 \begin{examsubparts}
@@ -100,6 +118,7 @@ Assuming all computations are done in exact arithmetic, find the largest open in
 \item[\textnormal{(b)}]
 Write a Newton iteration for finding the fixed-point.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(P_1\) be the space of polynomials of degree at most one. Using the norm \(\|u\|_2=\left(\int_a^b u^2\,\mathrm{d}x\right)^{1/2}\)
 \begin{examsubparts}
@@ -108,6 +127,7 @@ Find the least-squares approximation to \(f(x)=x^3\) in \(P_1\) over \([a,b]=[-1
 \item[\textnormal{(b)}]
 Find the least-squares approximation to \(f(x)=x^4\) in \(P_1\) over \([a,b]=[0,1]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -116,13 +136,14 @@ Find a natural cubic spline \(B_0\) on \(-1\leq x\leq 1\) that satisfies \(v(-1)
 \item[\textnormal{(b)}]
 Find a natural cubic spline on \(-1\leq x\leq 2\) that satisfies \(v(-1)=0\), \(v(0)=2\), \(v(1)=1/2\) and \(v(2)=0\). You may write the solution as \(B=B_0+B_1\), where \(B_0\) is (or is closely related to) the solution to (a), if you like.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f\in C^\infty(a-H,a+H)\), and let \(h<H\). Let \(x_0=a-h\), \(x_1=a\) and \(x_2=a+h\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Find the finite difference approximation to \(f''(a)\) based on the quadratic interpolant \(p_2\) which satisfies \(p_2(x_0)=f(x_0)\), \(p_2(x_1)=f(x_1)\) and \(p_2(x_2)=f(x_2)\) (you should explicitly show how the difference approximation is derived from the interpolant).
 \item[\textnormal{(b)}]
-Let \(\psi_0(h)=\psi(h)\) be the difference approximation to \(f''(a)\) found in part (a). Assume (in exact arithmetic) \(\psi(h)\to\psi(0)=f''(a)\) as \(h\to 0\), and that \(\psi(h)\) has the asymptotic expansion 
+Let \(\psi_0(h)=\psi(h)\) be the difference approximation to \(f''(a)\) found in part (a). Assume (in exact arithmetic) \(\psi(h)\to\psi(0)=f''(a)\) as \(h\to 0\), and that \(\psi(h)\) has the asymptotic expansion
 \[
 \psi(h)=\psi(0)+a_2h^2+a_4h^4+a_6h^6+\cdots.
 \]

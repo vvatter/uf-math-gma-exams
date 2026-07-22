@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do any seven problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Consider Lebesgue measure on the real line~\(\mathbb{R}\). Give an example for each of the following, if possible. If not possible, give a brief explanation. A sequence \(f_n\) in \(L^1(\mathbb{R})\) converging to an~\(f\) in \(L^1(\mathbb{R})\)... Which of these answers change if we replace~\(\mathbb{R}\) by the interval \([0,1]\)?
 \begin{examsubparts}
@@ -92,29 +109,33 @@ Consider Lebesgue measure on the real line~\(\mathbb{R}\). Give an example for e
 \item[\textnormal{d)}]
 ...a.e. but not in measure.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Define the Hardy–Littlewood maximal function. State and prove the Hardy–Littlewood maximal theorem. (Begin by proving an appropriate covering lemma.)
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{a)}]
 State Egorov’s theorem.
 \item[\textnormal{b)}]
-Suppose \((X,\mathcal{M},\mu)\) is a measure space with \(\mu(X)<\infty\) and \(f:X\to\mathbb{C}\) is measurable. Let \((f_n)\) be a sequence of integrable functions such that \(f_n\to f\) a.e. Suppose further that the sequence \(f_n\) is uniformly integrable, that is, for every \(\epsilon>0\) there exists a \(\delta>0\) such that if~\(E\) is measurable and \(\mu(E)<\delta\), then 
+Suppose \((X,\mathcal{M},\mu)\) is a measure space with \(\mu(X)<\infty\) and \(f:X\to\mathbb{C}\) is measurable. Let \((f_n)\) be a sequence of integrable functions such that \(f_n\to f\) a.e. Suppose further that the sequence \(f_n\) is uniformly integrable, that is, for every \(\epsilon>0\) there exists a \(\delta>0\) such that if~\(E\) is measurable and \(\mu(E)<\delta\), then
 \[
 \int_E |f_n|\,d\mu<\epsilon.
 \]
- Prove that~\(f\) is integrable and 
+ Prove that~\(f\) is integrable and
 \[
 \lim_{n\to\infty}\int_X |f_n-f|\,d\mu=0.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(\mathcal{X},\mathcal{Y}\) be Banach spaces. Suppose that \((T_n)\) is a sequence of bounded linear operators from~\(\mathcal{X}\) to~\(\mathcal{Y}\) such that \(\lim_{n\to\infty}T_nx\) exists for every \(x\in\mathcal{X}\). Prove that 
+Let \(\mathcal{X},\mathcal{Y}\) be Banach spaces. Suppose that \((T_n)\) is a sequence of bounded linear operators from~\(\mathcal{X}\) to~\(\mathcal{Y}\) such that \(\lim_{n\to\infty}T_nx\) exists for every \(x\in\mathcal{X}\). Prove that
 \[
 Tx:=\lim_{n\to\infty}T_nx
 \]
  defines a bounded linear operator from~\(\mathcal{X}\) to~\(\mathcal{Y}\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -123,12 +144,15 @@ State the Lebesgue–Radon–Nikodym theorem.
 \item[\textnormal{b)}]
 State and prove a version of the chain rule for Radon–Nikodym derivatives.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(X\) be a normed vector space. Given \(x\in X\), define a linear functional \(\hat{x}:X^*\to\mathbb{C}\) by \(\hat{x}(f)=f(x)\). Prove that the map \(x\to\hat{x}\) is an isometry from~\(X\) into \(X^{**}\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(\mathcal{H}\) be a Hilbert space and suppose \(\mathcal{M},\mathcal{N}\) are closed subspaces with \(\mathcal{M}\perp\mathcal{N}\). Prove that \(\mathcal{M}+\mathcal{N}\) is closed.
+\def\ProblemHeadingText{Problem 8.}
 \item
-Suppose \((k_n)_{n=1}^{\infty}\) is a sequence of functions in \(L^1(\mathbb{R})\) satisfying the following. Prove that 
+Suppose \((k_n)_{n=1}^{\infty}\) is a sequence of functions in \(L^1(\mathbb{R})\) satisfying the following. Prove that
 \[
 \lim_{n\to\infty}\|f-f*k_n\|_1=0
 \]

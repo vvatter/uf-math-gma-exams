@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, September 2005}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, September 2005\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,58 +95,62 @@
 \begin{examinstructions}
 Do any eight of the ten problems below.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-For solving \(dy/dt=f(t,y)\), consider a one-step method of the form 
+For solving \(dy/dt=f(t,y)\), consider a one-step method of the form
 \[
 y_1=y_0+h\Phi(t_0,y_0,h).
 \]
- For any \(t_0\), it computes an approximation \(y_1\) to \(y(t_0+h)\), given \(y(t_0)=y_0\). Assuming enough smoothness on~\(f\), study the local truncation error of Runge–Kutta methods for which 
+ For any \(t_0\), it computes an approximation \(y_1\) to \(y(t_0+h)\), given \(y(t_0)=y_0\). Assuming enough smoothness on~\(f\), study the local truncation error of Runge–Kutta methods for which
 \[
 \Phi(t_0,y_0,h)=\alpha_1k_1+\alpha_2k_2,
 \]
- where 
+ where
 \[
 k_1=f(t_0,y_0),
 \]
- and 
+ and
 \[
 k_2=f(t_0+\mu h,y_0+\mu hk_1).
 \]
  Under what conditions on the constants \(\alpha_1,\alpha_2\), and~\(\mu\) do we get second order methods?
+\def\ProblemHeadingText{Problem 2.}
 \item
-Prove that any polynomial~\(q\) of degree at most \(n-1\) satisfies 
+Prove that any polynomial~\(q\) of degree at most \(n-1\) satisfies
 \[
 \sum_{i=0}^n q(x_i)\prod_{\substack{j=0\\j\ne i}}^n\frac{1}{x_i-x_j}=0,
 \]
  for any distinct \(n+1\) numbers \(x_i\), \(i=0,1,\ldots,n\). (Suggestion: Identify the left hand side as a divided difference.)
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(p_2(x)\) be the quadratic polynomial that interpolates \(f(x)\) at nodes \(x=0,h\), and \(2h\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Approximating 
+Approximating
 \[
 Q=\int_0^{3h}f(x)\,dx
 \]
- by 
+ by
 \[
 Q_h=\int_0^{3h}p_2(x)\,dx,
 \]
- derive a quadrature rule: Explicitly calculate \(w_1,w_2,w_3\) so that 
+ derive a quadrature rule: Explicitly calculate \(w_1,w_2,w_3\) so that
 \[
 Q_h=w_1f(0)+w_2f(h)+w_3f(2h).
 \]
 \item[\textnormal{(b)}]
-Assuming that \(f(x)\) is four times continuously differentiable, show that 
+Assuming that \(f(x)\) is four times continuously differentiable, show that
 \[
 Q-Q_h=\frac{3}{8}h^4f'''(0)+O(h^5).
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Denote the complete (or clamped) and natural cubic splines interpolating \(f\in C^2[a,b]\) at knots \(t_0<t_1<\cdots<t_n\) by \(s_c(t)\) and \(s_n(t)\), respectively.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Prove that 
+Prove that
 \[
 \int_a^b|s_c''(x)|^2\,dx\leq\int_a^b|f''(x)|^2\,dx.
 \]
@@ -138,8 +158,9 @@ Prove that
 \item[\textnormal{(b)}]
 Which of the two interpolating splines has smaller “energy”, i.e., which of \(\int_a^b|s_c''(x)|^2\,dx\) and \(\int_a^b|s_n''(x)|^2\,dx\) is smaller?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(p>0\) and 
+Let \(p>0\) and
 \[
 x=\sqrt{p+\sqrt{p+\sqrt{p+\cdots}}},
 \]
@@ -152,6 +173,7 @@ Prove that the fixed point iteration converges for all choices of initial guesse
 \item[\textnormal{(c)}]
 Whenever the fixed point iteration converges, what is its order of convergence?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -162,6 +184,7 @@ Show that the Householder matrix \(H=I-2ww^*\) where \(\lVert w\rVert=1\) is uni
 \item[\textnormal{(c)}]
 Given a vector \(x\in\mathbb{C}^n\) and an integer~\(k\) with \(1<k<n\), derive a formula for a Householder matrix with the property that \((Hx)_i=0\) for \(i>k\) and \((Hx)_i=x_i\) for \(i<k\). Be sure to choose the signs so that the formula is numerically stable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Consider the conjugate gradient algorithm for solving \(Ax=b\) for a symmetric positive definite \(A\in\mathbb{R}^{m\times m}\).
 \begin{examsubparts}
@@ -170,6 +193,7 @@ State a relationship between the~\(n\)-th iterate of the algorithm and the best 
 \item[\textnormal{(b)}]
 Prove that if~\(A\) has only \(n\leq m\) distinct eigenvalues then the iteration (in the absence of round off errors) converges to the exact solution~\(x\) in at most~\(n\) steps no matter what the initial iterate is. (You may use 7a.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(P\) and~\(Q\) be two \(m\times m\) orthogonal projectors.
 \begin{examsubparts}
@@ -178,17 +202,19 @@ Prove that \(\lVert P-Q\rVert_2\leq 1\).
 \item[\textnormal{(b)}]
 Prove that if \(\lVert P-Q\rVert_2<1\) then the ranges of~\(P\) and~\(Q\) have equal dimensions.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
-Let~\(P\) and~\(Q\) be Hermitian positive definite matrices. Prove that 
+Let~\(P\) and~\(Q\) be Hermitian positive definite matrices. Prove that
 \[
 x^*Px\leq x^*Qx,\qquad\text{for all }x\in\mathbb{C}^n,
 \]
- if and only if 
+ if and only if
 \[
 x^*Q^{-1}x\leq x^*P^{-1}x,\qquad\text{for all }x\in\mathbb{C}^n.
 \]
+\def\ProblemHeadingText{Problem 10.}
 \item
-State the Rayleigh quotient iteration. Apply it to the \(2\times2\) real matrix 
+State the Rayleigh quotient iteration. Apply it to the \(2\times2\) real matrix
 \[
 A=\begin{bmatrix}\lambda_1&0\\0&\lambda_2\end{bmatrix},
 \]

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Probability PhD Exam, May 2003}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, May 2003\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Write clearly. State precisely results you use. Do not omit steps.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((\overline X_m)_{m=1}^{\infty}\) be an i.i.d. sequence of real valued variables on \((\Omega,\mathcal F,P)\). Let \(\mathcal F_m=\sigma(\overline X_1,\ldots,\overline X_m)\). Put \(S_m=\overline X_1+\cdots+\overline X_m\), for \(m\geq1\), and put \(S_0=0\). Which of the following sequences are martingales relative to \(\mathcal F_m\)? For those which are not martingales with respect to this filtration, what conditions have to be added to make them martingales?
 \begin{examsubparts}
@@ -92,6 +109,7 @@ Let \((\overline X_m)_{m=1}^{\infty}\) be an i.i.d. sequence of real valued vari
 \item[\textnormal{d)}]
 \(\overline Y_m=S_{\min(m,T)}\), \(m=0,1,2,\ldots\), where \(P(\overline X_1=\pm1)=\frac12\) and \(T=\min\{n>0:S_n=0\}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(\{\alpha_m\}_{m=1,2,\ldots}\) be a sequence of probability measures on \(\mathbb R\). Show the following are equivalent:
 \begin{examsubparts}
@@ -100,22 +118,25 @@ There exists a probability measure~\(\alpha\) on \(\mathbb R\) such that \(\lim_
 \item[\textnormal{b)}]
 If \(\{F_m\}\), respectively~\(F\), are the distribution functions of \(\{\alpha_m\}\), respectively~\(\alpha\), then \(\lim_{m\to\infty}F_m(x)=F(x)\) at every point~\(x\) of continuity of~\(F\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(\{\alpha_m\}_{m=1,2,\ldots}\) be a sequence of probability measures on \(\mathbb R\), and let \(\{\varphi_m(t)\}_{m=1,2,\ldots}\) be the corresponding characteristic functions. Assume that \(\lim_{m\to\infty}\varphi_m(t)=\varphi(t)\) for all \(t\in\mathbb R\), and \(\varphi(t)\) is continuous at \(t=0\). Prove that \(\varphi(t)\) is the characteristic function of some probability measure and that the conditions of Problem 2 hold.
+\def\ProblemHeadingText{Problem 4.}
 \item
-If \(\overline X\) is a real valued random variable, show that for \(0<\varepsilon<1\), 
+If \(\overline X\) is a real valued random variable, show that for \(0<\varepsilon<1\),
 \[
 E\left[\frac{|\overline X|}{1+|\overline X|}\right]\leq \varepsilon+P[|\overline X|>\varepsilon]
 \]
- and that 
+ and that
 \[
 P(|\overline X|>\varepsilon)\leq\frac{1+\varepsilon}{\varepsilon}E\left[\frac{|\overline X|}{1+|\overline X|}\right].
 \]
- Deduce that the set of real valued random variables on a given probability space can (with suitable identification) be regarded as a metric space if the distance between two random variables \(\overline X\) and \(\overline Y\) is defined to be 
+ Deduce that the set of real valued random variables on a given probability space can (with suitable identification) be regarded as a metric space if the distance between two random variables \(\overline X\) and \(\overline Y\) is defined to be
 \[
 d(\overline X,\overline Y)=E\left[\frac{|\overline X-\overline Y|}{1+|\overline X-\overline Y|}\right],
 \]
  and that convergence in this metric space corresponds to convergence in probability.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -127,17 +148,18 @@ Show that \(P[\overline Y_\infty=0]=0\) or~\(1\).
 \par
 Hint: Recall infinite products and the zero-one law.
 \item[\textnormal{c)}]
-Using b), show that 
+Using b), show that
 \[
 E[\overline Y_\infty]=1\quad\Longleftrightarrow\quad P[\overline Y_\infty>0]=1.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let \(\overline X_m\), \(m=1,2,\ldots\), be a supermartingale such that 
+Let \(\overline X_m\), \(m=1,2,\ldots\), be a supermartingale such that
 \[
 E[|\overline X_{m+1}-\overline X_m|\mid\mathcal F_m]<M\quad\text{a.s.}
 \]
- Show that for any two optional times \(S\leq T\), \(E[T]<\infty\), we have \(E[|\overline X_T|]<\infty\) and 
+ Show that for any two optional times \(S\leq T\), \(E[T]<\infty\), we have \(E[|\overline X_T|]<\infty\) and
 \[
 E(\overline X_T\mid\mathcal F_S)\leq\overline X_S.
 \]

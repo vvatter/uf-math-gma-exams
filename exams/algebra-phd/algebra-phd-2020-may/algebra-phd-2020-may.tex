@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2020}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2020\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,20 +98,25 @@ Answer seven problems. (If you turn in more, the first seven will be graded.) Wi
 \par
 Below, ring means associative ring with identity, and module means unital module unless otherwise specified.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(q>1\) be a power of a prime~\(p\). Prove that there exists some field~\(F\) with \(|F|=q\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(F\) be the splitting field of \(p(x)=x^3+5x+5\) over~\(\mathbb{Q}\). Prove that there is a unique intermediate field~\(K\) such that \(K\ne\mathbb{Q}\), \(K\ne F\), and \(K/\mathbb{Q}\) is Galois.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(A\) be a commutative ring with identity. Suppose that~\(P\) and~\(Q\) are projective~\(A\)-modules. Prove that \(P\otimes_A Q\) is a projective~\(A\)-module.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(\mathcal{C}\) be a concrete category. Define what is meant by a free object in~\(\mathcal{C}\). Let~\(\mathcal{G}\) be the category of all finite groups. Prove that the free objects in~\(\mathcal{G}\) are exactly the trivial groups.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(R\) be a ring. Prove that the following two conditions are equivalent for a left~\(R\)-module~\(P\). (You may not assume any properties of projective modules.)
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Every short exact sequence of~\(R\)-modules 
+Every short exact sequence of~\(R\)-modules
 \[
 0\to A\to B\to P\to 0
 \]
@@ -103,10 +124,13 @@ Every short exact sequence of~\(R\)-modules
 \item[\textnormal{(b)}]
 There is a free~\(R\)-module~\(F\) and an~\(R\)-module~\(K\) such that \(F\simeq K\oplus P\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Give an example of a polynomial \(f(X)\in\mathbb{Q}[X]\) whose Galois group is isomorphic to \(S_5\). Prove that this is the case.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove: if a Dedekind domain has only a finite number of nonzero prime ideals then it is a principal ideal domain. (Hint: prove first that each prime ideal is principal, use the Chinese Remainder Theorem.)
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be an integral domain with field of fractions~\(K\). For \(a\in K\), let \(D(a)=\{r\in R\mid ra\in R\}\).
 \begin{examsubparts}
@@ -117,6 +141,7 @@ For each prime ideal~\(P\), let \(R_P\) denote the elements of~\(K\) which can b
 \item[\textnormal{(c)}]
 Deduce that \(\bigcap_P R_P=R\), where the intersection is taken over the maximal ideals of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 For this question you may not quote Nakayama’s Lemma. Let~\(R\) be a commutative local ring with~\(1\) and~\(J\) its unique maximal ideal.
 \begin{examsubparts}
@@ -125,6 +150,7 @@ Show that \(1-j\) is a unit for every \(j\in J\).
 \item[\textnormal{(b)}]
 Show that if~\(A\) is a finitely generated~\(R\)-module such that \(JA=A\), then \(A=0\). (Hint: Consider a generating set for~\(A\) of minimal size and derive a contradiction.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(R\) be a ring (possibly non-commutative, and possibly without identity). Let~\(M\) be an irreducible left~\(R\)-module. Let \(D=\operatorname{End}_R(M)\).
 \begin{examsubparts}
@@ -133,6 +159,7 @@ Prove \(D=\operatorname{End}_R(M)\) is a division ring. (You may NOT assume Schu
 \item[\textnormal{(b)}]
 Give an example of a ring~\(R\) and an irreducible module~\(M\) such that~\(D\) is not commutative.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 Classify (up to ring isomorphism) all semisimple rings of order \(720\).
 \end{examproblems}

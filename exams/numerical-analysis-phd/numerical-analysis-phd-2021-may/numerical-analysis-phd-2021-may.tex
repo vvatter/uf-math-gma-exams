@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, May 2021}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2021\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(A=U\Sigma V^*\) be the singular value decomposition of \(A\in\mathbb{C}^{m\times n}\). Let \(u_j\) denote column~\(j\) of~\(U\).
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Suppose \(\operatorname{rank}(A)=p<n<m\). Show \(\{u_1,u_2,\ldots,u_p\}\), is a 
 \item[\textnormal{(b)}]
 Suppose \(k<\operatorname{rank}(A)\). What is the least-squares solution~\(x\) that minimizes \(\lVert b-Cx\rVert_2\), where~\(C\) is the rank-\(k\) matrix that minimizes \(\lVert A-C\rVert_2\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 For \(x,y>0\), consider computing \(f(x,y)=\sqrt{y+x^2}-\sqrt{y}\) in floating-point arithmetic with machine precision \(\varepsilon_m\).
 \begin{examsubparts}
@@ -96,6 +114,7 @@ Explain the difficulties in computing \(f(x,y)\), if \(x^2\ll y\). What are the 
 \item[\textnormal{(b)}]
 Suppose \(x^2/y<\varepsilon_m\). Describe a way to compute \(f(x,y)\) with more accuracy in this situation.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(\{a_1,\ldots,a_n\}\) be a linearly independent set of vectors. Consider the Gram–Schmidt and modified Gram–Schmidt algorithms for computing an orthonormal basis \(\{q_1,\ldots,q_n\}\) so that \(\operatorname{span}\{q_1,\ldots,q_k\}=\operatorname{span}\{a_1,\ldots,a_k\}\), for each \(k=1,\ldots,n\).
 
@@ -107,6 +126,7 @@ Use the Gram–Schmidt algorithm to compute \(v_3\) so that \(q_3=v_3/\lVert v_3
 \item[\textnormal{(b)}]
 Use the modified Gram–Schmidt algorithm to compute \(v_3\) so that \(q_3=v_3/\lVert v_3\rVert\). What is \(v_3^*q_2\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Compute the Cholesky decomposition of the following matrix, or explain why it does not exist.
 
@@ -120,6 +140,7 @@ A=\begin{pmatrix}
 0&2&1&5
 \end{pmatrix}.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(A\) is Hermitian positive definite.
 \begin{examsubparts}
@@ -128,8 +149,10 @@ Prove that each principal submatrix of~\(A\) is Hermitian positive definite.
 \item[\textnormal{(b)}]
 Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Show that if a polynomial of degree at most~\(n\) has \(n+1\) (or more) zeros, then it is the zero polynomial.
+\def\ProblemHeadingText{Problem 7.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -138,6 +161,7 @@ Prove for any \(f\in C[a,b]\) and integer \(n\geq 0\), that the best uniform app
 \item[\textnormal{(b)}]
 Is there some \(a\in\mathbb R\) for which \(p_1(x)=ax+1\) is the best uniform approximation to \(x^3\) in \(\mathcal P_1\) over \([-1,1]\)? If so, what is it? EXPLAIN.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(\{\phi_k\}_{k=0}^{n+1}\) be a set of orthogonal polynomials on \([a,b]\), with respect to the inner-product \((f,g)=\int_a^b f(x)g(x)w(x)\,dx\), indexed so that \(\phi_k\) is of degree~\(k\). Let \(\mathcal P_k\) be the space of polynomials of degree at most~\(k\).
 \begin{examsubparts}
@@ -146,8 +170,10 @@ Determine the weights \(w_j\) so that the quadrature rule \(I_n(f)=\sum_{j=0}^n 
 \item[\textnormal{(b)}]
 Prove that if the interpolation points \(\{x_j\}_{j=0}^n\) are the zeros of \(\phi_{n+1}\), then \(I_n(f)=(1,f)\) for any \(f\in\mathcal P_{2n+1}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose \(f\in C^{n+1}[a,b]\), and let \(p\in\mathcal P_n\) be a polynomial that interpolates the data \(\{(x_i,f(x_i))\}_{i=0}^n\), where \(x_0,\ldots,x_n\), are distinct points in \([a,b]\). Consider an arbitrary fixed \(x\in[a,b]\), and derive an exact expression for the error \(f(x)-p(x)\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 The Littlewood–Salem–Izumi constant \(\alpha_0\) is the unique solution \(\alpha_0\in(0,1)\) of
 

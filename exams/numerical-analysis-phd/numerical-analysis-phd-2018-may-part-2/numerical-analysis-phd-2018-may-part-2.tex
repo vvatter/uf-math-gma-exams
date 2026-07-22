@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, May 2018, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2018, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,10 @@
 \begin{examinstructions}
 Do all five (5) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Consider 
+Consider
 \[
 y' = 4ty, \qquad t \in [0,1], \qquad y(0)=2, \tag{1}
 \]
@@ -92,6 +109,7 @@ Using the Euler method error estimate find the value of~\(h\) required to ensure
 \item[\textnormal{(b)}]
 Derive the Taylor method of order 2 for (1).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(g\in C^2([a,b])\) and \(p\in(a,b)\) with \(g(p)=p\), \(g'(p)=0\), \(g''(p)\neq 0\).
 \begin{examsubparts}
@@ -100,29 +118,32 @@ Show there is an \(\epsilon>0\) so that for all \(x\in[p-\epsilon,p+\epsilon]\),
 \item[\textnormal{(b)}]
 With~\(\epsilon\) as in part (a), show that for all \(x\in[p-\epsilon,p+\epsilon]\), we have \(|g(x)-p|\leq M|x-p|^2\), where \(M=\max\{|g''(x)|:|x-p|\leq\epsilon\}/2\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Find the second order (i.e. quadratic) least squares approximation to the function \(f(x)=x^4\) on the interval \([-1,1]\) with respect to the weight \(w(x)\equiv 1\) using the fact that the first three orthonormal polynomials on \([-1,1]\) with respect to this weight are 
+Find the second order (i.e. quadratic) least squares approximation to the function \(f(x)=x^4\) on the interval \([-1,1]\) with respect to the weight \(w(x)\equiv 1\) using the fact that the first three orthonormal polynomials on \([-1,1]\) with respect to this weight are
 \[
 \varphi_0(x)=\sqrt{1/2},\qquad \varphi_1(x)=\sqrt{3/2}\,x,\qquad \text{and}\qquad \varphi_2(x)=\sqrt{5/8}(3x^2-1).
 \]
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Assume \(N(h)\) is the computed approximation for~\(M\) for each \(h>0\) and 
+Assume \(N(h)\) is the computed approximation for~\(M\) for each \(h>0\) and
 \[
 M=N(h)+C_1h+C_2h^2+C_3h^3+\cdots.
 \]
  Use the values \(N(h)\), \(N(h/3)\), and \(N(h/9)\) to produce a \(O(h^3)\) approximation to~\(M\).
 \item[\textnormal{(b)}]
-Taylor’s formula yields the following. 
+Taylor’s formula yields the following.
 \[
 f'(x_0)=\frac{1}{h}\bigl(f(x_0+h)-f(x_0)\bigr)-\frac{h}{2}f''(x_0)-\frac{h^2}{6}f'''(x_0)+O(h^3).
 \]
  Use this with the extrapolation of part (a) to derive an \(O(h^3)\) formula for \(f'(x_0)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Find \(a,b,c\) so that the quadrature formula 
+Find \(a,b,c\) so that the quadrature formula
 \[
 \int_0^2 f(x)\,dx=af(0)+bf(1)+cf(2)
 \]

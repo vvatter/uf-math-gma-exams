@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis Qualifying Exam, January 2026, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-qualifying/}{Analysis Qualifying Exam}, January 2026, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Write solutions in a neat and logical fashion, giving complete reasons for all steps. Do three of four.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Do two of three.
 \begin{examsubparts}
@@ -88,13 +105,14 @@ Give an example of a Lebesgue measurable set \(E \subseteq [0,1]\) that is close
 \item[\textnormal{(ii)}]
 Is the function \(g:\mathbb{R}\to\mathbb{R}\) defined by \(g(x)=\frac{1}{1+x^2}\) the Hardy–Littlewood maximal function of an \(\mathcal{L}^1(\mathbb{R})\) function~\(f\)?
 \item[\textnormal{(iii)}]
-Does there exist a measure space \((X,\mathcal{M},\mu)\) and a nested decreasing sequence \((E_n)_{n=1}^{\infty}\) of measurable sets such that 
+Does there exist a measure space \((X,\mathcal{M},\mu)\) and a nested decreasing sequence \((E_n)_{n=1}^{\infty}\) of measurable sets such that
 \[
 \lim_{n\to\infty}\mu(E_n)\ne\mu\left(\bigcap_{n=1}^{\infty}E_n\right)?
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Suppose \(f:[0,1]\times[0,1]\to\mathbb{R}\). Show, if (a)–(c), then \(F:[0,1]\to\mathbb{R}\) defined by 
+Suppose \(f:[0,1]\times[0,1]\to\mathbb{R}\). Show, if (a)–(c), then \(F:[0,1]\to\mathbb{R}\) defined by
 \[
 F(x)=\int_{[0,1]}f(x,y)\,d\lambda(y)
 \]
@@ -107,8 +125,10 @@ for each \(y\in[0,1]\) the function \(h_y(x)=f(x,y)\) is continuous; and
 \item[\textnormal{(c)}]
 \(f\) is bounded,
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \((X,\mathcal{M})\) denote a measurable space and let \(P(X)\) denote the power set of~\(X\). Prove, if \(\mathcal{M}\ne P(X)\) and \(\{x\}\in\mathcal{M}\) for each \(x\in X\), then there exists an \(A\notin\mathcal{M}\otimes\mathcal{M}\) such that \([A]_x,[A]^y\in\mathcal{M}\) for all \(x\in X\). Suggestion: First show \(\delta:X\to X\times X\) defined by \(\delta(x)=(x,x)\) is measurable from \((X,\mathcal{M})\) to \((X\times X,\mathcal{M}\otimes\mathcal{M})\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose \((X,\mathcal{M},\mu)\) is a measure space and \(f,g:X\to[0,\infty)\) are measurable. Show
 \begin{examsubparts}

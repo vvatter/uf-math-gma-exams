@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, May 2019}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2019\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,30 +95,39 @@
 \begin{examinstructions}
 Solve 5 problems of the following; at least one from each section.
 \end{examinstructions}
-\section{A. Set Theory.}
-\begin{examproblems}{0}
+\subsection{A. Set Theory.}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Sketch the construction of any model of ZFC and the Continuum Hypothesis.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Define the class of \(\Delta_0\) formulas. Prove carefully that if \(\phi(x)\) is a \(\Delta_0\) formula with one free variable and~\(M\) is any transitive set and \(x \in M\), then \(\phi(x)\) is equivalent to \(M \models \phi(x)\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Provide an example of an analytic set which is not coanalytic. Provide a proof of these properties of the set.
 \end{examproblems}
-\section{B. Computability.}
-\begin{examproblems}{0}
+\subsection{B. Computability.}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Provide an example of a computably enumerable set which is not computable. Provide a proof of these properties of the set.
+\def\ProblemHeadingText{Problem 2.}
 \item
 What is Gödel’s diagonalization lemma? Prove the lemma.
+\def\ProblemHeadingText{Problem 3.}
 \item
 What is Post’s problem? Provide the answer to the Post’s problem and an outline of the proof.
 \end{examproblems}
-\section{C. Model theory.}
-\begin{examproblems}{0}
+\subsection{C. Model theory.}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State the downward Löwenheim–Skolem theorem and prove it.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State the Łoś’ theorem and prove it.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Find a complete theory with more than one countable model up to isomorphism. Provide two nonisomorphic countable models of the theory.
 \end{examproblems}

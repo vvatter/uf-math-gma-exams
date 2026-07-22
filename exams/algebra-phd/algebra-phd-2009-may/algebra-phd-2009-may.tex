@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2009}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2009\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer exactly seven of the following eleven problems. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Q\) and \(\mathbb C\) are the fields of rational numbers and complex numbers respectively.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(\mathcal C\) be a category, and denote by \(\mathrm{Set}\) the category of sets.
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Define what it means for a functor \(F:\mathcal C^{op}\to\mathrm{Set}\) to be re
 \item[\textnormal{(ii)}]
 Show that if \(X,Y\) are objects of \(\mathcal C\) representing the same functor \(F:\mathcal C^{op}\to\mathrm{Set}\), then \(X\simeq Y\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be a ring with identity. Show that the following are equivalent:
 \begin{examsubparts}
@@ -98,14 +116,19 @@ every unitary left~\(R\)-module is injective,
 \item[\textnormal{(iii)}]
 every exact sequence of unitary left~\(R\)-modules splits.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 If~\(G\) is a group, denote by \(G^{ab}\) the abelianization of~\(G\), and if~\(X\) is a set, denote by \(F(X)\) and \(F^{ab}(X)\) the free group on~\(X\) and the free abelian group on~\(X\) respectively. Show that \(F(X)^{ab}\simeq F^{ab}(X)\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(K\) be a field, \(L=K(\alpha)\) a simple extension of~\(K\), and \(\overline K\) an algebraic closure of~\(K\). Show that~\(\alpha\) is separable over~\(K\) if and only if the ring \(L\otimes_K\overline K\) has no nonzero nilpotent elements.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that if~\(R\) is a Noetherian commutative ring with identity, then \(R[X]\) is also Noetherian.
+\def\ProblemHeadingText{Problem 6.}
 \item
 State and prove Artin’s theorem on the linear independence of characters. and use it to prove the multiplicative form of Hilbert’s Theorem 90.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(p(x)=x^7-3\in\mathbb Q[x]\), \(\zeta\in\mathbb C\) a primitive~\(7\)-th root of~\(1\), and~\(K\) the splitting field of \(p(x)\).
 \begin{examsubparts}
@@ -114,6 +137,7 @@ Compute the Galois group of \(K/\mathbb Q\).
 \item[\textnormal{(ii)}]
 Compute the Galois group of \(K/\mathbb Q(\zeta)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -122,6 +146,7 @@ Give an example of extensions \(E/L\), \(L/K\) where \(E/K\) is normal and \(L/K
 \item[\textnormal{(ii)}]
 Give an example of normal extensions \(L/K\), \(E/L\) such that \(E/K\) is not normal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a Dedekind domain, and let~\(I\) be a non-zero ideal of~\(R\).
 \begin{examsubparts}
@@ -130,8 +155,10 @@ Show that \(R/I\) is Artinian.
 \item[\textnormal{(ii)}]
 Show that if a Dedekind domain is Artinian then it is a field.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Show that if \(L/K\) is any extension of fields, there is an algebraically independent set \(\{\alpha_i\}_{i\in I}\) of elements of~\(L\) such that~\(L\) is algebraic over \(K(\alpha_i,i\in I)\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(k\) be a field. A~\(k\)-algebra~\(R\) is central if the image of the structure map \(k\to R\) is in the center of~\(R\).
 \begin{examsubparts}

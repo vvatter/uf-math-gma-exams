@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2015, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2015, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,31 +95,44 @@
 \begin{examinstructions}
 Answer all questions and work all problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(n>1\). Suppose that \(f,g:X\to S^n\) are continuous such that \(f(x)\) and \(g(x)\) are not antipodal for all \(x\in X\). Show that~\(f\) and~\(g\) are homotopic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that \(\pi_1(S^n,1)=0\) for all \(n>1\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that \(\pi_1(S^1,1)=\mathbb{Z}\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Show that the disk, \(D^2=\{z\in\mathbb{C}\mid \lVert z\rVert\leq 1\}\) has the fixed point property.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Consider the matrix \(M=\begin{bmatrix}2&3\\1&1\end{bmatrix}\). This represents a group homomorphism \(M:\mathbb{Z}^2\to\mathbb{Z}^2\). Show that there is a map \(f:\mathbb{T}^2\to\mathbb{T}^2\) such that \(f_*=M\), where \(f_*:\pi_1(\mathbb{T}^2)\to\pi_1(\mathbb{T}^2)\) is the homomorphism induced by~\(f\) on the fundamental group.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Consider three loops \(f,g,h:[0,1]\to(X,x_0)\). Show that \((f\circ g)\circ h\) is homotopic to \(f\circ(g\circ h)\), where~\(\circ\) denotes concatenation of loops.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(n>1\). Let \(P^n=S^n/D\), where~\(D\) identifies~\(x\) with its antipode for all \(x\in S^n\). Show that \(\pi_1(P^n,x_0)\cong\mathbb{Z}_2\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Describe a CW-complex~\(X\) such that \(\pi_1(X,x_0)\cong\mathbb{Z}_3\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose that \(\pi_1(X,x_0)\cong\mathbb{Z}_2\) and that \(\pi_1(Y,y_0)\cong\mathbb{Z}_5\). Show that \(\pi_1(X\times Y,(x_0,y_0))\cong\mathbb{Z}_{10}\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Suppose that~\(X\) and~\(Y\) are connected. Show that \(X\times Y\) is connected.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let \(n>1\). Let \(A\subset\mathbb{R}^n\) be a countable set. Show that \(\mathbb{R}^n\setminus A\) is arcwise connected.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Let \(X=S^1\vee S^1\). Show that \(\pi_1(X)\cong\mathbb{Z}*\mathbb{Z}\).
+\def\ProblemHeadingText{Problem 13.}
 \item
 State the following theorems.
 

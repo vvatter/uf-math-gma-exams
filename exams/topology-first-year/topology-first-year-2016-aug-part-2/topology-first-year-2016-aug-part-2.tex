@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2016, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2016, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,41 +92,54 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{Part 1.}
+\subsection{Part 1.}
 \begin{examinstructions}
 Complete Proofs. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose that the continuous maps \(f,g:X\to Y\) are homotopic and the continuous maps \(k,h:Y\to Z\) are homotopic. Prove that \(k\circ f\) and \(h\circ g\) are homotopic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that in a simply connected space~\(X\), any two paths having the same initial and final points are path homotopic.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that if~\(X\) is path connected and \(x_0\) and \(x_1\) are two points of~\(X\), then \(\pi_1(X,x_0)\) is isomorphic to \(\pi_1(X,x_1)\). Recall that \(\pi_1(X,x_0)\) denotes the fundamental group of~\(X\) relative to the base point \(x_0\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(p:E\to B\) be a covering map, and let \(p(e_0)=b_0\). Let \(f:[0,1]\to B\) be a path beginning at \(b_0\). Prove that~\(f\) has a lifting \(\widetilde f\) beginning at \(e_0\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that there is no continuous antipode-preserving map \(g:S^2\to S^1\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that if \(n\ge 2\), then \(S^n\) is simply connected.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that the fundamental group of the projective plane \(P^2\) is a group of order 2.
 \end{examproblems}
-\section{Part 2.}
+\subsection{Part 2.}
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{7}
+\begin{examproblems}{7}{H3}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Are the spaces \(S^1\) and \(S^2\) homeomorphic?
+\def\ProblemHeadingText{Problem 9.}
 \item
 Are the spaces \(\mathbb{R}^1\) and \(\mathbb{R}^2\) homeomorphic?
+\def\ProblemHeadingText{Problem 10.}
 \item
 Complete the following definition: Two spaces~\(X\) and~\(Y\) have the same homotopy type if and only if~\(\ldots\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Is the identity map \(i:S^1\to S^1\) nullhomotopic?
+\def\ProblemHeadingText{Problem 12.}
 \item
 What is the fundamental group of the torus \(T=S^1\times S^1\)?
+\def\ProblemHeadingText{Problem 13.}
 \item
 Complete the following definition: Let~\(X\) be a topological space and let~\(A\) be a subspace of~\(X\). We say that~\(A\) is a retract of~\(X\) if and only if~\(\ldots\).
 \end{examproblems}

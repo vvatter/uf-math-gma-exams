@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Partial Differential Equations PhD Exam, September 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/pde-phd/}{Partial Differential Equations PhD Exam}, September 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,41 +98,47 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(U\) be either \(\mathbb R_+^n\) or the unit ball in \(\mathbb R^n\) (\(n\ge 2\)). Write the expression of the Green’s function for \(-\Delta\) with respect to the Dirichlet condition on \(\partial U\).
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(U\subset\mathbb R^n\) be a bounded open set with smooth boundary \(\partial U\), \(A=(a_{ij})_{n\times n}\) be a symmetric, positive definite constant matrix. For the following variational form: 
+Let \(U\subset\mathbb R^n\) be a bounded open set with smooth boundary \(\partial U\), \(A=(a_{ij})_{n\times n}\) be a symmetric, positive definite constant matrix. For the following variational form:
 \[
 I(w):=\frac12\int_U\sum_{i,j=1}^n a_{ij}\partial_iw\partial_jw\,dx;\qquad w\in H_g^1:=\{w\in H^1(U);\ w=g\text{ on }\partial U\},
 \]
  where~\(g\) is a smooth function on \(\partial U\), prove that the minimizer~\(u\) exists and is smooth.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(A=(a_{ij})_{n\times n}\) be a symmetric and positive definite constant matrix. Suppose~\(u\) satisfies 
+Let \(A=(a_{ij})_{n\times n}\) be a symmetric and positive definite constant matrix. Suppose~\(u\) satisfies
 \[
 \sum_{i,j=1}^n a_{ij}\partial_{ij}u=0,\qquad \text{in }\mathbb R^n,
 \]
  and \(u\ge -1\) in \(\mathbb R^n\). Show that \(u\equiv\text{constant}\).
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let \(\phi(x)=\dfrac{1}{n(n-2)\alpha(n)}|x|^{2-n}\) be the fundamental solution for the Laplace operator in \(\mathbb R^n\) (\(n\ge 3\)). Here \(\alpha(n)\) is the volume of the unit ball \(B_1\). Suppose \(f(x)\in C^2(\mathbb R^n)\) and satisfies 
+Let \(\phi(x)=\dfrac{1}{n(n-2)\alpha(n)}|x|^{2-n}\) be the fundamental solution for the Laplace operator in \(\mathbb R^n\) (\(n\ge 3\)). Here \(\alpha(n)\) is the volume of the unit ball \(B_1\). Suppose \(f(x)\in C^2(\mathbb R^n)\) and satisfies
 \[
 |D^jf(x)|\le C(1+|x|)^{-2-\epsilon-j},\qquad \forall x\in\mathbb R^n,\quad j=0,1,2,
 \]
- where~\(\epsilon\) is a positive number. Then 
+ where~\(\epsilon\) is a positive number. Then
 \[
 u(x)=\int_{\mathbb R^n}\phi(x-y)f(y)\,dy
 \]
- satisfies 
+ satisfies
 \[
 -\Delta u(x)=f(x)\qquad \mathbb R^n.
 \]
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(u\in W^{1,p}(\mathbb R^n)\), where \(p>n\). Show that 
+Let \(u\in W^{1,p}(\mathbb R^n)\), where \(p>n\). Show that
 \[
 \frac{1}{r^n}\int_{B(x,r)}|u(x)-u(y)|\,dy\le C(n)\int_{B(x,r)}\frac{|Du(y)|}{|x-y|^{n-1}}\,dy.
 \]
+\def\ProblemHeadingText{Problem 6.}
 \item
-Write down an explicit formula for a solution of 
+Write down an explicit formula for a solution of
 \[
 \begin{cases}
 u_t-\Delta u+cu=f, & \mathbb R^n\times(0,\infty),\\
@@ -124,11 +146,12 @@ u=g, & \mathbb R^n\times\{t=0\},
 \end{cases}
 \]
  where \(c\in\mathbb R\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source is internally inconsistent: it states “where \(g,h\) are smooth functions,” but~\(g\) does not occur in the displayed problem, while~\(f\) does. The stated data may also omit an initial-displacement condition. The intended correction is not uniquely determined, so the source reading has been retained.
 \end{problemconcern}
-Let \(U\subset\mathbb R^n\) be an open, bounded subset of \(\mathbb R^n\) with smooth boundary. Set \(U_T=U\times[0,T]\), \(\Gamma_T=\overline{U_T}\setminus U_T\), where \(T>0\). Prove that there exists at most one solution \(u\in C^2(\overline{U_T})\) of 
+Let \(U\subset\mathbb R^n\) be an open, bounded subset of \(\mathbb R^n\) with smooth boundary. Set \(U_T=U\times[0,T]\), \(\Gamma_T=\overline{U_T}\setminus U_T\), where \(T>0\). Prove that there exists at most one solution \(u\in C^2(\overline{U_T})\) of
 \[
 \begin{cases}
 u_{tt}-\Delta u=f, & U_T,\\

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, September 1999}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 1999\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Please do 7 out of the 11 problems below.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Here \(\mathbb{Z}_n\) denotes the cyclic group of order~\(n\).
 \begin{examsubparts}
@@ -90,6 +107,7 @@ What are the elementary divisors of the group \(\mathbb{Z}_{26}\oplus\mathbb{Z}_
 \item[\textnormal{(c).}]
 Determine up to isomorphism all abelian groups of order 20.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -98,6 +116,7 @@ Exhibit an automorphism of the cyclic group of order 6 that is not an inner auto
 \item[\textnormal{(b).}]
 Show that if a normal subgroup~\(N\) of order~\(p\) (\(p\) prime) is contained in a group~\(G\) of order \(p^n\), then~\(N\) is in the center of~\(G\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -108,14 +127,16 @@ Show that no nonzero finite abelian group is divisible.
 \item[\textnormal{(c).}]
 Show that no nonzero free abelian group is divisible.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) and~\(S\) be rings and \(A_R, {}_R B_S, C_S\) (bi)-modules. Demonstrate an isomorphism of abelian groups between \(\operatorname{Hom}_S(A\otimes_R B,C)\) and \(\operatorname{Hom}_R(A,\operatorname{Hom}_S(B,C))\). (You should state very clearly what must be checked.)
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let~\(R\) be a ring, let 
+Let~\(R\) be a ring, let
 \[
 0\longrightarrow A\xrightarrow{f}B\xrightarrow{g}C\longrightarrow 0
 \]
- be a short exact sequence of left~\(R\)-modules and let~\(D\) be a right~\(R\)-module. Show that 
+ be a short exact sequence of left~\(R\)-modules and let~\(D\) be a right~\(R\)-module. Show that
 \[
 0\longrightarrow D\otimes_R A\xrightarrow{1_D\otimes f}D\otimes_R B\xrightarrow{1_D\otimes g}D\otimes_R C\longrightarrow 0
 \]
@@ -128,6 +149,7 @@ Let~\(R\) be a ring, let
 \item[\textnormal{(c).}]
 \(R\) has an identity and~\(D\) is a projective unitary right~\(R\)-module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(A\) be a commutative ring with 1 such that every element \(x\in A\) satisfies \(x^n=x\) for some \(n>1\), depending on~\(x\). Prove that
 \begin{examsubparts}
@@ -136,29 +158,32 @@ every prime ideal of~\(A\) is maximal.
 \item[\textnormal{(b).}]
 the Jacobson radical of~\(A\) is \((0)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(C\) and~\(D\) be categories, and let~\(S\) and~\(T\) be covariant functors from~\(C\) to~\(D\).
 \begin{examsubparts}
 \item[\textnormal{(a).}]
 Define a natural isomorphism \(\alpha:S\to T\).
 \item[\textnormal{(b).}]
-If~\(B\) is a unitary left module over a ring~\(R\) with identity, show that there is a “natural” isomorphism of modules 
+If~\(B\) is a unitary left module over a ring~\(R\) with identity, show that there is a “natural” isomorphism of modules
 \[
 \alpha_B:R\otimes_R B\cong B.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a).}]
 Give an example of commutative rings \(R,A\) with \(R\subset A\), where~\(A\) is Noetherian but~\(R\) is not.
 \item[\textnormal{(b).}]
-Let \(R=K[x,y]\) be the polynomial ring in two variables over the field~\(K\), let~\(A\) denote the ideal \((xy,y^2)\) in~\(R\) and let \(c\in K\). Show that 
+Let \(R=K[x,y]\) be the polynomial ring in two variables over the field~\(K\), let~\(A\) denote the ideal \((xy,y^2)\) in~\(R\) and let \(c\in K\). Show that
 \[
 A=(y)\cap(x+cy,y^2)
 \]
  and that this is a primary decomposition.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -167,8 +192,10 @@ Show that if~\(S\) is a multiplicative subset of a Dedekind domain~\(R\) (with \
 \item[\textnormal{(b).}]
 Show that if~\(I\) is a nonzero ideal in a Dedekind domain, then \(R/I\) is an Artinian ring.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(p\) be a prime and \(n\geq 1\) an integer. Show that~\(F\) is a finite field with \(p^n\) elements if and only if~\(F\) is a splitting field of \((x^{p^n}-x)\) over the field \(\mathbb{Z}_p\) of~\(p\) elements.
+\def\ProblemHeadingText{Problem 11.}
 \item
 This problem has two parts.
 \begin{examsubparts}

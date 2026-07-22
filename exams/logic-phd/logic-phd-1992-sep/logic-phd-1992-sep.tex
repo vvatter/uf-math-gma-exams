@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, September 1992}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, September 1992\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,39 +95,51 @@
 \begin{examinstructions}
 This examination is divided into 4 segments, with 3 questions in each segment. Answer any 2 questions from each segment.
 \end{examinstructions}
-\section{1. General Logic}
-\begin{examproblems}{0}
+\subsection{1. General Logic}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that there is no single sentence~\(\phi\) in the language of ring theory such that a ring~\(R\) is a model of~\(\phi\) if and only if~\(R\) has characteristic 0.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and prove the compactness theorem for Predicate logic. You may assume the completeness theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State and sketch a proof of Gödel’s incompleteness theorem.
 \end{examproblems}
-\section{2. Model Theory}
-\begin{examproblems}{0}
+\subsection{2. Model Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that any two elementarily equivalent, countably saturated models are isomorphic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 State and sketch a proof of the downward Löwenheim–Skolem Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State the Omitting types theorem, and use it to show that any~\(\omega\)-complete theory of arithmetic has an~\(\omega\)-model.
 \end{examproblems}
-\section{3. Set Theory}
-\begin{examproblems}{0}
+\subsection{3. Set Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that a countable union of countable sets is countable. Explain any use of the axiom of choice.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that \(2^\kappa = \kappa^\kappa\) for all infinite~\(\kappa\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Use Fodor’s theorem to prove that the diagonal intersection of a sequence of closed, unbounded sets is closed and unbounded.
 \end{examproblems}
-\section{4. Recursion Theory}
-\begin{examproblems}{0}
+\subsection{4. Recursion Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that a function \(\phi : \omega \to \omega\) is (partial) recursive iff its graph is recursively enumerable, and that if~\(\phi\) is total and recursive then its graph is recursive.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that there is a subset of~\(\omega\) which is recursively enumerable but not recursive.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State the normal form theorem for partial recursive functions and use it to prove the enumeration theorem.
 \end{examproblems}

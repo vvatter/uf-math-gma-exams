@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, September 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,15 +98,18 @@ Write solutions in a neat and logical fashion, giving complete reasons for all s
 \par
 Attempt EIGHT problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(f\in L^1[0,1]\). Suppose that 
+Let \(f\in L^1[0,1]\). Suppose that
 \[
 \int_0^1 x^n f(x)\,dx=0 \quad\text{for all } n=0,1,2,\ldots
 \]
  Prove that \(f=0\) almost everywhere. (Hint: reduce the problem to showing that if \(\int_E f(x)\,dx=0\) for every Borel~\(E\), then \(f=0\) a.e.)
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \((X,\mathcal M,\mu)\) be a~\(\sigma\)-finite measure space, and let \(g:X\to\mathbb C\) be a measurable function. Prove that the operator \(M_g:f\mapsto gf\) is bounded on \(L^p(\mu)\) (\(1\leq p\leq\infty\)) if and only if \(g\in L^\infty(\mu)\), in which case \(\lVert M_g\rVert=\lVert g\rVert_\infty\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -99,6 +118,7 @@ Define monotone class, and state the Monotone Class Theorem.
 \item[\textnormal{b)}]
 State the Fubini–Tonelli theorem.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -107,6 +127,7 @@ Let~\(\nu\) be a signed measure on \((X,\mathcal M)\). Define what it means for 
 \item[\textnormal{b)}]
 Prove that if~\(\nu\) is a signed measure, then there exist unique positive measures \(\nu^+,\nu^-\) so that \(\nu=\nu^+-\nu^-\) and \(\nu^+\perp\nu^-\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((k_n)_{n=1}^\infty\) be a sequence of measurable, \(1\)-periodic functions on \(\mathbb R\) with the following properties:
 

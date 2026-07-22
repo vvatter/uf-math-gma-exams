@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, August 2015, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, August 2015, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,8 +95,9 @@
 \begin{examinstructions}
 Do exactly 2 problems from Part A and 2 problems from Part B. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.
 \end{examinstructions}
-\section{Part A}
-\begin{examproblems}{0}
+\subsection{Part A}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 For \(n \ge 1\) and \(0<t<1\), let \(f_n(t)=t^n\). Prove that:
 \begin{examsubparts}
@@ -89,19 +106,23 @@ For \(n \ge 1\) and \(0<t<1\), let \(f_n(t)=t^n\). Prove that:
 \item[\textnormal{b)}]
 \((f_n)\) does not converge uniformly on \((0,1)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Suppose \(\mathcal F\) is an equicontinuous family of real-valued functions on \([0,1]\), such that 
+Suppose \(\mathcal F\) is an equicontinuous family of real-valued functions on \([0,1]\), such that
 \[
 \sup_{f\in\mathcal F}|f(0)|=M<+\infty.
 \]
  Prove that \(\mathcal F\) is uniformly bounded (that is, that \(\sup_{f\in\mathcal F}\sup_{x\in[0,1]}|f(x)|<+\infty\)).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove that every monotone function \(f:[a,b]\to\mathbb R\) is Riemann integrable.
 \end{examproblems}
-\section{Part B}
-\begin{examproblems}{0}
+\subsection{Part B}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State Fatou’s lemma and use it to prove the Dominated Convergence Theorem.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \((f_n)\) be a sequence of real-valued measurable functions on a measurable space \((X,\mathcal M)\). Prove that each of the following subsets of~\(X\) is measurable:
 \begin{examsubparts}
@@ -110,8 +131,9 @@ Let \((f_n)\) be a sequence of real-valued measurable functions on a measurable 
 \item[\textnormal{b)}]
 \(\{x\in X:\text{ the sequence }(f_n(x))\text{ is strictly increasing}\}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(g:[0,1]\times[0,1]\to\mathbb R\) be a function with the following properties. Prove that the function~\(h\) defined by 
+Let \(g:[0,1]\times[0,1]\to\mathbb R\) be a function with the following properties. Prove that the function~\(h\) defined by
 \[
 h(x)=\int_0^1 g(x,t)\,dt
 \]

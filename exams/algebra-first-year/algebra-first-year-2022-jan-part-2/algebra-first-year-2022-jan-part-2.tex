@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2022, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2022, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Answer four problems. You should indicate which problems you wish to have graded. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(R\) be a ring with 1 and let \(I \subset R\) be a proper (2-sided) ideal in~\(R\). Prove that there is a maximal ideal~\(M\) of~\(R\) which contains~\(I\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain.
+\def\ProblemHeadingText{Problem 3.}
 \item
 For each of the following polynomials \(f(X)\in\mathbb{Q}[X]\), either prove that \(f(X)\) is irreducible or give a nontrivial factorization of \(f(X)\).
 \begin{examsubparts}
@@ -94,10 +113,13 @@ For each of the following polynomials \(f(X)\in\mathbb{Q}[X]\), either prove tha
 \item[\textnormal{(c)}]
 \(f(X)=X^4+X^3+X^2+X+1\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring with 1, let~\(F\) be an~\(R\)-module, and let~\(S\) be a subset of~\(F\) such that every \(y\in F\) can be written uniquely in the form \(y=\sum_{x\in S}a_xx\), where \(a_x\) are elements of~\(R\), all but finitely many of which are 0. Prove that for every~\(R\)-module~\(M\) and every function \(\phi:S\to M\) there is a unique~\(R\)-module homomorphism \(\Phi:F\to M\) such that \(\Phi|_S=\phi\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Give a representative for each conjugacy class in the group \(\operatorname{GL}_3(\mathbb{F}_2)\), where \(\mathbb{F}_2=\mathbb{Z}/2\mathbb{Z}\) is the field with two elements.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(E/F\) be a field extension and let \(\alpha\in E\). Prove that if \([F(\alpha):F]\) is an odd integer then \(F(\alpha^2)=F(\alpha)\). Give an example where \([F(\alpha):F]\) is an even integer and \(F(\alpha^2)\ne F(\alpha)\).
 \end{examproblems}

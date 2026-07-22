@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 1993}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 1993\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,35 +92,45 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{PART I}
+\subsection{PART I}
 \begin{examinstructions}
 State the following theorems:
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Baire Category Theorem
+\def\ProblemHeadingText{Problem 2.}
 \item
 Urysohn’s Lemma
+\def\ProblemHeadingText{Problem 3.}
 \item
 Brouwer Fixed Point Theorem
+\def\ProblemHeadingText{Problem 4.}
 \item
 Jordan Separation Theorem for \(R^2\)
+\def\ProblemHeadingText{Problem 5.}
 \item
 Schoenflies Theorem for \(R^2\). Does the corresponding statement hold for \(R^3\)? Explain.
 \end{examproblems}
-\section{PART II}
+\subsection{PART II}
 \begin{examinstructions}
 For the following problems, show all work and write clearly. The proofs should be detailed, leaving no doubt about the correctness!
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 What is the universal cover of \(P^2\)? Prove your answer.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove: Let~\(C\) be the Cantor set, and let~\(X\) be any compact metric space. Then there exists a continuous, surjective function \(f:C\to X\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 State and prove the Finite Simplicial Approximation Theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Use the Seifert–van Kampen Theorem to compute the fundamental group of the Klein bottle.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}

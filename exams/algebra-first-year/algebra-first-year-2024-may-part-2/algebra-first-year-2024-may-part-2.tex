@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2024, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2024, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove the following version of the Chinese remainder theorem: Let~\(R\) be a commutative ring with~\(1\) and let \(I, J\) be ideals of~\(R\) such that \(I+J=R\). Then \(IJ=I\cap J\) and there is a ring isomorphism \(R/IJ\to (R/I)\times(R/J)\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be a commutative ring and let~\(M\) be a maximal ideal of~\(R\).
 \begin{examsubparts}
@@ -90,6 +108,7 @@ Prove that if~\(R\) has an identity then \(R/M\) is a field.
 \item[\textnormal{(b)}]
 Give an example of a commutative ring~\(R\) and a maximal ideal~\(M\) of~\(R\) such that \(R/M\) is not a field.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be a commutative ring with identity~\(1\) different from~\(0\).
 \begin{examsubparts}
@@ -100,10 +119,13 @@ Define what is a minimal prime ideal of~\(R\).
 \item[\textnormal{(c)}]
 Prove that~\(R\) has a minimal prime ideal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that the ring \(\mathbb{Z}[\sqrt{-2}]=\{a+b\sqrt{-2}:a,b\in\mathbb{Z}\}\) is a Euclidean domain with respect to the norm defined by \(N(a+b\sqrt{-2})=a^2+2b^2\) for all \(a,b\in\mathbb{Z}\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Determine the conjugacy classes of elements of order~\(8\) in \(GL(5,\mathbb{Q})\), and, for each conjugacy class, give a representative matrix. (You may use the fact that \(x^4+1\) is irreducible in \(\mathbb{Q}[x]\).)
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(F=\mathbb{Q}(\sqrt[4]{2},\sqrt{-1})\). Calculate the degree of the extension \(F/\mathbb{Q}\), and justify each of the steps of your calculation.
 \end{examproblems}

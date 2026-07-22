@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Ergodic Theory PhD Exam, May 2012}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/ergodic-theory-phd/}{Ergodic Theory PhD Exam}, May 2012\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,7 +98,8 @@ Do all problems.
 \begin{examinstructions}
 Notation: • The statement that \((X,\mathcal{B},\mu,f)\) is a mpt (measure preserving transformation) means that~\(X\) is a set with the probability measure~\(\mu\) defined on the~\(\sigma\)-algebra~\(\mathcal{B}\) and~\(f\) is a bijective, bi-measurable map \(f:X\to X\) which preserves the measure~\(\mu\). • The statement that \((X,d,\mathcal{B},\mu,f)\) is a mph (measure preserving homeomorphism) means that \((X,\mathcal{B},\mu,f)\) is a mpt and in addition, \((X,d)\) is a compact metric space, \(f\) is a homeomorphism, and~\(\mathcal{B}\) is the Borel~\(\sigma\)-algebra.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((X,d)\) be a compact metric space and \(f:X\to X\) a homeomorphism.
 \begin{examsubparts}
@@ -95,6 +112,7 @@ Define the omega-limit set \(\omega(x,f)\) of a point \(x\in X\) and show it is 
 \item[\textnormal{(d)}]
 Prove or disprove: For every \(x\in X\), that \(\omega(x,f)\subset\Lambda(f)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \((X,d)\) be a compact metric space and \(f:X\to X\) a homeomorphism.
 \begin{examsubparts}
@@ -103,6 +121,7 @@ Show that there is always an~\(f\)-invariant subset \(Z\subset X\) so that~\(f\)
 \item[\textnormal{(b)}]
 Show that there is always a measure~\(\mu\) so that \((X,d,\mathcal{B},\mu,f)\) is a mph.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Assume \((X,d,\mathcal{B},\mu,f)\) is a mph.
 \begin{examsubparts}
@@ -119,6 +138,7 @@ If \((X,d,\mathcal{B},\mu,f)\) is ergodic, show that~\(f\) is full orbit transit
 \item[\textnormal{(f)}]
 Show that \(\operatorname{supp}(\mu)\subset\Lambda(f)\), where \(\Lambda(f)\) is the recurrent set of~\(f\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 State carefully with complete hypothesis.
 \begin{examsubparts}
@@ -127,8 +147,9 @@ Birkhoff’s pointwise ergodic theorem
 \item[\textnormal{(b)}]
 von Neumann’s \(L^2\)-mean ergodic theorem
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let 
+Let
 \[
 A=\begin{pmatrix}1&1\\1&0\end{pmatrix}.
 \]
@@ -142,12 +163,13 @@ Show that periodic points of~\(\sigma\) are dense in \(\Sigma_A^+\).
 \item[\textnormal{(d)}]
 Show that \((\Sigma_A^+,\sigma)\) is forward orbit transitive.
 \item[\textnormal{(e)}]
-Let \(N_k\) be the number of fixed points of \(\sigma^k\) in \(\Sigma_A^+\). Compute explicitly 
+Let \(N_k\) be the number of fixed points of \(\sigma^k\) in \(\Sigma_A^+\). Compute explicitly
 \[
 \lim_{k\to\infty}\frac{\log(N_k)}{k}
 \]
  and justify your answer completely.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Fix a~\(p\) with \(0<p<1\).
 \begin{examsubparts}
@@ -156,16 +178,17 @@ Define the Bernoulli measure \(\mu_p\) on the two-sided shift on two symbols \(\
 \item[\textnormal{(b)}]
 Show that \((\Sigma_2,\mathcal{B},\sigma,\mu_p)\) is strong mixing (you don’t have to prove it is a mpt, you may assume that is true).
 \item[\textnormal{(c)}]
-Define \(\alpha:\Sigma_2\to\mathbb{R}\) by 
+Define \(\alpha:\Sigma_2\to\mathbb{R}\) by
 \[
 \alpha(\ldots s_{-1}s_0s_1s_2\ldots)=2s_{-1}-s_0+s_2^2.
 \]
- Compute the following limit for \(\mu_p\)-almost every sequence \(\underline{s}\in\Sigma_2\): 
+ Compute the following limit for \(\mu_p\)-almost every sequence \(\underline{s}\in\Sigma_2\):
 \[
 \lim_{N\to\infty}\frac{1}{N}\sum_{i=0}^{N-1}\alpha(\sigma^i(\underline{s})).
 \]
  and justify your answer completely.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(f:\mathbb{R}^2\to\mathbb{R}^2\) be defined by \(f(x,y)=(3x,(1/2)y)\).
 \begin{examsubparts}

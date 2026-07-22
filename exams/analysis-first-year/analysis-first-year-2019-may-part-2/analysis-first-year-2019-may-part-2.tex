@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2019, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2019, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,17 +95,20 @@
 \begin{examinstructions}
 Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f_n:[a,b]\to\mathbb{R}\) be a uniformly bounded sequence of Riemann integrable functions. Prove that if \(f_n\to f\) uniformly, then~\(f\) is Riemann integrable.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(f:[0,1]\to\mathbb{R}\) be continuous. Suppose that 
+Let \(f:[0,1]\to\mathbb{R}\) be continuous. Suppose that
 \[
 \int_0^1 f(x)x^{2019k}\,dx=0
 \]
  for all integers \(k\ge 0\). Must~\(f\) be identically~\(0\)? Prove, or give a counterexample.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(f_n:[0,1]\to\mathbb{R}\) be a sequence of measurable functions and suppose there is a function \(g\in L^1[0,1]\) such that \(|f_n|\le g\) for all~\(n\). Consider the functions 
+Let \(f_n:[0,1]\to\mathbb{R}\) be a sequence of measurable functions and suppose there is a function \(g\in L^1[0,1]\) such that \(|f_n|\le g\) for all~\(n\). Consider the functions
 \[
 F_n(t)=\int_0^t f_n(x)\,dx.
 \]
@@ -100,6 +119,7 @@ each \(F_n\) is continuous on \([0,1]\)
 \item[\textnormal{ii)}]
 there is a subsequence \((F_{n_k})\) converging uniformly on \([0,1]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((X,\mathcal{M})\) be a measurable space and \(f_n:X\to\mathbb{R}\), \(n=1,2,3,\ldots\), a sequence of measurable functions. Prove that each of the following subsets of~\(X\) is measurable:
 \begin{examsubparts}
@@ -110,8 +130,9 @@ Let \((X,\mathcal{M})\) be a measurable space and \(f_n:X\to\mathbb{R}\), \(n=1,
 \item[\textnormal{c)}]
 \(\left\{x\,\middle|\,\displaystyle\lim_{n\to\infty}n f_n(x)=0\right\}\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(f_1\ge f_2\ge f_3\ge\cdots\) be nonnegative measurable functions on a measure space \((X,\mathcal{M},\mu)\), and put \(f=\lim f_n\). Suppose that \(\int f_k\,d\mu<\infty\) for some~\(k\). Prove that 
+Let \(f_1\ge f_2\ge f_3\ge\cdots\) be nonnegative measurable functions on a measure space \((X,\mathcal{M},\mu)\), and put \(f=\lim f_n\). Suppose that \(\int f_k\,d\mu<\infty\) for some~\(k\). Prove that
 \[
 \int f\,d\mu=\lim\int f_n\,d\mu.
 \]

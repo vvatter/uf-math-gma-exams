@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, September 1989}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, September 1989\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,25 +92,35 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State the exact homology sequence of a pair.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Describe all coverings of the torus \(T^2=S^1\times S^1\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 State the Lefschetz fixed point theorem for compact simplicial complexes.
+\def\ProblemHeadingText{Problem 4.}
 \item
 State Tietze’s extension theorem for normal spaces.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(K=K_1\cup K_2\) be a simplicial complex with \(K_1\) and \(K_2\) subcomplexes, and let \(A=K_1\cap K_2\). State the Mayer–Vietoris sequence for this.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(X\) be the set of points in the plane which is the closure of the set \(S=\{(x,\sin(1/x))\mid 0<x\leq 1\}\). Show that there is no continuous mapping \(f:[0,1]\to X\) which is onto.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that a compact Hausdorff space is normal.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(f,g:X\to S^n\) be any continuous mappings. Suppose that for all \(x\in X\), \(f(x)\) and \(g(x)\) are not antipodal. Show that~\(f\) and~\(g\) are homotopic.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Use the van Kampen theorem to compute the fundamental group of the surface of genus 2.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Give an example of a space~\(X\) for which \(\pi_1(X,x_0)\) is not finitely generated.
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Probability PhD Exam, May 1998}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, May 1998\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,7 +92,8 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(X\) and~\(Y\) be independent and uniform on \([0,1]\). Find:
 \begin{examsubparts}
@@ -85,12 +102,14 @@ the distribution of \(X+Y\).
 \item[\textnormal{b)}]
 the conditional density of~\(X\) given \(X+Y=z\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(X_0,X_1,\ldots,X_n,\ldots\) be i.i.d. with mean~\(m\). Let~\(N\) be Poisson with mean~\(\lambda\), independent of the~\(X\)’s. Define 
+Let \(X_0,X_1,\ldots,X_n,\ldots\) be i.i.d. with mean~\(m\). Let~\(N\) be Poisson with mean~\(\lambda\), independent of the~\(X\)’s. Define
 \[
 Y=X_0+\cdots+X_N.
 \]
  Prove that~\(Y\) is integrable. Find \(E(Y)\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 State precisely (all for i.i.d.):
 \begin{examsubparts}
@@ -101,20 +120,23 @@ the central limit theorem.
 \item[\textnormal{c)}]
 the law of the iterated logarithm.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Define a martingale relative to a filtration \(\{\mathcal F_n\}\), \(n=0,1,2,\ldots\). Define a stopping time relative to this filtration. State the optional sampling theorem. State and prove the martingale convergence theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 What is an infinitely divisible distribution on \(\mathbb R^1\). Prove that a non-trivial infinitely divisible distribution cannot have compact support.
+\def\ProblemHeadingText{Problem 6.}
 \item
-Define a standard Brownian Motion~\(W\) starting at 0. Define new processes \(W_1,W_2,W_3\) by: 
+Define a standard Brownian Motion~\(W\) starting at 0. Define new processes \(W_1,W_2,W_3\) by:
 \[
 W_1(t)=cW\!\left(\frac{t}{c^2}\right),\qquad t\geq0,\quad c\text{ real},\ c\neq0,
 \]
- 
+
 \[
 W_2(t)=tW\!\left(\frac1t\right),\qquad t>0,\quad W_2(0)=0,
 \]
- 
+
 \[
 W_3(t)=
 \begin{cases}
@@ -123,6 +145,7 @@ W(t),&\text{otherwise.}
 \end{cases}
 \]
  Show that \(W_1,W_2,W_3\) are the standard Brownian motions.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(\varphi(t)=\int e^{itx}\,\mu(dx)\) be a characteristic function where~\(\mu\) is a probability measure on \(\mathbb R^1\).
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, May 2021}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, May 2021\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,53 +95,62 @@
 \begin{examinstructions}
 Solve five of the following problems. Please explain your work in a careful and logical way. You can use any theorem, identity, functional equation proved in class during Fall 2020 and Spring 2021. Please make sure to state precisely any result or theorem you are using in your solutions. Failing to do so may result in a lower grade.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(\Gamma(z)\) be the Euler gamma function. Recall this is a meromorphic function over \(\mathbb C\) we defined via the infinite product 
+Let \(\Gamma(z)\) be the Euler gamma function. Recall this is a meromorphic function over \(\mathbb C\) we defined via the infinite product
 \[
 \Gamma(z)=\frac{e^{-\gamma z}}{z}\prod_{k=1}^{\infty}\left(1+\frac{z}{k}\right)^{-1}e^{z/k},
 \]
- where~\(\gamma\) is the Euler constant. Compute the integral 
+ where~\(\gamma\) is the Euler constant. Compute the integral
 \[
 \int_{C_{5/2}(0)}\Gamma(z)\,dz,
 \]
  where \(C_{5/2}(0)\) is the circle of radius \(5/2\) centered at the origin oriented counterclockwise.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that the polynomial \(z^7-4z^3+z-1\) has three zeros inside the unit circle (counted with multiplicities).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(U\) be a simply connected open subset of \(\mathbb C\) such that \(U\ne\mathbb C\). Show that the group of analytic automorphisms of~\(U\), say \(\operatorname{Aut}(U)\), acts transitively on~\(U\). What happens if \(U=\mathbb C\)?
+\def\ProblemHeadingText{Problem 4.}
 \item
-Find all entire functions \(f:\mathbb C\to\mathbb C\) such that 
+Find all entire functions \(f:\mathbb C\to\mathbb C\) such that
 \[
 f(f(z))=z,
 \]
  for all \(z\in\mathbb C\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Show that if \(f:\mathbb C\to\mathbb C\) is a continuous function such that~\(f\) is holomorphic on \(\mathbb C\setminus[-1,1]\) (the open set obtained by removing the closed interval \([-1,1]\) from the complex plane), then~\(f\) is necessarily analytic everywhere.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(P(z)\) be a polynomial with complex coefficients. Show that if the degree of \(P(z)\) is at least two then the sum of residues of \(1/P(z)\) (over all zeros of \(P(z)\)) is zero. What happens if \(P(z)\) has degree one?
+\def\ProblemHeadingText{Problem 7.}
 \item
-Consider the open subset of \(\mathbb C\) 
+Consider the open subset of \(\mathbb C\)
 \[
 E:=\{z\in\mathbb C\mid |z|>1\}.
 \]
  Does there exist an analytic isomorphism between~\(E\) and \(\mathbb C^*:=\mathbb C\setminus\{0\}\)?
+\def\ProblemHeadingText{Problem 8.}
 \item
-Let \(P_n(z)\) be a polynomial of order~\(n\) such that 
+Let \(P_n(z)\) be a polynomial of order~\(n\) such that
 \[
 |P_n(z)|\le M,\qquad M>0,
 \]
- for \(|z|=1\). Show that 
+ for \(|z|=1\). Show that
 \[
 |P_n(z)|\le M|z|^n
 \]
  for \(|z|\ge 1\).
+\def\ProblemHeadingText{Problem 9.}
 \item
-Show that there is no meromorphic function over \(\mathbb C\) such that 
+Show that there is no meromorphic function over \(\mathbb C\) such that
 \[
 f(z+1)=f(z),\qquad f(z+i)=f(z)
 \]
- for all \(z\in\mathbb C\), whose only poles are simple poles at the points 
+ for all \(z\in\mathbb C\), whose only poles are simple poles at the points
 \[
 m+ni,\qquad m,n\in\mathbb Z.
 \]

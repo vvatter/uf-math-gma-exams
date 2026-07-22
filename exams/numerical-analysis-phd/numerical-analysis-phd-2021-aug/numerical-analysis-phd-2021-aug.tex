@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, August 2021}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, August 2021\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -80,7 +96,7 @@
 Do 4 (four) of the first 5 (1–5) and 4 (four) of the last 5 problems (6–10).
 
 \par
-You may use the following degree~\(n\) orthogonal polynomials as you like. 
+You may use the following degree~\(n\) orthogonal polynomials as you like.
 \[
 \begin{array}{c|c|c}
 n & \text{Legendre} & \text{Chebyshev} \\
@@ -93,7 +109,8 @@ n & \text{Legendre} & \text{Chebyshev} \\
 \end{array}
 \]
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose \(A\in\mathbb{C}^{m\times m}\).
 \begin{examsubparts}
@@ -102,20 +119,22 @@ Suppose~\(A\) is normal and upper-triangular. Show that~\(A\) is diagonal.
 \item[\textnormal{(b)}]
 Prove that a Schur decomposition diagonalizes~\(A\) if and only if~\(A\) is normal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Suppose \(A\in\mathbb{C}^{m\times n}\) with \(m\ge n\). Show that \(A^*A\) is nonsingular if and only if~\(A\) has full rank.
 \item[\textnormal{(b)}]
-Suppose \(A\in\mathbb{C}^{m\times m}\), and let \(a_j\) be the~\(j\)th column of~\(A\). Prove the inequality 
+Suppose \(A\in\mathbb{C}^{m\times m}\), and let \(a_j\) be the~\(j\)th column of~\(A\). Prove the inequality
 \[
 |\det A|\le \prod_{j=1}^{m}\lVert a_j\rVert_2.
 \]
  (Hint: it may be useful to consider the QR decomposition of~\(A\).)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Define the matrices~\(A\) and~\(B\) by 
+Define the matrices~\(A\) and~\(B\) by
 \[
 A=\begin{pmatrix}
 1&2&3\\
@@ -137,6 +156,7 @@ Find an economy singular value decomposition of~\(A\).
 \item[\textnormal{(b)}]
 Find an economy QR decomposition of~\(B\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\{a_1,\ldots,a_n\}\) be a linearly independent set of vectors. Consider the Gram–Schmidt and modified Gram–Schmidt algorithms for computing an orthonormal basis \(\{q_1,\ldots,q_n\}\) so that \(\operatorname{span}\{q_1,\ldots,q_k\}=\operatorname{span}\{a_1,\ldots,a_k\}\), for each \(k=1,\ldots,n\).
 
@@ -148,6 +168,7 @@ Use the Gram–Schmidt algorithm to compute \(v_3\) so that \(q_3=v_3/\lVert v_3
 \item[\textnormal{(b)}]
 Use the modified Gram–Schmidt algorithm to compute \(v_3\) so that \(q_3=v_3/\lVert v_3\rVert\). What is \(v_3^*q_2\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose \(A\in\mathbb{C}^{m\times m}\).
 \begin{examsubparts}
@@ -156,8 +177,9 @@ Prove Gershgorin’s disk theorem: Let \(r_i=\sum_{j=1,\,j\ne i}^{m}|a_{ij}|\). 
 \item[\textnormal{(b)}]
 Suppose~\(A\) is Hermitian positive definite. Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
-Consider the function \(f(t)\) on \([-1,1]\) given by 
+Consider the function \(f(t)\) on \([-1,1]\) given by
 \[
 f(t)=
 \begin{cases}
@@ -174,19 +196,23 @@ Find the best approximation of~\(f\) in \(P_1\) in the norm induced by the inner
 \item[\textnormal{(c)}]
 Find the best approximation of~\(f\) in \(P_2\) in the norm induced by the inner-product \((u,v)=\int_{-1}^{1}uv\,dt\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(\{\phi_k\}_{k=0}^{n+1}\) be a set of orthogonal polynomials on \([a,b]\), with respect to the inner-product \((f,g)=\int_a^b f(x)g(x)w(x)\,dx\), indexed so that \(\phi_k\) is of degree~\(k\). Recall that the weight function~\(w\) for the inner-product satisfies \(w\in L^\infty\) and \(w(x)>0\) for almost every \(x\in[a,b]\). Prove that \(\phi_k\) has~\(k\) distinct roots \(\{x_j^{(k)}\}_{j=1}^k\), with \(x_j^{(k)}\in[a,b]\), \(j=1,\ldots,k\).
+\def\ProblemHeadingText{Problem 8.}
 \item
-Find \(x_0,x_1,x_2\in[a,b]\), and \(c_0,c_1,c_2\in\mathbb{R}\), that maximize the degree of exactness for the quadrature formula 
+Find \(x_0,x_1,x_2\in[a,b]\), and \(c_0,c_1,c_2\in\mathbb{R}\), that maximize the degree of exactness for the quadrature formula
 \[
 \int_a^b f(x)\,dx\approx c_0f(x_0)+c_1f(x_1)+c_2f(x_2).
 \]
+\def\ProblemHeadingText{Problem 9.}
 \item
-The Littlewood–Salem–Izumi constant \(\alpha_0\) is the unique solution \(\alpha_0\in(0,1)\) of 
+The Littlewood–Salem–Izumi constant \(\alpha_0\) is the unique solution \(\alpha_0\in(0,1)\) of
 \[
 \int_0^{3\pi/2}\frac{\cos(t)}{t^\alpha}\,dt=0.
 \]
  Describe how you could use Newton’s method together with a composite 2 point Gauss quadrature rule over~\(N\) subintervals to approximate \(\alpha_0\). Be specific about how each function used in the Newton method is defined, and be specific about how the nodes and weights for the quadrature rule are defined.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Consider the ODE \(y'=f(x,y)\) on an interval \(a\le x\le b\), with \(h=(b-a)/N\) for some given value of~\(N\).
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2026, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2026, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer 4 questions. Write your solutions clearly in complete English sentences. You may quote theorems (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stating clearly any theorems you wish to apply.
 \begin{examsubparts}
@@ -90,6 +107,7 @@ Prove that the following polynomials are irreducible in \(\mathbb{Q}[x]\), stati
 \item[\textnormal{(c)}]
 \(x^4+x^3+x^2+x+1\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be a commutative ring with \(1\ne 0\).
 \begin{examsubparts}
@@ -100,6 +118,7 @@ Prove that the set of all nilpotent elements of~\(R\) forms an ideal (called the
 \item[\textnormal{(c)}]
 Show that the nilradical is contained in every prime ideal of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(R=\mathbb{Z}[\sqrt{-3}]=\{a+b\sqrt{-3}\mid a,b\in\mathbb{Z}\}\).
 \begin{examsubparts}
@@ -110,6 +129,7 @@ Prove that~\(R\) is not a unique factorization domain.
 \item[\textnormal{(c)}]
 Is~\(R\) a principal ideal domain? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a commutative ring with 1 and let~\(M\) be a module over~\(R\).
 \begin{examsubparts}
@@ -120,8 +140,10 @@ Prove that if~\(M\) is a Noetherian~\(R\)-module, then every nonempty set of sub
 \item[\textnormal{(c)}]
 Give an example of a non-Noetherian commutative ring with 1.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Using the rational canonical form, find one representative of each conjugacy class of elements of order 3 in \(\mathrm{GL}(4,\mathbb{Q})\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(K\subseteq E\) be fields.
 \begin{examsubparts}

@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, January 2000}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2000\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,7 +101,8 @@
 \begin{examinstructions}
 Do any 8 of the following 10 problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has four parts.
 \begin{examsubparts}
@@ -98,6 +115,7 @@ Show: If the matrix \(A \in \mathbb{R}^{n \times n}\) has~\(n\) independent eige
 \item[\textnormal{(4)}]
 Show: If \(A \in \mathbb{R}^{n \times n}\) is symmetric, then the matrix can be diagonalized by an orthogonal matrix.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -108,6 +126,7 @@ Give a careful proof of the singular value decomposition.
 \item[\textnormal{(3)}]
 Show how the singular value decomposition for~\(A\) naturally yields a solution to the least squares problem \(\min_x \|Ax-y\|_2\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source calls~\(H\) an “orthogonal projection,” but \(H=I-2ww^{\mathsf{T}}\) is generally a Householder reflection (and an orthogonal matrix), not a projection. The source wording was retained because the intended replacement is not uniquely determined.
@@ -121,6 +140,7 @@ Show: If \(w=\frac{x-y}{\|x-y\|}\), \(\|x\|=\|y\|\), and \(H=I-2ww^t\), then \(H
 \item[\textnormal{(3)}]
 Given an arbitrary matrix \(A \in \mathbb{R}^{m \times n}\), construct an orthogonal matrix \(Q \in \mathbb{R}^{m \times m}\) and an upper triangular matrix \(R \in \mathbb{R}^{m \times n}\) such that \(A=QR\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -131,6 +151,7 @@ If \(\lambda_k\) is a unique eigenvalue which does not have the largest magnitud
 \item[\textnormal{(3)}]
 Describe the \(QR\) iteration algorithm for computing the eigenvalues for a matrix \(A \in \mathbb{R}^{n \times n}\). Draw analogues between the \(QR\) method and the power method.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 BACKGROUND: It can be shown that for~\(\epsilon\) small there are differentiable functions \(x(\epsilon)\), and \(\lambda(\epsilon)\) such that \((A+\epsilon F)x(\epsilon)=\lambda(\epsilon)x(\epsilon)\), where \(\|F\|_2=1\). Let \(x=x(0)\) be a right eigenvector of~\(A\), and~\(y\) be a left eigenvector of~\(A\).
 \begin{examsubparts}
@@ -143,6 +164,7 @@ Using part (2) above show that \(\left|\lambda'(0)\right|=\left\|\frac{y^tFx}{y^
 \item[\textnormal{(4)}]
 Explain the implications of (3) to the stability of eigenvalues of symmetric matrices, and highly unsymmetric matrices.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has five parts.
 \begin{examsubparts}
@@ -157,6 +179,7 @@ Give a careful statement of the theorem that shows that the roots of \(T_n(x)\) 
 \item[\textnormal{(5)}]
 For the function \(f(x)=\sin(\pi x)\) defined on \([-1,1]\) and polynomial interpolating function \(p_n(x)\) with interpolating points taken to be the roots of \(T_n(x)\), and tolerance \(\epsilon=0.00001\), find an integer~\(n\) such that the interpolating polynomial \(p_n(x)\) has the property that \(|p_n(x)-f(x)|<\epsilon\) for all \(x \in [-1,1]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -165,6 +188,7 @@ Devise a 2nd order method for computing the cube root of a number.
 \item[\textnormal{(2)}]
 Show that your method always works.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -173,6 +197,7 @@ Explain Romberg’s technique for numerical approximation of an integral.
 \item[\textnormal{(2)}]
 Discuss the ideas and concepts that explain why the method works.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -181,6 +206,7 @@ Set up the system of linear equations to be solved when a finite difference appr
 \item[\textnormal{(2)}]
 Set up the system of linear equations to be solved when a collocation approach (with basis functions \(\sin(k\pi x)\)) is used to solve the two point boundary value problem: \(v''+b(x)v'+c(x)v=d(x)\), where \(v(0)=0\) and \(v(1)=0\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -189,7 +215,7 @@ Describe the defining properties of the Legendre polynomials on the interval \([
 \item[\textnormal{(2)}]
 Give a careful statement of the theorem fundamental to Gauss Quadrature.
 \item[\textnormal{(3)}]
-Show how the Gauss Quadrature method can be used to approximate the integral 
+Show how the Gauss Quadrature method can be used to approximate the integral
 \[
 \int_0^1 \exp(x^2)\,dx.
 \]

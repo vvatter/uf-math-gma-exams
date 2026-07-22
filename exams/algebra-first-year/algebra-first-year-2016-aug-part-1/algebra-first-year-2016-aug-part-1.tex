@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, August 2016, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2016, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(G\) be a cyclic group, and let~\(H\) be a subgroup of~\(G\). Prove that~\(H\) is cyclic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a finite group, and suppose it is acting on the finite set~\(\Omega\). Suppose~\(N\) is a normal subgroup of~\(G\) and~\(N\) acts transitively on~\(\Omega\). Let \(\omega \in \Omega\), and let \(G_\omega\) be the stabilizer in~\(G\) of~\(\omega\). Prove that \(|G:N|=|G_\omega:G_\omega\cap N|\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(G\) be a finite group, let~\(H\) be a subgroup of~\(G\), and let \(n=|G:H|\) with \(n>1\).
 \begin{examsubparts}
@@ -92,10 +111,13 @@ Prove that if~\(G\) is simple then~\(G\) is isomorphic to a subgroup of the symm
 \item[\textnormal{(b)}]
 Give an example to show that, under the general assumptions of the question, if~\(G\) is not simple it is possible that~\(G\) is not isomorphic to any subgroup of \(S_n\) (and prove that your example has these properties).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(p\) be a prime, and let~\(G\) be a finite group such that each element of~\(G\) has order a power of~\(p\). Prove that, if~\(G\) is not trivial, then the center \(Z(G)\) of~\(G\) is not trivial. Deduce that~\(G\) is nilpotent.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(S_n\) be the symmetric group in \(n\geq 1\) letters. Let \(\sigma\in S_n\). Describe what is meant by the cycle type of~\(\sigma\). Prove that two elements \(\sigma,\tau\in S_n\) are conjugate to each other in \(S_n\) if and only if they have the same cycle type.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that a group of order \(30\) must have a normal subgroup of order \(15\).
 \end{examproblems}

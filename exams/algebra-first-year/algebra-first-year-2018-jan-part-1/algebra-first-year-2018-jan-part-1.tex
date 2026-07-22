@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2018, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2018, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Give an example of each, with a few words of explanation.
 \begin{examsubparts}
@@ -92,10 +109,13 @@ A nilpotent group which isn’t a~\(p\)-group.
 \item[\textnormal{(d)}]
 A finite group which is neither solvable nor simple.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) act on the set~\(A\) and let \(a \in A\). Prove that \(|G \cdot a| = |G : G_a|\). (Note that \(G \cdot a\) is the orbit containing~\(a\), while \(G_a\) is the stabilizer of~\(a\) in~\(G\).)
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(G\) be a finite abelian group of order~\(n\) and let~\(k\) be an integer which is relatively prime to~\(n\). Define \(\tau : G \to G\) by \(\tau(g) = g^k\). Prove that \(\tau \in \operatorname{Aut}(G)\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(G\) be a finite group and let~\(H\) and~\(K\) be subgroups of~\(G\). Recall that \(HK = \{xy : x \in H, y \in K\}\).
 \begin{examsubparts}
@@ -107,6 +127,7 @@ Prove the following formula for the cardinality of the set \(HK\):
 \item[\textnormal{(b)}]
 Give an example in which \(|HK|\) does not divide \(|G|\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(G\) be a group and let~\(A\) be an abelian group.
 \begin{examsubparts}
@@ -115,6 +136,7 @@ Define the commutator subgroup \(G' = [G,G]\) of~\(G\).
 \item[\textnormal{(b)}]
 Prove that if \(\phi : G \to A\) is a homomorphism then there is a unique homomorphism \(\overline{\phi} : G/G' \to A\) such that \(\phi = \overline{\phi} \circ \pi\), where \(\pi : G \to G/G'\) is the projection map.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Determine all groups of order \(99\) up to isomorphism.
 \end{examproblems}

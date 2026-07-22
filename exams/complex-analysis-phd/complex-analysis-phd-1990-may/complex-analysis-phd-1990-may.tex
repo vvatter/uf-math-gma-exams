@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Complex Analysis PhD Exam, May 1990}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/complex-analysis-phd/}{Complex Analysis PhD Exam}, May 1990\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,19 +92,26 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that \(u(x,y)=x^3-3xy^2+x\) is harmonic in \(\mathbb{R}^2\). Find a harmonic conjugate for~\(u\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be the region which is the intersection of the disks \(|z|<1\) and \(|z-1|<1\). Find a function which maps~\(G\) conformally onto the unit disk.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Evaluate \(\displaystyle \int_0^\infty \frac{\cos x}{(1+x^4)^2}\,dx\) using contour integration.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Show that \(\displaystyle f(s)=\sum_{n=1}^\infty \frac{(-1)^{n-1}}{n^s}\) is analytic in \(\operatorname{Re}s=\sigma>1\). Prove that~\(f\) can be analytically continued to all of~\(\mathbb{C}\) as an entire function. (Hint: Write \(f(s)\) in terms of \(\zeta(s)\) in \(\sigma>1\). Use properties of \(\zeta(s)\) to show that~\(f\) can be made entire.)
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(\displaystyle f(z)=\sum_{n=1}^\infty \frac{z^n}{n^2}\). What is the radius of convergence~\(R\) of this series? Is the series convergent at all points \(|z|=R\)? At what points of \(|z|=R\) is~\(f\) analytic? (Hint: Think of~\(f\) as the primitive of \(-\log(1-z)/z\).)
+\def\ProblemHeadingText{Problem 6.}
 \item
 Find all entire functions~\(f\) such that \(|f(z)|=1\) whenever \(|z|=1\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 We say that \(z_0\) is a fixed point of~\(f\) if \(f(z_0)=z_0\). Suppose~\(f\) is analytic in a region~\(D\) containing the closed unit disk.
 \begin{examsubparts}
@@ -97,16 +120,19 @@ How many fixed points must~\(f\) have in this disk?
 \item[\textnormal{(b)}]
 If \(|f(z)|>2\) when \(|z|=1\) and \(f(0)=1\), must~\(f\) have a zero in this unit disk? Justify your answers in both parts.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Suppose~\(f\) is an entire function and \(\operatorname{Re}f(z)\leq A+B|z|^k\) for all~\(z\), where \(A,B\) and~\(k\) are positive numbers. Prove that~\(f\) must be a polynomial. Describe the polynomial as detail as possible when \(A=0\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose that~\(f\) is a conformal map of unit disk onto a square with center at~\(0\) and \(f(0)=0\). Prove that \(f(iz)=if(z)\). If \(\displaystyle f(z)=\sum^\infty c_nz^n\), prove that \(c_n=0\) unless \(n-1\) is a multiple of~\(4\). (Hint: Show that \(if(z)\) is also a conformal map of the unit disk onto the same square.)
+\def\ProblemHeadingText{Problem 10.}
 \item
-Deduce from the identity 
+Deduce from the identity
 \[
 \sin \pi z=\pi z\prod_{n=1}^\infty\left(1-\frac{z^2}{n^2}\right)
 \]
- that 
+ that
 \[
 \sum_{n=1}^\infty (n^2+k^2)^{-1}=\frac{\pi}{2k}\frac{e^{2\pi k}+1}{e^{2\pi k}-1}-\frac{1}{2k^2}.
 \]

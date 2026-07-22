@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2018, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2018, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,21 +95,25 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that the ring
 \[
 \mathbb{Z}[\omega]=\{a+b\omega\in\mathbb{C}\mid a,b\in\mathbb{Z}\},\qquad \omega=\frac{1+i\sqrt{3}}{2}
 \]
  is a Euclidean domain.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be a commutative ring with identity. A subset \(S\subseteq R\) is multiplicative if it is nonempty and is closed under multiplication. Show that if~\(S\) is a multiplicative subset of~\(R\) not containing~\(0\), there is a prime ideal \(\mathfrak{p}\subset R\) such that \(\mathfrak{p}\cap S=\varnothing\). (First show using Zorn’s lemma that the set of ideals \(I\subset R\) such that \(I\cap S=\varnothing\) has a maximal element. Then show, using an argument by contradiction that any such maximal element is prime).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Prove the following form of Eisenstein’s criterion: Let~\(R\) be an integral domain and \(P\subset R\) a prime ideal. Suppose
 \[
 f(X)=X^d+a_{d-1}X^{d-1}+\cdots+a_1X+a_0\in R[X]
 \]
  is a monic polynomial such that \(a_i\in P\) for \(i<d\) and \(a_0\notin P^2\). Then \(f(X)\) is irreducible in \(R[X]\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be an integral domain.
 \begin{examsubparts}
@@ -104,6 +124,7 @@ Define what it means for an element of~\(R\) to be prime.
 \item[\textnormal{(iii)}]
 Show that a prime element is irreducible.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(R\) is a commutative ring with identity, \(M\) and~\(N\) are~\(R\)-modules and \(f:M\to N\) is an~\(R\)-module homomorphism. Let \(I\subset R\) be an ideal.
 \begin{examsubparts}
@@ -116,6 +137,7 @@ Show that there is a homomorphism \(\overline{f}:M/IM\to N/IN\) such that
 \item[\textnormal{(ii)}]
 Show that if~\(I\) is nilpotent (i.e. \(I^k=0\) for some \(k>0\)) and \(\overline{f}\) is surjective then~\(f\) is surjective.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Find representatives of every similarity class of \(6\times 6\) matrices with rational coefficients whose minimal polynomial is \((x+1)^2(x-1)\).
 \end{examproblems}

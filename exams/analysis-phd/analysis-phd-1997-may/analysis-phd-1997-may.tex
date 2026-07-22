@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 1997}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 1997\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,21 +98,29 @@ Be sure to write all steps in a neat and logical fashion to receive credit. Give
 \par
 Definition: A σ-algebra \(\mathcal F\) is separable if \(\mathcal F=\sigma\{A_j:j\geq 1\}\) for some sequence of sets \(A_j\).
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(\{\mathcal F_k\}\) be a sequence of separable σ-algebras of subsets of a set~\(X\). Let \(\mathcal F\) be the smallest σ-algebra of subsets of~\(X\) which contains \(\mathcal F_k\) for each~\(k\). Prove that \(\mathcal F\) is separable. [Hint: Use the monotone class theorem.]
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \((X,\mathcal F,\mu)\) be a finite measure space and let \((Y,\Sigma)\) be a measurable space. Let \(f:X\to Y\) be \(\mathcal F,\Sigma\)-measurable. Define \(\nu(B)=\mu(f^{-1}(B))\) for \(B\in\Sigma\). Show~\(\nu\) is a measure on~\(\Sigma\), and if \(g:Y\to[0,\infty]\) is~\(\Sigma\)-measurable, then \(\int_Y g\,d\nu=\int_X g\circ f\,d\mu\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(m\) be Lebesgue measure on \(\mathbb R\). Let \(f_m=-\mathbf 1_{A_m}\), where \(A_m=(m,\infty)\). Show \((f_m)\) is increasing, but the monotone convergence theorem is not true. Why is this?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((X,\mathcal S,\mu)\) and \((Y,\mathcal J,\nu)\) be two finite measure spaces. Construct the product measure \(\mu\times\nu\) on \(\mathcal S\otimes\mathcal J\). Be sure to prove \(\mu\times\nu\) is countably additive.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((X,\Sigma,\mu)\) be a finite measure space. Prove that the dual of \(L^1(X,\Sigma,\mu)\) is isometrically isomorphic to \(L^\infty(X,\Sigma,\mu)\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \((X,\mathcal F,\mu)\) be a finite measure space. Suppose that \(\mathcal F\) is separable. Show \(L^1(X,\mathcal F,\mu)\) is separable.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \((X,\mathcal F,\mu)\) be a measure space. Let \(\{f_m\}\) be a sequence of measurable functions such that \(\int_X|f_m|\,d\mu<\frac{1}{2^m}\). Does it follow that \(\sum_{m=1}^\infty f_m\) converges a.e. \(\mu\) on~\(X\)?
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \((\Omega,\mathcal F,P)\) be a probability space. Let \(X:\Omega\to\mathbb R\) be an integrable function. Let \(F(x)=P(X<x)\), for \(x\in\mathbb R\).
 \begin{examsubparts}
@@ -105,6 +129,7 @@ Show \(F:\mathbb R\to[0,1]\) is monotone, left continuous, \(\lim_{x\to-\infty}F
 \item[\textnormal{(b)}]
 Show \(\int_\Omega X^2\,dP=\int_{\mathbb{R}} x^2\,dF(x)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let \((\Omega,\mathcal F,P)\) be a probability space. Let \((X_m)\) be a sequence of independent random variables on~\(\Omega\).
 \begin{examsubparts}
@@ -113,6 +138,7 @@ Show \((\overline{\lim}X_m>3)\) is a tail event relative to \((X_m)\).
 \item[\textnormal{(b)}]
 If \(P(\overline{\lim}X_m>3)>0.2\), what is \(P(\overline{\lim}X_m>3)\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let \(\ell^\infty\) be the Banach space consisting of all real sequences \((a_i)\) such that \(\sup_i|a_i|<\infty\), with \(\|(a_i)\|:=\sup_i|a_i|\). Let~\(c\) be the subspace of \(\ell^\infty\) consisting of \((a_i)\) such that \(\lim a_i\) exists. Prove that there exists a continuous linear functional \(F:\ell^\infty\to\mathbb R\) such that \(F((a_i))=\lim a_i\) for each \((a_i)\in c\). [Hint: Use the Hahn–Banach theorem.]
 \end{examproblems}

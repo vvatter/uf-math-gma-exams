@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, September 2003}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, September 2003\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do any 8 of the following 10 problems:
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -96,22 +113,25 @@ How will you use Problem (1a) to conclude that the spectra of \(AB\) and \(BA\) 
 \item[\textnormal{(c)}]
 For all rectangular matrices \(A\in\mathbb C^{m\times n}\), \(B\in\mathbb C^{n\times m}\) (\(m\ne n\)), does the spectrum of \(AB\) and \(BA\) coincide?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(A\in\mathbb C^{m\times m}\), and let \(E\in\mathbb C^{m\times m}\) be of rank \(k<m\). Suppose the matrix \(M=A+E\) is invertible. Consider GMRES applied to the preconditioned system 
+Let \(A\in\mathbb C^{m\times m}\), and let \(E\in\mathbb C^{m\times m}\) be of rank \(k<m\). Suppose the matrix \(M=A+E\) is invertible. Consider GMRES applied to the preconditioned system
 \[
 M^{-1}Ax=M^{-1}b.
 \]
  Give a tight bound, independent of the starting guess, on the number of GMRES iterations needed to compute the exact solution~\(x\) (ignoring roundoff). Your answer should be less than~\(m\). Give clear reasons.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let~\(U\) be the upper triangular matrix obtained by applying Gaussian elimination with partial pivoting (the “\(PA=LU\)” factorization) to a matrix \(A\in\mathbb C^{m\times m}\). Show that the growth factor 
+Let~\(U\) be the upper triangular matrix obtained by applying Gaussian elimination with partial pivoting (the “\(PA=LU\)” factorization) to a matrix \(A\in\mathbb C^{m\times m}\). Show that the growth factor
 \[
 \rho=\frac{\max_{i,j}|U_{ij}|}{\max_{i,j}|A_{ij}|}
 \]
- satisfies 
+ satisfies
 \[
 \rho\le 2^{m-1}.
 \]
  Exhibit a matrix~\(A\) for which the growth factor is \(2^{m-1}\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -120,14 +140,15 @@ Suppose \(A=QR\) is a QR factorization of a symmetric tridiagonal~\(A\). Which e
 \item[\textnormal{(b)}]
 State the (unshifted) QR iteration for eigenvalues. Show that if one iterate of the QR iteration is symmetric and tridiagonal, then the next one is also symmetric and tridiagonal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Given \(\mathbf v\) and \(\mathbf w\in\mathbb R^n\), show that 
+Given \(\mathbf v\) and \(\mathbf w\in\mathbb R^n\), show that
 \[
 \mathbf v\mathbf w^{\mathsf T}+\mathbf w\mathbf v^{\mathsf T}
 =\frac{\lVert\mathbf v\rVert\lVert\mathbf w\rVert}{2}
 \left(\mathbf a\mathbf a^{\mathsf T}-\mathbf b\mathbf b^{\mathsf T}\right)
 \]
- 
+
 \[
 =\begin{bmatrix}
 \dfrac{\mathbf a}{\lVert\mathbf a\rVert} & \big| & \dfrac{\mathbf b}{\lVert\mathbf b\rVert}
@@ -140,37 +161,40 @@ Given \(\mathbf v\) and \(\mathbf w\in\mathbb R^n\), show that
 \dfrac{\mathbf a}{\lVert\mathbf a\rVert} & \big| & \dfrac{\mathbf b}{\lVert\mathbf b\rVert}
 \end{bmatrix}^{\mathsf T},
 \]
- where 
+ where
 \[
 \mathbf a=\frac{\mathbf v}{\lVert\mathbf v\rVert}+\frac{\mathbf w}{\lVert\mathbf w\rVert}
 \quad\text{and}\quad
 \mathbf b=\frac{\mathbf v}{\lVert\mathbf v\rVert}-\frac{\mathbf w}{\lVert\mathbf w\rVert}.
 \]
  What is \(\mathbf a^{\mathsf T}\mathbf b\)? What are the eigenvalues of \(\mathbf v\mathbf w^{\mathsf T}+\mathbf w\mathbf v^{\mathsf T}\)?
+\def\ProblemHeadingText{Problem 6.}
 \item
-Show that \(x=1+\tan^{-1}(x)\) has a solution~\(\alpha\). Find an interval \([a,b]\) containing~\(\alpha\) such that for every \(x_0\in[a,b]\) the iteration 
+Show that \(x=1+\tan^{-1}(x)\) has a solution~\(\alpha\). Find an interval \([a,b]\) containing~\(\alpha\) such that for every \(x_0\in[a,b]\) the iteration
 \[
 x_{n+1}=1+\tan^{-1}(x_n)
 \]
  will converge to~\(\alpha\).
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(x_0,\ldots,x_n\) be distinct real points. Let 
+Let \(x_0,\ldots,x_n\) be distinct real points. Let
 \[
 \{l_j(x)\}_{j=0,\ldots,n}
 \]
- be the Lagrange basis functions for these points. Prove that 
+ be the Lagrange basis functions for these points. Prove that
 \[
 \sum_{j=0}^n l_j(x)=1
 \]
  for all~\(x\).
+\def\ProblemHeadingText{Problem 8.}
 \item
-Suppose you want to solve numerically the ode 
+Suppose you want to solve numerically the ode
 \[
 y'=f(x,y),\qquad y(0)=y_0.
 \]
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-By applying the midpoint rule to the integral in the equation 
+By applying the midpoint rule to the integral in the equation
 \[
 y(x_{n+1})=y(x_{n-1})+\int_{x_{n-1}}^{x_{n+1}}f(s,y(s))\,ds,
 \]
@@ -182,6 +206,7 @@ Determine if this method is stable or not.
 \item[\textnormal{(d)}]
 Would this method be a good choice for a stiff system such as \(y'=-100y\)? Why or why not?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -190,8 +215,9 @@ Find the linear least squares approximation to \(f(x)=x^2\) on the interval \([0
 \item[\textnormal{(b)}]
 Find the first two orthonormal polynomials \(\phi_0(x),\phi_1(x)\) on \([0,2]\) (weight function \(w(x)=1\)). Use these to find the linear least squares approx to \(f(x)=x^2\), and check this result agrees with the previous problem.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
-Derive the one point Gaussian quadrature formula for 
+Derive the one point Gaussian quadrature formula for
 \[
 I=\int_0^1 xf(x)\,dx\approx\sum_{j=1}^n w_jf(x_j)
 \]

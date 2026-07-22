@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, September 2001}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 2001\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,19 +95,26 @@
 \begin{examinstructions}
 Do seven of the following eleven problems. Please do not turn in more than seven problems. Read all the problems before starting to do any of them. The problems do not have to be attempted in the order they are listed. You must show your work. Answers with no work and/or no explanations will receive no credit. State clearly any theorem you use in your proofs. In the problems, \(\mathbb Z\), resp. \(\mathbb Q\), \(\mathbb C\), is the set of all integers, resp. of all rational numbers, of all complex numbers.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that any finite group of order \(280\) is solvable. You may assume that every group of order \(p^a q^b\), where~\(p\) and~\(q\) are primes, is solvable.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove or disprove the following statement: “Let~\(G\) be a group and~\(H\) a normal subgroup of~\(G\). Suppose that~\(H\) and \(G/H\) are both nilpotent. Then~\(G\) is nilpotent.”
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(A, B\) be two \(3 \times 3\) matrices over a field~\(F\). Suppose that \(A^3=B^3=0\), and \(\operatorname{rank}(A)=\operatorname{rank}(B)\). Prove that~\(A\) is similar to~\(B\). Is the statement true for \(4 \times 4\) matrices?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(M\) be the ring of \(2 \times 2\) matrices over \(\mathbb Q\) (under the usual matrix addition and multiplication). Let \(A\in M\) be a matrix whose characteristic polynomial is not irreducible over \(\mathbb Q\). Show that the subring \(C_M(A):=\{X\in M\mid XA=AX\}\) is not a field.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(A\) be a commutative ring with identity. Suppose that~\(M\) and~\(N\) are free~\(A\)-modules of rank~\(m\) and~\(n\), respectively. Prove that if \(M\simeq N\), then \(m=n\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(R\) be a ring with identity. Prove that a direct sum of left~\(R\)-modules is projective if and only if each summand is projective.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(G\) be a subgroup of the multiplicative group of nonzero elements of a field~\(F\).
 \begin{examsubparts}
@@ -100,6 +123,7 @@ Suppose~\(G\) is finite. Prove that~\(G\) is cyclic.
 \item[\textnormal{b)}]
 Is the conclusion in (a) still true if~\(G\) is not assumed to be finite? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Compute the Galois group over \(\mathbb Q\) of
 \begin{examsubparts}
@@ -108,6 +132,7 @@ Compute the Galois group over \(\mathbb Q\) of
 \item[\textnormal{b)}]
 \((x^3-5)(x^2+3)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let \(\xi\in\mathbb C\) be a primitive \(15^{\text{th}}\) root of unity in \(\mathbb C\), and let \(F=\mathbb Q(\xi)\).
 \begin{examsubparts}
@@ -116,8 +141,10 @@ Show that \(F/\mathbb Q\) is a Galois extension and describe the structure of th
 \item[\textnormal{b)}]
 Let~\(\eta\) be a primitive \(41^{\text{th}}\) root of unity in \(\mathbb C\). Is~\(F\) contained in \(\mathbb Q(\eta)\)? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 State and prove the Hilbert Basis Theorem.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Classify (up to ring isomorphism) all semisimple rings of order \(720\).
 \end{examproblems}

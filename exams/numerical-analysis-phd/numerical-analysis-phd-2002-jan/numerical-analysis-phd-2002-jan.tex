@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, January 2002}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2002\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -85,7 +101,8 @@
 \begin{examinstructions}
 Do any 8 of the following 10 problems. Problems 1–5 are Part 1: Numerical Linear Algebra. Problems 6–10 are Part II: Numerical Analysis.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -94,16 +111,17 @@ Prove: If \(A\in\mathbb R^{n\times n}\) has a set of~\(n\) linearly independent 
 \item[\textnormal{(b)}]
 Prove: If \(A\in\mathbb R^{n\times n}\) is symmetric, then~\(A\) has an orthogonal set of eigenvectors.
 \item[\textnormal{(c)}]
-Diagonalize the matrix 
+Diagonalize the matrix
 \[
 A=\begin{pmatrix}66&12\\12&59\end{pmatrix}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has three parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Is the matrix 
+Is the matrix
 \[
 A=\begin{pmatrix}5&1\\0&3\end{pmatrix}
 \]
@@ -113,6 +131,7 @@ Can the above matrix~\(A\) be diagonalized by an orthogonal matrix~\(S\)?
 \item[\textnormal{(c)}]
 State a theorem or condition that ensures a matrix can be diagonalized by an orthogonal matrix.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -121,16 +140,17 @@ Give a careful statement of the singular value decomposition.
 \item[\textnormal{(b)}]
 Give a careful proof of the singular value decomposition.
 \item[\textnormal{(c)}]
-Compute the SVD for the matrix 
+Compute the SVD for the matrix
 \[
 A=\begin{pmatrix}-6&17\\18&-1\end{pmatrix}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The source clearly asks for the projection of~\(A\) onto its own column space, but the intended object is mathematically ambiguous; it may have intended the orthogonal projection matrix onto the column space. The source wording has been retained.
 \end{problemconcern}
-Let 
+Let
 \[
 A=\begin{pmatrix}1&2\\0&1\\1&0\end{pmatrix}.
 \]
@@ -140,6 +160,7 @@ Determine the orthogonal projection of~\(A\) onto the column space of~\(A\).
 \item[\textnormal{(b)}]
 Compute the \(QR\) factorization of~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The displayed dimensions make the product \(BA\) undefined in general. The source reading has been retained because it is unclear whether the dimensions or the product order should be corrected.
@@ -155,11 +176,12 @@ Prove: If~\(A\) is any matrix in \(\mathbb R^{n\times n}\) and \(\lVert A\rVert_
 \item[\textnormal{(d)}]
 Prove: If~\(A\) is a matrix in \(\mathbb R^{n\times n}\), then define \(e^A\) as a power series expansion. Show this series converges.
 \item[\textnormal{(e)}]
-Prove: If \(A\in\mathbb R^{n\times n}\) is invertible, \(b\) and \(\Delta b\) are vectors in \(\mathbb R^n\), \(x\) and \(\Delta x\) are vectors in \(\mathbb R^n\) and are solutions to \(Ax=b\) and \(A\Delta x=\Delta b\), respectively, then 
+Prove: If \(A\in\mathbb R^{n\times n}\) is invertible, \(b\) and \(\Delta b\) are vectors in \(\mathbb R^n\), \(x\) and \(\Delta x\) are vectors in \(\mathbb R^n\) and are solutions to \(Ax=b\) and \(A\Delta x=\Delta b\), respectively, then
 \[
 \frac{\lVert\Delta x\rVert_2}{\lVert x\rVert_2}\leq\kappa_2(A)\frac{\lVert\Delta b\rVert_2}{\lVert b\rVert_2}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -170,6 +192,7 @@ Assuming~\(f\) is smooth and we have an initial guess sufficiently close to the 
 \item[\textnormal{(c)}]
 Prove: Let \(T(x):[a,b]\to[a,b]\) be a function such that \(T'''(x)\) is continuous for all \(x\in[a,b]\), \(T(p)=p\), \(T'(p)=T''(p)=0\). If \(x_0\in[a,b]\) is a point with the property that the sequence defined recursively by \(x_{k+1}=T(x_k)\) converges to~\(p\), then the sequence \(\{x_k\}_{k=1}^{\infty}\) converges cubically to~\(p\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 This problem has four parts.
 \begin{examsubparts}
@@ -182,6 +205,7 @@ Give a careful statement of the convergence theorem for the second derivatives f
 \item[\textnormal{(d)}]
 Outline a proof of the convergence theorem for clamped cubic splines.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -190,8 +214,10 @@ Given a set of data points \((x_0,y_0),(x_1,y_1),\ldots,(x_n,y_n)\) in the plane
 \item[\textnormal{(b)}]
 How do you determine whether or not the conic section is an ellipse, a hyperbola, or a parabola?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Triple Recursion Formula. If \(\{\phi_n(x)\}\) is an orthogonal family of polynomials on \([a,b]\), with respect to the weight function \(w(x)\geq0\), and \(n\geq1\), then show that \(\phi_{n+1}(x)=(a_nx+b_n)\phi_n(x)-c_n\phi_{n-1}(x)\), for some constants \(a_n,b_n,\) and \(c_n\). (Hint: Let \(g(x)=\phi_{n+1}(x)-a_nx\phi_n(x)\), where \(a_n\) is a constant chosen so that \(g(x)\) has degree~\(n\).)
+\def\ProblemHeadingText{Problem 10.}
 \item
 This problem has four parts.
 \begin{examsubparts}

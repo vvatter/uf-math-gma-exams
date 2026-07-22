@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Probability PhD Exam, August 2023}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/probability-phd/}{Probability PhD Exam}, August 2023\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,12 +95,14 @@
 \begin{examinstructions}
 Carefully justify your answers.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(X,Y:(\Omega,\mathcal{F},\mathbb{P})\to(\mathbb{R},\mathcal{B}(\mathbb{R}))\) be random variables. Prove that 
+Let \(X,Y:(\Omega,\mathcal{F},\mathbb{P})\to(\mathbb{R},\mathcal{B}(\mathbb{R}))\) be random variables. Prove that
 \[
 \mathbb{P}(X+Y\ge 0)\le \mathbb{P}(X\ge 0)+\mathbb{P}(Y\ge 0).
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -101,14 +119,15 @@ convergence in \(L^1\),
 convergence in distribution.
 \end{examsubparts}
 \item[\textnormal{2.}]
-For \(n\ge 1\), let \(X_n\) be uniformly distributed on \(\{1,\ldots,n\}\), that is 
+For \(n\ge 1\), let \(X_n\) be uniformly distributed on \(\{1,\ldots,n\}\), that is
 \[
 \mathbb{P}(X_n=k)=\frac{1}{n},\qquad k\in\{1,\ldots,n\}.
 \]
  Prove that \(\left\{\frac{X_n}{n}\right\}_{n\ge 1}\) converges to~\(U\) in distribution, where~\(U\) is uniform on \([0,1]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. continuous random variables having a uniform distribution on \([0,1]\). Define, for \(n\ge 1\), 
+Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. continuous random variables having a uniform distribution on \([0,1]\). Define, for \(n\ge 1\),
 \[
 Y_n=\max(X_1,\ldots,X_n).
 \]
@@ -120,6 +139,7 @@ Compute \(\mathbb{E}[Y_n]\) and \(\operatorname{Var}(Y_n)\).
 \item[\textnormal{3.}]
 Prove that \(\{Y_n\}\) converges to~\(1\) in \(L^1\). What about almost sure convergence?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\{X_i\}_{i\ge 1}\) be a sequence of i.i.d. random variables with a Poisson distribution of parameter~\(\lambda\).
 \begin{examsubparts}
@@ -128,11 +148,12 @@ Let \(n\ge 1\). Without justification, what is the distribution of \(X_1+\cdots+
 \item[\textnormal{2.}]
 State the weak and strong law of large numbers for i.i.d random variables.
 \item[\textnormal{3.}]
-Let \(\phi:\mathbb{R}\to\mathbb{R}\) be an arbitrary bounded continuous function. Prove that 
+Let \(\phi:\mathbb{R}\to\mathbb{R}\) be an arbitrary bounded continuous function. Prove that
 \[
 \lim_{n\to+\infty}\sum_{k=0}^{+\infty}e^{-n\lambda}\frac{(n\lambda)^k}{k!}\phi\left(\frac{k}{n}\right)=\phi(\lambda).
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -143,10 +164,12 @@ Let \(\{B_t\}\) be a standard Brownian motion. Prove that \(\left\{\frac{B_n}{n}
 \item[\textnormal{3.}]
 Find \(\mathbb{P}(B_2\ge 0,B_1\le 0)\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(\{M_n\}_{n\ge 0}\) be a sequence of integrable random variables adapted to a filtration \(\{\mathcal{F}_n\}\). Assume that for each bounded stopping time~\(T\), \(\mathbb{E}[M_T]=\mathbb{E}[M_0]\). Show that \(\{M_n\}_{n\ge 0}\) is a martingale.
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(\{B_t\}\) be a standard Brownian motion. Define, for \(x\in\mathbb{R}\), 
+Let \(\{B_t\}\) be a standard Brownian motion. Define, for \(x\in\mathbb{R}\),
 \[
 T_x=\min\{t\ge 0:B_t=x\}.
 \]

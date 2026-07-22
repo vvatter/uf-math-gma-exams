@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, January 2003}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, January 2003\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,48 +92,61 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{Part I}
+\subsection{Part I}
 \begin{examinstructions}
 State the following theorems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Hölder’s inequality.
+\def\ProblemHeadingText{Problem 2.}
 \item
 The Hahn Decomposition Theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 The Fubini Theorem for positive measures~\(\mu\) and~\(\nu\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 The Monotone Class Theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 The Hahn–Banach Theorem.
+\def\ProblemHeadingText{Problem 6.}
 \item
 The Monotone Convergence Theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 The completeness of \(L_E^1(\mu)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 The theorem of uniform boundedness.
 \end{examproblems}
-\section{Part II}
+\subsection{Part II}
 \begin{examinstructions}
 Prove one of either Theorem 3 or 7 from part I.
 \end{examinstructions}
-\section{Part III}
+\subsection{Part III}
 \begin{examinstructions}
 Solve the following problems. In problems one through four \((X,\Sigma,\mu)\) is a measure space and~\(F\) is a Banach space.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(\mathcal{F}\subset\Sigma\) be a~\(\sigma\)-subalgebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal{F})\) for \(f\in L_F^1(\mu)\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(\mathcal{R}\) be a ring generating~\(\Sigma\) and suppose \(f\in L_F^1(\mu)\). Prove, if \(\int_A f\,d\mu=0\) for each \(A\in\mathcal{R}\), then \(f=0\), \(\mu\) almost everywhere.
+\def\ProblemHeadingText{Problem 3.}
 \item
-Suppose~\(E\) (as well as~\(F\)) is a Banach space and~\(U\) is a bounded linear operator from~\(E\) to~\(F\). Show, if \(f\in L_E^1(\mu)\), then \(U\circ f\in L_F^1(\mu)\) and 
+Suppose~\(E\) (as well as~\(F\)) is a Banach space and~\(U\) is a bounded linear operator from~\(E\) to~\(F\). Show, if \(f\in L_E^1(\mu)\), then \(U\circ f\in L_F^1(\mu)\) and
 \[
 \int U\circ f\,d\mu=U\int f\,d\mu.
 \]
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose~\(X\) is a locally compact Hausdorff space. Show, if~\(K\) is a compact set and the restriction of~\(f\) to~\(K\), \(f|_K\), is continuous, then \(f\phi_K\) is a Borel function. Here \(\phi_K\) is the characteristic function of~\(K\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that \(C([0,1])\) is a closed proper subspace of \(L^\infty([0,1])\) (the \(L^\infty\) space with respect to Lebesgue measure on the interval \([0,1]\)). Explain how to view \(L^1([0,1])\) as a subspace of \(L^\infty([0,1])^*\). Is \(L^1([0,1])\) a proper subspace of \(L^\infty([0,1])^*\)?
 \end{examproblems}

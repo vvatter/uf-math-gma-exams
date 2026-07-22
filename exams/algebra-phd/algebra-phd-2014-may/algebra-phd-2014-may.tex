@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2014}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2014\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Do any 7 of the 11 problems, and mark clearly which problems you want graded if you try more than 7. State clearly any theorems that you use.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose \(p_1,p_2,\ldots,p_r\) are distinct primes, and \(K=\mathbb{Q}(\sqrt{p_1},\ldots,\sqrt{p_r})\), find the Galois group of \(K/\mathbb{Q}\). How many fields~\(F\) are there such that \(\mathbb{Q}\subseteq F\subseteq K\)?
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -90,8 +108,10 @@ Show that if \(K/k\) and \(L/K\) are separable algebraic extensions, then so is 
 \item[\textnormal{(ii)}]
 Give an example of normal extensions \(K/k\), \(L/K\) such that \(L/k\) is not normal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose~\(K\) is an algebraic extension field of~\(k\) and \(\bar{k}\) is an algebraic closure of~\(k\). Show that \(K/k\) is separable if and only if the ring \(\bar{k}\otimes_k K\) has no nonzero nilpotent elements.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose~\(A\) is a commutative ring with identity and \(S\subset A\) is a multiplicative set not containing~\(0\).
 \begin{examsubparts}
@@ -100,12 +120,16 @@ Show that there is a prime ideal \(\mathfrak{p}\subset A\) such that \(\mathfrak
 \item[\textnormal{(ii)}]
 Use part (i) to show that the intersection of all prime ideals of~\(A\) is the set of nilpotent elements.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(k\) is a field and~\(A\) is a finitely generated commutative~\(k\)-algebra. Let \(\bar{k}\) be an algebraic closure of~\(k\). Note that the Galois group \(G=\operatorname{Gal}(\bar{k}/k)\) acts on the set \(\operatorname{Hom}_k(A,\bar{k})\) of~\(k\)-algebra homomorphisms \(A\to\bar{k}\) by composition. Construct a bijection of the set of orbits of~\(G\) on \(\operatorname{Hom}_k(A,\bar{k})\) with the set of maximal ideals in~\(A\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose~\(A\) is an integral domain. Show that an ideal \(I\subseteq A\) is invertible if and only if it is projective and finitely generated.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Suppose~\(X\) is a nonempty set and \(F(X)\) is the free group on~\(X\). Show that \(F(X)\) is abelian if and only if~\(X\) is a singleton.
+\def\ProblemHeadingText{Problem 8.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -114,10 +138,13 @@ Define what it means for a group to be nilpotent.
 \item[\textnormal{(ii)}]
 Show that if~\(G\) is a finite nilpotent group, then any Sylow subgroup is normal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose~\(A\) is a commutative ring with identity and~\(B\) is a commutative~\(A\)-algebra with structure map \(f:A\to B\). Show that the forgetful functor from the category of~\(B\)-modules to the category of~\(A\)-modules induced by~\(f\) has a left adjoint.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(p\) be a prime. Find all the isomorphism classes of noncommutative semisimple rings~\(A\) of cardinality \(p^{10}\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Suppose~\(R\) is a finite commutative ring with identity, such that \(x^3=x\) for all \(x\in R\). Show that~\(R\) is a finite direct sum of fields isomorphic to \(\mathbb{F}_2\) or \(\mathbb{F}_3\).
 \end{examproblems}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, August 2019, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, August 2019, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. (If you turn in more, the first four will be graded.) Put your answers in numerical order. Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(D\) be a positive integer such that \(D \equiv -1 \pmod 4\). Define \(\omega=\frac{1+\sqrt{-D}}{2}\), \(R=\{a+b\omega:a,b\in\mathbb Z\}\). For \(a\in R\) define \(N(a)=a\overline a\), where \(\overline a\) is the complex conjugate of~\(a\).
 \begin{examsubparts}
@@ -92,8 +109,10 @@ Prove that for all \(\alpha,\beta\in R\) we have \(N(\alpha\beta)=N(\alpha)N(\be
 \item[\textnormal{(d)}]
 Let \(a\in R\). Prove that~\(a\) is a unit if and only if \(N(a)=1\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(F\) be a field and let~\(V\) be a vector space over~\(F\). Prove that~\(V\) has a basis. (You may not assume that~\(V\) is finite dimensional.)
+\def\ProblemHeadingText{Problem 3.}
 \item
 Which of the following polynomials are irreducible? Explain.
 \begin{examsubparts}
@@ -104,10 +123,13 @@ Which of the following polynomials are irreducible? Explain.
 \item[\textnormal{(c)}]
 \(X^6+14X^2+21X+35\) in \(\mathbb Q[X]\) (here \(\mathbb Q\) is the field of rational numbers).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring with identity, and let~\(M\) be a (left)~\(R\)-module. Let~\(N\) be a submodule of~\(M\). Prove that \(M/N\) is a (left)~\(R\)-module.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Find representatives of every similarity class of \(6\times6\) matrices with real coefficients whose minimal polynomial is \((x+2)^2(x-\sqrt3)^2\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(F/K\) be a field extension.
 \begin{examsubparts}

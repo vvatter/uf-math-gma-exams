@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Practice Exam B, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Practice Exam B}, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -90,6 +107,7 @@ Prove that a prime \(p \in \mathbb{N}\) such that \(p \equiv 1 \pmod 4\) is a pr
 \item[\textnormal{(c)}]
 Give a factorization of \(30\) as the product of a unit and powers of non-associate primes in \(\mathbb{Z}[i]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(R\) be the ring of \(n \times n\) matrices over a field~\(F\), where \(n \geq 2\).
 \begin{examsubparts}
@@ -98,8 +116,10 @@ Show that~\(R\) has no ideals other than~\(0\) and~\(R\).
 \item[\textnormal{(b)}]
 Exhibit a nonzero proper left ideal of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Find one representative of each conjugacy class of elements of order~\(4\) in the group \(GL(6,\mathbb{Q})\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(F\) be a field.
 \begin{examsubparts}
@@ -108,6 +128,7 @@ What does it mean to say that a field extension of~\(F\) is algebraic?
 \item[\textnormal{(b)}]
 Let \(F \subset K \subset L\) be three fields. Prove that if~\(K\) is algebraic over~\(F\) and~\(L\) is algebraic over~\(K\), then~\(L\) is algebraic over~\(F\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 A commutative ring~\(R\) with~\(1\) is called a local ring if and only if it has a unique maximal ideal. Suppose that~\(R\) is a ring with a proper ideal~\(M\). Show that~\(R\) is local, with maximal ideal~\(M\), if and only if every element of \(R \setminus M\) (set difference) is a unit.
 \end{examproblems}

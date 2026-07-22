@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, August 1995}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, August 1995\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,21 +98,29 @@ All work must be presented in a neat and logical fashion to receive credit. Be s
 \begin{examinstructions}
 \((X,\Sigma,\mu)\) will always denote a measure space (possibly infinite).
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that \(L^1(X,\Sigma,\mu)\) is complete.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(f\) be Lebesgue integrable on \(\mathbb R\). Suppose \(\int_0^x f\,dm=0\) for all real~\(x\), where~\(m\) is Lebesgue measure. What can you say about~\(f\)? Prove your answer.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \((f_n)\) be a sequence of integrable functions such that \(\sum_{n=1}^{\infty}\int |f_n|\,d\mu<\infty\). What can you prove about the a.e. \(\mu\) convergence of \(\sum f_n\)?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(f\) be a Lebesgue integrable function on \(\mathbb R\). Let \(\epsilon>0\). Is it possible to find a bounded interval~\(I\) such that whenever~\(E\) is a measurable set such that \(E\cap I=\phi\), then \(\left|\int_E f\,m\right|<\epsilon\)?
+\def\ProblemHeadingText{Problem 5.}
 \item
 State and prove the Lebesgue Monotone Convergence Theorem.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Present the steps in the construction of the product measure of two finite measure spaces. Sketch the proof of the countable additivity of the product measure.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let \(X=Y=\) any uncountable set. Let \(\mathcal S=\mathcal T=\) the class of all countable subsets of~\(X\) and~\(Y\), respectively. Note that \(\mathcal S\) and \(\mathcal T\) are~\(\sigma\)-rings. Let \(D=\{(x,y):x=y\}\) be the diagonal in \(X\times Y\). Show that~\(D\) is NOT \(\mathcal S\times\mathcal T\) measurable.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \((X,\Sigma,\mu)\) be a finite measure space and \(\mathcal G\) is a sub~\(\sigma\)-algebra of~\(\Sigma\). Define the closed subspace~\(V\) of \(L^\infty(X,\Sigma,\mu)\) as the collection of all \(g\in L^\infty(X,\Sigma,\mu)\) such that \(\int fg\,\mu=0\) for all \(f\in L^1(X,\mathcal G,\mu)\). Prove that if \(k\in L^1(X,\Sigma,\mu)\) and \(\int kg\,d\mu=0\) for all \(g\in V\), then~\(k\) is \(\mathcal G\)-measurable. (Hint: Use the representation for the dual of \(L^1(X,\Sigma,\mu)\) and a corollary of the Hahn–Banach theorem applied to the closed subspace \(L^1(X,\mathcal G,\mu)\) of \(L^1(X,\Sigma,\mu)\).)
 \end{examproblems}

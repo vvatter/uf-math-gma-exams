@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, January 2020}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, January 2020\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,18 +95,20 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(A \in \mathbb{C}^{m \times n}\).
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Determine constants~\(\alpha\) and~\(\beta\) such that the following inequality holds for the~\(p\) and~\(\infty\) norms of matrix~\(A\), for integers \(p \ge 1\). Justify your answer. 
+Determine constants~\(\alpha\) and~\(\beta\) such that the following inequality holds for the~\(p\) and~\(\infty\) norms of matrix~\(A\), for integers \(p \ge 1\). Justify your answer.
 \[
 \alpha \lVert A \rVert_\infty \le \lVert A \rVert_p \le \beta \lVert A \rVert_\infty.
 \]
 \item[\textnormal{(b)}]
 Prove or give a counterexample: \(\lVert A \rVert_2 \le \lVert A \rVert_F\), where \(\lVert A \rVert_F\) is the Frobenius norm of~\(A\). If you prove this, make sure to justify each nontrivial step.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Suppose~\(A\) is Hermitian positive definite.
 \begin{examsubparts}
@@ -101,8 +119,9 @@ Prove that an element of~\(A\) with largest magnitude lies on the diagonal.
 \item[\textnormal{(c)}]
 Prove that~\(A\) has a Cholesky decomposition.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Define the matrices~\(A\) and~\(B\) by 
+Define the matrices~\(A\) and~\(B\) by
 \[
 A = \begin{pmatrix}
 1 & 2 & 0 \\
@@ -124,22 +143,24 @@ Find both full and economy singular value decompositions of~\(A\).
 \item[\textnormal{(b)}]
 Find both full and economy QR decompositions of~\(B\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\lVert \cdot \rVert\) be a subordinate (induced) matrix norm.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-If~\(E\) is \(n \times n\) with \(\lVert E \rVert < 1\), then show \(I+E\) is nonsingular and 
+If~\(E\) is \(n \times n\) with \(\lVert E \rVert < 1\), then show \(I+E\) is nonsingular and
 \[
 \lVert (I+E)^{-1} \rVert \le \frac{1}{1-\lVert E \rVert}.
 \]
 \item[\textnormal{(b)}]
-If~\(A\) is \(n \times n\) invertible and~\(E\) is \(n \times n\) with \(\lVert A^{-1} \rVert \lVert E \rVert < 1\), then show \(A+E\) is nonsingular and 
+If~\(A\) is \(n \times n\) invertible and~\(E\) is \(n \times n\) with \(\lVert A^{-1} \rVert \lVert E \rVert < 1\), then show \(A+E\) is nonsingular and
 \[
 \lVert (A+E)^{-1} \rVert \le \frac{\lVert A^{-1} \rVert}{1-\lVert A^{-1} \rVert \lVert E \rVert}.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Suppose the linear equation \(Ax=b\), with 
+Suppose the linear equation \(Ax=b\), with
 \[
 A = \begin{pmatrix}
 \delta & 1 \\

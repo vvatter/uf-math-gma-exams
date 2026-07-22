@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 1999}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 1999\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,9 +95,11 @@
 \begin{examinstructions}
 Please do 7 out of the 11 problems below.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 An algebraic extension field~\(F\) of~\(K\) is said to be normal over~\(K\) if every irreducible polynomial in \(K[x]\) that has a root in~\(F\) actually splits in \(F[x]\). Prove that an algebraic extension~\(F\) of~\(K\) is normal over~\(K\) if and only if for every irreducible \(f\in K[x]\), \(f\) factors in \(F[x]\) as a product of irreducible factors all of which have the same degree.
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -90,10 +108,13 @@ Show that the additive group of rationals \(\mathbb Q\) is not free.
 \item[\textnormal{(b).}]
 Show that the group \(\mathbb Q^+\) of all positive rationals (under multiplication) is free abelian with basis \(\{p:p\text{ is prime in }\mathbb Z\}\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that any simple group~\(G\) of order 60 is isomorphic to \(A_5\). (If you want, you may use the fact that for each \(n\geq 2\), \(A_n\) is the only subgroup of \(S_n\) of index 2.)
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be an integral domain and for each maximal ideal~\(M\), consider the localization \(R_M\) as a subring of the quotient field of~\(R\). Show that \(\bigcap R_M=R\), where the intersection is taken over all maximal ideals~\(M\) of~\(R\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -102,13 +123,14 @@ Define solvable group.
 \item[\textnormal{(b).}]
 Prove that any group of order 48 is solvable (without using Burnside’s \((p,q)\)-Theorem).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(R\) be a ring. Show that the following conditions on an~\(R\)-module~\(P\) are equivalent.
 \begin{examsubparts}
 \item[\textnormal{(i).}]
 \(P\) is projective.
 \item[\textnormal{(ii).}]
-Every short exact sequence 
+Every short exact sequence
 \[
 0\to A\xrightarrow{f}B\xrightarrow{g}P\to 0
 \]
@@ -116,17 +138,19 @@ Every short exact sequence
 \item[\textnormal{(iii).}]
 There is a free module~\(F\) and an~\(R\)-module~\(K\) such that \(F\cong K\oplus P\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(C\) and~\(D\) be categories, and let~\(S\) and~\(T\) be covariant functors from~\(C\) to~\(D\).
 \begin{examsubparts}
 \item[\textnormal{(a).}]
 Define a natural isomorphism \(\alpha:S\to T\).
 \item[\textnormal{(b).}]
-If~\(B\) is a unitary left module over a ring~\(R\) with identity, show that there is a “natural” isomorphism of modules 
+If~\(B\) is a unitary left module over a ring~\(R\) with identity, show that there is a “natural” isomorphism of modules
 \[
 \alpha_B:R\otimes_R B\cong B.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a commutative ring with identity.
 \begin{examsubparts}
@@ -135,6 +159,7 @@ Let \(\mathcal A\) be an ideal in~\(R\), and assume that~\(M\) is a finitely gen
 \item[\textnormal{(b).}]
 Let~\(M\) be a finitely-generated~\(R\)-module. Show that \(J(R).M=M\) implies \(M=\{0\}\). (Here, \(J(R)\) denotes the Jacobson radical of~\(R\).)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -143,18 +168,20 @@ Show that if~\(R\) is a unique factorization domain, then~\(R\) is integrally cl
 \item[\textnormal{(b).}]
 Find the integral closure of \(\mathbb C[x^5,x^7]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 This problem has two parts.
 \begin{examsubparts}
 \item[\textnormal{(a).}]
 Show that \(\mathbb C[x,y]/(xy-1)\) (quotient of polynomial ring in 2 variables) is not isomorphic to \(\mathbb C[t]\) (polynomial ring in 1 variable).
 \item[\textnormal{(b).}]
-Show that the set 
+Show that the set
 \[
 \{(m,n):m,n\in\mathbb Z\}
 \]
  is not an algebraic variety in \(\mathbb C^2\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 This problem has three parts.
 \begin{examsubparts}

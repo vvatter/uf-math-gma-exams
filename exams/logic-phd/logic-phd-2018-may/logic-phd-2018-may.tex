@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, May 2018}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2018\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,30 +95,39 @@
 \begin{examinstructions}
 Answer six questions, at least one in each section.
 \end{examinstructions}
-\section{Section 1}
-\begin{examproblems}{0}
+\subsection{Section 1}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Provide a complete description of a formal proof system for first order logic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Sketch the proof of the completeness theorem for first order logic.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State and prove Gödel’s diagonal lemma.
 \end{examproblems}
-\section{Section 2}
-\begin{examproblems}{0}
+\subsection{Section 2}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Sketch the proof that the Continuum Hypothesis holds in the constructible universe~\(L\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that Zorn’s lemma implies the well-ordering principle.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Sketch the proof of consistency of the Continuum Hypothesis using forcing.
 \end{examproblems}
-\section{Section 3}
-\begin{examproblems}{0}
+\subsection{Section 3}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Show that every nonempty \(\Sigma_1\)-definable set of natural numbers is the range of a total recursive function.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Sketch the proof of Friedberg–Muchnik theorem: there are two subsets of~\(\omega\) which are incomparable in the sense of the Turing ordering.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Explain what a simple set is and provide an example with a proof.
 \end{examproblems}

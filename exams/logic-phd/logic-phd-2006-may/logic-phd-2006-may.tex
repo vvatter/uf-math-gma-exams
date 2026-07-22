@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Logic PhD Exam, May 2006}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/logic-phd/}{Logic PhD Exam}, May 2006\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,39 +95,51 @@
 \begin{examinstructions}
 Please complete seven problems among the following, including one from each section.
 \end{examinstructions}
-\section{1. General logic}
-\begin{examproblems}{0}
+\subsection{1. General logic}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State the incompleteness theorem and explain the role of Gödel numbering in its proof.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Sketch the proof of the completeness theorem for first order logic.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Sketch the proof of Tarski’s undefinability of truth.
 \end{examproblems}
-\section{2. Model theory}
-\begin{examproblems}{3}
+\subsection{2. Model theory}
+\begin{examproblems}{3}{H3}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that the theory of dense linear orders without endpoints is complete.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Find two models which are elementarily equivalent but not isomorphic.
+\def\ProblemHeadingText{Problem 6.}
 \item
 State and prove Tarski’s criterion for elementary submodels.
 \end{examproblems}
-\section{3. Set theory}
-\begin{examproblems}{6}
+\subsection{3. Set theory}
+\begin{examproblems}{6}{H3}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Sketch the proof of~\(L\) satisfying CH.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove from Martin’s Axiom that every set of reals of size \(\aleph_1\) has Lebesgue measure zero.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove that every stationary subset of \(\omega_1\) can be split into \(\aleph_1\) many pairwise disjoint stationary subsets.
 \end{examproblems}
-\section{4. Computability}
-\begin{examproblems}{9}
+\subsection{4. Computability}
+\begin{examproblems}{9}{H3}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Show how to construct a simple recursively enumerable set~\(A\) (meaning that \(\omega-A\) has no infinite r.e. subset).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Define the recursively enumerable set \(K=\{a:\{a\}(a)\mathord{\downarrow}\}\). Use the \(S_1^1\) function to show that~\(K\) is many-one complete.
+\def\ProblemHeadingText{Problem 12.}
 \item
 Prove that the following are equivalent, for any nonempty \(A\subset\omega\):
 \begin{examsubparts}

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Ergodic Theory PhD Exam, May 2025}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/ergodic-theory-phd/}{Ergodic Theory PhD Exam}, May 2025\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,12 +95,15 @@
 \begin{examinstructions}
 Answer 4 problems total, and at least one problem from each category.
 \end{examinstructions}
-\section{General ergodic Theory}
-\begin{examproblems}{0}
+\subsection{General ergodic Theory}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Equip the circle \(\mathbb{R}/\mathbb{Z}\) with the usual Lebesgue measure. Let \(\alpha\in\mathbb{R}\) be irrational and let \(T:\mathbb{R}/\mathbb{Z}\to\mathbb{R}/\mathbb{Z}\) be rotation by~\(\alpha\), i.e., \(T(x)=x+\alpha\pmod{\mathbb{Z}}\). Prove that~\(T\) is ergodic.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(T:X\to X\) be an invertible measure preserving transformation on a probability space \((X,\mathcal{B},\mu)\). State and prove the Poincaré recurrence theorem for~\(T\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(\Gamma\) be a countable group acting by measure preserving transformations on standard probability spaces \((X,\mathcal{B}_X,\mu)\), and \((Y,\mathcal{B}_Y,\nu)\) and \((Z,\mathcal{B}_Z,\eta)\). Suppose that \(\pi_Y:X\to Y\) and \(\pi_Z:X\to Z\) are measure preserving~\(\Gamma\)-equivariant maps from~\(X\) to~\(Y\) and~\(Z\) respectively, and that
 
@@ -97,19 +116,24 @@ the action of~\(\Gamma\) on \((Y,\mathcal{B}_Y,\nu)\) is ergodic, and
 the action of~\(\Gamma\) on \((Z,\mathcal{B}_Z,\eta)\) is the identity action on~\(Z\), i.e., every element of~\(\Gamma\) fixes every point of~\(Z\).
 \end{examsubparts}
 \end{examproblems}
-\section{Ergodicity and Mixing Properties}
-\begin{examproblems}{3}
+\subsection{Ergodicity and Mixing Properties}
+\begin{examproblems}{3}{H3}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(\Gamma\) be a countable group acting by measure preserving transformations on a standard probability space \((X,\mathcal{B},\mu)\). Define what it means for the action to be weakly mixing, and define what it means for the action to be compact (for both properties there are many equivalent definitions, you just need to provide one definition for each). Prove that if the action is both weakly mixing and compact then~\(\mu\) is a point mass.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(T:X\to X\) be an invertible measure preserving transformation on a standard probability space \((X,\mathcal{B},\mu)\). Define what it means for~\(T\) to be mixing. Give an example of a nontrivial mixing transformation, and prove that it is mixing.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(T:X\to X\) be an invertible measure preserving transformation on a probability space \((X,\mathcal{B},\mu)\), and let \(h:X\to\mathbb{C}\) be a function in \(L^2(X,\mathcal{B},\mu)\). Prove that the sequence \(\frac{1}{n}\sum_{i=0}^{n-1}h\circ T^i\) converges in \(L^2(X,\mathcal{B},\mu)\) to \(P_T(h)\), where \(P_T\) denotes the orthogonal projection onto the subspace of~\(T\)-invariant functions.
 \end{examproblems}
-\section{Topological Dynamics.}
-\begin{examproblems}{6}
+\subsection{Topological Dynamics.}
+\begin{examproblems}{6}{H3}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(X\) be a compact Hausdorff space, and let~\(G\) be a (discrete) group acting by homeomorphisms on~\(X\). Define what it means for the action to be topologically transitive. Prove that if~\(X\) is metrizable then the action of~\(G\) on~\(X\) is topologically transitive if and only if there exists a point in~\(X\) whose~\(G\)-orbit is dense.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(X\) be a compact Hausdorff space, and let~\(G\) be a (discrete) group acting by homeomorphisms on~\(X\). Let \(x_0\in X\) and assume that the~\(G\)-orbit of \(x_0\) is dense in~\(X\). Prove that the action of~\(G\) on~\(X\) is minimal if and only if for every open neighborhood~\(U\) of \(x_0\), the set \(A_{U,x_0}=\{g\in G:g\mathbin{\cdot}x_0\in U\}\) is syndetic in~\(G\). [A subset~\(A\) of~\(G\) is called syndetic in~\(G\) if there is a finite subset~\(F\) of~\(G\) with \(FA=G\).]
 \end{examproblems}

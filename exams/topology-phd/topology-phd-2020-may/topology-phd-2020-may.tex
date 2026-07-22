@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 2020}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2020\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(X\) be a nonempty set. A nonempty collection~\(\Phi\) of subsets \(U\subseteq X\times X\) is a uniformity if it satisfies the following axioms:
 
@@ -103,6 +120,7 @@ The elements of~\(\Phi\) are called entourages. If \(x\in X\) and \(U\in\Phi\), 
 
 \par
 Prove that a metric space~\(X\) is uniformizable.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(T\) be the 2-dimensional torus. For each of the following, give an example or prove such an object does not exist.
 \begin{examsubparts}
@@ -111,6 +129,7 @@ A map \(f:T\to S^2\) of degree 1.
 \item[\textnormal{(2)}]
 A map \(g:S^2\to T\) of degree 1.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 The torus~\(T\) bounds a compact region~\(R\). Two copies of~\(R\) are glued together by identifying their boundaries via the map \(f:T\to T\) given by \(f(\theta,\varphi)=(\theta+\varphi,\theta+2\varphi)\) (here \(T=S^1\times S^1\), where points on \(S^1\) are identified with an angle \(\theta\in[0,2\pi)\)). The result is a compact 3-manifold~\(M\).
 \begin{examsubparts}
@@ -119,10 +138,12 @@ Compute the map \(f_*:H_1(T)\to H_1(T)\).
 \item[\textnormal{(2)}]
 Use the Mayer–Vietoris sequence to compute the homology of~\(M\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(X\subset\mathbb{R}^3\) be the union of~\(n\) lines through the origin. Compute \(\pi_1(\mathbb{R}^3-X)\).
+\def\ProblemHeadingText{Problem 5.}
 \item
-Compute \(H^\bullet(M;\mathbb{Z})\), where~\(M\) is the space with homology groups 
+Compute \(H^\bullet(M;\mathbb{Z})\), where~\(M\) is the space with homology groups
 \[
 H_k(M;\mathbb{Z})=
 \begin{cases}
@@ -136,28 +157,38 @@ H_k(M;\mathbb{Z})=
 \begin{examinstructions}
 Answer the following with complete definitions, statements, or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that for a finite CW-complex~\(X\), \(H^1(X;\mathbb{Z})\) is free.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Compute \(\chi(\mathbb{CP}^2\times\mathbb{RP}^4\times S^2)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Give an example of a space that is connected but not path-connected.
+\def\ProblemHeadingText{Problem 9.}
 \item
 State the Urysohn Metrization Theorem.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Prove that if \(m\ne n\), then \(\mathbb{R}^m\) is not homeomorphic to \(\mathbb{R}^n\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(X\) be a space and let \(X^*\) be its one-point compactification. Prove that if~\(X\) is locally compact and Hausdorff, then \(X^*\) is Hausdorff.
+\def\ProblemHeadingText{Problem 12.}
 \item
 State the Lefschetz Fixed Point Theorem.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Describe all the connected covering spaces \(E\to S^1\times S^1\).
+\def\ProblemHeadingText{Problem 14.}
 \item
-Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample. 
+Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample.
 \[
 0\to A\to B\to\mathbb{Z}\to 0
 \]
+\def\ProblemHeadingText{Problem 15.}
 \item
 Compute the integral homology of the space \(\mathbb{RP}^2\times\mathbb{CP}^3\).
 \end{examproblems}

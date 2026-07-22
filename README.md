@@ -271,6 +271,9 @@ The renderer writes `<exam-id>.tex` beside the canonical JSON and compiles it wi
 LuaLaTeX into `<exam-id>.pdf`. The output is tagged PDF 2.0 targeting PDF/UA-2, with
 MathML structure for ordinary mathematics, Unicode Computer Modern fonts, semantic
 headings and lists, document metadata, and a structure-based tab order.
+The exam title is Heading 1. Named parts or groups are Heading 2, with their problems
+as Heading 3; exams without named groups use Heading 2 for each problem so that the
+heading hierarchy never skips a level.
 The institutional names link to the university and department websites. Only the
 subject-and-level portion of the exam title links to the future subject archive at
 `https://gma.math.ufl.edu/exams/<subject-tag>/`. These links retain black text and have

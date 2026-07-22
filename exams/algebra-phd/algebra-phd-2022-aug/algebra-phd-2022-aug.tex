@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, August 2022}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, August 2022\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer seven problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Give the definition of a free object in a concrete category \(\mathcal C\).
 \item[\textnormal{(b)}]
 Let \(\mathcal G\) be the category of finite groups. Prove that an object \(H \in \mathcal G\) is free if and only if~\(H\) is a trivial group.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -98,12 +116,14 @@ Let~\(G\) be a solvable group and let~\(N\) be a normal subgroup of~\(G\). Prove
 \item[\textnormal{(c)}]
 Let~\(F\) be a group which is free on \(n>1\) generators. Prove that~\(F\) is not solvable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(m,n\) be positive integers. Find~\(r\) such that there is an isomorphism of \(\mathbb Z\)-modules 
+Let \(m,n\) be positive integers. Find~\(r\) such that there is an isomorphism of \(\mathbb Z\)-modules
 \[
 (\mathbb Z/m\mathbb Z)\otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z)\cong \mathbb Z/r\mathbb Z.
 \]
  Justify your answer.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be a ring. Prove that the following are equivalent:
 \begin{examsubparts}
@@ -114,8 +134,10 @@ Every~\(R\)-module is injective.
 \item[\textnormal{(c)}]
 Every short exact sequence of~\(R\)-modules splits.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(G\) be a group, let~\(F\) be a field, and let \(\chi_1,\ldots,\chi_n\) be distinct homomorphisms from~\(G\) into \(F^\times\). Prove that \(\chi_1,\ldots,\chi_n\) are linearly independent over~\(F\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -124,6 +146,7 @@ Let \(n\geq 1\). Define the~\(n\)th cyclotomic polynomial \(\Phi_n(X)\).
 \item[\textnormal{(b)}]
 Prove that \(\Phi_n(X)\) is irreducible over \(\mathbb Q\). You may assume that \(\Phi_n(X)\in\mathbb Z[X]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(R\) be a commutative Noetherian ring with~\(1\).
 \begin{examsubparts}
@@ -134,10 +157,13 @@ Prove that every irreducible proper ideal in~\(R\) is primary.
 \item[\textnormal{(c)}]
 Let \(I\subset R\) be an ideal. Prove that~\(I\) has a primary decomposition.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(S\) be a commutative ring with~\(1\), let~\(R\) be a subring of~\(S\) which contains~\(1\), and let \(x\in S\). Suppose there is a subring \(T\subset S\) such that \(T\supset R[x]\) and~\(T\) is finitely generated as an~\(R\)-module. Prove that~\(x\) is a root of some monic polynomial with coefficients in~\(R\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a Noetherian integral domain with a unique nonzero prime ideal~\(P\). Assume that~\(R\) is integrally closed in its fraction field~\(F\). Prove that~\(P\) is a principal ideal.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Determine which of the following are Dedekind domains. Give a brief explanation in each case.
 \begin{examsubparts}
@@ -150,6 +176,7 @@ Determine which of the following are Dedekind domains. Give a brief explanation 
 \item[\textnormal{(d)}]
 \(\mathbb Q[X,Y]\)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(D\) be a finite division ring. Prove that~\(D\) is a field.
 \end{examproblems}

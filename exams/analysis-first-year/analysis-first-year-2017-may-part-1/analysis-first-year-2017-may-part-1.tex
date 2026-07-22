@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, May 2017, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, May 2017, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,22 +95,27 @@
 \begin{examinstructions}
 Answer FOUR questions in detail. State carefully any results used without proof.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \(f:[0,1]\to[0,1]\) be increasing. By considering the set 
+Let \(f:[0,1]\to[0,1]\) be increasing. By considering the set
 \[
 A=\{t\in[0,1]:t\leq f(t)\}
 \]
  or otherwise, prove that there exists \(a\in[0,1]\) such that \(f(a)=a\).
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let~\(X\) be a metric space, of which~\(U\) is an open subset and~\(A\) an arbitrary subset. Prove that 
+Let~\(X\) be a metric space, of which~\(U\) is an open subset and~\(A\) an arbitrary subset. Prove that
 \[
 U\cap\overline{A}\subseteq\overline{U\cap A}.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(f:X\to Y\) be a map between metric spaces. Prove that if \((f(x_n))_{n=0}^{\infty}\) converges in~\(Y\) whenever \((x_n)_{n=0}^{\infty}\) converges in~\(X\), then~\(f\) is continuous. [Note: it is not given that \(f(x_n)\to f(x)\) whenever \(x_n\to x\).]
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(B\subseteq\mathbb{R}\) be bounded and \(f:B\to\mathbb{R}\) uniformly continuous. True or false: \(f(B)\subseteq\mathbb{R}\) is bounded? Give a proof or counterexample, as appropriate.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(f:(-a,a)\to\mathbb{R}\) be continuous everywhere and differentiable at each nonzero point. Show that if the limit \(\ell=\lim_{t\to0}f'(t)\) exists then~\(f\) is in fact continuously differentiable at~\(0\) with \(f'(0)=\ell\).
 \end{examproblems}

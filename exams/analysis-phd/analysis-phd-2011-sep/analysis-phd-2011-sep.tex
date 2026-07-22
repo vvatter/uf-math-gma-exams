@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, September 2011}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, September 2011\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,34 +95,42 @@
 \begin{examinstructions}
 Answer SIX questions. Write solutions in a neat and logical fashion, giving complete reasons for all steps and stating carefully any substantial theorems used.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(Y_p\) denote \(\mathbb{R}^3\) provided with the~\(p\)-norm. Are the normed spaces \(Y_1\) and \(Y_\infty\) isometrically isomorphic? Prove or disprove.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(X\) and~\(Y\) be normed spaces, \(X\) being complete. Let \((T_n)_{n=1}^{\infty}\) be a sequence of bounded linear operators \(X \to Y\) and assume that for each \(x \in X\) the limit \(\lim_{n\to\infty} T_nx =: Tx\) exists in~\(Y\). Show that \(T:X\to Y\) is a bounded linear operator.
+\def\ProblemHeadingText{Problem 3.}
 \item
 State the Closed Graph theorem and the Open Mapping theorem. Derive ONE of these from the Banach Isomorphism theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let~\(\mathbb{H}\) be a Hilbert space. Prove that linear maps~\(S\) and~\(T\) from~\(\mathbb{H}\) to itself that satisfy 
+Let~\(\mathbb{H}\) be a Hilbert space. Prove that linear maps~\(S\) and~\(T\) from~\(\mathbb{H}\) to itself that satisfy
 \[
 (\forall x,y\in\mathbb{H})\quad \langle Sx\mid y\rangle=\langle x\mid Ty\rangle
 \]
  are automatically continuous.
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let~\(\phi\) be a bounded linear functional on the real Hilbert space~\(\mathbb{H}\) and for \(x\in\mathbb{H}\) define 
+Let~\(\phi\) be a bounded linear functional on the real Hilbert space~\(\mathbb{H}\) and for \(x\in\mathbb{H}\) define
 \[
 f(x)=\lVert x\rVert^2-\phi(x).
 \]
  Prove that each nonempty closed convex set \(K\subset\mathbb{H}\) contains a unique point at which the restriction \(f|_K\) is minimized. Suggestion: represent the bounded linear functional.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(f\) be a real-valued measurable function on the measure space \((\Omega,\mathcal{F},\mu)\). Prove that if \(A\in\mathcal{F}\) is an atom then there exists a real number~\(a\) such that \(f=a\) almost everywhere on~\(A\). Note: To say that \(A\in\mathcal{F}\) is an atom means that \(\mu(A)>0\) and if \(B\in\mathcal{F}\) is a subset of~\(A\) then either \(\mu(B)=0\) or \(\mu(A\setminus B)=0\).
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \((\Omega,\mathcal{F},\mu)\) be a measure space. Prove that if \(1<p<s<q<\infty\) then 
+Let \((\Omega,\mathcal{F},\mu)\) be a measure space. Prove that if \(1<p<s<q<\infty\) then
 \[
 L^p(\mu)\cap L^q(\mu)\subseteq L^s(\mu).
 \]
+\def\ProblemHeadingText{Problem 8.}
 \item
-State the (\(\sigma\)-finite) Radon–Nikodym theorem. Prove that if the~\(\sigma\)-finite measures \(\lambda,\mu,\nu\) satisfy \(\nu\ll\mu\) and \(\mu\ll\lambda\) then (\(\lambda\)-ae) 
+State the (\(\sigma\)-finite) Radon–Nikodym theorem. Prove that if the~\(\sigma\)-finite measures \(\lambda,\mu,\nu\) satisfy \(\nu\ll\mu\) and \(\mu\ll\lambda\) then (\(\lambda\)-ae)
 \[
 \frac{d\nu}{d\lambda}=\frac{d\nu}{d\mu}\frac{d\mu}{d\lambda}.
 \]

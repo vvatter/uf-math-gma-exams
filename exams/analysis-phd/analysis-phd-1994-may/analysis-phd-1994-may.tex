@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 1994}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 1994\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,58 +92,76 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{I.}
+\subsection{I.}
 \begin{examinstructions}
 State the following theorems:
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 The Uniform Boundedness theorem
+\def\ProblemHeadingText{Problem 2.}
 \item
 The Hahn–Banach theorem
+\def\ProblemHeadingText{Problem 3.}
 \item
 The Fatou Lemma.
+\def\ProblemHeadingText{Problem 4.}
 \item
 The Lebesgue dominated convergence theorem
+\def\ProblemHeadingText{Problem 5.}
 \item
 The Vitali theorem
+\def\ProblemHeadingText{Problem 6.}
 \item
 The Radon–Nikodym theorem
+\def\ProblemHeadingText{Problem 7.}
 \item
 The Egorov theorem
+\def\ProblemHeadingText{Problem 8.}
 \item
 The Fubini theorem
+\def\ProblemHeadingText{Problem 9.}
 \item
 The dual of \(L^p\) \((1 \leq p < \infty)\)
+\def\ProblemHeadingText{Problem 10.}
 \item
 The Lusin theorem
+\def\ProblemHeadingText{Problem 11.}
 \item
 The Riesz representation theorem in locally compact spaces
+\def\ProblemHeadingText{Problem 12.}
 \item
 The Lebesgue decomposition theorem
 \end{examproblems}
-\section{II}
+\subsection{II}
 \begin{examinstructions}
 Prove one of the theorems 8 or 9.
 \end{examinstructions}
-\section{III.}
+\subsection{III.}
 \begin{examinstructions}
 Solve the following problems:
 \end{examinstructions}
 \begin{examinstructions}
 \((X,\Sigma,\mu)\) is a measure space. \(E\) is a Banach space.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \((f_n)\) be a sequence of \(L_E^1(\mu)\) such that \(\int \lVert f_n\rVert\,d\mu < \frac{1}{n^2}\) for every~\(n\). Prove or disprove the pointwise convergence and the convergence in the mean of the series \(\sum f_n\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Assume~\(\mu\) is finite and let~\(R\) be a ring generating~\(\Sigma\). Define \(\rho(A,B)=\mu(A\mathbin{\triangle}B)\) for \(A,B\in\Sigma\). Prove that~\(\rho\) is a semi-distance and that~\(R\) is dense in~\(\Sigma\) for~\(\rho\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(X=\mathbb{R}\) and~\(\mu\) the Lebesgue measure. Let \(f\in L_{\mathbb{C}}^1(\mu)\) such that \(\int_0^x f\,d\mu=0\) for every \(x\in\mathbb{R}\) (if \(x<0\), \(\int_0^x=-\int_x^0\)). Prove that \(f=0\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(\mu,\nu\) be finite, \(\sigma\)-additive measures on~\(\Sigma\), such that \(\mu\ll\nu\) and \(\nu\ll\mu\). What can be said about the relationship of the Radon–Nikodym densities of one measure with respect to the other.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \((x_n)\) be a sequence in the Banach space~\(E\). Assume \(x_n\to x\) weakly in~\(E\). Show that~\(x\) is the only weak limit of the sequence \((x_n)\) and that \(\sup_n\lVert x_n\rVert<\infty\). (Hint: Consider the \(x_n\) as elements of the bidual \(E^{**}\).)
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(X=\mathbb{R}\) and~\(\mu\) the Lebesgue measure. Let \(f\in L^1(\mu)\) and for each \(t\in\mathbb{R}\) define \(f_t(x)=f(x-t)\). Show that the mapping \(t\mapsto f_t\) is a continuous map from~\(\mathbb{R}\) into \(L^1(\mu)\). (Hint: prove it first for continuous functions with compact support).
 \end{examproblems}

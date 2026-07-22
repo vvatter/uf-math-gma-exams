@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2023, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2023, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,14 @@
 \begin{examinstructions}
 Answer four problems. State clearly all the results from the text that you need, and write your answers clearly in complete English sentences. In all cases, be sure to justify your answer.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Denote by \(Q_8\) the quaternion group. Show that if \(f:Q_8\to S_n\) is an injective homomorphism then \(n\geq 8\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Show that any group of order \(80=2^4\cdot 5\) is solvable (do not simply quote Burnside’s theorem).
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -94,6 +113,7 @@ Show that any nilpotent group is solvable.
 \item[\textnormal{(iii)}]
 Give an example of a finite solvable group that is not nilpotent, and prove that this example is correct.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Find
 \begin{examsubparts}
@@ -102,6 +122,7 @@ representatives of the isomorphism classes of abelian groups of order \(504=2^3\
 \item[\textnormal{(ii)}]
 the number of elements of order~\(6\) in each such group.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -110,6 +131,7 @@ Find all conjugacy classes of elements of order~\(2\) in \(S_6\), and the number
 \item[\textnormal{(ii)}]
 Do the same for \(A_6\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose~\(p\) is prime, \(P\subseteq S_p\) is a Sylow~\(p\)-subgroup of \(S_p\) and \(N=N(P)\) is the normalizer of~\(P\). Show that
 \[

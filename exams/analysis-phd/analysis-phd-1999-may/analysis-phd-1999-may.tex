@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis PhD Exam, May 1999}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-phd/}{Analysis PhD Exam}, May 1999\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,45 +92,58 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\section{I}
+\subsection{I}
 \begin{examinstructions}
 State the following theorems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Hahn–Banach.
+\def\ProblemHeadingText{Problem 2.}
 \item
 The Egorov theorem.
+\def\ProblemHeadingText{Problem 3.}
 \item
 The Vitali convergence theorem.
+\def\ProblemHeadingText{Problem 4.}
 \item
 The Radon–Nikodym theorem.
+\def\ProblemHeadingText{Problem 5.}
 \item
 The Fubini theorem.
+\def\ProblemHeadingText{Problem 6.}
 \item
 The monotone convergence theorem.
+\def\ProblemHeadingText{Problem 7.}
 \item
 The completeness theorem for \(L_F^p(\mu)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 The equality \(|g\mu|=|g|\,|\mu|\).
 \end{examproblems}
-\section{II}
+\subsection{II}
 \begin{examinstructions}
 Prove one of the theorems 3 or 7.
 \end{examinstructions}
-\section{III}
+\subsection{III}
 \begin{examinstructions}
 Solve the following problems, where \((X,\Sigma,\mu)\) is a measure space and~\(F\) is a Banach space.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H3}
+\def\ProblemHeadingText{Problem 1.}
 \item
 If \(f_n\to f\) in \(L_F^p(\mu)\) and \(f_n\to g\), \(\mu\)-a.e., then \(f=g\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(\mathcal F\subset\Sigma\) be a~\(\sigma\)-algebra. Prove the existence of the conditional expectation \(E(f\mid\mathcal F)\) for \(f\in L_F^p(\mu)\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(\mathcal R\) be a ring generating~\(\Sigma\) and \(f\in L_F^1(\mu)\). Prove that if \(\int_A f\,d\mu=0\) for every \(A\in\mathcal R\), then \(f=0\), \(\mu\)-a.e.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \((X,\mathcal F)\) and \((Y,\mathcal T)\) be measurable spaces, and let \(\mu:\mathcal F\to\mathbb R\) and \(\nu:\mathcal T\to\mathbb R\) be~\(\sigma\)-additive measures. Prove the existence of the product measure \(\mu\times\nu:\mathcal F\times\mathcal T\to\mathbb R\) satisfying \((\mu\times\nu)(A\times B)=\mu(A)\nu(B)\) for \(A\times B\in\mathcal F\times\mathcal T\), and \(|\mu\times\nu|=|\mu|\times|\nu|\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 If \(f\in L_F^1(\mu)\), there is a sequence \((f_n)\) of \(\mathcal R\)-step functions
 \end{examproblems}

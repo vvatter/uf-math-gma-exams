@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology First-Year Exam, August 2023, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-first-year/}{Topology First-Year Exam}, August 2023, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(f:X\to X\) be a map of a compact metric space to itself that satisfies the following condition: \(d(f(x),f(y))<d(x,y)\).
 \begin{examsubparts}
@@ -88,12 +105,16 @@ Prove that~\(f\) is continuous.
 \item[\textnormal{(b)}]
 Show that~\(f\) has a fixed point and the fixed point is unique.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(X\subset \mathbb{R}^2\) be a countable subset. Prove that \(\mathbb{R}^2\setminus X\) is connected.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(X\) be a connected normal space having more than one point. Can~\(X\) be countable?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(A\) be a proper subset of~\(X\) and let~\(B\) be a proper subset of~\(Y\). If~\(X\) and~\(Y\) are connected, show that \((X\times Y)-(A\times B)\) is connected.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(I_O\) denote the square \([0,1]\times[0,1]\) given the lexicographic order topology. Is \(I_O\)
 \begin{examsubparts}
@@ -108,11 +129,14 @@ path connected?
 \begin{examinstructions}
 Answer the following with complete definitions or statements or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Give definition of Lebesgue number.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Show that the power set \(P(X)\) has strictly greater cardinality than~\(X\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Show that the 2-sphere is not homeomorphic to
 \begin{examsubparts}
@@ -121,10 +145,12 @@ the circle \(S^1\);
 \item[\textnormal{(b)}]
 the 2-plane \(\mathbb{R}^2\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Show that every compact Hausdorff space is regular.
+\def\ProblemHeadingText{Problem 10.}
 \item
-Give definition of a quotient map. Let 
+Give definition of a quotient map. Let
 \[
 Z=\{(x,y)\in\mathbb{R}^2\mid xy=1\}\cup(\{0\}\times\mathbb{R})\subset\mathbb{R}\times\mathbb{R}
 \]

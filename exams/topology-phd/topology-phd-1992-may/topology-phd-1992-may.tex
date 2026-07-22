@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 1992}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 1992\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer the following questions without giving proofs.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Define what it means for a space~\(X\) to be
 \begin{examsubparts}
@@ -90,27 +107,36 @@ arcwise connected
 \item[\textnormal{(c)}]
 simply connected
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(K\) be a finite simplicial complex. Define \(\chi(K)\), the Euler characteristic of~\(K\).
+\def\ProblemHeadingText{Problem 3.}
 \item
 Define the degree of a map \(f:S^n\to S^n\). (You may assume that~\(f\) is smooth.)
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(K=K_1\cup K_2\), where~\(K\) is a simplicial complex and \(K_1\), \(K_2\), and \(A=K_1\cap K_2\) are subcomplexes of~\(K\). State the Mayer–Vietoris sequence (in either homology or cohomology) for \((K,K_1,K_2,A)\).
 \end{examproblems}
 \begin{examinstructions}
 Answer the following questions, giving proofs and examples.
 \end{examinstructions}
-\begin{examproblems}{4}
+\begin{examproblems}{4}{H2}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Must a continuous map \(f:S^4\to S^4\) of non-negative degree have a fixed point?
+\def\ProblemHeadingText{Problem 6.}
 \item
 Compute the fundamental group of a closed, non-orientable surface~\(X\) of genus 2.
+\def\ProblemHeadingText{Problem 7.}
 \item
 State and prove the Brouwer fixed point theorem.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(U\) be an open subset of \(\mathbb{R}^n\). Show that~\(U\) is connected if and only if~\(U\) is arcwise connected.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Show that no covering space for the two-torus, \(T^2=S^1\times S^1\), has the homotopy type of the figure-8, \(S^1\vee S^1\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Compute the homology groups of the closed unit disk \(D^n=\{x\in\mathbb{R}^n:\lVert x\rVert\leq 1\}\) and the unit sphere \(S^n=\{u\in\mathbb{R}^{n+1}:\lVert u\rVert=1\}\), for all \(n\geq 0\). (Note that \(D^0=\{0\}\) and that \(S^0=\{-1,1\}\).)
 \end{examproblems}

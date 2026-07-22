@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, January 2024}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, January 2024\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,24 +92,32 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(B(n)\) denote the number of partitions of the~\(n\)-element set, and let \(F(n)\) denote the number of partitions of the~\(n\)-element set in which every block consists of at least two elements. Prove that \(B(n)=F(n)+F(n+1)\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a simple undirected graph on \(n\ge 3\) vertices in which it holds that the sum of the degree of any two nonadjacent vertices is at least~\(n\). Prove that~\(G\) has a Hamiltonian cycle.
+\def\ProblemHeadingText{Problem 3.}
 \item
 For which positive integers~\(n\) is the Catalan number \(C_n=\binom{2n}{n}/(n+1)\) an odd integer?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Nine passengers are traveling on a bus. Among any three of them, there are two who know each other. Prove that there are at least five passengers on the bus so that each of them knows at least four other passengers.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(t_n\) denote the number of plane unlabeled rooted trees on~\(n\) vertices in which every non-leaf vertex has at least two children. So \(t_0=t_2=0\), while \(t_1=t_3=t_4=1\) and \(t_5=3\). Find an explicit formula for the ordinary generating function of the sequence \(\{t_n\}_{n\ge 0}\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(P\) be a finite poset. Let \(\Omega_P(m)\) denote the number of order-preserving functions \(f:P\to\{1,2,\ldots,m\}\). In other words, if \(x\le_P y\), then \(f(x)\le f(y)\). Prove that \(\Omega_P(m)\) is a polynomial function of~\(m\), and determine the degree of the polynomial \(\Omega_P\).
+\def\ProblemHeadingText{Problem 7.}
 \item
-A~\(t\)-design is a design in which every~\(t\)-element set of vertices appears together in exactly~\(\lambda\) blocks. Prove that if~\(\mathcal{D}\) is a~\(t\)-design with parameters \((b,v,r,k,\lambda)\), then 
+A~\(t\)-design is a design in which every~\(t\)-element set of vertices appears together in exactly~\(\lambda\) blocks. Prove that if~\(\mathcal{D}\) is a~\(t\)-design with parameters \((b,v,r,k,\lambda)\), then
 \[
 r\binom{k-1}{t-1}=\lambda\binom{v-1}{t-1}.
 \]
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(D_o(n)\) denote the number of derangements of length~\(n\) that are odd permutations, and let \(D_e(n)\) denote the number of derangements of length~\(n\) that are even permutations. Find a closed, explicit formula (no summation signs) for \(D_e(n)-D_o(n)\).
 \end{examproblems}

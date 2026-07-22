@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2021}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2021\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,7 +98,8 @@ Answer 7 questions from among the ones below. If you answer more than that, only
 \par
 Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose that~\(p\) is an odd prime and \(K/\mathbb{Q}\) is the extension of~\(\mathbb{Q}\) obtained by adjoining a primitive~\(p\)th root of~\(1\) in~\(\mathbb{C}\).
 \begin{examsubparts}
@@ -91,6 +108,7 @@ Show that~\(K\) contains a unique quadratic extension~\(F\) of~\(\mathbb{Q}\).
 \item[\textnormal{(ii)}]
 What is \(\operatorname{Gal}(K/F)\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(G\) be a group, and recall that a~\(G\)-set is a set~\(S\) with a left~\(G\)-action \(G \times S \to S\). Write the action as \((g,x) \mapsto g.x\). A morphism of~\(G\)-sets \(f:S\to T\) is a map \(f:S\to T\) such that \(f(g.x)=g.f(x)\) for all \(g\in G\) and \(x\in S\).
 \begin{examsubparts}
@@ -101,6 +119,7 @@ Show that there is a functor \(H:\mathbf{G\text{-}Set}\to\mathbf{Set}\) which as
 \item[\textnormal{(iii)}]
 Show that there is a functor \(F:\mathbf{Set}\to\mathbf{G\text{-}Set}\) such that \(F(S)\) is a free~\(G\)-set on~\(S\) (endow the set \(G\times S\) with an appropriate~\(G\)-action).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose~\(A\) is a ring with identity and~\(I\) is a set.
 \begin{examsubparts}
@@ -109,6 +128,7 @@ Show that if \(\{P_\alpha\}_{\alpha\in I}\) is a set of left~\(A\)-modules then 
 \item[\textnormal{(ii)}]
 Show that if \(\{M_\alpha\}_{\alpha\in I}\) is a set of left~\(A\)-modules then \(\prod_{\alpha\in I}M_\alpha\) is injective if and only if \(M_\alpha\) is injective.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Suppose~\(\mathcal{C}\) is a category and~\(X\) and~\(Y\) are objects of~\(\mathcal{C}\).
 \begin{examsubparts}
@@ -117,13 +137,16 @@ Define what it means for an object~\(Z\) of~\(\mathcal{C}\) to be a coproduct of
 \item[\textnormal{(ii)}]
 Show that any two groups have a coproduct in the category of groups (if~\(G\) and~\(H\) are groups, construct the coproduct of~\(G\) and~\(H\) as a suitable quotient of the free group on the disjoint union \(G\amalg H\)).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Suppose~\(K\) is a field, \(K^{alg}\) is an algebraic closure of~\(K\) and \(L/K\) is a finite separable extension. Show that \(L\otimes_K K^{alg}\) is a direct sum of fields. Hint: if \(\alpha\in L\) has minimal polynomial \(f\in K[X]\), observe that there is an exact sequence 
+Suppose~\(K\) is a field, \(K^{alg}\) is an algebraic closure of~\(K\) and \(L/K\) is a finite separable extension. Show that \(L\otimes_K K^{alg}\) is a direct sum of fields. Hint: if \(\alpha\in L\) has minimal polynomial \(f\in K[X]\), observe that there is an exact sequence
 \[
 0\to K[X]f\to K[X]\to K(\alpha)\to 0.
 \]
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose~\(A\) is a Dedekind ring and \(S\subseteq A\) is a multiplicative system. Show that \(S^{-1}A\) is a Dedekind ring.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Suppose~\(A\) is a commutative ring with identity and \(S\subseteq A\) is a multiplicative system.
 \begin{examsubparts}
@@ -132,8 +155,10 @@ Show that for any~\(A\)-module~\(M\), \(S^{-1}M\simeq S^{-1}A\otimes_A M\).
 \item[\textnormal{(ii)}]
 Show that \(S^{-1}A\) is a flat~\(A\)-module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove the Hilbert basis theorem: if~\(A\) is a commutative Noetherian ring then so is the polynomial ring \(A[X]\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Suppose~\(A\) is an integral domain with fraction field~\(K\).
 \begin{examsubparts}
@@ -142,8 +167,10 @@ Define what it means for an~\(A\)-submodule \(I\subseteq K\) to be an invertible
 \item[\textnormal{(ii)}]
 Show that an invertible fractional ideal is a projective~\(A\)-module.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Suppose~\(A\) is a ring (not necessarily commutative, or with identity) and \(J\subseteq A\) is its Jacobson radical (the intersection of all regular maximal left (or right) ideals). Show that if \(J\ne A\) then \(A/J\) is semisimple.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Suppose~\(K\) is a field and~\(A\) is a noncommutative semisimple~\(K\)-algebra of degree \(16\) (i.e. \(\dim_K(A)=16\)). List representatives of every possible isomorphism class of~\(A\) if
 \begin{examsubparts}

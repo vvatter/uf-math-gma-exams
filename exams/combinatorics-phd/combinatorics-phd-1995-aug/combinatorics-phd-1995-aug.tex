@@ -26,7 +26,6 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
@@ -36,15 +35,28 @@
 }{%
   \par\endgroup\tagstructend\nopagebreak[4]\vspace{0.12em}
 }
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -57,7 +69,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -66,8 +78,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, August 1995}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 1995\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,9 +98,11 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Every simple planar graph has a vertex of degree at most~\(5\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -96,22 +114,28 @@ Show that the max-flow min-cut theorem implies the following version of Mengerâ€
 \par
 The maximum number of edge disjoint directed paths between two given points \(s,t\) of a directed graph equals the minimum number of edges whose removal separates~\(s\) from~\(t\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 We have an unlimited supply of bricks of length~\(1\), each painted red, white or blue, and bricks of length~\(2\), each painted green or yellow. Explicitly find \(a_n\) = the number of ways to choose a sequence of bricks of total length~\(n\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 State and prove Dilworthâ€™s Theorem for a finite poset.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Each of~\(n\) gentlemen checks both his hat and his umbrella at a restaurant. Both the hats and the umbrellas are returned randomly. What is the probability that no man gets back both his hat and his umbrella?
+\def\ProblemHeadingText{Problem 6.}
 \item
 \begin{problemconcern}
 \textbf{Warning: Suspected error.} The summation upper limit is clearly printed as~\(m\), but~\(m\) is otherwise undefined and no conditions are given under which the displayed identity holds. The source reading has been preserved because the intended correction is not uniquely determined.
 \end{problemconcern}
-Prove that 
+Prove that
 \[
 \sum_{i=0}^{m} \binom{s}{i}\binom{t}{k-i}=\binom{s+t}{k}.
 \]
+\def\ProblemHeadingText{Problem 7.}
 \item
 \(6\) identical black balls and \(n-6\) identical white balls are arranged in a row. How many ways are there to do this so that no~\(3\) consecutive balls are black?
+\def\ProblemHeadingText{Problem 8.}
 \item
 Define a~\(q\)-Hamming code~\(C\) as one whose parity-check matrix~\(H\) has as its columns one non-zero vector from each~\(1\)-dimensional subspace of the vector space \(\mathrm{GF}(q)^r\).
 \begin{examsubparts}
@@ -122,6 +146,7 @@ What is the minimum distance in~\(C\)?
 \item[\textnormal{(c)}]
 Prove that~\(C\) is perfect.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 This problem has two parts.
 \begin{examsubparts}

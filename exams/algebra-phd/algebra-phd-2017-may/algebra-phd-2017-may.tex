@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2017}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2017\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -82,9 +98,11 @@ Answer seven problems. (If you turn in more, the first seven will be graded.) Wi
 \begin{examinstructions}
 Note. Below ring means associative ring with identity, and module means unital module unless otherwise specified.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(F\) and~\(K\) be fields and let~\(S\) be a set of field homomorphisms from~\(F\) to~\(K\). Prove that~\(S\) is linearly independent over~\(K\) in the vector space of functions from~\(F\) to~\(K\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(f(x)=x^3-10\).
 \begin{examsubparts}
@@ -93,12 +111,14 @@ Calculate the Galois group of \(f(x)\) over~\(\mathbb{Q}\).
 \item[\textnormal{(b)}]
 Calculate the Galois group of \(f(x)\) over \(\mathbb{Q}(\sqrt{2})\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
-Let \(\mathbb{Q}[x]\) be the algebra over~\(\mathbb{Q}\) of all polynomials in one variable over~\(\mathbb{Q}\), and similarly let \(\mathbb{Q}[x,y]\) be the algebra of polynomials in two variables. Prove that 
+Let \(\mathbb{Q}[x]\) be the algebra over~\(\mathbb{Q}\) of all polynomials in one variable over~\(\mathbb{Q}\), and similarly let \(\mathbb{Q}[x,y]\) be the algebra of polynomials in two variables. Prove that
 \[
 \mathbb{Q}[x]\otimes_{\mathbb{Q}}\mathbb{Q}[x]\simeq\mathbb{Q}[x,y]
 \]
  as algebras over~\(\mathbb{Q}\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 A group~\(G\) is said to be nilpotent of class at most 2 if \([[G,G],G]=1\), where \([H,K]\) denotes the commutator group of the two subgroups~\(H\) and~\(K\) of~\(G\). Let~\(C\) be the concrete category whose objects are the nilpotent groups of class at most 2 and whose morphisms are all the group homomorphisms between them.
 \begin{examsubparts}
@@ -107,11 +127,12 @@ Prove that, for every set~\(S\), there is a free object in~\(C\) with free gener
 \item[\textnormal{(b)}]
 Prove that if \(S\ne\varnothing\), then the free object in~\(C\) with free generator set~\(S\) is infinite.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(R\) be a ring. Prove that the following two conditions are equivalent for a left~\(R\)-module~\(P\). (You may not assume any properties of projective modules.)
 \begin{examsubparts}
 \item[\textnormal{(a)}]
-Every short exact sequence of~\(R\)-modules 
+Every short exact sequence of~\(R\)-modules
 \[
 0\to A\to B\to P\to 0
 \]
@@ -119,14 +140,19 @@ Every short exact sequence of~\(R\)-modules
 \item[\textnormal{(b)}]
 There is a free~\(R\)-module~\(F\) and an~\(R\)-module~\(K\) such that \(F\simeq K\oplus P\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let~\(R\) be the ring of all rational numbers with odd denominators. Prove that the Jacobson radical \(J(R)\) of~\(R\) consists of all fractions whose denominator is odd and whose numerator is even.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(R\) be an integral domain, and let~\(I\) be an invertible ideal of~\(R\). Prove that~\(I\) is finitely generated.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a commutative ring with identity, let~\(M\) be a maximal ideal of~\(R\), and let~\(n\) be a positive integer. Prove \(R/M^n\) has a unique prime ideal, so that, in particular, \(R/M^n\) is a local ring.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove the following version of Nakayama’s Lemma. Let~\(A\) be a commutative ring with identity, let~\(M\) be a finitely generated~\(A\)-module, and let~\(I\) be an ideal contained in the intersection of all the maximal ideals of~\(A\). Show that if \(IM=M\) then \(M=\{0\}\).
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let~\(R\) be a ring (possibly non-commutative, and possibly without identity). Let~\(M\) be an irreducible left~\(R\)-module. Let \(D=\operatorname{End}_R(M)\).
 \begin{examsubparts}
@@ -135,6 +161,7 @@ Prove \(D=\operatorname{End}_R(M)\) is a division ring. (You may NOT assume Schu
 \item[\textnormal{(b)}]
 Give an example of a ring~\(R\) and an irreducible module~\(M\) such that~\(D\) is not commutative.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 Classify (up to ring isomorphism) all semisimple rings of order \(720\).
 \end{examproblems}

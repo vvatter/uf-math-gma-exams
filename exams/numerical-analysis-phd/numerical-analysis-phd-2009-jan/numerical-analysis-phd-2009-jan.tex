@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, January 2009}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, January 2009\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,27 +95,35 @@
 \begin{examinstructions}
 Answer any 8 questions.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(M=\begin{bmatrix}A & B^t\\ B & C\end{bmatrix}\) be real symmetric and positive definite matrix. Let \(S=C-BA^{-1}B^t\) be the Schur complement. Prove that~\(S\) is symmetric and positive definite.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Let \(\lVert\cdot\rVert_p\) for \(1\le p\le\infty\) denote the norm on \(m\times n\) matrices induced by the \(\ell^p\)-norm on vectors in \(\mathbb{C}^m\) and \(\mathbb{C}^n\). Prove that 
+Let \(\lVert\cdot\rVert_p\) for \(1\le p\le\infty\) denote the norm on \(m\times n\) matrices induced by the \(\ell^p\)-norm on vectors in \(\mathbb{C}^m\) and \(\mathbb{C}^n\). Prove that
 \[
 \lVert A\rVert_2\le \sqrt{\lVert A\rVert_1\lVert A\rVert_\infty},\qquad\text{for all }A\in\mathbb{C}^{m\times n}.
 \]
+\def\ProblemHeadingText{Problem 3.}
 \item
 Show that if~\(P\) and~\(Q\) be Hermitian positive definite matrices satisfying \(x^*Px\le x^*Qx\), for all \(x\in\mathbb{C}^n\), then \(\lVert P\rVert_F\le\lVert Q\rVert_F\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(T\) be any square matrix and let \(\lVert\cdot\rVert\) denote any induced norm. Prove that \(\displaystyle\lim_{n\to\infty}\lVert T^n\rVert^{1/n}\) exists and equals \(\displaystyle\inf_{n=1,2,\ldots}\lVert T^n\rVert^{1/n}\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(P\) and~\(Q\) be two \(m\times m\) orthogonal projectors. Prove that \(\lVert P-Q\rVert_2\le 1\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(x_0,x_1,\ldots,x_n\) be distinct points in a finite interval \([a,b]\) and \(f\in C^1[a,b]\). Show that for any given \(\varepsilon>0\) there exists a polynomial~\(p\) such that \(\lVert f-p\rVert_\infty<\varepsilon\) and \(p(x_i)=f(x_i)\) for all \(i=0,1,\ldots,n\) (where \(\lVert\cdot\rVert_\infty\) denotes the \(L^\infty(a,b)\)-norm).
+\def\ProblemHeadingText{Problem 7.}
 \item
-Let \(\hat f(s)\) be the continuous Fourier transform of \(f(t)\in L^2[-\infty,\infty]\). Suppose further that \(\hat f(s)=0\) for \(|s|>\pi\). Derive the interpolation formula 
+Let \(\hat f(s)\) be the continuous Fourier transform of \(f(t)\in L^2[-\infty,\infty]\). Suppose further that \(\hat f(s)=0\) for \(|s|>\pi\). Derive the interpolation formula
 \[
 f(t)=\sum_{k=-\infty}^{\infty}f(k)\frac{\sin(\pi(t-k))}{\pi(t-k)}.
 \]
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let \(L_n(f)\) be the Lagrange polynomial interpolating a function~\(f\) at nodes \(a=x_0<x_1<\cdots<x_n=b\).
 \begin{examsubparts}
@@ -110,6 +134,7 @@ Prove that there is a unique polynomial of degree at most~\(n\) interpolating~\(
 \item[\textnormal{(c)}]
 State and prove the formula for the error \(f(x)-L_n(f)(x)\) when \(f(x)\in C^{n+1}[a,b]\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Assume that~\(g\) is continuously differentiable real-valued function and \(a\le g(x)\le b\) on \([a,b]\). Show the following:
 \begin{examsubparts}
@@ -118,11 +143,12 @@ There is an \(\alpha\in[a,b]\) such that \(g(\alpha)=\alpha\).
 \item[\textnormal{(b)}]
 If \(|g'(x)|<1\) on \([a,b]\), then there is only one fixed point on the interval \([a,b]\).
 \item[\textnormal{(c)}]
-If we generate iterates using the recurrence \(x_{n+1}=g(x_n)\) starting from some \(x_0\in[a,b]\), then we have 
+If we generate iterates using the recurrence \(x_{n+1}=g(x_n)\) starting from some \(x_0\in[a,b]\), then we have
 \[
 |\alpha-x_n|\le \frac{\lambda^n}{1-\lambda}|x_1-x_0|\qquad\text{where}\qquad \lambda=\max_{x\in[a,b]}|g'(x)|.
 \]
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Let \(\{\phi_n(x):n\ge 0\}\) be an orthogonal family of polynomials on the interval \((a,b)\) with weight function \(w(x)\ge 0\) for all \(x\in[a,b]\). Show that the polynomial \(\phi_n(x)\) has exactly~\(n\) distinct real roots in the open interval \((a,b)\).
 \end{examproblems}

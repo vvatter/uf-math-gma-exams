@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, August 2017}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, August 2017\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,7 +92,8 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let \(a_n\) denote the number of strings of length~\(n\) of the letters A, B, C, and D such that the letter A appears an odd number of times.
 \begin{examsubparts}
@@ -85,11 +102,13 @@ Find a closed formula for \(a_n\).
 \item[\textnormal{(b)}]
 Find the exponential generating function for the sequence \(\{a_n\}\). (using no summation signs)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 The set \([n] \times [n]\) is partially ordered by the relation \((a,b) \preceq (c,d)\) which holds when \(a \leq c\) and \(b \leq d\). Find, with proof, the length of a maximum chain and the length of a maximum antichain.
 
 \par
 What is the size of a minimum chain decomposition of this poset. (Recall that a chain decomposition of a poset is a partition of its elements into disjoint chains.)
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -98,6 +117,7 @@ Prove that, for a simple graph~\(G\) with at least 5 vertices, at least one of~\
 \item[\textnormal{(b)}]
 Suppose that you color the edges of \(K_n\) using 2 colors. Show that there exists a monochromatic spanning tree.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 A parity check matrix~\(H\) of a binary linear code~\(C\) can be defined as a generator matrix of the dual code \(C^\perp\).
 
@@ -108,14 +128,14 @@ Show that~\(C\) is the null space of the transpose \(H^T\), where multiplication
 Show that the minimum distance of the code equals the cardinality of a minimum dependent set of columns of~\(H\).
 
 \par
-If a generator matrix of a binary linear code~\(C\) is 
+If a generator matrix of a binary linear code~\(C\) is
 \[
 \begin{pmatrix}
 1 & 0 & 1 & 0 & 1\\
 0 & 1 & 1 & 1 & 0
 \end{pmatrix},
 \]
- then show that \((c_1,c_2,c_3,c_4,c_5)\) is a codeword if and only if (modulo 2) 
+ then show that \((c_1,c_2,c_3,c_4,c_5)\) is a codeword if and only if (modulo 2)
 \[
 \begin{aligned}
 c_1+c_2+c_3&=0\\
@@ -124,12 +144,16 @@ c_1+c_5&=0.
 \end{aligned}
 \]
  What is the minimum distance of this code?
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let \(g(n)\) be the number of permutations of length~\(n\) in which each cycle is of even length. Find the exponential generating function of the sequence \(g(n)\), where \(n=0,1,2,\ldots\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(t_n\) be the total number of cycles of all permutations of length~\(n\). So \(t_1=1\), \(t_2=3\), and \(t_3=11\). Find an explicit formula for the numbers \(t_n\). Your answer can contain one summation sign.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove that the language \(\{a^{n^2}:n\in\mathbb{N}\}\) is not regular.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(\beta\) be a permutation of length~\(k\). Prove that there are precisely \(k^2+1\) permutations of length \(k+1\) containing~\(\beta\).
 \end{examproblems}

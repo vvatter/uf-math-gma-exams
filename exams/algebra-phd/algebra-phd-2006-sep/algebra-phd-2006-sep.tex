@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, September 2006}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, September 2006\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer seven problems. You should indicate which problems you wish to have graded. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -90,6 +107,7 @@ Prove that the homomorphic image of a solvable group is solvable.
 \item[\textnormal{(c)}]
 Let~\(F\) be a free group on a set~\(S\) with \(|S|>1\). Prove that~\(F\) is not solvable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -100,6 +118,7 @@ Prove that the composition of two epimorphisms is an epimorphism.
 \item[\textnormal{(c)}]
 Let~\(C\) be the category whose objects are commutative rings with 1 and whose morphisms are unitary ring homomorphisms. Prove that the natural map \(\mathbb{Z}\to\mathbb{Q}\) is an epimorphism in~\(C\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(L/K\) be an algebraic field extension. Let~\(S\) denote the set of elements of~\(L\) which are separable over~\(K\).
 \begin{examsubparts}
@@ -108,8 +127,10 @@ Prove that~\(S\) is a field.
 \item[\textnormal{(b)}]
 Prove that for every \(\alpha\in L\) the extension \(S(\alpha)/S\) is purely inseparable.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Give an example of a polynomial \(f(X)\in\mathbb{Q}[X]\) whose Galois group is isomorphic to \(S_5\). Prove that this is the case.
+\def\ProblemHeadingText{Problem 5.}
 \item
 This problem has three parts.
 \begin{examsubparts}
@@ -120,14 +141,19 @@ Prove that~\(\phi\) is one-to-one.
 \item[\textnormal{(c)}]
 Prove that~\(\phi\) is not onto.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that an abelian group is divisible if and only if it is an injective~\(\mathbb{Z}\)-module.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Let~\(R\) be a commutative ring with 1, let~\(M\) be a finitely generated~\(R\)-module, and let~\(I\) be an ideal of~\(R\) which is contained in every maximal ideal of~\(R\). Prove that if \(IM=M\) then \(M=0\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be a commutative Noetherian ring with 1. Let \(0=Q_1\cap\cdots\cap Q_n\) be a reduced primary decomposition of the zero ideal in~\(R\) and set \(P_i=\sqrt{Q_i}\) for \(1\leq i\leq n\). Prove that \(P_1\cup\cdots\cup P_n\) is the set of zero divisors of~\(R\).
+\def\ProblemHeadingText{Problem 9.}
 \item
 Let~\(R\) be a UFD. Prove that~\(R\) is integrally closed in its field of fractions.
+\def\ProblemHeadingText{Problem 10.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -136,6 +162,7 @@ Let~\(R\) be a ring. Prove that the Jacobson radical \(J(R)\) contains no nonzer
 \item[\textnormal{(b)}]
 Give an example of a ring~\(R\) with a nonzero idempotent~\(e\) such that~\(e\) is a left quasi-regular element of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(K\) be a field and let~\(A\) be a central simple algebra over~\(K\) such that \(\dim_K(A)=n\) is finite. Prove that \(A\otimes_K A^{\mathrm{op}}\cong M_{n\times n}(K)\).
 \end{examproblems}

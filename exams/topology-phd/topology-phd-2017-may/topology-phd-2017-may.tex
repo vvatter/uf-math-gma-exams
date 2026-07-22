@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Topology PhD Exam, May 2017}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/topology-phd/}{Topology PhD Exam}, May 2017\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,43 +95,58 @@
 \begin{examinstructions}
 Work the following problems and show all work. Support all statements to the best of your ability.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that a compact Hausdorff space is regular.
+\def\ProblemHeadingText{Problem 2.}
 \item
 Prove that if \(n>0\), every map \(S^n\to S^n\) is homotopic to a map with a fixed point.
+\def\ProblemHeadingText{Problem 3.}
 \item
 The oriented surface \(M_g\) of genus~\(g\), embedded in \(\mathbb{R}^3\) in the standard way, bounds a compact region~\(R\). Two copies of~\(R\), glued together by the identity map between their boundary surfaces \(M_g\), form a closed 3-manifold~\(X\). Compute the homology groups of~\(X\) using the Mayer–Vietoris sequence.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let \(f:S^1\to\mathbb{R}\) be a continuous map. Prove that there exists a point \(x\in S^1\) with \(f(x)=f(-x)\). (Note: do not simply state the Borsuk–Ulam Theorem; give a direct proof.)
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(M\) be a closed simply-connected orientable 3-manifold. Compute the integral homology and cohomology of~\(M\). What can you say about \(\pi_i(M)\), \(i\leq 3\)?
 \end{examproblems}
 \begin{examinstructions}
 Answer the following with complete definitions, statements, or short proofs.
 \end{examinstructions}
-\begin{examproblems}{5}
+\begin{examproblems}{5}{H2}
+\def\ProblemHeadingText{Problem 6.}
 \item
 Prove that for a finite CW-complex~\(X\), \(H^1(X;\mathbb{Z})\) is torsion-free.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Compute \(\chi(\mathbb{CP}^3\times\mathbb{RP}^2\times S^2)\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Give an example of a space that is path-connected but not locally path-connected.
+\def\ProblemHeadingText{Problem 9.}
 \item
 State the Urysohn Lemma.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Prove that if \(m\neq n\), then \(\mathbb{R}^m\) is not homeomorphic to \(\mathbb{R}^n\).
+\def\ProblemHeadingText{Problem 11.}
 \item
 Does the function \(f:\mathbb{R}\to\mathbb{R}\) defined by \(f(x)=\arctan x\) admit a continuous extension \(\bar f:\beta\mathbb{R}\to\mathbb{R}\) to the Stone–Čech compactification? What about the function \(g(x)=e^x\)?
+\def\ProblemHeadingText{Problem 12.}
 \item
 State the Lefschetz Fixed Point Theorem.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Describe all the connected covering spaces \(E\to S^1\).
+\def\ProblemHeadingText{Problem 14.}
 \item
-Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample. 
+Does the following exact sequence of abelian groups necessarily split? Prove or give a counterexample.
 \[
 0\to\mathbb{Z}\to A\to B\to 0
 \]
+\def\ProblemHeadingText{Problem 15.}
 \item
 Compute the integral homology of the space \(\mathbb{RP}^4\times\mathbb{CP}^2\).
 \end{examproblems}

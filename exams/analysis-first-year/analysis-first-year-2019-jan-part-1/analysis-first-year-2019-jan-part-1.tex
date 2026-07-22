@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Analysis First-Year Exam, January 2019, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/analysis-first-year/}{Analysis First-Year Exam}, January 2019, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,16 +95,18 @@
 \begin{examinstructions}
 Do exactly 4 problems. Work must be presented in a neat and logical fashion in order to receive credit. Do not leave any gaps. When a theorem is used in a proof it must be precisely stated.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
-Let \((s_n)_{n=1}^{\infty}\) be a bounded sequence of real numbers. Consider the sequence \((\sigma_n)\) of averages 
+Let \((s_n)_{n=1}^{\infty}\) be a bounded sequence of real numbers. Consider the sequence \((\sigma_n)\) of averages
 \[
 \sigma_n=\frac{s_1+s_2+\cdots+s_n}{n}.
 \]
- Prove that the sequence \((\sigma_n)\) is bounded and 
+ Prove that the sequence \((\sigma_n)\) is bounded and
 \[
 \limsup \sigma_n\leq \limsup s_n.
 \]
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let \(K_1\supseteq K_2\supseteq K_3\supseteq\cdots\) be a decreasing family of nonempty sets in a metric space~\(X\).
 \begin{examsubparts}
@@ -97,12 +115,15 @@ Prove that if each \(K_n\) is compact, then \(\bigcap_n K_n\) is nonempty.
 \item[\textnormal{b)}]
 Give an example to show that \(\bigcap_n K_n\) can be empty if the \(K_n\) are only assumed closed.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let \(X,Y\) be metric spaces and \(f:X\to Y\) a function. Prove that if~\(f\) is uniformly continuous on~\(X\) and \((x_n)\) is a Cauchy sequence in~\(X\), then \((f(x_n))\) is a Cauchy sequence in~\(Y\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(X\) be a metric space and suppose that every continuous function \(f:X\to\mathbb{Z}\) is constant. Prove that~\(X\) is connected.
+\def\ProblemHeadingText{Problem 5.}
 \item
-Suppose~\(f\) is differentiable in \((a,b)\) and \(f'(x)>0\) for all \(x\in(a,b)\). Let~\(g\) be the inverse function to~\(f\). Prove that for each \(x_0\in(a,b)\), the function~\(g\) is differentiable at \(f(x_0)\) and 
+Suppose~\(f\) is differentiable in \((a,b)\) and \(f'(x)>0\) for all \(x\in(a,b)\). Let~\(g\) be the inverse function to~\(f\). Prove that for each \(x_0\in(a,b)\), the function~\(g\) is differentiable at \(f(x_0)\) and
 \[
 g'(f(x_0))=\frac{1}{f'(x_0)}.
 \]

@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, January 2016}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, January 2016\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,11 +95,13 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Prove that every square matrix~\(A\) has a Schur factorization.
+\def\ProblemHeadingText{Problem 2.}
 \item
-Given a matrix \(A \in \mathbb{C}^{m \times n}\), let 
+Given a matrix \(A \in \mathbb{C}^{m \times n}\), let
 \[
 B=\begin{pmatrix}0&A^*\\A&0\end{pmatrix}
 \quad\text{and}\quad C=A^*A.
@@ -98,6 +116,7 @@ Assume now that~\(A\) is square and invertible. Compute the two-norm condition n
 \item[\textnormal{(d)}]
 If~\(A\) has condition number bigger than one, which has the larger condition number, \(B\) or~\(C\)?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -106,6 +125,7 @@ Compute \(\det(\lambda I+uv^*)\) when \(\lambda \in \mathbb{C}\), \(I\) is the \
 \item[\textnormal{(b)}]
 Prove necessary and sufficient conditions for \(I+uv^*\) to be nonsingular and when it is, give a formula for its inverse.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -114,8 +134,9 @@ Given Cholesky decomposition of the Hermitian positive definite matrix \(A=R^*R\
 \item[\textnormal{(b)}]
 Now assume that~\(B\) is a matrix that can be expressed as \(B=T^*T\) for some upper triangular matrix~\(T\). Show that~\(B\) is Hermitian and positive semi-definite, i.e. \(x^*Bx \geq 0\) for all~\(x\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Let \(\{q_1,q_2,\ldots,q_n\}\) be an orthonormal subset of \(\mathbb{C}^m\). Show that 
+Let \(\{q_1,q_2,\ldots,q_n\}\) be an orthonormal subset of \(\mathbb{C}^m\). Show that
 \[
 P=\sum_{i=1}^n q_iq_i^*
 \]

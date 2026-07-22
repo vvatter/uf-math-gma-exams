@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Analysis PhD Exam, May 2017, Part 1}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-analysis-phd/}{Numerical Analysis PhD Exam}, May 2017, Part 1\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Do 4 (four) problems.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -88,6 +105,7 @@ Given \(A \in \mathbb{C}^{m \times n}\) with \(m \geq n\), show that \(A^{*}A\) 
 \item[\textnormal{(b)}]
 If \(u,v \in \mathbb{C}^{m}\) and \(A=uv^{*}\), show that \(\lVert A\rVert _2=\lVert u\rVert _2\lVert v\rVert _2\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Assume \(S \in \mathbb{C}^{m \times m}\) is skew-Hermitian, so \(S^{*}=-S\).
 \begin{examsubparts}
@@ -98,6 +116,7 @@ Show that \(I-S\) is nonsingular.
 \item[\textnormal{(c)}]
 Show that the matrix \(Q=(I-S)^{-1}(I+S)\) is unitary.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 If \(A \in \mathbb{R}^{m \times n}\) with \(m \geq n\), \(\operatorname{rank}(A)=n\) and \(b \in \mathbb{R}^{m}\).
 \begin{examsubparts}
@@ -110,6 +129,7 @@ Prove that the unique solution to the least squares problem is \((A^{T}A)^{-1}A^
 \item[\textnormal{(d)}]
 Describe how to solve the least squares problem using the SVD decomposition of~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -118,6 +138,7 @@ Prove that every square matrix~\(A\) has a Schur factorization.
 \item[\textnormal{(b)}]
 If~\(A\) is normal (so \(A^{*}A=AA^{*}\)) show that the triangular matrix in its Schur factorization is diagonal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Assume \(A \in \mathbb{C}^{m \times m}\).
 \begin{examsubparts}

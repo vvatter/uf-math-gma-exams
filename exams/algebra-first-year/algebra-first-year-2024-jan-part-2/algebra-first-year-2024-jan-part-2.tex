@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, January 2024, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, January 2024, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your answers clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose~\(k\) is a field.
 \begin{examsubparts}
@@ -88,6 +105,7 @@ If \(A=k[X,Y]/(X^2Y^3)\), find all minimal prime ideals of~\(A\).
 \item[\textnormal{(ii)}]
 Show that \(B=k[X,Y]/(X^2,Y^3)\) has a unique prime ideal, and that this prime ideal is maximal. What is it?
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Which of the following polynomials are irreducible? Explain.
 \begin{examsubparts}
@@ -98,8 +116,10 @@ Which of the following polynomials are irreducible? Explain.
 \item[\textnormal{(c)}]
 \(X^5+10X^2+25X+5\) in \(\mathbb{Q}[X]\);
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Suppose~\(R\) is a ring with identity and~\(M\) is a nonzero left~\(R\)-module. Let \(\operatorname{End}_R(M)\) be the ring of~\(R\)-linear maps \(M\to M\). Show that if~\(0\) and~\(M\) are the only~\(R\)-submodules of~\(M\), then \(\operatorname{End}_R(M)\) is a division ring.
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(R\) be an integral domain.
 \begin{examsubparts}
@@ -108,10 +128,13 @@ Define what it means for an element of~\(R\) to be irreducible, and to be prime.
 \item[\textnormal{(ii)}]
 Show that a prime element is irreducible.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
 Suppose~\(F\) is a field, \(V\) and~\(W\) are~\(F\)-vector spaces of finite dimension and \(f:V\to W\) is a surjective linear map, and let \(U=\operatorname{Ker}(f)\). Show using the definitions that \(\dim_F(V)=\dim_F(W)+\dim_F(U)\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 Suppose \(L/K\) is an extension of fields. Show that \(\alpha\in L\) is algebraic over~\(K\) if and only if there is a nonzero sub-\(K\)-vector space \(V\subseteq L\) of finite dimension such that \(\alpha V\subseteq V\) (for “if,” pick a nonzero \(v\in V\) and consider \(\alpha^n v\) for \(n\in\mathbb{N}\)).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Find representatives of each conjugacy class of \(GL_4(\mathbb{F}_2)\) of order~\(3\) or~\(5\) (the order of a conjugacy class is the order of any element of it).
 \end{examproblems}

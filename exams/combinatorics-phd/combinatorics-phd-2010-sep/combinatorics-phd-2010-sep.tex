@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Combinatorics PhD Exam, September 2010}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/combinatorics-phd/}{Combinatorics PhD Exam}, September 2010\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,25 +95,33 @@
 \begin{examinstructions}
 SHOW ALL WORK TO RECEIVE CREDIT!!
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Find an explicit formula for \(a_k\) if \(a_0=1\), and \(a_{k+1}=3a_k+2\) for all \(k\ge 0\).
+\def\ProblemHeadingText{Problem 2.}
 \item
 We have~\(n\) distinct cards. We want to split their set into nonempty subsets so that each of them contains an even number of cards. Then we want to order the cards within each subgroup. Finally, we want to order these subgroups into a line. Find an explicit formula for the number of ways \(g_n\) we can do this.
+\def\ProblemHeadingText{Problem 3.}
 \item
 How many trees are there on vertex set \(\{1,2,\ldots,n\}\) in which the vertex 1 is not a leaf?
+\def\ProblemHeadingText{Problem 4.}
 \item
 Four friends, \(A\), \(B\), \(C\), and~\(D\) organize a long jump competition every day until the final order of the four of them will be the same on two different days. At most how long will they have to wait for that to happen? (Each jump is measured in centimeters, so all kinds of ties, twofold, threefold, fourfold, are possible).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove that a balanced, uniform, incomplete design is regular. (Recall that a design is called uniform if all of its blocks consist of the same number of vertices, and that a design is called balanced if any pair of vertices occur together in the same number of blocks. Finally, a design is regular if each of its vertices occurs in the same number of blocks.)
+\def\ProblemHeadingText{Problem 6.}
 \item
-Let~\(P\) be a finite poset. Let~\(k\) be the smallest integer so that there exist antichains \(A_1,A_2,\ldots,A_k\) in~\(P\) so that 
+Let~\(P\) be a finite poset. Let~\(k\) be the smallest integer so that there exist antichains \(A_1,A_2,\ldots,A_k\) in~\(P\) so that
 \[
 P=A_1\cup A_2\cup\cdots\cup A_k.
 \]
  Prove that then~\(k\) is equal to the number of elements in a chain of maximum length in~\(P\).
+\def\ProblemHeadingText{Problem 7.}
 \item
 Prove there exists a family~\(F\) of 6600 simple graphs so that each graph in~\(F\) has vertex set \(\{1,2,\ldots,8\}\) and that no two graphs in~\(F\) are isomorphic.
+\def\ProblemHeadingText{Problem 8.}
 \item
 Each vertex of a simple graph~\(G\) has degree~\(k\). Prove that~\(G\) contains a cycle of length at least \(k+1\).
 \end{examproblems}

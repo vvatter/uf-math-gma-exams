@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra PhD Exam, May 2012}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-phd/}{Algebra PhD Exam}, May 2012\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer seven problems. (If you turn in more, the first seven will be graded.) Within reason, you may quote theorems as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(K\) be a field and let \(f \in K[x]\).
 \begin{examsubparts}
@@ -88,22 +105,27 @@ State precisely a theorem concerning the existence and uniqueness of splitting f
 \item[\textnormal{(b)}]
 Prove that for any prime power \(p^n\), there is, up to isomorphism, a unique field of order \(p^n\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 Let~\(F\) be a normal extension of~\(K\) and \(f \in K[x]\) an irreducible polynomial. Prove that in a factorization of~\(f\) in \(F[x]\) the irreducible factors all have the same degree.
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(F\) be a free group on the set~\(X\). Show that the automorphism group of~\(F\) has a subgroup isomorphic to the symmetric group of~\(X\).
+\def\ProblemHeadingText{Problem 4.}
 \item
-Let~\(R\) be a ring with 1 and let 
+Let~\(R\) be a ring with 1 and let
 \[
 0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0
 \]
- be a short exact sequence of (left)~\(R\)-modules. Show that for any (left)~\(R\)-module~\(M\), the sequence 
+ be a short exact sequence of (left)~\(R\)-modules. Show that for any (left)~\(R\)-module~\(M\), the sequence
 \[
 0 \to \operatorname{hom}_R(M,A) \xrightarrow{\overline f} \operatorname{hom}_R(M,B) \xrightarrow{\overline g} \operatorname{hom}_R(M,C),
 \]
  induced by composition of maps, is exact.
+\def\ProblemHeadingText{Problem 5.}
 \item
 Prove the Hilbert Basis Theorem: If~\(R\) is a commutative Noetherian ring with identity then so is \(R[x]\).
+\def\ProblemHeadingText{Problem 6.}
 \item
 All parts involve ideals in a commutative ring with identity.
 \begin{examsubparts}
@@ -114,6 +136,7 @@ Prove that the radical of a primary ideal is prime.
 \item[\textnormal{(c)}]
 Is it true that an ideal is primary iff it is a power of a prime ideal? Answers without an explanation will receive no credit.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 7.}
 \item
 For this question you may not quote Nakayama’s Lemma. Let~\(R\) be a commutative local ring with 1 and~\(J\) its unique maximal ideal.
 \begin{examsubparts}
@@ -122,6 +145,7 @@ Show that \(1-j\) is a unit for every \(j \in J\).
 \item[\textnormal{(b)}]
 Show that if~\(A\) is a finitely generated~\(R\)-module such that \(JA=A\), then \(A=0\). (Hint: Consider a generating set for~\(A\) of minimal size and derive a contradiction.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 8.}
 \item
 Let~\(R\) be an integral domain with fraction field~\(K\). For \(a \in K\), let \(D(a)=\{r \in R \mid ra \in R\}\).
 \begin{examsubparts}
@@ -132,6 +156,7 @@ For each prime ideal~\(P\), let \(R_P\) denote the elements of~\(K\) which can b
 \item[\textnormal{(c)}]
 Deduce that \(\bigcap_P R_P=R\), where the intersection is taken over the maximal ideals of~\(R\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 9.}
 \item
 Provide examples, with proof of:
 \begin{examsubparts}
@@ -140,8 +165,10 @@ an integral domain which is not integrally closed in its field of fractions.
 \item[\textnormal{(b)}]
 a commutative ring with 1 that is not Noetherian.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 10.}
 \item
 Classify (up to ring isomorphism) all semisimple rings of order 720.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Let~\(C\) be a category and let \((A_i)_{i \in I}\) be a family of objects of~\(C\).
 \begin{examsubparts}

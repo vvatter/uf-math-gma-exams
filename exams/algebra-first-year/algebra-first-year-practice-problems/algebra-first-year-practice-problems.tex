@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, Practice Problems}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, Practice Problems\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -76,9 +92,11 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 State and prove Cayley’s Theorem about finite groups.
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -87,6 +105,7 @@ Compute the order of the general linear group \(GL_n(\mathbb{Z}_p)\), with~\(p\)
 \item[\textnormal{(b)}]
 Calculate the order of the subgroup \(SL_n(\mathbb{Z}_p)\) of matrices which have determinant 1.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -95,23 +114,31 @@ Prove that two elements of the symmetric group \(S_n\) are conjugate if and only
 \item[\textnormal{(b)}]
 Is this true for the alternating groups? Justify your answer.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 Prove that if \(|G|=12\) and~\(G\) has 4 Sylow 3-subgroups, then \(G\cong A_4\). (Hint: let~\(G\) act by conjugation on the 4 Sylow 3-subgroups.)
+\def\ProblemHeadingText{Problem 5.}
 \item
 Let~\(p\) and~\(q\) be prime numbers, and suppose that \(p<q\). If~\(G\) is a group of order \(pq\) and~\(p\) does not divide \(q-1\), show that~\(G\) must be cyclic.
+\def\ProblemHeadingText{Problem 6.}
 \item
 Recall that a group~\(G\) is called a~\(p\)-group (\(p\) a prime number) if for each \(g\in G\), \(g^{p^i}=1\), for some positive integer~\(i\).
 
 \par
 Prove that if~\(G\) is a finite~\(p\)-group, then its center is not trivial. Then use this fact to prove that every finite~\(p\)-group is nilpotent.
+\def\ProblemHeadingText{Problem 7.}
 \item
 Suppose that \(\phi:G\longrightarrow H\) and \(\theta:G\longrightarrow K\) are homomorphisms between groups. Assume that~\(\phi\) is surjective. Show that if \(\operatorname{Ker}(\phi)\) is contained in \(\operatorname{Ker}(\theta)\) then there is a unique homomorphism \(\theta^*:H\longrightarrow K\) such that \(\theta^*\cdot\phi=\theta\).
+\def\ProblemHeadingText{Problem 8.}
 \item
 Prove that if~\(G\) is a finite group then any subgroup of index 2 is normal.
+\def\ProblemHeadingText{Problem 9.}
 \item
 Prove that any subgroup of a cyclic group is cyclic.
+\def\ProblemHeadingText{Problem 10.}
 \item
 Find all the automorphisms of order 3 of \(\mathbb{Z}_{91}\). (Hint: How can \(\mathbb{Z}_3\) act nontrivially on \(\mathbb{Z}_{91}\)?) Does \(\mathbb{Z}_{91}\) have any automorphisms of order 5? Explain.
+\def\ProblemHeadingText{Problem 11.}
 \item
 Suppose that~\(G\) is a nonabelian group of order 21. Prove:
 \begin{examsubparts}
@@ -120,10 +147,13 @@ Suppose that~\(G\) is a nonabelian group of order 21. Prove:
 \item[\textnormal{(b)}]
 \(G\) has an automorphism which is not inner.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 12.}
 \item
 Let \(GL_2(\mathbb{Z}_3)\) act on the four one-dimensional subspaces of \(\mathbb{Z}_3^2\) by \(g(\operatorname{Span}\{v\})=\operatorname{Span}\{gv\}\), where \(g\in GL_2(\mathbb{Z}_3)\) and \(v\in\mathbb{Z}_3^2\). Prove that this action induces a surjective homomorphism of \(GL_2(\mathbb{Z}_3)\) onto \(S_4\) whose kernel is the subgroup of all scalar matrices.
+\def\ProblemHeadingText{Problem 13.}
 \item
 Let~\(p\) be a prime number and~\(n\) be a positive integer. Prove that the general linear group \(GL_n(\mathbb{Z}_p)\) is isomorphic to the automorphism group of \(\mathbb{Z}_p\times\cdots\times\mathbb{Z}_p\) (\(n\) times).
+\def\ProblemHeadingText{Problem 14.}
 \item
 Suppose that \(\phi:G\longrightarrow H\) is a surjective homomorphism of groups. Prove the following about the assignment \(\phi^*:N\mapsto\phi^{-1}(N)\). Assume that it maps subgroups to subgroups.
 \begin{examsubparts}
@@ -134,6 +164,7 @@ Suppose that \(\phi:G\longrightarrow H\) is a surjective homomorphism of groups.
 \item[\textnormal{(c)}]
 \(\phi^*(N)\) is normal in~\(G\) if and only if~\(N\) is normal in~\(H\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 15.}
 \item
 Let~\(G\) be a finite group acting on the set~\(S\). Suppose that~\(H\) is a normal subgroup of~\(G\) so that for any \(s_1,s_2\in S\) there is a unique \(h\in H\) so that \(hs_1=s_2\). For each \(s\in S\), let \(G_s=\{g\in G:gs=s\}\). Prove
 \begin{examsubparts}
@@ -142,6 +173,7 @@ Let~\(G\) be a finite group acting on the set~\(S\). Suppose that~\(H\) is a nor
 \item[\textnormal{(b)}]
 if~\(H\) is contained in the center of~\(G\), then \(G_s\) is normal and~\(G\) is (isomorphic to) a direct product of \(G_s\) and~\(H\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 16.}
 \item
 Suppose that~\(G\) is a group and~\(H\) is a proper subgroup of index~\(k\). Show that
 \begin{examsubparts}
@@ -152,16 +184,22 @@ the kernel of the induced homomorphism into the permutation group on~\(\Omega\) 
 \item[\textnormal{(c)}]
 Now suppose that~\(G\) is simple and that \(k>1\) is the index of~\(H\). Then show that~\(G\) is isomorphic to a subgroup of \(S_k\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 17.}
 \item
 Prove that a group of order \(30\) must have a normal subgroup of order \(15\).
+\def\ProblemHeadingText{Problem 18.}
 \item
 Classify the groups of order \(70\).
+\def\ProblemHeadingText{Problem 19.}
 \item
 Show that if~\(G\) is a subgroup of \(S_n\) (\(n\) a natural number) containing an odd permutation, then half the elements of~\(G\) are odd and half are even.
+\def\ProblemHeadingText{Problem 20.}
 \item
 Use 19 to prove that if~\(G\) is a group of order \(2m\), with~\(m\) odd, then~\(G\) cannot be simple, and, indeed, contains a subgroup of index~\(2\).
+\def\ProblemHeadingText{Problem 21.}
 \item
 Classify the groups of order \(4p\), where \(p\geq 5\) is prime.
+\def\ProblemHeadingText{Problem 22.}
 \item
 Let~\(p\) be an odd prime number.
 \begin{examsubparts}
@@ -170,6 +208,7 @@ Prove that in \(\mathrm{GL}_2(\mathbb{Z}_p)\) every element~\(A\) of order~\(2\)
 \item[\textnormal{(b)}]
 Now classify the groups of order \(2p^2\), for which the Sylow~\(p\)-subgroups are not cyclic.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 23.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -178,24 +217,34 @@ Prove that there are exactly four homomorphisms from \(\mathbb{Z}_2\) into \(\op
 \item[\textnormal{(b)}]
 Show that these yield four pairwise nonisomorphic semidirect products.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 24.}
 \item
 Prove that \(S_4\) contains no non–abelian simple groups.
+\def\ProblemHeadingText{Problem 25.}
 \item
 Use the result of 24 to prove that if~\(G\) is a nonabelian simple group, then every proper subgroup of~\(G\) has index at least~\(5\).
+\def\ProblemHeadingText{Problem 26.}
 \item
 Prove that \(D_{2n}\) is nilpotent if and only if~\(n\) is a power of~\(2\). (Hint: Use the ascending central chain; recall that if there is an even number of vertices~\(n\), then \(Z(D_{2n})\neq\{e\}\).)
+\def\ProblemHeadingText{Problem 27.}
 \item
 Let~\(G\) be the group of all~\(3\) by~\(3\) upper triangular matrices, with entries in~\(\mathbb{Z}\), and diagonal entries equal to~\(1\). Prove that the commutator of~\(G\) is its center.
+\def\ProblemHeadingText{Problem 28.}
 \item
 Let~\(P\) be a Sylow~\(p\)-subgroup of~\(H\) and \(H\leq K\). If~\(P\) is normal in~\(H\) and~\(H\) is normal in~\(K\), prove that~\(P\) is normal in~\(K\). Deduce that if \(P\in \mathrm{Syl}_p(G)\) then \(N_G(P)\) is selfnormalizing.
+\def\ProblemHeadingText{Problem 29.}
 \item
 Prove that if~\(G\) is a finite group, and each Sylow~\(p\)-subgroup is normal in~\(G\), then~\(G\) is a direct product of its Sylow subgroups.
+\def\ProblemHeadingText{Problem 30.}
 \item
 Classify the abelian groups of order \(2^5\cdot 5^2\cdot 17^3\).
+\def\ProblemHeadingText{Problem 31.}
 \item
 Prove that \((\mathbb{Q},+)\), the additive group of rational numbers is not cyclic.
+\def\ProblemHeadingText{Problem 32.}
 \item
 Prove that \(\operatorname{Aut}(\mathbb{Z}_k)\) is isomorphic to the group \(U(k)\) of integers~\(i\), with \(1\leq i<k\), which are relatively prime to~\(k\), under multiplication modulo~\(k\).
+\def\ProblemHeadingText{Problem 33.}
 \item
 Give examples of each of the following, with a brief explanation in each case:
 \begin{examsubparts}
@@ -212,12 +261,16 @@ A semidirect product of abelian groups which is not nilpotent.
 \item[\textnormal{(f)}]
 A finite nonabelian group in which every proper subgroup is cyclic.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 34.}
 \item
 Each three-cycle in \(S_n\) has \(\frac{1}{3}n(n-1)(n-2)\) conjugates. Prove this and conclude from it that \(A_4\) is the only subgroup of \(S_4\) of order \(12\).
+\def\ProblemHeadingText{Problem 35.}
 \item
 Prove that \(A_5\) is a simple group.
+\def\ProblemHeadingText{Problem 36.}
 \item
 For \(n\geq 5\), prove that \(A_n\) is the only proper, nontrivial normal subgroup of \(S_n\).
+\def\ProblemHeadingText{Problem 37.}
 \item
 Let~\(G\) be a finite group. Call \(x\in G\) a non-generator if for each subset \(Y\subseteq G\), if \(G=\langle Y\cup\{x\}\rangle\) then \(G=\langle Y\rangle\). Prove:
 \begin{examsubparts}
@@ -230,14 +283,19 @@ Conclude from (b) that \(\Phi(G)\) is normal.
 \item[\textnormal{(d)}]
 What is the Frattini subgroup of \(S_n\)? Explain. (Consider the stabilizers of a single letter.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 38.}
 \item
 State and prove the Orbit-Stabilizer Theorem.
+\def\ProblemHeadingText{Problem 39.}
 \item
 Show that if~\(G\) is a simple abelian group then it is cyclic of prime order.
+\def\ProblemHeadingText{Problem 40.}
 \item
 For the additive group of rational numbers \((\mathbb{Q},+)\), show that the intersection of any two nontrivial subgroups is nontrivial.
+\def\ProblemHeadingText{Problem 41.}
 \item
 Show that the group \((\mathbb{Q},+)\) of additive rational numbers has no maximal subgroups. (Hint: Use the lattice isomorphism theorem (Exercise 14) and Exercise 39.)
+\def\ProblemHeadingText{Problem 42.}
 \item
 The commutator subgroup \(G'\) of a group~\(G\) is defined as the subgroup generated by the set
 \[
@@ -252,22 +310,31 @@ Show that \(G/G'\) is abelian.
 \item[\textnormal{(c)}]
 Show that if \(\phi:G\longrightarrow H\) is a homomorphism into the abelian group~\(H\), then there exists a unique homomorphism \(\widehat{\phi}:G/G'\longrightarrow H\) such that \(\widehat{\phi}(G'x)=\phi(x)\), for each \(x\in G\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 43.}
 \item
 Suppose that~\(G\) is a group and~\(H\) is a normal subgroup. Prove that \(G/C_G(H)\) is isomorphic to a subgroup of \(\operatorname{Aut}(H)\). (Hint: let~\(G\) act on~\(H\) by conjugation.)
+\def\ProblemHeadingText{Problem 44.}
 \item
 Let~\(G\) be a group of \(385\) elements. Prove that the Sylow \(11\)-subgroups are normal, and that any Sylow~\(7\)-subgroup lies in the center.
+\def\ProblemHeadingText{Problem 45.}
 \item
 Describe all the groups of \(44\) elements, up to isomorphism. (Hint: use semidirect products.)
+\def\ProblemHeadingText{Problem 46.}
 \item
 Suppose that \(|G|=105\). If~\(G\) has a normal Sylow~\(3\)-subgroup, prove that it must lie in the center of~\(G\).
+\def\ProblemHeadingText{Problem 47.}
 \item
 Let~\(G\) and~\(H\) be the cyclic groups of orders~\(n\) and~\(k\), respectively. Prove that the number of homomorphisms from~\(G\) to~\(H\) is the sum of all \(\phi(d)\), where~\(d\) runs over all common divisors of~\(n\) and~\(k\), and~\(\phi\) denotes the Euler~\(\phi\)-function.
+\def\ProblemHeadingText{Problem 48.}
 \item
 Let~\(R\) be the ring of all~\(n\) by~\(n\) matrices with integer entries. Prove that the matrix \(a\in R\) is invertible if and only if its determinant is \(\pm1\). (Would you believe: Cramer’s Rule?)
+\def\ProblemHeadingText{Problem 49.}
 \item
 Using Zorn’s Lemma, prove that each non-zero commutative ring with an identity has maximal ideals.
+\def\ProblemHeadingText{Problem 50.}
 \item
 Using Zorn’s Lemma, prove that in each non-zero commutative ring with identity minimal prime ideals exist.
+\def\ProblemHeadingText{Problem 51.}
 \item
 Consider \(A=\mathbb{R}^{\mathbb{N}}\), the ring of all real valued sequences, under pointwise operations. Prove:
 \begin{examsubparts}
@@ -276,8 +343,10 @@ for each \(n\in\mathbb{N}\), \(M_n=\{f\in A:f(n)=0\}\) is a maximal ideal of~\(A
 \item[\textnormal{(b)}]
 there exist maximal ideals besides the \(M_n\) \((n\in\mathbb{N})\). (Zorn’s Lemma)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 52.}
 \item
 Suppose that~\(A\) is a commutative ring with identity. Suppose that \(a\in A\) is not nilpotent. Prove that there is a prime ideal that fails to contain~\(a\). Use this to show that the set of all nilpotent elements of~\(A\) is the intersection of all the prime ideals of~\(A\).
+\def\ProblemHeadingText{Problem 53.}
 \item
 Let~\(F\) be a field, and \(A=F[[X]]\) denote the ring of formal power series in one variable. Prove the following:
 \begin{examsubparts}
@@ -288,8 +357,10 @@ Suppose that \(k\geq 1\) is an integer. Let \(I_k\) denote the set of all power 
 \item[\textnormal{(c)}]
 If~\(J\) is a nonzero proper ideal of~\(A\), then \(J=I_m\), for some \(m\geq 1\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 54.}
 \item
 Prove the Division Algorithm for the ring \(\mathbb{Z}[i]\) of Gaussian integers.
+\def\ProblemHeadingText{Problem 55.}
 \item
 Let~\(D\) be an integer which is not a square in~\(\mathbb{Z}\). Consider the subring \(\mathbb{Z}[\sqrt{D}]=\{a+b\sqrt{D}:a,b\in\mathbb{Z}\}\); (do not prove it is a subring.) Define \(N(a+b\sqrt{D})=a^2-Db^2\). Assume that \(N(xy)=N(x)N(y)\), for all \(x,y\in\mathbb{Z}[\sqrt{D}]\). Prove that
 \begin{examsubparts}
@@ -298,6 +369,7 @@ Let~\(D\) be an integer which is not a square in~\(\mathbb{Z}\). Consider the su
 \item[\textnormal{(b)}]
 If \(D<-1\), prove that the units of \(\mathbb{Z}[\sqrt{D}]\) are precisely \(\pm1\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 56.}
 \item
 A ring~\(R\) is boolean if it has an identity and \(x^2=x\), for each \(x\in R\). Prove:
 \begin{examsubparts}
@@ -306,8 +378,10 @@ Every boolean ring has characteristic 2 and is commutative.
 \item[\textnormal{(b)}]
 Assume~\(R\) is a boolean ring. Prove that every prime ideal is maximal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 57.}
 \item
 A ring~\(R\) is boolean if it has an identity and \(x^2=x\), for each \(x\in R\). Assume the preceding exercise. Use the Chinese Remainder Theorem to prove that every finite boolean ring has \(2^n\) elements, for a suitable non-negative integer~\(n\).
+\def\ProblemHeadingText{Problem 58.}
 \item
 Suppose that~\(A\) is a non-zero commutative ring with identity. Let \(n(A)\) denote the set of nilpotent elements of~\(A\); you may assume here that it is an ideal. Prove the equivalence of the following three statements:
 \begin{examsubparts}
@@ -318,10 +392,13 @@ Every nonunit of~\(A\) is nilpotent.
 \item[\textnormal{(c)}]
 \(A\) has exactly one prime ideal.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 59.}
 \item
 Prove the Chinese Remainder Theorem: if~\(A\) is a commutative ring with identity, and~\(I\) and~\(J\) are comaximal ideals of~\(A\), then \(IJ=I\cap J\), and the homomorphism \(\phi:A\to A/I\times A/J\), by \(\phi(a)=(a+I,a+J)\) is surjective.
+\def\ProblemHeadingText{Problem 60.}
 \item
 Let~\(D\) be an integral domain. Prove that the ring \(D[T]\) of polynomials over~\(D\) in one indeterminate is a principal ideal domain if and only if~\(D\) is a field.
+\def\ProblemHeadingText{Problem 61.}
 \item
 Let~\(A\) be a commutative ring with 1. Suppose that~\(I\) and~\(J\) are ideals of~\(A\). Prove that
 \begin{examsubparts}
@@ -330,11 +407,13 @@ Prove that \(IJ\subseteq I\cap J\), and give an example where equality does not 
 \item[\textnormal{(b)}]
 Suppose that~\(A\) is the (ring) direct product of two fields. Show that \(IJ=I\cap J\), for any two ideals~\(I\) and~\(J\) of~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 62.}
 \item
 Suppose that~\(D\) is an integral domain. A polynomial \(f(X)\) over~\(D\) is primitive if the greatest common divisor of its coefficients is 1.
 
 \par
 Prove the following form of Gauss’ Lemma: If~\(D\) is a unique factorization domain, then the product of any two primitive polynomials over~\(D\) is primitive.
+\def\ProblemHeadingText{Problem 63.}
 \item
 Let~\(A\) be an integral domain, and~\(P\) be a prime ideal of~\(A\). Define \(A_P\) to be the subset of the quotient field~\(K\) of~\(A\), consisting of all fractions whose denominator is not in~\(P\). Prove that
 \begin{examsubparts}
@@ -343,6 +422,7 @@ Let~\(A\) be an integral domain, and~\(P\) be a prime ideal of~\(A\). Define \(A
 \item[\textnormal{(b)}]
 \(A_P\) has exactly one maximal ideal; identify it.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 64.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -351,18 +431,23 @@ Define Euclidean domain and principal ideal domain.
 \item[\textnormal{(b)}]
 Prove that any Euclidean domain is a principal ideal domain.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 65.}
 \item
 Convince that the polynomial rings \(\mathbb{Z}[X]\) and \(\mathbb{Q}[X]\) have the same field of fractions, but the power series rings \(\mathbb{Z}[[X]]\) and \(\mathbb{Q}[[X]]\) do not.
+\def\ProblemHeadingText{Problem 66.}
 \item
 Consider the polynomial \(X^2+1\) over the field \(\mathbb{Z}_7\). Prove that \(E=\mathbb{Z}_7[X]/(X^2+1)\) is a field of 49 elements.
+\def\ProblemHeadingText{Problem 67.}
 \item
 Let~\(n\) be a natural number; prove that the polynomial
 \[
 \Phi_n(X)=\frac{X^n-1}{X-1}
 \]
  is irreducible over the ring~\(\mathbb{Z}\) precisely when~\(n\) is prime.
+\def\ProblemHeadingText{Problem 68.}
 \item
 Prove that \(X^2+Y^2-1\) is irreducible in \(\mathbb{Q}[X,Y]\).
+\def\ProblemHeadingText{Problem 69.}
 \item
 Give examples of the following, and justify your choices:
 \begin{examsubparts}
@@ -373,10 +458,13 @@ A local integral domain with a nonzero prime ideal that is not maximal.
 \item[\textnormal{(c)}]
 An integral domain in which the uniqueness provision of “unique factorization” fails.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 70.}
 \item
 Suppose that~\(F\) is a field and~\(G\) is a finite multiplicative subgroup of \(F\setminus\{0\}\). Prove that~\(G\) is cyclic.
+\def\ProblemHeadingText{Problem 71.}
 \item
 Suppose that~\(F\) is a field and \(q(X)=a_0+a_1X+\cdots+a_{n-1}X^{n-1}+X^n\) is an irreducible polynomial in \(F[X]\). Prove that \(E=F[X]/(q(X))\) is a field which is an~\(n\) dimensional vector space over~\(F\).
+\def\ProblemHeadingText{Problem 72.}
 \item
 Let~\(R\) be a ring with identity and~\(M\) be an~\(R\)-module. An element \(x\in M\) is called a torsion element if \(rx=0\), for some nonzero \(r\in R\). Let \(T(M)\) denote the subset of all torsion elements of~\(M\).
 \begin{examsubparts}
@@ -385,6 +473,7 @@ If~\(R\) is an integral domain show that \(T(M)\) is a submodule of~\(M\).
 \item[\textnormal{(b)}]
 Give an example to show that \(T(M)\), in general, is not a submodule of~\(M\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 73.}
 \item
 Suppose that~\(A\) is a commutative ring with identity, and~\(I\) is an ideal of~\(A\).
 \begin{examsubparts}
@@ -396,26 +485,35 @@ A^n/IA^n\cong A/I\times\cdots\times A/I;
 \item[\textnormal{(b)}]
 Use (a) to prove that if \(A^m\cong A^n\), where~\(m\) and~\(n\) are positive integers, then \(m=n\). (You may use the corresponding fact for fields.)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 74.}
 \item
 Prove that~\(\mathbb{Q}\), the additive group of the rationals, is not a free abelian group. (Hint: The rank of~\(\mathbb{Q}\) is one.)
+\def\ProblemHeadingText{Problem 75.}
 \item
 Suppose that~\(G\) is an abelian group, generated by \(x_1,x_2,x_3,x_4\), and subject to the relations:
 \[
 4x_1-2x_2-2x_3=0;\quad 8x_1-12x_3+20x_4=0;\quad 6x_1+4x_2-16x_4=0.
 \]
  Write~\(G\) as a direct product of cyclic groups.
+\def\ProblemHeadingText{Problem 76.}
 \item
 Let~\(R\) be a commutative ring with identity. If~\(F\) is a free~\(R\)-module of rank \(n<\infty\), then show that \(\operatorname{Hom}_R(F,M)\cong M^n\), for each~\(R\)-module~\(M\).
+\def\ProblemHeadingText{Problem 77.}
 \item
 Let~\(V\) be a vector space over the field~\(F\). Suppose that \(U_1\) and \(U_2\) are finite dimensional subspaces of~\(V\). Prove that \(\dim(U_1)+\dim(U_2)=\dim(U_1\cap U_2)+\dim(U_1+U_2)\).
+\def\ProblemHeadingText{Problem 78.}
 \item
 Suppose that \(T:V\longrightarrow W\) is a linear transformation between vector spaces over the same field~\(F\). Prove that~\(T\) is one to one precisely when it maps linearly independent sets to linearly independent sets.
+\def\ProblemHeadingText{Problem 79.}
 \item
 Suppose that \(T:V\longrightarrow V\) is a linear transformation on the vector space~\(V\). Call~\(T\) a projection if \(T^2=T\). Prove that if~\(T\) is a projection then \(V=\operatorname{Ker}(T)\oplus\operatorname{Im}(T)\). Give an example to show that the converse of the above proposition is false.
+\def\ProblemHeadingText{Problem 80.}
 \item
 Suppose that~\(V\) is a finite dimensional vector space over the field~\(F\) and that \(T:V\longrightarrow W\) is a linear transformation into a vector space~\(W\) over~\(F\). Prove that \(\dim(V)=\dim(\operatorname{Ker}(T))+\dim(\operatorname{Im}(T))\). (Caution: The finite dimensionality of \(\operatorname{Im}(T)\) must be established.)
+\def\ProblemHeadingText{Problem 81.}
 \item
 Obtain a formula for the number of one dimensional subspaces of an~\(n\) dimensional vector space over the field \(\mathbb{Z}_p\) of~\(p\) elements (\(p\) is a prime number). Justify your choice.
+\def\ProblemHeadingText{Problem 82.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -424,6 +522,7 @@ Define: Irreducible module over a ring~\(R\) with identity 1.
 \item[\textnormal{(b)}]
 Now assume that~\(R\) is commutative as well. Prove that the~\(R\)-module~\(M\) is irreducible if and only if \(M\cong R/I\), where~\(I\) is a maximal ideal of~\(R\). Use this to classify the irreducible~\(\mathbb{Z}\)-modules.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 83.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -432,10 +531,13 @@ Define: Irreducible module over a ring~\(R\) with identity 1.
 \item[\textnormal{(b)}]
 Prove Schur’s Lemma: Suppose that~\(M\) is an irreducible module; then every nonzero endomorphism of~\(M\) is an automorphism. Show how one concludes from this that \(\operatorname{End}(M)\) is a division ring, when~\(M\) is irreducible.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 84.}
 \item
 Let~\(R\) be a ring with identity. Suppose that \(\phi:M\longrightarrow F\) is a surjective~\(R\)-homomorphism and that~\(F\) is a free~\(R\)-module. Prove that \(M=\operatorname{Ker}(\phi)\oplus N\), where \(N\cong F\).
+\def\ProblemHeadingText{Problem 85.}
 \item
 Let~\(R\) be a principal ideal domain and~\(M\) be a torsion~\(R\)-module. Define primary module and prove that~\(M\) is isomorphic to a direct sum of primary~\(R\)-modules.
+\def\ProblemHeadingText{Problem 86.}
 \item
 Suppose that~\(V\) is a finite dimensional vector space over the field~\(F\) and that~\(T\) is a linear transformation on~\(V\), so that the induced module action of \(F[X]\) on~\(V\) defines a cyclic module with cyclic vector~\(w\). Prove:
 \begin{examsubparts}
@@ -446,16 +548,20 @@ Compute the matrix of~\(T\) relative to this basis, pointing out the relationshi
 \item[\textnormal{(c)}]
 Compute the characteristic polynomial of the matrix in (b).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 87.}
 \item
 Suppose that~\(T\) is a linear transformation on a finite dimensional vector space~\(V\), over the field~\(F\). Prove that~\(T\) is diagonalizable if and only if \(m_T(X)\), the minimum polynomial of~\(T\), can be factored as
 \[
 m_T(X)=(X-\lambda_1)(X-\lambda_2)\cdots(X-\lambda_k),
 \]
  where the \(\lambda_i\in F\) (\(i=1,\ldots,k\)) are distinct.
+\def\ProblemHeadingText{Problem 88.}
 \item
 Suppose that~\(A\) is a nilpotent \(6\times6\) matrix, with entries in a field. Find all possible Jordan forms of~\(A\), justifying your arguments.
+\def\ProblemHeadingText{Problem 89.}
 \item
 Prove that in \(\mathrm{GL}_2(\mathbb{Q})\) all the elements of order four are conjugate. (Hint: Consider the rational canonical form of such an element.)
+\def\ProblemHeadingText{Problem 90.}
 \item
 Suppose that~\(V\) is a vector space of dimension 7 over the field of real numbers~\(\mathbb{R}\), and~\(T\) is a linear transformation on~\(V\) which satisfies \(T^4=I\). Compute the following:
 \begin{examsubparts}
@@ -464,6 +570,7 @@ the possible minimum polynomials of~\(T\), and the characteristic polynomial tha
 \item[\textnormal{(b)}]
 the possible Rational Canonical Forms of~\(T\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 91.}
 \item
 Suppose that~\(V\) is a finite dimensional vector space over~\(\mathbb{Q}\), and~\(T\) is an invertible linear transformation on~\(V\) for which \(T^{-1}=T^2+T\). Prove:
 \begin{examsubparts}
@@ -472,19 +579,23 @@ The dimension of~\(V\) is a multiple of 3.
 \item[\textnormal{(b)}]
 If the dimension is 3, prove that all such transformations are similar.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 92.}
 \item
 Consider: All \(3\times 3\) matrices \(A\ne I\) with real entries, such that \(A^3=I\) are similar over~\(\mathbb{R}\). Prove or disprove by example.
+\def\ProblemHeadingText{Problem 93.}
 \item
 Prove, over any field~\(F\), that if two \(2\times 2\) matrices or two \(3\times 3\) matrices have the same minimum and characteristic polynomials then they are similar matrices.
 
 \par
 Give an example which shows that this is false for matrices of greater dimension.
+\def\ProblemHeadingText{Problem 94.}
 \item
 On a vector space~\(V\) of dimension 8 over the field~\(\mathbb{Q}\), \(T\) is a linear transformation for which the minimum polynomial is
 \[
 m_T(X)=(X^2+1)^2(X-3).
 \]
  Determine all possible Rational Canonical Forms. Justify your answer.
+\def\ProblemHeadingText{Problem 95.}
 \item
 A projection is a linear transformation \(P:V\to V\) on a vector space~\(V\) for which \(P^2=P\). Assume that~\(V\) has finite dimension and prove the following:
 \begin{examsubparts}
@@ -493,8 +604,10 @@ Any projection is diagonalizable.
 \item[\textnormal{(b)}]
 Two projections have the same diagonal form if and only if their kernels have the same dimension.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 96.}
 \item
 Prove that there are exactly two conjugacy classes of \(5\times 5\) matrices with entries in~\(\mathbb{Q}\) for which \(T^8=I\) and \(T^4\ne I\).
+\def\ProblemHeadingText{Problem 97.}
 \item
 \(T\) is a linear transformation on the~\(n\) dimensional space~\(V\), with \(n\geq 2\), over the field~\(F\), and there is a basis \(\{v_1,\ldots,v_n\}\) for~\(V\) for which \(Tv_i=v_{i+1}\), for \(i=1,2,\ldots,n-1\), and \(Tv_n=v_1\). As a module over \(F[X]\) with the action induced by~\(T\), show that
 \begin{examsubparts}
@@ -503,6 +616,7 @@ Prove that there are exactly two conjugacy classes of \(5\times 5\) matrices wit
 \item[\textnormal{(b)}]
 If \(F=\mathbb{Q}\) and~\(n\) is a prime number prove that~\(V\) is the direct sum of two irreducible \(F[X]\)-submodules, of dimensions 1 and \(n-1\), respectively, over~\(\mathbb{Q}\). (Hint: Find the minimum polynomial of~\(T\).)
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 98.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -511,10 +625,13 @@ Define the terms eigenvector and eigenvalue of a linear transformation~\(T\).
 \item[\textnormal{(b)}]
 Prove that a set of eigenvectors of~\(T\) for which the corresponding eigenvalues are distinct must be linearly independent.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 99.}
 \item
 Find one representative of each conjugacy class of elements of order 2 in the group \(\operatorname{GL}_5(\mathbb{Z}_2)\) of invertible \(5 \times 5\) matrices with entries in the field of integers mod 2.
+\def\ProblemHeadingText{Problem 100.}
 \item
 Let \(\operatorname{GL}_4(\mathbb{Z}_3)\) denote the group of all invertible 4 by 4 matrices with entries in \(\mathbb{Z}_3\), the field of three elements. Use rational canonical forms to determine the number of conjugacy classes of elements of order 4. Give the rational canonical form for each class.
+\def\ProblemHeadingText{Problem 101.}
 \item
 Over~\(\mathbb{Q}\), compute the Jordan canonical form~\(J\) of
 \[
@@ -526,6 +643,7 @@ A=\begin{pmatrix}
 \end{pmatrix}.
 \]
  Then find a matrix~\(S\) such that \(J=SAS^{-1}\).
+\def\ProblemHeadingText{Problem 102.}
 \item
 Over~\(\mathbb{Q}\), consider the following matrix:
 \[
@@ -543,33 +661,44 @@ Prove that~\(A\) is diagonalizable.
 \item[\textnormal{(b)}]
 Is the \(\mathbb{Q}[T]\)-module structure on \(\mathbb{Q}^4\) by~\(A\), via \(f(T)v=f(A)v\) cyclic? Explain.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 103.}
 \item
 Let~\(\mathbb{C}\) be the field of complex numbers. Prove that each irreducible \(\mathbb{C}[T]\)-module is isomorphic to~\(\mathbb{C}\).
+\def\ProblemHeadingText{Problem 104.}
 \item
 Prove that if~\(F\) is a finite field, then there is a prime number~\(p\) and a natural number~\(n\), so that~\(F\) has \(p^n\) elements.
+\def\ProblemHeadingText{Problem 105.}
 \item
 Suppose that~\(F\) is a subfield of~\(K\) and~\(K\) a subfield of~\(L\), so that the dimensions \([K:F]\) and \([L:K]\) are finite. Prove that \([L:F]\) is also finite and that
 \[
 [L:F]=[L:K][K:F].
 \]
+\def\ProblemHeadingText{Problem 106.}
 \item
 Determine the dimension over~\(\mathbb{Q}\) of the extension \(\mathbb{Q}(\sqrt{3+2\sqrt{2}})\). Justify your arguments.
+\def\ProblemHeadingText{Problem 107.}
 \item
 Prove that \(\mathbb{Q}(\sqrt{3},\sqrt{5})=\mathbb{Q}(\sqrt{3}+\sqrt{5})\). Conclude that \([\mathbb{Q}(\sqrt{3},\sqrt{5}):\mathbb{Q}]=4\), and find a monic irreducible polynomial over~\(\mathbb{Q}\) satisfied by \(\sqrt{3}+\sqrt{5}\).
+\def\ProblemHeadingText{Problem 108.}
 \item
 Suppose that~\(F\) is a field whose characteristic is not 2. Assume that \(d_1,d_2\in F\) are not squares in~\(F\). Prove that \(F(\sqrt{d_1},\sqrt{d_2})\) is of dimension 4 over~\(F\) if \(d_1d_2\) is not a square in~\(F\) and of dimension 2 otherwise.
+\def\ProblemHeadingText{Problem 109.}
 \item
 Suppose that \([F(u):F]\) is odd; prove that \(F(u)=F(u^2)\).
+\def\ProblemHeadingText{Problem 110.}
 \item
 Let~\(L\) be a field extension of~\(F\). Prove that the subset~\(E\) of all elements of~\(L\) which are algebraic over~\(F\) is a subfield of~\(L\) containing~\(F\).
+\def\ProblemHeadingText{Problem 111.}
 \item
 Determine the splitting field of \(X^4-2\) over~\(\mathbb{Q}\). It suffices to describe it as the subfield of~\(\mathbb{C}\), the field of complex numbers, generated by certain well-identified elements. Justify your choices.
+\def\ProblemHeadingText{Problem 112.}
 \item
 Suppose that~\(F\) is a field. For \(f(X)=a_nX^n+\cdots+a_1X+a_0\in F[X]\), define the derivative \(D_Xf(X)\) by
 \[
 D_Xf(X)=na_nX^{n-1}+\cdots+2a_2X+a_1.
 \]
  Prove the following: In a splitting field of \(f(X)\), \(u\) is a multiple root of \(f(X)\) if and only if~\(u\) is a root of both \(f(X)\) and its derivative.
+\def\ProblemHeadingText{Problem 113.}
 \item
 Assume the existence and uniqueness, up to isomorphism, of the splitting field of a polynomial over an arbitrary base field. Let~\(p\) be a prime number. Now consider the polynomial \(X^{p^n}-X\) over the field \(\mathbb{Z}_p\) of~\(p\) elements. Let \(K_{p^n}\) be its splitting field. Prove that \(K_{p^n}\) has \(p^n\) elements. (Hint: Consider the set of all roots of \(X^{p^n}-X\).)
 

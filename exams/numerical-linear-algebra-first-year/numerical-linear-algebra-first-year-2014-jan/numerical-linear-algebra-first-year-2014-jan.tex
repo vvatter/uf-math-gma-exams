@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Numerical Linear Algebra First-Year Exam, January 2014}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/numerical-linear-algebra-first-year/}{Numerical Linear Algebra First-Year Exam}, January 2014\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,28 +95,31 @@
 \begin{examinstructions}
 Answer any 4 questions.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Suppose that \(A \in \mathbb{C}^{n \times n}\) is a normal matrix; that is, \(AA^* = A^*A\) where \(A^*\) is the conjugate transpose of~\(A\). Show that \(A = X\Lambda X^*\) where~\(\Lambda\) is diagonal and~\(X\) is unitary; that is, show that~\(A\) can be diagonalized and its eigenvector matrix is unitary.
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has four parts.
 \begin{examsubparts}
 \item[\textnormal{(a)}]
 Suppose~\(p\) and \(q \in \mathbb{R}\) with~\(p\) and~\(q\) positive and \(p^{-1}+q^{-1}=1\). Show that for any matrix \(A \in \mathbb{C}^{m \times n}\), we have \(\lVert A\rVert_p=\lVert A^*\rVert_q\). Here \(\lVert A\rVert_p\) denotes the matrix~\(p\)-norm induced by the vector~\(p\)-norm.
 \item[\textnormal{(b)}]
-Prove that 
+Prove that
 \[
 \lVert A\rVert_2^2 \leq \lVert A\rVert_p\lVert A\rVert_q
 \]
  for any \(A \in \mathbb{C}^{m \times n}\) and any positive~\(p\) and \(q \in \mathbb{R}\) with \(p^{-1}+q^{-1}=1\).
 \item[\textnormal{(c)}]
-Prove that for any \(p \geq 1\) and any diagonal matrix \(D \in \mathbb{C}^{n \times n}\), we have 
+Prove that for any \(p \geq 1\) and any diagonal matrix \(D \in \mathbb{C}^{n \times n}\), we have
 \[
 \lVert D\rVert_p=\max\{\lvert d_{ii}\rvert:1\leq i\leq n\}.
 \]
 \item[\textnormal{(d)}]
 Show that \(\lVert A\rVert_2\) is the largest singular value of~\(A\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -109,6 +128,7 @@ For any matrices \(A \in \mathbb{C}^{n \times m}\) and \(B \in \mathbb{C}^{m \ti
 \item[\textnormal{(b)}]
 If \(AB\) is normal, \(\lVert\,\cdot\,\rVert_2\) is the 2-norm of a matrix, and \(\lVert\,\cdot\,\rVert\) is an induced matrix norm, then show that \(\lVert AB\rVert_2 \leq \lVert BA\rVert\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 4.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -117,8 +137,9 @@ Show that the eigenvalues of a projector are either 0 or 1.
 \item[\textnormal{(b)}]
 Show that a projector~\(P\) is orthogonal if and only if \(P=P^*\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 5.}
 \item
-Suppose that \(A \in \mathbb{C}^{n \times n}\) and consider the series 
+Suppose that \(A \in \mathbb{C}^{n \times n}\) and consider the series
 \[
 S=\sum_{i=0}^{\infty}A^i.
 \]

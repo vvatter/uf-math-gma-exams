@@ -26,19 +26,31 @@
 \setlength{\leftmargini}{2.15em}
 \setlength{\leftmarginii}{2.65em}
 \setlength{\leftmarginiii}{3em}
-\renewcommand{\labelenumi}{\textbf{\theenumi.}}
 \pagestyle{empty}
 \raggedbottom
 \allowdisplaybreaks
-\newenvironment{examproblems}[1]{%
+\NewTaggingSocketPlug{block/list/label}{examproblem}{%
+  \tagstructbegin{tag=Lbl}\tagstructend%
+  \tagstructbegin{tag=\LBody}%
+  \tagstructbegin{tag=\ProblemHeadingTag,title-o={\ProblemHeadingText}}%
+  \tagmcbegin{tag=\ProblemHeadingTag,actualtext={\ProblemHeadingText}}%
+  #2%
+  \tagmcend%
+  \tagstructend%
+}
+\newenvironment{examproblems}[2]{%
+  \def\ProblemHeadingTag{#2}%
+  \AssignTaggingSocketPlug{block/list/label}{examproblem}%
   \begin{enumerate}%
   \setcounter{enumi}{#1}%
+  \renewcommand{\labelenumi}{\textbf{\theenumi.}}%
   \setlength{\topsep}{0.35em}%
   \setlength{\partopsep}{0pt}%
   \setlength{\itemsep}{0.48em}%
   \setlength{\parsep}{0.18em}%
 }{\end{enumerate}}
 \newenvironment{examsubparts}{%
+  \AssignTaggingSocketPlug{block/list/label}{default}%
   \begin{enumerate}%
   \setlength{\topsep}{0.18em}%
   \setlength{\partopsep}{0pt}%
@@ -51,7 +63,7 @@
   \par\endgroup\vspace{0.18em}
 }
 \makeatletter
-\renewcommand\section{\@startsection{section}{1}{0pt}%
+\renewcommand\subsection{\@startsection{subsection}{2}{0pt}%
   {-1.25ex plus -.25ex minus -.1ex}%
   {0.55ex plus .1ex}%
   {\normalfont\large\bfseries}}
@@ -60,8 +72,12 @@
   {\footnotesize\bfseries
     \href{https://www.ufl.edu/}{University of Florida}, \href{https://math.ufl.edu/}{Department of Mathematics}\par}%
   \vskip -0.5em%
-  \tagstructbegin{tag=Title}%
+  \tagstructbegin{tag=H1,title={Algebra First-Year Exam, May 2018, Part 2}}%
+  \tagpdfparaOff%
+  \tagmcbegin{tag=H1}%
     {\LARGE\bfseries\href{https://gma.math.ufl.edu/exams/algebra-first-year/}{Algebra First-Year Exam}, May 2018, Part 2\par}%
+  \tagmcend%
+  \tagpdfparaOn%
   \tagstructend%
   \vskip 0.25em%
   \tagmcbegin{artifact}%
@@ -79,7 +95,8 @@
 \begin{examinstructions}
 Answer four problems. Write your solutions clearly in complete English sentences. You may quote results (within reason) as long as you state them clearly.
 \end{examinstructions}
-\begin{examproblems}{0}
+\begin{examproblems}{0}{H2}
+\def\ProblemHeadingText{Problem 1.}
 \item
 Let~\(D\) be a positive integer such that \(-D \equiv 1 \pmod 4\). Define
 \[
@@ -96,6 +113,7 @@ Prove that for all \(\alpha,\beta\in R\) we have \(\operatorname{N}(\alpha\beta)
 \item[\textnormal{(d)}]
 Let \(\alpha\in R\). Prove that~\(\alpha\) is a unit if and only if \(\operatorname{N}(\alpha)=1\).
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 2.}
 \item
 This problem has two parts.
 \begin{examsubparts}
@@ -104,12 +122,16 @@ Let~\(F\) be a field and let~\(G\) be a finite subgroup of the unit group \(F^\t
 \item[\textnormal{(b)}]
 Give an example of a field~\(F\) and a finitely generated subgroup~\(G\) of \(F^\times\) which is not cyclic.
 \end{examsubparts}
+\def\ProblemHeadingText{Problem 3.}
 \item
 Let~\(R\) be a commutative ring with \(1\ne 0\) and let~\(M\) be a unital~\(R\)-module. Say~\(M\) is irreducible if \(M\ne\{0\}\) and the only submodules of~\(M\) are \(\{0\}\) and~\(M\). Prove that if~\(M\) is an irreducible~\(R\)-module then \(M\cong R/I\) for some maximal ideal~\(I\) in~\(R\).
+\def\ProblemHeadingText{Problem 4.}
 \item
 Let~\(V\) be a vector space over a field~\(F\) and let~\(S\) be a subset of~\(V\) such that \(\operatorname{Span}(S)=V\). Use Zorn’s lemma to prove that there is a subset \(\mathcal B\) of~\(S\) which is a basis for~\(V\).
+\def\ProblemHeadingText{Problem 5.}
 \item
 Find a representative for each similarity class of \(3\times 3\) matrices~\(A\) with entries in \(\mathbb F_3=\mathbb Z/3\mathbb Z\) such that \(A^4=A\). (Note that \(X^4-X\) factors into linear factors over \(\mathbb F_3\).)
+\def\ProblemHeadingText{Problem 6.}
 \item
 Let \(\gamma\in\mathbb C\) be a root of \(X^3-6X^2+2\in\mathbb Q[X]\). Express \((1+\gamma^2)(3-4\gamma^2)\) and \(1/(1+\gamma^2)\) in the form \(a+b\gamma+c\gamma^2\), with \(a,b,c\in\mathbb Q\).
 \end{examproblems}
